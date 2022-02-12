@@ -14,11 +14,6 @@ if [[ "$REPO_DIR" == "cardboard-iguana.com" ]] && [[ "$REPO_PARENT_DIR" == "_rep
 	       -exec rm -rf "{}" \;
 
 	cp -rf ../../cardboard-iguana.com/* .
-
-	if [[ -d log ]]; then
-		mkdir log/_posts
-		mv log/*.md log/_posts/
-	fi
 else
 	echo "Unexpected execution directory"
 	exit 1
