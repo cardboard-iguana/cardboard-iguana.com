@@ -13,7 +13,7 @@ if [[ "$REPO_DIR" == "cardboard-iguana.com" ]] && [[ "$REPO_PARENT_DIR" == "_rep
 	       -not -iname 'README.md' \
 	       -exec rm -rf "{}" \;
 
-	cp -avrf ../../cardboard-iguana.com/* .
+	cp -rf ../../cardboard-iguana.com/* .
 
 	if [[ -d log ]]; then
 		mkdir log/_posts
