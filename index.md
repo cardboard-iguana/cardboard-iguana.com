@@ -1,4 +1,4 @@
-# 📦🦎🛡️
+# <span aria-hidden="true">📦🦎🛡️</span>
 
 ## Cardboard Iguana Security
 
