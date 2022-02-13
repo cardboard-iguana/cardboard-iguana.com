@@ -18,5 +18,5 @@ NOTE: 1 hex digit = 4 bits (2 hex digits per byte), which is why a 128-bit md5 h
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 12, 2021

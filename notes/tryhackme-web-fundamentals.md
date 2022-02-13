@@ -255,6 +255,6 @@ See my [Tools'R'us](tryhackme-tools-r-us.md) CTF write-up.
 
 - - - -
 
-👤 Nathan Acks
-📅 January 3, 2022
+👤 Nathan Acks  
+📅 January 3, 2022  
 🏷️ #MOC

@@ -23,5 +23,5 @@ When using GetNPUsers.py, specify the target as `${DOMAIN}/` (i.e., leave off th
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 December 6, 2021

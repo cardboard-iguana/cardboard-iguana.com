@@ -37,5 +37,5 @@ Maybe something’s up with my install of Volatility 3?
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 November 16, 2021

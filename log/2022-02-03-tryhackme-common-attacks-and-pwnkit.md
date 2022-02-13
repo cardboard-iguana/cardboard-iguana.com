@@ -74,5 +74,5 @@ A couple of points:
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 February 3, 2022

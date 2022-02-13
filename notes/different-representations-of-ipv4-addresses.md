@@ -30,5 +30,5 @@ Converting to hexadecimal is trivial using the excellent [Qalculate!](https://qa
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 January 24, 2022

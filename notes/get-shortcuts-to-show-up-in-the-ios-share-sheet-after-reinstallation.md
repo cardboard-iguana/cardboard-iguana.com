@@ -4,5 +4,5 @@ For whatever reason, shortcuts created in the iOS Shortcuts app won’t show up 
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 May 11, 2021

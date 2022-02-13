@@ -54,5 +54,5 @@ NOTE: John is susceptible to false positives when cracking ssh keys, and will th
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 12, 2021

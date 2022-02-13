@@ -80,5 +80,5 @@ NOTE that not every UNIX-like system calls their library path LD_LIBRARY_PATH!
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 30, 2021

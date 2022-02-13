@@ -6,5 +6,5 @@ See my [Attacktive Directory](../notes/tryhackme-attacktive-directory.md) CTF wr
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 December 30, 2021

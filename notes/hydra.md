@@ -35,5 +35,5 @@ The `$TEMPLATE` is basically the JSON request body with the special placeholders
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 January 30, 2022

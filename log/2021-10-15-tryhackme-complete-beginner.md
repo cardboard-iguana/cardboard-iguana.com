@@ -24,5 +24,5 @@ To force a linked GPO to be applied now, use `gpoupdate /force` on the command l
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 15, 2021

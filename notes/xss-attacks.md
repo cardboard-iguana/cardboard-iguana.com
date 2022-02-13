@@ -87,5 +87,5 @@ To get/set the content of an element, use the `innerHTML` method (to insert HTML
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 8, 2021

@@ -10,5 +10,5 @@ The TCP “acknowledgment number” contains the *next* sequence number that the
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 November 28, 2021

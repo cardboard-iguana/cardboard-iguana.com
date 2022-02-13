@@ -54,5 +54,5 @@ Won’t you join me on my journey?
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 11, 2021

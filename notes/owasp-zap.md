@@ -38,5 +38,5 @@ ZAP has [gobuster](gobuster.md)-like functionality called "Forced Browse". The w
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 January 12, 2022

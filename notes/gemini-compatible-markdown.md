@@ -47,8 +47,8 @@ That said! I’ve yet to run into a Markdown-to-Gemini converter that handles li
 ```markdown
 This is a sentence with [two][1] [links][2] in it.
 
-[1]: https://www.necopinus.xyz/ "necopinus.xyz"
-[2]: https://www.cardboard-iguana.com/ "Cardboard Iguana Security"
+[1]: https://necopinus.xyz "necopinus.xyz"
+[2]: https://cardboard-iguana.com "Cardboard Iguana Security"
 
 ![This is some image alt-text](../02779186c69ce442260bd67d3bd11b3e.webp)
 ```
@@ -58,8 +58,8 @@ To something like this:
 ```gemini
 This is a sentence with two [1] links [2] in it.
 
-=> https://www.necopinus.xyz/ [1]: necopinus.xyz
-=> https://www.cardboard-iguana.com/ [2]: Cardboard Iguana Security
+=> https://necopinus.xyz [1]: necopinus.xyz
+=> https://cardboard-iguana.com [2]: Cardboard Iguana Security
 
 => ../02779186c69ce442260bd67d3bd11b3e.webp 🖼️ This is some image alt-text
 ```
@@ -70,5 +70,5 @@ This is a sentence with two [1] links [2] in it.
 
 - - - -
 
-👤 Nathan Acks
-📅 February 12, 2022 13:17
+👤 Nathan Acks  
+📅 February 12, 2022

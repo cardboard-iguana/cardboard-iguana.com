@@ -38,5 +38,5 @@ One handy way to seed a URL is using requests harvested with [Burp Suite](burp-s
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 January 30, 2022

@@ -124,7 +124,7 @@ def probe_port(ip, port, result = 1):
 		sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		sock.settimeout(0.5)
 
-		r = sock.connect_ex((ip, port))   
+		r = sock.connect_ex((ip, port))
 
 		if r == 0: 
 			result = r
@@ -273,5 +273,5 @@ Note that, like the port scanner earlier, this is slooooooow... (At least it pro
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 February 1, 2022

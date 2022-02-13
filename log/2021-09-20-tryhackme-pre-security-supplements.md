@@ -85,5 +85,5 @@ echo "${MY_ARRAY[@]}" # item3 item2 item4
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 20, 2021

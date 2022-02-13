@@ -48,5 +48,5 @@ Use -R (and omit `$FILE`) to recursively download an entire directory.
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 2, 2021

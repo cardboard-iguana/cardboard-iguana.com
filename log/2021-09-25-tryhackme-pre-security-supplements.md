@@ -121,5 +121,5 @@ Event IDs refer to specific *types* of events, while Event Record IDs provide a 
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 25, 2021

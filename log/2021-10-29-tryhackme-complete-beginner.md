@@ -62,5 +62,5 @@ Linux privilege escalation checklists:
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 29, 2021

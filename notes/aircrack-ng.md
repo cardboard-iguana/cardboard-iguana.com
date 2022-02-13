@@ -10,5 +10,5 @@ aircrack-ng -b $BSSID -w $WORLDLIST_FILE $CAP_FILE
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 November 28, 2021

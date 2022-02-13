@@ -10,5 +10,5 @@ Since web servers are typically serving content from `/var/www`, `/var/www/srv`,
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 January 17, 2022

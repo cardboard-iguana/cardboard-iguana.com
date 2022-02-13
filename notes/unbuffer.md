@@ -14,5 +14,5 @@ unbuffer $APPLICATION | tee $LOG
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 January 31, 2022

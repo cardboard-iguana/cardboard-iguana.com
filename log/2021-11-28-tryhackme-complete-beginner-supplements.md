@@ -123,5 +123,5 @@ nikto -list-plugins # List plugins
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 November 28, 2021

@@ -47,5 +47,5 @@ It seems like Windows executables have a [magic number](../notes/magic-numbers.m
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 November 17, 2021

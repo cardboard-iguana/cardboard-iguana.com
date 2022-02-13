@@ -54,5 +54,5 @@ LinEnum is very fast, but LSE and LinPEAS produce more intelligible output.
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 November 2, 2021

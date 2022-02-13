@@ -40,5 +40,5 @@ echo -n "$HEADER.$PAYLOAD" | openssl dgst -sha256 -mac HMAC -macopt hexkey:$(cat
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 January 17, 2022

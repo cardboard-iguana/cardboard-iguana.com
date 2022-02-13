@@ -53,5 +53,5 @@ To use [Hashcat](hashcat.md) to crack the hashes obtained in this fashin, first 
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 December 6, 2021

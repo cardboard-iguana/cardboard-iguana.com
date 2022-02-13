@@ -21,5 +21,5 @@ Note that Metasploit 6 apparently calls these “framework plugins” now.
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 19, 2021

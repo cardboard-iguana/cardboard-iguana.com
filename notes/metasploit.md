@@ -184,5 +184,5 @@ By default, msfvenom produces 64-bit executables when using the `-f exe`. This d
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 21, 2021

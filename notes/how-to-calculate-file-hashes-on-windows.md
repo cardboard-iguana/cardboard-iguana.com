@@ -18,5 +18,5 @@ In both cases, the algorithm can be excluded (in which case SHA1 is used for Cer
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 November 25, 2021

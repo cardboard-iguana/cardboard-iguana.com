@@ -35,5 +35,5 @@ ffmpeg -i $INPUT.mp4 -vf "fps=10,scale=720:-1:flags=lanczos" -vcodec libwebp -lo
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 10, 2021

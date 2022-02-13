@@ -55,5 +55,5 @@ Kali’s rockyou.txt.gz is apparently [a list of 14 million passwords](https://g
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 2, 2021

@@ -8,5 +8,5 @@ HTML injection is a type of input sanitization failure where (unwanted) HTML is 
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 15, 2021

@@ -38,5 +38,5 @@ If set on a directory, files created in the directory will have their group owne
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 19, 2021

@@ -6,5 +6,5 @@ See my [Blaster](../notes/tryhackme-blaster.md) CTF write-up.
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 December 8, 2021

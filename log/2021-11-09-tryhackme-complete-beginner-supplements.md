@@ -51,5 +51,5 @@ Possibly useful sites for getting OSINT domain information:
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 November 9, 2021

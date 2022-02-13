@@ -1049,5 +1049,5 @@ Counterintelligence is a long game. You’re waiting for a mistake… And once a
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 April 4, 2021

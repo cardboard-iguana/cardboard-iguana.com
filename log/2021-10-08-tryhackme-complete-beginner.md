@@ -51,5 +51,5 @@ Apparently PHPv5 and higher has a [poison null byte](../notes/poison-null-byte.m
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 8, 2021

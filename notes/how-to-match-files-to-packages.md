@@ -19,5 +19,5 @@ dpkg-query -S $FULL_PATH_TO_FILE
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 3, 2021

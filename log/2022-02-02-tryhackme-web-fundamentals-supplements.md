@@ -34,5 +34,5 @@ See my [Jurassic Park](../notes/tryhackme-jurassic-park.md) CTF write-up.
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 February 2, 2022

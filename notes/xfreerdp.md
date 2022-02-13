@@ -10,5 +10,5 @@ xfreerdp /dynamic-resolution +clipboard /cert:ignore /v:$TARGET_IP /u:$USER /p:$
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 29, 2021

@@ -85,5 +85,5 @@ Event Viewer displays *most* of these values in the “General” when viewing a
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 25, 2021

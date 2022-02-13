@@ -11,5 +11,5 @@ NOTE: The use of `sudo -l` requires that the user have *some* level of sudo acce
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 30, 2021

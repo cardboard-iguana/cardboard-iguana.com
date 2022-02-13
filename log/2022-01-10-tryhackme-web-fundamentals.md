@@ -28,5 +28,5 @@ Modules provided by the [Burp Suite](../notes/burp-suite.md) App Store can be ac
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 January 10, 2022

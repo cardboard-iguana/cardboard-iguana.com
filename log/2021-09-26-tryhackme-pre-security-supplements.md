@@ -50,5 +50,5 @@ The MITRE AEPs are kinda hard to find:
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 26, 2021

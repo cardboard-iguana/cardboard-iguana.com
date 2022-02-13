@@ -140,5 +140,5 @@ There’s also a [PowerView tips & tricks cheat sheet](https://gist.github.com/H
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 16, 2021

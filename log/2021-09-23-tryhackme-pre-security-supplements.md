@@ -34,5 +34,5 @@ This is the “Client Server Runtime Process”. It manages the user-mode side o
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 23, 2021

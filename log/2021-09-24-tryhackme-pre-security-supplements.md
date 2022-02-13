@@ -64,5 +64,5 @@ The user shell is defined in HKLM/Software/Microsoft/Windows NT/CurrentVersion/W
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 24, 2021

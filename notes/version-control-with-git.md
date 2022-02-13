@@ -472,5 +472,5 @@ Some common rules:
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 August 1, 2018

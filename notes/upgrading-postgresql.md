@@ -14,5 +14,5 @@ Where `$OLD_VER` and `$NEW_VER` are the old and new major version numbers (e.g.,
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 November 25, 2021

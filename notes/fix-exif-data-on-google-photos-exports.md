@@ -17,5 +17,5 @@ Note that this will fail for any photos with a timestamp before 1970; for these 
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 November 15, 2021

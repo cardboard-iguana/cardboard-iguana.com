@@ -53,5 +53,5 @@ The `icacls` tool can be used to check (and change!) permissions at the command 
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 13, 2021

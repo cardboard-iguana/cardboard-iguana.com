@@ -114,5 +114,5 @@ Nmap sends a RST after the three-way handshake in a TCP connect scan in order to
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 28, 2021

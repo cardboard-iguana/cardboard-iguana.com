@@ -51,5 +51,5 @@ Target > Issue definitions provides a list of the issues used by the vulnerabili
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 January 6, 2022

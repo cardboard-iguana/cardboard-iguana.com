@@ -74,5 +74,5 @@ For example:
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 19, 2021

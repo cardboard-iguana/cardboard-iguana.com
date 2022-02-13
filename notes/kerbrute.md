@@ -14,5 +14,5 @@ To use kerbrute you need to meet one of the following requirements:
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 December 6, 2021

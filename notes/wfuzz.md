@@ -21,5 +21,5 @@ Use `wfuzz --help` for a full list of options. The `--hc 404` option is particul
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 January 25, 2022

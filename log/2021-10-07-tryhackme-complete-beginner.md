@@ -58,5 +58,5 @@ As a side-note, these examples really aren't showing me much of the value of XSS
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 7, 2021

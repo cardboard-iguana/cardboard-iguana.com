@@ -58,5 +58,5 @@ It's worth checking out the [Jurassic Park](tryhackme-jurassic-park.md) CTF for 
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 January 30, 2022

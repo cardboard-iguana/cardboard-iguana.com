@@ -16,5 +16,5 @@ The Windows SAM database (passwords) is stored in %SYSTEMROOT%/System32/config. 
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 21, 2021

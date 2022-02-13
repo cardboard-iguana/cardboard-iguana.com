@@ -17,5 +17,5 @@ NOTE: Be aware that `\w` *includes* `_` (but not `-`)!
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 September 21, 2021

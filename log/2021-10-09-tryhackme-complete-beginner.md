@@ -100,5 +100,5 @@ The admin page indicates that it loads modules, so this is how we're going to ge
 
 - - - -
 
-👤 Nathan Acks
+👤 Nathan Acks  
 📅 October 9, 2021
