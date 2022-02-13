@@ -9,6 +9,7 @@
 _theme/
 _layouts/
 css/
+atom.xml
 
 # Ignore build files
 .bundle/

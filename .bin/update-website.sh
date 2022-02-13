@@ -11,6 +11,7 @@ if [[ "$REPO_DIR" == "cardboard-iguana.com" ]] && [[ "$REPO_PARENT_DIR" == "_rep
 	       -not -iname '.git' \
 	       -not -iname '.gitignore' \
 	       -not -iname '_config.yml' \
+	       -not -iname 'atom.xml' \
 	       -not -iname 'Gemfile' \
 	       -not -iname 'package.json' \
 	       -not -iname 'README.md' \
