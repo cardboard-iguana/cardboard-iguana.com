@@ -5,11 +5,18 @@
 *~
 *.swp
 
+# Ignore merged _theme files
+_theme/
+_layouts/
+css/
+
 # Ignore build files
 .bundle/
+vendor/
+Gemfile.lock
 .jekyll-cache/
 .jekyll-metadata
 _site/
 .sass-cache/
 node_modules/
-vendor/
+package-lock.json

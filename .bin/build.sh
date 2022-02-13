@@ -10,6 +10,14 @@ fi
 # Clean destination directory.
 #
 [[ -d _site ]] && rm --recursive --force _site
+#[[ -d _theme ]] && rm --recursive --force _theme
+
+# Clone the theme and copy relevant files into the main repository.
+#
+#git clone https://github.com/necopinus/website-theme.git _theme
+#rm --recursive --force _theme/README.md _theme/LICENSE
+#mv _theme/* .
+#rm --recursive --force _theme
 
 # Build the site using either system Jekyll (assume that our
 # environment has installed the necessary gems automatically) or via
@@ -50,10 +58,10 @@ npm install
 # result in invalid HTML/CSS/JS output! Fleek's optimization should
 # therefore be turned off when "hand optimization" like this is used.
 #
-chmod +x bin/minify
-mv _site _site.original
-(
-	cd _site.original
-	../.bin/minify --all --recursive --sync --output ../_site .
-)
-rm -rf _site.original
+#chmod +x bin/minify
+#mv _site _site.original
+#(
+#	cd _site.original
+#	../.bin/minify --all --recursive --sync --output ../_site .
+#)
+#rm -rf _site.original
