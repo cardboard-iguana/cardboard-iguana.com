@@ -6,20 +6,15 @@ plugins:
   - jekyll-relative-links
   - jekyll-auto-image
 
-# Some generic site settings. Originally used for RSS/JSON feeds. See:
-#
-#   https://github.com/snaptortoise/jekyll-rss-feeds
-#   https://github.com/snaptortoise/jekyll-json-feeds
-#
-# However, these are used in some other places now, so check around
-# before removing!
+# Some generic (non-standard) site settings.
 #
 name: Cardboard Iguana Security
-description: The Yak Collective is a network of over 300 independent consultants, coaches, and freelancers with varied technical and creative skills.
+description: Cardboard Iguana Security is a weblog and digital garden focusing on cybersecurity and hacking. Interested in hiring me? Then reach out to nathan.acks@cardboard-iguana.com!
 url: https://cardboard-iguana.com
+icon: /02779186c69ce442260bd67d3bd11b3e.webp
 
-# Default image for the auto-image plugin (used in Twitter Cards and
-# Open Graph image tags.
+# Default image for the auto-image plugin (used in Twitter
+# Cards and Open Graph image tags.
 #
 image: /770a338bf8f3336b20fa14650b6f5049.webp
 
@@ -32,15 +27,31 @@ optional_front_matter:
 #
 defaults:
   - scope:
+      path: "index.md"
+    values:
+      layout: "homepage"
+  - scope:
+      path: "log.md"
+    values:
+      layout: "post-list"
+  - scope:
+      path: "notes.md"
+    values:
+      layout: "page-list"
+  - scope:
+      path: "log"
+    values:
+      layout: "post"
+  - scope:
       path: ""
       type: pages
     values:
-      layout: default
+      layout: "page"
   - scope:
       path: ""
-      type: posts
+      type: "posts"
     values:
-      layout: default
+      layout: "post"
 
 # Additional excludes.
 #
