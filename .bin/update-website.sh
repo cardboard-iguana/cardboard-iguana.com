@@ -10,6 +10,9 @@ if [[ "$REPO_DIR" == "cardboard-iguana.com" ]] && [[ "$REPO_PARENT_DIR" == "_rep
 	       -not -iname '.bin' \
 	       -not -iname '.git' \
 	       -not -iname '.gitignore' \
+	       -not -iname '_config.yml' \
+	       -not -iname 'Gemfile' \
+	       -not -iname 'package.json' \
 	       -not -iname 'README.md' \
 	       -exec rm -rf "{}" \;
 

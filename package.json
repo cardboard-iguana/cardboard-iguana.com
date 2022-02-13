@@ -1,0 +1,12 @@
+{
+  "name": "cardboard-iguana.com",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Nathan Acks <nathan.acks@cardboard-iguana.com>",
+  "dependencies": {
+    "all-relative": "*"
+  },
+  "repository": {
+    "url": "https://github.com/necopinus/cardboard-iguana.com"
+  }
+}
