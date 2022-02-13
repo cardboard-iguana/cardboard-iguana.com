@@ -1,0 +1,187 @@
+# TryHackMe: Complete Beginner (Supplements)
+
+## Attacking Kerberos
+
+### Introduction
+
+Kerberos: The default authentication method for Windows domains. Intended to be the successor to [NTLM](../notes/windows-password-hashes.md).
+
+* TICKET GRANTING TICKET (TGT): An authentication ticket that can be used to request service tickets for specific domain services from the ticket granting service.
+* KEY DISTRIBUTION CENTER (KDC): A domain service that issues tickets; typically composed of the ticket granting service and the authentication service.
+* AUTHENTICATION SERVICE (AS): Issues ticket granting tickets. (Presumably in charge of *authenticating* users and automations.)
+* TICKET GRANTING SERVICE (TGS): Issues tickets for domain services (and machines?) when presented with a ticket granting ticket. (Presumably in charge of *authorizing* users and automations.)
+* SERVICE PRINCIPAL NAME (SPN): A service identifier. On Windows, SPNs associates a particular service instance with a domain account. All services must have a domain service account. (But it sounds like services might be associated with *multiple* accounts via multiple principal names assigned to multiple running instances?)
+* KDC LONG TERM SECRET KEY (KDC LT KEY): A secret key used to encrypt ticket granting tickets and sign privilege attribute certificates. [This is the NT hash of the KRBTGT service account](https://blog.quest.com/golden-ticket-attacks-how-they-work-and-how-to-defend-against-them/).
+* SERVICE LONG TERM SECRET KEY (SERVICE LT KEY): A secret key associated with a particular service. Used to encrypt the service portion of a service ticket and sign privilege attribute certificates. Held by individual domain service accounts.
+* SESSION KEY: Issued with a ticket to identify a particular user session. Services expects *both* a ticket and a session key to be present before acting on a user’s behalf.
+* PRIVILEGE ATTRIBUTE CERTIFICATE (PAC): A bundle of the user’s identifying information, which is provided along with the tickets. Importantly, this contains the user’s username and (on Windows) SID.
+
+Much acronym. Very Microsoft.
+
+I found [TryHackMe’s discussion of Kerberos authentication](https://tryhackme.com/room/attackingkerberos) pretty confusing, but [Wikipedia’s walk-through of the authentication process](https://en.wikipedia.org/wiki/Kerberos_%28protocol%29#Description) is much clearer. The below steps are cut-and-pasted from Wikipedia’s walk-through, but with language adapted to match the Windows-specific environment TryHackMe is concerned with...
+
+[α] Client Authentication to the KDC (a.k.a. “Pre-Authentication”):
+
+(1) AS-REQ: The client sends the client/user ID + the current timestamp (the timestamp is used to prevent replay attacks) encrypted with the [NT hash](../notes/windows-password-hashes.md) of the user’s password a cleartext message of the user ID to the authentication server to request services on behalf of the user.
+
+(2) AS-REP: The authentication server checks to see if the client/user ID is in its database and if it can decrypt the timestamp using the [NT hash](../notes/windows-password-hashes.md) of the password stored there. If it can, then the authentication server sends back the following two messages to the client:
+
+* Message A: *Client/TGS Session Key* encrypted using the [NT hash](../notes/windows-password-hashes.md) of the client/user.
+* Message B: *Ticket Granting Ticket* (including the privilege attribute certificate, client network address, ticket validity period, and the *Client/TGS Session Key*) encrypted using the KDC long term secret key.
+
+(3) Once the client receives messages A and B, it attempts to decrypt message A with the [NT hash](../notes/windows-password-hashes.md) generated from the password entered by the user. If the user entered password does not match the password in the authentication service database then decryption of message A will fail. Once message A is decrypted, the client obtains the *Client/TGS Session Key*. This session key is used for further communications with the ticket granting service. (Note: The client cannot decrypt Message B, as it is encrypted using the KDC long term secret key.)
+
+[β] Client Service Authorization:
+
+(1) TGS-REQ: When requesting services, the client sends the following messages to the ticket granting service:
+
+* Message C: Composed of the ticket granting ticket and the service principal name of the requested service.
+* Message D: Authenticator (which is composed of the client ID and the timestamp), encrypted using the *Client/TGS Session Key*.
+
+(2) TGS-REP: Upon receiving messages C and D, the ticket granting service retrieves the ticket granting ticket out of message C and decrypts it using the KDC long term secret key. This gives it the *Client/TGS Session Key* and the client ID (the client ID is part of the privilege attribute certificate). Using the *Client/TGS Session Key*, the ticket granting service decrypts message D (Authenticator) and compares the client IDs from the ticket granting ticket and message D; if they match, the server sends the following two messages to the client:
+
+* Message E: *Service ticket* (which includes the privilege attribute certificate, client network address, validity period, and *Client/Server Session Key*) encrypted using the service's long term secret key.
+* Message F: *Client/Server Session Key* encrypted with the *Client/TGS Session Key*.
+
+[γ] Client Service Access:
+
+(1)  AP-REQ: Upon receiving messages E and F from ticket granting service, the client has enough information to authenticate itself to the service server. The client connects to the service server and sends the following two messages:
+
+* Message E: The *service ticket* (as provided by the ticket granting service; see above).
+* Message G: A new Authenticator, which includes the client ID, timestamp and is encrypted using *Client/Server Session Key*.
+
+(2) AP-REP: The service server decrypts the service ticket (message E) using its long term secret key to retrieve the *Client/Server Session Key*. Using the sessions key, it then decrypts the Authenticator and compares client ID from the service ticket and message G. If they match the server sends the following message to the client to confirm its true identity and willingness to serve the client:
+
+* Message H: The timestamp found in client's Authenticator (sometimes modified, depending upon the version of Kerberos being used), encrypted using the *Client/Server Session Key*.
+
+(3) The client decrypts the confirmation (message H) using the *Client/Server Session Key* and checks whether the timestamp is correct. If so, then the client can trust the server and can start issuing service requests to the server.
+
+(4) The server provides the requested services to the client.
+
+Tickets are typically base64-encoded.
+
+The above process explains why it’s sometimes said that “a hash is as good as a password” for a Window’s domain.
+
+### Enumerating with Kerbrute
+
+Kerbrute works by sending a single UDP packet to the authentication service to begin the authentication process, but then doesn’t complete the transaction as to avoid an actual login failure (and the associated logging). While this doesn’t grant access to anything, it does allow domain users to be enumerated using a wordlist.
+
+NOTE: To use kerbrute you need to already be on the domain you are attacking, or alternately need to have mapped the domain controller (which normally hosts the KDC) IP address properly in your /etc/hosts file.
+
+### Harvesting & Brute-Forcing Tickets with Rubeus
+
+[Rubeus](https://github.com/GhostPack/Rubeus) is a Windows-only post-exploitation tool for attacking Kerberos. No compiled binaries are available (either through the GitHub repo or Kali Linux’s `windows-binaries` package).
+
+NOTE: To use Rebueus you need to already be on the domain you are attacking, or alternately need to have mapped the domain controller (which normally hosts the KDC) IP address properly in C:/Windows/System32/drivers/etc/hosts.
+
+```powershell
+# Harvest ticket granting tickets observed by the current
+# machine. Probably works best when run on a domain
+# controller.
+#
+Rubeus.exe harvest /interval:30
+
+# Spray the specified password across all known users and
+# generate a ticket giving ticket for successful
+# authentications. (Can trigger account lockouts!)
+#
+Rubeus.exe brute /password:ThePasswordToSpray /noticket
+```
+
+### Kerberoasting
+
+Kerberoasting is where a service ticket is used to brute force a service password. This password can then be used to either move laterally or (if the service runs with elevated privileges) to elevate your privileges.
+
+Note that not every account is kerberoastable, though it’s not 100% obvious from this walk-through why that is. The Kali Linux tool `bloodhound` can be used to identify potentially kerberoastable accounts.
+
+The main defenses against kerberoasting are (1) strong passwords and (2) making sure you’re not running any services as domain admin (which you shouldn’t need to do in this day and age anyway).
+
+### Rubeus
+
+```powershell
+# Extract password hashes for all known kerberoastable
+# accounts using Rubeus.
+#
+Rubeus.exe kerberoast
+```
+
+The password hashes output here can then be cracked with [Hashcat](../notes/hashcat.md) (use the 13100 hash mode).
+
+### Impacket
+
+Impacket can identify kerberoastable accounts and dump packets remotely. It comes standard with Kali Linux.
+
+```bash
+sudo python3 /usr/share/doc/python3-impacket/examples/GetUserSPNs.py ${DOMAIN}/${USER}:${PASSWORD} -dc-ip $DOMAIN_CONTROLLER_IP -request
+```
+
+The password hashes output here can then be cracked with [Hashcat](../notes/hashcat.md) (use the 13100 hash mode).
+
+### AS-REP Roasting with Rubeus
+
+AS-REP roasting is basically kerberoasting for regular user accounts. The only requirement to roast a user account is that Kerberos pre-authentication is disable.
+
+(When pre-authentication is disabled, the authentication server will supply a ticket granting ticket and a session key automatically when requested, *without first verifying the user*. This data is then stored offline by the Windows machine for later decryption when the user with pre-authentication disabled logs in. But this means that all we need to do is to break the user’s [NT hash](../notes/windows-password-hashes.md)!)
+
+Both Rubeus and Impacket (via GetNPUsers.py) support AS-REP roasting; however, Rubeus can auto-discover roastable users, while GetNPUsers.py requires that user accounts already be enumerated and roastable accounts identified.
+
+```powershell
+# AS-REP roasting with Rubeus.
+#
+Rubeus.exe asreproast
+```
+
+To use [Hashcat](../notes/hashcat.md) to crack the hashes obtained in this fashin, first insert `23$` after the leading `$kerb5asrep$` (so `$kerb5asrep$` → `$kerb5asrep$23$`) and then use mode 18200.
+
+Basically the only mitigation for this attack is to keep pre-authentication enabled, though strong password policies can help.
+
+### Pass the Ticket with Mimikatz
+
+Mimikatz can dump ticket granting tickets (and session keys?) from the memory of Windows’ Local Security Authority Subsystem Service (LSASS); these can then be used to for privilege elevation or lateral movement (depending on which users are active on that machine).
+
+NOTE: There’s a bit of terminology creep in these discussions. Mimikatz and Rubeus are actually dumping Kerberos data structures (as .kirbi files), which contain *both* a ticket *and* the corresponding session key. People tend to call these .kirbi files “tickets”, but it’s worth keeping in mind that they contain *both* pieces of data (as a “ticket” in the Kerberos sense, not the hacker’s sense, isn’t useful without the corresponding session key). See “[Rubeus — Now With More Kekeo](http://www.harmj0y.net/blog/redteaming/rubeus-now-with-more-kekeo/)” for a good discussion of this.
+
+Mimikatz needs to be run with administrative privileges (on the local machine), and provides its own command prompt.
+
+* `privilege::debug` — See if you’re running with the right privileges.
+* `sekurlsa::tickets /export` — Dump any Kerberos ”tickets” (really ticket + session key data structures) from LSASS’s memory as .kirbi files. Tickets are named like ID-USER-SERVICE-DOMAIN.kirbi; ticket granting tickets have a `krbtgt` SERVICE name. If you can find a `krbtgt` ticket belonging to an administrator account, then you’ve struck gold (literally — see the next section).
+* `kerberos::ptt TICKET_FILE` — Load the data structure in the specified .kirbi file into memory (allowing the account you’re logged in as to “pass the ticket” and impersonate the user whose ticket you’ve harvested).
+
+The built-in Windows command `klist` will show you the current Kerberos tickets in memory.
+
+The only real way to defend against this attack is to *only* allow domain admins to log into domain controllers, *not* lower privileged machines!
+
+### Golden/Silver Ticket Attacks with Mimikatz
+
+The idea with gold and silver tickets is that, since the KDC and service long term secret keys are just the [NT hashes](../notes/windows-password-hashes.md) of the corresponding service account’s passwords, then if you can dump the password (or even its hash), you can *forge* a kerberos ticket without ever needing to contact the KDC. (See “[Silver & Golden Tickets](https://en.hackndo.com/kerberos-silver-golden-tickets/)”.)
+
+Silver tickets are forged using a service account’s [NT hash](../notes/windows-password-hashes.md), and can be used to grant any user access to that service. This works because Kerberos implicitly assumes that *only* the KDC and the service account know the service account’s long term secret key.
+
+Golden tickets take things a step further — if you can get the `krbtgt` *user*’s [NT hash](../notes/windows-password-hashes.md), then you can forge a ticket granting ticket for any user, and then use that to get the KDC to provide a valid service ticket for any service that user has access to. This works because Kerberos trusts the encrypted ticket granting ticket blob and *doesn’t reauthenticate the user before granting further access*.
+
+Golden tickets are powerful (since you can be anyone, it’s trivial to gain control of the domain), but also noisier — because you’re running through the KDC infrastructure, golden ticket still generate (almost) all of the normal logging, while silver tickets allow you to bypass the KDC completely and only generate logs on the service server (if that).
+
+To generate a gold or silver ticket using Mimikatz, begin by running the `lsadump::lsa /inject /name:SERVICE` command to retrieve the service SID and NTLM password hash for that service. If SERVICE is `krbtgt` then this will allow the creation of a golden ticket, otherwise you’ll be creating a silver ticket.
+
+(You can also use a user name instead of SERVICE, in which case it appears that Mimikatz will just request a ticket granting ticket from the KDC as that user in the next step; this is theoretically just as noisy as a golden ticket, but looks more “normal”.)
+
+To actually create and cache the ticket, use `Kerberos::golden /user:USER /domain:DOMAIN /sid:SID /krbtgt:HASH /id:TYPE`, where:
+
+* `USER` is the user to create the ticket for (probably the one you’ve compromised).
+* `DOMAIN` is the domain to create the ticket for.
+* `SID` is the SID of the service from the previous step.
+* `HASH` is the [NT hash](../notes/windows-password-hashes.md) of the service password from the previous step.
+* `TYPE` is the type of Kerberos ticket to create; use 500 for a golden (ticket granting) ticket, and 1103 for a service ticket.
+
+Once the ticket has been created, use `misc::cmd` to open a command prompt using the newly forged ticket.
+
+### Kerberos Backdoors with Mimikatz
+
+If Mimikatz is run on a domain controller, it can modify the authentication service’s memory using the `misc::skeleton` command to cause it to attempt to decrypt the AS-REQ using *both* the user’s [NT hash](../notes/windows-password-hashes.md) *and* an [NT hash](../notes/windows-password-hashes.md) of your choosing (by default `60BA4FCADC466C7A033C178194C03DF6`, which is just `mimikatz`).  This means that you can send an AS-REQ as any user using the “skeleton key” hash to gain access as that user, similar to a golden ticket attack.
+
+Obviously this isn’t very persistent itself, as the skeleton key will be lost if the server is rebooted or the authentication service restarted.
+
+- - - -
+
+👤 Nathan Acks
+📅 December 5, 2021
