@@ -36,7 +36,7 @@ msfvenom -p linux/x86/exec CMD="/bin/bash -p" -f elf -o shell.elf
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 
 - - - -
 

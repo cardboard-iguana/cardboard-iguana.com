@@ -9,7 +9,7 @@ To use kerbrute you need to meet one of the following requirements:
 
 ## References
 
-* [TryHackMe - Attacking Kerberos](tryhackme-attacking-kerberos.md)
+* [TryHackMe: Attacking Kerberos](tryhackme-attacking-kerberos.md)
 * [Attacktive Directory](tryhackme-attacktive-directory.md)
 
 - - - -

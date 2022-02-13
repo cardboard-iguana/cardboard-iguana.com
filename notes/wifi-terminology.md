@@ -8,7 +8,7 @@ From what I can tell, SSID and BSSID apply to single access points, while ESSID 
 
 ## References
 
-* [TryHackMe - Wifi Hacking 101](tryhackme-wifi-hacking-101.md)
+* [TryHackMe: Wifi Hacking 101](tryhackme-wifi-hacking-101.md)
 
 - - - -
 

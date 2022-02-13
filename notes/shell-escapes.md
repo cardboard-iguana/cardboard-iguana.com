@@ -15,7 +15,7 @@ Many common UNIX applications allow you to escape to a shell. This is particular
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [GTFOBins](https://gtfobins.github.io)
 
 - - - -

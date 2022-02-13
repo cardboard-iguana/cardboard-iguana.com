@@ -130,22 +130,22 @@
 
 ### XXE
 
-* [Deploy the VM](../log/2021-12-09%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [eXtensible Markup Language](../log/2021-12-09%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [DTD](../log/2021-12-09%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [XXE Payload](../log/2021-12-09%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
+* [Deploy the VM](../log/2021-12-09-tryhackme-complete-beginner-supplements.md)
+* [eXtensible Markup Language](../log/2021-12-09-tryhackme-complete-beginner-supplements.md)
+* [DTD](../log/2021-12-09-tryhackme-complete-beginner-supplements.md)
+* [XXE Payload](../log/2021-12-09-tryhackme-complete-beginner-supplements.md)
 * Exploiting
 
 ### Cross-Site Scripting
 
-* [Introduction](../log/2021-11-28%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
+* [Introduction](../log/2021-11-28-tryhackme-complete-beginner-supplements.md)
 * Deploy Your XSS Playground
-* [Stored XSS](../log/2021-11-28%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [Reflected XSS](../log/2021-11-28%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [DOM-Based XSS](../log/2021-11-28%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [Using XSS for IP and Port Scanning](../log/2021-11-28%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [XSS Keylogger](../log/2021-11-28%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [Filter Evasion](../log/2021-11-28%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
+* [Stored XSS](../log/2021-11-28-tryhackme-complete-beginner-supplements.md)
+* [Reflected XSS](../log/2021-11-28-tryhackme-complete-beginner-supplements.md)
+* [DOM-Based XSS](../log/2021-11-28-tryhackme-complete-beginner-supplements.md)
+* [Using XSS for IP and Port Scanning](../log/2021-11-28-tryhackme-complete-beginner-supplements.md)
+* [XSS Keylogger](../log/2021-11-28-tryhackme-complete-beginner-supplements.md)
+* [Filter Evasion](../log/2021-11-28-tryhackme-complete-beginner-supplements.md)
 * Protection Methods & Other Exploits
 
 ### ZTH: Obscure Web Vulnerabilities

@@ -18,7 +18,7 @@ When using GetNPUsers.py, specify the target as `${DOMAIN}/` (i.e., leave off th
 
 ## References
 
-* [TryHackMe - Attacking Kerberos](tryhackme-attacking-kerberos.md)
+* [TryHackMe: Attacking Kerberos](tryhackme-attacking-kerberos.md)
 * [Attacktive Directory](tryhackme-attacktive-directory.md)
 
 - - - -

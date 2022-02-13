@@ -2,7 +2,7 @@
 
 * Charsets
 * Wildcards and Optional Characters
-* [Metacharacters and Repetitions](../log/2021-09-21%20TryHackMe%20-%20Pre%20Security%20(Supplements).md)
+* [Metacharacters and Repetitions](../log/2021-09-21-tryhackme-pre-security-supplements.md)
 * Starts With / Ends With, Groups, and Either / Or
 
 ## References

@@ -31,7 +31,7 @@ The `$TEMPLATE` is basically the JSON request body with the special placeholders
 * [Multiple Ways To Exploiting HTTP Authentication](https://www.hackingarticles.in/multiple-ways-to-exploiting-http-authentication/)
 * [Hydra bruteforce and JSON](https://security.stackexchange.com/questions/57839/hydra-bruteforce-and-json)
 * [Bruteforce - Using Hydra with JSON](https://security.stackexchange.com/questions/203501/bruteforce-using-hydra-with-json)
-* [TryHackMe - hackernote](tryhackme-hackernote.md)
+* [TryHackMe: hackernote](tryhackme-hackernote.md)
 
 - - - -
 

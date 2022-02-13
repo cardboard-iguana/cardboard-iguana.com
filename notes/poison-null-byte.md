@@ -8,7 +8,7 @@ Typically a null byte will either be inserted at the end of a string (to prevent
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Common PHP attacks: Poison Null Byte](https://defendtheweb.net/article/common-php-attacks-poison-null-byte)
 
 - - - -

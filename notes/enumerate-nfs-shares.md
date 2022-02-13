@@ -12,7 +12,7 @@ Normally `$PORT` is 111.
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 
 - - - -
 

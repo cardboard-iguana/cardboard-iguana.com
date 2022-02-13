@@ -11,7 +11,7 @@ Two basic types:
 
 In general, in a reflected attack the malicious content comes *from* the target itself (usually by way of a malicious URL), while in a stored attack the malicious content is set by a different user than the target.
 
-Mostly noting this down because it’s been a while since I last looks at [XSS](../notes/XSS%20(Cross%20Site%20Scripting)%20Attacks.md).
+Mostly noting this down because it’s been a while since I last looks at [XSS](../notes/xss-attacks.md).
 
 ### Stored XSS
 
@@ -95,7 +95,7 @@ Remember that JavaScript recognizes single quote, double quotes, *and* back tick
 
 ### Filter Evasion: Bypass Attribute AND Tag AND Word Filtering
 
-Remember that it’s possible to [embed JavaScript in an iframe](../notes/XSS%20(Cross%20Site%20Scripting)%20Attacks.md), at least so long as you don't mind losing access to the parent page’s DOM.
+Remember that it’s possible to [embed JavaScript in an iframe](../notes/xss-attacks.md), at least so long as you don't mind losing access to the parent page’s DOM.
 
 Also remember that browsers treat URI schemes, HTML tag names, and HTML tag attributes in a case-insensitive fashion (so, `javascript:` is treated the same as `javaSCRIPT:`, `onclick` is treated the same as `ONCLICK`, etc.).
 

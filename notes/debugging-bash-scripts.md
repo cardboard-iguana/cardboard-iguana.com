@@ -34,7 +34,7 @@ Frequently `set -x` is used at the start of a script without a closing `set + x`
 
 ## References
 
-* [TryHackMe - Bash Scripting](tryhackme-bash-scripting.md)
+* [TryHackMe: Bash Scripting](tryhackme-bash-scripting.md)
 
 - - - -
 

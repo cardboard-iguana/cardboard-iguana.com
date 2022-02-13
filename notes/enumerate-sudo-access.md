@@ -6,7 +6,7 @@ NOTE: The use of `sudo -l` requires that the user have *some* level of sudo acce
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Basic Pentesting](tryhackme-basic-pentesting.md)
 
 - - - -

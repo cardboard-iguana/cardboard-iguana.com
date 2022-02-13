@@ -32,7 +32,7 @@ The `icacls` tool can be used to check (and change!) permissions at the command 
 ## References
 
 * [File and Folder Permissions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb727008)
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 
 - - - -
 

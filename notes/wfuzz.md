@@ -17,7 +17,7 @@ Use `wfuzz --help` for a full list of options. The `--hc 404` option is particul
 
 ## References
 
-* [TryHackMe - Web Fundamentals](tryhackme-web-fundamentals.md)
+* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 
 - - - -
 

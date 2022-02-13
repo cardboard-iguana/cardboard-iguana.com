@@ -28,7 +28,7 @@ Root squashing can be *disabled* in /etc/exports with the `no_root_squash` flag.
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 
 - - - -
 

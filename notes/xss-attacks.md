@@ -80,8 +80,8 @@ To get/set the content of an element, use the `innerHTML` method (to insert HTML
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
-* [TryHackMe - Cross-Site Scripting](tryhackme-cross-site-scripting.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Cross-Site Scripting](tryhackme-cross-site-scripting.md)
 * [Document.cookie](https://developer.mozilla.org/docs/Web/API/Document/cookie)
 * [Document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 

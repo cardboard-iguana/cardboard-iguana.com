@@ -6,7 +6,7 @@ xfreerdp /dynamic-resolution +clipboard /cert:ignore /v:$TARGET_IP /u:$USER /p:$
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 
 - - - -
 

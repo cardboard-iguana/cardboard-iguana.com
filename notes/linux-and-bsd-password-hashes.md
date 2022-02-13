@@ -14,7 +14,7 @@ NOTE: 1 hex digit = 4 bits (2 hex digits per byte), which is why a 128-bit md5 h
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 
 - - - -
 

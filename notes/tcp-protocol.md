@@ -4,7 +4,7 @@ The TCP “acknowledgment number” contains the *next* sequence number that the
 
 ## References
 
-* [TryHackMe - Wireshark 101](tryhackme-wireshark-101.md)
+* [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md)
 * [RFC 793](https://datatracker.ietf.org/doc/html/rfc793)
 * [TCP Model](tcp-model.md)
 

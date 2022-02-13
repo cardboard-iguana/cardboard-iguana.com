@@ -31,7 +31,7 @@ Make a new password hash for /etc/password or /etc/shadow:
 mkpasswd -m sha-512 $PASSWORD
 ```
 
-[It’s also possible to generate MD5 passwords for /etc/passwd using the openssl binary.](../notes/LFI%20(Local%20File%20Inclusion)%20Attacks.md)
+[It’s also possible to generate MD5 passwords for /etc/passwd using the openssl binary.](../notes/local-file-inclusion-attacks.md)
 
 ### Sudo
 

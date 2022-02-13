@@ -6,7 +6,7 @@ Since web servers are typically serving content from `/var/www`, `/var/www/srv`,
 
 ## References
 
-* [TryHackMe - Web Fundamentals](tryhackme-web-fundamentals.md)
+* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 
 - - - -
 

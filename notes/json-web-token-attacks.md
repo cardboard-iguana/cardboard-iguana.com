@@ -36,7 +36,7 @@ echo -n "$HEADER.$PAYLOAD" | openssl dgst -sha256 -mac HMAC -macopt hexkey:$(cat
 
 ## References
 
-* [TryHackMe - Web Fundamentals](tryhackme-web-fundamentals.md)
+* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 
 - - - -
 

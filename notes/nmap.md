@@ -36,7 +36,7 @@
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [3 ways to scan Eternal Blue Vulnerability in Remote PC](https://www.tryhackme.vip/2018/03/3-ways-to-scan-eternal-blue.html)
 
 - - - -

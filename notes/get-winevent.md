@@ -79,7 +79,7 @@ Event Viewer displays *most* of these values in the “General” when viewing a
 
 ## References
 
-* [TryHackMe - Windows Event Logs](tryhackme-windows-event-logs.md)
+* [TryHackMe: Windows Event Logs](tryhackme-windows-event-logs.md)
 * [Get-WinEvent](https://docs.microsoft.com/powershell/module/microsoft.powershell.diagnostics/get-winevent)
 * [Creating Get-WinEvent queries with FilterHashtable](https://docs.microsoft.com/powershell/scripting/samples/Creating-Get-WinEvent-queries-with-FilterHashtable)
 

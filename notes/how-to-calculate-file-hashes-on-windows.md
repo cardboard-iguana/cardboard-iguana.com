@@ -14,7 +14,7 @@ In both cases, the algorithm can be excluded (in which case SHA1 is used for Cer
 
 ## References
 
-* [TryHackMe - MAL - Researching](tryhackme-mal-researching.md)
+* [TryHackMe: MAL - Researching](tryhackme-mal-researching.md)
 
 - - - -
 

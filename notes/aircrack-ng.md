@@ -6,7 +6,7 @@ aircrack-ng -b $BSSID -w $WORLDLIST_FILE $CAP_FILE
 
 ## References
 
-* [TryHackMe - Wifi Hacking 101](tryhackme-wifi-hacking-101.md)
+* [TryHackMe: Wifi Hacking 101](tryhackme-wifi-hacking-101.md)
 
 - - - -
 

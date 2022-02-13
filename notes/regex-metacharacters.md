@@ -13,7 +13,7 @@ NOTE: Be aware that `\w` *includes* `_` (but not `-`)!
 
 ## References
 
-* [TryHackMe - Regular Expressions](tryhackme-regular-expressions.md)
+* [TryHackMe: Regular Expressions](tryhackme-regular-expressions.md)
 
 - - - -
 

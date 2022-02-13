@@ -26,7 +26,7 @@ Converting to hexadecimal is trivial using the excellent [Qalculate!](https://qa
 
 ## References
 
-* [TryHackMe - Web Fundamentals](tryhackme-web-fundamentals.md)
+* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 
 - - - -
 

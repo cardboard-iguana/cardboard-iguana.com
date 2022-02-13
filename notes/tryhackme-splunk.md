@@ -1,11 +1,11 @@
 # TryHackMe: Splunk
 
 * Deploy!
-* [Can You Dig It?](../log/2021-11-09%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
+* [Can You Dig It?](../log/2021-11-09-tryhackme-complete-beginner-supplements.md)
 * BOTS!
-* [Halp, I’m Drowning in Logs!](../log/2021-11-09%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [Advanced Persistent Threat](../log/2021-11-09%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [Ransomware](../log/2021-11-11%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
+* [Halp, I’m Drowning in Logs!](../log/2021-11-09-tryhackme-complete-beginner-supplements.md)
+* [Advanced Persistent Threat](../log/2021-11-09-tryhackme-complete-beginner-supplements.md)
+* [Ransomware](../log/2021-11-11-tryhackme-complete-beginner-supplements.md)
 
 ## References
 

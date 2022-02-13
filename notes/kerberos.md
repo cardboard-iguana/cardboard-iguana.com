@@ -96,7 +96,7 @@ Golden tickets are powerful (since you can be anyone, it’s trivial to gain con
 
 ## References
 
-* [TryHackMe - Attacking Kerberos](tryhackme-attacking-kerberos.md)
+* [TryHackMe: Attacking Kerberos](tryhackme-attacking-kerberos.md)
 * [Golden ticket attacks: How they work — and how to defend against them](https://blog.quest.com/golden-ticket-attacks-how-they-work-and-how-to-defend-against-them/)
 * [Wikipedia: Kerberos (protocol)](https://en.wikipedia.org/wiki/Kerberos_%28protocol%29)
 * [Rubeus — Now With More Kekeo](http://www.harmj0y.net/blog/redteaming/rubeus-now-with-more-kekeo/)

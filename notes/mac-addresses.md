@@ -11,7 +11,7 @@ Some network cards and operating systems allow MAC addresses to be overridden (f
 
 ## References
 
-* [TryHackMe - Pre Security](tryhackme-pre-security.md)
+* [TryHackMe: Pre Security](tryhackme-pre-security.md)
 
 - - - -
 

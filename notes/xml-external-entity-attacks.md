@@ -55,10 +55,10 @@ This basically strikes me as more-or-less the same thing as an injection attack,
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Exploiting Python pickles](https://davidhamann.de/2020/04/05/exploiting-python-pickle/)
-* [TryHackMe - XXE](tryhackme-xxe.md)
-* [TryHackMe - Web Fundamentals](tryhackme-web-fundamentals.md)
+* [TryHackMe: XXE](tryhackme-xxe.md)
+* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 
 - - - -
 

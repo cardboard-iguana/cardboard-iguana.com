@@ -12,7 +12,7 @@
 
 ## References
 
-* [TryHackMe - Game Zone](tryhackme-game-zone.md)
+* [TryHackMe: Game Zone](tryhackme-game-zone.md)
 
 - - - -
 

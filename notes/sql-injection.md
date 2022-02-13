@@ -50,10 +50,10 @@ It's worth checking out the [Jurassic Park](tryhackme-jurassic-park.md) CTF for 
 
 ## References
 
-* [TryHackMe - Web Fundamentals](tryhackme-web-fundamentals.md)
-* [TryHackMe - SQL Injection](tryhackme-sql-injection.md)
+* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
+* [TryHackMe: SQL Injection](tryhackme-sql-injection.md)
 * [MySQL Subquery](https://www.mysqltutorial.org/mysql-subquery/)
-* [TryHackMe - Game Zone](tryhackme-game-zone.md)
+* [TryHackMe: Game Zone](tryhackme-game-zone.md)
 * [Jurassic Park](tryhackme-jurassic-park.md)
 
 - - - -

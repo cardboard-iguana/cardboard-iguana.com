@@ -48,7 +48,7 @@ To use [Hashcat](hashcat.md) to crack the hashes obtained in this fashin, first 
 ## References
 
 * [Rubeus](https://github.com/GhostPack/Rubeus)
-* [TryHackMe - Attacking Kerberos](tryhackme-attacking-kerberos.md)
+* [TryHackMe: Attacking Kerberos](tryhackme-attacking-kerberos.md)
 * [Kerberos](kerberos.md)
 
 - - - -

@@ -3,16 +3,16 @@
 * Introduction
 * Installation
 * Wireshark Overview
-* [Collection Methods](../log/2021-11-21%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [Filtering Captures](../log/2021-11-22%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [Packet Dissection](../log/2021-11-22%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [ARP Traffic](../log/2021-11-22%20TryHackMe%20-%20Complete%20Beginner%20(Supplements).md)
-* [ICMP Traffic]()
-* [TCP Traffic]()
-* [DNS Traffic]()
-* [HTTP Traffic]()
-* [HTTPS Traffic]()
-* [Analyzing Exploit PCAPs]()
+* [Collection Methods](../log/2021-11-21-tryhackme-complete-beginner-supplements.md)
+* [Filtering Captures](../log/2021-11-22-tryhackme-complete-beginner-supplements.md)
+* [Packet Dissection](../log/2021-11-22-tryhackme-complete-beginner-supplements.md)
+* [ARP Traffic](../log/2021-11-22-tryhackme-complete-beginner-supplements.md)
+* [ICMP Traffic](../log/2021-11-27-tryhackme-complete-beginner-supplements.md)
+* [TCP Traffic](../log/2021-11-27-tryhackme-complete-beginner-supplements.md)
+* [DNS Traffic](../log/2021-11-27-tryhackme-complete-beginner-supplements.md)
+* [HTTP Traffic](../log/2021-11-27-tryhackme-complete-beginner-supplements.md)
+* [HTTPS Traffic](../log/2021-11-27-tryhackme-complete-beginner-supplements.md)
+* [Analyzing Exploit PCAPs](../log/2021-11-27-tryhackme-complete-beginner-supplements.md)
 * Conclusion
 
 ## References

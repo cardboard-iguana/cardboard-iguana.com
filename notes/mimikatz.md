@@ -36,7 +36,7 @@ Obviously this isn’t very persistent itself, as the skeleton key will be lost 
 
 ## References
 
-* [TryHackMe - Attacking Kerberos](tryhackme-attacking-kerberos.md)
+* [TryHackMe: Attacking Kerberos](tryhackme-attacking-kerberos.md)
 * [Kerberos](kerberos.md)
 
 - - - -

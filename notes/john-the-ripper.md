@@ -25,16 +25,16 @@ John’s rules can be used to construct additional permutations of a wordlist to
 ## Helper Applications
 
 * `hash-identifier` will indicate what hash types match the data in $PASSWORD_HASH_FILE. Use this + information about the province of the hashes to choose a likely format. Also useful in conjunction with [Hashcat](hashcat.md). (Note that the hash names used by `hash-identifier` do *not* correspond to those used by John the Ripper.)
-* `unshadow` transforms /etc/passwd + /etc/shadow files (or matching subsets of these files) into a format john understands (note that --format is not generally necessary when having john crack the output on unshadow, as [UNIX password hashes](Linux%20(and%20BSD)%20Password%20Hashes.md) already specify their type).
+* `unshadow` transforms /etc/passwd + /etc/shadow files (or matching subsets of these files) into a format john understands (note that --format is not generally necessary when having john crack the output on unshadow, as [UNIX password hashes](linux-and-bsd-password-hashes.md) already specify their type).
 * `zip2john` extracts information from encrypted zip files in a format suitable for john to ingest.
 * `rar2john` extracts information from encrypted rar files in a format suitable for john to ingest.
 * `python2 /usr/share/john/ssh2john.py` extracts information from encrypted SSH key files in a format suitable for john to ingest. Note that john is susceptible to false positives when cracking ssh keys, and will thus try the entire provided wordlist (just in case!).
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Kali Hashcat and John the Ripper Crack Windows Password hashdump](https://pentesthacker.com/2020/12/27/kali-hashcat-and-john-the-ripper-crack-windows-password-hashdump/)
-* [TryHackMe - Game Zone](tryhackme-game-zone.md)
+* [TryHackMe: Game Zone](tryhackme-game-zone.md)
 
 - - - -
 

@@ -7,7 +7,7 @@
 
 ## References
 
-* [TryHackMe - Wireshark 101](tryhackme-wireshark-101.md)
+* [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md)
 
 - - - -
 

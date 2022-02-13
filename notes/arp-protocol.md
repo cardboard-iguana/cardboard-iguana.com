@@ -34,8 +34,8 @@ Note that the `r` here isn't a mistake -- rather it specifies a "[raw string](ht
 
 ## References
 
-* [TryHackMe - Wireshark 101](tryhackme-wireshark-101.md)
-* [TryHackMe - Python for Pentesters](tryhackme-python-for-pentesters.md)
+* [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md)
+* [TryHackMe: Python for Pentesters](tryhackme-python-for-pentesters.md)
 
 - - - -
 

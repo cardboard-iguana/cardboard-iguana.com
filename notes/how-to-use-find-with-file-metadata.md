@@ -49,9 +49,9 @@ For example:
 
 ## References
 
-* [TryHackMe - The find Command](tryhackme-the-find-command.md)
+* [TryHackMe: The find Command](tryhackme-the-find-command.md)
 * [How to modify “last status change” (ctime) property of a file in Unix?](https://stackoverflow.com/questions/8346852/how-to-modify-last-status-change-ctime-property-of-a-file-in-unix#8346905)
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 
 - - - -
 

@@ -2,7 +2,7 @@
 
 ## Bandit 2
 
-* [Read a File Beginning With a Dash (-)](Read%20a%20File%20Beginning%20With%20a%20Dash%20(-).md)
+* [Read a File Beginning With a Dash (-)](read-a-file-beginning-with-a-dash.md)
 
 ## Bandit 13
 

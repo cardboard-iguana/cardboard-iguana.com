@@ -11,7 +11,7 @@ These are a little hard to find.
 
 ## Resources
 
-* [TryHackMe - MITRE](tryhackme-mitre.md)
+* [TryHackMe: MITRE](tryhackme-mitre.md)
 
 - - - -
 

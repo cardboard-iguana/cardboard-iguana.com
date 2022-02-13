@@ -1,10 +1,10 @@
 # TryHackMe: hackernote
 
-* [Reconnaissance](../log/2022-01-31%20TryHackMe%20-%20Web%20Fundamentals%20(Supplements).md)
+* [Reconnaissance](../log/2022-01-31-tryhackme-web-fundamentals-supplements.md)
 * Investigate
-* [Exploit](../log/2022-01-31%20TryHackMe%20-%20Web%20Fundamentals%20(Supplements).md)
-* [Attack Passwords](../log/2022-01-31%20TryHackMe%20-%20Web%20Fundamentals%20(Supplements).md)
-* [Escalate](../log/2022-01-31%20TryHackMe%20-%20Web%20Fundamentals%20(Supplements).md)
+* [Exploit](../log/2022-01-31-tryhackme-web-fundamentals-supplements.md)
+* [Attack Passwords](../log/2022-01-31-tryhackme-web-fundamentals-supplements.md)
+* [Escalate](../log/2022-01-31-tryhackme-web-fundamentals-supplements.md)
 * Comments on Realism & Further Reading
 
 ## References

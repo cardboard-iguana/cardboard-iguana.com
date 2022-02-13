@@ -135,7 +135,7 @@ Burp Suite displays hashes in the "Hex" view by default; to convert them into th
 
 ## References
 
-* [TryHackMe - Web Fundamentals](tryhackme-web-fundamentals.md)
+* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 
 - - - -
 

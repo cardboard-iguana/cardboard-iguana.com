@@ -1,10 +1,10 @@
 # TryHackMe: MITRE
 
-* [Basic Terminology](../log/2021-09-26%20TryHackMe%20-%20Pre%20Security%20(Supplements).md)
-* [ATT&CK Framework](../log/2021-09-26%20TryHackMe%20-%20Pre%20Security%20(Supplements).md)
-* [CAR Knowledge Base](../log/2021-09-26%20TryHackMe%20-%20Pre%20Security%20(Supplements).md)
+* [Basic Terminology](../log/2021-09-26-tryhackme-pre-security-supplements.md)
+* [ATT&CK Framework](../log/2021-09-26-tryhackme-pre-security-supplements.md)
+* [CAR Knowledge Base](../log/2021-09-26-tryhackme-pre-security-supplements.md)
 * Shield Active Defense
-* [ATT&CK Emulation Plans](../log/2021-09-26%20TryHackMe%20-%20Pre%20Security%20(Supplements).md)
+* [ATT&CK Emulation Plans](../log/2021-09-26-tryhackme-pre-security-supplements.md)
 * ATT&CK and Threat Intelligence
 
 ## References

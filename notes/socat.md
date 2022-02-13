@@ -91,7 +91,7 @@ NOTE that the reverse shell will not pick up on your terminal size, so you’ll 
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 
 - - - -
 

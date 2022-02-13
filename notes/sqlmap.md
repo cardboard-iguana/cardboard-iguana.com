@@ -32,9 +32,9 @@ One handy way to seed a URL is using requests harvested with [Burp Suite](burp-s
 
 ## References
 
-* [TryHackMe - CC - Pen Testing](tryhackme-cc-pen-testing.md)
+* [TryHackMe: CC - Pen Testing](tryhackme-cc-pen-testing.md)
 * [How to use SQLMAP to test a website for SQL Injection vulnerability](https://www.geeksforgeeks.org/use-sqlmap-test-website-sql-injection-vulnerability/)
-* [TryHackMe - SQL Injection](tryhackme-sql-injection.md)
+* [TryHackMe: SQL Injection](tryhackme-sql-injection.md)
 
 - - - -
 

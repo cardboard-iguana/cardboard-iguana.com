@@ -34,7 +34,7 @@ ZAP has [gobuster](gobuster.md)-like functionality called "Forced Browse". The w
 
 ## References
 
-* [TryHackMe - Web Fundamentals](tryhackme-web-fundamentals.md)
+* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 
 - - - -
 

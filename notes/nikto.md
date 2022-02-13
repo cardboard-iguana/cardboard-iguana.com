@@ -16,7 +16,7 @@ nikto -list-plugins # List plugins
 
 ## References
 
-* [TryHackMe - CC - Pen Testing](tryhackme-cc-pen-testing.md)
+* [TryHackMe: CC - Pen Testing](tryhackme-cc-pen-testing.md)
 * [Tools'R'us](tryhackme-tools-r-us.md)
 
 - - - -

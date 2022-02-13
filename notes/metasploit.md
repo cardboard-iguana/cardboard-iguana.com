@@ -169,18 +169,18 @@ By default, msfvenom produces 64-bit executables when using the `-f exe`. This d
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [How does process migration work in Meterpreter](https://security.stackexchange.com/a/92893)
 * [Metasploit Documentation: Scanning and Managing Hosts](https://docs.rapid7.com/metasploit/scanning-and-managing-hosts/)
 * [Metasploit Basics, Part 8: Exploitation with EternalBlue](https://www.hackers-arise.com/post/2017/06/12/metasploit-basics-part-8-exploitation-with-eternalblue)
 * [Shell to Meterpreter Upgrade](https://www.infosecmatter.com/metasploit-module-library/?mm=post/multi/manage/shell_to_meterpreter)
-* [TryHackMe - CC - Pen Testing](tryhackme-cc-pen-testing.md)
+* [TryHackMe: CC - Pen Testing](tryhackme-cc-pen-testing.md)
 * [Ice](tryhackme-ice.md)
 * [How do you send a 64 bit meterpreter stager?](https://security.stackexchange.com/a/83410)
 * [Blaster](tryhackme-blaster.md)
 * [Multiple Ways to Persistence on Windows 10 with Metasploit](https://www.hackingarticles.in/multiple-ways-to-persistence-on-windows-10-with-metasploit/)
 * [Metasploit - Payload](https://www.tutorialspoint.com/metasploit/metasploit_payload.htm)
-* [TryHackMe - Game Zone](tryhackme-game-zone.md)
+* [TryHackMe: Game Zone](tryhackme-game-zone.md)
 
 - - - -
 

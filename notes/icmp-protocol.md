@@ -9,7 +9,7 @@ Ping packets typically just include either random data or all zeros.
 
 ## References
 
-* [TryHackMe - Wireshark 101](tryhackme-wireshark-101.md)
+* [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md)
 * [RFC 792](https://datatracker.ietf.org/doc/html/rfc792)
 
 - - - -

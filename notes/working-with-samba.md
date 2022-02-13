@@ -44,7 +44,7 @@ Use -R (and omit `$FILE`) to recursively download an entire directory.
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 
 - - - -
 

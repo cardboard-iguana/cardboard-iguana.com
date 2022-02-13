@@ -76,9 +76,9 @@ NOTE that in *none* of these cases will the reverse shell pick up on your termin
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
-* [TryHackMe - CC - Pen Testing](tryhackme-cc-pen-testing.md)
-* [TryHackMe - Exploiting Log4j](tryhackme-exploiting-log4j.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: CC - Pen Testing](tryhackme-cc-pen-testing.md)
+* [TryHackMe: Exploiting Log4j](tryhackme-exploiting-log4j.md)
 
 - - - -
 

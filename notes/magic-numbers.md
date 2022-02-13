@@ -8,7 +8,7 @@ Note that this can be a lot trickier if you're not dealing with PHP, since many 
 
 ## References
 
-* [TryHackMe - Complete Beginner](tryhackme-complete-beginner.md)
+* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
 
 - - - -
