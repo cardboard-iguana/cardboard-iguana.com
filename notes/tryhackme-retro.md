@@ -14,7 +14,8 @@ sudo nmap -v -oA retro -Pn -A -T4 -sS -script vuln -p- 10.10.20.185
 
 This gives us:
 
-```Nmap 7.92 scan initiated Sun Jan  2 19:34:48 2022 as: nmap -v -oA retro -Pn -A -T4 -sS -script vuln -p- 10.10.20.185
+```
+# Nmap 7.92 scan initiated Sun Jan  2 19:34:48 2022 as: nmap -v -oA retro -Pn -A -T4 -sS -script vuln -p- 10.10.20.185
 Pre-scan script results:
 |_broadcast-avahi-dos: ERROR: Script execution failed (use -d to debug)
 Nmap scan report for 10.10.20.185

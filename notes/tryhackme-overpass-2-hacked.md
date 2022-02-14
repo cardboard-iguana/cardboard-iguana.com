@@ -42,7 +42,7 @@ hashcat -m 1800 -O hashes.txt /usr/share/wordlists/fasttrack.txt
 
 Four out of the five passwords turn out to be crackable:
 
-```Cracked username:password pairs
+```
 paradox:secuirty3
 szymex:abcd123
 bee:secret12

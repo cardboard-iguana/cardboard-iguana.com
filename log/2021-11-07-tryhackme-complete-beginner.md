@@ -18,7 +18,8 @@ sudo nmap -v -oA steel-mountain -A -Pn -sS --script vuln -p- 10.10.241.108
 
 Results:
 
-```Nmap 7.92 scan initiated Sun Nov  7 16:44:22 2021 as: nmap -v -T4 -oA steel-mountain -A -Pn -sS --script vuln -p- 10.10.241.108
+```
+# Nmap 7.92 scan initiated Sun Nov  7 16:44:22 2021 as: nmap -v -T4 -oA steel-mountain -A -Pn -sS --script vuln -p- 10.10.241.108
 Nmap scan report for 10.10.241.108
 Host is up (0.17s latency).
 Not shown: 65520 closed tcp ports (reset)

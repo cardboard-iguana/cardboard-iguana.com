@@ -8,7 +8,9 @@ python3 -m http.server $PORT
 
 The default $PORT is 8080.
 
-```Useful python3 http.server flags
+Some useful python3 http.server flags:
+
+```
 --bind ADDRESS, -b ADDRESS
         Specify alternate bind address [default: all interfaces]
 --directory DIRECTORY, -d DIRECTORY

@@ -12,7 +12,8 @@ sudo nmap -v -oA hackernote -Pn -A -T4 -sS -script vuln -p- 10.10.156.141
 
 This gives the following output:
 
-```Nmap 7.92 scan initiated Mon Jan 31 18:14:16 2022 as: nmap -v -oA hackernote -Pn -A -T4 -sS -script vuln -p- 10.10.156.141
+```
+# Nmap 7.92 scan initiated Mon Jan 31 18:14:16 2022 as: nmap -v -oA hackernote -Pn -A -T4 -sS -script vuln -p- 10.10.156.141
 Pre-scan script results:
 |_broadcast-avahi-dos: ERROR: Script execution failed (use -d to debug)
 Increasing send delay for 10.10.156.141 from 0 to 5 due to 11 out of 25 dropped probes since last increase.

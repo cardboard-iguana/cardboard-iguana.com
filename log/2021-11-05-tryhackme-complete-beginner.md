@@ -12,7 +12,8 @@ sudo nmap -v -oA kenobi -A -sS --script vuln -p- 10.10.179.107
 
 Results:
 
-```Nmap 7.92 scan initiated Fri Nov  5 21:49:50 2021 as: nmap -v -oA kenobi -A -sS --script vuln -p- 10.10.179.107
+```
+# Nmap 7.92 scan initiated Fri Nov  5 21:49:50 2021 as: nmap -v -oA kenobi -A -sS --script vuln -p- 10.10.179.107
 Increasing send delay for 10.10.179.107 from 5 to 10 due to 11 out of 12 dropped probes since last increase.
 Nmap scan report for 10.10.179.107
 Host is up (0.17s latency).
@@ -347,7 +348,8 @@ nmap -v -oA kenobi-smb-enumeration -sT --script smb-enum-shares.nse,smb-enum-use
 
 Results:
 
-```Nmap 7.92 scan initiated Fri Nov  5 22:13:03 2021 as: nmap -v -oA kenobi-smb-enumeration -sT --script smb-enum-shares.nse,smb-enum-users.nse -p445 10.10.179.107
+```
+# Nmap 7.92 scan initiated Fri Nov  5 22:13:03 2021 as: nmap -v -oA kenobi-smb-enumeration -sT --script smb-enum-shares.nse,smb-enum-users.nse -p445 10.10.179.107
 Nmap scan report for 10.10.179.107
 Host is up (0.19s latency).
 
@@ -396,7 +398,8 @@ nmap -v -oA kenobi-nfs-enumeration -sT --script nfs-ls,nfs-statfs,nfs-showmount 
 
 Results:
 
-```Nmap 7.92 scan initiated Fri Nov  5 22:25:45 2021 as: nmap -v -oA kenobi-nfs-enumeration -sT --script nfs-ls,nfs-statfs,nfs-showmount -p111 10.10.179.107
+```
+# Nmap 7.92 scan initiated Fri Nov  5 22:25:45 2021 as: nmap -v -oA kenobi-nfs-enumeration -sT --script nfs-ls,nfs-statfs,nfs-showmount -p111 10.10.179.107
 Nmap scan report for 10.10.179.107
 Host is up (0.19s latency).
 

@@ -16,7 +16,8 @@ sudo nmap -v -oA jurassic-park -Pn -A -T4 -sS -script vuln -p- 10.10.105.134
 
 This gives the following output:
 
-```Nmap 7.92 scan initiated Wed Feb  2 20:28:37 2022 as: nmap -v -oA jurassic-park -Pn -A -T4 -sS -script vuln -p- 10.10.105.134
+```
+# Nmap 7.92 scan initiated Wed Feb  2 20:28:37 2022 as: nmap -v -oA jurassic-park -Pn -A -T4 -sS -script vuln -p- 10.10.105.134
 Pre-scan script results:
 |_broadcast-avahi-dos: ERROR: Script execution failed (use -d to debug)
 Nmap scan report for 10.10.105.134

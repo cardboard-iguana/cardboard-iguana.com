@@ -32,13 +32,13 @@ Quote blocks cannot be nested in Gemini, and all interior formatting is preserve
 
 ### “Code” Blocks
 
-Gemini allows code blocks. Because these are specifically geared towards ASCII-art, the code block type in Gemini (normally `bash` or `html` or some-such in Markdown) is used by clients as “alt text”. Since the type isn’t rendered when converting Markdown to HTML either (though some engines use it as a “hint” for how to render this text), it’s safe to use this convention in plain Markdown documents as well, so long as you *don’t* need to designate a code type.
+Gemini allows code blocks. In Gemini the code block type (normally something like `bash` or `html` in Markdown) is used by clients as “alt text”. Unfortunately, many Markdown processors (including [Jekyll](https://jekyllrb.com/)) don’t handle arbitrary strings in the code block type gracefully, so we need to stick with Markdown’s conventions here.
 
 ## Links & Images
 
 Gemini doesn’t support Markdown links or images, though tools like [`md2gmn`](https://github.com/tdemin/gmnhg#md2gmn) can handle the conversion into Gemini’s format.
 
-```Gemini link structure
+```
 =>[<whitespace>]<URL>[<whitespace><USER-FRIENDLY LINK NAME>]
 ```
 

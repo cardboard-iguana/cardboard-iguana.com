@@ -22,7 +22,8 @@ sudo nmap -v -oA tools-r-us -Pn -A -T4 -sS -script vuln -p- 10.10.28.154
 
 This gives the following output:
 
-```Nmap 7.92 scan initiated Sun Jan 30 15:52:33 2022 as: nmap -v -oA tools-r-us -Pn -A -T4 -sS -script vuln -p- 10.10.28.154
+```
+# Nmap 7.92 scan initiated Sun Jan 30 15:52:33 2022 as: nmap -v -oA tools-r-us -Pn -A -T4 -sS -script vuln -p- 10.10.28.154
 Pre-scan script results:
 |_broadcast-avahi-dos: ERROR: Script execution failed (use -d to debug)
 Nmap scan report for 10.10.28.154

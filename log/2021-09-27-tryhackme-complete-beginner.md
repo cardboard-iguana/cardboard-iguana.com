@@ -85,7 +85,7 @@ I suppose that a hub would be a layer 1 device, since it’s just shuffling actu
 
 ### Encapsulation
 
-```OSI data encapsulation
+```
                                                                                         +-----------+-------------+
 Application  → Presentation                                                             | L7 Header | (User) Data |
                                                                                         +-----------+-------------+
@@ -121,7 +121,7 @@ While most layers simply add a header, be aware that the data link layer *also* 
 
 A four-layer alternative to OSI!
 
-```TCP/IP vs. OSI model
+```
 +--------------+-------------------+
 | OSI LAYER    | TCP/IP LAYER      |
 +--------------+-------------------+

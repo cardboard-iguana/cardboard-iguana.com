@@ -35,7 +35,8 @@ sudo nmap -vv -oA cc-pentesting -A -sS --script vuln -p- 10.10.87.144
 
 Output:
 
-```Nmap 7.92 scan initiated Thu Dec  2 20:11:50 2021 as: nmap -vv -oA cc-pentesting -A -sS -script vuln -p- 10.10.87.144
+```
+# Nmap 7.92 scan initiated Thu Dec  2 20:11:50 2021 as: nmap -vv -oA cc-pentesting -A -sS -script vuln -p- 10.10.87.144
 Pre-scan script results:
 | broadcast-avahi-dos: 
 |   Discovered hosts:

@@ -12,7 +12,8 @@ sudo nmap -vv -oA vulnversity -A -sS --script vuln -p- 10.10.157.9
 
 Output:
 
-```Nmap 7.92 scan initiated Wed Nov  3 20:55:04 2021 as: nmap -vv -oA vulnversity -A -sS --script vuln -p- 10.10.157.9
+```
+# Nmap 7.92 scan initiated Wed Nov  3 20:55:04 2021 as: nmap -vv -oA vulnversity -A -sS --script vuln -p- 10.10.157.9
 Nmap scan report forc
 Host is up, received reset ttl 61 (0.17s latency).
 Scanned at 2021-11-03 20:55:15 MDT for 1535s

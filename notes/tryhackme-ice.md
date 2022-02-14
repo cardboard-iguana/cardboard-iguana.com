@@ -12,7 +12,8 @@ sudo nmap -v -oA ice -Pn -A -T4 -sS -script vuln -p- 10.10.55.173
 
 Which gives us:
 
-```Nmap 7.92 scan initiated Tue Dec  7 20:55:44 2021 as: nmap -v -oA ice -Pn -A -T4 -sS -script vuln -p- 10.10.55.173
+```
+# Nmap 7.92 scan initiated Tue Dec  7 20:55:44 2021 as: nmap -v -oA ice -Pn -A -T4 -sS -script vuln -p- 10.10.55.173
 Pre-scan script results:
 | broadcast-avahi-dos: 
 |   Discovered hosts:

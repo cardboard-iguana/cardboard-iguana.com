@@ -6,7 +6,7 @@ This is a [Rick & Morty](https://en.wikipedia.org/wiki/Rick_and_Morty) themed we
 
 There are three flags (“ingredients Rick needs for a potion to transform themself from a pickle back into a human”). Because of how TryHackMe masks answers, we already know the basic form of these strings (`*` characters are unknown, but ` ` and `.` characters are literals):
 
-```Masked answers for the three “Pickle Rick” CTF flags
+```
 Flag 1: **. ******* ****
 Flag 2: * ***** ****
 Flag 3: ***** *****
@@ -47,7 +47,8 @@ Also probing the machine using nmap.
 nmap -vv -A -oA pickle-rick -sS -p- 10.10.158.139
 ```
 
-```Nmap 7.91 scan initiated Sun Oct 10 14:17:34 2021 as: nmap -vv -A -oA pickle-rick -sS -p- 10.10.158.139
+```
+# Nmap 7.91 scan initiated Sun Oct 10 14:17:34 2021 as: nmap -vv -A -oA pickle-rick -sS -p- 10.10.158.139
 Nmap scan report for 10.10.158.139
 Host is up, received echo-reply ttl 61 (0.16s latency).
 Scanned at 2021-10-10 14:17:36 MDT for 862s
@@ -138,7 +139,7 @@ All of the links on this page *except* for the first one ("Commands") go to /den
 
 So all we've got is the mysterious "Command Panel". There is also an HTML comment in the source of /portal.php with what *looks* like a base64-encoded string in it. But feeding this to `base64 -d` just results in an `invalid input` error.
 
-```Mystery HTML comment
+```
 Vm1wR1UxTnRWa2RUV0d4VFlrZFNjRlV3V2t0alJsWnlWbXQwVkUxV1duaFZNakExVkcxS1NHVkliRmhoTVhCb1ZsWmFWMVpWTVVWaGVqQT0==
 ```
 
@@ -149,7 +150,7 @@ Let's turn back to "Command Panel" and see what that does. Typing in `ls` reveal
 
 Viewing /Sup3rS3cretPickl3Ingred.txt revels the first flag:
 
-```The first flag
+```
 mr. meeseek hair
 ```
 
@@ -175,7 +176,7 @@ Alright, so `cat` is disabled. But can I get at it another way? `bash -c "cat Su
 
 Let's get that second flag by executing `less "/home/rick/second ingredients"`.
 
-```The second flag
+```
 1 jerry tear
 ```
 
@@ -230,7 +231,7 @@ sudo rm -rf sess_n16aanckg2ifmk12io64o1kfa2
 sudo ls
 ```
 
-```The third flag
+```
 fleeb juice
 ```
 

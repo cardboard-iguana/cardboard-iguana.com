@@ -14,7 +14,8 @@ sudo nmap -v -oA blaster -Pn -A -T4 -sS -script vuln -p- 10.10.223.185
 
 Which gives us:
 
-```Nmap 7.92 scan initiated Wed Dec  8 19:55:54 2021 as: nmap -v -oA blaster -Pn -A -T4 -sS -script vuln -p- 10.10.223.185
+```
+# Nmap 7.92 scan initiated Wed Dec  8 19:55:54 2021 as: nmap -v -oA blaster -Pn -A -T4 -sS -script vuln -p- 10.10.223.185
 Pre-scan script results:
 | broadcast-avahi-dos: 
 |   Discovered hosts:

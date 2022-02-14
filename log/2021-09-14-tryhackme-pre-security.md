@@ -35,7 +35,7 @@ Technically TLDs are *not* actually the top of the domain hierarchy — that wou
 
 ### Making a Request
 
-```DNS request sequence, from client to final authoritative server
+```
 Client
   → Recursive DNS server (local, LAN, ISP)
     → (possibly other DNS servers that the previous recursive DNS server point to)
@@ -46,7 +46,7 @@ Client
 
 What’s actually going on here is made a little bit clearer by [Wikipedia’s DNS address resolution discussion](https://en.wikipedia.org/wiki/Domain_Name_System#Address_resolution_mechanism). Basically, DNS records are resolve from right-to-left, with each level responsible for knowing the location of the next level’s authoritative server. So, the root DNS servers (“.”) know where to find the TLD servers, the TLD servers know where to find the (second-level) domain servers, and the (second-level) domain server knows all the DNS entries for a domain (including for its subdomains). In theory this means that all you actually need is:
 
-```Theoretical minimal DNS request sequence without recursive servers
+```
 Client
   → Root DNS server
     → TLD server
