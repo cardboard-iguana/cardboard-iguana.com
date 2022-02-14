@@ -10,6 +10,8 @@ _theme/
 _layouts/
 css/
 atom.xml
+Gemfile
+package.json
 
 # Ignore build files
 .bundle/
