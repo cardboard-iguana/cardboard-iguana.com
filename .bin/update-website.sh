@@ -11,7 +11,6 @@ if [[ "$REPO_DIR" == "cardboard-iguana.com" ]] && [[ "$REPO_PARENT_DIR" == "_rep
 	       -not -iname '.git' \
 	       -not -iname '.gitignore' \
 	       -not -iname '_config.yml' \
-	       -not -iname 'README.md' \
 	       -exec rm -rf "{}" \;
 
 	cp -rf ../../cardboard-iguana.com/* .

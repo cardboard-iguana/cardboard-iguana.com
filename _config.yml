@@ -5,6 +5,7 @@ plugins:
   - jekyll-optional-front-matter
   - jekyll-relative-links
   - jekyll-auto-image
+  - jekyll-readme-index
 
 # Some generic (non-standard) site settings.
 #
@@ -21,6 +22,10 @@ image: /770a338bf8f3336b20fa14650b6f5049.webp
 # Optional front-matter defaults.
 #
 optional_front_matter:
+  remove_originals: true
+
+# Readme index defaults:
+readme_index:
   remove_originals: true
 
 # Per-page defaults.
