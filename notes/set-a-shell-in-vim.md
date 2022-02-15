@@ -12,4 +12,4 @@ Fortunately, Vi and ViM can be set to override the default $SHELL using `:set sh
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

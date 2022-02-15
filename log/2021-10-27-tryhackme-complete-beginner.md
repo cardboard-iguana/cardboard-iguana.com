@@ -103,5 +103,5 @@ NOTE that it’s perfectly acceptable to kick off a socat process from inside a 
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 27, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 27, 2021

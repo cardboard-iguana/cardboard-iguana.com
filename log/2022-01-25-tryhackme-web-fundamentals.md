@@ -37,5 +37,5 @@ Basically, the idea here is that sometimes APIs (especially non-public ones!) ar
 
 - - - -
 
-👤 Nathan Acks  
-📅 January 25, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> January 25, 2022

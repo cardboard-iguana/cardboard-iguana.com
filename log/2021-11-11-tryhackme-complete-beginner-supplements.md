@@ -56,5 +56,5 @@ In all cases *except* VirtualBox, these files are maintained during run-time, an
 
 - - - -
 
-👤 Nathan Acks  
-📅 November 11, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> November 11, 2021

@@ -16,4 +16,4 @@ Note that we need to temporarily override IFS because our list is null-separated
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

@@ -13,5 +13,5 @@ Windows passwords are stored in the SAM, but NT and LM hashes (which can coexist
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 12, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 12, 2021

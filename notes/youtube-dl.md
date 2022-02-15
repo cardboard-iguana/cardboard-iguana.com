@@ -30,4 +30,4 @@ Useful size specs:
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

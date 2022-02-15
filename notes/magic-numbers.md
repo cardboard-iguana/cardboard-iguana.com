@@ -13,5 +13,5 @@ Note that this can be a lot trickier if you're not dealing with PHP, since many 
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 9, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 9, 2021

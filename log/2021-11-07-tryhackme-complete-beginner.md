@@ -244,5 +244,5 @@ Start-Service -Name AdvancedSystemCareService9
 
 - - - -
 
-👤 Nathan Acks  
-📅 November 7, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> November 7, 2021

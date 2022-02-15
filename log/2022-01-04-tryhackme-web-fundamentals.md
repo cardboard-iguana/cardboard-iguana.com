@@ -12,5 +12,5 @@ This section mentions using Burp Suite for mobile application testing. I'm guess
 
 - - - -
 
-👤 Nathan Acks  
-📅 January 4, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> January 4, 2022

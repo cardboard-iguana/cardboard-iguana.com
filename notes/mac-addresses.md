@@ -15,5 +15,5 @@ Some network cards and operating systems allow MAC addresses to be overridden (f
 
 - - - -
 
-👤 Nathan Acks  
-📅 September 14, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> September 14, 2021

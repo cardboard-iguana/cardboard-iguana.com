@@ -245,5 +245,5 @@ ELAPSED TIME: 3 h 11 min
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 10, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 10, 2021

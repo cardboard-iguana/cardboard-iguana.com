@@ -41,5 +41,5 @@ Task Manager shortcut: Ctrl+Shift+Esc
 
 - - - -
 
-👤 Nathan Acks  
-📅 September 17, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> September 17, 2021

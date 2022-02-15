@@ -70,5 +70,5 @@ This is a sentence with two [1] links [2] in it.
 
 - - - -
 
-👤 Nathan Acks  
-📅 February 12, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> February 12, 2022

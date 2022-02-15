@@ -34,4 +34,4 @@ openssl x509 -noout -in $CERT -fingerprint -md5
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

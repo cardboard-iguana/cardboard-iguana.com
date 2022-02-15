@@ -15,5 +15,5 @@ It’s worth noting that users added via `net user` seem to bypass Windows’ pa
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 29, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 29, 2021

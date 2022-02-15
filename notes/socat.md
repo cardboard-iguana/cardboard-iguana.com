@@ -95,5 +95,5 @@ NOTE that the reverse shell will not pick up on your terminal size, so you’ll 
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 28, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 28, 2021

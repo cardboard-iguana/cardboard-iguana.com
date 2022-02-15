@@ -17,4 +17,4 @@ PERSONAL OPINION: GitHub deciding to switch “master” to “main” makes no 
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

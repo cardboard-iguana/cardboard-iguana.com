@@ -8,5 +8,5 @@
 
 - - - -
 
-👤 Nathan Acks  
-📅 July 13, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> July 13, 2021

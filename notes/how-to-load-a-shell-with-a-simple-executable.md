@@ -40,5 +40,5 @@ msfvenom -p linux/x86/exec CMD="/bin/bash -p" -f elf -o shell.elf
 
 - - - -
 
-👤 Nathan Acks  
-📅 November 2, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> November 2, 2021

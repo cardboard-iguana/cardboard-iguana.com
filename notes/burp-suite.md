@@ -139,5 +139,5 @@ Burp Suite displays hashes in the "Hex" view by default; to convert them into th
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 13, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 13, 2021

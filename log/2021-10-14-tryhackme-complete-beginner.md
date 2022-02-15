@@ -43,5 +43,5 @@ You can actually access the registry from PowerShell using the `cd` command: `cd
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 14, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 14, 2021

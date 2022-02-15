@@ -20,4 +20,4 @@ openssl rsa -check -in $NEW_KEY
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

@@ -78,5 +78,5 @@ The SYSTEM directive allows us to include other files… Possibly quite sensitiv
 
 - - - -
 
-👤 Nathan Acks  
-📅 December 9, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> December 9, 2021

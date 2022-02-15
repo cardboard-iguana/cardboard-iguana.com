@@ -273,5 +273,5 @@ Note that, like the port scanner earlier, this is slooooooow... (At least it pro
 
 - - - -
 
-👤 Nathan Acks  
-📅 February 1, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> February 1, 2022

@@ -34,5 +34,5 @@ So, the trick this section is talking about is that some small web applications 
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 5, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 5, 2021

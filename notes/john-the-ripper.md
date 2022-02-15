@@ -38,5 +38,5 @@ John’s rules can be used to construct additional permutations of a wordlist to
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 13, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 13, 2021

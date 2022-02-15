@@ -32,5 +32,5 @@ Root squashing can be *disabled* in /etc/exports with the `no_root_squash` flag.
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 3, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 3, 2021

@@ -12,5 +12,5 @@ Three things to remember when attempting SQLi:
 
 - - - -
 
-👤 Nathan Acks  
-📅 January 26, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> January 26, 2022

@@ -136,5 +136,5 @@ Useful cURL flags:
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 3, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 3, 2021

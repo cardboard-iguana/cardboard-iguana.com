@@ -4,4 +4,4 @@ The easiest way to read a file beginning with a dash (-) is generally just to pr
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

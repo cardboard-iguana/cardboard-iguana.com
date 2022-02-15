@@ -294,5 +294,5 @@ ELAPSED TIME: 56 min
 
 - - - -
 
-👤 Nathan Acks  
-📅 February 1, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> February 1, 2022

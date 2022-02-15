@@ -8,5 +8,5 @@ Use `type` (to “type” the contents of a file to the terminal).
 
 - - - -
 
-👤 Nathan Acks  
-📅 November 8, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> November 8, 2021

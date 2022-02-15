@@ -1,2 +1,4 @@
-# cardboard-iguana.com
-The Cardboard Iguana Security website.
+# Cardboard Iguana Security
+
+* [A Hacker’s Log](log.md)
+* [A Hacker’s Notes](notes.md)

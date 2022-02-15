@@ -43,5 +43,5 @@ Running `sudo -l` reveals that the `django-admin` user has full superuser access
 
 - - - -
 
-👤 Nathan Acks  
-📅 January 3, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> January 3, 2022

@@ -361,5 +361,5 @@ And that’s flag 2.
 
 - - - -
 
-👤 Nathan Acks  
-📅 December 2, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> December 2, 2021

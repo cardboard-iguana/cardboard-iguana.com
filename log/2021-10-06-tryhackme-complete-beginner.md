@@ -124,5 +124,5 @@ What’s getting encoded here is the `rce` class. Python will call `rce.__reduce
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 6, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 6, 2021

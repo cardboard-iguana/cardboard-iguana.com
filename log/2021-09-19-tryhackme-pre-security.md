@@ -74,5 +74,5 @@ For example:
 
 - - - -
 
-👤 Nathan Acks  
-📅 September 19, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> September 19, 2021

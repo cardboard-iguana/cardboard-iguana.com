@@ -16,4 +16,4 @@ NOTE: This won’t work on webpages for sites like Twitter that set the `<title/
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

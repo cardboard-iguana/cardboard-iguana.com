@@ -229,5 +229,5 @@ hydra -vV -f -l james -P passwords.txt 10.10.156.141 http-post-form /api/user/lo
 
 - - - -
 
-👤 Nathan Acks  
-📅 January 31, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> January 31, 2022

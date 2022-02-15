@@ -26,4 +26,4 @@ cat $FILE | cat -n | sort -rk2 | sort -uk2 | sort -nk1 | cut -f2-
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

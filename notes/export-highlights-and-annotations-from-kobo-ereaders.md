@@ -15,4 +15,4 @@ This should add a new menu option for a given book (accessible in My Books) allo
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

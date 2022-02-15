@@ -38,5 +38,5 @@ Frequently `set -x` is used at the start of a script without a closing `set + x`
 
 - - - -
 
-👤 Nathan Acks  
-📅 September 20, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> September 20, 2021

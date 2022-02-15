@@ -82,4 +82,4 @@ NOTE that in *none* of these cases will the reverse shell pick up on your termin
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

@@ -16,4 +16,4 @@ openssl req -new -config ./${SITE}.cnf -key ${SITE}.key -out $SITE.csr
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

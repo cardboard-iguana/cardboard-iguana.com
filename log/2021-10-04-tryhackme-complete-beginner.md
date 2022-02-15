@@ -75,5 +75,5 @@ Another paid tool is COLLABORATOR, which sounds like it allows tasks to be offlo
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 4, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 4, 2021

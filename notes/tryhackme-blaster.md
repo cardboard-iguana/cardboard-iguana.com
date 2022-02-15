@@ -157,5 +157,5 @@ ELAPSED TIME: 2 h 15 min
 
 - - - -
 
-👤 Nathan Acks  
-📅 December 6, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> December 6, 2021

@@ -47,5 +47,5 @@ Here `$SERVER_NAME` is the machine's NetBIOS domain name, which can be found wit
 
 - - - -
 
-👤 Nathan Acks  
-📅 November 5, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> November 5, 2021

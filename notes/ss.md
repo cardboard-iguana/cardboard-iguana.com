@@ -16,5 +16,5 @@
 
 - - - -
 
-👤 Nathan Acks  
-📅 February 2, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> February 2, 2022

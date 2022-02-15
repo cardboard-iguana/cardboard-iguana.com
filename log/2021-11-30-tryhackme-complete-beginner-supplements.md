@@ -45,5 +45,5 @@ Hashcat mode 100 corresponds to SHA1; 900 is MD4.
 
 - - - -
 
-👤 Nathan Acks  
-📅 November 30, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> November 30, 2021

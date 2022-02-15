@@ -104,5 +104,5 @@ Golden tickets are powerful (since you can be anyone, it’s trivial to gain con
 
 - - - -
 
-👤 Nathan Acks  
-📅 December 6, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> December 6, 2021

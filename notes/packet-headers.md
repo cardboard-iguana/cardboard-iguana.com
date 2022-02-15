@@ -21,5 +21,5 @@ Important common TCP and UDP packet headers.
 
 - - - -
 
-👤 Nathan Acks  
-📅 September 14, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> September 14, 2021

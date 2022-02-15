@@ -13,5 +13,5 @@ Typically a null byte will either be inserted at the end of a string (to prevent
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 8, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 8, 2021

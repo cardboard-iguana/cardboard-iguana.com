@@ -24,4 +24,4 @@ It may be advisable to use single quote here, rather than double quotes + variab
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

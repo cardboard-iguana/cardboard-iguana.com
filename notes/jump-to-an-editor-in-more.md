@@ -12,4 +12,4 @@ Note that using `!` to invoke a command (!/bin/bash, etc.) won’t work, as by d
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

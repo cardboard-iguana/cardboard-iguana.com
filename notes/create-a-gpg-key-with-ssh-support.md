@@ -99,4 +99,4 @@ Once this is done, `$KEYID.asc` can be stored “offline” on a secure (encrypt
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

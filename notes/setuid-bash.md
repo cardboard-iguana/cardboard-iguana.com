@@ -6,5 +6,5 @@ To prevent this, run bash with the -p flag (`./bash -p`), which helpfully instru
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 3, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 3, 2021

@@ -44,4 +44,4 @@ This is useful for ongoing work, but only works on existing repositories.
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

@@ -183,5 +183,5 @@ Obviously this isn’t very persistent itself, as the skeleton key will be lost 
 
 - - - -
 
-👤 Nathan Acks  
-📅 December 5, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> December 5, 2021

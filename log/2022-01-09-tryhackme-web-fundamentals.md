@@ -97,5 +97,5 @@ Basically, macros just define repeated requests that we can make. Once a request
 
 - - - -
 
-👤 Nathan Acks  
-📅 January 9, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> January 9, 2022

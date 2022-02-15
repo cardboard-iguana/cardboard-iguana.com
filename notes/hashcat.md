@@ -48,5 +48,5 @@ The [Hashcat]() `combinator.bin` utility combines two wordlists such that every 
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 12, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 12, 2021

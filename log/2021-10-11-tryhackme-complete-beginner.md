@@ -59,5 +59,5 @@ A “token length exception” means that the provided hash format is of the wro
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 11, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 11, 2021

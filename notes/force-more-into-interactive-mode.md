@@ -6,4 +6,4 @@ Incidentally, this means that it’s impossible to send commands to when using i
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

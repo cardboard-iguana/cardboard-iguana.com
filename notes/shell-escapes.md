@@ -20,5 +20,5 @@ Many common UNIX applications allow you to escape to a shell. This is particular
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 31, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 31, 2021

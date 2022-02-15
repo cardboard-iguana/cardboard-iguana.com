@@ -203,5 +203,5 @@ Unsurprisingly, neither version of Meterpreter works, though netcat at least cat
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 28, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 28, 2021

@@ -56,5 +56,5 @@ It's probably a good idea to set Tools > Options > Passive Scanner > Only scan m
 
 - - - -
 
-👤 Nathan Acks  
-📅 January 12, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> January 12, 2022

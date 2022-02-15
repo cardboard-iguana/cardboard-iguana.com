@@ -126,5 +126,5 @@ To set multiple cookies, the server just uses [multiple Set-Cookie headers](http
 
 - - - -
 
-👤 Nathan Acks  
-📅 September 14, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> September 14, 2021

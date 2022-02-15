@@ -6,5 +6,5 @@ env -u SSH_AUTH_SOCK -u SSH_AGENT_PID ssh -i $KEY_FILE ${USER}@${HOST}
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 2, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 2, 2021

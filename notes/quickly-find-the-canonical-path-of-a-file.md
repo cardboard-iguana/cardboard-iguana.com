@@ -17,4 +17,4 @@ Note that this follows symlinks, so it’s not suitable for every use.
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

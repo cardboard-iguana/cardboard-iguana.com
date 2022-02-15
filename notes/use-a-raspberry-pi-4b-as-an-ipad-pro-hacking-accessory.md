@@ -814,5 +814,5 @@ As with the dropbear configuration in the previous section, please do *not* set 
 
 - - - -
 
-👤 Nathan Acks  
-📅 November 18, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> November 18, 2021

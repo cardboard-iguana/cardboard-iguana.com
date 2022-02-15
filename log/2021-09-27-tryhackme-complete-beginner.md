@@ -210,5 +210,5 @@ The second column of dig’s ANSWER section (so, right after the domain part, an
 
 - - - -
 
-👤 Nathan Acks  
-📅 September 27, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> September 27, 2021

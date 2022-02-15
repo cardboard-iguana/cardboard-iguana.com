@@ -133,6 +133,6 @@
 
 - - - -
 
-👤 Nathan Acks  
-📅 September 12, 2021  
-🏷️ #MOC
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> September 12, 2021  
+<span aria-hidden="true">🏷️</span> #MOC

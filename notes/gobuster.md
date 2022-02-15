@@ -10,5 +10,5 @@ Increasing threads (`-t`) in gobuster makes a *big* difference in performance. (
 
 - - - -
 
-👤 Nathan Acks  
-📅 November 29, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> November 29, 2021

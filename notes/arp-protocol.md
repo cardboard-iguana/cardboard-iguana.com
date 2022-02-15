@@ -39,5 +39,5 @@ Note that the `r` here isn't a mistake -- rather it specifies a "[raw string](ht
 
 - - - -
 
-👤 Nathan Acks  
-📅 February 1, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> February 1, 2022

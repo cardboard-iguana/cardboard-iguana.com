@@ -6,5 +6,5 @@ See my [Ice](../notes/tryhackme-ice.md) CTF write-up.
 
 - - - -
 
-👤 Nathan Acks  
-📅 December 7, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> December 7, 2021

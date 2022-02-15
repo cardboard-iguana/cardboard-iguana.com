@@ -27,5 +27,5 @@ Note that this only works on a disk image *without any snapshots*.
 
 - - - -
 
-👤 Nathan Acks  
-📅 January 28, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> January 28, 2022

@@ -75,5 +75,5 @@ Here `$USER_ID` is the user ID retrieved in step 4 (note that there’s *no* spa
 
 - - - -
 
-👤 Nathan Acks  
-📅 February 13, 2022
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> February 13, 2022

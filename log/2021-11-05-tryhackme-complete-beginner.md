@@ -414,5 +414,5 @@ Read data files from: /usr/bin/../share/nmap
 
 - - - -
 
-👤 Nathan Acks  
-📅 November 5, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> November 5, 2021

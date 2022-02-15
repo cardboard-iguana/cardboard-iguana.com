@@ -10,4 +10,4 @@ xxd -r $HEXDUMP $BINARY # Reconstitute a binary file from a hex dump!
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

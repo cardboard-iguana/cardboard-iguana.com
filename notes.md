@@ -211,5 +211,5 @@
 
 - - - -
 
-👤 Nathan Acks  
-🏷️ #MOC
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">🏷️</span> #MOC

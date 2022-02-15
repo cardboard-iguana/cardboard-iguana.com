@@ -8,4 +8,4 @@ The `-ign_eof` keeps the s_client open on EOF, which can (does?) get sent after 
 
 - - - -
 
-👤 Nathan Acks
+<span aria-hidden="true">👤</span> Nathan Acks

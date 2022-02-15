@@ -87,5 +87,5 @@ To get/set the content of an element, use the `innerHTML` method (to insert HTML
 
 - - - -
 
-👤 Nathan Acks  
-📅 October 8, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> October 8, 2021

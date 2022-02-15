@@ -192,5 +192,5 @@ Ports 0 - 1023 are “common ports” (I’ve typically heard this block called 
 
 - - - -
 
-👤 Nathan Acks  
-📅 September 13, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> September 13, 2021

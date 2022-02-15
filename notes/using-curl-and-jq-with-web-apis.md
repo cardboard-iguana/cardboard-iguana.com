@@ -94,5 +94,5 @@ curl -X POST -H "User-Token: XXXXXX" -H "Username: My User" -d "parameter1=value
 
 - - - -
 
-👤 Nathan Acks  
-📅 June 12, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> June 12, 2021

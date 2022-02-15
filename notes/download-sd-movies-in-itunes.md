@@ -30,5 +30,5 @@ For TV shows, you can also download individual episodes in SD, but you need to u
 
 - - - -
 
-👤 Nathan Acks  
-📅 June 9, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> June 9, 2021

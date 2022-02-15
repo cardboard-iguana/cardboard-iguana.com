@@ -76,5 +76,5 @@ Apparently the Registry Editor goes by regedt32.exe in addition to the more fami
 
 - - - -
 
-👤 Nathan Acks  
-📅 September 18, 2021
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">📅</span> September 18, 2021
