@@ -32,7 +32,7 @@ readme_index:
 #
 defaults:
   - scope:
-      path: "index.md"
+      path: "README.md"
     values:
       layout: "homepage"
   - scope:
@@ -63,4 +63,3 @@ defaults:
 exclude:
   - package.json
   - package-lock.json
-  - README.md
