@@ -38,11 +38,11 @@ defaults:
   - scope:
       path: "log.md"
     values:
-      layout: "post-list"
+      layout: "list"
   - scope:
       path: "notes.md"
     values:
-      layout: "page-list"
+      layout: "list"
   - scope:
       path: "log"
     values:
