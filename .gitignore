@@ -11,6 +11,7 @@ _layouts/
 css/
 atom.xml
 Gemfile
+metadata.txt
 package.json
 
 # Ignore build files

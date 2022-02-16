@@ -12,7 +12,9 @@ plugins:
 name: Cardboard Iguana Security
 description: Cardboard Iguana Security is a weblog and digital garden focusing on cybersecurity and hacking. Interested in hiring me? Then reach out to nathan.acks@cardboard-iguana.com!
 url: https://cardboard-iguana.com
-icon: /02779186c69ce442260bd67d3bd11b3e.webp
+icon: 02779186c69ce442260bd67d3bd11b3e.webp
+cover: 208b5c08b44922051e28674bb930398f.jpg
+author: Nathan Acks
 
 # Default image for the auto-image plugin (used in Twitter
 # Cards and Open Graph image tags.
@@ -32,31 +34,31 @@ readme_index:
 #
 defaults:
   - scope:
-      path: "README.md"
+      path: README.md
     values:
-      layout: "homepage"
+      layout: homepage
   - scope:
-      path: "log.md"
+      path: log.md
     values:
-      layout: "list"
+      layout: list
   - scope:
-      path: "notes.md"
+      path: notes.md
     values:
-      layout: "list"
+      layout: list
   - scope:
-      path: "log"
+      path: log
     values:
-      layout: "post"
+      layout: post
   - scope:
       path: ""
       type: pages
     values:
-      layout: "page"
+      layout: page
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: "post"
+      layout: post
 
 # Additional excludes.
 #
