@@ -163,9 +163,9 @@ Key TCP headers:
 Key TCP flags:
 
 * SYN: Initialize connection.
-* SYN/ACK: Acknowledge connection initialization (not an *actual* flag, but rather [a SYN flag + an ACK flag](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#TCP_segment_structure)).
+* SYN/ACK: Acknowledge connection initialization (not an *actual* flag, but rather a SYN flag + an ACK flag).
 * ACK: Acknowledge packet receipt.
-* DATA: Actual connection data ([not sure if this is *actually* a flag](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#TCP_segment_structure)).
+* DATA: Actual connection data (not sure if this is *actually* a flag).
 * FIN: End connection.
 * RST: Error.
 
@@ -184,6 +184,10 @@ Closing the connection uses a “four way handshake”:
 * Server FIN
 * Client ACK
 
+References:
+
+* [Transmission Control Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)
+
 ### Ping
 
 ICMP is actually a TCP/IP protocol that works on the internet layer.
@@ -200,13 +204,16 @@ It’s also possible to have traceroute use TCP SYN flags for probing (-T).
 
 When you’re “registering” a domain, what you’re actually doing is registering a “second-level domain” (as distinct from TLDs like .net, .co.uk, etc.).
 
-Second-level domains are limited to 63 characters composed of a-z, 0-9, and “-“. Hyphens cannot start or end a domain (the TryHackMe module states that consecutive hyphens are not allowed, but this doesn’t seem to be true anymore given [how internationalized domains are represented with Punycode](https://en.wikipedia.org/wiki/Internationalized_domain_name#Example_of_IDNA_encoding)).
+Second-level domains are limited to 63 characters composed of a-z, 0-9, and “-“. Hyphens cannot start or end a domain (the TryHackMe module states that consecutive hyphens are not allowed, but this doesn’t seem to be true anymore given how internationalized domains are represented with Punycode).
 
 Subdomains follow the same rules as second-level domains. While in theory an unlimited number of subdomains are allowed, the entire domain string must be 253 characters or less, which would seem to impose a hard cap of 124 subdomains (assuming that the shortest TLD is two characters; if there’s a one-character TLD out there, then the hard cap is at 125 subdomains).
 
-Technically TLDs are *not* actually the top of the domain hierarchy — that would be the root domain, which is simply “.”. [FQDNs should contain this trailing dot](https://en.wikipedia.org/wiki/Domain_name), hich is why you need to include it when setting up CNAME entries and the like in DNS. (The purpose of the final “.” Is similar to that of the leading “/“ in paths — /foo/bar/baz is an absolute path starting at the file system root, but foo/bar/baz is a path relative to the current directory. The domain baz.bar.foo. is the DNS equivalent of /foo/bar/baz.)
+Technically TLDs are *not* actually the top of the domain hierarchy — that would be the root domain, which is simply “.”. FQDNs should contain this trailing dot, which is why you need to include it when setting up CNAME entries and the like in DNS. (The purpose of the final “.” Is similar to that of the leading “/“ in paths — /foo/bar/baz is an absolute path starting at the file system root, but foo/bar/baz is a path relative to the current directory. The domain baz.bar.foo. is the DNS equivalent of /foo/bar/baz.)
 
 The second column of dig’s ANSWER section (so, right after the domain part, and before the IN) provides the current *remaining* TTL in seconds (so this counts down from the actual TTL).
+
+* [Domain name (Wikipedia)](https://en.wikipedia.org/wiki/Domain_name)
+* [Internationalized domain name (Wikipedia)](https://en.wikipedia.org/wiki/Internationalized_domain_name)
 
 - - - -
 

@@ -8,7 +8,7 @@ Technically, it’s routers that are in charge of port forwarding, not firewalls
 
 ### Firewalls 101
 
-Firewalls operate on layers 3 and 4 of the [OSI Model](../notes/osi-model.md).
+Firewalls operate on layers 3 and 4 of the OSI Model.
 
 The difference between stateless firewalls (rule-based packet filtering) and stateful firewalls (connection tracking) is not 100% clear from this TryHackMe module, and most sources on the internet don’t help much. But two examples might make it clearer.
 
@@ -16,6 +16,8 @@ The difference between stateless firewalls (rule-based packet filtering) and sta
 * A *stateless* firewall simply blocks all *packets* that match a given set of criteria, such as destination port, source or destination IP address, etc.
 
 What muddies the water here is that modern firewalls generally support *both* stateful and stateless rules. For example, you might block incoming connections but allow outgoing connections (stateful) for normal operations, but then block all outbound packets targeting ports associated with SMB (stateless).
+
+* [OSI Model](../notes/osi-model.md)
 
 ### LAN Networking Devices
 
@@ -27,11 +29,14 @@ What muddies the water here is that modern firewalls generally support *both* st
 
 When you’re “registering” a domain, what you’re actually doing is registering a “second-level domain” (as distinct from TLDs like .net, .co.uk, etc.).
 
-Second-level domains are limited to 63 characters composed of a-z, 0-9, and “-“. Hyphens cannot start or end a domain (the TryHackMe module states that consecutive hyphens are not allowed, but this doesn’t seem to be true anymore given [how internationalized domains are represented with Punycode](https://en.wikipedia.org/wiki/Internationalized_domain_name#Example_of_IDNA_encoding)).
+Second-level domains are limited to 63 characters composed of a-z, 0-9, and “-“. Hyphens cannot start or end a domain (the TryHackMe module states that consecutive hyphens are not allowed, but this doesn’t seem to be true anymore given how internationalized domains are represented with Punycode).
 
 Subdomains follow the same rules as second-level domains. While in theory an unlimited number of subdomains are allowed, the entire domain string must be 253 characters or less, which would seem to impose a hard cap of 124 subdomains (assuming that the shortest TLD is two characters; if there’s a one-character TLD out there, then the hard cap is at 125 subdomains).
 
-Technically TLDs are *not* actually the top of the domain hierarchy — that would be the root domain, which is simply “.”. [FQDNs should contain this trailing dot](https://en.wikipedia.org/wiki/Domain_name), hich is why you need to include it when setting up CNAME entries and the like in DNS. (The purpose of the final “.” Is similar to that of the leading “/“ in paths — /foo/bar/baz is an absolute path starting at the file system root, but foo/bar/baz is a path relative to the current directory. The domain baz.bar.foo. is the DNS equivalent of /foo/bar/baz.)
+Technically TLDs are *not* actually the top of the domain hierarchy — that would be the root domain, which is simply “.”. FQDNs should contain this trailing dot, which is why you need to include it when setting up CNAME entries and the like in DNS. (The purpose of the final “.” Is similar to that of the leading “/“ in paths — /foo/bar/baz is an absolute path starting at the file system root, but foo/bar/baz is a path relative to the current directory. The domain baz.bar.foo. is the DNS equivalent of /foo/bar/baz.)
+
+* [Domain name (Wikipedia)](https://en.wikipedia.org/wiki/Domain_name)
+* [Internationalized domain name (Wikipedia)](https://en.wikipedia.org/wiki/Internationalized_domain_name)
 
 ### Making a Request
 
@@ -44,7 +49,7 @@ Client
           → Authoritative DNS server (NS record)
 ```
 
-What’s actually going on here is made a little bit clearer by [Wikipedia’s DNS address resolution discussion](https://en.wikipedia.org/wiki/Domain_Name_System#Address_resolution_mechanism). Basically, DNS records are resolve from right-to-left, with each level responsible for knowing the location of the next level’s authoritative server. So, the root DNS servers (“.”) know where to find the TLD servers, the TLD servers know where to find the (second-level) domain servers, and the (second-level) domain server knows all the DNS entries for a domain (including for its subdomains). In theory this means that all you actually need is:
+What’s actually going on here is made a little bit clearer by Wikipedia’s DNS address resolution discussion. Basically, DNS records are resolve from right-to-left, with each level responsible for knowing the location of the next level’s authoritative server. So, the root DNS servers (“.”) know where to find the TLD servers, the TLD servers know where to find the (second-level) domain servers, and the (second-level) domain server knows all the DNS entries for a domain (including for its subdomains). In theory this means that all you actually need is:
 
 ```
 Client
@@ -54,6 +59,8 @@ Client
 ```
 
 Everything that happens first between the client and the root DNS server is just caching to make things happen faster (if the answer to a query hasn’t expired from the cache of a recursive server, it will be provided by that server directly without making subsequent queries further up the chain).
+
+* [Domain Name System (Wikipedia)](https://en.wikipedia.org/wiki/Domain_Name_System)
 
 ## HTTP in Detail
 
@@ -96,9 +103,11 @@ Content-Length: 98
 </html>
 ```
 
-Note that both requests and responses *end* with blank lines. If the web server returns any data, this data follows this blank line. This is why Content-Length is important — it’s how we know when to stop reading the data! (Note that [Content-Length is in bytes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length).)
+Note that both requests and responses *end* with blank lines. If the web server returns any data, this data follows this blank line. This is why Content-Length is important — it’s how we know when to stop reading the data! (Note that Content-Length is in bytes.)
 
 Note that HTTP is a stateless protocol.
+
+* [Content-Length (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length)
 
 ### HTTP Methods
 
@@ -120,9 +129,13 @@ While some HTTP status codes are pre-defined, applications are free to make up t
 
 ### Cookies
 
-Cookies are key-value pairs (key=value) sent by the server using the Set-Cookie header ([additional semi-colon separated parameters](https://developer.mozilla.org/en-US/docs/Glossary/Response_header) can determine when the cookie expires, whether it’s restricted to HTTPS connections, etc.). Once set, the client is expected to return the cookie with the Cookie header in subsequent requests (at least until the cookie expires).
+Cookies are key-value pairs (key=value) sent by the server using the Set-Cookie header (additional semi-colon separated parameters can determine when the cookie expires, whether it’s restricted to HTTPS connections, etc.). Once set, the client is expected to return the cookie with the Cookie header in subsequent requests (at least until the cookie expires).
 
-To set multiple cookies, the server just uses [multiple Set-Cookie headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie). However, [clients only reply with a *single* Cookie header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie), with individual cookies returned in a semicolon-separated string of key=value pairs.
+To set multiple cookies, the server just uses multiple Set-Cookie headers. However, clients only reply with a *single* Cookie header, with individual cookies returned in a semicolon-separated string of key=value pairs.
+
+* [Response header (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Glossary/Response_header)
+* [Set-Cookie (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
+* [Cookie (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie)
 
 - - - -
 
