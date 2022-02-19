@@ -68,7 +68,7 @@ Everything that happens first between the client and the root DNS server is just
 
 | Scheme |     | User |   | Password |   |    Domain   |   | Port |   |      Path      |   |    Query    |   |      Fragment     |
 |:------:|:---:|:----:|:-:|:--------:|:-:|:-----------:|:-:|:----:|:-:|:--------------:|:-:|:-----------:|:-:|:-----------------:|
-|  http  | :// |  foo | : |    bar   | @ | example.tld | : | 8080 | / | this/is/a/path | ? | id=1&task=1 | # | in-page-reference |
+|  http  | :// |  foo | : |    bar   | @ | example.tld | : | 8080 | / | this/is/a/path | ? | id=1&task=1 | # | in_page_reference |
 
 Obviously, not all parts are required.
 
