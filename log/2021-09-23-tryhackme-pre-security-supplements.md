@@ -14,9 +14,11 @@ In the Command Prompt, `tasklist.exe` is roughly equivalent to the Task Manager.
 
 ### System
 
-The “System” process *always* has a PID of 4, and is where system (kernel) threads live (in effect, it *is* the kernel). Kernel-mode processes in Windows [share a common address space and are not isolated from each other](https://docs.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode); if a thread in System crashes, it takes *everything* down with it. It used to be that all drivers lived in kernel-mode, though that’s (rightly!) been moved away from in recent years.
+The “System” process *always* has a PID of 4, and is where system (kernel) threads live (in effect, it *is* the kernel). Kernel-mode processes in Windows share a common address space and are not isolated from each other; if a thread in System crashes, it takes *everything* down with it. It used to be that all drivers lived in kernel-mode, though that’s (rightly!) been moved away from in recent years.
 
 Depending on how the Windows process hierarchy is defined, System either has no parent, or has the parent of the “System Idle Process” (which always has PID 0).
+
+* [User mode and kernel mode](https://docs.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode)
 
 ### System > smss.exe
 

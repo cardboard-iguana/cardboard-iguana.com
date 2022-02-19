@@ -143,9 +143,9 @@ Key TCP headers:
 Key TCP flags:
 
 * SYN: Initialize connection.
-* SYN/ACK: Acknowledge connection initialization (not an *actual* flag, but rather [a SYN flag + an ACK flag](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#TCP_segment_structure)).
+* SYN/ACK: Acknowledge connection initialization (not an *actual* flag, but rather a SYN flag + an ACK flag).
 * ACK: Acknowledge packet receipt.
-* DATA: Actual connection data ([not sure if this is *actually* a flag](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#TCP_segment_structure)).
+* DATA: Actual connection data (not sure if this is *actually* a flag).
 * FIN: End connection.
 * RST: Error.
 
@@ -163,6 +163,10 @@ Closing the connection uses a “four way handshake”:
 * Server ACK
 * Server FIN
 * Client ACK
+
+References:
+
+* [Transmission Control Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)
 
 ### UDP/IP
 
@@ -188,7 +192,9 @@ The connection ends when the server stops sending data or the client stops liste
 
 Ports identify applications (or services provided by an application). There are 2¹⁶ possible ports numbered 0 - 65535.
 
-Ports 0 - 1023 are “common ports” (I’ve typically heard this block called “reserved” or “system”; [Wikipedia](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers) calls them “well-known”).
+Ports 0 - 1023 are “common ports” (I’ve typically heard this block called “reserved” or “system”; Wikipedia calls them “well-known”).
+
+* [List of TCP and UDP port numbers (Wikipedia)](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
 
 - - - -
 

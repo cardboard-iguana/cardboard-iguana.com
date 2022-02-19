@@ -20,9 +20,11 @@ The -p- switch will scan all ports. This is because the beginning/end of our por
 
 During a TCP connect scan (-sT), nmap attempts to make a full TCP connection (three way handshake) with each port on the target machine.
 
-[RFC 793](https://tools.ietf.org/html/rfc793) establishes that a closed port should respond to any packet except a RST with a RST. Firewalls, however, typically *drop* incoming packets to protected ports (NMAP marks these as “filtered”).
+RFC 793 establishes that a closed port should respond to any packet except a RST with a RST. Firewalls, however, typically *drop* incoming packets to protected ports (NMAP marks these as “filtered”).
 
 NOTE: Configuring a firewall to respond with TCP RST packets rather than just dropping incoming connections makes getting an accurate read on the target *very* hard!
+
+* [RFC 793: Transmission Control Protocol](https://tools.ietf.org/html/rfc793)
 
 ### SYN Scans
 
@@ -86,13 +88,17 @@ When calling nmap with --script=CATEGORY, nmap will try to run any *applicable* 
 
 The --script flag can also be given one or more (comma separated) script names to run. The --script-args flag can be used to pass arguments to scripts (again, comma separated). Arguments passed in this way are specified using a SCRIPT.ARGUMENT format (e.g., http-put.url).
 
-Most scripts have (brief!) help messages accessible via --script-help. [Nmap’s online documentation](https://nmap.org/nsedoc/) is generally *much* more complete, however.
+Most scripts have (brief!) help messages accessible via --script-help. Nmap’s online documentation is generally *much* more complete, however.
+
+* [Nmap Scripting Engine Documentation](https://nmap.org/nsedoc/)
 
 ### Searching for Scripts
 
-OPTIONS: Search the [online Nmap documentation](https://nmap.org/nsedoc/), take a look through /usr/share/nmap/scripts, search through /usr/share/nmap/scripts/script.db (which is really just a structured text file).
+OPTIONS: Search the online Nmap documentation, take a look through /usr/share/nmap/scripts, search through /usr/share/nmap/scripts/script.db (which is really just a structured text file).
 
 If a script is added to /usr/share/nmap/scripts manually, then `nmap --script-updatedb` needs to be run to update the script.db file.
+
+* [Nmap Scripting Engine Documentation](https://nmap.org/nsedoc/)
 
 ### Firewall Evasion
 

@@ -2,7 +2,9 @@
 
 ## A Bit of Background on Linux
 
-The first release of [Linux](https://en.wikipedia.org/wiki/Linux) was on September 17, 1991.
+The first release of Linux was on September 17, 1991.
+
+* [Linux (Wikipedia)](https://en.wikipedia.org/wiki/Linux)
 
 ## General/Useful Utilities
 

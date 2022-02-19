@@ -56,7 +56,7 @@ Prefix 𝑛 with + or - to match files *strictly* greater than or less than 𝑛
 
 For example, use `-size +4G` to find files over 4 GB (i.e., those that can’t be written to a FAT32 file system).
 
-The -perm flag matches files with a given permission. Both numeric and [symbolic](../notes/symbolic-permissions.md) permissions are allowed.
+The -perm flag matches files with a given permission. Both numeric and symbolic permissions are allowed.
 
 Use the / or - prefix to match files with *any* of the specified permissions or *at least* the specified permissions. For example, `-perm -644` will match any file where the current user has *at least* read + write access and any other user has *at least* read access. Likewise, `-perm /666` will match files where the current user has read + write access and/or the current group has read + write access and/or everyone has read + write access.
 
@@ -71,6 +71,10 @@ For example:
 * `-amin +30` matches files accessed *more* than 30 minutes ago.
 * `-mtime -7` matches files modified *less* than 7 days ago.
 * `-mtime 0` matches files modified *today*.
+
+References:
+
+* [Symbolic Permissions](../notes/symbolic-permissions.md)
 
 - - - -
 
