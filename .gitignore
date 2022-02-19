@@ -6,6 +6,7 @@
 *.swp
 
 # Ignore merged _theme files
+_build/
 _theme/
 _layouts/
 css/
