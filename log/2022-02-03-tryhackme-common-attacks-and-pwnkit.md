@@ -76,7 +76,7 @@ References:
 
 * [arthepsy / CVE-2021-4034](https://github.com/arthepsy/CVE-2021-4034)
 * [pwnkit: Local Privilege Escalation in polkit's pkexec (CVE-2021-4034)](https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt)
-* [polkit / src / programs / pkexec.c (commit 539bf5dcca489534f42798a4500aca4b1a8ec8d0)](https://gitlab.freedesktop.org/polkit/polkit/-/blob/539bf5dcca489534f42798a4500aca4b1a8ec8d0/src/programs/pkexec.c)
+* [polkit / src / programs / pkexec.c (commit 539bf5dc)](https://gitlab.freedesktop.org/polkit/polkit/-/blob/539bf5dcca489534f42798a4500aca4b1a8ec8d0/src/programs/pkexec.c)
 
 - - - -
 
