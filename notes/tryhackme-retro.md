@@ -2,14 +2,15 @@
 
 ## Initial Reconnaissance 
 
-This CTF is an earlier version of [Blaster](tryhackme-blaster.md) without the step-by-step nature of that room. Not 100% sure what the differences are.
+This CTF is an earlier version of Blaster without the step-by-step nature of that room. Not 100% sure what the differences are.
 
 The target IP is 10.10.20.185.
 
-As with [Blaster](tryhackme-blaster.md), we'll start out As usual, we’ll start out by running an [nmap](nmap.md) scan:
+As with Blaster, we'll start out As usual, we’ll start out by running an nmap scan:
 
 ```bash
-sudo nmap -v -oA retro -Pn -A -T4 -sS -script vuln -p- 10.10.20.185
+sudo nmap -v -oA retro -Pn -A -T4 -sS -script vuln \
+          -p- 10.10.20.185
 ```
 
 This gives us:
@@ -55,19 +56,22 @@ So we've got IIS and RDP running. Let's start by taking a look around IIS.
 
 ## Flag 1: The Hidden Directory
 
-As with [Blaster](tryhackme-blaster.md), we just have the default IIS welcome page. So let's follow up with [gobuster](gobuster.md) since we know from the flag list that there's a hidden directory
+As with Blaster, we just have the default IIS welcome page. So let's follow up with gobuster since we know from the flag list that there's a hidden directory
 
 ```bash
-gobuster -t 10 dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u http://10.10.20.185/
+gobuster \
+	-t 10 dir \
+	-w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt \
+	-u http://10.10.20.185/
 ```
 
-Still paralleling [Blaster](tryhackme-blaster.md), the hidden directory is `/retro`.
+Still paralleling Blaster, the hidden directory is `/retro`.
 
 ## Flag 2: `user.txt`
 
-Visiting http://10.10.20.185/retro/ reveals the same retro arcade website as [Blaster](tryhackme-blaster.md). (I'm noticing a parallel here... I suspect that the rest of the CTF will also be the same, though I'm going to see if I can do this one with less guessing.)
+Visiting http://10.10.20.185/retro/ reveals the same retro arcade website as Blaster. (I'm noticing a parallel here... I suspect that the rest of the CTF will also be the same, though I'm going to see if I can do this one with less guessing.)
 
-All of the posts are by "Wade". I hadn't noticed it the first time, but the "Ready Player One" post is actually suggestive that either Wade's username or password is "[Parzival](https://en.wikipedia.org/wiki/Ready_Player_One#Plot)".
+All of the posts are by "Wade". I hadn't noticed it the first time, but the "Ready Player One" post is actually suggestive that either Wade's username or password is "Parzival".
 
 > I can’t believe the movie based on my favorite book of all time is going to come out in a few days! Maybe it’s because my name is so similar to the main character, but I honestly feel a deep connection to the main character Wade. I keep mistyping the name of his avatar whenever I log in but I think I’ll eventually get it down. Either way, I’m really excited to see this movie!
 
@@ -77,13 +81,14 @@ The comment immediately afterward seems to confirm this.
 
 Theoretically I should use this information to generate a wordlist (who knows what permutations Wade is applying to "Parzival", and whether this is Wade's username or password). There's a few Kali Linux tools that could be used to harvest words from http://10.10.20.185/retro/ and generate various common permutations, but all of these will result in quite a long list.
 
-In the real world, this is what I'd probably have to do. But since I kinda already know how this is going to shake out, let's just skip ahead to logging in with [XFreeRDP](xfreerdp.md).
+In the real world, this is what I'd probably have to do. But since I kinda already know how this is going to shake out, let's just skip ahead to logging in with XFreeRDP.
 
 ```bash
-xfreerdp /dynamic-resolution +clipboard /cert:ignore /v:10.10.20.185 /u:Wade /p:parzival
+xfreerdp /dynamic-resolution +clipboard /cert:ignore \
+         /v:10.10.20.185 /u:Wade /p:parzival
 ```
 
-Unsurprisingly, this works. The `user.txt` file on the desktop contains the second flag (which is different than in [Blaster](tryhackme-blaster.md)!).
+Unsurprisingly, this works. The `user.txt` file on the desktop contains the second flag (which is different than in Blaster!).
 
 ## Flag 3: `root.txt`
 
@@ -91,22 +96,30 @@ This flag is probably in `C:\Users\Administrator\Desktop\root.txt`. But now thin
 
 Wade has Google Chrome installed in this version of the CTF, and no other files are on the desktop.
 
-But poking around a bit reveals that things aren't too far off [Blaster](tryhackme-blaster.md).
+But poking around a bit reveals that things aren't too far off Blaster.
 
 * There's an `hhupd.exe` executable in the Recycle Bin.
-* Chrome has a single bookmark for [NVD - CVE-2019-1388](https://nvd.nist.gov/vuln/detail/CVE-2019-1388).
+* Chrome has a single bookmark for "NVD - CVE-2019-1388".
 
-Of course, the TryHackMe machine doesn't have internet access, but we can follow this link locally. Moreover, searching for `hhupd` reveals that [this is a program that can be used to perform the attack](https://www.nagenrauft-consulting.com/2019/11/21/cve-2019-1388-hhupd-exe/); that page helpfully links to [a YouTube video demonstrating how to leverage `hhupd.exe` in exactly this way](https://www.youtube.com/watch?v=3BQKpPNlTSo).
+Of course, the TryHackMe machine doesn't have internet access, but we can follow this link locally. Moreover, searching for `hhupd` reveals that this is a program that can be used to perform the attack; that page helpfully links to a YouTube video demonstrating how to leverage `hhupd.exe` in exactly this way.
 
-The attack works somewhat differently on this system than in [Blaster](tryhackme-blaster.md) (or the demonstration video), however. Instead of opening up an Internet Explorer window outside of the secure desktop, IE is opened up *on* the UAC desktop itself, and all interaction needs to take place there (we also get a choice of using IE or Chrome...). Still, overall things work more-or-less as we'd expect, and we can use the resulting elevated command prompt to read `C:\Users\Administrator\Desktop\root.txt.txt` (note the extra `.txt`) to obtain the final flag.
+The attack works somewhat differently on this system than in Blaster (or the demonstration video), however. Instead of opening up an Internet Explorer window outside of the secure desktop, IE is opened up *on* the UAC desktop itself, and all interaction needs to take place there (we also get a choice of using IE or Chrome...). Still, overall things work more-or-less as we'd expect, and we can use the resulting elevated command prompt to read `C:\Users\Administrator\Desktop\root.txt.txt` (note the extra `.txt`) to obtain the final flag.
 
-(I kinda feel like I cheated now, since I did [Blaster](tryhackme-blaster.md) first without realizing that this room was almost *exactly* the same.)
+(I kinda feel like I cheated now, since I did Blaster first without realizing that this room was almost *exactly* the same.)
  
 ELAPSED TIME: 1 h 16 min
 
 ## References
 
 * [TryHackMe: Retro](https://tryhackme.com/room/retro)
+* [TryHackMe: Blaster](tryhackme-blaster.md)
+* [Using “nmap”](nmap.md)
+* [Using “gobuster”](gobuster.md)
+* [Ready Player One (Wikipedia)](https://en.wikipedia.org/wiki/Ready_Player_One)
+* [Using XFreeRDP](xfreerdp.md)
+* [CVE-2019-1388 Detail (National Vulnerability Database)](https://nvd.nist.gov/vuln/detail/CVE-2019-1388)
+* [CVE-2019-1388 (nagenrauft-consulting.com)](https://www.nagenrauft-consulting.com/2019/11/21/cve-2019-1388-hhupd-exe/)
+* [CVE-2019-1388: Windows Privilege Escalation Through UAC](https://www.youtube.com/watch?v=3BQKpPNlTSo)
 
 - - - -
 

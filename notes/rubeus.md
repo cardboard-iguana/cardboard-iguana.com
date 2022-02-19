@@ -33,7 +33,7 @@ Rubeus.exe brute /password:ThePasswordToSpray /noticket
 Rubeus.exe kerberoast
 ```
 
-The password hashes output here can then be cracked with [Hashcat](hashcat.md) (use the 13100 hash mode).
+The password hashes output here can then be cracked with Hashcat (use the 13100 hash mode).
 
 ## AS-REP Roasting
 
@@ -43,13 +43,14 @@ The password hashes output here can then be cracked with [Hashcat](hashcat.md) (
 Rubeus.exe asreproast
 ```
 
-To use [Hashcat](hashcat.md) to crack the hashes obtained in this fashin, first insert `23$` after the leading `$kerb5asrep$` (so `$kerb5asrep$` → `$kerb5asrep$23$`) and then use mode 18200.
+To use Hashcat to crack the hashes obtained in this fashin, first insert `23$` after the leading `$kerb5asrep$` (so `$kerb5asrep$` → `$kerb5asrep$23$`) and then use mode 18200.
 
 ## References
 
 * [Rubeus](https://github.com/GhostPack/Rubeus)
 * [TryHackMe: Attacking Kerberos](tryhackme-attacking-kerberos.md)
 * [Kerberos](kerberos.md)
+* [Using Hashcat](hashcat.md)
 
 - - - -
 

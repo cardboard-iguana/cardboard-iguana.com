@@ -8,7 +8,8 @@ openssl s_client -connect ${SERVER}:${PORT}
 # When dealing with a mail server using STARTTLS, we need
 # to modify this a bit:
 #
-openssl s_client -connect ${SERVER}:${PORT} -starttls smtp
+openssl s_client -connect ${SERVER}:${PORT} \
+                 -starttls smtp
 
 # Pull the entire certificate chain:
 #

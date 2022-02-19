@@ -4,7 +4,7 @@
 
 ### Can You Dig It?
 
-Mostly this section is just looking things up in the [Splunk Quick Reference Guide](https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf).
+Mostly this section is just looking things up in the Splunk Quick Reference Guide.
 
 Splunk stores imported data in “indexes”; log timestamps are stored in the `_time` field.
 
@@ -18,6 +18,10 @@ Some acronyms:
 * SIEM: Security Information and Event Management
 * BOTS: Boss of the SOC (some kind of Splunk competition)
 * CIM: Common Information Model
+
+References:
+
+* [Splunk Quick Reference Guide](https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf)
 
 ### Halp, I’m Drowning in Logs!
 

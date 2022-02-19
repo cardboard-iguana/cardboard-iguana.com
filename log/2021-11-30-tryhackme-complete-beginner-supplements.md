@@ -4,11 +4,15 @@
 
 ### Metasploit Modules
 
-I’ve already noted most of the commands mentioned here in my [Using Metasploit](../notes/metasploit.md) note. A few additional things:
+I’ve already noted most of the commands mentioned here in my Using Metasploit note. A few additional things:
 
 * Search for modules using `search`.
 * Module options can be displayed with the `options` command (once a module is loaded). Use `advanced` for “advanced” options.
-* Most modules support the ARCH and PAYLOAD options (for specifying target architecture and the payload to deliver). These options can also be set by directly calling a fully-specified [payload](../notes/metasploit.md).
+* Most modules support the ARCH and PAYLOAD options (for specifying target architecture and the payload to deliver). These options can also be set by directly calling a fully-specified payload.
+
+References:
+
+* [Using Metasploit](../notes/metasploit.md)
 
 ### Meterpreter
 
@@ -32,7 +36,11 @@ Hashcat mode 100 corresponds to SHA1; 900 is MD4.
 * `-D`/`-T`/`-C` — select a specific database/table/column to dump
 * `--dump` — dump data
 * `--os-shell` — attempt to spawn an interactive shell
-* `--os-pwn` — attempt to spawn a [Meterpreter](../notes/metasploit.md) shell or VNC session
+* `--os-pwn` — attempt to spawn a Meterpreter shell or VNC session
+
+References:
+
+* [Using Metasploit](../notes/metasploit.md)
 
 ### A Note on Manual SQL Injection
 

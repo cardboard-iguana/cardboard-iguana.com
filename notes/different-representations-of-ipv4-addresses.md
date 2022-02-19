@@ -12,13 +12,13 @@ The last two of these are particularly interesting -- IPv4 addresses can be repr
 
 Decimal/Hexidecimal conversion for IPv4 addresses is relatively simple if you remember that we break IPv4 addresses up into 4 *octets*, where each octet is 8 binary digits. Thus
 
-$$\begin{flalign}
-127.0.0.1 & = (127 \times 2^{24}) + (0 \times 2^{16}) + (0 \times 2^8) + (1 \times 2^0) &\\
-          & = 2130706432 + 0 + 0 + 1 &\\
-		& = 2130706433
-\end{flalign}$$
+```
+127.0.0.1 = (127 × 2²⁴) + (0 × 2¹⁶) + (0 × 2⁸) + (1 × 2⁰)
+          = 2130706432 + 0 + 0 + 1
+          = 2130706433
+```
 
-Converting to hexadecimal is trivial using the excellent [Qalculate!](https://qalculate.github.io/) tool.
+Converting to hexadecimal is trivial using the excellent Qalculate tool.
 
 ```qalc
 2130706433 to hex = 0x7F000001
@@ -27,6 +27,7 @@ Converting to hexadecimal is trivial using the excellent [Qalculate!](https://qa
 ## References
 
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
+* [Qalculate!](https://qalculate.github.io/)
 
 - - - -
 

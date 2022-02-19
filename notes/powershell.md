@@ -14,7 +14,7 @@ Major hives:
 
 ## Accessing Windows Logs
 
-Use the [Get-WinEvent](get-winevent.md) cmdlet.
+Use the Get-WinEvent cmdlet.
 
 ## Download a File
 
@@ -37,6 +37,7 @@ powershell -c "$COMMAND"
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
+* [Get-WinEvent](get-winevent.md)
 
 - - - -
 

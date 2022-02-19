@@ -24,7 +24,7 @@ It's best to keep all of your repos in a single folder (glad I already do this!)
 
 As I'm running a Chromebook (with Linux apps), Sourcetree isn't available. However, I've re-upped my subscription to GitKraken (and have installed it), as the application seems pretty similar.
 
-Git's [online help](https://git-scm.com/docs/) can also be accessed via git help $COMMAND. Use the -h flag for a concise version of the help file (generally a single line).
+Git's online help can also be accessed via git help $COMMAND. Use the -h flag for a concise version of the help file (generally a single line).
 
 ### Git Locations
 
@@ -209,9 +209,17 @@ A "fast-forward merge" just moves the branch label of the “base” branch to t
 A fast-forward merge typically deletes the topic branch label to keep things tidy. Even though the branch label is deleted, many people will still memorialize the merged topic branch in a commit message, or using a tag.
 
 ```bash
-git checkout $BASE_BRANCH_LABEL   # …If you're not already on the base branch.
-git merge $TOPIC_BRANCH_LABEL	  # The actual merge; fast-forward by default.
-git branch -d $TOPIC_BRANCH_LABEL # Optional.
+# …If you're not already on the base branch.
+#
+git checkout $BASE_BRANCH_LABEL
+
+# The actual merge; fast-forward by default.
+#
+git merge $TOPIC_BRANCH_LABEL
+
+# Optional.
+#
+git branch -d $TOPIC_BRANCH_LABEL
 ```
 
 A "merge commit" combines the topic and base branches. A merge commit thus always has multiple parents.
@@ -469,6 +477,7 @@ Some common rules:
 ## References
 
 * [Coursera: Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
+* [git: Reference](https://git-scm.com/docs/)
 
 - - - -
 

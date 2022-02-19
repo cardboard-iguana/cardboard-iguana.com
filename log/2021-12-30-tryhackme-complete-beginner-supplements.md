@@ -2,7 +2,7 @@
 
 ## Attacktive Directory
 
-See my [Attacktive Directory](../notes/tryhackme-attacktive-directory.md) CTF write-up.
+[See my Attacktive Directory CTF write-up.](../notes/tryhackme-attacktive-directory.md)
 
 - - - -
 

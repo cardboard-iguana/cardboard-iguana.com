@@ -17,7 +17,8 @@ cat $FILE | cat -n | sort -uk2 | sort -nk1 | cut -f2-
 ## Remove All But the Last Occurrence of a Line
 
 ```bash
-cat $FILE | cat -n | sort -rk2 | sort -uk2 | sort -nk1 | cut -f2-
+cat $FILE | cat -n | sort -rk2 | \
+	sort -uk2 | sort -nk1 | cut -f2-
 ```
 
 ## References

@@ -16,7 +16,7 @@ Forced browsing is basically a species of IDOR (except that often you don't even
 
 ### Forced Browsing Automatic Exploitation
 
-wfuzz is a URL fuzzer -- basically the command-line version of the [Burp Suite Intruder](../notes/burp-suite.md) (but it's *much* faster, which is what one would generally expect from a command-line tool).
+wfuzz is a URL fuzzer -- basically the command-line version of the Burp Suite Intruder (but it's *much* faster, which is what one would generally expect from a command-line tool).
 
 | Flag | Meaning                                                    |
 |:----:|:---------------------------------------------------------- |
@@ -30,6 +30,8 @@ wfuzz -z file,rockyou.txt https://example.com/FUZZ/img/secret.jpg
 ```
 
 Use `wfuzz --help` for a full list of options. The `--hc 404` option is particularly useful for hiding pages that return a 404.
+
+* [Using Burp Suite](../notes/burp-suite.md)
 
 ### API Bypass Exploitation
 

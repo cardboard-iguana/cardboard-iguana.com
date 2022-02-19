@@ -1,9 +1,6 @@
 # TryHackMe: The find Command
 
-* [Start finding](../log/2021-09-19-tryhackme-pre-security.md)
-* Be More Specific
-* [Know Exactly What You’re Looking For](../log/2021-09-19-tryhackme-pre-security.md)
-* Have You Found It?
+* [2021-09-19 TryHackMe: Pre Security](../log/2021-09-19-tryhackme-pre-security.md)
 
 ## References
 

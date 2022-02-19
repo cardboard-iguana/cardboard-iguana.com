@@ -2,7 +2,7 @@
 
 ## Overpass 2: Hacked
 
-See my [Overpass 2: Hacked](../notes/tryhackme-overpass-2-hacked.md) CTF write-up.
+[See my Overpass 2: Hacked CTF write-up.](../notes/tryhackme-overpass-2-hacked.md)
 
 - - - -
 

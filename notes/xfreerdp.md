@@ -1,7 +1,12 @@
 # Using XFreeRDP
 
 ```bash
-xfreerdp /dynamic-resolution +clipboard /cert:ignore /v:$TARGET_IP /u:$USER /p:$PASSWORD
+xfreerdp /dynamic-resolution \
+         +clipboard \
+         /cert:ignore \
+         /v:$TARGET_IP \
+         /u:$USER \
+         /p:$PASSWORD
 ```
 
 ## References

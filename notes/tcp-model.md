@@ -5,21 +5,32 @@
 * Layer 2: Internet
 * Layer 1: Network interface (lowest)
 
-*Roughly*, the TCP Model encapsulates the [OSI Model](osi-model.md).
+*Roughly*, the TCP Model encapsulates the OSI Model.
 
-| OSI Layer    | TCP Layer         |
-|:------------ |:----------------- |
-| Physical     | Network interface |
-| Data link    | ↓                 |
-| Network      | Internet          |
-| Transport    | Transport         |
-| Session      | ↓                 |
+```
++--------------+-------------------+
+| OSI LAYER    | TCP/IP LAYER      |
++--------------+-------------------+
+| Application  |                   |
++--------------+                   |
 | Presentation | Application       |
-| Application  | ↓                 |
++--------------+                   |
+| Session      |                   |
++--------------+-------------------+
+| Transport    | Transport         |
++--------------+-------------------+
+| Network      | Internet          |
++--------------+-------------------+
+| Data Link    |                   |
++--------------+ Network Interface |
+| Physical     |                   |
++--------------+-------------------+
+```
 
 ## References
 
 * [TryHackMe: Pre Security](tryhackme-pre-security.md)
+* [OSI Model](osi-model.md)
 
 - - - -
 

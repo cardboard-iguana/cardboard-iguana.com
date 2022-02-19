@@ -2,7 +2,7 @@
 
 ## Basic Pentesting
 
-See my [Basic Pentesting](../notes/tryhackme-basic-pentesting.md) CTF write-up.
+[See my Basic Pentesting CTF write-up.](../notes/tryhackme-basic-pentesting.md)
 
 - - - -
 

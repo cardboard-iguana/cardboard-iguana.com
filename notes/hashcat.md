@@ -23,7 +23,7 @@ There are a large number of “Raw Hash, Salted and/or Iterated” modes That al
 
 Passwords are output as HASH:PLAINTEXT tuples.
 
-Hashcat can accept the output of hashdump from [Metasploit](metasploit.md) (use -m 1000), as well as raw hashes from /etc/shadow (assuming that they’re all the same type).
+Hashcat can accept the output of hashdump from Metasploit (use -m 1000), as well as raw hashes from /etc/shadow (assuming that they’re all the same type).
 
 A “token length exception” means that the provided hash format is of the wrong length (probably because an additional character got accidentally added).
 
@@ -31,10 +31,11 @@ A “token length exception” means that the provided hash format is of the wro
 
 ### Combinator
 
-The [Hashcat]() `combinator.bin` utility combines two wordlists such that every entry of the first list is concatenated with every entry from the second list.
+The Hashcat `combinator.bin` utility combines two wordlists such that every entry of the first list is concatenated with every entry from the second list.
 
 ```bash
-/usr/lib/hashcat-utils/combinator.bin $WORDLIST1 $WORDLIST2 > $COMBINED_WORDLIST
+/usr/lib/hashcat-utils/combinator.bin \
+	$WORDLIST1 $WORDLIST2 > $COMBINED_WORDLIST
 ```
 
 ## References
@@ -45,6 +46,7 @@ The [Hashcat]() `combinator.bin` utility combines two wordlists such that every 
 * [Cracking Linux Password Hashes with Hashcat](https://samsclass.info/123/proj10/p12-hashcat.htm)
 * [hashcat - cracking a salted sha256](https://security.stackexchange.com/a/204978)
 * [TryHackMe: hackernote](tryhackme-hackernote.md)
+* [Using Metasploit](metasploit.md)
 
 - - - -
 

@@ -35,15 +35,21 @@ Some malware can actually spread over RDP. Ack!
 
 ### Now Let’s See if the MD5 Checksums Have Been Analyzed Before
 
-I hadn’t noticed this before, but you can submit a file hash to [VirusTotal](https://www.virustotal.com/) instead uploading a file or submitting a URL. Handy!
+I hadn’t noticed this before, but you can submit a file hash to VirusTotal instead uploading a file or submitting a URL. Handy!
+
+* [VirusTotal](https://www.virustotal.com)
 
 ### Identifying if the Executables are Obfuscated / Packed
 
-It seems like Windows executables have a [magic number](../notes/magic-numbers.md) of `4D 5A`.
+It seems like Windows executables have a magic number of `4D 5A`.
+
+* [Magic Numbers](../notes/magic-numbers.md)
 
 ### Introduction to Strings
 
-[Microsoft Sysinternals](https://docs.microsoft.com/en-us/sysinternals/) has a `strings` command. Neat!
+Microsoft Sysinternals has a `strings` command. Neat!
+
+* [Sysinternals](https://docs.microsoft.com/en-us/sysinternals/)
 
 - - - -
 

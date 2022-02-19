@@ -1,9 +1,6 @@
 # TryHackMe: Regular Expressions
 
-* Charsets
-* Wildcards and Optional Characters
-* [Metacharacters and Repetitions](../log/2021-09-21-tryhackme-pre-security-supplements.md)
-* Starts With / Ends With, Groups, and Either / Or
+* [2021-09-21 Pre Security (Supplements)](../log/2021-09-21-tryhackme-pre-security-supplements.md)
 
 ## References
 

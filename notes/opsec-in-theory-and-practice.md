@@ -1,6 +1,6 @@
 # OPSEC in Theory and Practice
 
-An overview of [OPSEC](https://en.wikipedia.org/wiki/Operations_security) history and practice produced by [The Grugq](https://twitter.com/thegrugq).
+An overview of OPSEC history and practice produced by The Grugq.
 
 The course is presented as self-paced, but seems to be just recordings of a set of live presentations. Occasionally there’s mentions of movies or other supplemental activities that aren’t included in the course site, so I think the fact that I watched/read the material well after its initial release means that I missed some “extracurricular” portions of the sequence.
 
@@ -53,7 +53,7 @@ COMPARTMENTALIZATION: “Need to know.” But a bigger key here is making sure t
 
 COUNTER(INTELLIGENCE): The Grugq likes to add an additional, active component. Think of this as “active cover” — allowing misdirection to limit the effectiveness of the opposition.
 
-This is like Corey Doctorow’s “chaff” (from “Little Brother”) or [canary tokens](https://canary.tools/help/canarytokens). In cybersecurity, an attacker might leave behind a more easily discovered rootkit for the defenders to find, while attempting to conceal the intrusion tools they actually care most about.
+This is like Corey Doctorow’s “chaff” (from “Little Brother”) or canarytokens. In cybersecurity, an attacker might leave behind a more easily discovered rootkit for the defenders to find, while attempting to conceal the intrusion tools they actually care most about.
 
 ### Operational Security
 
@@ -146,7 +146,7 @@ TREAT PERSONNEL COMPROMISE AS CATASTROPHIC: Assume that the information that any
 
 ### Disguise on the Run
 
-This is [a video from Wired](https://www.wired.com/video/watch/how-spies-use-disguises) ([alternate YouTube link](https://youtu.be/JASUsVY5YJ8)).
+This is a video from Wired.
 
 > We talk about disguise as an onion, whether you’re building it or peeling it off.
 > 
@@ -297,7 +297,7 @@ The emphasis here is on maintaining cover and compartmentalization, maximizing f
 
 To the extent that these align with “blue team” cybersecurity, they roughly correspond to a combination of a “zero trust” architectural approach and the more recent “assume breach” paradigm. Assume any computer may be compromised, and act/log accordingly. If you’re threat hunting in this sort of environment, the directives to “[v]ary your pattern and stay within your cover” and “[l]ull them into a sense of complacency” would suggest that internal reconnaissance should be done as part of every day operations. Detected anomalies should be quietly investigated rather than immediately acted upon, so as not to tip off a potential attacker and potentially cause the incident to accelerate. 
 
-From an offensive (“red team”) perspective, this reminds me of the old [Kali Linux](https://www.kali.org) motto: “The quieter you become, the more you are able to hear.” The idea here is similar: Try to blend in with regular operations, don’t go for anything splashy, be wary of potential traps like [canaries](https://canary.tools).
+From an offensive (“red team”) perspective, this reminds me of the old Kali Linux motto: “The quieter you become, the more you are able to hear.” The idea here is similar: Try to blend in with regular operations, don’t go for anything splashy, be wary of potential traps like canaries.
 
 A lot of this feels like admonishes to take your time, even under pressure. “Meticulous thought and planning are a must.”
 
@@ -424,7 +424,7 @@ Communication between cells is generally indirect (hang a sign in the window tha
 
 This is what is known as a “cut-out” — a way of communicating between cells or agents that doesn’t require direct face-to-face interaction. (Since the point of this is to prevent individuals from becoming linked with each other, this presumably extends to direct online interactions such as Twitter, direct messages in chat rooms, or email.) Examples:
 
-* During [The Troubles](https://en.wikipedia.org/wiki/The_Troubles) women and children in Republican areas would beat trash can lids and otherwise make noise when they spotted a British Army patrol, thus alerting any nearby IRA members of the existence of the patrol and its rough position.
+* During The Troubles women and children in Republican areas would beat trash can lids and otherwise make noise when they spotted a British Army patrol, thus alerting any nearby IRA members of the existence of the patrol and its rough position.
 * Dead drops.
 * Signs and personals with coded messages.
 
@@ -561,7 +561,7 @@ Alright, now I feel seriously vindicated… This is basically *exactly* the stra
 > 
 > — Allen Dulles, *Some Elements of Intelligence Work*
 
-This feels triply true today, with the rise of smartphones. Once again, I feel like physical couriers are going to make a big comeback at some point [Johnny Mnemonic](https://en.m.wikipedia.org/wiki/Johnny_Mnemonic_%28film%29) style.
+This feels triply true today, with the rise of smartphones. Once again, I feel like physical couriers are going to make a big comeback at some point Johnny Mnemonic style.
 
 Interestingly, Allen Dulles explicitly warns against using restaurants and the like for meetings, unlike The Grugq‘s advice. I wonder if this is a reflection of the times or a genuine difference in opinion. Both like parks though.
 
@@ -733,7 +733,7 @@ Security is a process, and good security habits make it easier to follow that pr
 > 
 > https://www.alexandria.unisg.ch/255299/2/Enacting%20Rituals%20to%20Improve%20Self-Control.pdf
 > 
-> — Ethan Mollick [via Twitter](https://twitter.com/emollick/status/1435302327045472257)
+> — Ethan Mollick, via Twitter
 
 *Habit* create *space* for self-control, and self-control is conversely what allows you to follow process. So while security isn’t *just* a set of rules, having a set of good habits *gives you mental space* to consider the implication of security situations beyond that habit’s rule set (“day-to-day” vs. “during an operation”).
 
@@ -919,7 +919,7 @@ The list of *functions* of a compartmentalized organization is essentially the s
 
 a.k.a. “Cut-outs”.
 
-The discussion of the new abilities vs. new risks opened up by the internet reminds me a lot of Zeynep Tufekci’s deeper conversation about the “affordances” of different technologies from [Twitter and Tear Gas](https://www.twitterandteargas.org).
+The discussion of the new abilities vs. new risks opened up by the internet reminds me a lot of Zeynep Tufekci’s deeper conversation about the “affordances” of different technologies from “Twitter and Tear Gas”.
 
 ### Counter Surveillance
 
@@ -975,7 +975,7 @@ Since edge cells generally are the ones that are actually conducting operations,
 
 ## Tradecraft III
 
-This section will talk about something more contemporary: [Robert Hanssen](https://en.wikipedia.org/wiki/Robert_Hanssen), an FBI double agent who spied first for the [KGB](https://en.m.wikipedia.org/wiki/KGB) and later the [SVR](https://en.wikipedia.org/wiki/Foreign_Intelligence_Service_%28Russia%29) (the KGB’s direct successor). In particular, The Grugq wants to concentrate on how Hanssen and the KGB initially made contact, established lines of communication, etc. (Hanssen was eventually identified through a KGB defector.)
+This section will talk about something more contemporary: Robert Hanssen, an FBI double agent who spied first for the KGB and later the SVR (the KGB’s direct successor). In particular, The Grugq wants to concentrate on how Hanssen and the KGB initially made contact, established lines of communication, etc. (Hanssen was eventually identified through a KGB defector.)
 
 Apparently there’s a book out about this from the *KGB’s* called *Spy Handler*, which makes interesting supplemental reading to the American perspective chronicled in *The Spy Next Door*.
 
@@ -1015,7 +1015,7 @@ The KGB ultimately gave Hanssen $50,000. Interestingly, Hanssen never used this 
 
 The KGB seems to have wanted Hanssen to continue to deliver documents by post, but Hanssen viewed this as an unnecessary security risk (it was only used initially since no safer channels had yet been arranged).
 
-To minimize the risk of the KGB screwing them over, Hanssen also took care from early on to present their work as a double agent as a long-term relationship. Because while an intelligence agency will casually screw over one-off assets, long term assets tend to be taken care of (very [prisoner’s dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)).
+To minimize the risk of the KGB screwing them over, Hanssen also took care from early on to present their work as a double agent as a long-term relationship. Because while an intelligence agency will casually screw over one-off assets, long term assets tend to be taken care of (very prisoner’s dilemma).
 
 Compartmentalization both *from* and *within* the KGB remains an ongoing concern for Hanssen.
 
@@ -1046,6 +1046,21 @@ Counterintelligence is a long game. You’re waiting for a mistake… And once a
 ## References
 
 * [OPSEC in Theory and Practice](https://learn.opsec.institute/courses/opsec-in-theory-and-practice)
+* [Operations security (Wikipedia)](https://en.wikipedia.org/wiki/Operations_security)
+* [The Grugq (Twitter)](https://twitter.com/thegrugq)
+* [Canarytokens](https://canary.tools/help/canarytokens)
+* [How Spies Use Disguises](https://www.wired.com/video/watch/how-spies-use-disguises)
+* [Former CIA Operative Explains How Spies Use Disguises](https://youtu.be/JASUsVY5YJ8)
+* [Kali Linux](https://www.kali.org)
+* [Thinkst Canary](https://canary.tools)
+* [The Troubles (Wikipedia)](https://en.wikipedia.org/wiki/The_Troubles)
+* [Johnny Mnemonic (film) (Wikipedia)](https://en.m.wikipedia.org/wiki/Johnny_Mnemonic_%28film%29)
+* [Ethan Mollick on Twitter](https://twitter.com/emollick/status/1435302327045472257)
+* [Twitter and Tear Gas](https://www.twitterandteargas.org)
+* [Robert Hanssen (Wikipedia)](https://en.wikipedia.org/wiki/Robert_Hanssen)
+* [KGB (Wikipedia)](https://en.wikipedia.org/wiki/KGB)
+* [Foreign Intelligence Service (Russia) (Wikipedia)](https://en.wikipedia.org/wiki/Foreign_Intelligence_Service_%28Russia%29)
+* [Prisoner’s dilemma (Wikipedia)](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
 
 - - - -
 

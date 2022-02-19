@@ -4,7 +4,7 @@
 
 ### Understanding NFS
 
-NFS is part of the large family of local and network protocols that can be classified as [Remote Procedure Calls](https://en.wikipedia.org/wiki/Remote_procedure_call) (RPCs).
+NFS is part of the large family of local and network protocols that can be classified as "remote procedure calls" (RPCs).
 
 NFS file calls always include:
 
@@ -17,6 +17,8 @@ Access checks are made on both the initial mount (does this user have permission
 
 Windows actually does support NFS.
 
+* [Remote procedure call (Wikipedia)](https://en.wikipedia.org/wiki/Remote_procedure_call)
+
 ### Enumerating NFS
 
 ```bash
@@ -26,16 +28,19 @@ showmount -e $SERVER_IP
 
 # Mount an NFS share.
 #
-mount -t nfs ${SERVER_IP}:${SHARE_PATH} $LOCAL_MOUNT_DIR -nolock
+mount -t nfs ${SERVER_IP}:${SHARE_PATH} \
+	$LOCAL_MOUNT_DIR -nolock
 ```
 
-All versions of [NFS use port 2049](https://racinpaper.com/auto-racing/what-is-nfs-port-number-in-linux.html) to transfer data; NFSv1 - NFSv3 also depended on the “portmapper” service running on port 111, but this requirement was removed in NFSv4.
+All versions of NFS use port 2049 to transfer data; NFSv1 - NFSv3 also depended on the “portmapper” service running on port 111, but this requirement was removed in NFSv4.
+
+* [What is NFS port number in Linux?](https://racinpaper.com/auto-racing/what-is-nfs-port-number-in-linux.html)
 
 ### Exploiting NFS
 
 By default NFS shares have “root squashing” turned on — attempts to connect as root are assigned to the least-privileged user nfsnobody. But if this is turned off, then it’s possible to set the SUID bit on a file.
 
-NOTE: I don’t see any way to identify that root squashing is disabled from the NMAP scan, so I think we’re just having to take it on faith that it is here. Either that, or this is just one of those “throw spaghetti against the wall and see what happens” times that I’ve run into before in online training CTFs (*cough* [Bandit](../notes/overthewire-bandit.md) *cough*).
+NOTE: I don’t see any way to identify that root squashing is disabled from the NMAP scan, so I think we’re just having to take it on faith that it is here. Either that, or this is just one of those “throw spaghetti against the wall and see what happens” times that I’ve run into before in online training CTFs (*cough* Bandit *cough*).
 
 So the idea here is:
 
@@ -53,6 +58,8 @@ Note that this is a little bit different than the procedure outlined in the actu
 
 Sometimes you need to unmount an unresponsive NFS share (for example, if you let a TryHackMe box expire while you still have an active mount). Use umount’s -f flag to force the unmount in this situation.
 
+* [OverTheWire: Bandit](../notes/overthewire-bandit.md)
+
 ### Enumerating SMTP
 
 SMTP user enumeration uses a combination of the VRFY (verify user/list), EXPN (expand user/list aliases), and RCPT TO (receipt destination).
@@ -67,13 +74,16 @@ Basic Metasploit flow:
 
 ### Exploiting SMTP
 
-Now we’re going to use Hydra to try to brute-force an SSH password. This looks a lot like [using Hydra to brute-force an FTP password](2021-10-02-tryhackme-complete-beginner.md).
+Now we’re going to use Hydra to try to brute-force an SSH password. This looks a lot like using Hydra to brute-force an FTP password.
 
 ```bash
-hydra -t 4 -l $USER_NAME -P $WORDLIST -vV $TARGET_IP_ADDRESS ssh
+hydra -t 4 -l $USER_NAME -P $WORDLIST \
+	-vV $TARGET_IP_ADDRESS ssh
 ```
 
 The -t flag specifies the number of threads (parallel connection attempts) that Hydra should make at any one time.
+
+* [2021-10-02 TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
 
 ### Understanding MySQL
 
@@ -116,7 +126,7 @@ All HTTP requests begin with a line of the form `$METHOD $SERVER_PATH $OPTIONAL_
 
 HTTP responses start out with the line `$PROTOCOL_VERSION $RESPONSE_CODE $OPTIONAL_SERVER_DEFINED_MESSAGE` (for example, `HTTP/1.1 200 OK`).
 
-[HTTP response codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status):
+HTTP response codes:
 
 |   Block   | Purpose                                              |
 |:---------:|:---------------------------------------------------- |
@@ -125,6 +135,8 @@ HTTP responses start out with the line `$PROTOCOL_VERSION $RESPONSE_CODE $OPTION
 | 300 - 399 | Redirects                                            |
 | 400 - 499 | Client errors (problems with the request content)    |
 | 500 - 599 | Server errors (problems with processing the request) |
+
+* [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
 ### Mini CTF
 

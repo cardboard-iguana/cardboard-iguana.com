@@ -6,10 +6,6 @@
 
 From what I can tell, SSID and BSSID apply to single access points, while ESSID applies to an entire network of access points.
 
-## References
-
-* [TryHackMe: Wifi Hacking 101](tryhackme-wifi-hacking-101.md)
-
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  

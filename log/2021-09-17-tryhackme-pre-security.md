@@ -12,7 +12,7 @@ Windows permissions:
 
 | Permission           | Meaning for Folders.                                                                                              | Meaning for Files                                                                     |
 |:-------------------- |:----------------------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------- |
-| Read                 |Permits viewing and listing of files and subfolders                                                                | Permits viewing or accessing of the file’s contents                                   |
+| Read                 | Permits viewing and listing of files and subfolders                                                                | Permits viewing or accessing of the file’s contents                                  |
 | Write                | Permits adding of files and subfolders                                                                            | Permits writing to a file.                                                            |
 | Read & Execute       | Permits viewing and listing of files and subfolders as well as executing of files; inherited by files and folders | Permits viewing and accessing of the file’s contents as well as executing of the file |
 | List Folder Contents | Permits viewing and listing of files and subfolders as well as executing of files; inherited by folders only      | N/A                                                                                   |

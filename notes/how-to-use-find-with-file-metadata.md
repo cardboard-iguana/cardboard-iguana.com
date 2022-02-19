@@ -23,14 +23,16 @@ For example, use `-size +4G` to find files over 4 GB (i.e., those that can’t b
 
 ## -perm
 
-Matches files with a given permission. Both numeric and [symbolic permissions](symbolic-permissions.md) are allowed.
+Matches files with a given permission. Both numeric and symbolic permissions are allowed.
 
 Use the / or - prefix to match files with *any* of the specified permissions or *at least* the specified permissions. For example, `-perm -644` will match any file where the current user has *at least* read + write access and any other user has *at least* read access (so, `-` requires the specified permissions, but is agnostic as to the presence/absence of additional permissions). Likewise, `-perm /666` will match files where the current user has read + write access and/or the current group has read + write access and/or everyone has read + write access (so, `/` requires that at least *one* of the specified permissions groups matches exactly, but is agnostic to the state of any other group outside of that match).
 
 ### Quick-and-Dirty Search for SUID and SGID Executables
 
 ```bash
-find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2> /dev/null
+find / -type f \
+       -a \( -perm -u+s -o -perm -g+s \) \
+       -exec ls -l {} \; 2> /dev/null
 ```
 
 ## -Xmin and -Xtime
@@ -52,6 +54,7 @@ For example:
 * [TryHackMe: The find Command](tryhackme-the-find-command.md)
 * [How to modify “last status change” (ctime) property of a file in Unix?](https://stackoverflow.com/questions/8346852/how-to-modify-last-status-change-ctime-property-of-a-file-in-unix#8346905)
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
+* [Symbolic Permissions](symbolic-permissions.md)
 
 - - - -
 

@@ -20,7 +20,7 @@ Though honestly, this is kind of a "minimum viable backup" strategy, since simpl
 
 ### Exploitation
 
-Quick-n-dirty [ Pwnkit exploit](https://github.com/arthepsy/CVE-2021-4034):
+Quick-n-dirty Pwnkit exploit:
 
 ```c
 /*
@@ -69,8 +69,14 @@ Here's what basically happens on execution:
 
 A couple of points:
 
-* This version of the exploit cleans up after itself, but does depend on generating a log message. The [Qualsys advisory describing Pwnkit](https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt) notes that "this vulnerability is also exploitable without leaving any traces in the logs, but this is left as an exercise for the interested reader." My guess is that to do this you'd need to reintroduce a different environment variable that `ld.so` normally strips when calling SUID binaries. (At least, I don't immediately see any place where Polkit is printing something that *isn't* a warning before it nukes its own environment, but then I'm not super-familiar with C and am only quickly skimming the [`pkexec` source code](https://gitlab.freedesktop.org/polkit/polkit/-/blob/539bf5dcca489534f42798a4500aca4b1a8ec8d0/src/programs/pkexec.c).) *Or* perhaps you can do something with the permissions of the `GCONV_PATH=./pwnkit` file to trigger an error that would not be logged. (The trick here would be to do something so that `g_find_program_in_path()` resolves `GCONV_PATH=./pwnkit` but `access()` returns an error; it's not obvious to me how to do this though, or even if it *can* be done!)
+* This version of the exploit cleans up after itself, but does depend on generating a log message. The Qualsys advisory describing Pwnkit notes that "this vulnerability is also exploitable without leaving any traces in the logs, but this is left as an exercise for the interested reader." My guess is that to do this you'd need to reintroduce a different environment variable that `ld.so` normally strips when calling SUID binaries. (At least, I don't immediately see any place where Polkit is printing something that *isn't* a warning before it nukes its own environment, but then I'm not super-familiar with C and am only quickly skimming the `pkexec` source code.) *Or* perhaps you can do something with the permissions of the `GCONV_PATH=./pwnkit` file to trigger an error that would not be logged. (The trick here would be to do something so that `g_find_program_in_path()` resolves `GCONV_PATH=./pwnkit` but `access()` returns an error; it's not obvious to me how to do this though, or even if it *can* be done!)
 * It took me a while to figure out why this exploit doesn't occur when `pkexec` is called without any arguments, since it will still fall through the initial argument-parsing loop. The reason this doesn't happen is that `argv[1]` is NULL in this case (the last element of `argv` is always the NULL pointer), so the first string of the environment isn't wrongly loaded *and* and entirely separate code path is triggered before the `GCONV_PATH=./pwnkit` variable would have gotten written into the environment. (It's worth noting that Debian derivatives seem to have removed the `sudo -s` like functionality from `pkexec` entirely, and just display a help message in this case.)
+
+References:
+
+* [arthepsy / CVE-2021-4034](https://github.com/arthepsy/CVE-2021-4034)
+* [pwnkit: Local Privilege Escalation in polkit's pkexec (CVE-2021-4034)](https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt)
+* [polkit / src / programs / pkexec.c (commit 539bf5dcca489534f42798a4500aca4b1a8ec8d0)](https://gitlab.freedesktop.org/polkit/polkit/-/blob/539bf5dcca489534f42798a4500aca4b1a8ec8d0/src/programs/pkexec.c)
 
 - - - -
 

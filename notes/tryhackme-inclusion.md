@@ -1,15 +1,16 @@
 # Inclusion
 
-This room is intended to focus on [local file inclusion attacks](local-file-inclusion-attacks.md), so my guess is that hitting the machine with [nmap](nmap.md) and [gobuster](gobuster.md) is probably unnecessary. But, I'm going to do it anyway, just in case.
+This room is intended to focus on local file inclusion attacks, so my guess is that hitting the machine with nmap and gobuster is probably unnecessary. But, I'm going to do it anyway, just in case.
 
 The target is 10.10.0.57. The website running there is basically a shell -- most of the links, including the search box, don't work. No JavaScript is loaded. The only links that *do* work are the "View details" buttons underneath the bottom three articles. This call an `/articles` endpoint with a single parameter, `name`. The resulting page looks like someone just dumped a plain text file between the `<body/>` tags.
 
 Given the purpose of the room, I'm going to guess they did.
 
-While it's probably *pro forma*, let's run our usual [nmap](nmap.md) scan just in case:
+While it's probably *pro forma*, let's run our usual nmap scan just in case:
 
 ```bash
-sudo nmap -v -oA inclusion -Pn -A -T4 -sS -script vuln -p- 10.10.0.57
+sudo nmap -v -oA inclusion -Pn -A -T4 -sS -script vuln \
+          -p- 10.10.0.57
 ```
 
 This gives the following output:
@@ -150,10 +151,13 @@ OS and Service detection performed. Please report any incorrect results at https
 
 So, we've got a Linux box running SSH and some weird-ass httpd server on port 80.
 
-We'll also hit 10.10.0.57 with [gobuster](gobuster.md):
+We'll also hit 10.10.0.57 with gobuster:
 
 ```bash
-gobuster -t 50 dir -u http://10.10.0.57 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
+gobuster \
+	-t 50 dir \
+	-u http://10.10.0.57 \
+	-w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
 ```
 
 This only detects the `/article` endpoint I noted while poking around the site. (I could hit the site with a larger wordlist, but it doesn't seem worth it.)
@@ -291,6 +295,9 @@ ELAPSED TIME: 56 min
 ## References
 
 * [TryHackMe: Inclusion](https://tryhackme.com/room/inclusion)
+* [LFI (Local File Inclusion) Attacks](local-file-inclusion-attacks.md)
+* [Using “nmap”](nmap.md)
+* [Using “gobuster”](gobuster.md)
 
 - - - -
 

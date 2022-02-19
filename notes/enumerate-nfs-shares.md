@@ -2,10 +2,11 @@
 
 ## NMAP
 
-NFS shares can be enumerated by [nmap](nmap.md) during scanning:
+NFS shares can be enumerated by nmap during scanning:
 
 ```bash
-nmap -v -sT --script nfs-ls,nfs-statfs,nfs-showmount -p$PORT $IP
+nmap -v -sT --script nfs-ls,nfs-statfs,nfs-showmount \
+     -p$PORT $IP
 ```
 
 Normally `$PORT` is 111.
@@ -13,6 +14,7 @@ Normally `$PORT` is 111.
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
+* [Using “nmap”](nmap.md)
 
 - - - -
 

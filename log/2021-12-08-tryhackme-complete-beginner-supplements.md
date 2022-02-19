@@ -2,7 +2,7 @@
 
 ## Blaster
 
-See my [Blaster](../notes/tryhackme-blaster.md) CTF write-up.
+[See my Blaster CTF write-up.](../notes/tryhackme-blaster.md)
 
 - - - -
 

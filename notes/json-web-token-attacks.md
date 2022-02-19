@@ -5,7 +5,7 @@ JSON web token format: `$HEADER.$PAYLOAD.$SIGNATURE`, where each substring is (U
 `$HEADER` and `$PAYLOAD` are both JSON blobs, but `$SIGNATURE` is binary data.
 
 * `$HEADER` takes the form `{ "alg": "RS256", "typ": "JWT" }`, where `alg` is a signing algorithm supported by the server.
-* `$PAYLOAD` is a JSON blob containing various pieces of user information, which can include permissioning data. See [jwt.io](https://jwt.io/) for a detailed breakdown.
+* `$PAYLOAD` is a JSON blob containing various pieces of user information, which can include permissioning data. See jwt.io for a detailed breakdown.
 * `$SIGNATURE` is the signature (using `alg` from the `$HEADER`) of `$HEADER.$PAYLOAD` (both parts base64 encoded) using a server-side secret (often an SSL key... but sometimes just a string!).
 
 Use `basenc --base64url` and `basenc -d --base64url` to encode/decode URL-safe base64, rather than the `base64` binary. Be sure to strip the trailing `=` signs!
@@ -27,16 +27,24 @@ The base64-encoded version of `{"typ":"JWT","alg":"HS256"}` is `eyJ0eXAiOiJKV1Qi
 Use the following to generate a signature with the above `$HEADER` and the PEM-formatted `$PUBLIC_KEY_FILE` half of the public/private key to validate the JWTs (when `alg` is `RS256`):
 
 ```bash
-echo -n "$HEADER.$PAYLOAD" | openssl dgst -sha256 -mac HMAC -macopt hexkey:$(cat $PUBLIC_KEY_FILE | xxd -p | tr -d '\n') | sed -e 's/.*= //' | tr -d '\n' | xxd -p -r | basenc --base64url | sed -e 's/=*$//'
+echo -n "$HEADER.$PAYLOAD" | \
+openssl dgst -sha256 -mac HMAC -macopt hexkey:$(cat $PUBLIC_KEY_FILE | xxd -p | tr -d '\n') | \
+sed -e 's/.*= //' | \
+tr -d '\n' | \
+xxd -p -r | \
+basenc --base64url | \
+sed -e 's/=*$//'
 ```
 
 ### Brute-Forcing Weak Secrets
 
-*If* a weak secret (a simple string) is used to sign the JWT token, then it is sometimes possible to brute-force it using [JWT-Cracker](https://github.com/lmammino/jwt-cracker).
+*If* a weak secret (a simple string) is used to sign the JWT token, then it is sometimes possible to brute-force it using JWT-Cracker.
 
 ## References
 
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
+* [JSON Web Tokens](https://jwt.io)
+* [lmammino / jwt-cracker](https://github.com/lmammino/jwt-cracker)
 
 - - - -
 

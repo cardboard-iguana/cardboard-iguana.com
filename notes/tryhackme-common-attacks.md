@@ -1,15 +1,6 @@
 # TryHackMe: Common Attacks
 
-* Introduction
-* Social Engineering
-* Phishing
-* Malware and Ransomware
-* Passwords and Authentication
-* Multi-Factor Authentication and Password Managers
-* [Public Network Safety](../log/2022-02-03-tryhackme-common-attacks-and-pwnkit.md)
-* [Backups](../log/2022-02-03-tryhackme-common-attacks-and-pwnkit.md)
-* Updates and Patches
-* Conclusion
+* [2022-02-03 TryHackMe: Common Attacks & Pwnkit](../log/2022-02-03-tryhackme-common-attacks-and-pwnkit.md)
 
 ## References
 

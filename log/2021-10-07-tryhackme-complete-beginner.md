@@ -4,12 +4,16 @@
 
 ### (Severity 09) Components With Known Vulnerabilities
 
-The trickiest part of this is that the project is called “CSE Bookstore”, but [the exploit code in ExploitDB](https://www.exploit-db.com/exploits/47887) is listed under “Online Book Store”.
+The trickiest part of this is that the project is called “CSE Bookstore”, but the exploit code in ExploitDB is listed under “Online Book Store”.
 
 The actual vulnerability is two-fold:
 
 * Admin image uploads bypass authentication.
 * There’s no check on *what* actually gets uploaded, so we can push up a PHP script instead of an actual image.
+
+References:
+
+* [Online Book Store 1.0 - Unauthenticated Remote Code Execution](https://www.exploit-db.com/exploits/47887)
 
 ## OWASP Juice Shop
 
@@ -26,7 +30,8 @@ Typically a null byte will either be inserted at the end of a string (to prevent
 The best way to defend against these attacks is to simply sanitize strings by explicitly removing any null bytes they contain.
 
 ```php
-$sanitized_string = str_replace(chr(0), '', $original_string);  
+$sanitized_string =
+	str_replace(chr(0), '', $original_string);  
 ```
 
 [Defend the Web has a much better description of what's going on here than the one offered by TryHackMe.](https://defendtheweb.net/article/common-php-attacks-poison-null-byte)

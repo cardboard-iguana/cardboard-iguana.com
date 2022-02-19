@@ -2,7 +2,7 @@
 
 The trick with XXE attacks is that the URIs defined in an XML !DOCTYPE directive are basically just includes. This means that when an application is expecting XML input (mostly this is a thing you find over APIs), you can extend the provided DTDs in an ad hoc fashion.
 
-First, [an example DTD from TryHackMe](../log/2021-10-06-tryhackme-complete-beginner.md):
+First, an example DTD from TryHackMe:
 
 ```dtd
 <!DOCTYPE note [
@@ -33,7 +33,7 @@ There are three basic important XML bits here:
 
 * `!DOCTYPE` defines the document type *and* the root element.
 * `!ELEMENT` defines additional elements (so if I understand this correctly, a !DOCTYPE declaration must contain at least one !ELEMENT with the same name).
-* `!ENTITY` defines entities like `&gt;` — basically shortcuts for other data. There seems to be a lot more to [XML entities](https://xmlwriter.net/xml_guide/entity_declaration.shtml) than just this though…
+* `!ENTITY` defines entities like `&gt;` — basically shortcuts for other data. There seems to be a lot more to XML entities than just this though…
 
 Basically, you can think of the bit between the brackets (`[]`) in the DTD as getting slotted into the URI specifying the DTD in the XML !DOCTYPE. In fact, we can insert additional document type definitions into the end of a !DOCTYPE statement in this way; combining this with the SYSTEM declaration can allow us to read any files the webserver has access to.
 
@@ -59,6 +59,7 @@ This basically strikes me as more-or-less the same thing as an injection attack,
 * [Exploiting Python pickles](https://davidhamann.de/2020/04/05/exploiting-python-pickle/)
 * [TryHackMe: XXE](tryhackme-xxe.md)
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
+* [ENTITY Declaration](https://xmlwriter.net/xml_guide/entity_declaration.shtml)
 
 - - - -
 

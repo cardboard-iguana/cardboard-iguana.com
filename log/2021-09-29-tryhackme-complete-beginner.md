@@ -27,7 +27,8 @@ The -p directive is only necessary if working over a non-standard port (e.g., *n
 Quick-n-dirty way to bypass a running SSH agent:
 
 ```bash
-env -u SSH_AUTH_SOCK -u SSH_AGENT_PID ssh -i $KEY_FILE ${USER}@${HOST}
+env -u SSH_AUTH_SOCK -u SSH_AGENT_PID \
+	ssh -i $KEY_FILE ${USER}@${HOST}
 ```
 
 - - - -

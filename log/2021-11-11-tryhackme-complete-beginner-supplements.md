@@ -24,11 +24,13 @@ Network share information is stored/logged by the registry similarly. Network sh
 
 Be aware that the *user* recorded in the registry logs can be an application rather than a human!
 
-Unfortunately, it looks like Sysmon *doesn’t* record `friendlyname` values, but only drive paths. However, Sysmon does record both the `CommandLine` and `ParentCommandLine` attributes for all executed applications; this is much finer-grained data than most anti-virus solutions. I can see why [Kevin Beaumont](https://twitter.com/GossiTheDog) likes it so much!
+Unfortunately, it looks like Sysmon *doesn’t* record `friendlyname` values, but only drive paths. However, Sysmon does record both the `CommandLine` and `ParentCommandLine` attributes for all executed applications; this is much finer-grained data than most anti-virus solutions. I can see why Kevin Beaumont likes it so much!
 
 Remember that `*` in Splunk matches *one* or more characters, so `field=*` is an effective way of removing unset fields from a search. The `*` wildcard can even be used to specify `sourcetype` values.
 
 Also recall that `EventCode=1` corresponds to process execution.
+
+* [Kevin Beaumont (Twitter)](https://twitter.com/GossiTheDog)
 
 ## Volatility
 

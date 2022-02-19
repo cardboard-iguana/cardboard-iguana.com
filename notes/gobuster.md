@@ -6,7 +6,7 @@ Increasing threads (`-t`) in gobuster makes a *big* difference in performance. (
 
 ## References
 
-* [TryHackMe: CC - Pen Testing](tryhackme-cc-pen-testing.md)
+* [TryHackMe: CC: Pen Testing](tryhackme-cc-pen-testing.md)
 
 - - - -
 

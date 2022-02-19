@@ -20,7 +20,7 @@ I *strongly* recommend using the Burp Suite Browser, since it already has proxy 
 
 ### Using Firefox with Burp Suite
 
-The Burp Suite browser is compiled as an x86_64 binary, and thus *doesn't* work on a [Raspberry Pi](use-a-raspberry-pi-4b-as-an-ipad-pro-hacking-accessory.md). As a work-around, a dedicated Firefox profile can be used to interact with Burp Suite.
+The Burp Suite browser is compiled as an x86_64 binary, and thus *doesn't* work on a Raspberry Pi. As a work-around, a dedicated Firefox profile can be used to interact with Burp Suite.
 
 (1) Create a new profile called “Burp Suite” using `firefox --ProfileManager`. Make sure to select `Choose Folder` when doing so, and create (and select) a folder called `burp-suite` in `~/.mozilla/firefox`.
 
@@ -45,7 +45,7 @@ This special Firefox profile can then be launched with a modified .desktop file,
 
 Other options:
 
-* Use [FoxyProxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-basic/) and set up Burp Suite as a togglable proxy, and then import the Burp Suite CA certificate as above. I don’t like this option because I think that hacking and normal browsing activities should be kept as separate as possible.
+* Use FoxyProxy and set up Burp Suite as a togglable proxy, and then import the Burp Suite CA certificate as above. I don’t like this option because I think that hacking and normal browsing activities should be kept as separate as possible.
 * Use Chromium as the Burp Suite browser. This is actually a better option, and aligns more with Burp Suite’s built-in (x86_64) browser. Unfortunately, Chromium’s certificate import functionality appears to be broken on Kali Linux ARM right now.
 
 ## Scoping
@@ -136,6 +136,8 @@ Burp Suite displays hashes in the "Hex" view by default; to convert them into th
 ## References
 
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
+* [Use a Raspberry Pi 4B as an iPad Pro Hacking Accessory](use-a-raspberry-pi-4b-as-an-ipad-pro-hacking-accessory.md)
+* [FoxyProxy Basic](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-basic/)
 
 - - - -
 

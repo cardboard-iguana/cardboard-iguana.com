@@ -1,6 +1,6 @@
 # How to Add Windows Users (at the Command Line)
 
-```bat
+```powershell
 net user $USERNAME $PASSWORD /add
 net localgroup administrators $USERNAME /add
 ```

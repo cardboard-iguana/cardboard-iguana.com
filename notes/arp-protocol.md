@@ -1,6 +1,6 @@
 # ARP Protocol
 
-The ARP protocol links [OSI](osi-model.md) layers 2 and 3 by mapping IP addresses to MAC addresses. ARP packet message headers contain two operation codes: REQUEST (1) and REPLY (2).
+The ARP protocol links OSI layers 2 and 3 by mapping IP addresses to MAC addresses. ARP packet message headers contain two operation codes: REQUEST (1) and REPLY (2).
 
 Basically, an ARP request will broadcast “to” a particular IP address but using the “broadcast” MAC address (00:00:00:00:00:00), and the computer with that IP address will then reply in a non-broadcast fashion (since this requires that both the MAC address and IP address be filled in, such a direct reply provides the desired information by way of its very existence).
 
@@ -8,7 +8,7 @@ Basically, an ARP request will broadcast “to” a particular IP address but us
 
 Scanning a network with ARP rather than ICMP is one method of keeping a lower profile, as ARP requests are less likely to be monitored.
 
-It's fairly easy to set up such a scanner using the [Scapy module](https://scapy.net/):
+It's fairly easy to set up such a scanner using the Scapy module:
 
 ```python
 #!/usr/bin/env python3
@@ -30,12 +30,15 @@ for send, receive in ans:
 	print(receive.sprintf(r"%Ether.src% - %ARP.psrc%"))
 ```
 
-Note that the `r` here isn't a mistake -- rather it specifies a "[raw string](https://whatisanything.com/how-do-you-write-an-f-string-in-python/#What_does_R_mean_Python)" (the use of which, incidentally, requires Python 3.6+).
+Note that the `r` here isn't a mistake -- rather it specifies a "raw string" (the use of which, incidentally, requires Python 3.6+).
 
 ## References
 
 * [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md)
 * [TryHackMe: Python for Pentesters](tryhackme-python-for-pentesters.md)
+* [OSI Model](osi-model.md)
+* [Scapy](https://scapy.net/)
+* [Quick Answer: How Do You Write An F String In Python](https://whatisanything.com/how-do-you-write-an-f-string-in-python/#What_does_R_mean_Python)
 
 - - - -
 

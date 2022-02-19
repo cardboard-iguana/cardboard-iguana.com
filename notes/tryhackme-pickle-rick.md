@@ -2,7 +2,7 @@
 
 ## Background
 
-This is a [Rick & Morty](https://en.wikipedia.org/wiki/Rick_and_Morty) themed web server / CTF. The fact that I’ve never watched the show may put me at a disadvantage.
+This is a Rick & Morty themed web server / CTF. The fact that I’ve never watched the show may put me at a disadvantage.
 
 There are three flags (“ingredients Rick needs for a potion to transform themself from a pickle back into a human”). Because of how TryHackMe masks answers, we already know the basic form of these strings (`*` characters are unknown, but ` ` and `.` characters are literals):
 
@@ -33,7 +33,9 @@ There's a comment in the HTML that Rick's username is `R1ckRul3s`.
 We look for directories of interest using gobuster.
 
 ```bash
-gobuster dir -u http://10.10.158.139 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+gobuster dir \
+	-u http://10.10.158.139 \
+	-w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
 
 Discovered directories:
@@ -101,14 +103,15 @@ OS and Service detection performed. Please report any incorrect results at https
 Try to get some more information by connecting with ssh.
 
 ```bash
-ssh -v -F /dev/null -o IdentityAgent=none R1ckRul3s@10.10.158.139
+ssh -v -F /dev/null \
+    -o IdentityAgent=none R1ckRul3s@10.10.158.139
 ```
 
 Looks like password authentication is turned off -- only the `publickey` method is available. So no brute forcing here -- we need Rick's private SSH key.
 
 No obvious Apache or SSH RCEs for this version in Exploit DB...
 
-At this point I'm basically stuck, so I decide to see if I can get a hint by (partially!) reading [someone else's walk-through](https://razrexe.medium.com/tryhackme-pickle-rick-ctf-walkthrough-9ed36eff17fe). Most of the initial recon in that walk-through (I only scanned down that far) aligns with what I've already done, but it mentions two tools I've not yeat heard of -- dirb (which looks like gobuster but possibly more straight-forward) and nikto (which I know *of* but not *about*). So let's try those!
+At this point I'm basically stuck, so I decide to see if I can get a hint by (partially!) reading someone else's walk-through. Most of the initial recon in that walk-through (I only scanned down that far) aligns with what I've already done, but it mentions two tools I've not yeat heard of -- dirb (which looks like gobuster but possibly more straight-forward) and nikto (which I know *of* but not *about*). So let's try those!
 
 ```bash
 dirb http://10.10.158.139
@@ -207,7 +210,8 @@ sudo bash -c 'echo "ubuntu ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers'
 We can now access the box directly over SSH as the ubuntu user, and from there elevate to root using sudo.
 
 ```bash
-ssh -i ~/id_rsa -F /dev/null -o IdentityAgent=none ubuntu@10.10.158.139
+ssh -i ~/id_rsa -F /dev/null \
+    -o IdentityAgent=none ubuntu@10.10.158.139
 ```
 
 Though it turns out that I didn't have to go this far... The third flag is just in the .bash_history file of the ubuntu user.
@@ -242,6 +246,8 @@ ELAPSED TIME: 3 h 11 min
 ## References
 
 * [TryHackMe: Pickle Rick](https://tryhackme.com/room/picklerick)
+* [Rick and Morty (Wikipedia)](https://en.wikipedia.org/wiki/Rick_and_Morty)
+* [TryHackMe Pickle Rick CTF Walkthrough](https://razrexe.medium.com/tryhackme-pickle-rick-ctf-walkthrough-9ed36eff17fe)
 
 - - - -
 

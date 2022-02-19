@@ -13,11 +13,13 @@ In general, vertical escalation involves obtaining root/SYSTEM access.
 
 ### Enumeration
 
-TryHackMe is going to focus on the use of the [LinEnum](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh) script. Direct download via:
+TryHackMe is going to focus on the use of the LinEnum script. Direct download via:
 
 ```bash
 curl -O https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 ```
+
+* [LinEnum.sh](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh)
 
 ### Abusing SUID/GUID Files
 
@@ -49,14 +51,14 @@ It’s also possible to have *multiple* users with the same UID and GID in /etc/
 
 The `sudo -l` command will helpfully tell us what we can run as the superuser without a password.
 
-A compendium of binary escapes: [GTFOBins](https://gtfobins.github.io/)
+[A compendium of binary escapes: GTFOBins.](https://gtfobins.github.io/)
 
 ### Expanding Your Knowledge
 
 Linux privilege escalation checklists:
 
 * [Linux Privilege Escalation](https://github.com/netbiosX/Checklists/blob/master/Linux-Privilege-Escalation.md)
-* [PayloadAllTheThings: Linux — Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)
+* [PayloadsAllTheThings: Linux — Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)
 * [Total OSCP Guide: Privilege Escalation](https://sushant747.gitbooks.io/total-oscp-guide/content/privilege_escalation_-_linux.html)
 * [A Guide to Linux Privilege Escalation](https://payatu.com/guide-linux-privilege-escalation)
 

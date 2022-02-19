@@ -205,7 +205,6 @@
 * [TryHackMe: Volatility](notes/tryhackme-volatility.md)
 * [TryHackMe: Web Fundamentals](notes/tryhackme-web-fundamentals.md)
 * [TryHackMe: Windows Event Logs](notes/tryhackme-windows-event-logs.md)
-* [TryHackMe: Wifi Hacking 101](notes/tryhackme-wifi-hacking-101.md)
 * [TryHackMe: Wireshark 101](notes/tryhackme-wireshark-101.md)
 * [TryHackMe: XXE](notes/tryhackme-xxe.md)
 

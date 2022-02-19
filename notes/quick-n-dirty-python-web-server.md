@@ -10,12 +10,11 @@ The default $PORT is 8080.
 
 Some useful python3 http.server flags:
 
-```
---bind ADDRESS, -b ADDRESS
-        Specify alternate bind address [default: all interfaces]
---directory DIRECTORY, -d DIRECTORY
-        Specify alternative directory [default: current directory]
-```
+> --bind ADDRESS, -b ADDRESS
+> Specify alternate bind address [default: all interfaces]
+> 
+> --directory DIRECTORY, -d DIRECTORY
+> Specify alternative directory [default: current directory]
 
 ## References
 

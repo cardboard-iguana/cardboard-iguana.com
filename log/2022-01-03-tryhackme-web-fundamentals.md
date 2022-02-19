@@ -6,9 +6,12 @@
 
 > "Additionally, Django is arguably one of the most secure developing frameworks, which in the right configuration, can strongly resist against SQL injections and XSS."
 > 
-> [Swafox](https://tryhackme.com/p/Swafox) in the [Introduction to Django](https://tryhackme.com/room/django) room
+> -- Swafox in the "Introduction to Django" room
 
 That's a hell of a statement. We shall see.
+
+* [Swafox (TryHackMe user profile)](https://tryhackme.com/p/Swafox)
+* [TryHackMe: Introduction to Django](https://tryhackme.com/room/django)
 
 ### Getting Started
 

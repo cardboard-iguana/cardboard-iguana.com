@@ -35,7 +35,7 @@ mkpasswd -m sha-512 $PASSWORD
 
 ### Sudo
 
-Some shell escapes via [GTFOBins](https://gtfobins.github.io):
+Some shell escapes via GTFOBins:
 
 * `awk` — `awk 'BEGIN {system("/bin/sh")}'`
 * `find` — `find . -exec /bin/sh \; -quit`
@@ -69,7 +69,8 @@ void _init() {
 Compile with:
 
 ```bash
-gcc -fPIC -shared -nostartfiles -o /path/to/malicious.so /path/to/malicious.c
+gcc -fPIC -shared -nostartfiles \
+    -o /path/to/malicious.so /path/to/malicious.c
 ```
 
 Using LD_LIBRARY_PATH is a bit trickier; use ldd to see what libraries a program is already pulling in, and then name your malicious library after one of these. Then run `sudo LD_LIBRARY_PATH=/path/to/malicious/library program-runnable-with-nopasswd` to trick the program into loading your malicious library instead of the legitimate system library.
@@ -77,6 +78,8 @@ Using LD_LIBRARY_PATH is a bit trickier; use ldd to see what libraries a program
 While the same code as LD_PRELOAD can be used as a starting point for an LD_LIBRARY_PATH exploit, things get trickier because some libraries are required by others, loaded at different times, or have functions (symbols) that are loaded but not used right away. So some amount of trial-and-error, both in the naming of the malicious library and in what functions are defined within it, may be required.
 
 NOTE that not every UNIX-like system calls their library path LD_LIBRARY_PATH!
+
+* [GTFOBins](https://gtfobins.github.io)
 
 - - - -
 

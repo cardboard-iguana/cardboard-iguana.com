@@ -2,7 +2,7 @@
 
 ## Ice
 
-See my [Ice](../notes/tryhackme-ice.md) CTF write-up.
+[See my Ice CTF write-up.](../notes/tryhackme-ice.md)
 
 - - - -
 

@@ -4,7 +4,7 @@
 
 ### Introduction to ZAP
 
-ZAP (the "Zed Attack Proxy") is basically an open-source version of [Burp Suite](../notes/burp-suite.md). Paid features of [Burp Suite](../notes/burp-suite.md) that ZAP has:
+ZAP (the "Zed Attack Proxy") is basically an open-source version of Burp Suite. Paid features of Burp Suite that ZAP has:
 
 * Automatically build a sitemap
 * Automatically scan for vulnerabilities
@@ -12,17 +12,19 @@ ZAP (the "Zed Attack Proxy") is basically an open-source version of [Burp Suite]
 
 ZAP uses web automation to control an external browser, rather than a built-in version of Chrome.
 
-| [Burp Suite](../notes/burp-suite.md) | ZAP                |
-|:------------------------------- |:------------------ |
-| Site Map                        | Site Tree          |
-| HTTP History                    | History            |
-| Scope                           | Context            |
-| Interceptor (Proxy)             | Break              |
-| Repeater                        | Request Editor     |
-| Intruder                        | Fuzzer             |
-| Spider                          | Spider             |
-| Scanner                         | Active Scan        |
-| BApp Store                      | Add On Marketplace |
+| Burp Suite          | ZAP                |
+|:------------------- |:------------------ |
+| Site Map            | Site Tree          |
+| HTTP History        | History            |
+| Scope               | Context            |
+| Interceptor (Proxy) | Break              |
+| Repeater            | Request Editor     |
+| Intruder            | Fuzzer             |
+| Spider              | Spider             |
+| Scanner             | Active Scan        |
+| BApp Store          | Add On Marketplace |
+
+* [Using Burp Suite](../notes/burp-suite.md)
 
 ### How to Perform an Automated Scan
 
@@ -32,9 +34,11 @@ The "traditional spider" option spiders the website as you would expect, while t
 
 ### Manual Scanning
 
-At least on Kali Linux, ZAP can launch a pre-configured Firefox session using web automation; thus, like [Burp Suite](../notes/burp-suite.md), there's really no need to configure a local proxy (and probably every reason not to -- keep your profiles separate!).
+At least on Kali Linux, ZAP can launch a pre-configured Firefox session using web automation; thus, like Burp Suite, there's really no need to configure a local proxy (and probably every reason not to -- keep your profiles separate!).
 
-One reason *not* to use ZAP's browser, however, is that the user-agent is less generic than [Burp Suite](../notes/burp-suite.md)'s.
+One reason *not* to use ZAP's browser, however, is that the user-agent is less generic than Burp Suite's.
+
+* [Using Burp Suite](../notes/burp-suite.md)
 
 ### Scanning an Authenticated Web Application
 
@@ -42,13 +46,17 @@ If you're using the pre-configured ZAP browser, session cookies are automaticall
 
 ### Brute Force Directories
 
-ZAP has [gobuster](../notes/gobuster.md)-like functionality called "Forced Browse". The wordlist can be configured in Tools > Options > Forced Browse; enumeration can be started by right-clicking on the target site and choosing Site > Force Browse Site.
+ZAP has gobuster-like functionality called "Forced Browse". The wordlist can be configured in Tools > Options > Forced Browse; enumeration can be started by right-clicking on the target site and choosing Site > Force Browse Site.
+
+* [Using “gobuster”](../notes/gobuster.md)
 
 ### Brute Force Web Logins
 
-Requests can be sent to Fuzzer by right-clicking and choosing Attack > Fuzzer. The interface is similar to [Burp Suite](../notes/burp-suite.md)'s Intruder, except that to add a region to fuzz only requires that you highlight the word and hit "Add" under "Fuzz Locations" (this will then open up another dialog where you can choose what payloads, such as wordlists, that you want to use).
+Requests can be sent to Fuzzer by right-clicking and choosing Attack > Fuzzer. The interface is similar to Burp Suite's Intruder, except that to add a region to fuzz only requires that you highlight the word and hit "Add" under "Fuzz Locations" (this will then open up another dialog where you can choose what payloads, such as wordlists, that you want to use).
 
-ZAP's Fuzzer tries to list successful results as "reflected", but this seems prone to false-positives. However, changes in response size remain a good indicator of a successful attack (just like in [Burp Suite](../notes/burp-suite.md)).
+ZAP's Fuzzer tries to list successful results as "reflected", but this seems prone to false-positives. However, changes in response size remain a good indicator of a successful attack (just like in Burp Suite).
+
+* [Using Burp Suite](../notes/burp-suite.md)
 
 ### ZAP Extensions
 

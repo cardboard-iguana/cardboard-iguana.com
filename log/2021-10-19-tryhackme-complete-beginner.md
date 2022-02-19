@@ -15,9 +15,11 @@ Core Metasploit modules:
 * AUXILIARY functions, such as scanning machines for vulnerabilities;
 * POST exploitation tools for “looting” and pivoting;
 * An ENCODER module for obfuscating exploits;
-* And finally a module called NOP that includes tools for exploiting buffer overflows and [return-orientated programming](https://en.wikipedia.org/wiki/Return-oriented_programming).
+* And finally a module called NOP that includes tools for exploiting buffer overflows and return-orientated programming.
 
 Note that Metasploit 6 apparently calls these “framework plugins” now.
+
+* [Return-orientated programming (Wikipedia)](https://en.wikipedia.org/wiki/Return-oriented_programming)
 
 - - - -
 

@@ -16,7 +16,7 @@ Error-based SQLi retrieves data from the backend by abusing error messages. This
 
 Boolean-based SQLi involves monitoring changes in responses to see if a query has executed or failed. The only reason you'd generally do this is if you're doing SQLi blind (where you don't get any output, or the output you do get isn't strongly coupled with the input query).
 
-Obviously, this requires that either the HTTP response code or payload changes depending on the results of the injection... (Some frameworks try to make blind SQLi difficult by using redirects, but it's possible -- though a pain -- to get around this with [Burp Suite](burp-suite.md)).
+Obviously, this requires that either the HTTP response code or payload changes depending on the results of the injection... (Some frameworks try to make blind SQLi difficult by using redirects, but it's possible -- though a pain -- to get around this with Burp Suite).
 
 One way this can be useful more generally is by using something like `AND (SELECT COUNT(*) FROM table_name) > 0` to probe for the existence/use of `table_name`.
 
@@ -46,7 +46,7 @@ Useful MySQL keywords:
 * `user()` and `current_user()`
 * `version()` or `@@version`
 
-It's worth checking out the [Jurassic Park](tryhackme-jurassic-park.md) CTF for an example of how to use union-based SQLi (it's a little hard to summarize).
+It's worth checking out the Jurassic Park CTF for an example of how to use union-based SQLi (it's a little hard to summarize).
 
 ## References
 
@@ -55,6 +55,7 @@ It's worth checking out the [Jurassic Park](tryhackme-jurassic-park.md) CTF for 
 * [MySQL Subquery](https://www.mysqltutorial.org/mysql-subquery/)
 * [TryHackMe: Game Zone](tryhackme-game-zone.md)
 * [Jurassic Park](tryhackme-jurassic-park.md)
+* [Using Burp Suite](burp-suite.md)
 
 - - - -
 

@@ -2,7 +2,7 @@
 
 ## In Netlify
 
-* Go into your [Netlify](https://app.netlify.com/) site’s “Build & Deploy” settings.
+* Go into your Netlify site’s “Build & Deploy” settings.
 * Select “Continuous Deployment”.
 * Add a “Build hook”.
 * Name it whatever you'd like and select the appropriate branch.
@@ -10,7 +10,7 @@
 
 ## In IFTTT
 
-* Go to “New Applet” on [IFTTT](https://ifttt.com/).
+* Go to “New Applet” on IFTTT.
 * Click “+this”.
 * Select the “Date & Time” service.
 * Select the interval you want to use and set the time (and optionally date) you want to use. In most cases, defining one or more “Every day at” triggers will be the right approach.
@@ -27,6 +27,8 @@
 ## References
 
 * [Trigger a Netlify Build Every Day With IFTTT](https://www.11ty.dev/docs/quicktips/netlify-ifttt/).
+* [Netlify](https://www.netlify.com)
+* [IFTTT](https://ifttt.com)
 
 - - - -
 

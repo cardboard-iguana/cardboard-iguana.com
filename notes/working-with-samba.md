@@ -4,7 +4,7 @@
 
 * `-h` — IP address or host to enumerate
 * `-u` — username to use during enumeration (attempts to use the NULL session if not supplied)
-* `-p` — password or [NTLM hash](windows-password-hashes.md) to use during enumeration
+* `-p` — password or NTLM hash to use during enumeration
 * `-d` — domain (or workgroup) to use during enumeration
 * `-s` — share to enumerate (defaults to `C$` if not supplied)
 * `-x` — attempt to execute the supplied command (!!!) on the server (if the user you’re connecting as has permission to do so)
@@ -45,6 +45,7 @@ Use -R (and omit `$FILE`) to recursively download an entire directory.
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
+* [Windows Password Hashes](windows-password-hashes.md)
 
 - - - -
 

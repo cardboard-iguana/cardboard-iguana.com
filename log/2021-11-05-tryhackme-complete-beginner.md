@@ -7,7 +7,8 @@
 The machine’s IP address is 10.10.179.107. Let’s run  an initial scan.
 
 ```bash
-sudo nmap -v -oA kenobi -A -sS --script vuln -p- 10.10.179.107
+sudo nmap -v -oA kenobi -A -sS --script vuln \
+          -p- 10.10.179.107
 ```
 
 Results:
@@ -340,10 +341,12 @@ OS and Service detection performed. Please report any incorrect results at https
 
 Apparently port 139 is left over from Window’s NetBIOS days.
 
-Also, apparently the smb-enum-shares.nse and smb-enum-users.nse scripts work on this machine. I wonder why they produced null results in the [Basic Pentesting](../notes/tryhackme-basic-pentesting.md) CTF?
+Also, apparently the smb-enum-shares.nse and smb-enum-users.nse scripts work on this machine. I wonder why they produced null results in the Basic Pentesting CTF?
 
 ```bash
-nmap -v -oA kenobi-smb-enumeration -sT --script smb-enum-shares.nse,smb-enum-users.nse -p445 10.10.179.107
+nmap -v -oA kenobi-smb-enumeration -sT \
+     --script smb-enum-shares.nse,smb-enum-users.nse \
+     -p445 10.10.179.107
 ```
 
 Results:
@@ -393,7 +396,9 @@ I still don’t think that smb-enum-users.nse is working for me…
 NFS enumeration:
 
 ```bash
-nmap -v -oA kenobi-nfs-enumeration -sT --script nfs-ls,nfs-statfs,nfs-showmount -p111 10.10.179.107
+nmap -v -oA kenobi-nfs-enumeration -sT \
+     --script nfs-ls,nfs-statfs,nfs-showmount \
+     -p111 10.10.179.107
 ```
 
 Results:
@@ -411,6 +416,8 @@ PORT    STATE SERVICE
 Read data files from: /usr/bin/../share/nmap
 # Nmap done at Fri Nov  5 22:25:47 2021 -- 1 IP address (1 host up) scanned in 2.49 seconds
 ```
+
+* [Basic Pentesting](../notes/tryhackme-basic-pentesting.md)
 
 - - - -
 

@@ -70,9 +70,11 @@ Default security groups:
 * CLONEABLE DOMAIN CONTROLLERS: Domain controllers that may be cloned.
 * RAS AND IAS SERVERS: Servers allowed to access remote properties of users.
 
-Microsoft’s [Active Directory Security Groups](https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/active-directory-security-groups) documentation is a little clearer than TryHackMe’s brief overview.
+Microsoft’s Active Directory Security Groups documentation is a little clearer than TryHackMe’s brief overview.
 
 A little.
+
+* [Active Directory Security Groups](https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/active-directory-security-groups)
 
 ### Trusts & Policies
 
@@ -112,7 +114,7 @@ Azure AD does *not* use an OU structure, instead adopting a flat set of users. (
 
 ### Hands-On Lab
 
-TryHackMe is using a set of PowerShell extensions called [PowerView](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1) here. It doesn’t look like PowerView is maintained anymore though, and I’m curious how applicable all of this is anymore — I remember reading somewhere that PowerShellMafia’s work was largely protected against these days.
+TryHackMe is using a set of PowerShell extensions called PowerView here. It doesn’t look like PowerView is maintained anymore though, and I’m curious how applicable all of this is anymore — I remember reading somewhere that PowerShellMafia’s work was largely protected against these days.
 
 It looks like PowerShell needs to be run with execution protections bypassed in order to load PowerView. Fortunately, you can do this by running PowerShell from cmd.exe with a simple flag:
 
@@ -136,7 +138,9 @@ Get-NetUser | select cn
 Get-NetGroup
 ```
 
-There’s also a [PowerView tips & tricks cheat sheet](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993).
+[There’s also a PowerView tips & tricks cheat sheet.](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
+
+* [PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 
 - - - -
 

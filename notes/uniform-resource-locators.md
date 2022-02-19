@@ -4,6 +4,10 @@
 |:------:|:---:|:----:|:-:|:--------:|:-:|:-----------:|:-:|:----:|:-:|:--------------:|:-:|:-----------:|:-:|:-----------------:|
 |  http  | :// |  foo | : |    bar   | @ | example.tld | : | 8080 | / | this/is/a/path | ? | id=1&task=1 | # | in-page-reference |
 
+## References
+
+* [TryHackMe: Pre Security](tryhackme-pre-security.md)
+
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  

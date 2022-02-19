@@ -6,8 +6,8 @@
 
 Online automated malware analysis sandboxes:
 
-*   [any.run](https://any.run/)
-*   [hybrid-analysis](https://hybrid-analysis.com/)
+* [any.run](https://any.run/)
+* [hybrid-analysis](https://hybrid-analysis.com/)
 
 ### Practical: Calculating & Reporting Checksums
 
@@ -41,7 +41,9 @@ Fun side-note: PowerShell can use Linux-style redirects (`>`)!
 
 ### Enter: Search Engine Optimization
 
-It looks like all of Google’s optimization tests live at [web.dev](https://web.dev/measure/) now.
+It looks like all of Google’s optimization tests live at web.dev now.
+
+* [web.dev: Measure page quality](https://web.dev/measure/)
 
 ### BeepBoop — Robots.txt
 
@@ -67,9 +69,14 @@ Useful Google search modifiers:
 Ways to gather packets:
 
 * Just listen to the packets that you can see normally (really only works on very simple/insecure networks).
-* Physical taps ([Packet Squirrel](https://hak5.org/products/packet-squirrel), [LAN Turtle](https://hak5.org/products/lan-turtle), etc.)
+* Physical taps (Packet Squirrel, LAN Turtle, etc.)
 * MAC flooding (fill up a switch’s CAM table with bogus requests until it is forced to fall back to acting like a dum hub; somewhat dangerous).
 * ARP poisoning (falsely advertise yourself as the router or another machine; less dangerous than MAC flooding but harder to successfully pull off).
+
+References:
+
+* [Packet Squirrel](https://hak5.org/products/packet-squirrel)
+* [LAN Turtle](https://hak5.org/products/lan-turtle)
 
 - - - -
 

@@ -2,7 +2,7 @@
 
 (1) Zero out free disk space *on the guest*:
 
-WINDOWS: Disable the paging file (Settings > System > About > Advanced system settings > Advanced > Performance > Settings... > Advanced > Virtual memory > Change...), clean all temporary files (C: > Properties > Disk Cleanup), defrag (`defrag C: /FreespaceConsolidate /Verbose`), and then zero out free space with [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete) (`sdelete -z C:`).
+WINDOWS: Disable the paging file (Settings > System > About > Advanced system settings > Advanced > Performance > Settings... > Advanced > Virtual memory > Change...), clean all temporary files (C: > Properties > Disk Cleanup), defrag (`defrag C: /FreespaceConsolidate /Verbose`), and then zero out free space with SDelete (`sdelete -z C:`).
 
 LINUX:
 
@@ -24,6 +24,7 @@ Note that this only works on a disk image *without any snapshots*.
 ## References
 
 * [How to compact VirtualBox's VDI file size?](https://superuser.com/questions/529149/how-to-compact-virtualboxs-vdi-file-size/529183#529183)
+* [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete)
 
 - - - -
 

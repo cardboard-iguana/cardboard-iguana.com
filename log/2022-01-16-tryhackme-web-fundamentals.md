@@ -18,13 +18,17 @@ NOTE: Typically web servers are serving content from `/var/www`, `/var/www/srv`,
 
 ### Escalating Your Privileges to Root
 
-A reminder that [GTFOBins](https://gtfobins.github.io/) is your friend.
+A reminder that GTFOBins is your friend.
+
+* [GTFOBins](https://gtfobins.github.io/)
 
 ## Authenticate
 
 ### Dictionary Attack
 
-NOTE: It doesn't look like [Burp Suite](../notes/burp-suite.md) can effectively run an attack using the entire `rockyou.txt` data set.
+NOTE: It doesn't look like Burp Suite can effectively run an attack using the entire `rockyou.txt` data set.
+
+* [Using Burp Suite](../notes/burp-suite.md)
 
 ### Re-Registration
 
@@ -40,9 +44,11 @@ JSON web token format: `$HEADER.$PAYLOAD.$SIGNATURE`, where each substring is ba
 * `$PAYLOAD` is a JSON blob containing various pieces of user information, which can include permissioning data.
 * `$SIGNATURE` is the signature (using `alg` from the `$HEADER`) of `$HEADER.$PAYLOAD` (both parts base64 encoded) using a server-side secret (often an SSL key... but sometimes just a string!).
 
-See [jwt.io](https://jwt.io/) for a detailed breakdown. These are typically passed around as a user cookie, HTTP header, or queried from local storage.
+See jwt.io for a detailed breakdown. These are typically passed around as a user cookie, HTTP header, or queried from local storage.
 
 Sometimes it's possible to brute-force a weak secret from the `$SIGNATURE` (which will allow tokens to be forged as desired), but sometimes servers will also support the `NONE` signature type, which indicates that no signing is used (so the JWT is then just `$HEADER.$PAYLOAD.` — note the trailing dot!). If the server allows the `NONE` signing method, then it's often possible to just arbitrarily edit the `$PAYLOAD` to gain access to other users.
+
+* [JSON Web Tokens](https://jwt.io)
 
 ### No Auth
 
@@ -60,7 +66,9 @@ This is where the server is building web pages using a template system and, beca
 
 Typically you'd test for SSTI by passing something simple like "2 + 2" and seeing what the template splits out. *How* you pass "2 + 2" is going to depend heavily on the template system being used, however.
 
-The [PayloadsAllTheThings: Server Side Template Injection ](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection) document is a useful resource.
+The "PayloadsAllTheThings: Server Side Template Injection" document is a useful resource.
+
+* [PayloadsAllTheThings: Template Injection](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
 
 ### What is CSRF?
 
@@ -81,7 +89,13 @@ Use `basenc --base64url` and `basenc -d --base64url` to encode/decode URL-safe b
 Putting this all together, we can encode an `HS256` signature (assuming that there is no secret) using:
 
 ```bash
-echo -n "$HEADER.$PAYLOAD" | openssl dgst -sha256 -mac HMAC -macopt hexkey:$(cat $PUBLIC_KEY_FILE | xxd -p | tr -d '\n') | sed -e 's/.*= //' | tr -d '\n' | xxd -p -r | basenc --base64url | sed -e 's/=*$//'
+echo -n "$HEADER.$PAYLOAD" | \
+openssl dgst -sha256 -mac HMAC -macopt hexkey:$(cat $PUBLIC_KEY_FILE | xxd -p | tr -d '\n') | \
+sed -e 's/.*= //' | \
+tr -d '\n' | \
+xxd -p -r | \
+basenc --base64url | \
+sed -e 's/=*$//'
 ```
 
 Here `$HEADER` is our base64-encoded header (see above), `$PAYLOAD` is our base64-encoded payload, and `$PUBLIC_KEY_FILE` is the PEM-formatted server public key (that we've obviously obtained using another method).

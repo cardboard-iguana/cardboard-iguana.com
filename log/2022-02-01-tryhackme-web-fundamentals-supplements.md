@@ -2,7 +2,7 @@
 
 ## Inclusion
 
-See my [Inclusion](../notes/tryhackme-inclusion.md) CTF write-up.
+[See my Inclusion CTF write-up.](../notes/tryhackme-inclusion.md)
 
 ## Python for Pentesters
 
@@ -39,7 +39,9 @@ for sub in subdoms:
 		print("Valid domain: ", sub_domains)
 ```
 
-Note that the `f` above isn't a mistake -- rather it's the use of an "[f-string](https://whatisanything.com/how-do-you-write-an-f-string-in-python/#What_is_F_string_in_Python_with_example)", which allows the expansion of `{sys}` and `{sys.argv[1]}`. This requires Python 3.6+.
+Note that the `f` above isn't a mistake -- rather it's the use of an "f-string", which allows the expansion of `{sys}` and `{sys.argv[1]}`. This requires Python 3.6+.
+
+* [Quick Answer: How Do You Write An F String In Python](https://whatisanything.com/how-do-you-write-an-f-string-in-python/)
 
 ### Directory Enumeration
 
@@ -93,7 +95,9 @@ for send, receive in ans:
 	print(receive.sprintf(r"%Ether.src% - %ARP.psrc%"))
 ```
 
-As above, the `r` here isn't a mistake -- rather it specifies a "[raw string](https://whatisanything.com/how-do-you-write-an-f-string-in-python/#What_does_R_mean_Python)". This again requires Python 3.6+.
+As above, the `r` here isn't a mistake -- rather it specifies a "raw string". This again requires Python 3.6+.
+
+* [Quick Answer: How Do You Write An F String In Python](https://whatisanything.com/how-do-you-write-an-f-string-in-python/)
 
 ### Port Scanner
 
@@ -104,10 +108,6 @@ As above, the `r` here isn't a mistake -- rather it specifies a "[raw string](ht
 
 import sys
 import socket
-import pyfiglet
-
-ascii_banner = pyfiglet.figlet_format("TryHackMe\nPython 4 Pentesters\nPort Scanner")
-print(ascii_banner)
 
 ip = '192.168.1.6'
 
@@ -182,10 +182,6 @@ open(outfile, 'wb').write(r.content)
 # Given a wordlist, crack a (MD5) hash.
 
 import hashlib
-import pyfiglet
-
-ascii_banner = pyfiglet.figlet_format("TryHackMe\nPython 4 Pentesters\nHASH CRACKER")
-print(ascii_banner)
 
 wordlist_location = str(input('Enter wordlist file location: '))
 hash_input = str(input('Enter hash to be cracked: '))
@@ -210,9 +206,9 @@ with open(wordlist_location, 'r') as file:
 #!/usr/bin/env python3
 
 # Records all keystrokes up until "Enter", then replays
-# them. Note that the "keyboard" module does *not* seem to
-# be available on most systems out-of-the-box, and will
-# need to be installed using pip.
+# them. Note that the "keyboard" module does *not* seem
+# to be available on most systems out-of-the-box, and
+# will need to be installed using pip.
 
 import keyboard
 

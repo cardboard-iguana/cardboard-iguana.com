@@ -1,6 +1,6 @@
 # Gemini Compatible Markdown
 
-[Gemini](gemini://gemini.circumlunar.space/docs/specification.gmi) uses a syntax that is *almost* a subset of [CommonMark](https://spec.commonmark.org/current/).
+Gemini uses a syntax that is *almost* a subset of CommonMark.
 
 Be aware that Gemini treats all line breaks literally and clients are expected to wrap text. Line breaks are also rendered literally. So, one paragraph = one line!
 
@@ -22,7 +22,7 @@ Gemini doesn’t explicitly support any formatting tags *within* a line. However
 
 Instead of using two stars (\*\*) to denote bolded text, it’s probably better to use UPPER CASE for documents destined for Gemini.
 
-Since Markdown requires that these characters be escaped, so text destined for Gemini will need to be processed to remove back-slashed escapes (\\). Note that [md2gmi](https://github.com/tdemin/gmnhg) can handle this automatically.
+Since Markdown requires that these characters be escaped, so text destined for Gemini will need to be processed to remove back-slashed escapes (\\). Note that md2gmi can handle this automatically.
 
 ### Lists
 
@@ -34,17 +34,34 @@ Quote blocks cannot be nested in Gemini, and all interior formatting is preserve
 
 ### “Code” Blocks
 
-Gemini allows code blocks. In Gemini the code block type (normally something like `bash` or `html` in Markdown) is used by clients as “alt text”. Unfortunately, many Markdown processors (including [Jekyll](https://jekyllrb.com/)) don’t handle arbitrary strings in the code block type gracefully, so we need to stick with Markdown’s conventions here.
+Gemini allows code blocks. In Gemini the code block type (normally something like `bash` or `html` in Markdown) is used by clients as “alt text”. Unfortunately, many Markdown processors (including Jekyll) don’t handle arbitrary strings in the code block type gracefully, so we need to stick with Markdown’s conventions here.
+
+### “Code” Block Width
+
+Getting the width of code blocks right is a bit tricky. As of February 16, 2022, here’s the maximum width of a line in a code block in Obsidian using the Minimal theme before wrapping occurs under a variety of circumstances:
+
+| Test Case                                | Max Line Width |
+|:---------------------------------------- | :-------------:|
+| Desktop ½ width with sidebar             |       57       |
+| Desktop without sidebar                  |       69       |
+| iPad Pro horizontal                      |       62       |
+| iPad Pro vertical with sidebar           |       49       |
+| iPad Pro vertical without sidebar        |       62       |
+| iPad Pro slide-over                      |       34       |
+| iPhone 11 Pro vertical                   |       34       |
+| iPhone 11 Pro horizontal without sidebar |       62       |
+
+This all actually suggests that 57 – 62 characters is a reasonable target for wrapping (I kind of wish it was 72, but *c’est la vie*).
 
 ## Links & Images
 
-Gemini doesn’t support Markdown links or images, though tools like [md2gmn](https://github.com/tdemin/gmnhg#md2gmn) can handle the conversion into Gemini’s format.
+Gemini doesn’t support Markdown links or images, though tools like md2gmn can handle the conversion into Gemini’s format.
 
 ```
 =>[<whitespace>]<URL>[<whitespace><USER-FRIENDLY LINK NAME>]
 ```
 
-I’ve yet to run into a Markdown-to-Gemini converter that handles inline links in a completely sensible way. That said, [md2gmi](https://github.com/tdemin/gmnhg) does a good job *if and only if* links are presented as unordered lists or on singleton lines. Note that when using this convention, *no* non-link characters (except perhaps for the leading `* ` in unordered lists) may be used. This means that presenting links in unordered lists is probably the best option.
+I’ve yet to run into a Markdown-to-Gemini converter that handles inline links in a completely sensible way. That said, md2gmi does a good job *if and only if* links are presented as unordered lists or on singleton lines. Note that when using this convention, *no* non-link characters (except perhaps for the leading `* ` in unordered lists) may be used. This means that presenting links in unordered lists is probably the best option.
 
 As an example, suppose we have the following markdown:
 
@@ -59,7 +76,7 @@ An image follows.
 ![This is some image alt-text](../02779186c69ce442260bd67d3bd11b3e.webp)
 ```
 
-Then [md2gmi](https://github.com/tdemin/gmnhg) will output:
+Then md2gmi will output:
 
 ```gemini
 This is a sentence.
@@ -72,11 +89,18 @@ An image follows.
 => ../02779186c69ce442260bd67d3bd11b3e.webp This is some image alt-text
 ```
 
+Incidentally, this gives good guidance as to how to write image alt-text — alt-text should be thought of as the *linked text* for the image.
+
 ## References
 
 * [Project Gemini Speculative Specification](gemini://gemini.circumlunar.space/docs/specification.gmi)
+* [CommonMark Spec](https://spec.commonmark.org/current/)
+* [tdemin / gmnhg](https://github.com/tdemin/gmnhg)
+* [Jekyll](https://jekyllrb.com/)
+* [Obsidian](https://obsidian.md)
+* [kepano / obsidian-minimal](https://github.com/kepano/obsidian-minimal)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 12, 2022
+<span aria-hidden="true">📅</span> February 16, 2022

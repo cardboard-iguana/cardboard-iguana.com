@@ -1,10 +1,6 @@
 # TryHackMe: Bash Scripting
 
-* Our First Simple Bash Scripts
-* [Variables](../log/2021-09-20-tryhackme-pre-security-supplements.md)
-* [Parameters](../log/2021-09-20-tryhackme-pre-security-supplements.md)
-* [Arrays](../log/2021-09-20-tryhackme-pre-security-supplements.md)
-* Conditionals
+* [2021-09-20 TryHackMe: Pre Security (Supplements)](../log/2021-09-20-tryhackme-pre-security-supplements.md)
 
 ## References
 

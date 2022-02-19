@@ -4,10 +4,11 @@
 
 The machine we’ll be attacking is at 10.10.55.173. Since it’s a Windows box, we know that it won’t respond to `ping` by default.
 
-As usual, we’ll start out with an [nmap](nmap.md) scan:
+As usual, we’ll start out with an nmap scan:
 
 ```bash
-sudo nmap -v -oA ice -Pn -A -T4 -sS -script vuln -p- 10.10.55.173
+sudo nmap -v -oA ice -Pn -A -T4 -sS -script vuln \
+          -p- 10.10.55.173
 ```
 
 Which gives us:
@@ -149,9 +150,9 @@ The next few flags are about finding a particular vulnerability for Icecast on h
 
 FLAG 4: What is a vulnerability impacting Icecast with a CVSS score of 7.5? — Execute Code Overflow
 
-FLAG 5: What is the CVE number for the vulnerability in Flag 4? — [CVE-2004-1561](https://www.cvedetails.com/cve/CVE-2004-1561/)
+FLAG 5: What is the CVE number for the vulnerability in Flag 4? — CVE-2004-1561
 
-FLAG 6: What is the [Metasploit](metasploit.md) module for exploiting this vulnerability? — exploit/windows/http/icecast_header
+FLAG 6: What is the Metasploit module for exploiting this vulnerability? — exploit/windows/http/icecast_header
 
 FLAG 7: What option must be set to use this module? — RHOSTS
 
@@ -159,7 +160,7 @@ There’s not too much to this module — set RHOSTS and LHOST, run, get shell.
 
 ## Escalate
 
-FLAG 8: What shell does [Metasploit](metasploit.md) provide us with? — [meterpreter](metasploit.md)
+FLAG 8: What shell does Metasploit provide us with? — meterpreter
 
 We can find the current user using the `getuid` command.
 
@@ -173,11 +174,11 @@ FLAG 11: What is the system architecture? — x64
 
 We’ll now use `run post/multi/recon/local_exploit_suggester` to find potential paths to elevating privileges.
 
-Unfortunately, for me this only returns one result — `exploit/windows/local/ms10_092_schelevator` — which is not accepted as the 12th flag. The flag hint states that the exploit will contain `eventvwr`. A quick search through [Metasploit](metasploit.md) shows that the only exploit including this string is `exploit/windows/local/bypassuac_eventvwr`, which *is* accepted.
+Unfortunately, for me this only returns one result — `exploit/windows/local/ms10_092_schelevator` — which is not accepted as the 12th flag. The flag hint states that the exploit will contain `eventvwr`. A quick search through Metasploit shows that the only exploit including this string is `exploit/windows/local/bypassuac_eventvwr`, which *is* accepted.
 
 FLAG 12: What is the potential exploit `run post/multi/recon/local_exploit_suggester` returns? — `exploit/windows/local/bypassuac_eventvwr`
 
-We can background [meterpreter](metasploit.md) with Ctrl+Z and then switch to this exploit using `use exploit/windows/local/bypassuac_eventvwr`. This exploit runs through an existing session, so we need to set this using `set SESSION 2`. (I’m on session 2 because I previously backed out an unsuccessfully tried to pop a 64-bit [meterpreter](metasploit.md) shell — I guess Icecast is running as a 32-bit process.)
+We can background meterpreter with Ctrl+Z and then switch to this exploit using `use exploit/windows/local/bypassuac_eventvwr`. This exploit runs through an existing session, so we need to set this using `set SESSION 2`. (I’m on session 2 because I previously backed out an unsuccessfully tried to pop a 64-bit meterpreter shell — I guess Icecast is running as a 32-bit process.)
 
 FLAG 13: What option needs to be set to ensure that our listener IP address is correct? — LHOST
 
@@ -189,7 +190,7 @@ FLAG 14: What permission allows taking ownership of files? — SeTakeOwnershipPr
 
 ## Looting
 
-In order to harvest credentials from LSASS we’ll need to migrate [meterpreter](metasploit.md) to a process with the same permissions (NT AUTHORITY/SYSTEM) and architecture as LSASS. The print spooler service is a good choice, as it runs with elevated permissions, has the same architecture as the system itself, and will restart itself automatically.
+In order to harvest credentials from LSASS we’ll need to migrate meterpreter to a process with the same permissions (NT AUTHORITY/SYSTEM) and architecture as LSASS. The print spooler service is a good choice, as it runs with elevated permissions, has the same architecture as the system itself, and will restart itself automatically.
 
 FLAG 15: What is the name of the print spooler service? — `spoolsv.exe`
 
@@ -197,9 +198,9 @@ FLAG 15: What is the name of the print spooler service? — `spoolsv.exe`
 migrate -N spoolsv.exe
 ```
 
-FLAG 16: What user is the migrated [meterpreter](metasploit.md) process running as after migration? — NT AUTHORITY/SYSTEM
+FLAG 16: What user is the migrated meterpreter process running as after migration? — NT AUTHORITY/SYSTEM
 
-We’re going to loot LSASS now using [Mimikatz](mimikatz.md).
+We’re going to loot LSASS now using Mimikatz.
 
 ```meterpreter
 load kiwi
@@ -213,23 +214,30 @@ FLAG 18: What is Dark’s password? — `Password01!`
 
 ## Past-Exploitation
 
-FLAG 19: What [meterpreter](metasploit.md)/ command allows us to dump all of the password hashes stored on the system? — `hashdump`
+FLAG 19: What meterpreter command allows us to dump all of the password hashes stored on the system? — `hashdump`
 
-Hashes dumped using `hashdump` can be cracked offline using [Hydra](hydra.md) or [John the Ripper](john-the-ripper.md).
+Hashes dumped using `hashdump` can be cracked offline using Hydra or John the Ripper.
 
-FLAG 20: What [meterpreter](metasploit.md) command allows us to watch the remote user’s desktop in real time? — `screenshare`
+FLAG 20: What meterpreter command allows us to watch the remote user’s desktop in real time? — `screenshare`
 
-FLAG 21: What [meterpreter](metasploit.md) command allows us to record using the system’s microphone? — `record_mic`
+FLAG 21: What meterpreter command allows us to record using the system’s microphone? — `record_mic`
 
-FLAG 22: What [meterpreter](metasploit.md) command can modify timestamps of files on the system? — `timestomp`
+FLAG 22: What meterpreter command can modify timestamps of files on the system? — `timestomp`
 
-FLAG 23: What [meterpreter](metasploit.md)/`kiwi` command allows for the creation of a [golden ticket](kerberos.md)? — `golden_ticket_create`
+FLAG 23: What meterpreter/`kiwi` command allows for the creation of a golden ticket? — `golden_ticket_create`
 
 ELAPSED TIME: 2 h 39 min
 
 ## References
 
 * [TryHackMe: Ice](https://tryhackme.com/room/ice)
+* [Using “nmap”](nmap.md)
+* [CVE-2004-1561](https://www.cvedetails.com/cve/CVE-2004-1561/)
+* [Using Metasploit](metasploit.md)
+* [Using Mimikatz](mimikatz.md)
+* [Using Hydra](hydra.md)
+* [Using John the Ripper](john-the-ripper.md)
+* [Kerberos](kerberos.md)
 
 - - - -
 

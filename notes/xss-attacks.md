@@ -32,9 +32,9 @@ It’s also possible (and safer, though if we’re breaking into things we proba
 window["a" + "lert"]("Hello")
 ```
 
-For really heavy filtering, use something nutso like [JSFuck](http://www.jsfuck.com/).
+For really heavy filtering, use something nutso like JSFuck.
 
-(Note that things like the [JavaScript Obfuscator Tool](https://obfuscator.io/) won't always remove functions and strings, as they tend to be geared more towards thwarting script analysis than bypassing filters.)
+(Note that things like the JavaScript Obfuscator Tool won't always remove functions and strings, as they tend to be geared more towards thwarting script analysis than bypassing filters.)
 
 Sometimes filters are applied in a case-sensitive fashion. While JavaScript *is* case-sensitive, URL schemes, HTML tag names, and HTML tag attributes are case-*insensitive* (so, `javascript:` is treated the same as `javaSCRIPT:`, `onclick` is treated the same as `ONCLICK`, etc.).
 
@@ -56,7 +56,7 @@ Cookies can be accessed in JavaScript via `document.cookie`.
 
 ### Keylogging
 
-```javascript
+```html
 <script type="text/javascript">
 	let l = "";  
 	document.onkeypress = function (e) {
@@ -70,7 +70,7 @@ This only logs to the browser console though; a real keylogger would send this i
 
 ### Port Scanning
 
-[An example JavaScript port scanner(possibly broken).](https://github.com/aabeling/portscan)
+[An example JavaScript port scanner (possibly broken).](https://github.com/aabeling/portscan)
 
 ### Website Defacement
 
@@ -84,6 +84,8 @@ To get/set the content of an element, use the `innerHTML` method (to insert HTML
 * [TryHackMe: Cross-Site Scripting](tryhackme-cross-site-scripting.md)
 * [Document.cookie](https://developer.mozilla.org/docs/Web/API/Document/cookie)
 * [Document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+* [JSFuck](http://www.jsfuck.com/)
+* [JavaScript Obfuscator Tool](https://obfuscator.io/)
 
 - - - -
 

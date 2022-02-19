@@ -6,11 +6,15 @@
 
 * `-h` — IP address or host to enumerate
 * `-u` — username to use during enumeration (attempts to use the NULL session if not supplied)
-* `-p` — password or [NTLM hash](../notes/windows-password-hashes.md) to use during enumeration
+* `-p` — password or NTLM hash to use during enumeration
 * `-d` — domain (or workgroup) to use during enumeration
 * `-s` — share to enumerate (defaults to `C$` if not supplied)
 * `-x` — attempt to execute the supplied command (!!!) on the server (if the user you’re connecting as has permission to do so)
 * `--download`/`--upload` — download or upload a file to specified share
+
+References:
+
+* [Windows Password Hashes](../notes/windows-password-hashes.md)
 
 ### smbclient
 
@@ -27,10 +31,11 @@ Once connected, `smbclient` provides an `ftp`-like interface.
 
 Not much context. The machine for this test is at 10.10.87.144 and we know that there are two flags in the files `user.txt` and `root.txt`.
 
-We begin by running a full [nmap](../notes/nmap.md) scan:
+We begin by running a full nmap scan:
 
 ```bash
-sudo nmap -vv -oA cc-pentesting -A -sS --script vuln -p- 10.10.87.144
+sudo nmap -vv -oA cc-pentesting -A -sS --script vuln \
+          -p- 10.10.87.144
 ```
 
 Output:
@@ -311,18 +316,23 @@ OS and Service detection performed. Please report any incorrect results at https
 
 So, only two services available: HTTP (port 80) and SSH (port 22).
 
-The web server is just running the Ubuntu Apache2 default page, but [nmap](../notes/nmap.md) has already identified the potentially interesting directory `/secret/`. Navigating to that directory reveals that it contains an empty `index.html` file, however.
+The web server is just running the Ubuntu Apache2 default page, but nmap has already identified the potentially interesting directory `/secret/`. Navigating to that directory reveals that it contains an empty `index.html` file, however.
 
-Let’s see what [gobuster](../notes/gobuster.md) can find.
+Let’s see what gobuster can find.
 
 ```bash
-gobuster -t 50 dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u http://10.10.87.144/secret/ -x bak,htm,html,php,phtml,ppk,txt
+gobuster -t 50 dir \
+         -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt \
+         -u http://10.10.87.144/secret/ \
+         -x bak,htm,html,php,phtml,ppk,txt
 ```
 
-So, we’ve got the file `http://10.10.87.144/secret/secret.txt` containing `nyan:046385855FC9580393853D8E81F240B66FE9A7B8`. That could be a password, but it also looks like a hash of some kind (and who outside of me uses passwords that look like that?). It’s the right length for a SHA1 hash, so let’s see what [hashcat](../notes/hashcat.md) can make of it.
+So, we’ve got the file `http://10.10.87.144/secret/secret.txt` containing `nyan:046385855FC9580393853D8E81F240B66FE9A7B8`. That could be a password, but it also looks like a hash of some kind (and who outside of me uses passwords that look like that?). It’s the right length for a SHA1 hash, so let’s see what hashcat can make of it.
 
 ```bash
-hashcat -m 100 -O 046385855FC9580393853D8E81F240B66FE9A7B8 ~/.local/share/red-team/wordlists/rockyou.txt
+hashcat -m 100 \
+        -O 046385855FC9580393853D8E81F240B66FE9A7B8 \
+           ~/.local/share/red-team/wordlists/rockyou.txt
 ```
 
 And the hash is… `nyan`?
@@ -358,6 +368,10 @@ cat /root/root.txt
 ```
 
 And that’s flag 2.
+
+* [Using “nmap”](../notes/nmap.md)
+* [Using “gobuster”](../notes/gobuster.md)
+* [Using Hashcat](../notes/hashcat.md)
 
 - - - -
 

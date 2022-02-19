@@ -8,11 +8,11 @@ Use XPaths with Get-WinEvent via the -FilterXPath switch. Unlike -FilterHashtabl
 
 From Windows Net command executed to enumerate administrators:
 
-> GOAL
+> GOAL  
 > Detect when a user runs the net command to enumerate the Administrators group, which could be indicative of adversarial reconnaissance activity.
 > 
-> STRATEGY
-> Monitoring of Windows event logs where @evt.id is 4799, @Event.EventData.Data.CallerProcessName is *net1.exe and @Event.EventData.Data.TargetUserName is Administrators.
+> STRATEGY  
+> Monitoring of Windows event logs where @evt.id is 4799, @Event.EventData.Data.CallerProcessName is \*net1.exe and @Event.EventData.Data.TargetUserName is Administrators.
 
 * [Windows Net command executed to enumerate administrators](https://docs.datadoghq.com/security_platform/default_rules/windows-event-net-cmd-local-admin-enumeration/)
 

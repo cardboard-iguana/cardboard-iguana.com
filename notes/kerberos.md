@@ -1,6 +1,6 @@
 # Kerberos
 
-Kerberos: The default authentication method for Windows domains. Intended to be the successor to [NTLM](windows-password-hashes.md).
+Kerberos: The default authentication method for Windows domains. Intended to be the successor to NTLM.
 
 The built-in Windows command `klist` will show you the current Kerberos tickets in memory.
 
@@ -22,14 +22,14 @@ The below steps are cut-and-pasted from Wikipedia’s walk-through, but with lan
 
 ### Client Authentication to the KDC (a.k.a. “Pre-Authentication”)
 
-(1) AS-REQ: The client sends the client/user ID + the current timestamp (the timestamp is used to prevent replay attacks) encrypted with the [NT hash](windows-password-hashes.md) of the user’s password a cleartext message of the user ID to the authentication server to request services on behalf of the user.
+(1) AS-REQ: The client sends the client/user ID + the current timestamp (the timestamp is used to prevent replay attacks) encrypted with the NT hash of the user’s password a cleartext message of the user ID to the authentication server to request services on behalf of the user.
 
-(2) AS-REP: The authentication server checks to see if the client/user ID is in its database and if it can decrypt the timestamp using the [NT hash](windows-password-hashes.md) of the password stored there. If it can, then the authentication server sends back the following two messages to the client:
+(2) AS-REP: The authentication server checks to see if the client/user ID is in its database and if it can decrypt the timestamp using the NT hash of the password stored there. If it can, then the authentication server sends back the following two messages to the client:
 
-* Message A: *Client/TGS Session Key* encrypted using the [NT hash](windows-password-hashes.md) of the client/user.
+* Message A: *Client/TGS Session Key* encrypted using the NT hash of the client/user.
 * Message B: *Ticket Granting Ticket* (including the privilege attribute certificate, client network address, ticket validity period, and the *Client/TGS Session Key*) encrypted using the KDC long term secret key.
 
-(3) Once the client receives messages A and B, it attempts to decrypt message A with the [NT hash](windows-password-hashes.md) generated from the password entered by the user. If the user entered password does not match the password in the authentication service database then decryption of message A will fail. Once message A is decrypted, the client obtains the *Client/TGS Session Key*. This session key is used for further communications with the ticket granting service. (Note: The client cannot decrypt Message B, as it is encrypted using the KDC long term secret key.)
+(3) Once the client receives messages A and B, it attempts to decrypt message A with the NT hash generated from the password entered by the user. If the user entered password does not match the password in the authentication service database then decryption of message A will fail. Once message A is decrypted, the client obtains the *Client/TGS Session Key*. This session key is used for further communications with the ticket granting service. (Note: The client cannot decrypt Message B, as it is encrypted using the KDC long term secret key.)
 
 ### Client Service Authorization
 
@@ -60,7 +60,7 @@ The below steps are cut-and-pasted from Wikipedia’s walk-through, but with lan
 
 ## .kirbi Files
 
-There’s a bit of terminology creep when discussing Kerberos tickets. [Mimikatz](mimikatz.md) and [Rubeus](rubeus.md) are actually dumping Kerberos data structures (as .kirbi files), which contain *both* a ticket *and* the corresponding session key. People tend to call these .kirbi files “tickets”, but it’s worth keeping in mind that they contain *both* pieces of data (as a “ticket” in the Kerberos sense, not the hacker’s sense, isn’t useful without the corresponding session key).
+There’s a bit of terminology creep when discussing Kerberos tickets. Mimikatz and Rubeus are actually dumping Kerberos data structures (as .kirbi files), which contain *both* a ticket *and* the corresponding session key. People tend to call these .kirbi files “tickets”, but it’s worth keeping in mind that they contain *both* pieces of data (as a “ticket” in the Kerberos sense, not the hacker’s sense, isn’t useful without the corresponding session key).
 
 ## Atacking Kerberos
 
@@ -76,7 +76,7 @@ The main defenses against kerberoasting are (1) strong passwords and (2) making 
 
 AES-REP roasting is basically kerberoasting for regular user accounts. The only requirement to roast a user account is that Kerberos pre-authentication is disable.
 
-(When pre-authentication is disabled, the authentication server will supply a ticket granting ticket and a session key automatically when requested, *without first verifying the user*. This data is then stored offline by the Windows machine for later decryption when the user with pre-authentication disabled logs in. But this means that all we need to do is to break the user’s [NT hash](windows-password-hashes.md)!)
+(When pre-authentication is disabled, the authentication server will supply a ticket granting ticket and a session key automatically when requested, *without first verifying the user*. This data is then stored offline by the Windows machine for later decryption when the user with pre-authentication disabled logs in. But this means that all we need to do is to break the user’s NT hash!)
 
 Basically the only mitigation for this attack is to keep pre-authentication enabled, though strong password policies can help.
 
@@ -86,11 +86,11 @@ The only real way to defend against this attack is to *only* allow domain admins
 
 ## Golden/Silver Ticket Attacks
 
-The idea with gold and silver tickets is that, since the KDC and service long term secret keys are just the [NT hashes](windows-password-hashes.md) of the corresponding service account’s passwords, then if you can dump the password (or even its hash), you can *forge* a kerberos ticket without ever needing to contact the KDC.
+The idea with gold and silver tickets is that, since the KDC and service long term secret keys are just the NT hashes of the corresponding service account’s passwords, then if you can dump the password (or even its hash), you can *forge* a kerberos ticket without ever needing to contact the KDC.
 
-Silver tickets are forged using a service account’s [NT hash](windows-password-hashes.md), and can be used to grant any user access to that service. This works because Kerberos implicitly assumes that *only* the KDC and the service account know the service account’s long term secret key.
+Silver tickets are forged using a service account’s NT hash, and can be used to grant any user access to that service. This works because Kerberos implicitly assumes that *only* the KDC and the service account know the service account’s long term secret key.
 
-Golden tickets take things a step further — if you can get the `krbtgt` *user*’s [NT hash](windows-password-hashes.md), then you can forge a ticket granting ticket for any user, and then use that to get the KDC to provide a valid service ticket for any service that user has access to. This works because Kerberos trusts the encrypted ticket granting ticket blob and *doesn’t reauthenticate the user before granting further access*.
+Golden tickets take things a step further — if you can get the `krbtgt` *user*’s NT hash, then you can forge a ticket granting ticket for any user, and then use that to get the KDC to provide a valid service ticket for any service that user has access to. This works because Kerberos trusts the encrypted ticket granting ticket blob and *doesn’t reauthenticate the user before granting further access*.
 
 Golden tickets are powerful (since you can be anyone, it’s trivial to gain control of the domain), but also noisier — because you’re running through the KDC infrastructure, golden ticket still generate (almost) all of the normal logging, while silver tickets allow you to bypass the KDC completely and only generate logs on the service server (if that).
 
@@ -101,6 +101,9 @@ Golden tickets are powerful (since you can be anyone, it’s trivial to gain con
 * [Wikipedia: Kerberos (protocol)](https://en.wikipedia.org/wiki/Kerberos_%28protocol%29)
 * [Rubeus — Now With More Kekeo](http://www.harmj0y.net/blog/redteaming/rubeus-now-with-more-kekeo/)
 * [Silver & Golden Tickets](https://en.hackndo.com/kerberos-silver-golden-tickets/)
+* [Windows Password Hashes](windows-password-hashes.md)
+* [Using Mimikatz](mimikatz.md)
+* [Using Rubeus](rubeus.md)
 
 - - - -
 

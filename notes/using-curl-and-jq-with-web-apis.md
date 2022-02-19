@@ -11,31 +11,46 @@ curl "https://web.site/?parameter1=value1&parameter2=value2"
 For APIs that use GET/POST/PUT/etc. request types, combine the `-d` (data) and `-X` (request type) parameters:
 
 ```bash
-curl -X POST -d "parameter1=value1&parameter2=value2" "https://web.site/"
+curl -X POST \
+     -d "parameter1=value1&parameter2=value2" \
+        "https://web.site/"
 ```
 
 The `-d` parameter can also be specified multiple times (mostly for readability), in which case you’d normally want to have a single parameter/value pair for each instance.
 
 ```bash
-curl -X POST -d "parameter1=value1" -d "parameter2=value2" "https://web.site/"
+curl -X POST \
+     -d "parameter1=value1" \
+     -d "parameter2=value2" "https://web.site/"
 ```
 
 By default, cURL sends data with the `Content-Type: application/x-www-form-urlencoded`. If you need to change the content type (for example, you frequently need to send `Content-Type: application/json` with JSON data) or need to specify additional headers (frequently for authentication), then you can use the `-H` (header) parameter.
 
 ```bash
-curl -X POST -H "User-Token: XXXXXX" -d "parameter1=value1" -d "parameter2=value2" "https://web.site/"
+curl -X POST \
+     -H "User-Token: XXXXXX" \
+     -d "parameter1=value1" \
+     -d "parameter2=value2" "https://web.site/"
 ```
 
 Like `-d`, the `-H` parameter can be specified multiple times for multiple headers, and will smartly override cURL’s defaults.
 
 ```bash
-curl -X POST -H "User-Token: XXXXXX" -H "Username: My User" -d "parameter1=value1" -d "parameter2=value2" "https://web.site/"
+curl -X POST \
+     -H "User-Token: XXXXXX" \
+     -H "Username: My User" \
+     -d "parameter1=value1" \
+     -d "parameter2=value2" "https://web.site/"
 ```
 
 Because responses are often served up in a compact fashion, they’re often a bit hard to read. The `jq` command’s default filter (`.`) just pretty-prints (and colorizes!) JSON, which can make interpreting the API’s response much easier.
 
 ```bash
-curl -X POST -H "User-Token: XXXXXX" -H "Username: My User" -d "parameter1=value1" -d "parameter2=value2" "https://web.site/" | jq .
+curl -X POST \
+     -H "User-Token: XXXXXX" \
+     -H "Username: My User" \
+     -d "parameter1=value1" \
+     -d "parameter2=value2" "https://web.site/" | jq .
 ```
 
 ## Relevant Man Page Excerpts

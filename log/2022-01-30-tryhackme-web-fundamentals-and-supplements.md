@@ -2,7 +2,7 @@
 
 ## Tools'R'us
 
-See my [Tools'R'us](../notes/tryhackme-tools-r-us.md) CTF write-up.
+[See my Tools'R'us CTF write-up.](../notes/tryhackme-tools-r-us.md)
 
 ## Python Basics
 
@@ -30,7 +30,9 @@ The `readlines()` *method* takes a previously opened file handle and converts it
 
 SQLi is most common in PHP-based apps.
 
-If inputting a single quote (though remember that there are *three* kinds you need to test!) into an input causes an error, then you *probably* have SQLi (though be aware that in some cases [you will need to inject into multiple fields](../notes/tryhackme-web-fundamentals.md)).
+If inputting a single quote (though remember that there are *three* kinds you need to test!) into an input causes an error, then you *probably* have SQLi (though be aware that in some cases you will need to inject into multiple fields).
+
+* [TryHackMe: Web Fundamentals](../notes/tryhackme-web-fundamentals.md)
 
 ### Error Based SQLi
 
@@ -42,9 +44,12 @@ Note that when inputting SQL statements as GET variables, it will often be neces
 
 Boolean-based SQLi involves monitoring changes in responses to see if a query has executed or failed. The only reason you'd generally do this is if you're doing SQLi blind (where you don't get any output, or the output you do get isn't strongly coupled with the input query).
 
-Obviously, this requires that either the HTTP response code or payload changes depending on the results of the injection... (Some frameworks try to make blind SQLi difficult by using redirects, but it's possible -- though a pain -- to get around this with [Burp Suite](../notes/burp-suite.md)).
+Obviously, this requires that either the HTTP response code or payload changes depending on the results of the injection... (Some frameworks try to make blind SQLi difficult by using redirects, but it's possible -- though a pain -- to get around this with Burp Suite).
 
-One way this can be useful more generally is by using something like `AND (SELECT COUNT(*) FROM table_name) > 0` to probe for the existence/use of `table_name` (see [this tutorial](https://www.mysqltutorial.org/mysql-subquery/) for a non-malicious use case of this construction).
+One way this can be useful more generally is by using something like `AND (SELECT COUNT(*) FROM table_name) > 0` to probe for the existence/use of `table_name` (see this tutorial for a non-malicious use case of this construction).
+
+* [Using Burp Suite](../notes/burp-suite.md)
+* [MySQL Subquery](https://www.mysqltutorial.org/mysql-subquery/)
 
 ### Union Based SQLi
 
@@ -84,7 +89,7 @@ There's really just *a lot* of educated guessing that goes on in SQLi...
 
 ### Automating Exploitation
 
-Apparently [sqlmap](../notes/sqlmap.md) isn't allowed on the OSCP...
+Apparently sqlmap isn't allowed on the OSCP...
 
 Useful commands:
 
@@ -95,10 +100,14 @@ Useful commands:
 * `--batch`: Do not prompt for input
 * `--dbms`: Choose the back-end DBMS (MySQL, PostgreSQL, etc.), if known
 * `--passwords`: Attempt to obtain user password hashes
-* `--os-pwn`: Attempt to pop a [meterpreter](../notes/metasploit.md) shell
+* `--os-pwn`: Attempt to pop a meterpreter shell
 * `--risk`: Set maximum risk level of tests (1 - 3)
 
-One handy way to seed a URL is using requests harvested with [Burp Suite](../notes/burp-suite.md).
+One handy way to seed a URL is using requests harvested with Burp Suite.
+
+* [Using “sqlmap”](../notes/sqlmap.md)
+* [Using Metasploit](../notes/metasploit.md)
+* [Using Burp Suite](../notes/burp-suite.md)
 
 - - - -
 

@@ -43,7 +43,7 @@ Technically TLDs are *not* actually the top of the domain hierarchy — that wou
 ```
 Client
   → Recursive DNS server (local, LAN, ISP)
-    → (possibly other DNS servers that the previous recursive DNS server point to)
+    → (possibly other DNS servers)
       → Root DNS server
         → TLD server (.com, etc.)
           → Authoritative DNS server (NS record)
@@ -65,8 +65,6 @@ Everything that happens first between the client and the root DNS server is just
 ## HTTP in Detail
 
 ### Requests and Responses
-
-Parts of a URL:
 
 | Scheme |     | User |   | Password |   |    Domain   |   | Port |   |      Path      |   |    Query    |   |      Fragment     |
 |:------:|:---:|:----:|:-:|:--------:|:-:|:-----------:|:-:|:----:|:-:|:--------------:|:-:|:-----------:|:-:|:-----------------:|

@@ -19,9 +19,9 @@ The /usr/share/wordlists/dirbuster directory holds lists of various common direc
 The simplest PHP web shell:
 
 ```php
-`<?php  
+<?php  
     echo system($_GET["cmd"]);  
-?>`
+?>
 ```
 
 This takes a GET variable `cmd` and executes it (semicolons, output redirection, and the like are allowed).
@@ -47,7 +47,9 @@ Common types of filtering:
 * File name (but typically files are renamed now, which can make finding an uploaded shell tricky)
 * File content (the deep packet inspection of files!)
 
-Apparently PHPv5 and higher has a [poison null byte](../notes/poison-null-byte.md) resistant extension filter.
+Apparently PHPv5 and higher has a poison null byte resistant extension filter.
+
+* [The Poison Null Byte](../notes/poison-null-byte.md)
 
 - - - -
 

