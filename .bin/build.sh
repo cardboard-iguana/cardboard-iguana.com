@@ -14,10 +14,10 @@ fi
 # Clone the theme and copy relevant files into the main repository.
 #
 git clone https://github.com/necopinus/website-theme.git _theme
-rm --force _theme/README.md _theme/LICENSE
-find _theme -mindepth 1 -maxdepth 1 -not -iname '.*' -exec basename "{}" \; | xargs rm --recursive --force
+rm -f _theme/README.md _theme/LICENSE
+find _theme -mindepth 1 -maxdepth 1 -not -iname '.*' -exec basename "{}" \; | xargs rm -rf
 mv _theme/* .
-rm --recursive --force _theme
+rm -rf _theme
 
 # Build website.
 #
