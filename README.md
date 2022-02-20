@@ -27,3 +27,8 @@
 * [<span aria-hidden="true">🌃</span> LinkedIn](https://www.linkedin.com/in/necopinus/)
 * [<span aria-hidden="true">🔏</span> Keybase](https://keybase.io/necopinus)
 * [<span aria-hidden="true">📧</span> Email](mailto:nathan.acks@cardboard-iguana.com)
+
+- - - -
+
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">🏷️</span> #MOC

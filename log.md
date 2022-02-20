@@ -79,3 +79,8 @@
 * [2021-09-13 TryHackMe: Pre Security](log/2021-09-13-tryhackme-pre-security.md)
 * [2021-09-12 TryHackMe: Pre Security](log/2021-09-12-tryhackme-pre-security.md)
 * [2021-09-11 Context Setting](log/2021-09-11-context-setting.md)
+
+- - - -
+
+<span aria-hidden="true">👤</span> Nathan Acks  
+<span aria-hidden="true">🏷️</span> #MOC
