@@ -8,7 +8,7 @@ Fortunately, Vi and ViM can be set to override the default $SHELL using `:set sh
 
 ## References
 
-* [ssh works with my custom shell but can't execute commands directly using ssh](https://s
+* [ssh works with my custom shell but can't execute commands directly using ssh](https://stackoverflow.com/questions/52604245/ssh-works-with-my-custom-shell-but-cant-execute-commands-directly-using-ssh)
 
 - - - -
 
