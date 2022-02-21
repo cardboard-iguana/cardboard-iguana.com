@@ -32,7 +32,7 @@ While some of these constraints (particularly around linking) remain a bit vexin
 * [Château MaxMin()](https://chateaumaxmin.info)
 * [IPFS](https://ipfs.io/)
 * [ENS](https://ens.domains/)
-* [Blockchain File Storage and Hosting | Nathan Acks](https://www.youtube.com/watch?v=G0-sJB5mbps)
+* [Blockchain File Storage and Hosting \| Nathan Acks](https://www.youtube.com/watch?v=G0-sJB5mbps)
 * [The Yak Collective](https://www.yakcollective.org/)
 * [Project Gemini Speculative Specification](gemini://gemini.circumlunar.space/docs/specification.gmi)
 * [Static-site generators (IPFS Docs)](https://docs.ipfs.io/how-to/websites-on-ipfs/static-site-generators/)

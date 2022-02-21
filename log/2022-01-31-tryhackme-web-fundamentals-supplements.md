@@ -182,7 +182,7 @@ References used while writing this:
 * [Python File readlines() Method](https://www.tutorialspoint.com/python/file_readlines.htm)
 * [Quickstart -- Requests](https://docs.python-requests.org/en/latest/user/quickstart/)
 * [Calculating Time Difference](https://stackoverflow.com/a/3426953)
-* [Python string | strip()](https://www.geeksforgeeks.org/python-string-strip/)
+* [Python string \| strip()](https://www.geeksforgeeks.org/python-string-strip/)
 
 My general strategy here is to not get too fancy in Python, but rather just to output the time it takes to log in given a particular username and then do the subsequent analysis using normal shell tools.
 
