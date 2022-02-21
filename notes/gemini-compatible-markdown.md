@@ -53,6 +53,10 @@ Getting the width of code blocks right is a bit tricky. As of February 16, 2022,
 
 This all actually suggests that 57 – 62 characters is a reasonable target for wrapping (I kind of wish it was 72, but *c’est la vie*).
 
+### Tables
+
+The md2gmn utility handles tables by converting them into code blocks, which works for my purposes.
+
 ## Links & Images
 
 Gemini doesn’t support Markdown links or images, though tools like md2gmn can handle the conversion into Gemini’s format.
@@ -61,7 +65,7 @@ Gemini doesn’t support Markdown links or images, though tools like md2gmn can 
 =>[<whitespace>]<URL>[<whitespace><USER-FRIENDLY LINK NAME>]
 ```
 
-I’ve yet to run into a Markdown-to-Gemini converter that handles inline links in a completely sensible way. That said, md2gmi does a good job *if and only if* links are presented as unordered lists or on singleton lines. Note that when using this convention, *no* non-link characters (except perhaps for the leading `* ` in unordered lists) may be used. This means that presenting links in unordered lists is probably the best option.
+I’ve yet to run into a Markdown-to-Gemini converter that handles inline links in a completely sensible way. That said, md2gmn does a good job *if and only if* links are presented as unordered lists or on singleton lines. Note that when using this convention, *no* non-link characters (except perhaps for the leading `* ` in unordered lists) may be used. This means that presenting links in unordered lists is probably the best option.
 
 As an example, suppose we have the following markdown:
 
@@ -76,7 +80,7 @@ An image follows.
 ![This is some image alt-text](../02779186c69ce442260bd67d3bd11b3e.webp)
 ```
 
-Then md2gmi will output:
+Then md2gmn will output:
 
 ```gemini
 This is a sentence.
