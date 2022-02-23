@@ -4,7 +4,6 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-optional-front-matter
   - jekyll-relative-links
-  - jekyll-auto-image
   - jekyll-readme-index
 
 # Some generic (non-standard) site settings.
@@ -16,8 +15,7 @@ icon: 02779186c69ce442260bd67d3bd11b3e.webp
 cover: 208b5c08b44922051e28674bb930398f.jpg
 author: Nathan Acks
 
-# Default image for the auto-image plugin (used in Twitter
-# Cards and Open Graph image tags.
+# Default image page (used in Twitter Cards and Open Graph image tags).
 #
 image: /770a338bf8f3336b20fa14650b6f5049.webp
 
