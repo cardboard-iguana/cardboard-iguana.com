@@ -176,6 +176,10 @@
 * [OPSEC in Theory and Practice](notes/opsec-in-theory-and-practice.md)
 * [Version Control with Git](notes/version-control-with-git.md)
 
+### ITPro.TV
+
+* [ITPro.TV: CompTIA Security+ (SY0-601)](notes/itprotv-comptia-security-plus.md)
+
 ### TryHackMe
 
 * [TryHackMe: Attacking Kerberos](notes/tryhackme-attacking-kerberos.md)
@@ -190,6 +194,7 @@
 * [TryHackMe: Game Zone](notes/tryhackme-game-zone.md)
 * [TryHackMe: Google Dorking](notes/tryhackme-google-dorking.md)
 * [TryHackMe: hackernote](notes/tryhackme-hackernote.md)
+* [TryHackMe: Jr. Security Analyst Intro](notes/tryhackme-jr-security-analyst-intro.md)
 * [TryHackMe: MAL: Malware Introductory](notes/tryhackme-mal-malware-introductory.md)
 * [TryHackMe: MAL: Researching](notes/tryhackme-mal-researching.md)
 * [TryHackMe: MAL: Strings](notes/tryhackme-mal-strings.md)
