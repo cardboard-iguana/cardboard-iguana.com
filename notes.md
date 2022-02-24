@@ -194,6 +194,7 @@
 * [TryHackMe: Game Zone](notes/tryhackme-game-zone.md)
 * [TryHackMe: Google Dorking](notes/tryhackme-google-dorking.md)
 * [TryHackMe: hackernote](notes/tryhackme-hackernote.md)
+* [TryHackMe: Jr. Penetration Tester](notes/tryhackme-jr-penetration-tester.md)
 * [TryHackMe: Jr. Security Analyst Intro](notes/tryhackme-jr-security-analyst-intro.md)
 * [TryHackMe: MAL: Malware Introductory](notes/tryhackme-mal-malware-introductory.md)
 * [TryHackMe: MAL: Researching](notes/tryhackme-mal-researching.md)

@@ -9,10 +9,13 @@
 ### Social Engineering Techniques
 
 * [2022-02-22 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Security Analyst Intro](../log/2022-02-22-itprotv-comptia-security-plus-and-tryhackme-jr-security-analyst-intro.md)
-
-<!--
+* [2022-02-23 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-23-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Malware
+
+* [2022-02-23 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-23-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
+<!--
 
 ### Password Attacks — Types
 
@@ -198,13 +201,13 @@
 
 ### Risk Management Concepts Business Impact Analysis
 
-### Privacy And Data Sensitivity Breaches & Data Types
+### Privacy and Data Sensitivity — Breaches & Data Types
 
-### Privacy, Data Sensitivity — Privacy Enhancing Tech
+### Privacy and Data Sensitivity — Privacy Enhancing Tech
 
-### Privacy, Data Sensitivity, Roles, Responsibilities
+### Privacy and Data Sensitivity — Roles & Responsibilities
 
-### Privacy And Data Sensitivity — Other Areas
+### Privacy and Data Sensitivity — Other Areas
 
 -->
 
