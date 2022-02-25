@@ -89,7 +89,7 @@ Trojan: Malware hidden inside of an otherwise non-malicious application.
 
 Trojans are often the first stage of an attack, downloading information stealers, keyloggers, and the like (which may themselves be trojans).
 
-”Remote access trojans” and “backdoor trojans” are just two different words for the same thing.
+”Remote access trojans” and “backdoor trojans” are just two different words for the same thing. Exam Cram emphasizes that (at least on Windows) these are often associated with security warnings (at least during the initial infection).
 
 Rootkit: Malware that integrates itself into core system files and gains administrative rights.
 

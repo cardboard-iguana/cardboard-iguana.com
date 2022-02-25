@@ -1,5 +1,6 @@
 # <span aria-hidden="true">🪵</span> A Hacker’s Log <span aria-hidden="true">🪵</span>
 
+* [2022-02-24 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](log/2022-02-24-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [2022-02-23 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](log/2022-02-23-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [2022-02-22 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Security Analyst Intro](log/2022-02-22-itprotv-comptia-security-plus-and-tryhackme-jr-security-analyst-intro.md)
 * [2022-02-20 Cardboard Iguana Security is Live!](log/2022-02-20-cardboard-iguana-security-is-live.md)

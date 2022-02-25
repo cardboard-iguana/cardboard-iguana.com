@@ -15,11 +15,15 @@
 
 * [2022-02-23 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-23-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-<!--
-
 ### Password Attacks — Types
 
+* [2022-02-24 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-24-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### Password Attacks — Tools
+
+* [2022-02-24 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-24-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
+<!--
 
 ### Application Attacks — Injections
 
