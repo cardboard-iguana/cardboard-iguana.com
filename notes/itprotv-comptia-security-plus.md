@@ -27,21 +27,39 @@
 
 ### Application Attacks — Injections
 
+* [2022-02-27 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-27-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### Application Attacks — System Resources
+
+* [2022-02-27 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-27-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Application Attacks — XSS And XSRF
 
+* [2022-02-27 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-27-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### Application Attacks — Replay Attacks
+
+* [2022-02-27 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-27-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Network Attacks — DNS Attacks
 
+* [2022-02-27 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-27-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### Network Attacks — Layer 2 Attacks
+
+* [2022-02-27 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-27-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Network Attacks — DoS And DDoS
 
+* [2022-02-27 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-27-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### Network Attacks — MiTM And MiTB
 
+* [2022-02-27 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-27-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### Network Attacks — Wireless
+
+* [2022-02-27 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-27-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Vulnerabilities
 
