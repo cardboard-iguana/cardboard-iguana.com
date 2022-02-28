@@ -68,6 +68,8 @@
 * [Get-WinEvent](notes/get-winevent.md)
 * [How to Add Windows Users (at the Command Line)](notes/how-to-add-windows-users-at-the-command-line.md)
 * [How to Calculate File Hashes on Windows](notes/how-to-calculate-file-hashes-on-windows.md)
+* [Use “more” on Windows](notes/use-more-on-windows.md)
+* [Using “ipconfig”](notes/ipconfig.md)
 * [Using PowerShell](notes/powershell.md)
 
 ### GUI

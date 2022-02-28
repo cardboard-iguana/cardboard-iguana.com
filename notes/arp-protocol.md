@@ -4,6 +4,14 @@ The ARP protocol links OSI layers 2 and 3 by mapping IP addresses to MAC address
 
 Basically, an ARP request will broadcast “to” a particular IP address but using the “broadcast” MAC address (00:00:00:00:00:00), and the computer with that IP address will then reply in a non-broadcast fashion (since this requires that both the MAC address and IP address be filled in, such a direct reply provides the desired information by way of its very existence).
 
+## ARP Cache
+
+Examine the ARP cache on Windows:
+
+```bat
+arp -a
+```
+
 ## ARP Scanning
 
 Scanning a network with ARP rather than ICMP is one method of keeping a lower profile, as ARP requests are less likely to be monitored.
