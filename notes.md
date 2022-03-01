@@ -111,6 +111,7 @@
 
 ## Red Team
 
+* [crt.sh](https://crt.sh/)
 * [Enumerate NFS Shares](notes/enumerate-nfs-shares.md)
 * [Enumerate Samba Users and Shares](notes/enumerate-samba-users-and-shares.md)
 * [Enumerate “sudo” Access](notes/enumerate-sudo-access.md)
@@ -136,12 +137,14 @@
 * [LFI (Local File Inclusion) Attacks](notes/local-file-inclusion-attacks.md)
 * [Living Off Trusted Sites](https://lots-project.com/)
 * [MITRE ATT&CK Emulation Plans](notes/mitre-attack-emulation-plans.md)
+* [OWASP favicon database](https://wiki.owasp.org/index.php/OWASP_favicon_database)
 * [Payloads All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 * [The Poison Null Byte](notes/poison-null-byte.md)
 * [SETUID Bash](notes/setuid-bash.md)
 * [Shell Escapes](notes/shell-escapes.md)
 * [SQL Injection](notes/sql-injection.md)
 * [Using Burp Suite](notes/burp-suite.md)
+* [Using “ffuf”](notes/ffuf.md)
 * [Using “gobuster”](notes/gobuster.md)
 * [Using Hashcat](notes/hashcat.md)
 * [Using Hydra](notes/hydra.md)

@@ -10,8 +10,6 @@
 
 * [2022-02-24 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-24-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-<!--
-
 ## Introduction to Web Hacking
 
 ### Walking an Application
@@ -25,6 +23,8 @@
 ### Subdomain Enumeration
 
 * [2022-02-28 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
+<!--
 
 ### Authentication Bypass
 

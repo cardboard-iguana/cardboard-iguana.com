@@ -1,4 +1,4 @@
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester #Draft
+# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
 ## CompTIA Security+ Exam Cram
 
@@ -70,101 +70,117 @@ Many times the reason organizations will attempt to refactor third-party applica
 
 ## TryHackMe: Jr. Penetration Tester
 
-### Walking an Application
-
-==xxx==
-
-### Exploring the Website
-
-==xxx==
-
 ### Viewing the Page Source
 
-==xxx==
+Who tries to hide secret links on their web page? But apparently, this is something more than one org does, and is a good reason to view source and/or inspect the DOM.
 
-### Developer Tools: Inspector
-
-==xxx==
+Also, another good reminder to look for indexable directories.
 
 ### Developer Tools: Debugger
 
-==xxx==
+Good to know — JavaScript breakpoints persist across page loads. (This makes sense, as many times JavaScript will only be run once, immediately after page load.)
 
-### Developer Tools: Network
-
-==xxx==
-
-### What is Content Discovery?
-
-==xxx==
-
-### Manual Discovery: Robots.txt
-
-==xxx==
+In Firefox, breakpoints can be set by clicking on the line number in a JavaScript file viewed in the Debugger (Sources in Chrome) pane.
 
 ### Manual Discovery: Favicon
 
-==xxx==
+Quickly match a favicon to its framework!
 
-### Manual Discovery: Sitemap.xml
+Start by getting the favicon MD5 hash:
 
-==xxx==
+```bash
+curl $URL_OF_FAVICON | md5sum
+```
 
-### Manual Discovery: HTTP Headers
+The look it up:
 
-==xxx==
-
-### Manual Discovery: Framework Stack
-
-==xxx==
+* [OWASP favicon database](https://wiki.owasp.org/index.php/OWASP_favicon_database)
 
 ### OSINT: Google Hacking / Dorking
 
-==xxx==
+Useful Google search modifiers:
+
+| Modifier  | Effect                                           |
+|:--------- |:------------------------------------------------ |
+| site:     | Search only within the specified domain          |
+| inurl:    | Require term to be present in the URL            |
+| filetype: | Only return results with the specified extension |
+| intitle:  | Require term to be present in the page title     |
 
 ### OSINT: Wappalyzer
 
-==xxx==
-
-### OSINT: Wayback Machine
-
-==xxx==
-
-### OSINT: GitHub
-
-==xxx==
+* [Wappalyzer](https://www.wappalyzer.com/)
 
 ### OSINT: S3 Buckets
 
-==xxx==
+It can often be fruitful to just attempt to *guess* an organization’s S3 buckets. Common variants:
+
+* `https://${NAME}.s3.amazonaws.com`
+* `https://${NAME}-assets.s3.amazonaws.com`
+* `https://${NAME}-www.s3.amazonaws.com`
+* `https://${NAME}-public.s3.amazonaws.com`
+* `https://${NAME}-private.s3.amazonaws.com`
+
+I’ll bet dollars to donuts that “dev” and “prod” are also common suffixes.
 
 ### Automated Discovery
 
-==xxx==
+* [fuff](../notes/ffuf.md)
+* [gobuster](../notes/gobuster.md)
 
-### Subdomain Enumeration in Brief
+There’s also dirbuster, but I kinda prefer gobuster.
 
-==xxx==
+Note that the SecLists web discovery `common.txt` wordlist lives in /usr/share/wordlists/dirb/common.txt on Kali Linux.
 
 ### OSINT: SSL/TLS Certificates
 
-==xxx==
+Certificate transparency logs can be used to find subdomains with specially provisioned SSL certificates. The main option (given that the Google search tool is being taken down in a few months:
+
+* [crt.sh](https://crt.sh/)
 
 ### OSINT: Search Enginers
 
-==xxx==
+A google search for subdomain enumeration:
 
-### DNS Bruteforce
+```text
+site:*.example.com -site:www.example.com
+```
 
-==xxx==
+Note that `*.example.com` searches subdomains of `example.com`!
+
+### DNS Brute Forcing
+
+The dnsrecon tool actually allows us to (attempt) to brute force subdomains from a wordlist:
+
+```bash
+dnsrecon --type brt \
+         --domain $DOMAIN \
+         --dictionary /usr/share/wordlists/metasploit/namelist.txt
+```
 
 ### OSINT: Sublist3r
 
-==xxx==
+Alternative to dnsrecon (above), though not installed on Kali by default.
+
+```bash
+# Install Sublist3r
+#
+sudo apt install sublist3r
+```
 
 ### Virtual Hosts
 
-==xxx==
+It turns out that ffuf can fuzz HTTP headers, which can be used to try to brute force virtual host entries.
+
+```bash
+ffuf -w /usr/share/wordlists/metasploit/namelist.txt \
+     -H "Host: FUZZ.$DOMAIN" \
+     -u https://$IP
+```
+
+Use `-fs $SIZE` to remove results of a particular size from the list (which you’ll probably need to do in most cases).
+
+* [fuff](../notes/ffuf.md)
 
 - - - -
 
