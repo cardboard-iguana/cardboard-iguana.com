@@ -125,7 +125,7 @@ I’ll bet dollars to donuts that “dev” and “prod” are also common suffi
 
 ### Automated Discovery
 
-* [fuff](../notes/ffuf.md)
+* [ffuf](../notes/ffuf.md)
 * [gobuster](../notes/gobuster.md)
 
 There’s also dirbuster, but I kinda prefer gobuster.
@@ -180,7 +180,7 @@ ffuf -w /usr/share/wordlists/metasploit/namelist.txt \
 
 Use `-fs $SIZE` to remove results of a particular size from the list (which you’ll probably need to do in most cases).
 
-* [fuff](../notes/ffuf.md)
+* [ffuf](../notes/ffuf.md)
 
 - - - -
 
