@@ -63,7 +63,11 @@
 
 ### Vulnerabilities
 
+* [2022-02-28 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### Threat Intelligence — OSINT
+
+(Chapter 5)
 
 ### Threat Intelligence — Threat Maps And Feeds
 
@@ -72,6 +76,8 @@
 ### Threat Actors And Vectors
 
 ## Cryptography
+
+(Chapter 16)
 
 ### Cryptography Concepts
 
@@ -83,9 +89,13 @@
 
 ### Secure Protocols
 
+(Chapter 17)
+
 ### Keys
 
 ### PKI Concepts
+
+(Chapter 25)
 
 ### Certificates
 
@@ -93,9 +103,15 @@
 
 ## Identity and Access Management
 
+(Chapter 23)
+
 ### Authentication And Authorization
 
+(Chapter 24)
+
 ### Authentication Methods
+
+(Chapter 12)
 
 ### Additional Authentication Methods
 
@@ -121,17 +137,29 @@
 
 ### Application Security
 
+(Chapter 11)
+
 ### Physical Security
+
+(Chapter 15)
 
 ### Wireless Security
 
+(Chapter 20)
+
 ### Secure Data Destruction
 
+(Chapter 9)
+
 ### Host Security — Endpoint Protection
+
+(Chapter 18)
 
 ### Host Security — Hardening
 
 ### Mobile Device Deployment
+
+(Chapter 21)
 
 ### Mobile Device Management And Enforcement
 
@@ -139,7 +167,11 @@
 
 ### Specialized Systems
 
+(Chapter 26)
+
 ### Network Security — Segmentation
+
+(Chapter 19)
 
 ### Network Security — VPNs
 
@@ -155,6 +187,8 @@
 
 ### Virtualization
 
+(Chapter 10)
+
 ### Cloud Concepts
 
 ### Cloud Services
@@ -163,9 +197,15 @@
 
 ### Computing Types
 
+(Chapter 14)
+
 ### Cloud Security Controls
 
+(Chapter 22)
+
 ## Operational Resiliency
+
+(Chapter 13)
 
 ### Hardware Redundancy
 
@@ -183,19 +223,31 @@
 
 ### Vulnerability Scans
 
+(Chapter 7)
+
 ### SIEM And SOAR Systems
 
 ### Pentesting Techniques
+
+(Chapter 8)
 
 ### Pentesting Exercise Types
 
 ### Digital Forensics Concepts
 
+(Chapter 30)
+
 ### Investigational Data Sources
+
+(Chapter 28)
 
 ### Incident Response Process
 
+(Chapter 27)
+
 ### Incident Response Plans
+
+(Chapter 29)
 
 ### Attack Frameworks
 
@@ -203,11 +255,17 @@
 
 ### Security Controls
 
+(Chapter 31)
+
 ### Regulations, Standards And Frameworks
+
+(Chapter 32)
 
 ### Spotlight On General Data Protection Regulation
 
 ### Organizational Security Policies — Personnel
+
+(Chapter 33)
 
 ### Organizational Security Policies — 3rd Party Risk
 
@@ -217,6 +275,8 @@
 
 ### Risk Management Concepts — Vocabulary
 
+(Chapter 34)
+
 ### Risk Management Concepts — Types & Strategies
 
 ### Risk Management Concepts — Risk Analysis
@@ -224,6 +284,8 @@
 ### Risk Management Concepts Business Impact Analysis
 
 ### Privacy and Data Sensitivity — Breaches & Data Types
+
+(Chapter 35)
 
 ### Privacy and Data Sensitivity — Privacy Enhancing Tech
 

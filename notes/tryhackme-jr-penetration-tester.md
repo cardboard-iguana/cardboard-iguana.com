@@ -16,9 +16,15 @@
 
 ### Walking an Application
 
+* [2022-02-28 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### Content Discovery
 
+* [2022-02-28 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### Subdomain Enumeration
+
+* [2022-02-28 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Authentication Bypass
 
