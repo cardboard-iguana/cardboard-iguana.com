@@ -65,15 +65,23 @@
 
 <!--
 
+(Chapter 5)
+
 ### Threat Intelligence — OSINT
 
-(Chapter 5)
+* [2022-03-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Threat Intelligence — Threat Maps And Feeds
 
+* [2022-03-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### Threat Intelligence Vulnerability Databases Feed
 
+* [2022-03-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### Threat Actors And Vectors
+
+* [2022-03-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ## Cryptography
 

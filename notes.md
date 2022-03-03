@@ -1,4 +1,4 @@
-# <span aria-hidden="true">📓</span> A Hacker’s Notes <span aria-hidden="true">📓</span>
+# <span aria-hidden="true">📚</span> A Hacker’s Notes <span aria-hidden="true">📚</span>
 
 ## iOS & iPadOS
 
