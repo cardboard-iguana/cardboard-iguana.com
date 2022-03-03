@@ -1,4 +1,4 @@
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester #Draft
+# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
 ## CompTIA Security+ Exam Cram
 
@@ -158,25 +158,67 @@ Threat Vector: An avenue of attack.
 
 ## TryHackMe: Jr. Penetration Tester
 
-### Authentication Bypass in Brief
-
-==xxx==
-
 ### Username Enumeration
 
-==xxx==
+Use ffuf to enumerate potential users based on a wordlist (assumes that the form we’re hitting is not AJAX-y):
+
+```bash
+ffuf -w /usr/share/wordlists/wfuzz/others/names.txt -X POST -d "$POST_VARS" -H "Content-Type: application/x-www-form-urlencoded" -u $FORM_URL -mr "$ERROR_MEESAGE_SUBSTRING"
+```
+
+Here `$POST_VARS` should look something like `username=FUZZ&email=FUZZ@example.com&password=1234&cpassword=1234` (recall that FUZZ is the variable that ffuf will be fuzzing over). The `-mr` flag instructs ffuf to filter on page text for a “successful hit”.
+
+Note that ffuf is kind of noisy in its default output, so when generating user lists it may be useful to supply the `-s` flag, which will suppress all lines except those matched with `-mr`.
+
+* [Using “ffuf”](../notes/ffuf.md)
 
 ### Brute Forcing
 
-==xxx==
+Ffuf can also be used as a simple brute-forcer:
+
+```bash
+ffuf -w /usr/share/wordlists/wfuzz/others/names.txt:W1,$HOME/.local/share/red-team/wordlists/rockyou.txt:W2 -X POST -d "$POST_VARS" -H "Content-Type: application/x-www-form-urlencoded" -u $LOGIN_URL -fc 200
+```
+
+Here we assign W1 and W2 to take terms from the two supplied wordlists; `$POST_VARS` then looks something like `username=W1&password=W2`. This example assumes that a successful login will return an HTTP status code *other* than 200 (probably a 301 or 302).
+
+Again, the `-s` flag can be advisable here.
+
+Note that ffuf will try every possible combination of elements between the two wordlists, which means that the number of combinations tried grows geometrically.
 
 ### Logic Flaws
 
-==xxx==
+It’s worth experimenting with forms to check how GET and POST variables interact (and if one can be used to override the other.
 
 ### Cookie Tampering
 
-==xxx==
+Interesting; sometimes cookies are hashes, rather than plain strings. I’m guessing that the reason you’d do this is that you’re concatenating some values together and then check to see if the hash matches before granting certain privileges? This seems potentially much less secure than password hashing (even with a salt) though, as the number of terms that could reasonably be included in a permission string is much smaller than the number of character combinations in even a modest password…
+
+[CrackStation is an online database of hashes (basically a rainbow table).](https://crackstation.net/)
+
+I guess the reason you’d do this is to try to minimize the number of database hits?
+
+On the other hand, seeing base64-encoded cookies is something I’m much more familiar with!
+
+Remember that `basenc` can be used to encode/decode a variety of encodings, including URL-safe base64 (which there don’t seem to be any other good command line tools to work with).
+
+```bash
+# Encode $STRING to base64.
+#
+echo "$STRING" | basenc --base64
+
+# Encode $STRING to URL-safe base64.
+#
+echo "$STRING" | basenc --base64url
+
+# Dencode $BASE64_STRING from base64.
+#
+echo "$BASE64_STRING" | basenc -d --base64
+
+# Dencode $BASE64_STRING from URL-safe base64.
+#
+echo "$BASE64_STRING" | basenc -d --base64url
+```
 
 - - - -
 

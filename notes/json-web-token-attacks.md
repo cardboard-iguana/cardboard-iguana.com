@@ -45,6 +45,7 @@ sed -e 's/=*$//'
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [JSON Web Tokens](https://jwt.io)
 * [lmammino / jwt-cracker](https://github.com/lmammino/jwt-cracker)
+* [Using “basenc”](basenc.md)
 
 - - - -
 

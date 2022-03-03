@@ -40,6 +40,7 @@
 * [Upgrading PostgreSQL](notes/upgrading-postgresql.md)
 * [Use an Alternate SSH Key with Git](notes/use-an-alternate-ssh-key-with-git.md)
 * [Use OpenSSL to Encrypt and Decrypt Files](notes/use-openssl-to-encrypt-and-decrypt-files.md)
+* [Using “basenc”](notes/basenc.md)
 * [Using “curl” and “jq” with Web APIs](notes/using-curl-and-jq-with-web-apis.md)
 * [Using “ffmpeg”](notes/ffmpeg.md)
 * [Using “netcat”](notes/netcat.md)
