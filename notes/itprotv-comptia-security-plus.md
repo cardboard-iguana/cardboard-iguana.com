@@ -79,27 +79,25 @@
 
 * [2022-03-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-<!--
-
 ## Cryptography
-
-(Chapter 16)
 
 ### Cryptography Concepts
 
-* [2022-03-03 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-03-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-03-03 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-03-itprotv-comptia-security-plus.md)
 
 ### Encryption And Steganography
 
-* [2022-03-03 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-03-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-03-03 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-03-itprotv-comptia-security-plus.md)
 
 ### Hashing
 
-* [2022-03-03 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-03-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-03-03 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-03-itprotv-comptia-security-plus.md)
 
 ### Symmetric vs. Asymmetric Encryption
 
-* [2022-03-03 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-03-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-03-03 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-03-itprotv-comptia-security-plus.md)
+
+<!--
 
 ### Secure Protocols
 
