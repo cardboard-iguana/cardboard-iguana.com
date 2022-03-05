@@ -2,7 +2,7 @@
 
 This guide will cover setting up Kali Linux on a Raspberry Pi 4B so that:
 
-* It can be used as *both* a USB C “gadget” and over ethernet with an iPad Pro;
+* It can be used as a USB C “gadget” with an iPad Pro;
 * All files except for /boot are encrypted;
 * A full desktop environment is available on demand via RDP; and
 * The system *still* works as a desktop device in a pinch (BYO keyboard, mouse, and monitor).
@@ -10,8 +10,6 @@ This guide will cover setting up Kali Linux on a Raspberry Pi 4B so that:
 Be aware that this guide was written using the 64-bit 2021.2 Kali Linux image; YMMV with other images!
 
 It should be possible to adapt the steps here for other Debian-based operating systems with a Raspberry Pi 4B compatible image. It should *also* be possible to do this all in fewer steps; the guide below is split up in a very step-by-step fashion, and is in no way optimized for speed.
-
-NOTE: In my testing, an iPad Pro delivers enough power to run the Raspberry Pi and external SSD, but only barely (don't expect to attach anything else that pulls significant power and maintain a stable system). This limitation is the motivation for supporting connections over both USB C and the Raspberry Pi’s built-in ethernet, since the latter mode allows the use of an independent power supply to the Pi.
 
 ## Hardware and Software
 
@@ -25,8 +23,6 @@ Things you’ll want/need to follow along:
 * Physical access to a Linux system. (This could actually be the Pi itself, if you’ve already got it up and running with another operating system.)
 * An HDMI monitor, microHDMI-to-HDMI cable, and a USB keyboard (only needed until we set up network access and USB gadget mode).
 
-While not necessary for this walk-through, you may also want to pick up a USB ethernet dongle if you think you’ll want to eventually connect the Pi to a wired network (since we'll be running a DHCP server on the PI's built-in ethernet port).
-
 ## Create the Bootstrap microSD
 
 If you’re setting the Pi up for the first time, you’ll need to burn a Kali Linux microSD card to bootstrap off of. (If you already have a working Pi, fire it up and skip to the next section.)
@@ -34,25 +30,26 @@ If you’re setting the Pi up for the first time, you’ll need to burn a Kali L
 ```bash
 # Download the latest version of Kali Linux from
 # https://www.kali.org/get-kali/#kali-arm. Check that
-# page to see which file name you should be using here
-# (2021.2 is current at the time of this writing).
+# page to see which file name you should be using
+# here (2021.2 is current at the time of this
+# writing).
 #
 curl -O https://images.kali.org/arm-images/kali-linux-2021.2-rpi4-nexmon-64.img.xz
 
-# Check the sha256 hash to make sure you’ve downloaded a
-# good file (the hash used below is for the 2021.2
-# image).
+# Check the sha256 hash to make sure you’ve
+# downloaded a good file (the hash used below is for
+# the 2021.2 image).
 #
 sha256sum kali-linux-2021.2-rpi4-nexmon-64.img.xz | \
 	grep -E "^97549d9e24dbd73add004b9521874dff6351a6275428356e804b98eb9e842c99 " && \
 	echo "SUCCESS - Download checksum looks good" || \
 	echo "FAILURE - Download checksum doesn’t match expected value; file corrupt or incorrect"
 
-# /dev/mmcblk0 is the SD card device on my system; YMMV.
-# Be sure to use the right device here, or you can hose
-# your system! If your system automatically mounts
-# partitions on insert, then you’ll need to unmount them
-# before performing this step.
+# /dev/mmcblk0 is the SD card device on my system;
+# YMMV. Be sure to use the right device here, or you
+# can hose your system! If your system automatically
+# mounts partitions on insert, then you’ll need to
+# unmount them before performing this step.
 #
 xzcat kali-linux-2021.2-rpi4-nexmon-64.img.xz | \
 	sudo dd of=/dev/mmcblk0 bs=4M status=progress
@@ -66,70 +63,71 @@ We’ll need more space in ROOTFS than the Kali image provides out-of-the-box. T
 
 You’re now ready to bootstrap your *actual* system!
 
-(Note that you can also create the encrypted partitions, format the file systems, and copy the operating system files to the second microSD card in this step, rather than the next one. Doing so saves you from having to download the Kali Linux image again, but since you *only* need to do this step when you’re bringing your first Pi to life I’m going to keep this section skipable.)
-
 ## Set Up the Encrypted microSD Card
 
 ```bash
 # Download the latest version of Kali Linux from
 # https://www.kali.org/get-kali/#kali-arm. Check that
-# page to see which file name you should be using here
-# (2021.2 is current at the time of this writing).
+# page to see which file name you should be using
+# here (2021.2 is current at the time of this
+# writing).
 #
 curl -O https://images.kali.org/arm-images/kali-linux-2021.2-rpi4-nexmon-64.img.xz
 
-# Check the sha256 hash to make sure you’ve downloaded a
-# good file (the hash used below is for the 2021.2
-# image).
+# Check the sha256 hash to make sure you’ve
+# downloaded a good file (the hash used below is for
+# the 2021.2 image).
 #
 sha256sum kali-linux-2021.2-rpi4-nexmon-64.img.xz | \
 	grep -E "^97549d9e24dbd73add004b9521874dff6351a6275428356e804b98eb9e842c99 " && \
 	echo "SUCCESS - Download checksum looks good" || \
 	echo "FAILURE - Download checksum doesn’t match expected value; file corrupt or incorrect"
 
-# Decompress the image. Note that you may experience I/O
-# hangs while decompressing the image; just be patient
-# and wait for the Pi’s little green light to stop
-# flashing.)
+# Decompress the image. Note that you may experience
+# I/O hangs while decompressing the image; just be
+# patient and wait for the Pi’s little green light to
+# stop flashing.)
 #
 unxz kali-linux-2021.2-rpi4-nexmon-64.img.xz
 
-# Everything from here on out needs to be run as root, so
-# let’s use sudo to open a root shell now.
+# Everything from here on out needs to be run as
+# root, so let’s use sudo to open a root shell now.
 #
 sudo -s
 
-# Mount the partitions in the Kali disk image. Your image
-# partitions will *probably* show up as /dev/loop0p1 and
-# /dev/loop0p2, but you may want to check the symlinks
-# under /dev/disk/by-label first, just to be sure.
+# Mount the partitions in the Kali disk image. Your
+# image partitions will *probably* show up as
+# /dev/loop0p1 and /dev/loop0p2, but you may want to
+# check the symlinks under /dev/disk/by-label first,
+# just to be sure.
 #
 losetup -Pf kali-linux-2021.2-rpi4-nexmon-64.img
 mkdir /mnt/img-{root,boot}
 mount /dev/loop0p1 /mnt/img-boot
 mount /dev/loop0p2 /mnt/img-root
 
-# Now connect up the microSD card reader and insert the
-# first microSD card and partition it. My card shows up
-# as /dev/mmcblk1 (so that’s what I’ll be using moving
-# forward), but you’ll want to double-check this; if you
-# use the wrong device here you can hose your system!
+# Now connect up the microSD card reader and insert
+# the first microSD card and partition it. My card
+# shows up as /dev/mmcblk1 (so that’s what I’ll be
+# using moving forward), but you’ll want to
+# double-check this; if you use the wrong device here
+# you can hose your system!
 #
-# Delete the current partition, make sure you’re using a
-# DOS partition table, and then create two new
-# partitions:
+# Delete the current partition, make sure you’re
+# using a DOS partition table, and then create two
+# new partitions:
 #
-# The first partition should be a primary partition 500MB
-# in size of type 0c (W95 FAT32 LBA).
+# The first partition should be a primary partition
+# 500MB in size of type 0c (W95 FAT32 LBA).
 #
 # The second partition should also be a primary
-# partition. It should use the remainder of the space and
-# be of type 83 (Linux).
+# partition. It should use the remainder of the space
+# and be of type 83 (Linux).
 #
 fdisk /dev/mmcblk1
 
-# Format the new partitions, mount them, and copy over
-# the operating system files.
+# Format the new partitions, mount them, and copy
+# over the operating system files.
 #
 mkfs.vfat -v -n BOOT /dev/mmcblk1p1
 cryptsetup -v -y luksFormat /dev/mmcblk1p2
@@ -142,23 +140,24 @@ rsync -avh /mnt/img-boot/ /mnt/ext-boot/
 rsync -avh /mnt/img-root/ /mnt/ext-root/
 
 # You should copy your SSH public key(s) over to
-# /mnt/ext-root at this point, as you’ll eventually need
-# these to unlock the Kali ROOTFS partition via dropbear.
-# I’m not writing out that step explicitly though; you
-# could be generating a new keypair here, using keys you
-# copied over to the bootstrap microSD above, or just
-# copying ~/.ssh/authorized_keys from an existing system.
-# You do you.
+# /mnt/ext-root at this point, as you’ll eventually
+# need these to unlock the Kali ROOTFS partition via
+# dropbear. I’m not writing out that step explicitly
+# though; you could be generating a new keypair here,
+# using keys you copied over to the bootstrap microSD
+# above, or just copying ~/.ssh/authorized_keys from
+# an existing system. You do you.
 
 # Make the Pi load an initramfs on boot.
 #
 echo 'initramfs initramfs.gz followkernel' >> /mnt/ext-boot/config.txt
 
-# Make sure the kernel knows where ROOTFS is. Note that
-# we use /dev/mmcblk0p2 here rather than /dev/mmcblk1p2,
-# because we're going to remove the current microSD card
-# and use the one we're creating in a moment, which means
-# that on boot this new card with be /dev/mmcblk0!
+# Make sure the kernel knows where ROOTFS is. Note
+# that we use /dev/mmcblk0p2 here rather than
+# /dev/mmcblk1p2, because we're going to remove the
+# current microSD card and use the one we're creating
+# in a moment, which means that on boot this new card
+# with be /dev/mmcblk0!
 #
 sed -i -e 's#root=/dev/mmcblk0p2#root=/dev/mapper/crypt_rootfs cryptdevice=/dev/mmcblk0p2:crypt_rootfs#' /mnt/ext-boot/cmdline.txt
 
@@ -215,8 +214,8 @@ passwd
 #
 sudo -s
 
-# System update. DPKG may ask you some questions during
-# this process.
+# System update. DPKG may ask you some questions
+# during this process.
 #
 apt update
 apt full-upgrade
@@ -239,13 +238,14 @@ Begin by create /usr/local/sbin/zram.sh:
 
 case "$1" in
 	"start" )
-		# The “-s” option sets the size of the ZRAM device
-		# *before* compression; ZRAM will *actually* use
-		# something closer to 30% – 50% of this value,
-		# depending on the compression algorithm used. As
-		# a rule of thumb, set “-s” to be equal to the
-		# amount of RAM you actually have *or* 8G,
-		# whichever is *less*.
+		# The “-s” option sets the size of the ZRAM
+		# device *before* compression; ZRAM will
+		# *actually* use something closer to 30% –
+		# 50% of this value, depending on the
+		# compression algorithm used. As a rule of
+		# thumb, set “-s” to be equal to the amount
+		# of RAM you actually have *or* 8G, whichever
+		# is *less*.
 		ZRAMDEV="$(zramctl -f -s 8G -a zstd)"
 		mkswap $ZRAMDEV
 		swapon -p 10 $ZRAMDEV
@@ -303,8 +303,8 @@ chmod +x /usr/local/sbin/zram.sh
 systemctl daemon-reload
 systemctl enable zram.service
 
-# Encourage the kernel to preferentially clean up memory
-# and swap into ZRAM sooner.
+# Encourage the kernel to preferentially clean up
+# memory and swap into ZRAM sooner.
 #
 echo 'vm.vfs_cache_pressure=500' >> /etc/sysctl.conf
 echo 'vm.swappiness=100' >> /etc/sysctl.conf
@@ -329,25 +329,16 @@ sudo -s
 #
 apt install dnsmasq
 
-# Update firmware overlay and initramfs kernel modules.
+# Update firmware overlay and initramfs kernel
+# modules.
 #
 echo 'dtoverlay=dwc2' >> /boot/config.txt
 echo '' >> /etc/initramfs-tools/modules
 echo dwc2 >> /etc/initramfs-tools/modules
 
-# Update /etc/network/interfaces to add usb0 and make
-# sure that eth0 is set up statically.
+# Create /etc/network/interfaces.d/usb0.
 #
-cat > /etc/network/interfaces << EOF
-auto lo
-iface lo inet loopback
-
-auto eth0
-allow-hotplug eth0
-iface eth0 inet static
-	address 10.54.0.1
-	netmask 255.255.255.248
-
+cat > /etc/network/interfaces.d/usb0 << EOF
 auto usb0
 allow-hotplug usb0
 iface usb0 inet static
@@ -358,9 +349,6 @@ EOF
 # Create /etc/dnsmasq.d/ipad.
 #
 cat > /etc/dnsmasq.d/ipad << EOF
-interface=eth0
-dhcp-range=10.54.0.2,10.55.0.6,255.255.255.248,1h
-
 interface=usb0
 dhcp-range=10.55.0.2,10.55.0.6,255.255.255.248,1h
 
@@ -500,8 +488,6 @@ exit
 
 Second moment of truth: Shut down the system, remove the power, and connect the Pi to your iPad over USB C. The Pi should power on, and then shortly after you unlock the ROOTFS the iPad should be assigned an IPv4 address via the ethernet device “Kali Linux”. You should then be able to SSH in as kali@10.55.0.1.
 
-Similarly, if you connect to your Pi directly to a power supply and your iPad to the Pi’s ethernet port, then you should be able to SSH in as kali@10.54.0.1.
-
 ## ROOTFS Unlock Over SSH
 
 ```bash
@@ -516,59 +502,62 @@ apt install dropbear-initramfs
 # Align dropbear SSH host keys with OpenSSH. Normally
 # this isn’t considered a best practice, but…
 #
-#     (1) We’re only ever connecting to the Pi over usb0,
-#         not an open network (or, god forbid, the
-#         internet).
-#     (2) We’re actually going to take steps in a moment
-#         to MAKE SURE that (1) is true.
+#     (1) We’re only ever connecting to the Pi over
+#         usb0, not an open network (or, god forbid,
+#         the internet).
+#     (2) We’re actually going to take steps in a
+#         moment to MAKE SURE that (1) is true.
 #
-# Since we’re only connecting to the Pi via SSH over a
-# SINGLE cable, using a private IP address, and with SSH
-# host keys that are unique to this device, the danger of
-# having these keys disclosed in the event that someone
-# got ahold of the Pi’s microSD card seems minimal (after
-# all, such an attacker could just trojan the
-# initramfs.gz directly).
+# Since we’re only connecting to the Pi via SSH over
+# a SINGLE cable, using a private IP address, and
+# with SSH host keys that are unique to this device,
+# the danger of having these keys disclosed in the
+# event that someone got ahold of the Pi’s microSD
+# card seems minimal (after all, such an attacker
+# could just trojan the initramfs.gz directly).
 #
 # (Note that you should make sure to set an EMPTY
-# password when using ssh-keygen to convert they keys to
-# PEM format, as dropbear doesn’t support
+# password when using ssh-keygen to convert they keys
+# to PEM format, as dropbear doesn’t support
 # password-protected host keys.)
 #
 cd /etc/dropbear/initramfs
 rm -f dropbear_*_host_key
 cp /etc/ssh/ssh_host_*_key .
 for SSH_KEY in $(ls -1 ssh_host_*_key); do
-	DROPBEAR_KEY="$(echo "$SSH_KEY" | sed -e 's/ssh_host_\(.*\)_key/dropbear_\1_host_key/')"
+	DROPBEAR_KEY="$(echo "$SSH_KEY" | \
+		sed -e 's/ssh_host_\(.*\)_key/dropbear_\1_host_key/')"
 	ssh-keygen -m PEM -p -f $SSH_KEY
 	dropbearconvert openssh dropbear $SSH_KEY $DROPBEAR_KEY
 	rm -f $SSH_KEY
 done
 
-# At this point you’ll need to add your SSH public keys
-# to /etc/dropbear/initramfs/authorized_keys. I’m not
-# writing out this step explicitly though; you could be
-# generating a new keypair here, using keys you copied
-# over when setting up the encrypted microSD card, or
-# just copying ~/.ssh/authorized_keys (and making sure
-# that the permissions are right!). You do you.
+# At this point you’ll need to add your SSH public
+# keys to /etc/dropbear/initramfs/authorized_keys.
+# I’m not writing out this step explicitly though;
+# you could be generating a new keypair here, using
+# keys you copied over when setting up the encrypted
+# microSD card, or just copying
+# ~/.ssh/authorized_keys (and making sure that the
+# permissions are right!). You do you.
 #
 # That said!
 #
 # As a fan of per-host keys I’m not in love with this
 # step, since it means that if I reset my iPad then I
-# need an external keyboard to unlock the Pi before I can
-# copy over the new public key. Unfortunately, I don’t
-# see any way to support a password-based login (which I
-# think is “secure enough” in here for the same reason
-# that I think that re-using the SSH host keys is “secure
-# enough” in this particular context) without modifying
-# dropbear’s initramfs setup hook (which I’d rather not
-# do, as any changes will be overwritten if the
-# dropbear-initramfs package is updated).
+# need an external keyboard to unlock the Pi before I
+# can copy over the new public key. Unfortunately, I
+# don’t see any way to support a password-based login
+# (which I think is “secure enough” in here for the
+# same reason that I think that re-using the SSH host
+# keys is “secure enough” in this particular context)
+# without modifying dropbear’s initramfs setup hook
+# (which I’d rather not do, as any changes will be
+# overwritten if the dropbear-initramfs package is
+# updated).
 
-# Add dropbear configuration options. In particular, for
-# an unlock of ROOTFS on successful login.
+# Add dropbear configuration options. In particular,
+# for an unlock of ROOTFS on successful login.
 #
 sed -i -e 's;^#DROPBEAR_OPTIONS=$;DROPBEAR_OPTIONS="-jks -c /usr/bin/cryptroot-unlock-ssh";' /etc/dropbear/initramfs/config
 
@@ -672,7 +661,6 @@ mount -t configfs none /sys/kernel/config
 
 . /usr/sbin/usb0up.sh
 
-ipconfig -d "10.54.0.1:::255.255.255.248:kali:eth0"
 ipconfig -d "10.55.0.1:::255.255.255.248:kali:usb0"
 
 /usr/sbin/dnsmasq --local-service --user=root --pid-file=/run/dnsmasq.pid
@@ -699,10 +687,6 @@ esac
 . /scripts/functions
 
 kill -TERM `cat /run/dnsmasq.pid`
-
-ip link set dev eth0 down
-ip address flush dev eth0
-ip route flush dev eth0
 
 ip link set dev usb0 down
 ip address flush dev usb0
@@ -738,11 +722,11 @@ mkinitramfs -o /boot/initramfs.gz $(ls -1 /lib/modules | grep -e '-Re4son-v8l+$'
 exit
 ```
 
-Third moment of truth: Reboot your system. After a few moments you should be able to SSH into it as root@10.55.0.1 (over USB C) or root@10.54.0.1 (over ethernet) and be prompted to unlock your root device. After you type in your decryption passphrase, SSH should automatically close and your system should continue to boot. In a few more moments you should be able to SSH back in as kali@10.55.0.1 (or kali@10.54.0.1).
+Third moment of truth: Reboot your system. After a few moments you should be able to SSH into it as root@10.55.0.1 (over USB C) and be prompted to unlock your root device. After you type in your decryption passphrase, SSH should automatically close and your system should continue to boot. In a few more moments you should be able to SSH back in as kali@10.55.0.1.
 
 You can *also* still unlock the system at the console, which is handy if you want to use the Pi as a stand-alone computer.
 
-Note an annoying feature of this setup — you have to SSH in as *root* to do the initial unlock, but then will need to SSH in a second time as *kali* once the system is fully up. Partly, this is due to the fact that there’s not really a way to hand SSH off from the initram environment to the full system (this is why you have to log in once to unlock, and again to use the system once it’s fully up). Theoretically it should be possible to add a kali user to the initramfs, but doing so would require both the dropbear initramfs hooks to be modified (which is fragile w.r.t. upgrades) and *a lot* more magic in generally than seems advisable.
+Note an annoying feature of this setup — you have to SSH in as *root* to do the initial unlock, but then will need to SSH in a second time as *kali* once the system is fully up. Partly, this is due to the fact that there’s not really a way to hand SSH off from the initram environment to the full system (this is why you have to log in once to unlock, and again to use the system once it’s fully up). Theoretically it should be possible to add a kali user to the initramfs, but doing so would require both the dropbear initramfs hooks to be modified (which, as previously mentioned, is fragile w.r.t. upgrades) and *a lot* more magic in generally than seems advisable.
 
 ## Network Hardening
 
@@ -757,7 +741,6 @@ sudo -s
 #
 cat > /etc/ssh/sshd_config.d/lockdown.conf << EOF
 AllowUsers kali
-ListenAddress 10.54.0.1
 ListenAddress 10.55.0.1
 PermitRootLogin no
 EOF
@@ -768,9 +751,7 @@ systemctl restart sshd.service
 apt install gufw
 systemctl start ufw.service
 ufw default deny
-ufw allow in on eth0 from 0.0.0.0/0 port 68 to 0.0.0.0/0 port 67 proto udp
 ufw allow in on usb0 from 0.0.0.0/0 port 68 to 0.0.0.0/0 port 67 proto udp
-ufw allow in on eth0 from 10.54.0.0/29 to 10.54.0.1 port 22 proto tcp
 ufw allow in on usb0 from 10.55.0.0/29 to 10.55.0.1 port 22 proto tcp
 ufw enable
 
@@ -779,7 +760,7 @@ ufw enable
 exit
 ```
 
-The last setting will disable all networking (except for the eth0 and usb0 interface we use for access) on boot. To openly connect to a network (which is probably what you want to do most of the time), run `sudo systemctl start NetworkManager.service`. (Why disable this when most of the time it doesn’t matter? Because when it *does* matter, it *really* matters, and you don’t want to accidentally forget about this!)
+If you’re going to be using this device covertly, you almost certainly also want to run `sudo systemctl disable NetworkManager.service` so that the Pi doesn’t attempt to immediately connect to whatever network you plug it into.
 
 ## Remote Desktop
 
@@ -791,7 +772,6 @@ sudo -s
 # Install and set up xrdp.
 #
 apt install xrdp
-ufw allow in on eth0 from 10.54.0.0/29 to 10.54.0.1 port 3389 proto tcp
 ufw allow in on usb0 from 10.55.0.0/29 to 10.55.0.1 port 3389 proto tcp
 systemctl enable xrdp.service
 
@@ -838,4 +818,4 @@ As with the dropbear configuration in the previous section, please do *not* set 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 18, 2021
+<span aria-hidden="true">📅</span> March 5, 2022
