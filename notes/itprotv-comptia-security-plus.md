@@ -101,17 +101,23 @@
 
 ### Secure Protocols
 
-(Chapter 17)
+* [2022-03-06 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-06-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Keys
 
+* [2022-03-06 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-06-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### PKI Concepts
 
-(Chapter 25)
+* [2022-03-06 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-06-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Certificates
 
+* [2022-03-06 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-06-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
 ### IPSec
+
+* [2022-03-06 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-06-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ## Identity and Access Management
 
