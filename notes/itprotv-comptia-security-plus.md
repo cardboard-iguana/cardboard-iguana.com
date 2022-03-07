@@ -122,14 +122,12 @@
 ## Identity and Access Management
 
 (Chapter 23)
+(Chapter 24)
+(Chapter 12)
 
 ### Authentication And Authorization
 
-(Chapter 24)
-
 ### Authentication Methods
-
-(Chapter 12)
 
 ### Additional Authentication Methods
 
@@ -203,9 +201,11 @@
 
 ## Cloud and Virtualization
 
-### Virtualization
-
 (Chapter 10)
+(Chapter 14)
+(Chapter 22)
+
+### Virtualization
 
 ### Cloud Concepts
 
@@ -215,11 +215,7 @@
 
 ### Computing Types
 
-(Chapter 14)
-
 ### Cloud Security Controls
-
-(Chapter 22)
 
 ## Operational Resiliency
 
@@ -235,19 +231,18 @@
 
 ## Operational Security and Incident Response
 
+(Chapter 7)
+(Chapter 8)
+
 ### Network Reconnaissance And Discovery
 
 ### Packet Capture And Replay
 
 ### Vulnerability Scans
 
-(Chapter 7)
-
 ### SIEM And SOAR Systems
 
 ### Pentesting Techniques
-
-(Chapter 8)
 
 ### Pentesting Exercise Types
 

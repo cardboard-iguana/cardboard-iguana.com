@@ -55,7 +55,7 @@ IPsec in tunneling mode uses two headers:
 * The Authentication Header (AH, protocol field 51) authenticates the packet’s sender and provides integrity and nonrepudiation. Note that integrity guarantees do *not* cover the all other header fields, as it is possible for some of these to be (legitimately) changed by intermediate servers.
 * The Encapsulating Security Payload (ESP, protocol field 50) *also* provides authentication services, and encrypts the data being transferred. ESP is designed to provide confidentiality, authentication, integrity, and anti-replay services, but these can be configured in a piecemeal fashion. In particular, enabling confidentiality *without* integrity protection and either ESP authentication *or* a separate AH leaves the ESP data vulnerable to substitution attacks (not sure why you’d do this…).
 
-IPsec headers immediately follow the header fields in an IP datagram. ESP can be nested in AH, which can simplify filtering (though it’s not entirely clear *how*…).
+IPsec headers immediately follow the header fields in an IP datagram. ESP can be nested in AH, which simplifies firewall filtering if you only require confidentiality for *some* connections.
 
 The IKE protocol is part of the larger Internet Security Association and Key Management Protocol (ISAKMP).
 
@@ -75,15 +75,15 @@ S/MIME leverages MIME + to provide authentication, message confidentiality and i
 
 Important ports:
 
-| Protocol           | Port |
-|:------------------ |:----:|
-| POP3               | 110  |
-| POP3S              | 995  |
-| IMAP               | 143  |
-| IMAPS              | 993  |
-| SMTP               |  25  |
-| SMTP over SSL      | 465  |
-| SMTP with STARTTLS | 587  |
+| Protocol      | Port |
+|:------------- |:----:|
+| POP3          | 110  |
+| POP3S         | 995  |
+| IMAP          | 143  |
+| IMAPS         | 993  |
+| SMTP          |  25  |
+| SMTP+SSL      | 465  |
+| SMTP+STARTTLS | 587  |
 
 * [S/MIME (Wikipedia)](https://en.wikipedia.org/wiki/S/MIME)
 * [Simple Mail Transfer Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol)
@@ -164,7 +164,7 @@ CIDR (as in “CIDR subnet notation”) is “Classless InterDomain Routing”. 
 
 IPv6 is a 128-bit address space (as opposed to the 32-bit address space of IPv4). IPv6 addresses are represented as eight groups of four hexadecimal digits (so each block represents 16 bits, exactly twice the size of an IPv4 block). The *largest* block consisting only of zeros can be replaced with `::` (i.e., you can only use this trick *once*), and leading zeros in a block can also be dropped.
 
-IPv6 also introduces the concept of “variable length subnet masking” (VLSM), which specifies subnets as needed rather than for the entire network. However, CIDR notation continues to work s you’d expect, so 2001:db8::/32 represents the subnet 2001:0db8:0000:0000:0000:0000:0000:0000 - 2001:0db8:ffff:ffff:ffff:ffff:ffff:ffff.
+IPv6 also introduces the concept of “variable length subnet masking” (VLSM), which specifies subnets as needed rather than for the entire network. However, CIDR notation continues to work as you’d expect, so 2001:db8::/32 represents the subnet 2001:0db8:0000:0000:0000:0000:0000:0000 - 2001:0db8:ffff:ffff:ffff:ffff:ffff:ffff.
 
 The IPv6 equivalent of 127.0.0.1 is ::1; the rest of the 127.0.0.0/8 block is replaced with the concept of “link-local” addresses, which are self-assigned per network interface addresses in the reserved fe80::/10 subnet (RFCs 7217 and 8064 defines how link-local addresses are assigned).
 
@@ -357,20 +357,20 @@ This encrypted shared secret then becomes the basis of the shared session key(s)
 
 Important ports:
 
-| Protocol      | Port | Encrypted |
-|:------------- | ----:|:---------:|
-| SSH           |   22 |     Y     |
-| LDAP          |  389 |           |
-| LDAPS         |  636 |     Y     |
-| HTTP          |   80 |           |
-| HTTPS         |  443 |     Y     |
-| POP3          |  110 |           |
-| POP3S         |  995 |     Y     |
-| IMAP          |  143 |           |
-| IMAPS         |  993 |     Y     |
-| SMTP          |   25 |           |
-| SMTP+SSL      |  465 |     Y     |
-| SMTP+STARTTLS |  587 |     Y     |
+| Protocol      | Port | Encrypted? |
+|:------------- | ----:|:----------:|
+| SSH           |   22 |      Y     |
+| LDAP          |  389 |            |
+| LDAPS         |  636 |      Y     |
+| HTTP          |   80 |            |
+| HTTPS         |  443 |      Y     |
+| POP3          |  110 |            |
+| POP3S         |  995 |      Y     |
+| IMAP          |  143 |            |
+| IMAPS         |  993 |      Y     |
+| SMTP          |   25 |            |
+| SMTP+SSL      |  465 |      Y     |
+| SMTP+STARTTLS |  587 |      Y     |
 
 (Dan Lowery states that scp is considered deprecated now… Which surprisingly turns out to be true! Though there’s apparently a version of scp that’s actually sftp under the hood in development, so the end impact of this deprecation will probably be close to zero.)
 
@@ -454,7 +454,7 @@ IPSec is built on a number of components, the most basic of which is the ”Secu
 * Encryption method (DES, 3DES, or AES — probably only the last of these)
 * Session duration
 
-IPSec is actually set up in the (IKE) Phase 2 SA (“quick mode”), which establishes two *unidirectional* encrypted tunnels between the endpoints. In phase 2, the negotiation consists of:
+The phase 1 tunnel is then used to set up the (IKE) Phase 2 SA (“quick mode”), which establishes two *unidirectional* encrypted tunnels between the endpoints. In phase 2, the negotiation consists of:
 
 * IPSec protocol (AH or ESP)
 * Encapsulation method
@@ -462,18 +462,18 @@ IPSec is actually set up in the (IKE) Phase 2 SA (“quick mode”), which estab
 * Session duration
 * Additional Diffie-Hellman exchange (if perfect forward secrecy is desired)
 
-Note that the only data sent over the phase 1 connection is the configuration information necessary to set up phase 2. All actually point-to-point communications happen via the phase 2 tunnels.
+Note that the only data sent over the phase 1 connection is the configuration information necessary to set up phase 2 — all actually point-to-point communications happen via the phase 2 tunnels.
 
 Every security association has an identifier (which is invalidated after the session is over), and packets are sequenced as well. This provides two layers of protection against replay attacks.
 
-There are two IPSec protocols:
+There are two IPSec ”protocols”:
 
 * Authentication Header (AH, IP protocol identifier 51) provides authentication and integrity guarantees, but does *not* provide encryption.
 * Encapsulating Security Payload (ESP, IP protocol identifier 50) provides authentication, integrity, *and* encryption.
 
-These protocols can be used independently or together, though the benefits of using them together are unclear (Exam Cram indicates that doing so makes firewall filtering easier, but doesn’t provide a clear explanation for why this is so).
+These protocols can be used independently or together. The main reason to mix-and-match is if you are using encryption (which requires ESP) for only *some* connections on your network. Since AH is partially duplicative of ESP, by using both (and turning off the overlapping capabilities in ESP) you can ensure that all IPSec packets use AH with only a small increase in the overhead of packets using ESP. This allows for (modestly) simpler firewall rules.
 
-There are also two IPSec encapsulation methods:
+There are also two IPSec encapsulation methods used by ESP:
 
 * Transport mode is used for client-to-client and client-to-gateway connections. It preserves the original packet headers but encrypts the packet data.
 * Tunnel mode is used between gateways. It encrypts the *entire* original packet, appending a *new* header.
