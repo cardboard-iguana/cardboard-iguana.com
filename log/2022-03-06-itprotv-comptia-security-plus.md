@@ -1,4 +1,4 @@
-# ITPro.TV: CompTIA Security+ (SY0-601) #Draft
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
 ## CompTIA Security+ Exam Cram
 
@@ -53,9 +53,9 @@ Two modes:
 IPsec in tunneling mode uses two headers:
 
 * The Authentication Header (AH, protocol field 51) authenticates the packet’s sender and provides integrity and nonrepudiation. Note that integrity guarantees do *not* cover the all other header fields, as it is possible for some of these to be (legitimately) changed by intermediate servers.
-* The Encapsulating Security Payload (ESP, protocol field 50) *also* provides authentication services, and encrypts the data being transferred. ESP is designed to provide confidentiality, authentication, integrity, and anti-replay services, but these can be configured in a piecemeal fashion. In particular, enabling confidentiality *without* integrity protection and either ESP authentication *or* a separate AH leaves the ESP data vulnerable to substitution attacks.
+* The Encapsulating Security Payload (ESP, protocol field 50) *also* provides authentication services, and encrypts the data being transferred. ESP is designed to provide confidentiality, authentication, integrity, and anti-replay services, but these can be configured in a piecemeal fashion. In particular, enabling confidentiality *without* integrity protection and either ESP authentication *or* a separate AH leaves the ESP data vulnerable to substitution attacks (not sure why you’d do this…).
 
-IPsec headers immediately follow the header fields in an IP datagram. ESP can be nested in AH, which can simplify filtering (since then only protocol 51 needs to be considered).
+IPsec headers immediately follow the header fields in an IP datagram. ESP can be nested in AH, which can simplify filtering (though it’s not entirely clear *how*…).
 
 The IKE protocol is part of the larger Internet Security Association and Key Management Protocol (ISAKMP).
 
@@ -403,15 +403,86 @@ The most popular key derivation protocol is probably ECDHE at this point, as it 
 
 ### PKI Concepts
 
-==xxx==
+OCSP: Online Certificate Status Protocol.
+
+Active Directory’s PKI infrastructure is called “Active Directory Certificate Services”.
+
+The “Online Responder” role forAD Certificate Services handles OCSP requests.
+
+“Enterprise CAs” integrate with AD, while “Standard CAs” don’t.
+
+Typically, root CAs have longer keys than subordinate CAs, which have longer keys than user/entity keys. Root CA keys also generally have *much* longer validity periods than intermediate CA or user/entity keys.
+
+Root CA certificates are self-signed by default, though in a bridged PKI system they will also be signed by the bridge CA key.
 
 ### Certificates
 
-==xxx==
+Important types:
+
+* Self-signed
+* Machine certificates
+* User certificates (mostly for authentication)
+* Code signing
+* Wildcard
+* Domain validation (DV — the lowest level of domain validation, only verifies control over the domain)
+* Organization validation (OV — validates the organization itself)
+* Extended validation (EV — more extension organizational validation, kind of a scam)
+
+Certificate formats:
+
+| Format                                | Purpose                                                                          |
+|:------------------------------------- |:-------------------------------------------------------------------------------- |
+| Distinguished Encoding Rules (.der)   | Binary encoded, .cer if no private key                                           |
+| Privacy Enhanced Mail (PEM)           | Base64 encoded, lots of extensions (.pem, .cer, .crt)                            |
+| Public Key Cryptography Standard \#7  | Includes public key + certificate chain (.p7b)                                   |
+| Public Key Cryptography Standard \#12 | Everything in PKCS#7 + private key and additional certificate information (.p12) |
+
+PKCS#12 is generally used for backing up CAs, while PKCS#7 is used for normal key exchange. Both of these are (almost exclusively) used by Windows.
 
 ### IPSec
 
-==xxx==
+IPSec: Internet Protocol Security. Not really a single protocol — more a family of inter-related protocols.
+
+IPSec is primarily used as a VPN solution (both site-to-site/gateway-to-gateway and client-to-gateway).
+
+IPSec is built on a number of components, the most basic of which is the ”Security Association” (SA) — trust relationships between endpoints (could be client-to-client, client-to-gateway, or gateway-to-gateway).
+
+(IKE) Phase 1 SA (“main mode”) doesn’t actually set up an IPSec connection, but instead negotiates a single encrypted *bidirectional* tunnel between the endpoints. The negotiation consists of:
+
+* Diffie-Hellman exchange
+* Client/Gateway authentication (PSK or certificates)
+* Encryption method (DES, 3DES, or AES — probably only the last of these)
+* Session duration
+
+IPSec is actually set up in the (IKE) Phase 2 SA (“quick mode”), which establishes two *unidirectional* encrypted tunnels between the endpoints. In phase 2, the negotiation consists of:
+
+* IPSec protocol (AH or ESP)
+* Encapsulation method
+* Authentication via hash exchange (typically MD5 or SHA1)
+* Session duration
+* Additional Diffie-Hellman exchange (if perfect forward secrecy is desired)
+
+Note that the only data sent over the phase 1 connection is the configuration information necessary to set up phase 2. All actually point-to-point communications happen via the phase 2 tunnels.
+
+Every security association has an identifier (which is invalidated after the session is over), and packets are sequenced as well. This provides two layers of protection against replay attacks.
+
+There are two IPSec protocols:
+
+* Authentication Header (AH, IP protocol identifier 51) provides authentication and integrity guarantees, but does *not* provide encryption.
+* Encapsulating Security Payload (ESP, IP protocol identifier 50) provides authentication, integrity, *and* encryption.
+
+These protocols can be used independently or together, though the benefits of using them together are unclear (Exam Cram indicates that doing so makes firewall filtering easier, but doesn’t provide a clear explanation for why this is so).
+
+There are also two IPSec encapsulation methods:
+
+* Transport mode is used for client-to-client and client-to-gateway connections. It preserves the original packet headers but encrypts the packet data.
+* Tunnel mode is used between gateways. It encrypts the *entire* original packet, appending a *new* header.
+
+The distinction makes sense when you consider that tunnel mode is joining two existing networks, while transport mode is joining two individual machines on the “same” network. You could imaging using tunneling mode in place of transport mode, but then the new header would be (functionally) the same as the original header; thus, there is no security benefit to encrypting the original header in this situation. The extra “translation” step between the gateways is why encrypting the entire original packet makes sense.
+
+Additionally, IPSec tunnels are built using either PPTP (the point-to-point tunneling protocol) or L2TP (the layer 2 tunneling protocol). Note, however, that only L2TP is considered secure.
+
+IKE occurs over the Internet Security Association and Key Management Protocol (ISAKMP), which is how its tagged in Wireshark.
 
 - - - -
 

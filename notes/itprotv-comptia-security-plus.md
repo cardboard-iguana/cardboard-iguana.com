@@ -97,8 +97,6 @@
 
 * [2022-03-03 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-03-itprotv-comptia-security-plus.md)
 
-<!--
-
 ### Secure Protocols
 
 * [2022-03-06 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-06-itprotv-comptia-security-plus.md)
@@ -118,6 +116,8 @@
 ### IPSec
 
 * [2022-03-06 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-06-itprotv-comptia-security-plus.md)
+
+<!--
 
 ## Identity and Access Management
 
