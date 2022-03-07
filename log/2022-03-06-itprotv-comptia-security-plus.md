@@ -20,7 +20,7 @@ TLSv1.0 succeeded SSLv3 in 1999. Note that TLS is *not* backwards-compatible wit
 
 TLS has two sub-protocols:
 
-* The TLS Record Protocol is what establishes an encrypted tunnel using an agreed-upon cypher (or the NULL cypher, in which case the “encrypted” tunnel is just plaintext).
+* The TLS Record Protocol is what establishes an encrypted tunnel using an agreed-upon cipher (or the NULL cypher, in which case the “encrypted” tunnel is just plaintext).
 * The TLS Handshake Protocol is used for authentication and key exchange.
 
 Types of DNS servers:
@@ -91,7 +91,7 @@ Important ports:
 
 ### Secure Internet Protocols
 
-By default SSH tunnels are actually encrypted using IDEA (the International Data Encryption Algorithm) with a 128-bit symmetric key cypher that is agreed upon during the initial authentication/negotiation. Blowfish (32- to 448-bit keys), DES, and 3DES are also available. (Note that DES, and I suppose by extension 3DES, is still export-controlled.)
+By default SSH tunnels are actually encrypted using IDEA (the International Data Encryption Algorithm) with a 128-bit symmetric key cipher that is agreed upon during the initial authentication/negotiation. Blowfish (32- to 448-bit keys), DES, and 3DES are also available. (Note that DES, and I suppose by extension 3DES, is still export-controlled.)
 
 ### Lightweight Directory Access Protocol (LDAP)
 
@@ -345,11 +345,61 @@ While Exam Cram’s assertion that certificate pinning exists to thwart man-in-t
 
 ### Secure Protocols
 
-==xxx==
+The TLS handshake:
+
+* The client sends a list of supported cipher suites + a random number.
+* The server sends back the strongest cipher from the list the client provided that it supports, its own certificate, and a random number.
+* The client uses the server’s public key to encrypt a shared secret derived from the exchanged random numbers and send it back to the server.
+
+This encrypted shared secret then becomes the basis of the shared session key(s). (There are really two keys — an HMAC key which verifies the validity of the session key, and the session key itself.)
+
+(When using ephemeral Diffie-Hellman to derive a rotating session key, we don’t actually encrypt anything with the server’s public key in the last step, nor do we use the two exchange random numbers. Instead, the server picks Diffie-Hellman parameters `p` and `g`, and sends those along with its own derived public key. Importantly, the server also *signs* this message, preventing it from being tampered with. The client then uses `p`, `g`, and its own secret to produce a public key, which it sends to the server. The encrypted connection established, the first thing that the client and server send are hashes of the initial handshake messages to verify the integrity of the initial negotiation… Though I think as of TLSv1.3 this hash exchange may be largely vestigial?)
+
+Important ports:
+
+| Protocol      | Port | Encrypted |
+|:------------- | ----:|:---------:|
+| SSH           |   22 |     Y     |
+| LDAP          |  389 |           |
+| LDAPS         |  636 |     Y     |
+| HTTP          |   80 |           |
+| HTTPS         |  443 |     Y     |
+| POP3          |  110 |           |
+| POP3S         |  995 |     Y     |
+| IMAP          |  143 |           |
+| IMAPS         |  993 |     Y     |
+| SMTP          |   25 |           |
+| SMTP+SSL      |  465 |     Y     |
+| SMTP+STARTTLS |  587 |     Y     |
+
+(Dan Lowery states that scp is considered deprecated now… Which surprisingly turns out to be true! Though there’s apparently a version of scp that’s actually sftp under the hood in development, so the end impact of this deprecation will probably be close to zero.)
+
+SRTP: Secure Realtime Transport Protocol.
+
+SNMP handles not just reporting, but also device configuration. Only SNMPv3 has encryption and authentication.
+
+* [Diffie–Hellman key exchange (Wikipedia)](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)
+* [Transport Layer Security (Wikipedia)](https://en.wikipedia.org/wiki/Transport_Layer_Security)
+* [HTTPS: The TLS Handshake Using Diffie-Hellman Ephemeral](https://thecybersecurityman.com/2018/04/25/https-the-tls-handshake-using-diffie-hellman-ephemeral/)
+* [TLS Handshake (OSDev.org)](https://wiki.osdev.org/TLS_Handshake)
+* [Deprecating scp](https://lwn.net/Articles/835962/)
 
 ### Keys
 
-==xxx==
+Cryptographic Service Provider: The algorithm used to generate an encryption key (AES, etc.).
+
+Note that RSA defines both a *type* of public/private keypair *and* a key exchange algorithm. In fact, that key exchange algorithm was the standard in SSL/TLS up until TLSv1.3 (when all key exchange methods except those based on ephemeral Diffie-Hellman were removed) — it’s the algorithm that uses the two random numbers exchanged during the initial negotiation to generate a (symmetric) session key!
+
+Key stretching is primarily used to increase the effective length of encryption passwords (that are then used to derive keys). Important key stretching algorithms:
+
+* BCRYPT (uses Blowfish)
+* PBKDF2
+
+Both of these are about using salts + multiple hashing rounds.
+
+The most popular key derivation protocol is probably ECDHE at this point, as it is both fast and secure (a seldom-seen combination!).
+
+* [RSA (cryptosystem) (Wikipedia)](https://en.wikipedia.org/wiki/RSA_%28cryptosystem%29)
 
 ### PKI Concepts
 

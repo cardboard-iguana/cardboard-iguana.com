@@ -208,7 +208,7 @@ Injection: Supplying some type of untrusted input.
 
 > Throw it [the target system] input, and see what happens. See if it breaks. And *how* does it break? That’s what’s important.
 > 
-> — Daniel Lowery
+> — Dan Lowery
 
 * [SQL Injection](../notes/sql-injection.md)
 * [XML External Entity Attacks](../notes/xml-external-entity-attacks.md)

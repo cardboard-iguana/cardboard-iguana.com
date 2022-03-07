@@ -68,7 +68,7 @@ To reiterate, a list of the roles of cryptography in security:
 
 > [Cryptography] is trying to make us live in a world that’s “need to know”.
 > 
-> — Daniel Lowery
+> — Dan Lowery
 
 The three states of data:
 
@@ -85,7 +85,7 @@ Important cyphers for low-power devices (SCADA, etc.)
 
 Encryption is about ensuring confidentiality; steganography is about hiding information (which may — and probably should be! — itself cyphertext).
 
-Interesting… ITPro.TV is defining a streaming cypher as operating byte-by-byte, whereas Exam Cram defined them as operating bit-by-bit. So either one of these is wrong, or the difference between stream and block cyphers are more a matter of degree than kind (I kind of suspect it’s the latter).
+Interesting… ITPro.TV is defining a streaming cipher as operating byte-by-byte, whereas Exam Cram defined them as operating bit-by-bit. So either one of these is wrong, or the difference between stream and block cyphers are more a matter of degree than kind (I kind of suspect it’s the latter).
 
 | Stream Cypher         | Block Cypher                   |
 |:--------------------- |:------------------------------ |
@@ -93,14 +93,14 @@ Interesting… ITPro.TV is defining a streaming cypher as operating byte-by-byte
 | Generally less secure | Generally More secure          |
 | Faster                | Slower                         |
 
-Block cypher modes:
+Block cipher modes:
 
 | Mode                        | Considerations                                              |
 |:--------------------------- |:----------------------------------------------------------- |
 | Electronic Code Book (ECB)  | Old, weak                                                   |
 | Cypher Block Encoding (ECC) | Errors in one block will effect the rest of the chain       |
-| Cypher Feedback (CFB)       | Allows a block cypher to function more like a stream cypher |
-| Output Feedback (OFB)       | Allows a block cypher to function more like a stream cypher |
+| Cypher Feedback (CFB)       | Allows a block cipher to function more like a stream cipher |
+| Output Feedback (OFB)       | Allows a block cipher to function more like a stream cipher |
 | Counter Mode (CTR)          | Strongest, used by AES                                      |
 
 ### Hashing
@@ -131,8 +131,8 @@ Symmetric cyphers:
 | 3DES     | Three DES rounds, 168-bits (effective) |
 | Blowfish | Block cipher, 64-bit                   |
 | RC4      | Stream cypher, used in WEP and WPA     |
-| RC5      | Block cypher variant of RC4            |
-| RC6      | Block cypher variant of RC4            |
+| RC5      | Block cipher variant of RC4            |
+| RC6      | Block cipher variant of RC4            |
 
 Of these, only AES is considered strong these days.
 
@@ -146,11 +146,11 @@ Asymmetric cyphers:
 | EIGamal        | Used by PGP/GPG                        |
 | ECC            | New, fast, small keys                  |
 
-Two applications/machines that try to communicate cryptographically need to first agree on a “cypher suite” — a set of cryptographic algorithms — to use. These are represented in a standard(ish) fashion:
+Two applications/machines that try to communicate cryptographically need to first agree on a “cipher suite” — a set of cryptographic algorithms — to use. These are represented in a standard(ish) fashion:
 
 | TLS                 | _ | DHE          | _ | RSA               | \_WITH\_ | AES_256          | _ | GCM                   | _ | SHA384 |
 |:------------------- |:- |:------------ |:- |:----------------- |:-------- |:---------------- |:- |:--------------------- |:- |:------ |
-| Standard identifier |   | Key exchange |   | Asymmetric cypher |          | Symmetric cypher |   | Symmetric cypher mode |   | HMAC   |
+| Standard identifier |   | Key exchange |   | Asymmetric cipher |          | Symmetric cipher |   | Symmetric cipher mode |   | HMAC   |
 
 - - - -
 
