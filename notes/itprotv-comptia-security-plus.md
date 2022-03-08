@@ -123,7 +123,6 @@
 
 (Chapter 23)
 (Chapter 24)
-(Chapter 12)
 
 ### Authentication And Authorization
 
