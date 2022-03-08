@@ -2,6 +2,7 @@
 
 ## Hacker’s Log (Recent)
 
+* [2022-03-07 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-07-itprotv-comptia-security-plus.md)
 * [2022-03-06 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-06-itprotv-comptia-security-plus.md)
 * [2022-03-03 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-03-itprotv-comptia-security-plus.md)
 * [2022-03-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
@@ -11,7 +12,6 @@
 * [2022-02-23 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](log/2022-02-23-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [2022-02-22 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Security Analyst Intro](log/2022-02-22-itprotv-comptia-security-plus-and-tryhackme-jr-security-analyst-intro.md)
 * [2022-02-20 Cardboard Iguana Security is Live!](log/2022-02-20-cardboard-iguana-security-is-live.md)
-* [2022-02-13 TryHackMe: Polkit](log/2022-02-13-tryhackme-polkit.md)
 
 ## Website Navigation
 
