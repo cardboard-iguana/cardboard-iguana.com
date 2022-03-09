@@ -121,7 +121,6 @@
 
 ## Identity and Access Management
 
-(Chapter 23)
 (Chapter 24)
 
 ### Authentication And Authorization
