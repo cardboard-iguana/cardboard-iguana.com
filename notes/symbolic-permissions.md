@@ -31,11 +31,16 @@ If set on a directory, files created in the directory will have their group owne
 
 *Only* applied to directories. A file in a directory with the sticky bit set can only be deleted by its owner (and root). For example, /tmp always has the sticky bit set.
 
+## Write Permissions and Directories
+
+If a user has *write* access to a directory, then they can write to any file they have at least *read* access to (!!!).
+
 ## References
 
 * [How to manage Linux permissions for users, groups, and others](https://www.redhat.com/sysadmin/manage-permissions)
 * [Linux permissions: SUID, SGID, and sticky bit](https://www.redhat.com/sysadmin/suid-sgid-sticky-bit)
 * [How to Use “find” With File Metadata](how-to-use-find-with-file-metadata.md)
+* [ITPro.TV CompTIA Security+](itprotv-comptia-security-plus.md)
 
 - - - -
 

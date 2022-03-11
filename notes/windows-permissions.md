@@ -29,12 +29,15 @@ The `icacls` tool can be used to check (and change!) permissions at the command 
 * `(AD)` — append data (add subdirectories)
 * `(WD)` — write data and add files
 
+When a user is part of two groups with different permissions to an object, the allow permission will only override inherited deny permissions (explicitly set deny permissions cannot be overridden; remember that Windows access handling is default-deny).
+
 ## References
 
 * [File and Folder Permissions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb727008)
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
+* [ITPro.TV CompTIA Security+](itprotv-comptia-security-plus.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 17, 2021
+<span aria-hidden="true">📅</span> March 10, 2022
