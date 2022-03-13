@@ -1,5 +1,6 @@
 # <span aria-hidden="true">📓</span> A Hacker’s Log <span aria-hidden="true">📓</span>
 
+* [2022-03-12 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-12-itprotv-comptia-security-plus.md)
 * [2022-03-08 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-08-itprotv-comptia-security-plus.md)
 * [2022-03-07 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-07-itprotv-comptia-security-plus.md)
 * [2022-03-06 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-06-itprotv-comptia-security-plus.md)

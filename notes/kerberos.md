@@ -22,7 +22,7 @@ The below steps are cut-and-pasted from Wikipedia’s walk-through, but with lan
 
 ### Client Authentication to the KDC (a.k.a. “Pre-Authentication”)
 
-(1) AS-REQ: The client sends the client/user ID + the current timestamp (the timestamp is used to prevent replay attacks) encrypted with the NT hash of the user’s password a cleartext message of the user ID to the authentication server to request services on behalf of the user.
+(1) AS-REQ: The client sends the client/user ID + the current timestamp (the timestamp is used to prevent replay attacks) encrypted with the NT hash of the user’s password + a cleartext message of the user ID to the authentication server to request services on behalf of the user.
 
 (2) AS-REP: The authentication server checks to see if the client/user ID is in its database and if it can decrypt the timestamp using the NT hash of the password stored there. If it can, then the authentication server sends back the following two messages to the client:
 
