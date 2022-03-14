@@ -1,4 +1,4 @@
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester #Draft 
+# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
 Now that I’ve made it through the next three chapters of the Security+ Exam Cram (that correspond to the ITPro.TV course), I’m ready to do some lectures. And some more rooms on TryHackMe, because I’ve been missing it.
 
@@ -148,175 +148,107 @@ The default Kerberos port is TCP 88.
 
 ### What Is an IDOR?
 
-==xxx==
-
-### An IDOR Example
-
-==xxx==
+IDOR stands for “insecure direct object reference”. This is basically when the (typically web) application doesn’t check that the user has access to the object being requested. The end result is that a user can gain unauthorized access to data held by the application.
 
 ### Finding IDORs in Encoded IDs
 
-==xxx==
+Object IDs are frequently encoded using base64.  Decode all the things!
 
 ### Finding IDORs in Hashed IDs
 
-==xxx==
+Object IDs are also sometimes referenced using their hashes (often just MD5). It’s thus useful to check if the hash of the ID of an object you do have access corresponds at all to how that object is being referenced. Since the most common IDs are numeric, online hash databases can also be useful.
+
+* [CrackStation](https://crackstation.net/)
 
 ### Finding IDORs in Unpredictable IDs
 
-==xxx==
+Okay, this is a silly section… Unpredictable IDs can’t, well, be predicted. You can still see if you have an IDOR by creating two accounts, performing some actions in parallel, and then seeing if you can view resources from one account while logged in as another. This process can help you determine *if* a system has an IDOR vulnerability, but unfortunately doesn’t really help you get at any information using it.
 
 ### Where Are IDORs Located?
 
-==xxx==
+Also check API endpoints, and see if those endpoints accept additional (undocumented) parameters that allow you to access information beyond your normal scope.
 
 ### A Practical IDOR Example
 
-==xxx==
+Burp Suite is, as usual, pretty useful for uncovering API endpoint activity. I honestly find it more intuitive to work with for this purpose than the actual browser developer tools.
+
+* [Using Burp Suite](../notes/burp-suite.md)
 
 ### Introduction to File Inclusion
 
-==xxx==
+Basically, if an application is including a file based on some user-defined input, then there may be an opportunity to trick it into including a malicious file, or a system file we shouldn’t have access to.
 
-### Deploy the VM
+The trick here is that you *can’t* be including your file in a fashion that would trigger your browser to request it, since that will be limited by what can be represented as a URL for the application. Rather, you need to find a parameter that specifies a file the application will incorporate *directly* into the page data being pushed to the browser.
 
-==xxx==
+File inclusion vulnerabilities are a species of input validation errors.
 
 ### Path Traversal
 
-==xxx==
+“Path traversal” and “directory traversal” are the same thing. This is about using LFI to access system files; this often occurs when improperly sanitized user input is passed to PHP’s `file_get_contents()` function.
+
+Windows systems are also vulnerable to LFI attacks via PHP. In fact, `file_get_contents()` will happily use UNIX slashes on Windows.
+
+Common files to check:
+
+* /boot.ini (a.k.a., `C:\boot.ini` — boot options on Windows systems)
+* /etc/issue
+* /etc/passwd
+* /etc/profile
+* /etc/shadow (jackpot!)
+* /proc/version
+* /root/.bash_history
+* /root/.ssh/id_rsa (jackpot!)
+* /var/log/apache2/access.log
+* /var/log/dmessage (lots of variants of this…)
+* /var/mail/root
+
+References:
+
+* [file_get_contents() (PHP Documentation)](https://www.php.net/manual/function.file-get-contents.php)
 
 ### Local File Inclusion (LFI)
 
-==xxx==
+More potentially hazardous PHP functions:
+
+* include()
+* include_once()
+* require()
+* require_once()
+
+LFI is also common in ASP, JSP, and Node.js apps.
+
+Remember that PHP terminates strings with the null byte (`0x00`). This can be passed in as `%00`, though this will often need to be URL-encoded as `%2500`. The use of the poison null byte allows us to bypass file inclusion that appends extensions or other information to the string we’re passing, by causing string parsing to halt before it reaches the appended information. The poison null byte can also be used to bypass simple keyword filters.
+
+Unfortunately, the poison null byte only works in PHP < 5.3.4.
+
+If the poison null byte doesn’t work, another trick relies on the fact that for some bizarre reason PHP allows files to be referenced with `.` notation just like directories. In other words, `/etc/passwd/.` will return the contents of `/etc/passwd`!
+
+Representing `../` as `....//` can bypass filters that replace `../`, as PHP search-and-replace only does a single pass through a string (it should be obvious how to extend this if a developer tries  to just run a search and replace *twice*).
+
+* [The Poison Null Byte](../notes/poison-null-byte.md)
 
 ### Remote File Inclusion (RFI)
 
-==xxx==
+Remote file inclusion only works when PHP’s `allow_url_fopen` option to be turned on. If `allow_url_include` is also on, then `include()` and `require()` functions (and friends) can be leveraged. This creates a vulnerability similar to the recent log4j vulnerability in Java, where arbitrary code can be passed into the application. RCE!
+
+* [TryHackMe: Exploiting Log4j](../notes/tryhackme-exploiting-log4j.md)
+* [Difference between require() and include() in PHP](https://www.geeksforgeeks.org/difference-between-require-and-include-in-php/)
+* [Runtime Configuration (PHP Documentation)](https://www.php.net/manual/filesystem.configuration.php)
 
 ### File Inclusion Remediation
 
-==xxx==
+* Updates, updates, updates!
+* Turn off PHP errors (to deprive attackers of feedback)
+* WAFs
+* Make sure that `allow_url_fopen` and `allow_url_include` are *off*.
+* User input validation!
+* Aggressively whitelist and blacklist potential file locations.
 
 ### File Inclusion Challenge
 
-==xxx==
+Remember that form requests sent via POST need to have `Content-Type: application/x-www-form-urlencoded`!
 
-### What Is an SSRF?
-
-==xxx==
-
-### SSRF Examples
-
-==xxx==
-
-### Finding an SSRF
-
-==xxx==
-
-### Defeating Common SSRF Defenses
-
-==xxx==
-
-### SSRF Practical
-
-==xxx==
-
-### Cross-Site Scripting (XSS) in Brief
-
-==xxx==
-
-### XSS Payloads
-
-==xxx==
-
-### Reflected XSS
-
-==xxx==
-
-### Stored XSS
-
-==xxx==
-
-### DOM-Based XSS
-
-==xxx==
-
-### Blind XSS
-
-==xxx==
-
-### Perfecting Your Payload
-
-==xxx==
-
-### Blind XSS Practical
-
-==xxx==
-
-### What Is Command Injection?
-
-==xxx==
-
-### Discovering Command Injection
-
-==xxx==
-
-### Exploiting Command Injection
-
-==xxx==
-
-### Remediating Command Injection
-
-==xxx==
-
-### Command Injection Practical
-
-==xxx==
-
-### Final Notes on Command Injection
-
-==xxx==
-
-### SQL Injection in Brief
-
-==xxx==
-
-### What Is a Database?
-
-==xxx==
-
-### What Is SQL?
-
-==xxx==
-
-### What Is SQL Injection (SQLi)?
-
-==xxx==
-
-### In-Band SQLi
-
-==xxx==
-
-### Authentication Bypass with Blind SQLi
-
-==xxx==
-
-### Boolean Based Blind SQLi
-
-==xxx==
-
-### Time Based Blind SQLi
-
-==xxx==
-
-### Out-of-Band SQLi
-
-==xxx==
-
-### Remediating SQLi
-
-==xxx==
+Also, remember to add in an appropriate `Content-Length`.
 
 - - - -
 

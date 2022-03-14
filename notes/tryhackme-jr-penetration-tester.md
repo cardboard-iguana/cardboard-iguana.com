@@ -28,8 +28,6 @@
 
 * [2022-03-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-<!--
-
 ### IDOR
 
 * [2022-03-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
@@ -38,21 +36,15 @@
 
 * [2022-03-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### SSRF
+<!--
 
-* [2022-03-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+### SSRF
 
 ### Cross-Site Scripting
 
-* [2022-03-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-
 ### Command Injection
 
-* [2022-03-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-
 ### SQL Injection
-
-* [2022-03-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ## Burp Suite
 
