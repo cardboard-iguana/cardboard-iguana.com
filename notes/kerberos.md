@@ -16,6 +16,8 @@ The built-in Windows command `klist` will show you the current Kerberos tickets 
 * SESSION KEY: Issued with a ticket to identify a particular user session. Services expects *both* a ticket and a session key to be present before acting on a user’s behalf.
 * PRIVILEGE ATTRIBUTE CERTIFICATE (PAC): A bundle of the user’s identifying information, which is provided along with the tickets. Importantly, this contains the user’s username and (on Windows) SID.
 
+Note that Active Directory bundles the authentication service, ticket granting service, and KDC into a single “domain controller” role. Non-Windows Kerberos implementations are more likely to separate these roles between different servers.
+
 ## Authentication Process
 
 The below steps are cut-and-pasted from Wikipedia’s walk-through, but with language adapted to match the Windows-specific environment Kerberos is most commonly deployed in. (A close reading of these steps will also explain why it’s sometimes said that “a hash is as good as a password” for a Window’s domain.)
@@ -104,8 +106,9 @@ Golden tickets are powerful (since you can be anyone, it’s trivial to gain con
 * [Windows Password Hashes](windows-password-hashes.md)
 * [Using Mimikatz](mimikatz.md)
 * [Using Rubeus](rubeus.md)
+* [ITPro.TV: CompTIA Security+ (SY0-601)](itprotv-comptia-security-plus.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> December 6, 2021
+<span aria-hidden="true">📅</span> March 13, 2022

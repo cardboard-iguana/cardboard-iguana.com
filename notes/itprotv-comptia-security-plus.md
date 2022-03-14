@@ -121,7 +121,7 @@
 
 ## Identity and Access Management
 
-### Authentication And Authorization
+### Authentication and Authorization
 
 * [2022-03-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
