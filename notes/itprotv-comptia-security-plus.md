@@ -151,15 +151,23 @@
 
 * [2022-03-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-<!--
-
 ### Access Control Schemes
+
+* [2022-03-14 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-14-itprotv-comptia-security-plus.md)
 
 ### Account Management — Account Types
 
+* [2022-03-14 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-14-itprotv-comptia-security-plus.md)
+
 ### Account Management — Password Policies
 
+* [2022-03-14 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-14-itprotv-comptia-security-plus.md)
+
 ### Account Management — Account Policies
+
+* [2022-03-14 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-14-itprotv-comptia-security-plus.md)
+
+<!--
 
 ## Implementing Security
 
