@@ -167,13 +167,13 @@
 
 * [2022-03-14 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-14-itprotv-comptia-security-plus.md)
 
-<!--
-
 ## Implementing Security
 
 ### Application Security
 
-* [2022-03-15 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-15-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-03-15 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-15-itprotv-comptia-security-plus.md)
+
+<!--
 
 ### Physical Security
 
