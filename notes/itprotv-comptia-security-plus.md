@@ -173,19 +173,17 @@
 
 * [2022-03-15 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-15-itprotv-comptia-security-plus.md)
 
-<!--
-
 ### Physical Security
 
 * [2022-03-16 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-16-itprotv-comptia-security-plus.md)
+
+<!--
 
 ### Wireless Security
 
 (Chapter 20)
 
 ### Secure Data Destruction
-
-(Chapter 9)
 
 ### Host Security — Endpoint Protection
 
@@ -285,6 +283,8 @@
 ### Attack Frameworks
 
 ## Governance, Risk, and Compliance
+
+(Chapter 9)
 
 ### Security Controls
 
