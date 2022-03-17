@@ -177,7 +177,7 @@
 
 ### Physical Security
 
-(Chapter 15)
+* [2022-03-16 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-16-itprotv-comptia-security-plus.md)
 
 ### Wireless Security
 
