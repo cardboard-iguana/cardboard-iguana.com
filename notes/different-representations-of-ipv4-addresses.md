@@ -24,12 +24,22 @@ Converting to hexadecimal is trivial using the excellent Qalculate tool.
 2130706433 to hex = 0x7F000001
 ```
 
+## Common IP Addresses
+
+|              IP |    Decimal | Hexadecimal | Notes                                                      |
+| ---------------:| ----------:| -----------:|:---------------------------------------------------------- |
+| 127.0.0.1       | 2130706433 |  0x7F000001 | localhost                                                  |
+| 169.254.169.254 | 2852039166 |  0xA9FEA9FE | Often used in to store configuration data in cloud systems |
+
+The nip.io service can be used to provide a domain name for an arbitrary IP address.
+
 ## References
 
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [Qalculate!](https://qalculate.github.io/)
+* [nip.io](https://nip.io/)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 24, 2022
+<span aria-hidden="true">📅</span> March 19, 2022

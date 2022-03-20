@@ -21,6 +21,7 @@
 * [Compact VirtualBox Disk Images](notes/compact-virtualbox-disk-images.md)
 * [Create a GPG Key (With SSH Support!)](notes/create-a-gpg-key-with-ssh-support.md)
 * [Debugging Bash Scripts](notes/debugging-bash-scripts.md)
+* [Equivalent Windows and Linux Commands](notes/equivalent-windows-and-linux-commands.md)
 * [Find and Replace a Single Line in a Large Text File](notes/find-and-replace-a-single-line-in-a-large-text-file.md)
 * [Force “more” Into Interactive Mode](notes/force-more-into-interactive-mode.md)
 * [Enumerate “sudo” Access](notes/enumerate-sudo-access.md)
@@ -65,13 +66,10 @@
 
 ### CLI
 
-* [“cat” a File on Windows](notes/cat-a-file-on-windows.md)
+* [Equivalent Windows and Linux Commands](notes/equivalent-windows-and-linux-commands.md)
 * [Get-WinEvent](notes/get-winevent.md)
 * [How to Add Windows Users (at the Command Line)](notes/how-to-add-windows-users-at-the-command-line.md)
 * [How to Calculate File Hashes on Windows](notes/how-to-calculate-file-hashes-on-windows.md)
-* [“sudo”-Like Functionality on Windows](notes/sudo-like-functionality-on-windows.md)
-* [Use “more” on Windows](notes/use-more-on-windows.md)
-* [Using “ipconfig”](notes/ipconfig.md)
 * [Using PowerShell](notes/powershell.md)
 
 ### GUI
@@ -139,9 +137,11 @@
 * [LFI (Local File Inclusion) Attacks](notes/local-file-inclusion-attacks.md)
 * [Living Off Trusted Sites](https://lots-project.com/)
 * [MITRE ATT&CK Emulation Plans](notes/mitre-attack-emulation-plans.md)
+* [nip.io](https://nip.io/)
 * [OWASP favicon database](https://wiki.owasp.org/index.php/OWASP_favicon_database)
 * [Payloads All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 * [The Poison Null Byte](notes/poison-null-byte.md)
+* [Request Bin](https://requestbin.com/)
 * [SETUID Bash](notes/setuid-bash.md)
 * [Shell Escapes](notes/shell-escapes.md)
 * [SQL Injection](notes/sql-injection.md)
@@ -162,6 +162,7 @@
 * [Using ”sqlmap”](notes/sqlmap.md)
 * [Using “wfuzz”](notes/wfuzz.md)
 * [XSS (Cross Site Scripting) Attacks](notes/xss-attacks.md)
+* * [XSS Hunter](https://xsshunter.com/)
 * [XXE (XML External Entity) Attacks](notes/xml-external-entity-attacks.md)
 
 ## CTFs and Wargames

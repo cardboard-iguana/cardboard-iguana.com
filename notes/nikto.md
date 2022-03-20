@@ -7,6 +7,8 @@ nikto -Format txt -host $URL \
       -output $OUTPUT_FILE_WITH_EXTENSION
 ```
 
+It can be used for basic web enumeration as well.
+
 Getting help
 
 ```bash
@@ -19,8 +21,9 @@ nikto -list-plugins # List plugins
 
 * [TryHackMe: CC: Pen Testing](tryhackme-cc-pen-testing.md)
 * [Tools'R'us](tryhackme-tools-r-us.md)
+* [web enumeration](https://pentesting.one2bla.me/enumeration/web-enumeration)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 30, 2022
+<span aria-hidden="true">📅</span> March 19, 2022

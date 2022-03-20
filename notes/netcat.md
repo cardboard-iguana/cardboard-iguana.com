@@ -24,6 +24,8 @@ Note that nc will exit once the first connection closes.
 
 (According to the nc docs, it looks like `nc -l $HOST $PORT` should also work, but it doesn’t. I think — though I haven’t been able to verify — that what’s happening here is that `-p` specifies the port to *listen* to, while the port following the $HOST specification is the port to *connect* to.)
 
+A netcat server doesn’t have to be used just for reverse shells. For example, you can also use it to catch web requests in conjunction with XSS or SQLi attacks.
+
 ## Useful Flags
 
 * `-l` — listen for incoming connections (rather than make an outgoing connection)
@@ -84,6 +86,8 @@ NOTE that in *none* of these cases will the reverse shell pick up on your termin
 * [TryHackMe: Exploiting Log4j](tryhackme-exploiting-log4j.md)
 * [Using Metasploit](metasploit.md)
 * [Using “socat”](socat.md)
+* [XSS (Cross-Site Scripting) Attacks](xss-attacks.md)
+* [SQL Injection](sql-injection.md)
 
 - - - -
 

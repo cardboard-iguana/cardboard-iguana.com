@@ -2,6 +2,7 @@
 
 ## Hacker’s Log (Recent)
 
+* [2022-03-19 TryHackMe: Jr. Penetration Tester](log/2022-03-19-tryhackme-jr-penetration-tester.md)
 * [2022-03-16 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-16-itprotv-comptia-security-plus.md)
 * [2022-03-15 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-15-itprotv-comptia-security-plus.md)
 * [2022-03-14 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-14-itprotv-comptia-security-plus.md)
@@ -11,7 +12,6 @@
 * [2022-03-07 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-07-itprotv-comptia-security-plus.md)
 * [2022-03-06 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-06-itprotv-comptia-security-plus.md)
 * [2022-03-03 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-03-03-itprotv-comptia-security-plus.md)
-* [2022-03-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ## Website Navigation
 
