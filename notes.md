@@ -162,7 +162,7 @@
 * [Using ”sqlmap”](notes/sqlmap.md)
 * [Using “wfuzz”](notes/wfuzz.md)
 * [XSS (Cross Site Scripting) Attacks](notes/xss-attacks.md)
-* * [XSS Hunter](https://xsshunter.com/)
+* [XSS Hunter](https://xsshunter.com/)
 * [XXE (XML External Entity) Attacks](notes/xml-external-entity-attacks.md)
 
 ## CTFs and Wargames
