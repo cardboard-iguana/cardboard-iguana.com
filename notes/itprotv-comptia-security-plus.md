@@ -181,9 +181,11 @@
 
 ### Wireless Security
 
-(Chapter 20)
+* [2022-03-21 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-21-itprotv-comptia-security-plus.md)
 
 ### Secure Data Destruction
+
+* [2022-03-21 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-21-itprotv-comptia-security-plus.md)
 
 ### Host Security — Endpoint Protection
 
