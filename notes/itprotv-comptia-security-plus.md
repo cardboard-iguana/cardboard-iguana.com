@@ -185,8 +185,6 @@
 
 * [2022-03-21 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-21-itprotv-comptia-security-plus.md)
 
-<!--
-
 ### Host Security — Endpoint Protection
 
 * [2022-03-24 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-24-itprotv-comptia-security-plus.md)
@@ -194,6 +192,8 @@
 ### Host Security — Hardening
 
 * [2022-03-24 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-24-itprotv-comptia-security-plus.md)
+
+<!--
 
 ### Mobile Device Deployment
 
