@@ -197,15 +197,19 @@
 
 ### Mobile Device Deployment
 
-(Chapter 21)
+* [2022-03-27 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-27-itprotv-comptia-security-plus.md)
 
 ### Mobile Device Management And Enforcement
 
+* [2022-03-27 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-27-itprotv-comptia-security-plus.md)
+
 ### Mobile Device Connections
+
+* [2022-03-27 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-27-itprotv-comptia-security-plus.md)
 
 ### Specialized Systems
 
-(Chapter 26)
+* [2022-03-27 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-27-itprotv-comptia-security-plus.md)
 
 ### Network Security — Segmentation
 
