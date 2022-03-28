@@ -1,12 +1,16 @@
-# Equivalent Windows and Linux Commands
+# Equivalent Windows and \*NIX Commands
 
-|   Linux  |  Windows |
-|:--------:|:--------:|
-|    cat   |   type   |
-|   more   |    more  |
-| ifconfig | ipconfig |
-|   sleep  |  timeout |
-|   sudo   |   runas  |
+|      Linux | Windows  |
+| ----------:|:-------- |
+|        cat | type     |
+|        dig | nslookup |
+|       more | more     |
+|   ifconfig | ipconfig |
+|    netstat | nbtstat  |
+|      sleep | timeout  |
+|       sudo | runas    |
+|    tcpdump | windump  |
+| traceroute | tracert  |
 
 ## ipconfig
 
@@ -39,8 +43,9 @@ runas /user:$USERNAME $EXECUTABLE
 * [Windows: Run as Different User](https://www.shellhacks.com/windows-run-as-different-user/)
 * [Windows runas command syntax and examples](https://www.windows-commandline.com/windows-runas-command-prompt/)
 * [2022-03-19 TryHackMe: Jr. Penetration Tester](../log/2022-03-19-tryhackme-jr-penetration-tester.md)
+* [2022-03-27 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-27-itprotv-comptia-security-plus.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 19, 2022
+<span aria-hidden="true">📅</span> March 27, 2022

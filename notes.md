@@ -21,7 +21,7 @@
 * [Compact VirtualBox Disk Images](notes/compact-virtualbox-disk-images.md)
 * [Create a GPG Key (With SSH Support!)](notes/create-a-gpg-key-with-ssh-support.md)
 * [Debugging Bash Scripts](notes/debugging-bash-scripts.md)
-* [Equivalent Windows and Linux Commands](notes/equivalent-windows-and-linux-commands.md)
+* [Equivalent Windows and \*NIX Commands](notes/equivalent-windows-and-nix-commands.md)
 * [Find and Replace a Single Line in a Large Text File](notes/find-and-replace-a-single-line-in-a-large-text-file.md)
 * [Force “more” Into Interactive Mode](notes/force-more-into-interactive-mode.md)
 * [Enumerate “sudo” Access](notes/enumerate-sudo-access.md)
@@ -66,7 +66,7 @@
 
 ### CLI
 
-* [Equivalent Windows and Linux Commands](notes/equivalent-windows-and-linux-commands.md)
+* [Equivalent Windows and \*NIX Commands](notes/equivalent-windows-and-nix-commands.md)
 * [Get-WinEvent](notes/get-winevent.md)
 * [How to Add Windows Users (at the Command Line)](notes/how-to-add-windows-users-at-the-command-line.md)
 * [How to Calculate File Hashes on Windows](notes/how-to-calculate-file-hashes-on-windows.md)
