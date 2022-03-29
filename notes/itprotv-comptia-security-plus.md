@@ -213,27 +213,27 @@
 
 ### Network Security — Segmentation
 
-* [2022-03-28 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-28-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
 
 ### Network Security — VPNs
 
-* [2022-03-28 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-28-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
 
 ### Network Security — Proxies And Load Balancing
 
-* [2022-03-28 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-28-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
 
 ### Network Security — Port Security
 
-* [2022-03-28 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-28-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
 
 ### Network Security — Firewalls
 
-* [2022-03-28 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-28-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
 
 ### Network Security — NIDS And NIPS
 
-* [2022-03-28 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-28-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
 
 ## Cloud and Virtualization
 
