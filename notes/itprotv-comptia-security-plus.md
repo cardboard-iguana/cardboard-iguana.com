@@ -213,27 +213,27 @@
 
 ### Network Security — Segmentation
 
-* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Network Security — VPNs
 
-* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Network Security — Proxies And Load Balancing
 
-* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Network Security — Port Security
 
-* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Network Security — Firewalls
 
-* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Network Security — NIDS And NIPS
 
-* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-29-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ## Cloud and Virtualization
 
