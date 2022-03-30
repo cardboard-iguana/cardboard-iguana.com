@@ -12,6 +12,34 @@
 |    tcpdump | windump  |
 | traceroute | tracert  |
 
+## dig
+
+```bash
+# dig command syntax; only $DOMAIN is required
+#
+dig @$NAME_SERVER $DOMAIN $QUERY_TYPE
+
+# Examples
+#
+dig @8.8.8.8 microsoft.com A
+dig @1.1.1.1 tryhackme.com
+dig          google.com    MX
+```
+
+## nslookup
+
+```powershell
+# nslookup command syntax; only $DOMAIN is required
+#
+nslookup -type=$QUERY_TYPE $DOMAIN $NAME_SERVER
+
+# Examples
+#
+nslookup -type=A  microsoft.com 8.8.8.8
+nslookup          tryhackme.com 1.1.1.1
+nslookup -type=MX google.com
+```
+
 ## ipconfig
 
 ### Display Current DNS Settings
@@ -44,8 +72,9 @@ runas /user:$USERNAME $EXECUTABLE
 * [Windows runas command syntax and examples](https://www.windows-commandline.com/windows-runas-command-prompt/)
 * [2022-03-19 TryHackMe: Jr. Penetration Tester](../log/2022-03-19-tryhackme-jr-penetration-tester.md)
 * [2022-03-27 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-27-itprotv-comptia-security-plus.md)
+* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 27, 2022
+<span aria-hidden="true">📅</span> March 29, 2022

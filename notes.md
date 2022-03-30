@@ -112,6 +112,7 @@
 ## Red Team
 
 * [crt.sh](https://crt.sh/)
+* [DNSdumpster](https://dnsdumpster.com/)
 * [Enumerate NFS Shares](notes/enumerate-nfs-shares.md)
 * [Enumerate Samba Users and Shares](notes/enumerate-samba-users-and-shares.md)
 * [Enumerate “sudo” Access](notes/enumerate-sudo-access.md)
@@ -144,6 +145,7 @@
 * [Request Bin](https://requestbin.com/)
 * [SETUID Bash](notes/setuid-bash.md)
 * [Shell Escapes](notes/shell-escapes.md)
+* [Shodan](https://www.shodan.io/)
 * [SQL Injection](notes/sql-injection.md)
 * [Using Burp Suite](notes/burp-suite.md)
 * [Using “ffuf”](notes/ffuf.md)

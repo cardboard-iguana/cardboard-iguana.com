@@ -237,7 +237,7 @@ ITPro.TV defines COPE (Corporate-Owned, Personally Enabled) broadly as the tradi
 
 This episode is a walk-through of the Microsoft Endpoint Security Manager.
 
-Heh. Dan Lowery gives a shout-out to Signal as an example of end-to-end encrypted messaging.
+Heh. Dan Lowrie gives a shout-out to Signal as an example of end-to-end encrypted messaging.
 
 ### Mobile Device Connections
 

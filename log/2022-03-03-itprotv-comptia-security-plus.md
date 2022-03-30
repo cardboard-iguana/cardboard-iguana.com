@@ -68,7 +68,7 @@ To reiterate, a list of the roles of cryptography in security:
 
 > [Cryptography] is trying to make us live in a world that’s “need to know”.
 > 
-> — Dan Lowery
+> — Dan Lowrie
 
 The three states of data:
 

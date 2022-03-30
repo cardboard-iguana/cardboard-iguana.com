@@ -75,21 +75,17 @@
 
 * [2022-01-10 TryHackMe: Web Fundamentals](../log/2022-01-10-tryhackme-web-fundamentals.md)
 
-<!--
-
 ## Network Security
 
 ### Passive Reconnaissance
 
 * [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
+<!--
+
 ### Active Reconnaissance
 
-* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-
 ### Nmap Live Host Discovery
-
-* [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Nmap Basic Port Scans
 

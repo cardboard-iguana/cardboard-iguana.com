@@ -372,7 +372,7 @@ Important ports:
 | SMTP+SSL      |  465 |      Y     |
 | SMTP+STARTTLS |  587 |      Y     |
 
-(Dan Lowery states that scp is considered deprecated now… Which surprisingly turns out to be true! Though there’s apparently a version of scp that’s actually sftp under the hood in development, so the end impact of this deprecation will probably be close to zero.)
+(Dan Lowrie states that scp is considered deprecated now… Which surprisingly turns out to be true! Though there’s apparently a version of scp that’s actually sftp under the hood in development, so the end impact of this deprecation will probably be close to zero.)
 
 SRTP: Secure Realtime Transport Protocol.
 
