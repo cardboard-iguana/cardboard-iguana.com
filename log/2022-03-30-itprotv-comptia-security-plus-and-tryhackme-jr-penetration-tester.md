@@ -6,15 +6,88 @@ Today I’ll be covering Chapter 10 of the Security+ Exam Cram, “Virtualizatio
 
 ### Virtualization
 
-==xxx==
+Exam Cram refers to virtualization as a solution for rising energy costs and environmental concerns… Neither of which actually seem right? Exam Cram also seems very concerned with VM escapes, which are a real worry, but still… Not exactly easy?
+
+### Type I Hypervisors
+
+Type I hypervisors are bare-metal, e.g., Xen.
+
+* [Xen Project](https://xenproject.org/)
+
+### Type II Hypervisors
+
+Type II hypervisors are applications that run on a host operating system, e.g., VirtualBox.
+
+* [VirtualBox](https://www.virtualbox.org/)
+
+### Type I vs. Type II Hypervisors
+
+Interesting… Hyper-V is actually a Type I hypervisor. I wonder if that means that Windows is actually virtualized in its entirety these days?
+
+### Containers and Microservices
+
+Containers are basically application + dependency bundles that are partitioned from the host system using kernel-level controls (namespaces under Linux); they thus share the same kernel as the host system, even though they have a different userland.
+
+Microservices are a software development strategy in which monolithic applications are broken into smaller, special-purpose parts that communicate via a defined API. This allows for component services to be scaled and upgraded in a more dynamic fashion. Microservices are often (but not always) implemented using containers.
+
+Uh, Exam Cram… I do not think that the JVM is the same idea as a hypervisor…
+
+### Virtual Desktop Infrastructure (VDI)
+
+VDE = Virtual Desktop Environment = The actual virtualized desktop.
+
+VDI = Virtual Desktop Infrastructure = The software that manages VDEs.
+
+### Virtual Machine (VM) Sprawl Avoidance
+
+VM Sprawl = When an organization has multiple under-utilized VMs. Common after mergers, or when VMs don’t have a proper lifecycle management process.
+
+Preventing VM sprawl basically means applying the same standards to your VM fleet as you should apply to your physical fleet.
+
+### VM Escape Protection
+
+> VM escape does not affect bare-metal platforms; it affects only hosted platforms.
+
+Tell that to the Qubes people…
+
+* [Qubes OS](https://www.qubes-os.org/)
+
+### Software-Defined Networking (SDN)
+
+Both Exam Cram and Wikipedia are entirely unclear about what exactly software-defined networking looks like in practice. Judging from the Wikipedia page on OpenFlow, it looks like this is just a method of centralizing both layer 2 and layer 3 decision making into one component (the “controller”), which then manages the routing/flow tables of component devices automatically. Packets that don’t conform to known rules are forwarded (either in full or in part, depending on implementation) to the controller, which then makes a decision about how to update routing/flow tables to handle the new packet. The goal is to keep packets from being forwarded to the controller.
+
+* [Software-defined networking (Wikipedia)](https://en.wikipedia.org/wiki/Software-defined_networking)
+* [OpenFlow (Wikipedia)](https://en.wikipedia.org/wiki/OpenFlow)
 
 ### On-Premises vs. Off-Premises
 
-==xxx==
+Exam Cram defines “managed service provider” quite broadly — I’ve only heard the term in relation to IT operations out-sourcing, but the definition here broadly includes any service offered under a subscription B2B model. This doesn’t include cloud infrastructure services like AWS and Google Cloud Platform, since the pricing for those is dynamic, but per-seat services like Google Workspace and Microsoft 365 do (I think) qualify.
 
-### Cloud Models
+Infrastructure models (feel free to mix-n-match):
 
-==xxx==
+* On-prem
+* Hosted (third-party data center)
+* Cloud
+
+### Service Models
+
+* IaaS (e.g., Amazon EC2)
+* PaaS (e.g., Google App Engine)
+* FaaS (e.g., Netlify Functions)
+* SaaS (e.g., Microsoft OneDrive)
+
+PaaS is distinguished by providing a managed environment on which code can be deployed. This means that many SaaS providers are also PaaS providers: Facebook apps, Google Workspace add-ons, etc.
+
+All of these are collectively known as XaaS — Anything as a Service. Because that’s the first thing you think of when you see that acronym.
+
+Exam Cram uses the term “fog computing” for strategies that distribute computing resources all the way from central cloud data centers to peripheral IoT devices. This is in contrast to “edge computing”, which favors computing on the consumer side only (think of “fog computing” as the “smear” between “edge computing” and “cloud computing”).
+
+### Deployment Models
+
+* PRIVATE: Cloud computing infrastructure restricted to a single organization.
+* PUBLIC: Cloud computing hosted by a service provider. Data is generally only logically segmented between organizations. Most of what we commonly think of as “cloud computing” follows this model.
+* HYBRID: Combined public/private cloud model
+* COMMUNITY: Public or hybrid cloud model tuned to a specific industry (healthcare, defense, etc.).
 
 ## TryHackMe: Jr. Penetration Tester
 

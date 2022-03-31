@@ -237,7 +237,6 @@
 
 ## Cloud and Virtualization
 
-(Chapter 10)
 (Chapter 14)
 (Chapter 22)
 

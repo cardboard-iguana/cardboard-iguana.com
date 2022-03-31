@@ -18,7 +18,7 @@
 
 * `-sT`  — TCP connect scan. This makes a full TCP handshake when connecting to each port, then sends a RST after the handshake is finished. Slower, more accurate, more detectable.
 * `-sS` — SYN scan. Most common scan. Starts a TCP handshake but then sends a RST after receiving the SYN/ACK packet. Requires root, should not be used on OT. Also called a “stealth scan”, but most IDS solutions detect it these days.
-* `-sU` — UDP scan. Sends empty UDP packets (or more realistic packets for known ports) and listens for a response back (“open”) or a ICMP “port unreachable” packet (“closed”). Since UDP doesn’t require a response, most ports will get marked “open|filtered”. *Very* slow, so you probably want to use with ”-sU --top-ports 20”.
+* `-sU` — UDP scan. Sends empty UDP packets (or more realistic packets for known ports) and listens for a response back (“open”) or a ICMP “port unreachable” packet (“closed”). Since UDP doesn’t require a response, most ports will get marked “open\|filtered”. *Very* slow, so you probably want to use with ”-sU --top-ports 20”.
 * `-sn` — Ping sweep. Pings all hosts on the network, and sends TCP SYN packets to port 443 and TCP ACK packets to port 80 (SYN if non-root) for whatever reason. Note that the Windows Firewall blacks ICMP by default.
 
 ## References
