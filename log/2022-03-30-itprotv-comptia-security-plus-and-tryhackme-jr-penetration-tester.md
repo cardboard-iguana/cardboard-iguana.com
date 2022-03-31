@@ -1,4 +1,4 @@
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester #Draft
+# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
 ## CompTIA Security+ Exam Cram
 
@@ -91,33 +91,43 @@ Exam Cram uses the term “fog computing” for strategies that distribute compu
 
 ## TryHackMe: Jr. Penetration Tester
 
-### Introduction to Active Reconnaissance
-
-==xxx==
-
 ### Web Browser
 
-==xxx==
+Wappalyzer is a potentially useful tool to automate the identification of website/server technologies. There’s a website and various browser extensions.
+
+* [Wappalyzer](https://www.wappalyzer.com/)
 
 ### Ping
 
-==xxx==
+Windows `ping` uses the `-n` flag to specify the number of packets sent (in contrast to \*NIX’s `-c`).
+
+Remember that the Windows firewall blocks ICMP echo/reply requests by default!
+
+ICMP headers are 8 bytes; the first 4 bytes have a fixed meaning, while the meaning of the last 4 bytes varies depending on the type of request specified in the first 4 bytes.
+
+* [Internet Control Message Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol)
 
 ### Traceroute
 
-==xxx==
+The IP header’s TTL value is actually the number of network *hops* that it can transit, not a literal time. Every time a router hands off a packet, the TTL value is decremented by 1. Traceroute manipulates the TTL to purposefully cause “TTL exceeded” error, and uses the resulting ICMP response to map the logical network path being traced.
+
+When the expected ICMP error is not received, traceroute indicates this with a `*`. In general multiple packets are sent at a time (by default, 3); if the packets take different routes, then the routes are displayed in sequence.
 
 ### Telnet
 
-==xxx==
+TELNET = Teletype Network
+
+From 1969! Uses port 23 by default.
 
 ### Netcat
 
-==xxx==
+Useful flag I didn’t know before: `-k` keeps listening even after the initial client disconnection.
 
-### Putting It All Together
+Given the general usefulness of netcat (you can straight up use it as a telnet replacement), it’s hard to see why you’d use telnet these days.
 
-==xxx==
+* [Using “netcat”](../notes/netcat.md)
+
+<!--
 
 ### Introduction to Nmap Live Host Discovery
 
@@ -246,6 +256,8 @@ Exam Cram uses the term “fog computing” for strategies that distribute compu
 ### Summary of Nmap Post Port Scans
 
 ==xxx==
+
+-->
 
 - - - -
 

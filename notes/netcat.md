@@ -31,8 +31,9 @@ A netcat server doesn’t have to be used just for reverse shells. For example, 
 * `-l` — listen for incoming connections (rather than make an outgoing connection)
 * `-v` — verbose
 * `-n` — skip DNS resolution (slightly faster, less noisy on the network)
-* `-p` specify the port to listen to
-* `-u` connect using UDP instead of TCP
+* `-p` — specify the port to listen to
+* `-u` — connect using UDP instead of TCP
+* `-k` — keep listening even after client disconnects
 
 ## Example Attack Patterns
 
@@ -79,6 +80,10 @@ Or, just fire up socat from inside of netcat!
 
 NOTE that in *none* of these cases will the reverse shell pick up on your terminal size, so you’ll need to manually specify it using `stty rows` and `stty cols`.
 
+## Other Uses
+
+If you just have netcat connect to a service directly, it functions exactly like telnet.
+
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
@@ -88,7 +93,9 @@ NOTE that in *none* of these cases will the reverse shell pick up on your termin
 * [Using “socat”](socat.md)
 * [XSS (Cross-Site Scripting) Attacks](xss-attacks.md)
 * [SQL Injection](sql-injection.md)
+* [2022-03-30 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks
+<span aria-hidden="true">📅</span> March 30, 2022

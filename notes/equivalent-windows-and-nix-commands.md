@@ -7,10 +7,15 @@
 |       more | more     |
 |   ifconfig | ipconfig |
 |    netstat | nbtstat  |
+|       ping | ping     |
 |      sleep | timeout  |
 |       sudo | runas    |
 |    tcpdump | windump  |
 | traceroute | tracert  |
+
+## ping
+
+Windows `ping` uses the `-n` flag to specify the number of packets sent (in contrast to Linux’s `-c`).
 
 ## dig
 
@@ -73,8 +78,9 @@ runas /user:$USERNAME $EXECUTABLE
 * [2022-03-19 TryHackMe: Jr. Penetration Tester](../log/2022-03-19-tryhackme-jr-penetration-tester.md)
 * [2022-03-27 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-27-itprotv-comptia-security-plus.md)
 * [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-03-30 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 29, 2022
+<span aria-hidden="true">📅</span> March 30, 2022

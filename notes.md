@@ -163,6 +163,7 @@
 * [Using Rubeus](notes/rubeus.md)
 * [Using ”sqlmap”](notes/sqlmap.md)
 * [Using “wfuzz”](notes/wfuzz.md)
+* [Wappalyzer](https://www.wappalyzer.com/)
 * [XSS (Cross Site Scripting) Attacks](notes/xss-attacks.md)
 * [XSS Hunter](https://xsshunter.com/)
 * [XXE (XML External Entity) Attacks](notes/xml-external-entity-attacks.md)
