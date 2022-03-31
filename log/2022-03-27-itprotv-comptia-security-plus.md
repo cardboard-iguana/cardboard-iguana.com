@@ -10,7 +10,7 @@ CDMA = Code-Division Multiple Access
 
 GSM = Global System for Mobile Communications
 
-GSM is the dominant standard, and is the one that uses SIM (“Subscriber Identity Module”) cards. ExamCram indicates that CDMA is the more secure cellular standard.
+GSM is the dominant standard, and is the one that uses SIM (“Subscriber Identity Module”) cards. Exam Cram indicates that CDMA is the more secure cellular standard.
 
 GSM/CDMA describe the voice component of the cellular network. 2G, 3G, and 4G/LTE describe the data standard.
 
@@ -56,13 +56,13 @@ This seems to be just the (controlled!) method/application through which the mob
 
 Some MDM solutions use their own encrypted document store and wrap application system calls for accessing this data.
 
-ExamCram recommends deriving encryption keys from a user password rather than storing them on device in order to guard against device rooting.
+Exam Cram recommends deriving encryption keys from a user password rather than storing them on device in order to guard against device rooting.
 
 ### Biometrics and Context-Aware Authentication
 
-ExamCram recommends combining biometrics with a device PIN. But I’ve never seen an iOS or Android device offer this option.
+Exam Cram recommends combining biometrics with a device PIN. But I’ve never seen an iOS or Android device offer this option.
 
-“Context-aware authentication” in this case is just referring to using additional metadata about a user’s login to decide whether to allow or deny the action, or perhaps to request an additional form of authentication. ExamCram seems to explicitly link this with machine learning. So, perhaps a bit more powerful than Google’s “Context-Aware Access”.
+“Context-aware authentication” in this case is just referring to using additional metadata about a user’s login to decide whether to allow or deny the action, or perhaps to request an additional form of authentication. Exam Cram seems to explicitly link this with machine learning. So, perhaps a bit more powerful than Google’s “Context-Aware Access”.
 
 * [Context-Aware Access overview](https://support.google.com/a/answer/9275380)
 
@@ -72,7 +72,7 @@ Interesting… There are local device wiping tools that can be triggered when a 
 
 ### Geolocation, Geofencing, and Push Notifications
 
-ExamCram notes that geofencing is a tactic that can be used to prevent time theft. Sufficiently fine-grained geofencing can actually be used to clock people in and out.
+Exam Cram notes that geofencing is a tactic that can be used to prevent time theft. Sufficiently fine-grained geofencing can actually be used to clock people in and out.
 
 ### Storage Segmentation and Containerization
 
@@ -98,11 +98,11 @@ Android supports the deployment of “Device Policy Controller” (DPC) applicat
 
 USB OTG = USB On-the-Go = USB Host Mode
 
-ExamCram emphasizes the importance of encrypting micoSD cards.
+Exam Cram emphasizes the importance of encrypting micoSD cards.
 
 ### Enforcement for Normal Device Functions
 
-ExamCram emphasizes the importance of including policy guidance w.r.t. camera and microphone usage.
+Exam Cram emphasizes the importance of including policy guidance w.r.t. camera and microphone usage.
 
 ### Wi-Fi Methods, Tethering, and Payments
 
@@ -112,7 +112,7 @@ Wi-Fi Direct is typically used for short-term device-to-device communications, i
 
 Ad hoc networking is formally the creation of a “Mobile Ad hoc Network” "(MANET), and is part of the 802.11 standard (as the “Independent Basic Service Set”, or IBSS). IBSS nodes can use *any* available form of Wi-Fi encryption, including *none*.
 
-ExamCram defines “tethering” broadly to include *any* use of a mobile device by another system to reach the internet. So this includes both physical tethering and the use of a mobile phone as a hotspot.
+Exam Cram defines “tethering” broadly to include *any* use of a mobile device by another system to reach the internet. So this includes both physical tethering and the use of a mobile phone as a hotspot.
 
 ### BYOD, CYOD, COPE, and Corporate-Owned Devices
 
@@ -128,7 +128,7 @@ COPE = Corporate-Owned, Personally Enabled. Like COBO but allows for personal us
 
 VDI = Virtual Desktop Infrastructure
 
-A variant called VMI (“Virtual Mobile Infrastructure”) actually hosts a copy of a mobile OS. Weird. I can’t imagine that this works very well, but ExamCram speaks of it quite highly.
+A variant called VMI (“Virtual Mobile Infrastructure”) actually hosts a copy of a mobile OS. Weird. I can’t imagine that this works very well, but Exam Cram speaks of it quite highly.
 
 VDI access is either client-based (specialized application) or browser-based.
 
@@ -206,7 +206,7 @@ Types of data sanitization:
 * Purge: The use of techniques designed to make data recovery difficult/impossible. Normally what we mean when we talk about “data sanitization”.
 * Destroy: Render the device inoperative and the data inaccessible/unrecoverable.
 
-Some other tools that ExamCram mentions explicitly:
+Some other tools that Exam Cram mentions explicitly:
 
 * WinHex (Windows hex editor)
 * FTK Imager (disk imaging tool)

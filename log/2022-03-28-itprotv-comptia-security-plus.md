@@ -2,7 +2,7 @@
 
 ## CompTIA Security+ Exam Cram
 
-Today I’ll be reading chapter 19 of the Security+ ExamCram, “Secure Network Design”.
+Today I’ll be reading chapter 19 of the Security+ Exam Cram, “Secure Network Design”.
 
 ### Routers
 
@@ -52,7 +52,7 @@ Port security mechanisms:
 * Loop Detection: Interfaces are periodically probed using “loop packets”; if one of these packets makes it way back to the switch on a different port, then a loop exists and one of the ports is disabled.
 * DHCP Snooping: Monitors DHCP requests on ports, and blocks offer and acknowledgement packets coming from client (“untrusted”) ports (the idea here is that the DHCP server is part of the network infrastructure).
 
-ExamCram indicates that port security questions are likely to be on the Security+ exam.
+Exam Cram indicates that port security questions are likely to be on the Security+ exam.
 
 * [What is BPDU Guard and How to Configure BPDU Guard?](https://www.geeksforgeeks.org/what-is-bpdu-guard-and-how-to-configure-bpdu-guard/)
 * [DHCP Snooping](https://www.geeksforgeeks.org/dhcp-snooping/)
@@ -108,9 +108,9 @@ Intranets broadly include internally-hosted websites and services. Extranets are
 
 “Zero Trust” can basically be thought of as reducing the network perimeter to single resources + some level of continuous/dynamic authentication.
 
-Typically there is a firewall on either side of screened subnet, rather than a single firewall handling all connections. Watch out for services that offer connections in *both* directions across a firewall, and thus can be used to breach its protections (ExamCram indicates that network storage devices are a common offender here).
+Typically there is a firewall on either side of screened subnet, rather than a single firewall handling all connections. Watch out for services that offer connections in *both* directions across a firewall, and thus can be used to breach its protections (Exam Cram indicates that network storage devices are a common offender here).
 
-ExamCram recommends the use of *both* built-in network-level encryption *and* encrypted tunnels when using wireless networks.
+Exam Cram recommends the use of *both* built-in network-level encryption *and* encrypted tunnels when using wireless networks.
 
 Jump server = Bastion server
 
