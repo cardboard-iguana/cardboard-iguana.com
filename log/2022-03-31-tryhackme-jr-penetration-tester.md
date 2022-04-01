@@ -18,8 +18,6 @@ Handy nmap flags:
 
 Note that you can put ranges in any octet of an IP address; for example, 10.10.0-255.1-255 will scan 10.10.0.1 – 10.10.255.255.
 
-%% ==xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx== %%
-
 ### Nmap Host Discovery Using ARP
 
 Nmap host discovery:
