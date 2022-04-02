@@ -237,8 +237,6 @@
 
 ## Cloud and Virtualization
 
-(Chapter 22)
-
 ### Virtualization
 
 ### Cloud Concepts
