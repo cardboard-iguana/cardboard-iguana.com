@@ -151,7 +151,7 @@ Nmap normally scans ports in a random order. However, ports are often brought up
 
 ### TCP SYN Scan
 
-TCP SYNC scans (`-sS`) are nmap’s default; sends a RST instead of a ACK at the end of the three-way handshake.
+TCP SYN scans (`-sS`) are nmap’s default; sends a RST instead of a ACK at the end of the three-way handshake.
 
 Fast. Limited to privileged users.
 
@@ -199,7 +199,7 @@ Packet rate can also be bounded using `--min-rate` and `--max-rate` (single numb
 
 * `-sA` — ACK scan. All ports *should* respond with a RST, but firewalls will generally block these requests except for open/forwarded ports. Thus, an ACK scan is useful for probing the configuration of intermediate firewalls (but says nothing about whether services are actually *listening* on the identified ports).
 * `-sW` — TCP windows scan; the same as an ACK scan except that it examines the TCP window field of returned RST packets and uses it to discern if a port responded *differently*. Note that ports may be reported as closed (and open!) erroneously (as not all systems respond in the same way), but unfiltered ports will be identified. Look for patterns of open/closed ports to try to discern how the target system is responding.
-* `--scanflags` — Specify the TCP flags used to probe ports during a scan using URG, PSH, RST, SYN, ACK, FIN (e.g., `--scanflags URGPSHFIN` is the same as `-sX`)
+* `--scanflags` — Specify the TCP flags used to probe ports during a scan using URG, PSH, RST, SYN, ACK, FIN (e.g., `--scanflags URGPSHFIN` is the same as `-sX`).
 
 Reference:
 
