@@ -153,7 +153,7 @@ As in, attacks that operate on the link layer. Examples:
 Defenses against ARP poisoning include pre-associating known MAC addresses with IPs in client ARP tables, and configuring switches such that MAC addresses are (pre) bound to a single port. Also, IDS.
 
 * [OSI Model](../notes/osi-model.md)
-* [ARP Protocol](../notes/arp-protocol.md)
+* [ARP Protocol](../notes/arp.md)
 
 ### Domain Name System (DNS) Attacks
 
@@ -299,7 +299,7 @@ You can examine the ARP cache in Windows using `arp -a`.
 
 * [MAC Addresses](../notes/mac-addresses.md)
 * [OSI Model](../notes/osi-model.md)
-* [ARP Protocol](../notes/arp-protocol.md)
+* [ARP Protocol](../notes/arp.md)
 
 ### Network Attacks — DoS And DDoS
 

@@ -290,7 +290,7 @@ Nmap script categories:
 
 The default port for `telnetd` is TCP 23.
 
-### Hypertext Transfer protocol (HTTP)
+### Hypertext Transfer Protocol (HTTP)
 
 Minimal valid HTTP request:
 

@@ -48,6 +48,7 @@
 * [Using NFS](notes/nfs.md)
 * [Using “socat”](notes/socat.md)
 * [Using “ss”](notes/ss.md)
+* [Using “tcpdump”](notes/tcpdump.md)
 * [Using “unbuffer”](notes/unbuffer.md)
 * [Using “xxd”](notes/xxd.md)
 * [Using “youtube-dl”](notes/youtube-dl.md)
@@ -79,14 +80,23 @@
 
 ## Networks
 
-* [ARP Protocol](notes/arp-protocol.md)
-* [ICMP Protocol](notes/icmp-protocol.md)
-* [CIFS Protocol (a.k.a. SAMBA)](notes/cifs-samba.md)
 * [Different Representations of IPv4 Addresses](notes/different-representations-of-ipv4-addresses.md)
 * [OSI Model](notes/osi-model.md)
 * [Packet Headers](notes/packet-headers.md)
 * [TCP Model](notes/tcp-model.md)
-* [TCP Protocol](notes/tcp-protocol.md)
+
+### Protocols
+
+* [ARP Protocol](notes/arp.md)
+* [ICMP Protocol](notes/icmp.md)
+* [CIFS Protocol (a.k.a. SAMBA)](notes/cifs.md)
+* [File Transfer Protocol (FTP)](notes/ftp.md)
+* [Hypertext Transfer Protocol (HTTP)](notes/http.md)
+* [Internet Message Access Protocol (IMAP)](notes/imap.md)
+* [Post Office Protocol 3 (POP3)](notes/pop3.md)
+* [Simple Mail Transfer Protocol (SMTP)](notes/smtp.md)
+* [TCP Protocol](notes/tcp.md)
+* [Telnet Protocol](notes/telnet.md)
 
 ### The Web
 
@@ -96,7 +106,6 @@
 * [Fix EXIF Data on Google Photos Exports](notes/fix-exif-data-on-google-photos-exports.md)
 * [Look Up Unicode and Emoji Symbols](notes/look-up-unicode-and-emoji-symbols.md)
 * [Uniform Resource Locators (URLs)](notes/uniform-resource-locators.md)
-* [Useful HTTP Headers](notes/useful-http-headers.md)
 
 ### Other Protocols
 

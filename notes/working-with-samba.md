@@ -46,6 +46,7 @@ Use -R (and omit `$FILE`) to recursively download an entire directory.
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Windows Password Hashes](windows-password-hashes.md)
+* [CIFS Protocol (a.k.a. SAMBA)](cifs.md)
 
 - - - -
 

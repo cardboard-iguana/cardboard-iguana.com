@@ -4,16 +4,21 @@ Hydra can actually brute-force remote services, though I have some skepticism ab
 
 ```bash
 hydra -t 4 -l $USER_NAME -P $WORDLIST \
-      -f -vV $TARGET_IP_ADDRESS $SERVICE
+      -f $TARGET_IP_ADDRESS $SERVICE
 ```
 
-Here $SERVICE is “ssh”, “ftp”, etc. Note that "http" is not used directly; instead use "http-get", "http-put", etc.
+Here `$SERVICE` is “ssh”, “ftp”, etc. Note that "http" is not used directly; instead use "http-get", "http-put", etc.
 
-If you don't have a particular user login, you can use -L instead of -l and supply a wordlist. There's a similar symmetry for passwords (-p/-P).
+### Options
 
-The -f flag tells Hydra to stop after the first successful match. Useful if you are just trying to brute-force a single username!
-
-The -t flag specifies the number of threads (parallel connection attempts) that Hydra should make at any one time.
+* `-f` — Stop after the first successful match. Useful if you are just trying to brute-force a single username!
+* `-l` — Specify the username whose password you want to brute force.
+* `-L` — Specify a file listing of usernames (one per line) you want to brute force.
+* `-p` — Specify the password you want to attempt. Most useful in conjunction with `-L`.
+* `-P` — Specify a file listing of passwords (one per line) you want to brute force.
+* `-s` — Use a non-default port for `$SERVICE`.
+* `-t` — Specifies the number of threads (parallel connection attempts) that Hydra should make at any one time.
+* `-V` — Verbose output. Use `-vV` for even more verbose output, or `-d` for debugging output.
 
 ## Attacking API Endpoints Using JSON
 
@@ -35,8 +40,9 @@ The `$TEMPLATE` is basically the JSON request body with the special placeholders
 * [Hydra bruteforce and JSON](https://security.stackexchange.com/questions/57839/hydra-bruteforce-and-json)
 * [Bruteforce - Using Hydra with JSON](https://security.stackexchange.com/questions/203501/bruteforce-using-hydra-with-json)
 * [TryHackMe: hackernote](tryhackme-hackernote.md)
+* [2022-04-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 30, 2022
+<span aria-hidden="true">📅</span> April 3, 2022
