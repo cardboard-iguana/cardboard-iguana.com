@@ -204,6 +204,7 @@ Packet rate can also be bounded using `--min-rate` and `--max-rate` (single numb
 Reference:
 
 * [TCP Window Scan (-sW) (Official Nmap Project Guide)](https://nmap.org/book/scan-methods-window-scan.html)
+  
 ### Spoofing and Decoys
 
 * `-S` — Use a spoofed IP address for the scan. Only useful if you can actually capture incoming packets at that IP address! Generally must be combined with the `-e` and `-Pn` flags.
