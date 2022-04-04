@@ -186,6 +186,7 @@
 * [Ice](notes/tryhackme-ice.md)
 * [Inclusion](notes/tryhackme-inclusion.md)
 * [Jurassic Park](notes/tryhackme-jurassic-park.md)
+* [Net Sec Challenge](notes/tryhackme-net-sec-challenge.md)
 * [Overpass 2: Hacked](notes/tryhackme-overpass-2-hacked.md)
 * [Pickle Rick](notes/tryhackme-pickle-rick.md)
 * [Retro](notes/tryhackme-retro.md)
