@@ -239,15 +239,27 @@
 
 ### Virtualization
 
+* [2022-04-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-04-itprotv-comptia-security-plus.md)
+
 ### Cloud Concepts
+
+* [2022-04-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-04-itprotv-comptia-security-plus.md)
 
 ### Cloud Services
 
+* [2022-04-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-04-itprotv-comptia-security-plus.md)
+
 ### Cloud Models
+
+* [2022-04-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-04-itprotv-comptia-security-plus.md)
 
 ### Computing Types
 
+* [2022-04-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-04-itprotv-comptia-security-plus.md)
+
 ### Cloud Security Controls
+
+* [2022-04-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-04-itprotv-comptia-security-plus.md)
 
 ## Operational Resiliency
 
