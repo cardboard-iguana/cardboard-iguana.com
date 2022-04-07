@@ -64,6 +64,13 @@ Out-of-band SQLi only works if the application or database makes external calls 
 
 DNS is a popular data channel for out-of-band SQLi attacks.
 
+## Defense
+
+There are two main strategies for defending against SQLi:
+
+* Get your encoding right. User-generated code that’s passed off to SQL needs to be SQL-escaped first. Know what the context is of your data, and escape/unescape appropriately when writing data from one context to another!
+* User prepared queries (in code) and stored procedures (in the database) to limit the ability of user-generated code to influence the surrounding SQL.
+
 ## References
 
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
@@ -77,4 +84,4 @@ DNS is a popular data channel for out-of-band SQLi attacks.
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 30, 2022
+<span aria-hidden="true">📅</span> April 6, 2022

@@ -15,6 +15,7 @@
 
 ### CLI
 
+* [Bash Scripting Tricks](notes/bash-scripting.md)
 * [Change an OpenSSL Key Passphrase](notes/change-an-openssl-key-passphrase.md)
 * [Change an SSH Key Passphrase](notes/change-an-ssh-key-passphrase.md)
 * [Change the “master” Branch in Git to “trunk”](notes/change-the-master-branch-in-git-to-trunk.md)
@@ -29,7 +30,6 @@
 * [How to Quickly Bypass “ssh-agent”](notes/how-to-quickly-bypass-ssh-agent.md)
 * [How to Use “find” With File Metadata](notes/how-to-use-find-with-file-metadata.md)
 * [Jump to an Editor in “more”](notes/jump-to-an-editor-in-more.md)
-* [Loop Over File Names With Spaces in Bash](notes/loop-over-file-names-with-spaces-in-bash.md)
 * [Pull SSL Certificates from an External Server](notes/pull-ssl-certificates-from-an-external-server.md)
 * [Quickly Find the Canonical Path of a File](notes/quickly-find-the-canonical-path-of-a-file.md)
 * [Quick-n-Dirty Python Web Server](notes/quick-n-dirty-python-web-server.md)

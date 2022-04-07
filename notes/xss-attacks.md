@@ -1,5 +1,13 @@
 # XSS (Cross Site Scripting) Attacks
 
+Types of XSS attacks:
+
+* Reflected (URL-based, no server-side storage)
+* Stored
+* DOM-based (really client-side)
+
+DOM-based attacks are *client* side — with both reflected and stored XSS, the server is embedding the attack into the page that’s being rendered. For DOM-based attacks, it’s the *client* that inserts the malicious JavaScript into the page (even if the data was provided by the server). Ask yourself: “How did this get into the page? Did the server put it there (reflected/stored XSS), or did my client put it there (DOM-based XSS)?”
+
 The canonical (but highly annoying) XSS PoC is:
 
 ```html
@@ -68,7 +76,7 @@ For really heavy filtering, use something nutso like JSFuck.
 
 Sometimes filters are applied in a case-sensitive fashion. While JavaScript *is* case-sensitive, URL schemes, HTML tag names, and HTML tag attributes are case-*insensitive* (so, `javascript:` is treated the same as `javaSCRIPT:`, `onclick` is treated the same as `ONCLICK`, etc.).
 
-### Using Iframes
+### Using iFrames
 
 Typically XSS attacks work by injecting `<script/>` tags, but it's also possible to inject JavaScript using the `<iframe/>` tag by setting the `src` attribute to the `javacript:` pseudo-protocol. For example:
 
@@ -122,6 +130,10 @@ To get/set the content of an element, use the `innerHTML` method (to insert HTML
 
 Note that `<script/>` tags inserted by setting an element’s `innerHTML` are *not* executed, however!
 
+## Defense
+
+The key to defending against XSS is really to get your encoding right. User-generated code that’s passed off to JavaScript needs to be JavaScript-escaped first. User-generated code that’s written into the DOM needs to be HTML-escaped first. Know what the context is of your data, and escape/unescape appropriately when writing data from one context to another!
+
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
@@ -134,4 +146,4 @@ Note that `<script/>` tags inserted by setting an element’s `innerHTML` are *n
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 8, 2021
+<span aria-hidden="true">📅</span> April 6, 2022

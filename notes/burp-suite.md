@@ -48,6 +48,14 @@ Other options:
 * Use FoxyProxy and set up Burp Suite as a togglable proxy, and then import the Burp Suite CA certificate as above. I don’t like this option because I think that hacking and normal browsing activities should be kept as separate as possible.
 * Use Chromium as the Burp Suite browser. This is actually a better option, and aligns more with Burp Suite’s built-in (x86_64) browser. Unfortunately, Chromium’s certificate import functionality appears to be broken on Kali Linux ARM right now.
 
+### Mobile App Testing
+
+You can proxy mobile API requests through Burp Suite too.
+
+* Configure Burp Suite to listen on all interfaces.
+* Add your computer as an HTTP proxy to the network interface on the mobile device.
+* Add the Burp Suite CA using more-or-ess the same process as would be used for Firefox (above).
+
 ## Scoping
 
 Sites can be added to the project scope under Target > Scope.
@@ -138,8 +146,10 @@ Burp Suite displays hashes in the "Hex" view by default; to convert them into th
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [Use a Raspberry Pi 4B as an iPad Pro Hacking Accessory](use-a-raspberry-pi-4b-as-an-ipad-pro-hacking-accessory.md)
 * [FoxyProxy Basic](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-basic/)
+* [Configuring an iOS Device to Work With Burp](https://portswigger.net/support/configuring-an-ios-device-to-work-with-burp)
+* [Installing Burp's CA Certificate in an iOS Device](https://portswigger.net/support/installing-burp-suites-ca-certificate-in-an-ios-device)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 13, 2021
+<span aria-hidden="true">📅</span> April 6, 2022

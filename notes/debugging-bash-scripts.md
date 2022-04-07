@@ -30,7 +30,7 @@ set +x
 # These lines will not be echoed…
 ```
 
-Frequently `set -x` is used at the start of a script without a closing `set + x`, which will just cause all lines of the script to be echoed back before execution.
+Frequently `set -x` is used at the start of a script without a closing `set +x`, which will just cause all lines of the script to be echoed back before execution.
 
 ## References
 
