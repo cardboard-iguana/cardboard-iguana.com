@@ -105,9 +105,11 @@
 
 * [2022-04-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-<!--
-
 ### Net Sec Challenge
+
+* [2022-04-03 TryHackMe: Jr. Penetration Tester](../log/2022-04-03-tryhackme-jr-penetration-tester.md)
+
+<!--
 
 ## Vulnerability Research
 
@@ -145,5 +147,5 @@
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 23, 2022  
+<span aria-hidden="true">📅</span> April 3, 2022  
 <span aria-hidden="true">🏷️</span> #MOC
