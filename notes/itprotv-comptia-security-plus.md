@@ -271,11 +271,11 @@
 
 ### Non-Persistence Concepts
 
-* [2022-04-07 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-07-itprotv-comptia-security-plus.md)
+* [2022-04-08 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-08-itprotv-comptia-security-plus.md)
 
 ### Backup And Recovery
 
-* [2022-04-07 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-07-itprotv-comptia-security-plus.md)
+* [2022-04-08 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-08-itprotv-comptia-security-plus.md)
 
 <!--
 
@@ -367,5 +367,5 @@
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 7, 2022  
+<span aria-hidden="true">📅</span> April 8, 2022  
 <span aria-hidden="true">🏷️</span> #MOC

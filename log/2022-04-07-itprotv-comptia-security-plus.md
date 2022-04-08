@@ -66,14 +66,6 @@ Note that all all RAID systems — even RAID 0 — write information sequentiall
 * Warm (key systems are ready to go, but some reconfiguration required)
 * Cold (equipment *might* exist, but no configuration/readiness)
 
-### Non-Persistence Concepts
-
-No notes (possibly because I seem to be falling asleep)…
-
-### Backup And Recovery
-
-No notes (possibly because I seem to be falling asleep)…
-
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
