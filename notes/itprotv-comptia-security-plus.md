@@ -263,8 +263,6 @@
 
 ## Operational Resiliency
 
-(Chapter 13)
-
 ### Hardware Redundancy
 
 ### Site Redundancy
