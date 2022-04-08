@@ -259,17 +259,25 @@
 
 * [2022-04-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-04-itprotv-comptia-security-plus.md)
 
-<!--
-
 ## Operational Resiliency
 
 ### Hardware Redundancy
 
+* [2022-04-07 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-07-itprotv-comptia-security-plus.md)
+
 ### Site Redundancy
+
+* [2022-04-07 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-07-itprotv-comptia-security-plus.md)
 
 ### Non-Persistence Concepts
 
+* [2022-04-07 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-07-itprotv-comptia-security-plus.md)
+
 ### Backup And Recovery
+
+* [2022-04-07 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-07-itprotv-comptia-security-plus.md)
+
+<!--
 
 ## Operational Security and Incident Response
 
@@ -359,5 +367,5 @@
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 4, 2022  
+<span aria-hidden="true">📅</span> April 7, 2022  
 <span aria-hidden="true">🏷️</span> #MOC
