@@ -281,9 +281,6 @@
 
 ## Operational Security and Incident Response
 
-(Chapter 7)
-(Chapter 8)
-
 ### Network Reconnaissance And Discovery
 
 ### Packet Capture And Replay
