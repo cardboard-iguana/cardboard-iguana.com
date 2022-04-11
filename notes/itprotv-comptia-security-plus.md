@@ -277,21 +277,33 @@
 
 * [2022-04-08 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-08-itprotv-comptia-security-plus.md)
 
-<!--
-
 ## Operational Security and Incident Response
 
 ### Network Reconnaissance And Discovery
 
+* [2022-04-10 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-10-itprotv-comptia-security-plus.md)
+
 ### Packet Capture And Replay
+
+* [2022-04-10 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-10-itprotv-comptia-security-plus.md)
+
+<!--
 
 ### Vulnerability Scans
 
+* [2022-04-10 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-10-itprotv-comptia-security-plus.md)
+
 ### SIEM And SOAR Systems
+
+* [2022-04-10 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-10-itprotv-comptia-security-plus.md)
 
 ### Pentesting Techniques
 
+* [2022-04-10 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-10-itprotv-comptia-security-plus.md)
+
 ### Pentesting Exercise Types
+
+* [2022-04-10 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-10-itprotv-comptia-security-plus.md)
 
 ### Digital Forensics Concepts
 
