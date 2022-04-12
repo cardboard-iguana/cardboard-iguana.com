@@ -287,8 +287,6 @@
 
 * [2022-04-10 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-10-itprotv-comptia-security-plus.md)
 
-<!--
-
 ### Vulnerability Scans
 
 * [2022-04-11 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-11-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
@@ -304,6 +302,8 @@
 ### Pentesting Exercise Types
 
 * [2022-04-11 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-11-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
+<!--
 
 ### Digital Forensics Concepts
 

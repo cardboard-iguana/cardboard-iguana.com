@@ -1,4 +1,4 @@
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester #Draft
+# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
@@ -44,17 +44,28 @@ Purple teams are most common in smaller organizations with constrained resources
 
 ## TryHackMe: Jr. Penetration Tester
 
-### Vulnerabilities 101
+### Introduction to Vulnerabilties
 
-==xxx==
+* OS/Software
+* Misconfigurations
+* Weak/Default Credentials
+* Application/Business Logic
+* Humans
 
-### Exploit Vulnerabilities
+OS/Software vulnerabilities are the most likely to result in privesc.
 
-==xxx==
+### Scoring Vulnerabilities (CVSS & VPR)
 
-### Vulnerability Capstone
+That said, only ~20% of vulnerabilities have an actual exploit, and only ~2% are actually exploited in the wild.
 
-==xxx==
+### Vulnerability Databases
+
+* [National Vulnerability Database (NVD)](https://nvd.nist.gov/vuln/full-listing)
+* [Exploit Database](http://exploit-db.com/)
+
+### Finding Manual Exploits
+
+* [Rapid7 Vulnerability & Exploit Database](https://www.rapid7.com/db/)
 
 - - - -
 

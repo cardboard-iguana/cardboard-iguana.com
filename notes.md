@@ -151,6 +151,7 @@
 * [OWASP favicon database](https://wiki.owasp.org/index.php/OWASP_favicon_database)
 * [Payloads All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 * [The Poison Null Byte](notes/poison-null-byte.md)
+* [Rapid7 Vulnerability & Exploit Database](https://www.rapid7.com/db/)
 * [Request Bin](https://requestbin.com/)
 * [SETUID Bash](notes/setuid-bash.md)
 * [Shell Escapes](notes/shell-escapes.md)

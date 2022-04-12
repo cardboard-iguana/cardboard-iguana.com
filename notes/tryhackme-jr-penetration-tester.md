@@ -109,8 +109,6 @@
 
 * [2022-04-03 TryHackMe: Jr. Penetration Tester](../log/2022-04-03-tryhackme-jr-penetration-tester.md)
 
-<!--
-
 ## Vulnerability Research
 
 ### Vulnerabilities 101
@@ -121,9 +119,9 @@
 
 * [2022-04-11 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-11-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Vulnerability Capstone
+<!--
 
-* [2022-04-11 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-11-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+### Vulnerability Capstone
 
 ## Metasploit
 
