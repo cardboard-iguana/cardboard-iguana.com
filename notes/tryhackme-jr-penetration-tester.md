@@ -123,21 +123,21 @@
 
 ### Vulnerability Capstone
 
-* [2022-04-12 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-12-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ## Metasploit
 
 ### Introduction
 
-* [2022-04-12 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-12-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Exploitation
 
-* [2022-04-12 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-12-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ### Meterpreter
 
-* [2022-04-12 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-12-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ## Privilege Escalation
 
