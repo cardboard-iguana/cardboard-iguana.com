@@ -4,7 +4,32 @@
 
 ### Digital Forensics Concepts
 
-==xxx==
+Order of volatility:
+
+* CPU cache & registers (good luck!)
+* Routing tables, process tables, ARP cache, kernel stats
+* (Non-Kernel) RAM
+* Swap, /tmp, etc.
+* Storage, VM snapshots
+* Archival data, backups, logs, print-outs
+
+Preservation and documentation notes:
+
+* Timestamp everything
+* Note timezone differences
+* Written reports and logs (also use these to establish the chain of custody)
+* Witness testimony
+* Use file hashes
+
+Chain of custody is often represented as a simple paper log/form.
+
+Tools of the trade:
+
+* FTK Imager
+* WinHex
+* Autopsy
+* EnCase Forensic
+* `dd`
 
 ## TryHackMe: Jr. Penetration Tester
 
