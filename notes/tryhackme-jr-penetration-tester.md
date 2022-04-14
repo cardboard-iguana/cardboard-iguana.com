@@ -119,8 +119,6 @@
 
 * [2022-04-11 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-11-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-<!--
-
 ### Vulnerability Capstone
 
 * [2022-04-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
@@ -131,13 +129,11 @@
 
 * [2022-04-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
+<!--
+
 ### Exploitation
 
-* [2022-04-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-
 ### Meterpreter
-
-* [2022-04-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ## Privilege Escalation
 
@@ -159,5 +155,5 @@
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 11, 2022  
+<span aria-hidden="true">📅</span> April 13, 2022  
 <span aria-hidden="true">🏷️</span> #MOC
