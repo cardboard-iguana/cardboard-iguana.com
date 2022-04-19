@@ -108,30 +108,32 @@ The Meterpreter reverse shell *requires* a connection back to msfconsole using m
 
 ### Commands
 
-* `background` — background the current Meterpreter session and return to the Metasploit console
-* `cat` — dump file contents
+* `background` — background the current session and return to the Metasploit console
+* `clearenv` — clears the (Windows) event logs (kinda obvious)
 * `creds_all` — dump all user credentials in memory (requires the `kiwi` module)
-* `download` — transfer file from the target to the host
-* `execute` — execute a host command
+* `download` — transfer a file from the target to the attacker
+* `edit` — edit a file
+* `getpid` — get current process ID
 * `getprivs` — display current user privileges
-* `getuid` — display current user ID
-* `getsystem` — attempt to elevate to (or confirm) local system privileges
+* `getsystem` — attempt to elevate to SYSTEM/root
+* `getuid` — get current process user
 * `golden_ticket_create` — create a golden ticket (requires the `kiwi` module)
+* `guid` — get session ID
 * `hashdump` — dump NTLM hashes from the SAM (Windows-only, requires system privileges); fields are username, RID (the last four digits of the Windows SID, with leading zeros dropped), LM password hash, NTLM password hash
-* `help` — help menu
-* `help $COMMAND` — help specifically for $COMMAND
-* `ipconfig`/`ifconfig` — display network information
-* `load kiwi` — load (newer) Mimikatz module
-* `migrate` — migrate Meterpreter into a different process
-* `ps` — process list
-* `record_mic` — record using the system’s microphone
-* `run` — run a Metsploit module (see below)
-* `search` — search files (like “find”)
-* `screenshare` — view the current user’s desktop in realtime
-* `shell` — drop to system shell as the current user
-* `sysinfo` — display system information
-* `timestomp` — manipulate file times
-* `upload` — transfer file from the host to the target
+* `ifconfig` — display host network interface information
+* `info` — get information about a Meterpreter extension
+* `load` — load Meterpreter extension
+* `load kiwi` — load Mimikatz extension
+* `migrate` — migrate Meterpreter to another process
+* `netstat` — display host network connections
+* `portfwd` — forward a port on the host
+* `route` — mess with the host routing tables
+* `run` — run a meterpreter extension
+* `search` — search for files
+* `sessions` — switch to another (Metasploit) session
+* `shell` — drop to system shell (return to Meterpreter using `CTRL + Z`)
+* `sysinfo` — pull remote system information
+* `upload` — transfer a file from the attacker to the target
 
 Meterpreter sessions can be backgrounded using the `background` command, and all sessions can be backgrounded using `CTRL + Z`. List sessions using the `sessions` command, and foreground a session using `session -i #`, where `#` is the session number.
 
@@ -144,8 +146,13 @@ Reasons to migrate the Meterpreter process:
 * To hide (pick a process less likely to be examined)
 * To stabilize the shell (initial exploits often produce somewhat unstable sessions)
 * To move laterally or escalate privileges within a system (if you’re lucky)
+* To gain additional capabilities
 
-In particular, harvesting credentials from LSASS requires that Meterpreter be living in a process with the same permissions (NT AUTHORITY/SYSTEM) and architecture as LSASS; migrating Meterpreter can help us realize this. The print spooler service (`spoolsv.exe`) is often a good choice, as it runs with elevated permissions, has the same architecture as the system itself, and will restart itself automatically.
+In particular, harvesting credentials from LSASS requires that Meterpreter be living in a process with the same permissions (NT AUTHORITY/SYSTEM) and architecture as LSASS; migrating Meterpreter can help us realize this. The print spooler service (`spoolsv.exe`) is often a good choice, as it runs with elevated permissions, has the same architecture as the system itself, and will restart itself automatically. You can also use `lsass.exe` directly if you feel like living dangerously.
+
+Another example is that dumping keystrokes will only work when Meterpreter is attached to a word processor or text editor.
+
+Note that Meterpreter will happily let you migrate from a privileged to an unprivileged process — which may cause you to loose control of the target system! Additionally, migrating Meterpreter will change its current working directory to that of the process it’s attaching to.
 
 ### Modules
 
@@ -153,6 +160,7 @@ Potentially useful Metsploit modules to `run` from/besides Meterpreter:
 
 * `post/windows/gather/checkvm` — try to determine if we’re in a VM
 * `post/multi/recon/local_exploit_suggester` — find possible privilege escalation exploits (can be slow/unreliably on 64-bit architectures)
+* `post/windows/gather/enum_shares` — enumerate shares
 * `post/windows/gather/hashdump` — same as the hashdump command, but pushes the hashes into the Metasploit DB
 * `auxiliary/analyze/crack_windows` — sic John the Ripper or Hashcat on NTLM hashes stored in the Metasploit DB
 * `post/windows/manage/enable_rdp` — enable RDP access (requires admin privileges)
@@ -265,8 +273,10 @@ Use the `exploit/multi/handler` module in Metasploit to catch the shells produce
 * [Dumping Windows Password Hashes Using Metasploit](https://www.utc.edu/sites/default/files/2021-04/4660-lab6.pdf)
 * [Windows Password Hashes](../notes/windows-password-hashes.md)
 * [2022-04-14 TryHackMe: Jr. Penetration Tester](../log/2022-04-14-tryhackme-jr-penetration-tester.md)
+* [2022-04-18 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [Using Mimikatz](mimikatz.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 16, 2022
+<span aria-hidden="true">📅</span> April 18, 2022

@@ -9,6 +9,19 @@
 | System      | Contains events logged by system components, such as the failure of a driver or other system component to load during startup.                                                                                                               |
 | [CustomLog] | Contains events logged by applications that create a custom log. Using a custom log enables an application to control the size of the log or attach ACLs for security purposes without affecting other applications.                         |
 
+## Log Fields
+
+| Field         | Data                                                                    |
+|:------------- |:----------------------------------------------------------------------- |
+| Type          | Warning, error, information, etc.                                       |
+| Time          | Date/time for the computer *sending* the log                            |
+| Computer      | Computer name                                                           |
+| Provider Type | The facility that generated the event (generally the Windows Event Log) |
+| Provider Name | The name of the log (Application, Security, etc.)                       |
+| Source        | Application                                                             |
+| Event ID      | Standardized (*not* unique!) identifier                                 |
+| Description   | Self-explanatory                                                        |
+
 ## Event Types
 
 | Event Type    | Description                                                                                                                                                                                                                                                                                              |
@@ -32,8 +45,9 @@
 * [Event Types](https://docs.microsoft.com/en-us/windows/win32/eventlog/event-types)
 * [How to find out who deleted Event Viewer logs](https://serverfault.com/questions/743575/how-to-find-out-who-deleted-event-viewer-logs)
 * [Windows Security Event Log Cleared](https://support.alertlogic.com/hc/articles/115004121423-Windows-Security-Event-Log-Cleared)
+* [2022-04-18 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 18, 2021
+<span aria-hidden="true">📅</span> April 18, 2022

@@ -1,4 +1,4 @@
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester #Draft
+# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
 ## CompTIA Security+ Exam Cram
 
@@ -84,127 +84,70 @@ Call out to WinDbg Preview, which is a free Windows dump file analyzer in the Mi
 
 ### Introduction to Meterpreter
 
-==xxx==
+Meterpreter is fileless, and attempts to mask itself using other process names. It only communicates back to Metasploit on an encrypted channel.
+
+However, most modern antivirus *will* still recognize it.
 
 ### Meterpreter Flavors
 
-==xxx==
+Meterpreter supports a wide range of operating systems; there are even variants designed to live inside of common server-side interpreters (Java, Python, and PHP). Most payload versions are singletons, though there are a few staged variants.
+
+Most variants support communication over HTTP (unencrypted), HTTPS, or raw TCP (encrypted). IPv6 (which is often poorly monitored if allowed) is also an option.
+
+As always, be aware that some exploits may limit the available Meterpreter payloads.
 
 ### Meterpreter Commands
 
-==xxx==
+Meterpreter’s commands vary depending on host OS. Some notable commands:
+
+* `background` — Background the current session
+* `clearenv` — Clears the (Windows) event logs (kinda obvious)
+* `download` — Transfer a file from the target to the attacker
+* `edit` — Edit a file
+* `execute` — Execute a command on the host
+* `getpid` — Get current process ID
+* `getsystem` — Attempt to elevate to SYSTEM/root
+* `getuid` — Get current process user
+* `guid` — Get session ID
+* `hashdump` — Dump NTLM hashes (on Windows)
+* `ifconfig` — Display host network interface information
+* `info` — Get information about a Meterpreter extension
+* `load` — Load Meterpreter extension
+* `migrate` — Migrate Meterpreter to another process
+* `netstat` — Display host network connections
+* `portfwd` — Forward a port on the host
+* `route` — Mess with the host routing tables
+* `run` — Run a meterpreter extension
+* `search` — Search for files
+* `sessions` — Switch to another (Metasploit) session
+* `shell` — Drop to system shell
+* `sysinfo` — Pull remote system information
+* `upload` — Transfer a file from the attacker to the target
 
 ### Post-Exploitation with Meterpreter
 
-==xxx==
+Migrating Meterpreter to another process sometimes makes new commands become available; for example, migrating to a text editor will allow you to capture keystrokes.
+
+Note that Meterpreter will happily let you migrate from a privileged to an unprivileged process — which may cause you to loose control of the target system!
+
+You can background system shells launched from Meterpreter with `Ctrl + Z` to return to the parent (Meterpreter) process.
 
 ### Post-Exploitation Challenge
 
-==xxx==
+It’s always good to look at `help` in Meterpreter after loading a new module.
 
-### Introduction to Linux PrivEsc
+Remember that `load kiwi` will pull in a Meterpreter-specific version of Mimikatz!
 
-==xxx==
+Use `net share` on Windows to list *all* current shares. The Metasploit `post/windows/gather/enum_shares` module provides cleaner output (requires backgrounding Meterpreter).
 
-### What is Privilege Escalation?
+To execute `hashdump` you will need to be connected to the `lsass.exe` process.
 
-==xxx==
+Note that migrating Meterpreter will change its current working directory to that of the process it’s attaching to.
 
-### Enumeration
-
-==xxx==
-
-### Automated Enumeration Tools
-
-==xxx==
-
-### Kernel Exploits
-
-==xxx==
-
-### Sudo
-
-==xxx==
-
-### SUID
-
-==xxx==
-
-### Capabilities
-
-==xxx==
-
-### Cron Jobs
-
-==xxx==
-
-### PATH
-
-==xxx==
-
-### NFS
-
-==xxx==
-
-### Capstone Challenge
-
-==xxx==
-
-### Introduction to Windows PrivEsc
-
-==xxx==
-
-### Information Gathering
-
-==xxx==
-
-### Tools of the Trade
-
-==xxx==
-
-### Vulnerable Software
-
-==xxx==
-
-### DLL Hijacking
-
-==xxx==
-
-### Unquoted Service Path
-
-==xxx==
-
-### Token Impersonation
-
-==xxx==
-
-### Quick Wins
-
-==xxx==
+* [Using Mimikatz](../notes/mimikatz.md)
+* [How to view all network shares in Windows](https://www.computerhope.com/issues/ch000534.htm)
 
 <!--
-
-## Meterpreter
-
-### Introduction
-
-==xxx==
-
-### Meterpreter Flavors
-
-==xxx==
-
-### Meterpreter Commands
-
-==xxx==
-
-### Post-Exploitation with Meterpreter
-
-==xxx==
-
-### Post-Exploitation Challenge
-
-==xxx==
 
 ## Linux PrivEsc
 

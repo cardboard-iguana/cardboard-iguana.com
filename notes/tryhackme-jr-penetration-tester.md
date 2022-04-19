@@ -129,11 +129,13 @@
 
 * [2022-04-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-<!--
-
 ### Exploitation
 
+* [2022-04-14 TryHackMe: Jr. Penetration Tester](../log/2022-04-14-tryhackme-jr-penetration-tester.md)
+
 ### Meterpreter
+
+* [2022-04-18 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ## Privilege Escalation
 
@@ -141,6 +143,8 @@
 
 * [2021-10-27 TryHackMe: Complete Beginner](../log/2021-10-27-tryhackme-complete-beginner.md)
 * [2021-10-28 TryHackMe: Complete Beginner](../log/2021-10-28-tryhackme-complete-beginner.md)
+
+<!--
 
 ### Linux PrivEsc
 

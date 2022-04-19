@@ -42,13 +42,18 @@ Note that the semantics are annoyingly slightly different from smbclient — no 
 
 Use -R (and omit `$FILE`) to recursively download an entire directory.
 
+## net share
+
+Use `net share` on Windows to list *all* current shares (including some that are just control processes).
+
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Windows Password Hashes](windows-password-hashes.md)
 * [CIFS Protocol (a.k.a. SAMBA)](cifs.md)
+* [How to view all network shares in Windows](https://www.computerhope.com/issues/ch000534.htm)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 2, 2021
+<span aria-hidden="true">📅</span> April 18, 2022
