@@ -194,24 +194,6 @@ Things a SOAR system can automate:
 * Changing network configurations based upon detected anomalies or ingested IOCs
 * Implementing more aggressive DLP policies, such as host isolation
 
-<!--
-
-## ITPro.TV: CompTIA Security+ (SY0-601)
-
-### Incident Response Process
-
-==xxx==
-
-### Incident Response Plans
-
-==xxx==
-
-### Attack Frameworks
-
-==xxx==
-
--->
-
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
