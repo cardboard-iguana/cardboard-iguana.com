@@ -144,9 +144,11 @@
 * [2021-10-27 TryHackMe: Complete Beginner](../log/2021-10-27-tryhackme-complete-beginner.md)
 * [2021-10-28 TryHackMe: Complete Beginner](../log/2021-10-28-tryhackme-complete-beginner.md)
 
-<!--
-
 ### Linux PrivEsc
+
+* [2022-04-20 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
+<!--
 
 ### Windows PrivEsc
 
