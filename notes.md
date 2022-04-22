@@ -123,10 +123,13 @@
 ## Red Team
 
 * [crt.sh](https://crt.sh/)
+* [DLL Hijacking](notes/dll-hijacking.md)
 * [DNSdumpster](https://dnsdumpster.com/)
+* [Enumerate Linux Environments](notes/enumerate-linux-environments.md)
 * [Enumerate NFS Shares](notes/enumerate-nfs-shares.md)
 * [Enumerate Samba Users and Shares](notes/enumerate-samba-users-and-shares.md)
 * [Enumerate “sudo” Access](notes/enumerate-sudo-access.md)
+* [Enumerate Windows Environments](notes/enumerate-windows-environments.md)
 * [Exploiting Bash](notes/exploiting-bash.md)
 * [Exploiting /etc/passwd](notes/exploiting-etc-passwd.md)
 * [Exploiting /etc/shadow](notes/exploiting-etc-shadow.md)
@@ -143,6 +146,7 @@
 * [Exploiting Python](notes/exploiting-python.md)
 * [Exploiting “systemctl”](notes/exploiting-systemctl.md)
 * [Exploiting “tar”](notes/exploiting-tar.md)
+* [Exploiting Unquoted Paths](notes/exploiting-unquoted-paths.md)
 * [Exploiting ViM](notes/exploiting-vim.md)
 * [GTFOBins](https://gtfobins.github.io/)
 * [How to Find Executables with SUID Capabilities](notes/how-to-find-executables-with-suid-capabilities.md)

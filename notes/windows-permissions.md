@@ -17,7 +17,11 @@ The biggest differences between Windows and UNIX permissions:
 * Windows has *much more* fine-grained control across users and groups (there’s no limit of three permission sets).
 * The ability to delete a folder or file, and to change its permissions, are essentially considered to be distinct “sub-permissions”.
 
-The `icacls` tool can be used to check (and change!) permissions at the command line, but its output is somewhat different than that of the “Security” tab in the file or folder properties.
+## Checking Permissions
+
+Use `icacls` or `Get-Acl $PATH | Format-List` in PowerShell to check permissions at the command line. The `icacls` tool can also be used to update Windows ACLs.
+
+Both of these tools produce output that is somewhat different than that of the “Security” tab in the file or folder properties:
 
 * `(I)` — permission inherited from the parent container
 * `(F)` — full access (full control)
@@ -29,15 +33,28 @@ The `icacls` tool can be used to check (and change!) permissions at the command 
 * `(AD)` — append data (add subdirectories)
 * `(WD)` — write data and add files
 
-When a user is part of two groups with different permissions to an object, the allow permission will only override inherited deny permissions (explicitly set deny permissions cannot be overridden; remember that Windows access handling is default-deny).
+Note that the Windows File Explorer only displays the *first* ACL for a particular user or group, but that Windows allows *multiple* ACLs to be applied! This means that the File Explorer does not always show you the *actual* permissions a user/group will have — you really do need to use `icacls` or `Get-Acl`.
+
+In the case of multiple ACLs, or when a user is part of two groups with different groups, keep in mind that allow permissions only override *inherited* deny permissions. Explicitly set deny permissions *cannot* be overridden.
+
+## Common User Types
+
+* Local Admin
+* Local User
+* Guest User
+* Domain User
+* Domain Admin
+
+Note that non-admin domain users may still be local admins.
 
 ## References
 
 * [File and Folder Permissions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb727008)
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [ITPro.TV CompTIA Security+](itprotv-comptia-security-plus.md)
+* [2022-04-21 TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 10, 2022
+<span aria-hidden="true">📅</span> April 22, 2022

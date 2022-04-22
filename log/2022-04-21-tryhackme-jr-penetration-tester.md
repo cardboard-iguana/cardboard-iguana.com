@@ -22,7 +22,7 @@ Here’s a useful checklist:
 
 ### Information Gathering
 
-* `whoami /rpiv` — current user + privileges
+* `whoami /priv` — current user + privileges
 * `net user` — list all (local) users
 * `net user $USERNAME` — get details for user `$USERNAME`
 * `net localgroup` — list all (local) groups

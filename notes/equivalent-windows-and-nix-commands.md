@@ -4,18 +4,17 @@
 | ----------:|:-------- |
 |        cat | type     |
 |        dig | nslookup |
-|       more | more     |
+|       grep | findstr  |
 |   ifconfig | ipconfig |
-|    netstat | nbtstat  |
+|         ls | dir      |
+|       more | more     |
+|    netstat | netstat  |
 |       ping | ping     |
 |      sleep | timeout  |
 |       sudo | runas    |
 |    tcpdump | windump  |
 | traceroute | tracert  |
-
-## ping
-
-Windows `ping` uses the `-n` flag to specify the number of packets sent (in contrast to Linux’s `-c`).
+|       wget | wget     |
 
 ## dig
 
@@ -29,6 +28,24 @@ dig @$NAME_SERVER $DOMAIN $QUERY_TYPE
 dig @8.8.8.8 microsoft.com A
 dig @1.1.1.1 tryhackme.com
 dig          google.com    MX
+```
+
+## dir
+
+The `dir` command accepts wildcard listings (`*.txt`, etc.), and will perform a subdirectory search if given the `/S` flag.
+
+## ipconfig
+
+### Display Current DNS Settings
+
+```bat
+ipconfig /displaydns | more
+```
+
+### Flush Local DNS Cache
+
+```bat
+ipconfig /flushdns
 ```
 
 ## nslookup
@@ -45,19 +62,9 @@ nslookup          tryhackme.com 1.1.1.1
 nslookup -type=MX google.com
 ```
 
-## ipconfig
+## ping
 
-### Display Current DNS Settings
-
-```bat
-ipconfig /displaydns | more
-```
-
-### Flush Local DNS Cache
-
-```bat
-ipconfig /flushdns
-```
+Windows `ping` uses the `-n` flag to specify the number of packets sent (in contrast to Linux’s `-c`).
 
 ## runas
 
@@ -69,6 +76,8 @@ runas /user:$USERNAME $EXECUTABLE
 
 `$EXECUTABLE` is treated normally (as if not prefixed by the `runas` command), so a full or relative path is only necessary when it’s not already in the Windows path.
 
+If credentials are saved for a particular user (use `cmdkey /list` to check), then the `/savecred` flag will apply them automatically!
+
 ## References
 
 * [What is the Windows equivalent of the Unix command cat?](https://superuser.com/questions/434870/what-is-the-windows-equivalent-of-the-unix-command-cat#434876)
@@ -79,8 +88,11 @@ runas /user:$USERNAME $EXECUTABLE
 * [2022-03-27 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-27-itprotv-comptia-security-plus.md)
 * [2022-03-29 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [2022-03-30 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-21 TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
+* [How to find a file or folder in MS-DOS or Windows command line](https://www.computerhope.com/issues/ch000309.htm)
+* [Enumerate Windows Environments](enumerate-windows-environments.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 30, 2022
+<span aria-hidden="true">📅</span> April 22, 2022
