@@ -1,5 +1,7 @@
 # Retro
 
+* [TryHackMe: Retro](https://tryhackme.com/room/retro)
+
 ## Initial Reconnaissance 
 
 This CTF is an earlier version of Blaster without the step-by-step nature of that room. Not 100% sure what the differences are.
@@ -111,7 +113,6 @@ ELAPSED TIME: 1 h 16 min
 
 ## References
 
-* [TryHackMe: Retro](https://tryhackme.com/room/retro)
 * [TryHackMe: Blaster](tryhackme-blaster.md)
 * [Using “nmap”](nmap.md)
 * [Using “gobuster”](gobuster.md)

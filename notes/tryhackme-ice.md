@@ -1,5 +1,7 @@
 # Ice
 
+* [TryHackMe: Ice](https://tryhackme.com/room/ice)
+
 ## Recon
 
 The machine we’ll be attacking is at 10.10.55.173. Since it’s a Windows box, we know that it won’t respond to `ping` by default.
@@ -230,7 +232,6 @@ ELAPSED TIME: 2 h 39 min
 
 ## References
 
-* [TryHackMe: Ice](https://tryhackme.com/room/ice)
 * [Using “nmap”](nmap.md)
 * [CVE-2004-1561](https://www.cvedetails.com/cve/CVE-2004-1561/)
 * [Using Metasploit](metasploit.md)

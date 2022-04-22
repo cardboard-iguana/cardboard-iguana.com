@@ -1,5 +1,7 @@
 # Inclusion
 
+* [TryHackMe: Inclusion](https://tryhackme.com/room/inclusion)
+
 This room is intended to focus on local file inclusion attacks, so my guess is that hitting the machine with nmap and gobuster is probably unnecessary. But, I'm going to do it anyway, just in case.
 
 The target is 10.10.0.57. The website running there is basically a shell -- most of the links, including the search box, don't work. No JavaScript is loaded. The only links that *do* work are the "View details" buttons underneath the bottom three articles. This call an `/articles` endpoint with a single parameter, `name`. The resulting page looks like someone just dumped a plain text file between the `<body/>` tags.
@@ -294,7 +296,6 @@ ELAPSED TIME: 56 min
 
 ## References
 
-* [TryHackMe: Inclusion](https://tryhackme.com/room/inclusion)
 * [LFI (Local File Inclusion) Attacks](local-file-inclusion-attacks.md)
 * [Using “nmap”](nmap.md)
 * [Using “gobuster”](gobuster.md)

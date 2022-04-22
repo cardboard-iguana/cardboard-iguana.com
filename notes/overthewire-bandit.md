@@ -1,5 +1,7 @@
 # Bandit
 
+* [OverTheWire: Bandit](https://overthewire.org/wargames/bandit/)
+
 ## Bandit 2
 
 * [Read a File Beginning With a Dash (-)](read-a-file-beginning-with-a-dash.md)
@@ -18,9 +20,6 @@
 * [Jump to an Editor in “more”](jump-to-an-editor-in-more.md)
 * [Set a Shell in ViM](set-a-shell-in-vim.md)
 
-## References
-
-* [OverTheWire: Bandit](https://overthewire.org/wargames/bandit/)
 
 - - - -
 

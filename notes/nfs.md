@@ -25,14 +25,15 @@ Note that the mount directory must be owned by root.
 
 Files created on NFS shares inherit the *remote* UID. By default, NFS enables “root squashing”, which maps UID 0 to the `nobody` user.
 
-Root squashing can be *disabled* in /etc/exports with the `no_root_squash` flag. This is obviously insecure, however, as it allows a user that connects to that share as root to drop SUID binaries!
+Root squashing can be *disabled* in `/etc/exports` with the `no_root_squash` flag. This is obviously insecure, however, as it allows a user that connects to that share as root to drop SUID binaries! (Remember that files on NFS mounts are created using the UID/GID values of the *local* user!)
 
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [What is NFS port number in Linux?](https://racinpaper.com/auto-racing/what-is-nfs-port-number-in-linux.html)
+* [2022-04-20 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 3, 2021
+<span aria-hidden="true">📅</span> April 21, 2022

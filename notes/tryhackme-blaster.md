@@ -1,5 +1,7 @@
 # Blaster
 
+* [TryHackMe: Blaster](https://tryhackme.com/room/blaster)
+
 ## Mission Start!
 
 The CTF background notes that we’ll be attacking a Windows box. So no ping responses again.
@@ -158,7 +160,6 @@ ELAPSED TIME: 2 h 15 min
 
 ## References
 
-* [TryHackMe: Blaster](https://tryhackme.com/room/blaster)
 * [Using “nmap”](nmap.md)
 * [Using “gobuster”](gobuster.md)
 * [Using XFreeRDP](xfreerdp.md)

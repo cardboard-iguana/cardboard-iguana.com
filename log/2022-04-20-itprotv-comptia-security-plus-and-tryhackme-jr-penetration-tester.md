@@ -154,51 +154,13 @@ The `getcap` command displays a binary’s capabilities (if there are any), and 
 
 Basically, check to see if any scripts run by a privileged user can be written to by an unprivileged user.
 
-Also look for “zombie” cran jobs that are still running but refer to a non-existent file in a writable location.
+Also look for “zombie” cron jobs that are still running but refer to a non-existent file in a writable location.
 
 Bash as a reverse proxy makes an appearance again here.
 
 ### Privilege Escalation: NFS
 
 NFS exports are listed in `/etc/exports`; if an export is configured with `no_root_squash`, then root permissions won’t be stripped from created files and it’s possible to create root-owned SUID/SGID binaries on the mount. (Remember that files on NFS mounts are created using the UID/GID values of the *local* user!)
-
-<!--
-
-## Windows PrivEsc
-
-### Introduction
-
-==xxx==
-
-### Information Gathering
-
-==xxx==
-
-### Tools of the Trade
-
-==xxx==
-
-### Vulnerable Software
-
-==xxx==
-
-### DLL Hijacking
-
-==xxx==
-
-### Unquoted Service Path
-
-==xxx==
-
-### Token Impersonation
-
-==xxx==
-
-### Quick Wins
-
-==xxx==
-
--->
 
 - - - -
 

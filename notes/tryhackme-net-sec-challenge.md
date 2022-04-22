@@ -1,5 +1,7 @@
 # Net Sec Challenge
 
+* [TryHackMe: Net Sec Challenge](https://tryhackme.com/room/netsecchallenge)
+
 This CTF is just a series of questions. All should be solvable using nmap, telnet, and Hydra… Though I’m going to substitute netcat for telnet. However, I’m sticking to the spirit of things, and will only use those three tools.
 
 The target machine is 10.10.152.115.
@@ -197,7 +199,6 @@ ELAPSED TIME: 2 h 31 min
 
 ## References
 
-* [TryHackMe: Net Sec Challenge](https://tryhackme.com/room/netsecchallenge)
 * [Using “nmap”](nmap.md)
 * [Using Hydra](hydra.md)
 * [Using “netcat”](netcat.md)

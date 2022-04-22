@@ -27,7 +27,13 @@ Matches files with a given permission. Both numeric and symbolic permissions are
 
 Use the / or - prefix to match files with *any* of the specified permissions or *at least* the specified permissions. For example, `-perm -644` will match any file where the current user has *at least* read + write access and any other user has *at least* read access (so, `-` requires the specified permissions, but is agnostic as to the presence/absence of additional permissions). Likewise, `-perm /666` will match files where the current user has read + write access and/or the current group has read + write access and/or everyone has read + write access (so, `/` requires that at least *one* of the specified permissions groups matches exactly, but is agnostic to the state of any other group outside of that match).
 
-### Quick-and-Dirty Search for SUID and SGID Executables
+### Find SUID and SGID Files
+
+```bash
+find / -type f -perm -04000 -ls 2>/dev/null
+```
+
+### Find SUID and SGID Executables
 
 ```bash
 find / -type f \
@@ -59,4 +65,4 @@ For example:
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 19, 2021
+<span aria-hidden="true">📅</span> April 21, 2022

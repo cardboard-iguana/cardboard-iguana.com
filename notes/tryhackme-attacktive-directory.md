@@ -1,5 +1,7 @@
 # Attacktive Directory
 
+* [TryHackMe: Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
+
 ## Welcome to Attacktive Directory
 
 As ususual, we start off with an nmap scan. Our target IP address is 10.10.177.198.
@@ -580,7 +582,6 @@ ELAPSED TIME: 2 h 38 min
 
 ## References
 
-* [TryHackMe: Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
 * [Kerberoasting initial: AS-REP Roasting](https://blog.certcube.com/as-rep-roasting-attack/)
 * [Using “nmap”](nmap.md)
 * [Enumerate Samba Users and Shares](enumerate-samba-users-and-shares.md)

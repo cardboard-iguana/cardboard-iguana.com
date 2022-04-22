@@ -1,5 +1,7 @@
 # Jurassic Park
 
+* [TryHackMe: Jurassic Park](https://tryhackme.com/room/jurassicpark)
+
 Our target is 10.10.105.134.
 
 This is a *very* simple site: An index page (`index.php`) that leads to a `shop.php` page, which in turn links to three calls of `item.php?id=X` (where `X` is a number).
@@ -444,7 +446,6 @@ ELAPSED TIME: 2 h 53 min
 
 ## References
 
-* [TryHackMe: Jurassic Park](https://tryhackme.com/room/jurassicpark)
 * [Using “sqlmap”](sqlmap.md)
 * [SQL Injection](sql-injection.md)
 * [Using “nmap”](nmap.md)

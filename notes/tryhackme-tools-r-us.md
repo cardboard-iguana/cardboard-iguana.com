@@ -1,5 +1,7 @@
 # Tools'R'us
 
+* [TryHackMe: Tools'R'us](https://tryhackme.com/room/toolsrus)
+
 We're supposed to restrict ourselves to the following tools in this CTF:
 
 * dirbuster
@@ -328,7 +330,7 @@ So, that kinda does imply that Tomcat or Coyote might be vulnerable, even though
 
 * FLAG 2: Whose name can you find from this directory? -- `bob`
 
-We'll deploy Hydra against the http-basic authentication protecting `/protected/`. I've never done this before, but a quick internet search reveals this potentially useful guide, as well as an additional walk-through clarifying how to use Hydra to crack Apache conf-based http-basic authentication. With this information in hand, we should (hopefully) be able to crack Bob's password using the following:
+We'll deploy Hydra against the http-basic authentication protecting `/protected/`. I've never done this before, but a quick internet search reveals a potentially useful guide, as well as an additional walk-through clarifying how to use Hydra to crack Apache conf-based http-basic authentication. With this information in hand, we should (hopefully) be able to crack Bob's password using the following:
 
 ```bash
 hydra -l bob \
@@ -386,7 +388,6 @@ ELAPSED TIME: 3 h 7 min
 
 ## References
 
-* [TryHackMe: Tools'R'us](https://tryhackme.com/room/toolsrus)
 * [Using Hydra](hydra.md)
 * [Using “nmap”](nmap.md)
 * [Using Nikto](nikto.md)
