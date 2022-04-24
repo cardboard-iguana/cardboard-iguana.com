@@ -170,6 +170,9 @@ sed -i -e 's#/dev/mmcblk0p2#/dev/mapper/crypt_rootfs#' /mnt/ext-root/etc/fstab
 echo -e 'crypt_rootfs\t/dev/mmcblk0p2\tnone\tluks' >> /mnt/ext-root/etc/crypttab
 
 # Now let’s actually generate the initramfs we need.
+# Note that mkinitramfs wants a (missing) kernel
+# config, so we copy one over from linux-headers as
+# a work-around.
 #
 mount -t proc none /mnt/ext-root/proc
 mount -t sysfs none /mnt/ext-root/sys
@@ -177,6 +180,8 @@ mount -o bind /dev /mnt/ext-root/dev
 mount -o bind /dev/pts /mnt/ext-root/dev/pts
 mount -o bind /mnt/ext-boot /mnt/ext-root/boot
 LANG=C chroot /mnt/ext-root
+cp /usr/src/linux-headers-$(uname -r)/.config \
+   /boot/config-$(uname -r)
 mkinitramfs -o /boot/initramfs.gz $(uname -r)
 exit
 
@@ -221,6 +226,14 @@ apt update
 apt full-upgrade
 apt autoremove --purge --autoremove
 apt clean
+
+# Update the (missing) kernel config.
+#
+cp /usr/src/linux-headers-$(ls -1 /lib/modules | grep -e '-Re4son-v8l+$' | sort | tail -1)/.config \
+   /boot/config-$(ls -1 /lib/modules | grep -e '-Re4son-v8l+$' | sort | tail -1)
+
+# Regenerate initramfs.
+#
 mkinitramfs -o /boot/initramfs.gz \
 	$(ls -1 /lib/modules | grep -e '-Re4son-v8l+$' | sort | tail -1)
 
