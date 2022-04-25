@@ -327,15 +327,9 @@
 
 ## Governance, Risk, and Compliance
 
-(Chapter 9)
-
 ### Security Controls
 
-(Chapter 31)
-
 ### Regulations, Standards And Frameworks
-
-(Chapter 32)
 
 ### Spotlight On General Data Protection Regulation
 
