@@ -50,10 +50,11 @@ Use `net share` on Windows to list *all* current shares (including some that are
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Windows Password Hashes](windows-password-hashes.md)
-* [CIFS Protocol (a.k.a. SAMBA)](cifs.md)
+* [SAMBA (a.k.a. CIFS) Protocol](samba.md)
 * [How to view all network shares in Windows](https://www.computerhope.com/issues/ch000534.htm)
+* [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 18, 2022
+<span aria-hidden="true">📅</span> April 25, 2022

@@ -23,7 +23,7 @@ The `auxiliary/scanner/http/http_version` module will give you HTTP server versi
 The `auxiliary/scanner/smb/smb_login` module will allow you to bruteforce Samba logins (username and/or password) using a wordlist(s).
 
 * [Using “nmap”](../notes/nmap.md)
-* [CIFS](../notes/cifs.md)
+* [SAMBA (a.k.a. CIFS) Protocol](../notes/samba.md)
 * [TCP SYN Port Scanner - Metasploit](https://www.infosecmatter.com/metasploit-module-library/?mm=auxiliary/scanner/portscan/syn)
 
 ### The Metasploit Database

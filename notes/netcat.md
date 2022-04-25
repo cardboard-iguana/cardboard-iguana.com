@@ -64,7 +64,7 @@ Initial netcat reverse shells (in particular web shells) are non-interactive.
 
 ### Shell “Stabilization”
 
-Shell “stabilization” refers to the process of making a remote shell behave like a normal local shell — so, allowing interactive programs to work properly, ensuring that input is not echoed inappropriately, etc.
+Shell “stabilization” refers to the process of making a remote shell behave like a normal local shell — so, allowing interactive programs to work properly, ensuring that input is not echoed inappropriately, etc. In practice, this generally involves creating a *second* connection from within the “unstable” shell, and then using that (keeping the first connection around just so you can restart the “stabilized” shell if you accidentally exit/kill it).
 
 A common method of stabilizing netcat shells is to use Python:
 
@@ -74,9 +74,13 @@ A common method of stabilizing netcat shells is to use Python:
 
 Note that the `stty` command can be canceled using `reset` (after closing the reverse shell). Since echo is turned off, typing this won't be visible. Trust the force!
 
-You can *mostly* bypass the need for the `stty` command by using `rlwrap`, which sets all of this up for you (though it doesn’t redirect control sequences, so Ctrl+C will still kill the connection).
+The `rlwrap` package will handle almost all of this for you.
 
-Or, just fire up socat from inside of netcat!
+```bash
+rlwrap -cAr nc -lvnp $PORT
+```
+
+Or just use socat!
 
 NOTE that in *none* of these cases will the reverse shell pick up on your terminal size, so you’ll need to manually specify it using `stty rows` and `stty cols`.
 
@@ -94,8 +98,9 @@ If you just have netcat connect to a service directly, it functions exactly like
 * [XSS (Cross-Site Scripting) Attacks](xss-attacks.md)
 * [SQL Injection](sql-injection.md)
 * [2022-03-30 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks
-<span aria-hidden="true">📅</span> March 30, 2022
+<span aria-hidden="true">📅</span> April 25, 2022

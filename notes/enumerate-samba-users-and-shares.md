@@ -38,6 +38,14 @@ smbclient -L $SERVER_NAME -I $IP_ADDRESS
 
 Here `$SERVER_NAME` is the machine's NetBIOS domain name, which can be found with enum4linux (see above).
 
+## smbmap
+
+Get Windows version information:
+
+```bash
+smbmap -H $IP_ADDRESS -v
+```
+
 ## References
 
 * [Basic Pentesting](tryhackme-basic-pentesting.md)
@@ -50,8 +58,9 @@ Here `$SERVER_NAME` is the machine's NetBIOS domain name, which can be found wit
 * [Using Metasploit](metasploit.md)
 * [Use of uninitialized value $user, what does this mean?](https://github.com/CiscoCXSecurity/enum4linux/issues/4)
 * [Working With Samba](working-with-samba.md)
+* [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 5, 2021
+<span aria-hidden="true">📅</span> April 25, 2022

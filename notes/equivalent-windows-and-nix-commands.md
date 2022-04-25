@@ -32,7 +32,11 @@ dig          google.com    MX
 
 ## dir
 
-The `dir` command accepts wildcard listings (`*.txt`, etc.), and will perform a subdirectory search if given the `/S` flag.
+The `dir` command accepts wildcard listings (`*.txt`, etc.), and will perform a subdirectory search if given the `/S` flag. For example:
+
+```powershell
+dir /S /P example.txt
+```
 
 ## ipconfig
 
@@ -91,8 +95,9 @@ If credentials are saved for a particular user (use `cmdkey /list` to check), th
 * [2022-04-21 TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
 * [How to find a file or folder in MS-DOS or Windows command line](https://www.computerhope.com/issues/ch000309.htm)
 * [Enumerate Windows Environments](enumerate-windows-environments.md)
+* [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 22, 2022
+<span aria-hidden="true">📅</span> April 25, 2022
