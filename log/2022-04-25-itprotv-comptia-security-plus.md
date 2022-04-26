@@ -136,24 +136,6 @@ SOC = Service Organizational Control
 
 CIS Critical Security Controls + related benchmarks and guides.
 
-<!--
-
-## ITPro.TV: CompTIA Security+ (SY0-601)
-
-### Security Controls
-
-==xxx==
-
-### Regulations, Standards And Frameworks
-
-==xxx==
-
-### Spotlight On General Data Protection Regulation
-
-==xxx==
-
--->
-
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
