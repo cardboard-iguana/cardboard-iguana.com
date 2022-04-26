@@ -11,13 +11,13 @@ plugins:
 name: Cardboard Iguana Security
 description: Cardboard Iguana Security is a weblog and digital garden focusing on cybersecurity and hacking. Interested in hiring me? Then reach out to nathan.acks@cardboard-iguana.com!
 url: https://cardboard-iguana.com
-icon: 02779186c69ce442260bd67d3bd11b3e.webp
-cover: 208b5c08b44922051e28674bb930398f.jpg
+icon: logo-square.webp
+cover: logo-vertical.jpg
 author: Nathan Acks
 
 # Default image page (used in Twitter Cards and Open Graph image tags).
 #
-image: /770a338bf8f3336b20fa14650b6f5049.webp
+image: /logo-horizontal.webp
 
 # Optional front-matter defaults.
 #
