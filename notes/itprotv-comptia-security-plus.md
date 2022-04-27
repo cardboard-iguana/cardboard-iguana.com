@@ -323,15 +323,21 @@
 
 * [2022-04-20 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-<!--
-
 ## Governance, Risk, and Compliance
 
 ### Security Controls
 
+* [2022-04-26 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-26-itprotv-comptia-security-plus.md)
+
 ### Regulations, Standards And Frameworks
 
+* [2022-04-26 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-26-itprotv-comptia-security-plus.md)
+
 ### Spotlight On General Data Protection Regulation
+
+* [2022-04-26 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-26-itprotv-comptia-security-plus.md)
+
+<!--
 
 ### Organizational Security Policies — Personnel
 
