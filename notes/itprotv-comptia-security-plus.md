@@ -341,8 +341,6 @@
 
 ### Organizational Security Policies — Personnel
 
-(Chapter 33)
-
 ### Organizational Security Policies — 3rd Party Risk
 
 ### Organizational Security Policies — Data

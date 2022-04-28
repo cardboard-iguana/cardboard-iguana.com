@@ -40,7 +40,7 @@ While some of these constraints (particularly around linking) remain a bit vexin
 
 ## How the Build Process Works
 
-I keep all of my notes and writings in Obsidian. I’ve set Obsidian up to insert relative Markdown, and use the Consistent Attachments and Unique Attachments plugins to help keep my vault organized. I’ve also spent some time thinking through what constitutes “Gemini compatible Markdown”, and am careful to keep my markup conservative when writing a file destined for publication. (As I mentioned previously, this isn’t actually that hard to do — the most difficult part is remembering to keep a list of links at the end of each section, rather than embedding links directly in the document text.)
+I keep all of my notes and writings in Obsidian. I’ve set Obsidian up to insert relative Markdown links and take care to keep my markup limited to what constitutes “Gemini compatible Markdown”. (As I mentioned previously, this isn’t actually that hard to do — the most difficult part is remembering to keep a list of links at the end of each section, rather than embedding links directly in the document text.)
 
 I sync Obsidian to a private repo on GitHub, and then use GitHub Actions to push the folders that correspond to my websites out to their corresponding public repos. For Cardboard Iguana, the code to do this looks like the following:
 
