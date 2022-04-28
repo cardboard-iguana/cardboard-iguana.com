@@ -337,11 +337,15 @@
 
 * [2022-04-26 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-26-itprotv-comptia-security-plus.md)
 
-<!--
-
 ### Organizational Security Policies — Personnel
 
+* [2022-04-27 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-27-itprotv-comptia-security-plus.md)
+
 ### Organizational Security Policies — 3rd Party Risk
+
+* [2022-04-27 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-27-itprotv-comptia-security-plus.md)
+
+<!--
 
 ### Organizational Security Policies — Data
 
