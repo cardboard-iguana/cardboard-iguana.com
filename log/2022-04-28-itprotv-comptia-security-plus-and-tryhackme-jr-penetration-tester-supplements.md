@@ -1,16 +1,24 @@
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester #Draft
+# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements) #Draft
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
 ### Organizational Security Policies — Data
 
-==xxx==
+Data classification involves the data owner labeling the data in question so that only appropriate people have access to it (with the appropriate privileges).
+
+There’s also data *categorization*, which is a different but related concept that labels the data in question based on the business impact should it become unavailable.
+
+“Governance” is the “system by which an organization directs and controls IT security” (per ISO 38500). Governance is about *who* can make decisions, while *management* is about making decisions to mitigate risk.
+
+Governance is strategic, but management is operational.
+
+Policies (and sometimes procedures) are generally about governance — we’re doing X, and person Y is in charge. The management then becomes the question of *how* person Y implements X.
 
 ### Organizational Security Policies — Other Areas
 
-==xxx==
+“Change management” is the *process* of implementing and documenting changes, while “change control” encompasses the actual technical controls used to realize this. “Change management” is “all roll-outs must have a roll-back plan”, while the use of git would be a “change control”. The universe of “change controls” is thus a proper subset of the universe of “change management”.
 
-## TryHackMe: Jr. Penetration Tester
+## TryHackMe: Jr. Penetration Tester (Supplements)
 
 ### Introduction: Red Team Fundamentals
 
