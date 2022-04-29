@@ -345,11 +345,15 @@
 
 * [2022-04-27 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-27-itprotv-comptia-security-plus.md)
 
-<!--
-
 ### Organizational Security Policies — Data
 
+* [2022-04-28 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-04-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester-supplements.md)
+
 ### Organizational Security Policies — Other Areas
+
+* [2022-04-28 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-04-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester-supplements.md)
+
+<!--
 
 ### Risk Management Concepts — Vocabulary
 

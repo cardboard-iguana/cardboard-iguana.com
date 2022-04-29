@@ -239,6 +239,7 @@
 * [TryHackMe: Pwnkit (CVE-2021-4034)](notes/tryhackme-pwnkit-cve-2021-4034.md)
 * [TryHackMe: Python Basics](notes/tryhackme-python-basics.md)
 * [TryHackMe: Python for Pentesters](notes/tryhackme-python-for-pentesters.md)
+* [TryHackMe: Red Team Fundamentals](notes/tryhackme-red-team-fundamentals.md)
 * [TryHackMe: Regular Expressions](notes/tryhackme-regular-expressions.md)
 * [TryHackMe: Splunk](notes/tryhackme-splunk.md)
 * [TryHackMe: SQL Injection](notes/tryhackme-sql-injection.md)

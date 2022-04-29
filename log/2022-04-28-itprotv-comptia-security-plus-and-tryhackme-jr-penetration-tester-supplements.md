@@ -1,4 +1,4 @@
-# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements) #Draft
+# ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements)
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
@@ -20,41 +20,31 @@ Policies (and sometimes procedures) are generally about governance — we’re d
 
 ## TryHackMe: Jr. Penetration Tester (Supplements)
 
-### Introduction: Red Team Fundamentals
+I’m done with the Jr. Penetration Tester learning path, but while I was working on it a number of rooms were mentioned in asides. A few potentially interesting rooms were also released during that time. So before moving on to the *next* learning path it’s time to mop up some of these “supplemental” rooms.
 
-==xxx==
-
-* [TryHackMe: Red Team Fundamentals](https://tryhackme.com/room/redteamfundamentals)
-
-### Vulnerability Assessment and Penetration Test Limitations
-
-==xxx==
-
-### Red Team Engagements
-
-==xxx==
-
-### Teams and Functions of an Engagement
-
-==xxx==
+Today: [Red Team Fundamentals](https://tryhackme.com/room/redteamfundamentals).
 
 ### Engagement Structure
 
-==xxx==
+Once again, the Lockheed Martin kill chain (my paraphrasing):
 
-### Overview of a Red Team Engagement
+* Recon
+* Weaponize
+* Deliver
+* Exploit
+* Install
+* Control
+* Endgame
 
-==xxx==
+<!--
 
-### Conclusion: Red Team Fundamentals
-
-==xxx==
+* [TryHackMe: Red Team Engagements](https://tryhackme.com/room/redteamengagements)
+* [TryHackMe: Firewalls](https://tryhackme.com/room/redteamfirewalls)
+* [TryHackMe: AD Certificate Templates](https://tryhackme.com/room/adcertificatetemplates)
 
 ### Introduction: Red Team Engagements
 
 ==xxx==
-
-* [TryHackMe: Red Team Engagements](https://tryhackme.com/room/redteamengagements)
 
 ### Defining Scope and Objectives
 
@@ -96,8 +86,6 @@ Policies (and sometimes procedures) are generally about governance — we’re d
 
 ==xxx==
 
-* [TryHackMe: Firewalls](https://tryhackme.com/room/redteamfirewalls)
-
 ### Types of Firewalls
 
 ==xxx==
@@ -134,8 +122,6 @@ Policies (and sometimes procedures) are generally about governance — we’re d
 
 ==xxx==
 
-* [TryHackMe: AD Certificate Templates](https://tryhackme.com/room/adcertificatetemplates)
-
 ### A Brief Look at Certificate Templates
 
 ==xxx==
@@ -159,6 +145,8 @@ Policies (and sometimes procedures) are generally about governance — we’re d
 ### Conclusion: AD Certificate Templates
 
 ==xxx==
+
+-->
 
 - - - -
 
