@@ -353,8 +353,6 @@
 
 * [2022-04-28 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-04-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester-supplements.md)
 
-<!--
-
 ### Risk Management Concepts — Vocabulary
 
 * [2022-05-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
@@ -367,9 +365,11 @@
 
 * [2022-05-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
 
-### Risk Management Concepts Business Impact Analysis
+### Risk Management Concepts — Business Impact Analysis
 
 * [2022-05-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
+
+<!--
 
 ### Privacy and Data Sensitivity — Breaches & Data Types
 
