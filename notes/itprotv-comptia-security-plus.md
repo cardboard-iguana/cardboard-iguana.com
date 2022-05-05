@@ -357,13 +357,19 @@
 
 ### Risk Management Concepts — Vocabulary
 
-(Chapter 34)
+* [2022-05-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
 
 ### Risk Management Concepts — Types & Strategies
 
+* [2022-05-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
+
 ### Risk Management Concepts — Risk Analysis
 
+* [2022-05-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
+
 ### Risk Management Concepts Business Impact Analysis
+
+* [2022-05-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
 
 ### Privacy and Data Sensitivity — Breaches & Data Types
 
