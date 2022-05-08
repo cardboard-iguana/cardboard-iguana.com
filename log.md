@@ -1,5 +1,6 @@
 # <span aria-hidden="true">📓</span> A Hacker’s Log <span aria-hidden="true">📓</span>
 
+* [2022-05-07 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-05-07-itprotv-comptia-security-plus.md)
 * [2022-05-04 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-05-04-itprotv-comptia-security-plus.md)
 * [2022-04-28 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements)](log/2022-04-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester-supplements.md)
 * [2022-04-27 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-04-27-itprotv-comptia-security-plus.md)

@@ -369,19 +369,21 @@
 
 * [2022-05-04 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
 
-<!--
-
 ### Privacy and Data Sensitivity — Breaches & Data Types
 
-(Chapter 35)
+* [2022-05-07 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-07-itprotv-comptia-security-plus.md)
 
 ### Privacy and Data Sensitivity — Privacy Enhancing Tech
 
+* [2022-05-07 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-07-itprotv-comptia-security-plus.md)
+
 ### Privacy and Data Sensitivity — Roles & Responsibilities
+
+* [2022-05-07 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-07-itprotv-comptia-security-plus.md)
 
 ### Privacy and Data Sensitivity — Other Areas
 
--->
+* [2022-05-07 ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-07-itprotv-comptia-security-plus.md)
 
 ## References
 
@@ -390,5 +392,5 @@
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 28, 2022  
+<span aria-hidden="true">📅</span> May 7, 2022  
 <span aria-hidden="true">🏷️</span> #MOC
