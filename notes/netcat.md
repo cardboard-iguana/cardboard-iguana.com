@@ -1,5 +1,9 @@
 # Using “netcat”
 
+The netcat binary is *usually* `nc`, but some systems have it at `ncat` instead.
+
+Note that the `-c` and `-e` flags are considered security risks (for obvious reasons!), and are disabled on some systems.
+
 ## Start a Client
 
 ```bash
@@ -84,6 +88,12 @@ Or just use socat!
 
 NOTE that in *none* of these cases will the reverse shell pick up on your terminal size, so you’ll need to manually specify it using `stty rows` and `stty cols`.
 
+## Port Forwarding
+
+```bash
+nc -lvnp $INCOMING_PORT -c "nc $TARGET_IP $TARGET_PORT"
+```
+
 ## Other Uses
 
 If you just have netcat connect to a service directly, it functions exactly like telnet.
@@ -99,8 +109,9 @@ If you just have netcat connect to a service directly, it functions exactly like
 * [SQL Injection](sql-injection.md)
 * [2022-03-30 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
+* [2022-05-09 TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks
-<span aria-hidden="true">📅</span> April 25, 2022
+<span aria-hidden="true">📅</span> May 10, 2022

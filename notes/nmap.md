@@ -2,13 +2,19 @@
 
 Note that nmap accepts ranges in any octet of an IP address; for example, 10.10.0-255.1-255 will scan 10.10.0.1 – 10.10.255.255.
 
+When dealing with firewalls, be aware that the default nmap SYN scan packet is 44 bytes = 20 bytes IP header + 24 bytes TCP header + 0 bytes data. Note that packet fragmentation only effects the TCP header + data — the 20 byte IP header will always be sent!
+
+Most nmap scans will generate ~2x the number of packets as scanned ports, as unresponsive ports are sent a second packet to verify that they’re actually closed (and, in general, most ports will be closed).
+
 ## Useful Flags
 
 * `-A` — “Aggressive” scan; alias for `-O -sC -sV --traceroute`.
-* `-D` — Send multiple scan requests using decoys; specified using a list of arbitrary IP addresses. The special “addresses” ME and RND represent the attacker (you!) and a random IP address, respectively. Obviously, if you want results than “ME” will need to be included in the list *somewhere*. Trades stealth for “chaff”. Maybe only useful as a diversion?
+* `-D` — Send multiple scan requests using decoys; specified using a list of arbitrary IP addresses. The special “addresses” `ME` and `RND` represent the attacker (you!) and a random IP address, respectively. If `ME` isn’t included in the list, it will be inserted into a random position. Trades stealth for “chaff”. Maybe only useful as a diversion?
 * `-e` — Specify the network interface to use during scanning.
-* `-f` — Fragment packets so that the packet is 8 bytes or less. Specify twice to fragment into 16 byte chunks (which is reverse of how you’d intuitively expect this to work). Can help evade some next-gen firewall / IDS alarms.
+* `-f` — Fragment (TCP) packets into chunks of 8 bytes or less. Can help evade some next-gen firewall / IDS alarms.
+* `-ff` — Fragment (TCP) packets into chunks of 16 bytes or less. Can help evade some next-gen firewall / IDS alarms.
 * `-F` — “Fast” scan. Alias for `--top-ports 100`.
+* `-g` — Use the specified source port number, rather than a random source port. Useful for bypassing some stateless firewalls.
 * `-iL` — Use a file for nmap’s scan targets.
 * `-n` — Don’t resolve host names using DNS (or do reverse DNS resolution).
 * `-O` — OS detection. Generally requires at least one open and one closed port to be detected, and results will be distorted if the target is virtualized. The OS type is much more reliably detected than the OS version.
@@ -25,13 +31,15 @@ Note that nmap accepts ranges in any octet of an IP address; for example, 10.10.
 ### Long Flags
 
 * `--badsum` — Produce packets with an invalid checksum. These should be dropped by normal hosts, but many IDS solutions *respond* to these. This can be useful for reconnaissance.
-* `--data-length` — Append random data to nmap TCP packets. By default, nmap appends no data after the TCP header; padding this out *can* make scans look more innocuous. Disables protocol-specific payloads, which can decrease scan accuracy, particularly for UDP scans.
+* `--data-length` — Append random data to nmap TCP packets to ensure that all packets are the same length. By default, nmap appends no data after the TCP header; padding this out *can* make scans look more innocuous. Values < 24 only effect fragmented packets (since the TCP header is already 24 bytes). Disables protocol-specific payloads, which can decrease scan accuracy, particularly for UDP scans.
 * `--dns-servers` — Specify DNS server(s) to use for hostname resolution and reverse lookups.
+* `--ip-options` — Specify the IP “Options” field as either a string of hex-encoded bytes (`\x00`, etc.) or *one* of the shortcut options `R` (record-route), `T` (record-timestamp), `U` (`R` *and* `T`), `L` (loose source routing), and `S` (strict source routing). Both `L` and `S` must be followed by a space-separated list of IP addresses to route the packet through (the entire sting must be quoted), and are used to route around security appliances.
 * `--max-parallelism` — The maximum number of probes to run in parallel. Overrides `-T`.
 * `--max-rate` — The maximum number of packets/second to send. Overrides `-T`.
 * `--min-parallelism` — The minimum number of probes to run in parallel. Overrides `-T`.
 * `--min-rate` — The minimum number of packets/second to send. Overrides `-T`.
-* `--mtu` — Choose the fragment length for `-f`; should always be a multiple of 8.
+* `--mtu` — Fragment packets into a chosen multiple of 8. Setting `--mtu 8` is equivalent to `-f`, and `--mtu 16` is the same as `-ff`.
+* `--proxies` — Use an HTTP or SOCKS4 proxy. Specify a comma-separated list to chain proxies together.
 * `--reason` — Show the reason that nmap made a particular identification. Kinda fun.
 * `--scan-delay` — Add a delay (in milliseconds) between ports/hosts. Helpful for IDS evasion, but makes things *slow*.
 * `--scanflags` — Specify the TCP flags used to probe ports during a scan using URG, PSH, RST, SYN, ACK, FIN (e.g., `--scanflags URGPSHFIN` is the same as `-sX`). Overrides the explicit scanning options in the following sections.
@@ -40,6 +48,7 @@ Note that nmap accepts ranges in any octet of an IP address; for example, 10.10.
 * `--spoof-mac` — Use a spoofed MAC address for the scan. Obviously only matters when you’re on the same subnet as the target; otherwise has the same caveats as IP spoofing.
 * `--top-ports` — Scan only the X most common ports. Nmap’s default is `--top-ports 1000`. Overridden when using `-p`.
 * `--traceroute` — Perform a traceroute between the attacker and target systems. Note that nmap’s traceroute works in the opposite fashion (high TTL to low TTL) than traceroute/tracert. Note that most routers will not send ICMP TTL exceeded packets, and will thus show up as `*`.
+* `--ttl` — Set a custom TTL. Does not always work as you’d expect in my experience!
 * `--version-intensity` — Determine how much service information to collect (and thus how noisy the associated probes will be) with `-sV`. Ranges from 0 – 9; `--version-light` is equivalent to 2, `--version-all` is equivalent to 9.
 
 ### Scripting Engine
@@ -122,8 +131,9 @@ By default, nmap uses the following host discovery methods:
 * [Firewall/IDS Evasion and Spoofing (Official Nmap Project Guide)](https://nmap.org/book/man-bypass-firewalls-ids.html)
 * [TCP Idle Scan (-sI) (Official Nmap Project Guide)](https://nmap.org/book/idlescan.html)
 * [Nmap Scripting Engine Usage and Examples (Official Nmap Project Guide)](https://nmap.org/book/nse-usage.html)
+* [2022-05-09 TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 3, 2022
+<span aria-hidden="true">📅</span> May 10, 2022
