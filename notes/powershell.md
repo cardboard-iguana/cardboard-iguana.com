@@ -34,12 +34,21 @@ Invoke-WebRequest -Uri $URL_OF_FILE -OutFile $FILE_ON_DISK
 powershell -c "$COMMAND"
 ```
 
+## Calculating File Hashes
+
+```powershell
+Get-FileHash -Algorithm $ALGORITHM $FILE_PATH
+```
+
+The algorithm can be excluded (in which case SHA-256 is used). *Lots* of different hashing algorithms are supported — run `help Get-FileHash` to see a list.
+
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Get-WinEvent](get-winevent.md)
+* [TryHackMe: MAL: Researching](tryhackme-mal-researching.md)
 
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 14, 2021
+<span aria-hidden="true">📅</span> November 25, 2021
