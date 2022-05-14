@@ -140,10 +140,6 @@ fi
 #
 [[ -d _site ]] && rm -rf _site
 
-# Create static avatar link.
-#
-cp $(grep -e '^icon:' _config.yml | sed -e 's/^icon: //') avatar.webp
-
 # Build the site using either system Jekyll (assume that
 # our environment has installed the necessary gems
 # automatically) or via bundler.
