@@ -20,28 +20,21 @@ I *strongly* recommend using the Burp Suite Browser, since it already has proxy 
 
 ### Using Firefox with Burp Suite
 
-The Burp Suite browser is compiled as an x86_64 binary, and thus *doesn't* work on a Raspberry Pi. As a work-around, a dedicated Firefox profile can be used to interact with Burp Suite.
+The Burp Suite browser is compiled as an x86_64 binary, and thus *doesn't* work on a Raspberry Pi. As a work-around, Firefox can be used to interact with Burp Suite.
 
-(1) Create a new profile called “Burp Suite” using `firefox --ProfileManager`. Make sure to select `Choose Folder` when doing so, and create (and select) a folder called `burp-suite` in `~/.mozilla/firefox`.
+First, make the following changes to Firefox’s settings:
 
-(2) Start the “Firefox (Burp Suite)” browser and make the following changes:
-
-* Settings > General > Network Settings > Settings… > Manual proxy configuration
-* HTTP Proxy > 127.0.0.1:8080
-* Also use this proxy for HTTPS > On
+* Settings > General > Network Settings > Settings… > Manual proxy configuration > [set the “HTTP Proxy” to 127.0.0.1:8080 and check “Also use this proxy for HTTPS”]
 * Settings > Privacy & Security > Browser Privacy > Logins and Passwords > Ask to save logins and passwords for websites > Off
 * Settings > Privacy & Security > Browser Privacy > History > Use custom settings for history > Always use private browsing mode > On
 
-(3) Got to Add-ons and themes > Themes and pick a theme that’s different from that of your default Firefox (to make it easy to identify which profile you’re using).
+Then install the Burp Suite CA certificate:
 
-(4) Install the Burp Suite CA certificate:
-
+* Start Burp Suite.
 * Go to http://127.0.0.1:8080.
 * Click on the “CA Certificate” link in the upper right to download Burp Suite’s certificate.
 * Go to Settings > Privacy & Security > Security > Certificates > View Certificates…
 * Import the Burp Suite CA certificate and check “Trust this CA to identify websites.”
-
-This special Firefox profile can then be launched with a modified .desktop file, or by using `firefox -P "Burp Suite"`.
 
 Other options:
 
@@ -152,4 +145,4 @@ Burp Suite displays hashes in the "Hex" view by default; to convert them into th
 - - - -
 
 <span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 6, 2022
+<span aria-hidden="true">📅</span> May 20, 2022
