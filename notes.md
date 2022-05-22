@@ -80,6 +80,10 @@
 * [Download SD Movies in iTunes](notes/download-sd-movies-in-itunes.md)
 * [OneDrive Quirks](notes/onedrive-quirks.md)
 
+## Miscellaneous
+
+* [Solarized(ish) Color Scheme](notes/solarized-ish.md)
+
 ## Networks
 
 * [Different Representations of IPv4 Addresses](notes/different-representations-of-ipv4-addresses.md)
