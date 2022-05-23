@@ -21,16 +21,14 @@ Palette:
 
 |   Color | Regular | Bold/Bright |
 | -------:|:-------:|:-----------:|
-|   Black | `#eee8d5` | `#fdf6e3` |
+|   Black | `#002b36` | `#073642` |
 |     Red | `#dc322f` | `#dc322f` |
 |   Green | `#859900` | `#859900` |
 |  Yellow | `#b58900` | `#b58900` |
 |    Blue | `#268bd2` | `#268bd2` |
 | Magenta | `#6c71c4` | `#6c71c4` |
 |    Cyan | `#2aa198` | `#2aa198` |
-|   White | `#002b36` | `#073642` |
-
-Note that the “black” and “white” colors are reversed here. This is because many Terminal apps that explicitly set these colors (for example, TMUX) seem to implicitly assume a dark terminal.
+|   White | `#eee8d5` | `#fdf6e3` |
 
 ## Solarized(ish) Dark
 
