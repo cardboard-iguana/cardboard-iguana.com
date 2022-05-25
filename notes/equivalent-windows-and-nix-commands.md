@@ -1,20 +1,20 @@
 # Equivalent Windows and \*NIX Commands
 
-|      Linux | Windows  |
-| ----------:|:-------- |
-|        cat | type     |
-|        dig | nslookup |
-|       grep | findstr  |
-|   ifconfig | ipconfig |
-|         ls | dir      |
-|       more | more     |
-|    netstat | netstat  |
-|       ping | ping     |
-|      sleep | timeout  |
-|       sudo | runas    |
-|    tcpdump | windump  |
-| traceroute | tracert  |
-|       wget | wget     |
+|      Linux | Windows           |
+| ----------:|:----------------- |
+|        cat | type              |
+|        dig | nslookup          |
+|       grep | findstr / select  |
+|   ifconfig | ipconfig          |
+|         ls | dir               |
+|       more | more              |
+|    netstat | netstat           |
+|       ping | ping              |
+|      sleep | timeout           |
+|       sudo | runas             |
+|    tcpdump | windump           |
+| traceroute | tracert           |
+|       wget | wget              |
 
 ## dig
 
