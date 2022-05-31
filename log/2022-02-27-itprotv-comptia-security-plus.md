@@ -10,7 +10,7 @@ It looks like this section will cover attacks on both local and web-based applic
 
 Example: Time-of-check to time-of-use (TOCTOU).
 
-Null pointer errors (when an application dereferences a pointer that it later expects to be valid) *can* be caused by race conditions. Race conditions can also by exploited in some cases for privilege escalation (for example, CVE2021-3560).
+Null pointer errors (when an application dereferences a pointer that it later expects to be valid) *can* be caused by race conditions. Race conditions can also by exploited in some cases for privilege escalation (for example, CVE 2021-3560).
 
 * [Exploiting Polkit](../notes/exploiting-polkit.md)
 
