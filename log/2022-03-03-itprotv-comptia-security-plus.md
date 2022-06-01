@@ -16,7 +16,7 @@ Vocabulary:
 * Key Stretching: An algorithm that is used to expand a short key to a longer key value.
 * Static Key: A key used multiple times (typically for days, months, or years).
 * Ephemeral Key: A key used for only a single session.
-* Stream Cypher: Combining the plaintext message with a stream of random or pseudo-random characters, one it at a time. Stream cyphers are low diffusion algorithms.
+* Stream Cypher: Combining the plaintext message with a stream of random or pseudo-random characters, one bit at a time. Stream cyphers are low diffusion algorithms.
 * Block Cypher: The encryption of a fixed-length “blocks” of bits from the plaintext. Typically uses padding to ensure consistent block sizes for all plaintext messages. Block cyphers are generally high diffusion algorithms.
 * Public Key: The *encrypting*/*verifying* half of an asymmetric keypair.
 * Private Key: The *decrypting*/*signing* half of an asymmetric keypair.
@@ -87,11 +87,11 @@ Encryption is about ensuring confidentiality; steganography is about hiding info
 
 Interesting… ITPro.TV is defining a streaming cipher as operating byte-by-byte, whereas Exam Cram defined them as operating bit-by-bit. So either one of these is wrong, or the difference between stream and block cyphers are more a matter of degree than kind (I kind of suspect it’s the latter).
 
-| Stream Cypher         | Block Cypher                   |
-|:--------------------- |:------------------------------ |
-| Bit/Byte-based        | Block-based (64 bits or higher |
-| Generally less secure | Generally More secure          |
-| Faster                | Slower                         |
+| Stream Cypher         | Block Cypher                    |
+|:--------------------- |:------------------------------- |
+| Bit/Byte-based        | Block-based (64 bits or higher) |
+| Generally less secure | Generally more secure           |
+| Faster                | Slower                          |
 
 Block cipher modes:
 
@@ -126,7 +126,7 @@ Symmetric cyphers:
 
 | Name     | Considerations                         |
 |:-------- |:-------------------------------------- |
-| AES      | Block cypher, 128 - 256 bits           |
+| AES      | Block cypher, 128 – 256 bits           |
 | DES      | Block cypher, 56-bits                  |
 | 3DES     | Three DES rounds, 168-bits (effective) |
 | Blowfish | Block cipher, 64-bit                   |

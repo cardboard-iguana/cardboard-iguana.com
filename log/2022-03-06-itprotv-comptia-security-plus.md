@@ -52,7 +52,7 @@ Two modes:
 
 IPsec in tunneling mode uses two headers:
 
-* The Authentication Header (AH, protocol field 51) authenticates the packet’s sender and provides integrity and nonrepudiation. Note that integrity guarantees do *not* cover the all other header fields, as it is possible for some of these to be (legitimately) changed by intermediate servers.
+* The Authentication Header (AH, protocol field 51) authenticates the packet’s sender and provides integrity and nonrepudiation. Note that integrity guarantees do *not* cover all the other header fields, as it is possible for some of these to be (legitimately) changed by intermediate servers.
 * The Encapsulating Security Payload (ESP, protocol field 50) *also* provides authentication services, and encrypts the data being transferred. ESP is designed to provide confidentiality, authentication, integrity, and anti-replay services, but these can be configured in a piecemeal fashion. In particular, enabling confidentiality *without* integrity protection and either ESP authentication *or* a separate AH leaves the ESP data vulnerable to substitution attacks (not sure why you’d do this…).
 
 IPsec headers immediately follow the header fields in an IP datagram. ESP can be nested in AH, which simplifies firewall filtering if you only require confidentiality for *some* connections.
@@ -71,7 +71,7 @@ Note that FTPS, like FTP, requires multiple ports to function. This makes SFTP (
 
 ### Secure Email Protocols
 
-S/MIME leverages MIME + to provide authentication, message confidentiality and integrity, and nonrepudiation. S/MIME uses the “Cryptographic Message Syntax” to ensure the security of the underlying keys. Best practices dictate that separate S/MIME certificates be used for signing vs. encryption so that the encryption key can be escrowed without damaging non-repudiation.
+S/MIME leverages MIME to provide authentication, message confidentiality and integrity, and nonrepudiation. S/MIME uses the “Cryptographic Message Syntax” to ensure the security of the underlying keys. Best practices dictate that separate S/MIME certificates be used for signing vs. encryption so that the encryption key can be escrowed without damaging non-repudiation.
 
 Important ports:
 
@@ -98,7 +98,7 @@ By default SSH tunnels are actually encrypted using IDEA (the International Data
 There’s also LDAP-over-SSL (LDAPS), which again riffs off of HTTPS. As a total set of asides…
 
 * LDAP servers are generally called “Directory System Agents” (DSAs), and are typically accessed on port 636. There is also a “Global Catalog” that’s generally on port 3269.
-* Information in LDAP is encoded using a scheme called the “Basic Encoding Rules” (BER) and X.500 directories; while LDAP is defined in RFC 4522, BER and X.500 are both ISO standards..
+* Information in LDAP is encoded using a scheme called the “Basic Encoding Rules” (BER) and X.500 directories; while LDAP is defined in RFC 4522, BER and X.500 are both ISO standards.
 
 At the very least, LDAPS should be used when authenticating with Active Directory Domain Services (AD DS).
 
@@ -164,7 +164,7 @@ CIDR (as in “CIDR subnet notation”) is “Classless InterDomain Routing”. 
 
 IPv6 is a 128-bit address space (as opposed to the 32-bit address space of IPv4). IPv6 addresses are represented as eight groups of four hexadecimal digits (so each block represents 16 bits, exactly twice the size of an IPv4 block). The *largest* block consisting only of zeros can be replaced with `::` (i.e., you can only use this trick *once*), and leading zeros in a block can also be dropped.
 
-IPv6 also introduces the concept of “variable length subnet masking” (VLSM), which specifies subnets as needed rather than for the entire network. However, CIDR notation continues to work as you’d expect, so 2001:db8::/32 represents the subnet 2001:0db8:0000:0000:0000:0000:0000:0000 - 2001:0db8:ffff:ffff:ffff:ffff:ffff:ffff.
+IPv6 also introduces the concept of “variable length subnet masking” (VLSM), which specifies subnets as needed rather than for the entire network. However, CIDR notation continues to work as you’d expect, so 2001:db8::/32 represents the subnet 2001:0db8:0000:0000:0000:0000:0000:0000 – 2001:0db8:ffff:ffff:ffff:ffff:ffff:ffff.
 
 The IPv6 equivalent of 127.0.0.1 is ::1; the rest of the 127.0.0.0/8 block is replaced with the concept of “link-local” addresses, which are self-assigned per network interface addresses in the reserved fe80::/10 subnet (RFCs 7217 and 8064 defines how link-local addresses are assigned).
 
@@ -317,7 +317,7 @@ PFX stands for “personal information exchange”. Like PEM, multiple certifica
 
 Revocation occurs when a certificate is invalidated *before* its expiration date. Revocations can be communicated in one of two ways:
 
-* A certificate revocation list (CRL) is basically a simple list of revoked certificates, and is used for as part of client or server certificate validation. Because this is a simple file, it must be kept constantly updated.
+* A certificate revocation list (CRL) is basically a simple list of revoked certificates, and is used as part of client or server certificate validation. Because this is a simple file, it must be kept constantly updated.
 * The Online Certificate Status Protocol (OCSP) allows certificate revocation to be checked against the CA in real time. However, clients generally fail OCSP open, which is why OCSP stapling (below) exists.
 
 Certificates can also be “suspended”, which is a state that indicates it is under investigation for revocation. While a suspended certificate may remain in place, it is not valid for any uses.

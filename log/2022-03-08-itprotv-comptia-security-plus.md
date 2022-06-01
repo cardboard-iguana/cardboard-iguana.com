@@ -63,7 +63,7 @@ Windows ”Account Lockout Policy” notes:
 
 * The “Account lockout duration” setting determines how long an account is locked out after the the threshold number of incorrect attempts is reached. Can range from 1 - 99999 minutes; 0 means the account is locked until an administrator intervenes.
 * The “Account lockout threshold” setting determined the number of incorrect login attempts before lockout occurs. Can range from 1 - 999; 0 disables account lockouts. Typically set in the 3 - 5 range.
-* The “Reset account lockout counter after” setting determines how long after the last unsuccessful login the counter is reset to 0. Can range from 1 to the value of “Account lockout duration”. (IIRC, a successful login also resets the counter.
+* The “Reset account lockout counter after” setting determines how long after the last unsuccessful login the counter is reset to 0. Can range from 1 to the value of “Account lockout duration”. (IIRC, a successful login also resets the counter.)
 
 ### Password Age and History / Password Length and Rotation
 
