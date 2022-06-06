@@ -1,4 +1,4 @@
-# AWS Deep Dive #Draft
+# AWS Deep Dive
 
 It’s been a while, hasn’t it?
 
@@ -21,95 +21,180 @@ Once I’m done with both of these I’ll turn back to the remaining TryHackMe �
 * [PortSwigger: Burp Suite](https://portswigger.net/burp)
 * [PortSwigger: Web Security Academy](https://portswigger.net/web-security/learning-path)
 
-<!--
-
 ## AWS Essentials
+
+I’ll be starting off by watching through the “AWS Essentials” YouTube playlist put together by the Linux Academy.
 
 * [AWS Essentials (YouTube)](https://youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)
 
 ### Project Omega!
 
+This is apparently the framing device for the entire series. Pretty skippable.
+
 * [AWS Essentials: Project Omega! (YouTube)](//youtu.be/CGFrYNDpzUM)
 
-### How to Use the Interactive Guide
-
-* [AWS Essentials: How to Use the Interactive Guide (YouTube)](//youtu.be/eiTYqcsU6VI)
-
 ### AWS Free Tier
+
+Core AWS services:
+
+* EC2
+* EBS
+* S3
+* RDF/DynamoDB
+* Elastic Load Balancing
+* SNS
+* Lambda
 
 * [AWS Essentials: AWS Free Tier (YouTube)](//youtu.be/8p1bTTV6ATE)
 
 ### Create an AWS Account
 
+Wow, AWS is using *voice calls* for account authentication! (At least they’re automated…)
+
 * [AWS Essentials: Create an AWS Account (YouTube)](//youtu.be/_siSwgpVQNc)
 
 ### How to Navigate the AWS Console
 
+You can switch between regions in AWS using a simple drop-down in the AWS Console’s header.
+
 * [AWS Essentials: How to Navigate the AWS Console (YouTube)](//youtu.be/A43m4TDFCUM)
 
-### AWS Documentation
-
-* [AWS Essentials: AWS Documentation (YouTube)](//youtu.be/jV0FqG9DCog)
-
 ### What is IAM?
+
+The first user in an AWS account is the “root” user, and has the sort of privileges this name implies.
+
+While the root user gets permission to *everything*, subsequent users receive no permissions beyond what’s required to log in — any additional capabilities must be added in the IAM interface.
 
 * [AWS Essentials: What is IAM? (YouTube)](//youtu.be/4ngYrnJb7F8)
 
 ### IAM Initial Setup and Configuration
 
+After initially creating the root account, the first thing you should do is work through all of the “Security Status” items in the IAM console.
+
+Amazon MFA is *always* TOTP-based (when AWS refers to a “hardware key fob”, it means an RSA-style device, not a Yubikey).
+
+For obvious reasons, the first thing you should probably do is create an additional (admin) user, and then generally *avoid* using the root user. Admin users are defined by having the `AdministratorAccess` policy attached.
+
 * [AWS Essentials: IAM Initial Setup and Configuration (YouTube)](//youtu.be/W_eu0rJN0yU)
 
-### IAM Users and Policies
-
-* [AWS Essentials: IAM Users and Policies (YouTube)](//youtu.be/jP-1qPe6P4s)
-
-### IAM Groups and Policies
-
-* [AWS Essentials: IAM Groups and Policies (YouTube)](//youtu.be/R5RCCrS3pcI)
-
 ### IAM Roles
+
+Services (really, objects in a service) in AWS can’t be assigned policies directly, but *can* be assigned *roles*.
+
+In general, roles are used to package policies for *service objects*, while groups are used to package policies for *users*.
 
 * [AWS Essentials: IAM Roles (YouTube)](//youtu.be/7sYE6J1_CsQ)
 
 ### AWS Global Infrastructure
 
+VPC (Virtual Private Cloud)  is the backbone of AWS’s offerings.
+
+“Regions” are groupings of AWS resources that are concentrated in a given location (AWS data centers are not spread out uniformly).
+
+“Regions” are in turn made up of “availability zone”, which are *geographically isolated* clusters of resources.
+
+Every data center is assigned to *only* one availability zone; the purpose of availability zones is to provide redundancy within a region.
+
 * [AWS Essentials: AWS Global Infrastructure (YouTube)](//youtu.be/J_Kh1gZaMd4)
 
 ### What is a VPC?
+
+VPC settings can be changed in the AWS console under Networking > VPC.
+
+Basically, this is logical partition of AWS. Importantly, this partitioning includes its own logical network layer. So you can *kind of* think of a VPC as a virtual network in AWS.
+
+Note that a ”default” VPC is created along with a new AWS account, but *additional* VPCs can be created as needed.
+
+The VPC “internet gateway” is roughly equivalent to a modem in a home or SMB, while VPC “route tables” function like an actual router. VPC NACLs roughly fill the role of a (very simple, stateless) firewall.
 
 * [AWS Essentials: What is a VPC? (YouTube)](//youtu.be/7XnpdZF_COA)
 
 ### Internet Gateways (IGWs)
 
+Basically: The part of a VPC that provides the actual connection to the internet. It’s automatically scaled by Amazon as needed, so there’s little that needs to be configured here.
+
+Really, all a IGW is providing is a *route* from the attached VPC to the internet. There can only be *one* IGW attached to a VPC at any given time. (Amazon also won’t allow a IGW to be detached if there are any live resources like EC2 or RDS instances in the VPC.)
+
 * [AWS Essentials: Internet Gateways (IGWs) (YouTube)](//youtu.be/pAOrBxZ7584)
 
 ### Route Tables (RTs)
+
+The Route Table is presented (almost) as a literal route table (think of the Linux `route` command). So, no surprises here.
+
+There can be *multiple* RTs per VPC. Similar to IGWs, however, RTs can only be deleted if they have no dependencies (active routes).
 
 * [AWS Essentials: Route Tables (RTs) (YouTube)](//youtu.be/GrfOsWUVCfg)
 
 ### Network Access Control Lists (NACLs)
 
+Think: Stateless firewall.
+
+NACLs can be applied to one or more subnets in a VPC, and multiple NACLs are allowed in a VPC.
+
+All NACLs end with a default DENY. *However*, the *default* NACL created with the default VPC has an “ALLOW ALL” rule ahead of this.
+
+NACL rules are evaluated from lowest-to-highest rule number. Fortunately, the AWS console will automatically arrange rules in the order you’d expect (top-to-bottom).
+
+Note that additional network security controls (“security groups”) can be applied to AWS resources like EC2 instances, etc. But NACLs are the only *subnet* level protection that’s available.
+
 * [AWS Essentials: Network Access Control Lists (NACLs) (YouTube)](//youtu.be/vJzHn24TNQE)
 
 ### Subnets
+
+VPC subnets are limited to particular availability zones; by default, one subnet is created per availability zone for the region a VPC is created in.
+
+Resources *must* be provisioned within a subnet. Since subnets cannot span availability zones, subnets are the level that AWS resources begin to correspond to physical computing structures in data centers.
+
+Subnets can be “public” (internet routable) or “private” (*not* internet routable), which is determined by the associated route table. Note that every subnets *must* be associated with a route table.
 
 * [AWS Essentials: Subnets (YouTube)](//youtu.be/KNT463WSjjY)
 
 ### Availability Zones (VPC Specific)
 
+The point of availability zones within a VPC is to allow redundancy to be engineered via mirrored subnets + resources.
+
 * [AWS Essentials: Availability Zones (VPC Specific) (YouTube)](//youtu.be/ET_CSqdGsYg)
 
 ### S3 Basics
+
+Objects = Files
+
+Buckets are limited to particular regions; data is automatically replicated across availability zones within that region.
 
 * [AWS Essentials: S3 Basics (YouTube)](//youtu.be/f9hXcxHnQuE)
 
 ### Buckets & Objects
 
+Bucket names are *globally* unique.
+
 * [AWS Essentials: Buckets & Objects (YouTube)](//youtu.be/skJosIhDNF0)
 
 ### Storage Classes
 
+Storage classes in S3 (standard, glacier, etc.) can be defined *per object*. Classes:
+
+* Standard (the default; most available and durable)
+* Reduced Redundancy Storage (less expensive, less durable)
+* Infrequent Access (even less expensive, as durable as standard but low availability)
+* Glacier (very cheap, very durable, but can take *several hours* to become availability.
+
+“Durability” is defined as the probability that a file will *not* be lost or corrupted in a given year.
+
+“Availability” is defined as the probability that a file *will* be (immediately) available when requested in a given year.
+
+Storage class can be set during upload, by using the object lifecycle tool, or just by editing in the AWS console (note that Glacier cannot be chosen in this way). Changing the storage type of a folder will change the storage class of all contained objects but will *not* effect subsequent uploads.
+
+Reduced Redundancy Storage is actually recommended for backup (!), though Glacier is intended for actual *archival* usage.
+
 * [AWS Essentials: Storage Classes (YouTube)](//youtu.be/DFfgYapmu9s)
+
+<!--
+
+## AWS Essentials
+
+Finishing up Linux Academy’s “AWS Essentials” YouTube course.
+
+* [AWS Essentials (YouTube)](https://youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)
 
 ### Object Lifecycles
 
@@ -166,6 +251,8 @@ Once I’m done with both of these I’ll turn back to the remaining TryHackMe �
 ### Using SNS
 
 * [AWS Essentials: Using SNS (YouTube)](//youtu.be/LeYUnkPOQOc)
+
+<!--
 
 ## Deep Dive on Amazon S3 Security and Management
 
