@@ -2,6 +2,8 @@
 
 ## Hacker’s Log (Recent)
 
+* [2022-06-06 AWS Deep Dive](log/2022-06-06-aws-deep-dive.md)
+* [2022-06-05 AWS Deep Dive](log/2022-06-05-aws-deep-dive.md)
 * [2022-05-10 TryHackMe: Jr. Penetration Tester (Supplements)](log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
 * [2022-05-09 TryHackMe: Jr. Penetration Tester (Supplements)](log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
 * [2022-05-07 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-05-07-itprotv-comptia-security-plus.md)
@@ -10,8 +12,6 @@
 * [2022-04-27 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-04-27-itprotv-comptia-security-plus.md)
 * [2022-04-26 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-04-26-itprotv-comptia-security-plus.md)
 * [2022-04-25 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-04-25-itprotv-comptia-security-plus.md)
-* [2022-04-21 TryHackMe: Jr. Penetration Tester](log/2022-04-21-tryhackme-jr-penetration-tester.md)
-* [2022-04-20 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 ## Website Navigation
 

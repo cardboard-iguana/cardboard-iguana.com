@@ -1,5 +1,7 @@
 # <span aria-hidden="true">📓</span> A Hacker’s Log <span aria-hidden="true">📓</span>
 
+* [2022-06-06 AWS Deep Dive](log/2022-06-06-aws-deep-dive.md)
+* [2022-06-05 AWS Deep Dive](log/2022-06-05-aws-deep-dive.md)
 * [2022-05-10 TryHackMe: Jr. Penetration Tester (Supplements)](log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
 * [2022-05-09 TryHackMe: Jr. Penetration Tester (Supplements)](log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
 * [2022-05-07 ITPro.TV: CompTIA Security+ (SY0-601)](log/2022-05-07-itprotv-comptia-security-plus.md)
