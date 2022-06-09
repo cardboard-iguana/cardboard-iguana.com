@@ -20,7 +20,7 @@
 
 ## Elsewhere
 
-* [<span aria-hidden="true">🌱</span> Homepage](https://necopinus.xyz)
+* [<span aria-hidden="true">🌲</span> Homepage](https://necopinus.xyz)
 * [<span aria-hidden="true">🐙</span> GitHub](https://github.com/necopinus)
 * [<span aria-hidden="true">📄</span> Resume](https://registry.jsonresume.org/necopinus)
 * [<span aria-hidden="true">🌃</span> LinkedIn](https://www.linkedin.com/in/necopinus/)
