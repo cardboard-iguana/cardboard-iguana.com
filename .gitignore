@@ -9,6 +9,7 @@
 _build/
 _theme/
 _layouts/
+_includes/
 css/
 atom.xml
 Gemfile
