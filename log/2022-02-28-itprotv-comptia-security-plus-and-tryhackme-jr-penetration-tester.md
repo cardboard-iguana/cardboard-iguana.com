@@ -66,7 +66,7 @@ There are lots of third-party risks. Everything that might go wrong in-house can
 
 Many times the reason organizations will attempt to refactor third-party applications or drivers (see yesterday’s notes) is because of lack of current vendor support (and occasionally lack of vendor entirely).
 
-* [2022-02-27 ITPro.TV: CompTIA Security+ (SY0-601)](2022-02-27-itprotv-comptia-security-plus.md)
+* [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](2022-02-27-itprotv-comptia-security-plus.md)
 
 ## TryHackMe: Jr. Penetration Tester
 

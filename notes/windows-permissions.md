@@ -52,7 +52,7 @@ Note that non-admin domain users may still be local admins.
 * [File and Folder Permissions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb727008)
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [ITPro.TV CompTIA Security+](itprotv-comptia-security-plus.md)
-* [2022-04-21 TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
+* [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
 
 - - - -
 

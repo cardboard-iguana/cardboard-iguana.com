@@ -69,7 +69,7 @@ RCE through XEE is apparently rare, but can be achieved via the PHP expect modul
 
 It looks like this is something that would be more commonly attacked over an API than directly through a web front-end.
 
-* [2021-10-05 TryHackMe: Complete Beginner](2021-10-05-tryhackme-complete-beginner.md)
+* [2021-10-05 - TryHackMe: Complete Beginner](2021-10-05-tryhackme-complete-beginner.md)
 * [ENTITY Declaration](https://xmlwriter.net/xml_guide/entity_declaration.shtml)
 * [Exploitation: XML External Entity (XXE) Injection](https://depthsecurity.com/blog/exploitation-xml-external-entity-xxe-injection)
 

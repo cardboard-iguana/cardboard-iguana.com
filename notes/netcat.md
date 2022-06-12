@@ -107,9 +107,9 @@ If you just have netcat connect to a service directly, it functions exactly like
 * [Using “socat”](socat.md)
 * [XSS (Cross-Site Scripting) Attacks](xss-attacks.md)
 * [SQL Injection](sql-injection.md)
-* [2022-03-30 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-03-30 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
-* [2022-05-09 TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
+* [2022-05-09 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
 
 - - - -
 

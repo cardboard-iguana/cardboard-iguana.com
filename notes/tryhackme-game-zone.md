@@ -1,6 +1,6 @@
 # TryHackMe: Game Zone
 
-* [2022-02-02 TryHackMe: Web Fundamentals (Supplements)](../log/2022-02-02-tryhackme-web-fundamentals-supplements.md)
+* [2022-02-02 - TryHackMe: Web Fundamentals (Supplements)](../log/2022-02-02-tryhackme-web-fundamentals-supplements.md)
 
 ## References
 

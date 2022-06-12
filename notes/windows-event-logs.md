@@ -45,7 +45,7 @@
 * [Event Types](https://docs.microsoft.com/en-us/windows/win32/eventlog/event-types)
 * [How to find out who deleted Event Viewer logs](https://serverfault.com/questions/743575/how-to-find-out-who-deleted-event-viewer-logs)
 * [Windows Security Event Log Cleared](https://support.alertlogic.com/hc/articles/115004121423-Windows-Security-Event-Log-Cleared)
-* [2022-04-18 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-18 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 - - - -
 

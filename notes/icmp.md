@@ -14,7 +14,7 @@ Ping packets typically just include either random data or all zeros.
 * [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md)
 * [RFC 792](https://datatracker.ietf.org/doc/html/rfc792)
 * [Internet Control Message Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol)
-* [2022-03-30 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-03-30 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 - - - -
 

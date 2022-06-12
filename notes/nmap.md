@@ -122,16 +122,16 @@ By default, nmap uses the following host discovery methods:
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [3 ways to scan Eternal Blue Vulnerability in Remote PC](https://www.tryhackme.vip/2018/03/3-ways-to-scan-eternal-blue.html)
-* [2022-03-31 TryHackMe: Jr. Penetration Tester](../log/2022-03-31-tryhackme-jr-penetration-tester.md)
+* [2022-03-31 - TryHackMe: Jr. Penetration Tester](../log/2022-03-31-tryhackme-jr-penetration-tester.md)
 * [Host Discovery (Official Nmap Project Guide)](https://nmap.org/book/man-host-discovery.html)
-* [2022-04-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Port Scanning Basics (Official Nmap Project Guide)](https://nmap.org/book/man-port-scanning-basics.html)
 * [UDP Scan (-sU) (Official Nmap Project Guide)](https://nmap.org/book/scan-methods-udp-scan.html)
 * [TCP Window Scan (-sW) (Official Nmap Project Guide)](https://nmap.org/book/scan-methods-window-scan.html)
 * [Firewall/IDS Evasion and Spoofing (Official Nmap Project Guide)](https://nmap.org/book/man-bypass-firewalls-ids.html)
 * [TCP Idle Scan (-sI) (Official Nmap Project Guide)](https://nmap.org/book/idlescan.html)
 * [Nmap Scripting Engine Usage and Examples (Official Nmap Project Guide)](https://nmap.org/book/nse-usage.html)
-* [2022-05-09 TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
+* [2022-05-09 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
 
 - - - -
 

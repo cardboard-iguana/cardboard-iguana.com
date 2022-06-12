@@ -32,7 +32,7 @@
 
 ## References
 
-* [2022-04-20 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-20 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [How to Find Executables with SUID Capabilities](how-to-find-executables-with-suid-capabilities.md)
 * [How to Use “find” with File Metadata](how-to-use-find-with-file-metadata.md)
 * [Using “netstat”](netstat.md)

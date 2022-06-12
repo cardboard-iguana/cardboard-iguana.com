@@ -1,6 +1,6 @@
 # TryHackMe: hackernote
 
-* [2022-01-31 TryHackMe: Web Fundamentals (Supplements)](../log/2022-01-31-tryhackme-web-fundamentals-supplements.md)
+* [2022-01-31 - TryHackMe: Web Fundamentals (Supplements)](../log/2022-01-31-tryhackme-web-fundamentals-supplements.md)
 
 ## References
 

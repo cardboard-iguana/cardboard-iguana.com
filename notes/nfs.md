@@ -31,7 +31,7 @@ Root squashing can be *disabled* in `/etc/exports` with the `no_root_squash` fla
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [What is NFS port number in Linux?](https://racinpaper.com/auto-racing/what-is-nfs-port-number-in-linux.html)
-* [2022-04-20 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-20 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 - - - -
 

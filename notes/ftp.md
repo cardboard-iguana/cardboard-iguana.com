@@ -32,7 +32,7 @@ FTPS (FTP over SSL) uses port 990 by default. Mostly supplanted by SFTP.
 
 ## References
 
-* [2022-04-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Net Sec Challenge](tryhackme-net-sec-challenge.md)
 * [How to list FTP directories using telnet?](https://stackoverflow.com/questions/50324402/how-to-list-ftp-directories-using-telnet#comment126707507_50324402)
 * [FTP Commands: QUIT, USER, ABOR, ACCT, SYST, XDEL](https://www.serv-u.com/resource/tutorial/quit-user-abor-acct-syst-xdel-ftp-command)

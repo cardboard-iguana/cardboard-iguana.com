@@ -18,7 +18,7 @@ The TCP “acknowledgment number” contains the *next* sequence number that the
 * [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md)
 * [Transmission Control Protocol (RFC 793)](https://datatracker.ietf.org/doc/html/rfc793.html)
 * [TCP Model](tcp-model.md)
-* [2022-04-02 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
 - - - -
 

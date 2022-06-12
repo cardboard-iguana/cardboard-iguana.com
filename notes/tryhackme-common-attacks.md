@@ -1,6 +1,6 @@
 # TryHackMe: Common Attacks
 
-* [2022-02-03 TryHackMe: Common Attacks & Pwnkit](../log/2022-02-03-tryhackme-common-attacks-and-pwnkit.md)
+* [2022-02-03 - TryHackMe: Common Attacks & Pwnkit](../log/2022-02-03-tryhackme-common-attacks-and-pwnkit.md)
 
 ## References
 

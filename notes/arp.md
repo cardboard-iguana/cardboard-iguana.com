@@ -49,7 +49,7 @@ Note that the `r` here isn't a mistake -- rather it specifies a "raw string" (th
 * [OSI Model](osi-model.md)
 * [Scapy](https://scapy.net/)
 * [Quick Answer: How Do You Write An F String In Python](https://whatisanything.com/how-do-you-write-an-f-string-in-python/#What_does_R_mean_Python)
-* [2022-03-31 TryHackMe: Jr. Penetration Tester](../log/2022-03-31-tryhackme-jr-penetration-tester.md)
+* [2022-03-31 - TryHackMe: Jr. Penetration Tester](../log/2022-03-31-tryhackme-jr-penetration-tester.md)
 
 - - - -
 

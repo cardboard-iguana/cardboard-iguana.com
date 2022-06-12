@@ -52,7 +52,7 @@ Notes:
 
 ## References
 
-* [2022-04-21 TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
+* [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
 * [Using “netstat”](netstat.md)
 
 - - - -

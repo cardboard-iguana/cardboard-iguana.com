@@ -1,6 +1,6 @@
 # TryHackMe: XXE
 
-* [2021-12-09 TryHackMe: Complete Beginner (Supplements)](../log/2021-12-09-tryhackme-complete-beginner-supplements.md)
+* [2021-12-09 - TryHackMe: Complete Beginner (Supplements)](../log/2021-12-09-tryhackme-complete-beginner-supplements.md)
 
 ## References
 

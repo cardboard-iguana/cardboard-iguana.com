@@ -83,7 +83,7 @@ hydra -t 4 -l $USER_NAME -P $WORDLIST \
 
 The -t flag specifies the number of threads (parallel connection attempts) that Hydra should make at any one time.
 
-* [2021-10-02 TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
+* [2021-10-02 - TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
 
 ### Understanding MySQL
 

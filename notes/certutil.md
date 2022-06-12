@@ -29,7 +29,7 @@ If a certificate has the following properties, then we can use it to create a ce
 ## References
 
 * [TryHackMe: MAL: Researching](tryhackme-mal-researching.md)
-* [2022-05-10 TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
+* [2022-05-10 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
 * [SpectreOps: Certified Pre-Owned](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
 * [Kerberos](kerberos.md)
 * [Using Rubeus](rubeus.md)

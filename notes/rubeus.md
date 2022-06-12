@@ -81,7 +81,7 @@ Rubeus.exe changepw /ticket:$TICKET_FILE \
 * [TryHackMe: Attacking Kerberos](tryhackme-attacking-kerberos.md)
 * [Kerberos](kerberos.md)
 * [Using Hashcat](hashcat.md)
-* [2022-05-10 TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
+* [2022-05-10 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
 * [SpectreOps: Certified Pre-Owned](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
 * [Using “certutil”](certutil.md)
 

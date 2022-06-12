@@ -295,13 +295,13 @@ Use the `exploit/multi/handler` module in Metasploit to catch the shells produce
 * [Kerberos](kerberos.md)
 * [Using John the Ripper](john-the-ripper.md)
 * [Using Hashcat](hashcat.md)
-* [2022-04-13 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-13 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Dumping Windows Password Hashes Using Metasploit](https://www.utc.edu/sites/default/files/2021-04/4660-lab6.pdf)
 * [Windows Password Hashes](../notes/windows-password-hashes.md)
-* [2022-04-14 TryHackMe: Jr. Penetration Tester](../log/2022-04-14-tryhackme-jr-penetration-tester.md)
-* [2022-04-18 ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-14 - TryHackMe: Jr. Penetration Tester](../log/2022-04-14-tryhackme-jr-penetration-tester.md)
+* [2022-04-18 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Using Mimikatz](mimikatz.md)
-* [2022-04-21 TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
+* [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
 
 - - - -
 
