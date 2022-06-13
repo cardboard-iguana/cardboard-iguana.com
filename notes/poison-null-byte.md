@@ -1,5 +1,8 @@
 # The Poison Null Byte
 
+author:: Nathan Acks  
+date:: 2022-03-13
+
 Some languages use null bytes (`0x00`) to know when a string terminates, rather than tracking the actual string length (PHP < 5.3.4 is one of these). If a null byte (generally? always? encoded as `%00`) is included in a string, then everything after that byte is dropped by the interpreter.
 
 Because % characters are themselves special, null bytes need to be encoded in URLs as `%2500`.
@@ -11,8 +14,3 @@ Typically a null byte will either be inserted at the end of a string (to prevent
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Common PHP attacks: Poison Null Byte](https://defendtheweb.net/article/common-php-attacks-poison-null-byte)
 * [TryHackMe: Jr. Penetration Tester](tryhackme-jr-penetration-tester.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 13, 2022

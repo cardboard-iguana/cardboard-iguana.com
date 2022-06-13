@@ -1,5 +1,8 @@
 # JWT (JSON Web Tokens) Attacks
 
+author:: Nathan Acks  
+date:: 2022-01-17
+
 JSON web token format: `$HEADER.$PAYLOAD.$SIGNATURE`, where each substring is (URL-safe) base64 encoded. These can be passed around as a user cookie, HTTP header, or queried from local storage.
 
 `$HEADER` and `$PAYLOAD` are both JSON blobs, but `$SIGNATURE` is binary data.
@@ -28,9 +31,11 @@ Use the following to generate a signature with the above `$HEADER` and the PEM-f
 
 ```bash
 echo -n "$HEADER.$PAYLOAD" | \
-openssl dgst -sha256 -mac HMAC -macopt hexkey:$(cat $PUBLIC_KEY_FILE | xxd -p | tr -d '\n') | \
+openssl dgst -sha256 -mac HMAC -macopt hexkey:$(cat $PUBLIC_KEY_FILE | xxd -p | tr -d '
+') | \
 sed -e 's/.*= //' | \
-tr -d '\n' | \
+tr -d '
+' | \
 xxd -p -r | \
 basenc --base64url | \
 sed -e 's/=*$//'
@@ -46,8 +51,3 @@ sed -e 's/=*$//'
 * [JSON Web Tokens](https://jwt.io)
 * [lmammino / jwt-cracker](https://github.com/lmammino/jwt-cracker)
 * [Using “basenc”](basenc.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 17, 2022

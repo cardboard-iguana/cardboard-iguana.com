@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-29
+
 ## Common Linux Privsec
 
 ### Direction of Privilege Escalation
@@ -61,8 +64,3 @@ Linux privilege escalation checklists:
 * [PayloadsAllTheThings: Linux — Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)
 * [Total OSCP Guide: Privilege Escalation](https://sushant747.gitbooks.io/total-oscp-guide/content/privilege_escalation_-_linux.html)
 * [A Guide to Linux Privilege Escalation](https://payatu.com/guide-linux-privilege-escalation)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 29, 2021

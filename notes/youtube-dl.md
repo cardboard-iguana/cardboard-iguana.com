@@ -1,5 +1,7 @@
 # Using “youtube-dl”
 
+author:: Nathan Acks
+
 You can download video and audio files for offline viewing from a variety of websites using youtube-dl. Be sure to install ffmpeg as well for tagging.
 
 Most of the time, you’ll need a newer version of youtube-dl than is available in your distro’s repos. You can grab the latest youtube-dl source code from GitHub, or alternately install with pip. I prefer to do this in a Python virtual environment, though it still can help to pull in the system package (to ensure that you have all of the right dependencies).
@@ -31,7 +33,3 @@ Useful size specs:
 
 * [Common Python Tools: Using virtualenv, Installing with Pip, and Managing Packages](https://www.digitalocean.com/community/tutorials/common-python-tools-using-virtualenv-installing-with-pip-and-managing-packages)
 * [ytdl-org / youtube-dl](https://github.com/ytdl-org/youtube-dl)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

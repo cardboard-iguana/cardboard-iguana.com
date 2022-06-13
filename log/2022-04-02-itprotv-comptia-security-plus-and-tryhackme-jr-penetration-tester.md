@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-04-02
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be covering Chapter 22 of the Security+ Exam Cram, “Cloud Cybersecurity Solutions”.
@@ -421,8 +424,3 @@ Note that Hydra doesn’t stop automatically after a password is found.
 ### Summary of Attacking Protocols and Servers
 
 FTPS uses TCP 990 by default.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 2, 2022

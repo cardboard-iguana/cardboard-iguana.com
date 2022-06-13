@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-04-25
+
 ## CompTIA Security+ Exam Cram
 
 Today we’re going to read through three chapters of the Security+ Exam Cram:
@@ -135,8 +138,3 @@ SOC = Service Organizational Control
 ### Benchmarks and Secure Configuration Guides
 
 CIS Critical Security Controls + related benchmarks and guides.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 25, 2022

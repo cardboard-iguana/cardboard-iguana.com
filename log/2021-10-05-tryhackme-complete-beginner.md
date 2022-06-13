@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-05
+
 ## OWASP Top 10
 
 ### (Severity 01) Injection
@@ -33,8 +36,3 @@ Honestly, I’m trying to imagine how this would happen in most realistic contex
 ### (Severity 03) Sensitive Data Exposure
 
 So, the trick this section is talking about is that some small web applications use SQLite databases, and a sloppy webdev might store the database file in the application webroot where it can be downloaded and then read at our leisure.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 5, 2021

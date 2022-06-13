@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-15
+
 ## CompTIA Security+ Exam Cram
 
 Today it’s chapter 11 of the Exam Cram Security+, “Secure Application Development, Deployment, and Automation“.
@@ -124,8 +127,3 @@ Be careful with information leaks in HTTP headers.
 * STATIC CODE ANALYSIS: Automated code scanning. Importantly, this happens when the code is *not* running, or even at the source code stage.
 * DYNAMIC CODE ANALYSIS: Automated analysis of (and sometimes involving interaction with) *running* code. Includes unit tests, automated fuzzing, etc.
 * MANUAL CODE ANALYSIS: A person actually reads the source code.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 15, 2022

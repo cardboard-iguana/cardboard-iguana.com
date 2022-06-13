@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals (Supplements)
 
+author:: Nathan Acks  
+date:: 2022-02-02
+
 ## Game Zone
 
 ### Obtain Access via SQLi
@@ -38,8 +41,3 @@ Oof. The key to successfully running the Metasploit module here is to remember t
 ## Jurassic Park
 
 [See my Jurassic Park CTF write-up.](../notes/tryhackme-jurassic-park.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 2, 2022

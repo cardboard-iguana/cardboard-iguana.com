@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-11-05
+
 ## Kenobi
 
 ### Deploy the Vulnerable Machine
@@ -362,15 +365,15 @@ PORT    STATE SERVICE
 Host script results:
 | smb-enum-shares: 
 |   account_used: guest
-|   \\10.10.179.107\IPC$: 
+|   \10.10.179.107\IPC$: 
 |     Type: STYPE_IPC_HIDDEN
 |     Comment: IPC Service (kenobi server (Samba, Ubuntu))
 |     Users: 1
 |     Max Users: <unlimited>
-|     Path: C:\tmp
+|     Path: C:	mp
 |     Anonymous access: READ/WRITE
 |     Current user access: READ/WRITE
-|   \\10.10.179.107\anonymous: 
+|   \10.10.179.107nonymous: 
 |     Type: STYPE_DISKTREE
 |     Comment: 
 |     Users: 0
@@ -378,12 +381,12 @@ Host script results:
 |     Path: C:\home\kenobi\share
 |     Anonymous access: READ/WRITE
 |     Current user access: READ/WRITE
-|   \\10.10.179.107\print$: 
+|   \10.10.179.107\print$: 
 |     Type: STYPE_DISKTREE
 |     Comment: Printer Drivers
 |     Users: 0
 |     Max Users: <unlimited>
-|     Path: C:\var\lib\samba\printers
+|     Path: C:ar\lib\samba\printers
 |     Anonymous access: <none>
 |_    Current user access: <none>
 
@@ -418,8 +421,3 @@ Read data files from: /usr/bin/../share/nmap
 ```
 
 * [Basic Pentesting](../notes/tryhackme-basic-pentesting.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 5, 2021

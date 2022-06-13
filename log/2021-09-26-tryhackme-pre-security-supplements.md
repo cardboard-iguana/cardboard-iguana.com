@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-09-26
+
 ## Windows Event Logs
 
 ### Putting Theory Into Practice
@@ -53,8 +56,3 @@ The MITRE AEPs are kinda hard to find:
 * [APT3](https://attack.mitre.org/resources/adversary-emulation-plans/)
 * [APT29](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/apt29)
 * [FIN6](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/fin6)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 26, 2021

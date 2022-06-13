@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-02-23
+
 Moving forward, I’m planning to read the appropriate chapter of “CompTIA Security+ Exam Cram” before watching the corresponding ITPro.TV lecture. But since I didn’t do that yesterday, I have two chapters to read today!
 
 ## CompTIA Security+ Exam Cram
@@ -180,8 +183,3 @@ The NIST and CAF frameworks are US/UK government frameworks, and thus more likel
 ### Black Box, White Box, and Grey Box Penetration Testing
 
 Grey boxing is the most common form of penetration testing. White boxing is generally reserved for software QA.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 23, 2022

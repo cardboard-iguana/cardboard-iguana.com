@@ -1,5 +1,8 @@
 # Enumerate NFS Shares
 
+author:: Nathan Acks  
+date:: 2021-11-05
+
 ## NMAP
 
 NFS shares can be enumerated by nmap during scanning:
@@ -15,8 +18,3 @@ Normally `$PORT` is 111.
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Using “nmap”](nmap.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 5, 2021

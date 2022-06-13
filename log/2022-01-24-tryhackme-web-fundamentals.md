@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals
 
+author:: Nathan Acks  
+date:: 2022-01-24
+
 ## SSRF
 
 ### What is SSRF?
@@ -70,8 +73,3 @@ done
 ```
 
 * [Using OWASP ZAP](../notes/owasp-zap.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 24, 2022

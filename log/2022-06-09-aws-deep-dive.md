@@ -1,5 +1,8 @@
 # AWS Deep Dive
 
+author:: Nathan Acks  
+date:: 2022-06-09
+
 ## AWS Essentials
 
 Today I’ll be finishing up the “AWS Essentials” YouTube playlist put together by the Linux Academy.
@@ -22,7 +25,7 @@ Data stored as a snapshot is *a lot* less expensive than the same data stored on
 
 REFERENCES:
 
-* [AWS Essentials: Elastic Block Store (EBS) (YouTube)](//youtu.be/S0gzrxsVQHo)
+* [AWS Essentials: Elastic Block Store (EBS) (YouTube)](https://youtu.be/S0gzrxsVQHo)
 
 ### Security Groups
 
@@ -34,7 +37,7 @@ There are no DENY rules for security groups, only ALLOW rules. Any traffic not m
 
 REFERENCES:
 
-* [AWS Essentials: Security Groups (YouTube)](//youtu.be/-9j7BvAyb2w)
+* [AWS Essentials: Security Groups (YouTube)](https://youtu.be/-9j7BvAyb2w)
 
 ### IP Addressing
 
@@ -44,7 +47,7 @@ EC2 instances in the default VPC will launch with public IP addresses out-of-the
 
 REFERENCES:
 
-* [AWS Essentials: IP Addressing (YouTube)](//youtu.be/U32bPhQyQ6I)
+* [AWS Essentials: IP Addressing (YouTube)](https://youtu.be/U32bPhQyQ6I)
 
 ### Launching and Using an EC2 Instance
 
@@ -52,7 +55,7 @@ When setting up an EC2 instance, you have the ability to specify a script that w
 
 REFERENCES:
 
-* [AWS Essentials: Launching and Using an EC2 Instance (YouTube)](//youtu.be/BCM9aaaWvR0)
+* [AWS Essentials: Launching and Using an EC2 Instance (YouTube)](https://youtu.be/BCM9aaaWvR0)
 
 ### RDS and DynamoDB Basics
 
@@ -64,7 +67,7 @@ Pricing for RDS parallels that for EC2 (which makes sense), while DynamoDB prici
 
 REFERENCES:
 
-* [AWS Essentials: RDS and DynamoDB Basics (YouTube)](//youtu.be/KcJ8-I7kD_w)
+* [AWS Essentials: RDS and DynamoDB Basics (YouTube)](https://youtu.be/KcJ8-I7kD_w)
 
 ### Provisioning and RDS MySQL Database
 
@@ -74,7 +77,7 @@ RDS instances aren’t provisioned directly into subnets like EC2 instances. Ins
 
 REFERENCES:
 
-* [AWS Essentials: Provisioning and RDS MySQL Database (YouTube)](//youtu.be/OE25Sni15vo)
+* [AWS Essentials: Provisioning and RDS MySQL Database (YouTube)](https://youtu.be/OE25Sni15vo)
 
 ### SNS Basics
 
@@ -86,7 +89,7 @@ SNS and CloudWatch are often used together as a server event/alarm notification 
 
 REFERENCES:
 
-* [AWS Essentials: SNS Basics (YouTube)](//youtu.be/M4gQ8MLlgiY)
+* [AWS Essentials: SNS Basics (YouTube)](https://youtu.be/M4gQ8MLlgiY)
 
 <!--
 
@@ -363,8 +366,3 @@ REFERENCES:
 <!-- Finish up the TryHackMe: Jr. Penetration Tester “Supplements” -->
 
 <!-- Resume my normally planned learning path. -->
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> June 9, 2022

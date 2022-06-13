@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-15
+
 ## Introduction to Windows
 
 ### Users and Groups Management
@@ -21,8 +24,3 @@ To set GPO policies, right-click on the GPO and select “Edit” (it doesn’t 
 Once created, GPOs must be linked to a domain or OU (or site) to apply. Linked GPOs will be listed underneath whatever they’re linked to.
 
 To force a linked GPO to be applied now, use `gpoupdate /force` on the command line.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 15, 2021

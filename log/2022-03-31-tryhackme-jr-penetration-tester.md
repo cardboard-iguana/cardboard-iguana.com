@@ -1,5 +1,8 @@
 # TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-03-31
+
 ## Nmap Live Host Discovery
 
 ### Subnetworks
@@ -54,8 +57,3 @@ The `masscan` utility is basically a *very* aggressive TCP/UDP scanner. Probably
 
 * `-R` —- Perform reverse DNS resolution even for offline hosts.
 * `--dns-servers` — Specify DNS server(s) to use for hostname resolution and reverse lookups.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 31, 2022

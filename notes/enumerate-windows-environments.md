@@ -1,5 +1,8 @@
 # Enumerate Windows Environments
 
+author:: Nathan Acks  
+date:: 2022-04-22
+
 * `cmdkey /list` — show saved credentials
 * `driverquery` — list installed drivers
 * `hostname` — return system hostname
@@ -54,8 +57,3 @@ Notes:
 
 * [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
 * [Using “netstat”](netstat.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 22, 2022

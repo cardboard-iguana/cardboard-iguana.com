@@ -1,5 +1,8 @@
 # Symbolic Permissions
 
+author:: Nathan Acks  
+date:: 2021-09-19
+
 Numeric permissions are sometimes called *absolute* permissions, because they exactly specify an object’s permissions. Symbolic permissions are a bit more flexible.
 
 Like absolute permissions, symbolic permissions are divided into user (u), group (g), and others (o). *Unlike* absolute permissions, not all of these permission sets need to be specified. Sets are separated by commas, and identical sets can be combined (e.g., ug).
@@ -41,8 +44,3 @@ If a user has *write* access to a directory, then they can write to any file the
 * [Linux permissions: SUID, SGID, and sticky bit](https://www.redhat.com/sysadmin/suid-sgid-sticky-bit)
 * [How to Use “find” With File Metadata](how-to-use-find-with-file-metadata.md)
 * [ITPro.TV CompTIA Security+](itprotv-comptia-security-plus.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 19, 2021

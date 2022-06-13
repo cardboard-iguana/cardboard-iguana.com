@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-05-04
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be reading chapter 34 from the Security+ Exam Cram, “Risk Management”.
@@ -208,8 +211,3 @@ Acronyms:
 Basically, the RPO determines our *maximum* backup interval.
 
 RTO is concerned *only* with infrastructure recovery, while WRT is the length of time that it takes to restore *working* infrastructure to full operational capacity. This MAD = RTO + WRT.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> May 4, 2022

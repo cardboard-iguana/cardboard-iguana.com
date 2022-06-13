@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-11-07
+
 ## Steel Mountain
 
 ### Introduction
@@ -249,8 +252,3 @@ Start-Service -Name AdvancedSystemCareService9
 
 * [PowerUp.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1)
 * [Using “netcat”](../notes/netcat.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 7, 2021

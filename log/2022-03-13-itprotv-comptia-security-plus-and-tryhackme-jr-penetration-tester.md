@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-03-13
+
 Now that I’ve made it through the next three chapters of the Security+ Exam Cram (that correspond to the ITPro.TV course), I’m ready to do some lectures. And some more rooms on TryHackMe, because I’ve been missing it.
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
@@ -190,7 +193,7 @@ Windows systems are also vulnerable to LFI attacks via PHP. In fact, `file_get_c
 
 Common files to check:
 
-* /boot.ini (a.k.a., `C:\boot.ini` — boot options on Windows systems)
+* /boot.ini (a.k.a., `C:oot.ini` — boot options on Windows systems)
 * /etc/issue
 * /etc/passwd
 * /etc/profile
@@ -249,8 +252,3 @@ Remote file inclusion only works when PHP’s `allow_url_fopen` option to be tur
 Remember that form requests sent via POST need to have `Content-Type: application/x-www-form-urlencoded`!
 
 Also, remember to add in an appropriate `Content-Length`.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 13, 2022

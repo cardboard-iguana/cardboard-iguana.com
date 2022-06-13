@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-09-21
+
 ## Regular Expressions
 
 ### Metacharacters and Repetitions
@@ -14,8 +17,3 @@
 |     `\S`      | Non-whitespace characters                     |
 
 NOTE: Be aware that `\w` *includes* `_` (but not `-`)!
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 21, 2021

@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-16
+
 ## Active Directory Basics
 
 ### Introduction
@@ -141,8 +144,3 @@ Get-NetGroup
 [There’s also a PowerView tips & tricks cheat sheet.](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
 
 * [PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 16, 2021

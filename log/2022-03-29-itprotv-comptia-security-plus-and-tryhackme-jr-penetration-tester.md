@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-03-29
+
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
 ### Network Security — Segmentation
@@ -149,8 +152,3 @@ dig          google.com    MX
 DNSdumpster is basically a search engine for domain data — type in a root domain, and get back (many of) its subdomains and other information. (In my testing DNSdumpster doesn’t always enumerate *every* subdomain, though it certainly does a better job than guessing.)
 
 * [DNSdumpster](https://dnsdumpster.com/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 29, 2022

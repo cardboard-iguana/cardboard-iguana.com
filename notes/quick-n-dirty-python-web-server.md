@@ -1,5 +1,8 @@
 # Quick-n-Dirty Python Web Server
 
+author:: Nathan Acks  
+date:: 2021-09-16
+
 Serve files out of the current directory over HTTP using Python 3:
 
 ```bash
@@ -19,8 +22,3 @@ Some useful python3 http.server flags:
 ## References
 
 * [How to make a simple HTTP server using python?](https://spoofing.medium.com/how-to-make-a-simple-http-server-using-python-ea35f0b741a4)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 16, 2021

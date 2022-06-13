@@ -1,5 +1,8 @@
 # Look Up Unicode and Emoji Symbols
 
+author:: Nathan Acks  
+date:: 2021-10-02
+
 * [Emojipedia](https://emojipedia.org)
 * [Unicode Character Table](https://unicode-table.com)
 
@@ -7,8 +10,3 @@
 
 * [Unicode Arrows](https://unicode-table.com/sets/arrow-symbols/)
 * [Unicode Superscripts and Subscripts](https://unicode-table.com/sets/superscript-and-subscript-numbers/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 2, 2021

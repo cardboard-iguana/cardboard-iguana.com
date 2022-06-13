@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-04-04
+
 ## Virtualization
 
 Type I hypervisors (bare metal) are most common in business applications. And Qubes. Cloud systems are obviously all based around Type I hypervisors.
@@ -89,8 +92,3 @@ Networking controls:
 Other:
 
 * Security Groups: Virtual firewalls, but only of the stateful sort. Sometimes protocol/application aware. Note that most next-gen firewall capabilities (IDS/IDP, etc.) really live within “secure web gateways” and “VPC endpoints”.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 4, 2022

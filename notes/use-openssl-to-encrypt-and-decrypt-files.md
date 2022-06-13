@@ -1,5 +1,7 @@
 # Use OpenSSL to Encrypt and Decrypt Files
 
+author:: Nathan Acks
+
 To encrypt a file:
 
 ```bash
@@ -11,7 +13,3 @@ To decrypt a file:
 ```bash
 openssl rsa -in $CRYPTOFILE -out $FILE
 ```
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

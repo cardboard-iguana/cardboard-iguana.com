@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security
 
+author:: Nathan Acks  
+date:: 2021-09-17
+
 ## The File System
 
 NTFS stands for the “New Technology File System”. *Very* old versions of Windows NT (*before* FAT32) used HPFS (the “High Performance File System”).
@@ -38,8 +41,3 @@ a.k.a ”UAC”
 ## Task Manager
 
 Task Manager shortcut: Ctrl+Shift+Esc
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 17, 2021

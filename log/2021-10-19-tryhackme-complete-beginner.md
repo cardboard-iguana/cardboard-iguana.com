@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-19
+
 ## Metasploit
 
 ### Rock ‘em To the Core
@@ -20,8 +23,3 @@ Core Metasploit modules:
 Note that Metasploit 6 apparently calls these “framework plugins” now.
 
 * [Return-orientated programming (Wikipedia)](https://en.wikipedia.org/wiki/Return-oriented_programming)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 19, 2021

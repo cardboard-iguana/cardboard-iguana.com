@@ -1,5 +1,8 @@
 # TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-03-19
+
 As part of a job interview, I’ve been asked to run through an online CTF — the CMD+CTRL Cyber Range “LetSee Marketplace”. After reviewing the available information, I’m pretty sure I’m outclassed by this at my current skill level, but I plan to give it a shot anyway. It should be good learning/practice experience, and the worst that can happen is that I don’t get a second interview.
 
 To get my head back into the web hacking space (I’ve been focused more on studying for the Security+ certification recently, as I want to have that in the bag sometime around the end of April / beginning of May), I’m going to spend the day working on TryHackMe (specifically rooms focusing on website penetration testing).
@@ -146,7 +149,7 @@ You can also use the `onload` attribute to pull in JavaScript, though note that 
 There’s also “polygot” strings which work in a variety of contexts. These have some pretty wild escaping going on; for example, the following (lightly modified from TryHackMe’s example) produces an “XSS” alert:
 
 ```html
-jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */onerror=alert('XSS') )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert('XSS')//>\x3e
+jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */onerror=alert('XSS') )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!><sVg/<sVg/oNloAd=alert('XSS')//>>
 ```
 
 How one comes up with one of these is a bit beyond me.
@@ -184,7 +187,7 @@ The Windows equivalent of `sleep` is `timeout`.
 
 PHP functions susceptible to command injection (again!): `exec()`, `passthru()`, `system()`.
 
-Note that PHP accepts hexadecimal characters codes in strings (`\x2f` is `/`, for example).
+Note that PHP accepts hexadecimal characters codes in strings (`/` is `/`, for example).
 
 ## In-Band SQLi
 
@@ -227,8 +230,3 @@ DNS is a popular data channel for out-of-band SQLi attacks.
 * Use prepared statements.
 * Use input validation.
 * Escape strings before passing them along to SQL statements.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 19, 2022

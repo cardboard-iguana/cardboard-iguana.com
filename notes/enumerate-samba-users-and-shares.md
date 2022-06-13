@@ -1,5 +1,8 @@
 # Enumerate Samba Users and Shares
 
+author:: Nathan Acks  
+date:: 2022-04-25
+
 ## NMAP
 
 CIFS users and shares can be enumerated by nmap during scanning:
@@ -59,8 +62,3 @@ smbmap -H $IP_ADDRESS -v
 * [Use of uninitialized value $user, what does this mean?](https://github.com/CiscoCXSecurity/enum4linux/issues/4)
 * [Working With Samba](working-with-samba.md)
 * [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 25, 2022

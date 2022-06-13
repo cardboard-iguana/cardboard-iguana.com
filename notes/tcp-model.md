@@ -1,5 +1,8 @@
 # TCP Model
 
+author:: Nathan Acks  
+date:: 2021-09-14
+
 * Layer 4: Application (highest)
 * Layer 3: Transport
 * Layer 2: Internet
@@ -31,8 +34,3 @@
 
 * [TryHackMe: Pre Security](tryhackme-pre-security.md)
 * [OSI Model](osi-model.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 14, 2021

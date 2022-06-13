@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals (Supplements)
 
+author:: Nathan Acks  
+date:: 2022-01-31
+
 ## hackernote
 
 ### Reconnaissance
@@ -242,8 +245,3 @@ hydra -vV -f -l james -P passwords.txt \
 [Details about the sudo "pwfeedback" bug (CVE-2019-18634).](https://www.sudo.ws/security/advisories/pwfeedback/)
 
 [Exploit code for CVE-2019-18634.](https://github.com/saleemrashid/sudo-cve-2019-18634)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 31, 2022

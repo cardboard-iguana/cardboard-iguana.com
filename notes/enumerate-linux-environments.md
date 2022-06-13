@@ -1,5 +1,8 @@
 # Enumerate Linux Environments
 
+author:: Nathan Acks  
+date:: 2022-04-22
+
 * `cat /etc/issue`
 * `cat /etc/passwd`
 * `cat /proc/version`
@@ -38,8 +41,3 @@
 * [Using “netstat”](netstat.md)
 * [Using “ps”](ps.md)
 * [Enumerate “sudo” Access](enumerate-sudo-access.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 22, 2022

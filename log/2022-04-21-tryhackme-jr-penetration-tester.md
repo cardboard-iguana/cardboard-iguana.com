@@ -1,5 +1,8 @@
 # TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-04-21
+
 ## Windows PrivEsc
 
 ### Introduction
@@ -94,7 +97,7 @@ A skeleton DLL:
 BOOL WINAPI DllMain
 (HANDLE hDll, DWORD dwReason, LPVOID lpReserved) {
 	if (dwReason == DLL_PROCESS_ATTACH) {
-		system("cmd.exe /C whoami > C:\\Temp\\dll.txt");
+		system("cmd.exe /C whoami > C:\Temp\dll.txt");
 		ExitProcess(0);
 	}
 	return TRUE;
@@ -190,8 +193,3 @@ msiexec /quiet /qn /i $INSTALLER.msi
 (4) Sometimes registry keys contain passwords! Apparently, you can query/search across registry keys using `reg query …`.
 
 (5) Windows uses a file called `unattend.xml` to store setup auto-configuration information. Check if these have been left lying around.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 21, 2022

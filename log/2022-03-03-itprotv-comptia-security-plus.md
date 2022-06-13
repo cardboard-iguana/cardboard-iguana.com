@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-03
+
 ## CompTIA Security+ Exam Cram
 
 ### Cryptosystems
@@ -151,8 +154,3 @@ Two applications/machines that try to communicate cryptographically need to firs
 | TLS                 | _ | DHE          | _ | RSA               | \_WITH\_ | AES_256          | _ | GCM                   | _ | SHA384 |
 |:------------------- |:- |:------------ |:- |:----------------- |:-------- |:---------------- |:- |:--------------------- |:- |:------ |
 | Standard identifier |   | Key exchange |   | Asymmetric cipher |          | Symmetric cipher |   | Symmetric cipher mode |   | HMAC   |
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 3, 2022

@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals
 
+author:: Nathan Acks  
+date:: 2022-01-10
+
 ## Burp Suite: Other Modules
 
 ### Hashing
@@ -33,8 +36,3 @@ The Extender tab allows Burp Suite modules to be loaded from from disk. Requests
 Modules provided by the Burp Suite App Store can be accessed and installed through the "BApp Store" tab. Extensions installed through this route can actually modify parts of the Burp Suite interface (adding new tabs, etc.).
 
 * [Using Burp Suite](../notes/burp-suite.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 10, 2022

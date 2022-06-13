@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security
 
+author:: Nathan Acks  
+date:: 2021-09-18
+
 ## System Configuration
 
 The Tools tab of msconfig.exe can be quite useful, as it provides full pats to various Windows system utilities (in the “Selected command” line).
@@ -77,8 +80,3 @@ The `net` command is a Windows-specific command line tool that is a kind of Swis
 ## Registry Editor
 
 Apparently the Registry Editor goes by regedt32.exe in addition to the more familiar regedit.exe.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 18, 2021

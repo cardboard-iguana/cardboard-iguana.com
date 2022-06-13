@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-11
+
 ## Hashing
 
 ### What is a Hash Function?
@@ -56,8 +59,3 @@ Some values of -m:
 Passwords are output as HASH:PLAINTEXT tuples.
 
 A “token length exception” means that the provided hash format is of the wrong length (probably because an additional character got accidentally added).
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 11, 2021

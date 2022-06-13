@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-09-23
+
 ## Core Windows Processes
 
 ### Task Manager
@@ -33,8 +36,3 @@ The session manager is *always* a child process of System. Forks of smss.exe tha
 ### csrss.exe
 
 This is the “Client Server Runtime Process”. It manages the user-mode side of the Win32 subsystem, brokering API calls, mapping drives, and handling the session shutdown process. It is *only* ever a child of smss.exe.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 23, 2021

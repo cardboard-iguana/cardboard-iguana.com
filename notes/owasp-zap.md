@@ -1,5 +1,8 @@
 # Using OWASP ZAP
 
+author:: Nathan Acks  
+date:: 2022-01-12
+
 ZAP (the "Zed Attack Proxy") is basically an open-source version of Burp Suite.
 
 | Burp Suite                      | ZAP                |
@@ -37,8 +40,3 @@ ZAP has gobuster-like functionality called "Forced Browse". The wordlist can be 
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [Using Burp Suite](burp-suite.md)
 * [Using “gobuster”](gobuster.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 12, 2022

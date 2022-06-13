@@ -1,5 +1,8 @@
 # SQL Injection
 
+author:: Nathan Acks  
+date:: 2022-04-06
+
 * SQL injection is *most* common in PHP-based apps (though other languages are also vulnerable).
 * The canonical SQL injection "test" is to input a single quote and see if that generates an error. Remember, though, that there are *three* different kinds of quotes you may need to test!
 * When injecting code, you'll *often* want to end with a trailing "` -- `" (space-dash-dash-space) in order to *comment out* the remainder or the line you're injecting into. Generally "` --+`", "` --%20`", or "` -- -`" will be needed in practice to prevent the trailing space from being eaten. (Sometimes you don't even need the trailing comment, if the value you're injecting into is at the end of a statement...)
@@ -80,8 +83,3 @@ There are two main strategies for defending against SQLi:
 * [Jurassic Park](tryhackme-jurassic-park.md)
 * [Using Burp Suite](burp-suite.md)
 * [TryHackMe: Jr. Penetration Tester](tryhackme-jr-penetration-tester.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 6, 2022

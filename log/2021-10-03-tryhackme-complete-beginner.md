@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-03
+
 ## Network Services
 
 ### Understanding NFS
@@ -145,8 +148,3 @@ Useful cURL flags:
 * `-v` — show full transaction, including headers (not just response bodies).
 * `--data "$DATA"` — send $DATA as the request body.
 * `--cookie "${COOKIE_NAME}=${COOKIE_VALUE}"` — send a cookie.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 3, 2021

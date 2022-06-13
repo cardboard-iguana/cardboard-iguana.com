@@ -250,8 +250,3 @@
 * [TryHackMe: Windows Event Logs](notes/tryhackme-windows-event-logs.md)
 * [TryHackMe: Wireshark 101](notes/tryhackme-wireshark-101.md)
 * [TryHackMe: XXE](notes/tryhackme-xxe.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">🏷️</span> #MOC

@@ -1,5 +1,8 @@
 # MITRE ATT&CK Emulation Plans
 
+author:: Nathan Acks  
+date:: 2021-09-26
+
 These are a little hard to find.
 
 * [APT3](https://attack.mitre.org/resources/adversary-emulation-plans/)
@@ -12,8 +15,3 @@ These are a little hard to find.
 ## Resources
 
 * [TryHackMe: MITRE](tryhackme-mitre.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 26, 2021

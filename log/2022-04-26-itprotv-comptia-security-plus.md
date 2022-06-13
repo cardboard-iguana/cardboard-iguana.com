@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-04-26
+
 ## Security Controls
 
 “Countermeasures” are another commonly used term for “controls”.
@@ -116,8 +119,3 @@ The fines for breaches and other security violations under the GDPR are the *gre
 The GDPR data protection officer may be an individual in either the data controller, the data processor, or a third-party.
 
 The data controller must notify the applicable governmental regulatory body within 72 hours of becoming aware of a breach. However, extensions can be requested.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 26, 2022

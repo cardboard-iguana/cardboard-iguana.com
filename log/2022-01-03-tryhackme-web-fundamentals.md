@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals
 
+author:: Nathan Acks  
+date:: 2022-01-03
+
 ## Introduction to Django
 
 ### Introduction
@@ -43,8 +46,3 @@ Running `sudo -l` reveals that the `django-admin` user has full superuser access
 
 * The second flag is in `/home/StrangerFox/user.txt`.
 * The third flag is embedded as an HTML comment near the bottom of `~/meddagebox/messagebox/home.html`.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 3, 2022

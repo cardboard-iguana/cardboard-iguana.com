@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-28
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be reading chapter 19 of the Security+ Exam Cram, “Secure Network Design”.
@@ -195,8 +198,3 @@ Types of NAC:
 Host-based agents can be run-once affairs, in which case they are called “dissolvable” or “portal-based” agents.
 
 “Agentless” solutions actually still use an “agent” of sorts, just one that’s built into the host operating system or web browser. IPS solutions can be *truly* agentless, but obviously then have little visibility into the host’s true state.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 28, 2022

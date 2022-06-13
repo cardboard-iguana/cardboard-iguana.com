@@ -1,5 +1,8 @@
 # Using Hydra
 
+author:: Nathan Acks  
+date:: 2022-04-03
+
 Hydra can actually brute-force remote services, though I have some skepticism about how useful this is in practice.
 
 ```bash
@@ -41,8 +44,3 @@ The `$TEMPLATE` is basically the JSON request body with the special placeholders
 * [Bruteforce - Using Hydra with JSON](https://security.stackexchange.com/questions/203501/bruteforce-using-hydra-with-json)
 * [TryHackMe: hackernote](tryhackme-hackernote.md)
 * [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 3, 2022

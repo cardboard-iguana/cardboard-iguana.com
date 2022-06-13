@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-11-30
+
 ## CC: Pen Testing
 
 ### Metasploit Modules
@@ -50,8 +53,3 @@ References:
 
 * `--forms` — parse target URL for forms, and use these
 * `--dbs` — enumerate DBs
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 30, 2021

@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-11-17
+
 ## MAL: Malware Introductory
 
 ### What Is the Purpose of Malware Analysis?
@@ -50,8 +53,3 @@ It seems like Windows executables have a magic number of `4D 5A`.
 Microsoft Sysinternals has a `strings` command. Neat!
 
 * [Sysinternals](https://docs.microsoft.com/en-us/sysinternals/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 17, 2021

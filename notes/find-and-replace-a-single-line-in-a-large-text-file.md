@@ -1,5 +1,7 @@
 # Find and Replace a Single Line in a Large Text File
 
+author:: Nathan Acks
+
 To display a single line from a large text file:
 
 ```bash
@@ -26,7 +28,3 @@ It may be advisable to use single quote here, rather than double quotes + variab
 
 * [Getting one line in a huge file with bash](http://stackoverflow.com/a/2796347)
 * [How to replace an entire line in a text file by line number](http://stackoverflow.com/a/11145362)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

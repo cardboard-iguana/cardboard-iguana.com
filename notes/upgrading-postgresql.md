@@ -1,5 +1,8 @@
 # Upgrading PostgreSQL
 
+author:: Nathan Acks  
+date:: 2021-11-25
+
 ```bash
 sudo -u postgres pg_dropcluster --stop $NEW_VER main
 sudo -u postgres pg_upgradecluster $OLD_VER main
@@ -11,8 +14,3 @@ Where `$OLD_VER` and `$NEW_VER` are the old and new major version numbers (e.g.,
 ## References
 
 * [How to upgrade PostgreSQL from 13 to 14](https://www.netvizura.com/blog/how-to-upgrade-postgresql-from-13-to-14)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 25, 2021

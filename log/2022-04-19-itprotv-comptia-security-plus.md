@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-04-19
+
 ## CompTIA Security+ Exam Cram
 
 Today’s reading is Chapters 27 and 29, “Incident Response” and “Incident Mitigation”, from the Security+ Exam Cram.
@@ -193,8 +196,3 @@ Things a SOAR system can automate:
 * Update/revoke certificates
 * Changing network configurations based upon detected anomalies or ingested IOCs
 * Implementing more aggressive DLP policies, such as host isolation
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 19, 2022

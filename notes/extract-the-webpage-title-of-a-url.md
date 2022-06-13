@@ -1,5 +1,7 @@
 # Extract the Webpage Title of a URL
 
+author:: Nathan Acks
+
 ```bash
 python3 -c "import bs4, requests; print(bs4.BeautifulSoup(requests.get('$URL').text).title.text)"
 ```
@@ -13,7 +15,3 @@ NOTE: This won’t work on webpages for sites like Twitter that set the `<title/
 * [How do I get a websites title using command line?](https://unix.stackexchange.com/a/563920)
 * [Python Requests and Unicode](https://stackoverflow.com/a/12843406)
 * [Requests Developer Interface: class requests.Response](https://docs.python-requests.org/en/latest/api/#requests.Response)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-02-27
+
 ## CompTIA Security+ Exam Cram
 
 ### Introduction to Application Attacks
@@ -328,8 +331,3 @@ The most common attack against RFID is cloning. Typically used to gain access to
 One NFC attack that wasn’t mentioned in the Exam Cram (which seemed to treat NFC attacks as mostly theoretical) is a *relay* attack, in which the victim is tricked into starting an NFC transaction with a malicious device that then relays that transaction to a second device which *then* interacts with a second target. For example, kicking off a payment transaction between the target device and a terminal in another location. (That said, as far as I’m aware this is *still* all pretty theoretical, and this attack would seem to require some degree of target interaction given the NFC approval flow on most smartphones…)
 
 ITPro.TV defines “bluejacking” as the interception of bluetooth communications, and “bluesnarfing” as the insertion of additional commands in an existing bluetooth communication stream. This is a significantly different take than the Exam Cram.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 27, 2022

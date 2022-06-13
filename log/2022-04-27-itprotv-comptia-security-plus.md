@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-04-27
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be reading Chapter 33 of the Security+ Exam Cram, “Organizational Security Policies”.
@@ -156,8 +159,3 @@ PPRR risk management model for third-party & supply chain risk:
 * Preparedness
 * Response
 * Recovery
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 27, 2022

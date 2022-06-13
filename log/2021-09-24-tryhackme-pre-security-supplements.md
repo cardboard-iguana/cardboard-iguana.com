@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-09-24
+
 ## Core Windows Processes
 
 ### wininit.exe
@@ -61,8 +64,3 @@ Loading the user profile on logon is handled by pushing the contents of NTUSER.D
 The user’s shell is typically the Windows Explorer, which renders the desktop and task bar as well as providing the actual file explorer.
 
 The user shell is defined in HKLM/Software/Microsoft/Windows NT/CurrentVersion/Winlogon/Shell.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 24, 2021

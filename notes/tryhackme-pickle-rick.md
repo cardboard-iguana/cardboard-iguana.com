@@ -1,5 +1,8 @@
 # Pickle Rick
 
+author:: Nathan Acks  
+date:: 2021-10-10
+
 * [TryHackMe: Pickle Rick](https://tryhackme.com/room/picklerick)
 
 ## Background
@@ -249,8 +252,3 @@ ELAPSED TIME: 3 h 11 min
 
 * [Rick and Morty (Wikipedia)](https://en.wikipedia.org/wiki/Rick_and_Morty)
 * [TryHackMe Pickle Rick CTF Walkthrough](https://razrexe.medium.com/tryhackme-pickle-rick-ctf-walkthrough-9ed36eff17fe)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 10, 2021

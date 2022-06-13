@@ -1,5 +1,8 @@
 # OSI Model
 
+author:: Nathan Acks  
+date:: 2021-09-14
+
 * Layer 7: Application (highest)
 * Layer 6: Presentation
 * Layer 5: Session
@@ -11,8 +14,3 @@
 ## References
 
 * [TryHackMe: Pre Security](tryhackme-pre-security.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 14, 2021

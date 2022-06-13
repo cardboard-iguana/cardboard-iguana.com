@@ -1,5 +1,8 @@
 # File Transfer Protocol (FTP)
 
+author:: Nathan Acks  
+date:: 2022-04-03
+
 ## Commands
 
 | Command | Meaning                                                      |
@@ -37,8 +40,3 @@ FTPS (FTP over SSL) uses port 990 by default. Mostly supplanted by SFTP.
 * [How to list FTP directories using telnet?](https://stackoverflow.com/questions/50324402/how-to-list-ftp-directories-using-telnet#comment126707507_50324402)
 * [FTP Commands: QUIT, USER, ABOR, ACCT, SYST, XDEL](https://www.serv-u.com/resource/tutorial/quit-user-abor-acct-syst-xdel-ftp-command)
 * [FTP Commands: APPE, MLSD, MLST, LIST, RETR, STOR, STOU](https://www.serv-u.com/resource/tutorial/appe-stor-stou-retr-list-mlsd-mlst-ftp-command)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 3, 2022

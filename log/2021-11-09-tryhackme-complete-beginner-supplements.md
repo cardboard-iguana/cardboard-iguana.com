@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-11-09
+
 ## Splunk
 
 ### Can You Dig It?
@@ -52,8 +55,3 @@ Possibly useful sites for getting OSINT domain information:
 * https://threatminer.org
 * https://hybrid-analysis.com
 * https://virustotal.com
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 9, 2021

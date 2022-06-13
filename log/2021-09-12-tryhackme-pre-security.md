@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security
 
+author:: Nathan Acks  
+date:: 2021-09-12
+
 ## What is Networking?
 
 ### Identifying Devices on a Network
@@ -20,8 +23,3 @@ MAC (“Media Access Control”) are unique 48-bit identifying numbers burned in
 ICMP stands for “Internet Control Message Protocol”.
 
 Ping works by sending an ICMP echo packet to a target and then listening for the corresponding echo reply. The time it takes for ping to receive the echo reply from the target after generating the initial echo is what the `ping` command displays.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 12, 2021

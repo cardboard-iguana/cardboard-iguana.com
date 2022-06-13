@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-07
+
 Because the next block of units on ITPro.TV cover three chapters in the Exam Cram (at least as best I can map them without having first read the chapters), I’m going to try something a bit different: For the next three days I’m only going to be doing the readings, and then I’ll set Exam Cram aside to work on the lectures.
 
 I’m going to continue to title these posts after ITPro.TV though, since I’m thinking of the Exam Cram as just an adjunct to that.
@@ -125,8 +128,3 @@ Certificate-based authentication is two-factor so long as the private key is pro
 802.1X uses device-level certificate-based authentication for its highest security level.
 
 The NIST PIV (personal identity verification) card and the DOD CAC (common access card) are both smart cards that contain cryptographically signed information about the user (including biometrics and current access rights), as well as a digital certificate used for computer/network identification. Both of these cards are PIN-protected.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 7, 2022

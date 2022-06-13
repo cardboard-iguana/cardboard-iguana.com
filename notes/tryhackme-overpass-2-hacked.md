@@ -1,5 +1,8 @@
 # Overpass 2: Hacked
 
+author:: Nathan Acks  
+date:: 2021-12-14
+
 * [TryHackMe: Overpass 2: Hacked](https://tryhackme.com/room/overpass2hacked)
 
 The flags are structured to basically walk us through this room.
@@ -129,8 +132,3 @@ ELAPSED TIME: 1 h 43 min
 * [Exploiting Bash](exploiting-bash.md)
 * [Exploiting ViM](exploiting-vim.md)
 * [GTFOBins](https://gtfobins.github.io/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> December 14, 2021

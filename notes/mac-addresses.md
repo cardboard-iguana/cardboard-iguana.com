@@ -1,5 +1,8 @@
 # MAC Addresses
 
+author:: Nathan Acks  
+date:: 2021-09-14
+
 MAC (“Media Access Control”) are unique 48-bit identifying numbers burned into network cards. They are typically represented as six octets each composed of two hexadecimal numbers (0 - f). The first three octets designate the network interface vendor while the last three constitute device serial number. On most operating systems octets are separated using colons, but Windows uses dashes instead.
 
 |         | MAC Address       | Vendor ID | NIC ID   |
@@ -12,8 +15,3 @@ Some network cards and operating systems allow MAC addresses to be overridden (f
 ## References
 
 * [TryHackMe: Pre Security](tryhackme-pre-security.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 14, 2021

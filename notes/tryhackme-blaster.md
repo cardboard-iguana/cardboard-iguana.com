@@ -1,5 +1,8 @@
 # Blaster
 
+author:: Nathan Acks  
+date:: 2021-12-06
+
 * [TryHackMe: Blaster](https://tryhackme.com/room/blaster)
 
 ## Mission Start!
@@ -168,8 +171,3 @@ ELAPSED TIME: 2 h 15 min
 * [CVE-2019-1388: Windows Privilege Escalation Through UAC](https://www.youtube.com/watch?v=3BQKpPNlTSo)
 * [Using Metasploit](metasploit.md)
 * [Using PowerShell](powershell.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> December 6, 2021

@@ -1,5 +1,8 @@
 # Debugging Bash Scripts
 
+author:: Nathan Acks  
+date:: 2021-09-20
+
 Using the -x flag will force bash to output each line of the shell script you’re running before that line is executed. This can be useful for debugging.
 
 ```bash
@@ -35,8 +38,3 @@ Frequently `set -x` is used at the start of a script without a closing `set +x`,
 ## References
 
 * [TryHackMe: Bash Scripting](tryhackme-bash-scripting.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 20, 2021

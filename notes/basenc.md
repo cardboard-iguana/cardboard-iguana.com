@@ -1,5 +1,8 @@
 # Using “basenc”
 
+author:: Nathan Acks  
+date:: 2022-03-02
+
 ```bash
 # Encode $STRING to base64.
 #
@@ -23,8 +26,3 @@ The advantage of `basenc` over `base64` is that `basenc` supports URL-safe base6
 ## References
 
 * [TryHackMe: Jr. Penetration Tester](tryhackme-jr-penetration-tester.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 2, 2022

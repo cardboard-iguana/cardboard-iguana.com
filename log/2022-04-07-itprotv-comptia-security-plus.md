@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-04-07
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be reading Chapter 13 of the Security+ Exam Cram, “Cybersecurity Resilience”.
@@ -65,8 +68,3 @@ Note that all all RAID systems — even RAID 0 — write information sequentiall
 * Hot (everything is ready to go, just on standby)
 * Warm (key systems are ready to go, but some reconfiguration required)
 * Cold (equipment *might* exist, but no configuration/readiness)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 7, 2022

@@ -1,5 +1,8 @@
 # Using Metasploit
 
+author:: Nathan Acks  
+date:: 2022-04-22
+
 ## Console (“msfconsole”)
 
 Basic Metasploit flow:
@@ -302,8 +305,3 @@ Use the `exploit/multi/handler` module in Metasploit to catch the shells produce
 * [2022-04-18 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Using Mimikatz](mimikatz.md)
 * [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 22, 2022

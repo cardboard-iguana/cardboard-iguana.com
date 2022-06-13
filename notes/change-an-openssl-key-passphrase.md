@@ -1,5 +1,7 @@
 # Change an OpenSSL Key Passphrase
 
+author:: Nathan Acks
+
 To change a passphrase:
 
 ```bash
@@ -17,7 +19,3 @@ To check that a passphrase is correct:
 ```bash
 openssl rsa -check -in $NEW_KEY
 ```
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

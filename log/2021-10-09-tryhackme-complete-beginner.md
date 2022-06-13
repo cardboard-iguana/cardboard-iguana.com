@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-09
+
 ## Upload Vulnerabilities
 
 ### Bypassing Client-Side Filtering
@@ -106,8 +109,3 @@ The admin page indicates that it loads modules, so this is how we're going to ge
 * [Express](http://expressjs.com/)
 * [Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 * [TryHackMe: File Upload Vulnerabilities — Hints](https://muirlandoracle.co.uk/2020/06/30/file-upload-vulnerabilities-hints/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 9, 2021

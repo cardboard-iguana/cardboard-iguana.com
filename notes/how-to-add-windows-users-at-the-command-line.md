@@ -1,5 +1,8 @@
 # How to Add Windows Users (at the Command Line)
 
+author:: Nathan Acks  
+date:: 2021-10-29
+
 ```powershell
 net user $USERNAME $PASSWORD /add
 net localgroup administrators $USERNAME /add
@@ -12,8 +15,3 @@ It’s worth noting that users added via `net user` seem to bypass Windows’ pa
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 29, 2021

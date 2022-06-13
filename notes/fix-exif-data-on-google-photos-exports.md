@@ -1,5 +1,8 @@
 # Fix EXIF Data on Google Photos Exports
 
+author:: Nathan Acks  
+date:: 2021-11-15
+
 Google Photos doesn't save date/time changes, descriptions, or GPS data set in-app to the photos' EXIF data. Instead, when using Google Takeout this information is exported as JSON sidecar files (apparently Google had to bikeshed something rather than just using XMP).
 
 Fortunately, ExifTool can merge the data from these files back into the exported photographs:
@@ -30,8 +33,3 @@ Note that this will fail for any photos with a timestamp before 1970; for these 
 * [Google Takeout](https://takeout.google.com/settings/takeout)
 * [Extensible Metadata Platform (Wikipedia)](https://en.wikipedia.org/wiki/Extensible_Metadata_Platform)
 * [ExifTool](https://exiftool.org/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 15, 2021

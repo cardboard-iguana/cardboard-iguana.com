@@ -1,5 +1,8 @@
 # Shell Escapes
 
+author:: Nathan Acks  
+date:: 2021-10-31
+
 Many common UNIX applications allow you to escape to a shell. This is particularly useful if they can be run with NOPASSWD via sudo.
 
 * `awk` — `awk 'BEGIN {system("/bin/sh")}'`
@@ -19,8 +22,3 @@ Many common UNIX applications allow you to escape to a shell. This is particular
 * [GTFOBins](https://gtfobins.github.io)
 * [Enumerate “sudo” Access](enumerate-sudo-access.md)
 * [Set a Shell in ViM](set-a-shell-in-vim.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 31, 2021

@@ -1,5 +1,8 @@
 # Cardboard Iguana Security is Live!
 
+author:: Nathan Acks  
+date:: 2022-02-20
+
 Up until now there actually hasn’t *been* a Cardboard Iguana Security website. All of those posts before this one? Just me, writing to myself.
 
 All that changes today though, because Cardboard Iguana Security is (finally) live!
@@ -220,8 +223,3 @@ But for now, I’ve spent *way* too much time on this. Time to get back to my st
 * [Project Gemini](gemini://gemini.circumlunar.space/docs/specification.gmi)
 * [sourcehut](https://sourcehut.org/)
 * [tdemin / gmnhg](https://github.com/tdemin/gmnhg)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 20, 2022

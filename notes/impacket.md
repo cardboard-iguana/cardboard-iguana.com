@@ -1,5 +1,8 @@
 # Using Impacket
 
+author:: Nathan Acks  
+date:: 2021-12-06
+
 ## Kerberoasting
 
 Impacket can identify kerberoastable accounts and dump packets remotely. It comes standard with Kali Linux.
@@ -25,8 +28,3 @@ When using GetNPUsers.py, specify the target as `${DOMAIN}/` (i.e., leave off th
 * [Attacktive Directory](tryhackme-attacktive-directory.md)
 * [Kerberos](kerberos.md)
 * [Using Hashcat](hashcat.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> December 6, 2021

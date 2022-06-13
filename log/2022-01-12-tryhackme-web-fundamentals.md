@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals
 
+author:: Nathan Acks  
+date:: 2022-01-12
+
 ## Introduction to OWASP ZAP
 
 ### Introduction to ZAP
@@ -61,8 +64,3 @@ ZAP's Fuzzer tries to list successful results as "reflected", but this seems pro
 ### ZAP Extensions
 
 It's probably a good idea to set Tools > Options > Passive Scanner > Only scan messages in scope to "true".
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 12, 2022

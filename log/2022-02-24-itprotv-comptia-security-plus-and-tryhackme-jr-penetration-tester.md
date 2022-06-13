@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-02-24
+
 ## CompTIA Security+ Exam Cram
 
 ### Password Attacks
@@ -130,8 +133,3 @@ Phases of incident response:
 * Eradication
 * Recovery
 * Lessons Learned
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 24, 2022

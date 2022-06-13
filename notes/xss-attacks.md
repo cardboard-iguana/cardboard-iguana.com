@@ -1,5 +1,8 @@
 # XSS (Cross Site Scripting) Attacks
 
+author:: Nathan Acks  
+date:: 2022-04-06
+
 Types of XSS attacks:
 
 * Reflected (URL-based, no server-side storage)
@@ -41,7 +44,7 @@ You can also use the `onload` attribute to pull in JavaScript, though note that 
 There’s also “polygot” strings which work in a variety of contexts. These have some pretty wild escaping going on; for example, the following (lightly modified from TryHackMe’s example) produces an “XSS” alert:
 
 ```html
-jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */onerror=alert('XSS') )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert('XSS')//>\x3e
+jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */onerror=alert('XSS') )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!><sVg/<sVg/oNloAd=alert('XSS')//>>
 ```
 
 ## Filter Evasion
@@ -142,8 +145,3 @@ The key to defending against XSS is really to get your encoding right. User-gene
 * [Document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 * [JSFuck](http://www.jsfuck.com/)
 * [JavaScript Obfuscator Tool](https://obfuscator.io/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 6, 2022

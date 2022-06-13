@@ -1,5 +1,8 @@
 # Using “curl” and “jq” with Web APIs
 
+author:: Nathan Acks  
+date:: 2021-06-12
+
 You can query web APIs easily with cURL. If the API endpoint accepts GET requests, then this is as simple as:
 
 ```bash
@@ -106,8 +109,3 @@ curl -X POST \
 ## References
 
 * [How to perform a POST request using Curl](https://www.educative.io/edpresso/how-to-perform-a-post-request-using-curl)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> June 12, 2021

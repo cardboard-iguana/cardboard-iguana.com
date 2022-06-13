@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-24
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be reading chapter 18 of the Security+ Exam Cram, “Host and Application Security Solutions”.
@@ -169,8 +172,3 @@ The key with NextGen firewalls is that they’re application-aware, basically op
 | Linux            | fscrypt/GPG           | dmcrypt/LUKS         |
 
 Check out the Microsoft Security Compliance Toolkit to generate automated suggestions for Windows hardening.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 24, 2022

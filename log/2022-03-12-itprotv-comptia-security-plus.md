@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-12
+
 ## CompTIA Security+ Exam Cram
 
 It actually took me a couple of days to work through chapter 24 of the Exam Cram, “Authentication and Authorization Solutions”. Lots of little details here.
@@ -247,8 +250,3 @@ PAM systems are access control systems with the following properties:
 * Task automation management
 
 PAM solutions are primarily concerned with machine, application, and administrative accounts.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 12, 2022

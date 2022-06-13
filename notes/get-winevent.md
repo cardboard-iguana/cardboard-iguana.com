@@ -1,5 +1,8 @@
 # Get-WinEvent
 
+author:: Nathan Acks  
+date:: 2021-09-25
+
 Get-WinEvent is a PowerShell command for working with Windows event logs.
 
 ```powershell
@@ -88,8 +91,3 @@ Event Viewer displays *most* of these values in the “General” when viewing a
 * [Creating Get-WinEvent queries with FilterHashtable](https://docs.microsoft.com/powershell/scripting/samples/Creating-Get-WinEvent-queries-with-FilterHashtable)
 * [Using PowerShell](powershell.md)
 * [Windows Event Logs](windows-event-logs.md).
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 25, 2021

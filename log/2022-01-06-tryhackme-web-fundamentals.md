@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals
 
+author:: Nathan Acks  
+date:: 2022-01-06
+
 ## Burp Suite: The Basics
 
 ### Navigation
@@ -48,8 +51,3 @@ All of these settings are project-specific.
 ### Site Map and Issue Definitions
 
 Target > Issue definitions provides a list of the issues used by the vulnerability scanner built into the paid version of Burp Suite. For the Community Edition (i.e., what comes with Kali Linux), it's basically just a massive reference.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 6, 2022

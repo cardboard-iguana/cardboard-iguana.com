@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-04-01
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be covering Chapter 14 of the Security+ Exam Cram, “Embedded and Specialized Systems”. I should really have read this before [March 27th](2022-03-27-itprotv-comptia-security-plus.md).
@@ -72,8 +75,3 @@ So it goes.
 * [The Yak Collective](https://yakcollective.org)
 * [Necopinus’ Trilemma (Twitter)](https://twitter.com/necopinus/status/1488201961144913923)
 * [Corollary to Necopinus’ Trilemma (Twitter)](https://twitter.com/necopinus/status/1488201962394767360)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 1, 2022

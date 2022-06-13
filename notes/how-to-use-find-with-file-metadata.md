@@ -1,5 +1,8 @@
 # How to Use “find” With File Metadata
 
+author:: Nathan Acks  
+date:: 2022-04-21
+
 Some useful find flags related to file metadata.
 
 ## -user and -group
@@ -61,8 +64,3 @@ For example:
 * [How to modify “last status change” (ctime) property of a file in Unix?](https://stackoverflow.com/questions/8346852/how-to-modify-last-status-change-ctime-property-of-a-file-in-unix#8346905)
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Symbolic Permissions](symbolic-permissions.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 21, 2022

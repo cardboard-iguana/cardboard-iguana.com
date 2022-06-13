@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-02-28
+
 ## CompTIA Security+ Exam Cram
 
 ### Weak Configurations
@@ -181,8 +184,3 @@ ffuf -w /usr/share/wordlists/metasploit/namelist.txt \
 Use `-fs $SIZE` to remove results of a particular size from the list (which you’ll probably need to do in most cases).
 
 * [ffuf](../notes/ffuf.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 28, 2022

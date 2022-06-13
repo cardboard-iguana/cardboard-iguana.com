@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-04-20
+
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
 ### Incident Response Process
@@ -161,8 +164,3 @@ Bash as a reverse proxy makes an appearance again here.
 ### Privilege Escalation: NFS
 
 NFS exports are listed in `/etc/exports`; if an export is configured with `no_root_squash`, then root permissions won’t be stripped from created files and it’s possible to create root-owned SUID/SGID binaries on the mount. (Remember that files on NFS mounts are created using the UID/GID values of the *local* user!)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 20, 2022

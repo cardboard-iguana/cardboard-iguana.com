@@ -1,5 +1,9 @@
 # TryHackMe: Web Fundamentals
 
+author:: Nathan Acks  
+date:: 2022-01-03  
+tags:: #MOC
+
 ## Web Fundamentals
 
 ### Tutorial
@@ -99,9 +103,3 @@
 ## References
 
 * [TryHackMe: Web Fundamentals](https://tryhackme.com/path/outline/web)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 3, 2022  
-<span aria-hidden="true">🏷️</span> #MOC

@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-11-28
+
 ## Cross-Site Scripting
 
 ### Introduction
@@ -132,8 +135,3 @@ nikto -h            # Short help
 nikto -H            # Long help (all commands)
 nikto -list-plugins # List plugins
 ```
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 28, 2021

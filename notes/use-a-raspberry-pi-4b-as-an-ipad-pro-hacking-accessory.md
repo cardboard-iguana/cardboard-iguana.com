@@ -1,5 +1,8 @@
 # Use a Raspberry Pi 4B as an iPad Pro Hacking Accessory
 
+author:: Nathan Acks  
+date:: 2022-03-05
+
 This guide will cover setting up Kali Linux on a Raspberry Pi 4B so that:
 
 * It can be used as a USB C “gadget” with an iPad Pro;
@@ -167,7 +170,7 @@ sed -i -e 's#/dev/mmcblk0p2#/dev/mapper/crypt_rootfs#' /mnt/ext-root/etc/fstab
 
 # Add ROOTFS to /etc/crypttab.
 #
-echo -e 'crypt_rootfs\t/dev/mmcblk0p2\tnone\tluks' >> /mnt/ext-root/etc/crypttab
+echo -e 'crypt_rootfs	/dev/mmcblk0p2	none	luks' >> /mnt/ext-root/etc/crypttab
 
 # Now let’s actually generate the initramfs we need.
 # Note that mkinitramfs wants a (missing) kernel
@@ -827,8 +830,3 @@ As with the dropbear configuration in the previous section, please do *not* set 
 * [Samsung PRO Endurance 128GB (Amazon)](https://www.amazon.com/dp/B07B984HJ5)
 * [Linux Performance: Why You Should Almost Always Add Swap Space](https://haydenjames.io/linux-performance-almost-always-add-swap-space/)
 * [Linux Performance: Almost Always Add Swap. Part 2: ZRAM](https://haydenjames.io/linux-performance-almost-always-add-swap-part2-zram/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 5, 2022

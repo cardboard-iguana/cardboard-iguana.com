@@ -1,5 +1,8 @@
 # Retro
 
+author:: Nathan Acks  
+date:: 2022-01-02
+
 * [TryHackMe: Retro](https://tryhackme.com/room/retro)
 
 ## Initial Reconnaissance 
@@ -94,7 +97,7 @@ Unsurprisingly, this works. The `user.txt` file on the desktop contains the seco
 
 ## Flag 3: `root.txt`
 
-This flag is probably in `C:\Users\Administrator\Desktop\root.txt`. But now things are diverging a bit...
+This flag is probably in `C:\Users\Administrator\Desktopoot.txt`. But now things are diverging a bit...
 
 Wade has Google Chrome installed in this version of the CTF, and no other files are on the desktop.
 
@@ -105,7 +108,7 @@ But poking around a bit reveals that things aren't too far off Blaster.
 
 Of course, the TryHackMe machine doesn't have internet access, but we can follow this link locally. Moreover, searching for `hhupd` reveals that this is a program that can be used to perform the attack; that page helpfully links to a YouTube video demonstrating how to leverage `hhupd.exe` in exactly this way.
 
-The attack works somewhat differently on this system than in Blaster (or the demonstration video), however. Instead of opening up an Internet Explorer window outside of the secure desktop, IE is opened up *on* the UAC desktop itself, and all interaction needs to take place there (we also get a choice of using IE or Chrome...). Still, overall things work more-or-less as we'd expect, and we can use the resulting elevated command prompt to read `C:\Users\Administrator\Desktop\root.txt.txt` (note the extra `.txt`) to obtain the final flag.
+The attack works somewhat differently on this system than in Blaster (or the demonstration video), however. Instead of opening up an Internet Explorer window outside of the secure desktop, IE is opened up *on* the UAC desktop itself, and all interaction needs to take place there (we also get a choice of using IE or Chrome...). Still, overall things work more-or-less as we'd expect, and we can use the resulting elevated command prompt to read `C:\Users\Administrator\Desktopoot.txt.txt` (note the extra `.txt`) to obtain the final flag.
 
 (I kinda feel like I cheated now, since I did Blaster first without realizing that this room was almost *exactly* the same.)
  
@@ -121,8 +124,3 @@ ELAPSED TIME: 1 h 16 min
 * [CVE-2019-1388 Detail (National Vulnerability Database)](https://nvd.nist.gov/vuln/detail/CVE-2019-1388)
 * [CVE-2019-1388 (nagenrauft-consulting.com)](https://www.nagenrauft-consulting.com/2019/11/21/cve-2019-1388-hhupd-exe/)
 * [CVE-2019-1388: Windows Privilege Escalation Through UAC](https://www.youtube.com/watch?v=3BQKpPNlTSo)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 2, 2022

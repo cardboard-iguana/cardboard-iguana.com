@@ -1,5 +1,7 @@
 # Change the “master” Branch in Git to “trunk”
 
+author:: Nathan Acks
+
 ```bash
 git checkout -b trunk master # Create and switch to the
                              # trunk branch
@@ -16,7 +18,3 @@ git remote prune origin         # Delete the remote
 ```
 
 PERSONAL OPINION: GitHub deciding to switch “master” to “main” makes no sense to me. We talk about git “branches” and working “trees”. Shouldn't the central branch in a git tree be the “trunk”?
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

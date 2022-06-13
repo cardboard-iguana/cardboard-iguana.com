@@ -1,5 +1,8 @@
 # Attacktive Directory
 
+author:: Nathan Acks  
+date:: 2021-12-30
+
 * [TryHackMe: Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
 
 ## Welcome to Attacktive Directory
@@ -232,7 +235,7 @@ S-1-5-21-3591857110-2884097990-301047963-515 THM-AD\Domain Computers (Domain Gro
 S-1-5-21-3591857110-2884097990-301047963-516 THM-AD\Domain Controllers (Domain Group)
 S-1-5-21-3591857110-2884097990-301047963-517 THM-AD\Cert Publishers (Local Group)
 S-1-5-21-3591857110-2884097990-301047963-518 THM-AD\Schema Admins (Domain Group)
-S-1-5-21-3591857110-2884097990-301047963-519 THM-AD\Enterprise Admins (Domain Group)
+S-1-5-21-3591857110-2884097990-301047963-519 THM-ADnterprise Admins (Domain Group)
 S-1-5-21-3591857110-2884097990-301047963-520 THM-AD\Group Policy Creator Owners (Domain Group)
 S-1-5-21-3591857110-2884097990-301047963-521 THM-AD\Read-only Domain Controllers (Domain Group)
 S-1-5-21-3591857110-2884097990-301047963-522 THM-AD\Cloneable Domain Controllers (Domain Group)
@@ -240,7 +243,7 @@ S-1-5-21-3591857110-2884097990-301047963-523 *unknown*\*unknown* (8)
 S-1-5-21-3591857110-2884097990-301047963-524 *unknown*\*unknown* (8)
 S-1-5-21-3591857110-2884097990-301047963-525 THM-AD\Protected Users (Domain Group)
 S-1-5-21-3591857110-2884097990-301047963-526 THM-AD\Key Admins (Domain Group)
-S-1-5-21-3591857110-2884097990-301047963-527 THM-AD\Enterprise Key Admins (Domain Group)
+S-1-5-21-3591857110-2884097990-301047963-527 THM-ADnterprise Key Admins (Domain Group)
 S-1-5-21-3591857110-2884097990-301047963-528 *unknown*\*unknown* (8)
 S-1-5-21-3591857110-2884097990-301047963-529 *unknown*\*unknown* (8)
 S-1-5-21-3591857110-2884097990-301047963-530 *unknown*\*unknown* (8)
@@ -595,8 +598,3 @@ ELAPSED TIME: 2 h 38 min
 * [Using XFreeRDP](xfreerdp.md)
 * [Enumerate Samba Users and Shares](enumerate-samba-users-and-shares.md)
 * [Pass the hash (Wikipedia)](https://en.wikipedia.org/wiki/Pass_the_hash)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> December 30, 2021

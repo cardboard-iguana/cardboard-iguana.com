@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals
 
+author:: Nathan Acks  
+date:: 2022-01-09
+
 ## Burp Suite: Repeater
 
 ### Basic Usage
@@ -10,7 +13,8 @@ More handy keyboard shortcuts:
 
 ### Views
 
-The `\n` button in the Repeater Request and Response views toggles non-printable characters (not just line endings).
+The `
+` button in the Repeater Request and Response views toggles non-printable characters (not just line endings).
 
 ### SQLi with Repeater
 
@@ -94,8 +98,3 @@ IDOR (Insecure Direct Object Reference) happens when user permissions aren't che
 When dealing with forms that include session cookies or anti-CSRF tokens, we can either grab these tokens directly in Intruder using the Recursive Grep function (*not* covered in this section), or construct a macro in Project options > Sessions > Macros (necessary if there's, for example, a random redirect to make our life harder).
 
 Basically, macros just define repeated requests that we can make. Once a request is defined here, we can add an entry in Session Handling Rules and define the Scope of the macro (the tools it's active in and the URL  it applies to). Then in details we can trigger the macro. Generally you'll want to restrict the URLs the macro applies to and what parameters/cookies get updated by the macro as much as possible.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 9, 2022

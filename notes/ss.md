@@ -1,5 +1,8 @@
 # Using “ss”
 
+author:: Nathan Acks  
+date:: 2022-04-21
+
 "Socket statistics" (`ss`) is a `netstat`-like tool with slightly nicer formatting; `ss -tulpn` will produce a nice list of open ports.
 
 | Flag | Purpose                                                      |
@@ -14,8 +17,3 @@
 
 * [TryHackMe: Game Zone](tryhackme-game-zone.md)
 * [Using “netstat”](netstat.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 21, 2022

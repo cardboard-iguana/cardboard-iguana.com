@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-11-27
+
 ## Wireshark 101
 
 ### ICMP Traffic
@@ -70,8 +73,3 @@ From what I can tell, SSID and BSSID apply to single access points, while ESSID 
 ```bash
 aircrack-ng -b $BSSID -w $WORLDLIST_FILE $CAP_FILE
 ```
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 27, 2021

@@ -1,5 +1,8 @@
 # Bandit
 
+author:: Nathan Acks  
+tags:: #MOC
+
 * [OverTheWire: Bandit](https://overthewire.org/wargames/bandit/)
 
 ## Bandit 2
@@ -19,9 +22,3 @@
 * [Force “more” Into Interactive Mode](force-more-into-interactive-mode.md)
 * [Jump to an Editor in “more”](jump-to-an-editor-in-more.md)
 * [Set a Shell in ViM](set-a-shell-in-vim.md)
-
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">🏷️</span> #MOC

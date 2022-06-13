@@ -1,5 +1,7 @@
 # Create a GPG Key (With SSH Support!)
 
+author:: Nathan Acks
+
 ## Create the Initial Key
 
 ```bash
@@ -96,7 +98,3 @@ Once this is done, `$KEYID.asc` can be stored “offline” on a secure (encrypt
 * [OpenPGP Best Practices](https://riseup.net/en/security/message-security/openpgp/best-practices)
 * [How to enable SSH access using a GPG key for authentication](https://opensource.com/article/19/4/gpg-subkeys-ssh)
 * [Force the use of a gpg-key as an ssh-key for a given server](https://serverfault.com/a/964317)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

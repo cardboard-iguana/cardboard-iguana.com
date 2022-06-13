@@ -1,5 +1,8 @@
 # Using John the Ripper
 
+author:: Nathan Acks  
+date:: 2021-10-13
+
 ```bash
 john --format=$HASH_FORMAT \
      --wordlist=$WORDLIST $PASSWORD_HASH_FILE
@@ -39,8 +42,3 @@ John’s rules can be used to construct additional permutations of a wordlist to
 * [Using Metasploit](metasploit.md)
 * [Using Hashcat](hashcat.md)
 * [Linux (and BSD) Password Hashes](linux-and-bsd-password-hashes.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 13, 2021

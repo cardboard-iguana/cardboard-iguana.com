@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-09-29
+
 ## Network Services
 
 ### Understanding SMB
@@ -30,8 +33,3 @@ Quick-n-dirty way to bypass a running SSH agent:
 env -u SSH_AUTH_SOCK -u SSH_AGENT_PID \
 	ssh -i $KEY_FILE ${USER}@${HOST}
 ```
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 29, 2021

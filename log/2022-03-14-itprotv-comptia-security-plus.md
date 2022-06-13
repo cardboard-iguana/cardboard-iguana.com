@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-14
+
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
 ### Access Control Schemes
@@ -50,8 +53,3 @@ Examples: Thycotic, CyberArk, Arcon, One Identity Safeguard.
 This is more Windows-specific. In particular, account policies in Active Directory apply to all objects in the directory (users, computers, etc.)
 
 An account policy is generally a set of pre-applied configuration parameters that the user (or computer, or whatever) *cannot change*. However, in Active Directory you can also set some *access policies*, which determines under what conditions we have access to a particular system or object (RBACs/ABACs/CACs as we discussed above), through the same “User Properties” interface.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 14, 2022

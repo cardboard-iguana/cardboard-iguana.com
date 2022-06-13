@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-14
+
 ## Introduction to Windows
 
 ### Understanding the Authentication Process
@@ -40,8 +43,3 @@ You can actually access the registry from PowerShell using the `cd` command: `cd
 
 * [Wikipedia: Domain controller](https://en.wikipedia.org/wiki/Domain_controller)
 * [Wikipedia: Domain controller (Windows)](https://en.wikipedia.org/wiki/Domain_controller_%28Windows%29)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 14, 2021

@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security
 
+author:: Nathan Acks  
+date:: 2021-09-13
+
 ## Intro to LAN
 
 ### Introducing LAN Topologies
@@ -195,8 +198,3 @@ Ports identify applications (or services provided by an application). There are 
 Ports 0 - 1023 are “common ports” (I’ve typically heard this block called “reserved” or “system”; Wikipedia calls them “well-known”).
 
 * [List of TCP and UDP port numbers (Wikipedia)](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 13, 2021

@@ -1,5 +1,8 @@
 # TryHackMe: Jr. Penetration Tester (Supplements)
 
+author:: Nathan Acks  
+date:: 2022-05-10
+
 Today’s TryHackMe Jr. Penetration Tester “supplements”:
 
 * [TryHackMe: AD Certificate Templates](https://tryhackme.com/room/adcertificatetemplates)
@@ -84,8 +87,3 @@ runas /user:$DOMAIN\$USER cmd.exe
 
 * [Rubeus](../notes/rubeus.md)
 * [Kerberos](../notes/kerberos.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> May 10, 2022

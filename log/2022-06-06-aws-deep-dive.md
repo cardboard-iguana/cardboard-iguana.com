@@ -1,5 +1,8 @@
 # AWS Deep Dive
 
+author:: Nathan Acks  
+date:: 2022-06-06
+
 ## AWS Essentials
 
 More notes today from Linux Academy’s “AWS Essentials” YouTube playlist.
@@ -14,7 +17,7 @@ An “object lifecycle” is a set of rules in S3 that migrate objects between s
 
 REFERENCES:
 
-* [AWS Essentials: Object Lifecycles (YouTube)](//youtu.be/B-z9hNj3Fw4)
+* [AWS Essentials: Object Lifecycles (YouTube)](https://youtu.be/B-z9hNj3Fw4)
 
 ### Permissions
 
@@ -26,7 +29,7 @@ Note that making a bucket public is *not* enough to make its contents viewable o
 
 REFERENCES:
 
-* [AWS Essentials: Permissions (YouTube)](//youtu.be/X7vfDa1ygeo)
+* [AWS Essentials: Permissions (YouTube)](https://youtu.be/X7vfDa1ygeo)
 
 ### Object Versioning
 
@@ -36,7 +39,7 @@ Be aware that new object versions do *not* inherit the original version’s stor
 
 REFERENCES:
 
-* [AWS Essentials: Object Versioning (YouTube)](//youtu.be/I-OW9Kr2NGs)
+* [AWS Essentials: Object Versioning (YouTube)](https://youtu.be/I-OW9Kr2NGs)
 
 ### EC2 Basics
 
@@ -46,7 +49,7 @@ In addition to “on-demand” and ”reserved” instances, Amazon also has “
 
 REFERENCES:
 
-* [AWS Essentials: EC2 Basics (YouTube)](//youtu.be/dO1X7QG_4xw)
+* [AWS Essentials: EC2 Basics (YouTube)](https://youtu.be/dO1X7QG_4xw)
 
 ### Amazon Machine Images (AMIs)
 
@@ -54,9 +57,4 @@ An AMI is basically just a templated VM with some configuration knobs. (Mostly t
 
 REFERENCES:
 
-* [AWS Essentials: Amazon Machine Images (AMIs) (YouTube)](//youtu.be/B7M31vywgs4)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> June 6, 2022
+* [AWS Essentials: Amazon Machine Images (AMIs) (YouTube)](https://youtu.be/B7M31vywgs4)

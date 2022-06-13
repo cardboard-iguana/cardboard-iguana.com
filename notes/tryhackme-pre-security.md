@@ -1,5 +1,9 @@
 # TryHackMe: Pre Security
 
+author:: Nathan Acks  
+date:: 2021-09-12  
+tags:: #MOC
+
 ## Cyber Security Introduction
 
 ### Learning Cyber Security
@@ -59,9 +63,3 @@
 ## References
 
 * [TryHackMe: Pre Security](https://tryhackme.com/path/outline/presecurity)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 12, 2021  
-<span aria-hidden="true">🏷️</span> #MOC

@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-08
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be reading chapter 23 of the Exam Cram, “Identity and Account Management Controls”.
@@ -79,8 +82,3 @@ Exam Cram states that the “Minimum password age” setting is used to limit th
 If Exam Cram’s practice questions are any guide, the Security+ exam considers “passphrases” just to be really long passwords.
 
 * [Minimum password age (Microsoft Documentation)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-age)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 8, 2022

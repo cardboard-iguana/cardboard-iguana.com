@@ -1,5 +1,8 @@
 # Jurassic Park
 
+author:: Nathan Acks  
+date:: 2022-02-02
+
 * [TryHackMe: Jurassic Park](https://tryhackme.com/room/jurassicpark)
 
 Our target is 10.10.105.134.
@@ -450,8 +453,3 @@ ELAPSED TIME: 2 h 53 min
 * [SQL Injection](sql-injection.md)
 * [Using “nmap”](nmap.md)
 * [Using “gobuster”](gobuster.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 2, 2022

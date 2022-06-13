@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security
 
+author:: Nathan Acks  
+date:: 2021-09-14
+
 ## Extending Your Network
 
 ### Introduction to Port Forwarding
@@ -134,8 +137,3 @@ To set multiple cookies, the server just uses multiple Set-Cookie headers. Howev
 * [Response header (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Glossary/Response_header)
 * [Set-Cookie (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
 * [Cookie (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 14, 2021

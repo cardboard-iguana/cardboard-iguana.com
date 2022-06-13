@@ -1,5 +1,8 @@
 # Windows Password Hashes
 
+author:: Nathan Acks  
+date:: 2021-10-12
+
 The Windows NT family uses NTLM for (network) logins, and stores hashes in the NT hash format, which is really just the md4 hash of the UTF-16-LE encoding of the user password (UTF-16-LE is the little endian version of UTF-16). While NTLM is the login protocol, people commonly call NT hashes "NTLM" hashes.
 
 The "LM" in "NTLM" references the pre-NT password hashing mechanism, LM. LM hashes are constructed in an absolutely batshit crazy fashion, and are *much* weaker than (the already weak) NT hashes.
@@ -10,8 +13,3 @@ Windows passwords are stored in the SAM, but NT and LM hashes (which can coexist
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [LM, NTLM, Net-NTLMv2, oh my!](https://medium.com/@petergombos/lm-ntlm-net-ntlmv2-oh-my-a9b235c58ed4)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 12, 2021

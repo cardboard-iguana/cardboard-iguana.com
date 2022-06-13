@@ -1,5 +1,8 @@
 # Using Burp Suite
 
+author:: Nathan Acks  
+date:: 2022-05-20
+
 ## Keyboard Shortcuts
 
 | Shortcut        | Action                                        |
@@ -141,8 +144,3 @@ Burp Suite displays hashes in the "Hex" view by default; to convert them into th
 * [FoxyProxy Basic](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-basic/)
 * [Configuring an iOS Device to Work With Burp](https://portswigger.net/support/configuring-an-ios-device-to-work-with-burp)
 * [Installing Burp's CA Certificate in an iOS Device](https://portswigger.net/support/installing-burp-suites-ca-certificate-in-an-ios-device)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> May 20, 2022

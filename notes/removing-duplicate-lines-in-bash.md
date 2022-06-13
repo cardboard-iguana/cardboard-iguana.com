@@ -1,5 +1,7 @@
 # Removing Duplicate Lines in Bash
 
+author:: Nathan Acks
+
 ## Quick-and-Dirty
 
 ```bash
@@ -24,7 +26,3 @@ cat $FILE | cat -n | sort -rk2 | \
 ## References
 
 * [Remove duplicate lines without sorting](https://stackoverflow.com/a/20639730)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-09-25
+
 ## Windows Event Logs
 
 ### Event Viewer
@@ -122,8 +125,3 @@ To find events with an Event ID of 100, we could use `Event/System/EventID=100`.
 ### Putting Theory Into Practice
 
 Event IDs refer to specific *types* of events, while Event Record IDs provide a unique ID for a particular event. Neither is unique *between* logs, however: Different applications may use the same Event ID to indicate different events, while Event Record IDs are only unique *within* a particular log.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 25, 2021

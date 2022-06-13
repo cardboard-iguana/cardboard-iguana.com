@@ -1,5 +1,8 @@
 # Different Representations of IPv4 Addresses
 
+author:: Nathan Acks  
+date:: 2022-03-19
+
 Localhost can be represented in a lot of different ways.
 
 * `localhost`
@@ -38,8 +41,3 @@ The nip.io service can be used to provide a domain name for an arbitrary IP addr
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [Qalculate!](https://qalculate.github.io/)
 * [nip.io](https://nip.io/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 19, 2022

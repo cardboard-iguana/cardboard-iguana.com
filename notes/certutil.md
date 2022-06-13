@@ -1,5 +1,8 @@
 # Using “certutil”
 
+author:: Nathan Acks  
+date:: 2022-05-11
+
 ## Calculating File Hashes
 
 ```powershell
@@ -33,8 +36,3 @@ If a certificate has the following properties, then we can use it to create a ce
 * [SpectreOps: Certified Pre-Owned](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
 * [Kerberos](kerberos.md)
 * [Using Rubeus](rubeus.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> May 11, 2022

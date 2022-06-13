@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-16
+
 ## CompTIA Security+ Exam Cram
 
 Today it’s chapter 15 of the Security+ Exam Cram, “Physical Security Controls“.
@@ -149,8 +152,3 @@ Key areas:
 
 * Air gapped networks/systems
 * Vaults and safes (often for backups)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 16, 2022

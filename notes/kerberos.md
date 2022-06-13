@@ -1,5 +1,8 @@
 # Kerberos
 
+author:: Nathan Acks  
+date:: 2022-03-13
+
 Kerberos: The default authentication method for Windows domains. Intended to be the successor to NTLM.
 
 The built-in Windows command `klist` will show you the current Kerberos tickets in memory.
@@ -107,8 +110,3 @@ Golden tickets are powerful (since you can be anyone, it’s trivial to gain con
 * [Using Mimikatz](mimikatz.md)
 * [Using Rubeus](rubeus.md)
 * [ITPro.TV: CompTIA Security+ (SY0-601)](itprotv-comptia-security-plus.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 13, 2022

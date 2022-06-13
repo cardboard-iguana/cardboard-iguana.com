@@ -1,5 +1,8 @@
 # Using Nikto
 
+author:: Nathan Acks  
+date:: 2022-03-19
+
 Nikto is a web application vulnerability scanner.
 
 ```bash
@@ -22,8 +25,3 @@ nikto -list-plugins # List plugins
 * [TryHackMe: CC: Pen Testing](tryhackme-cc-pen-testing.md)
 * [Tools'R'us](tryhackme-tools-r-us.md)
 * [web enumeration](https://pentesting.one2bla.me/enumeration/web-enumeration)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 19, 2022

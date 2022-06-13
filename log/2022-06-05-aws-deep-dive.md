@@ -1,5 +1,8 @@
 # AWS Deep Dive
 
+author:: Nathan Acks  
+date:: 2022-06-05
+
 It’s been a while, hasn’t it?
 
 I’d originally intended to spend May wrapping up “supplemental” TryHackMe room’s I’d been making note of while studying for the Security+ exam. But then I started a new job and wound up spending much of the time I had been using for my studies bringing myself up to speed instead.
@@ -37,7 +40,7 @@ This is apparently the framing device for the entire series. Pretty skippable.
 
 REFERENCES:
 
-* [AWS Essentials: Project Omega! (YouTube)](//youtu.be/CGFrYNDpzUM)
+* [AWS Essentials: Project Omega! (YouTube)](https://youtu.be/CGFrYNDpzUM)
 
 ### AWS Free Tier
 
@@ -53,7 +56,7 @@ Core AWS services:
 
 REFERENCES:
 
-* [AWS Essentials: AWS Free Tier (YouTube)](//youtu.be/8p1bTTV6ATE)
+* [AWS Essentials: AWS Free Tier (YouTube)](https://youtu.be/8p1bTTV6ATE)
 
 ### Create an AWS Account
 
@@ -61,7 +64,7 @@ Wow, AWS is using *voice calls* for account authentication! (At least they’re 
 
 REFERENCES:
 
-* [AWS Essentials: Create an AWS Account (YouTube)](//youtu.be/_siSwgpVQNc)
+* [AWS Essentials: Create an AWS Account (YouTube)](https://youtu.be/_siSwgpVQNc)
 
 ### How to Navigate the AWS Console
 
@@ -69,7 +72,7 @@ You can switch between regions in AWS using a simple drop-down in the AWS Consol
 
 REFERENCES:
 
-* [AWS Essentials: How to Navigate the AWS Console (YouTube)](//youtu.be/A43m4TDFCUM)
+* [AWS Essentials: How to Navigate the AWS Console (YouTube)](https://youtu.be/A43m4TDFCUM)
 
 ### What is IAM?
 
@@ -79,7 +82,7 @@ While the root user gets permission to *everything*, subsequent users receive no
 
 REFERENCES:
 
-* [AWS Essentials: What is IAM? (YouTube)](//youtu.be/4ngYrnJb7F8)
+* [AWS Essentials: What is IAM? (YouTube)](https://youtu.be/4ngYrnJb7F8)
 
 ### IAM Initial Setup and Configuration
 
@@ -91,7 +94,7 @@ For obvious reasons, the first thing you should probably do is create an additio
 
 REFERENCES:
 
-* [AWS Essentials: IAM Initial Setup and Configuration (YouTube)](//youtu.be/W_eu0rJN0yU)
+* [AWS Essentials: IAM Initial Setup and Configuration (YouTube)](https://youtu.be/W_eu0rJN0yU)
 
 ### IAM Roles
 
@@ -101,7 +104,7 @@ In general, roles are used to package policies for *service objects*, while grou
 
 REFERENCES:
 
-* [AWS Essentials: IAM Roles (YouTube)](//youtu.be/7sYE6J1_CsQ)
+* [AWS Essentials: IAM Roles (YouTube)](https://youtu.be/7sYE6J1_CsQ)
 
 ### AWS Global Infrastructure
 
@@ -115,7 +118,7 @@ Every data center is assigned to *only* one availability zone; the purpose of av
 
 REFERENCES:
 
-* [AWS Essentials: AWS Global Infrastructure (YouTube)](//youtu.be/J_Kh1gZaMd4)
+* [AWS Essentials: AWS Global Infrastructure (YouTube)](https://youtu.be/J_Kh1gZaMd4)
 
 ### What is a VPC?
 
@@ -129,7 +132,7 @@ The VPC “internet gateway” is roughly equivalent to a modem in a home or SMB
 
 REFERENCES:
 
-* [AWS Essentials: What is a VPC? (YouTube)](//youtu.be/7XnpdZF_COA)
+* [AWS Essentials: What is a VPC? (YouTube)](https://youtu.be/7XnpdZF_COA)
 
 ### Internet Gateways (IGWs)
 
@@ -139,7 +142,7 @@ Really, all a IGW is providing is a *route* from the attached VPC to the interne
 
 REFERENCES:
 
-* [AWS Essentials: Internet Gateways (IGWs) (YouTube)](//youtu.be/pAOrBxZ7584)
+* [AWS Essentials: Internet Gateways (IGWs) (YouTube)](https://youtu.be/pAOrBxZ7584)
 
 ### Route Tables (RTs)
 
@@ -149,7 +152,7 @@ There can be *multiple* RTs per VPC. Similar to IGWs, however, RTs can only be d
 
 REFERENCES:
 
-* [AWS Essentials: Route Tables (RTs) (YouTube)](//youtu.be/GrfOsWUVCfg)
+* [AWS Essentials: Route Tables (RTs) (YouTube)](https://youtu.be/GrfOsWUVCfg)
 
 ### Network Access Control Lists (NACLs)
 
@@ -165,7 +168,7 @@ Note that additional network security controls (“security groups”) can be ap
 
 REFERENCES:
 
-* [AWS Essentials: Network Access Control Lists (NACLs) (YouTube)](//youtu.be/vJzHn24TNQE)
+* [AWS Essentials: Network Access Control Lists (NACLs) (YouTube)](https://youtu.be/vJzHn24TNQE)
 
 ### Subnets
 
@@ -177,7 +180,7 @@ Subnets can be “public” (internet routable) or “private” (*not* internet
 
 REFERENCES:
 
-* [AWS Essentials: Subnets (YouTube)](//youtu.be/KNT463WSjjY)
+* [AWS Essentials: Subnets (YouTube)](https://youtu.be/KNT463WSjjY)
 
 ### Availability Zones (VPC Specific)
 
@@ -185,7 +188,7 @@ The point of availability zones within a VPC is to allow redundancy to be engine
 
 REFERENCES:
 
-* [AWS Essentials: Availability Zones (VPC Specific) (YouTube)](//youtu.be/ET_CSqdGsYg)
+* [AWS Essentials: Availability Zones (VPC Specific) (YouTube)](https://youtu.be/ET_CSqdGsYg)
 
 ### S3 Basics
 
@@ -195,7 +198,7 @@ Buckets are limited to particular regions; data is automatically replicated acro
 
 REFERENCES:
 
-* [AWS Essentials: S3 Basics (YouTube)](//youtu.be/f9hXcxHnQuE)
+* [AWS Essentials: S3 Basics (YouTube)](https://youtu.be/f9hXcxHnQuE)
 
 ### Buckets & Objects
 
@@ -203,7 +206,7 @@ Bucket names are *globally* unique.
 
 REFERENCES:
 
-* [AWS Essentials: Buckets & Objects (YouTube)](//youtu.be/skJosIhDNF0)
+* [AWS Essentials: Buckets & Objects (YouTube)](https://youtu.be/skJosIhDNF0)
 
 ### Storage Classes
 
@@ -224,9 +227,4 @@ Reduced Redundancy Storage is actually recommended for backup (!), though Glacie
 
 REFERENCES:
 
-* [AWS Essentials: Storage Classes (YouTube)](//youtu.be/DFfgYapmu9s)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> June 5, 2022
+* [AWS Essentials: Storage Classes (YouTube)](https://youtu.be/DFfgYapmu9s)

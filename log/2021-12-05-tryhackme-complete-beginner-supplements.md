@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-12-05
+
 ## Attacking Kerberos
 
 ### Introduction
@@ -204,8 +207,3 @@ If Mimikatz is run on a domain controller, it can modify the authentication serv
 Obviously this isn’t very persistent itself, as the skeleton key will be lost if the server is rebooted or the authentication service restarted.
 
 * [Windows Password Hashes](../notes/windows-password-hashes.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> December 5, 2021

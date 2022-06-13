@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-03-02
+
 ## CompTIA Security+ Exam Cram
 
 ### An Introduction to Threat Actors, Vectors, and Intelligence Sources
@@ -225,8 +228,3 @@ echo "$BASE64_STRING" | basenc -d --base64
 #
 echo "$BASE64_STRING" | basenc -d --base64url
 ```
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 2, 2022

@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-04-12
+
 ## CompTIA Security+ Exam Cram
 
 Today’s reading is Chapter 30 from the Security+ Exam Cram, “Digital Forensics”.
@@ -54,8 +57,3 @@ Investigative steps:
 * Hashes (to verify that forensic images are the same as the original data, and that data has not been changed during analysis)
 * Screenshots
 * Witnesses
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 12, 2022

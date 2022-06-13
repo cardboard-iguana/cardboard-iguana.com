@@ -1,5 +1,8 @@
 # Using “wfuzz”
 
+author:: Nathan Acks  
+date:: 2022-01-25
+
 wfuzz is a URL fuzzer -- basically the command-line version of the Burp Suite Intruder (but it's *much* faster, which is what one would generally expect from a command-line tool).
 
 | Flag | Meaning                                                    |
@@ -20,8 +23,3 @@ Use `wfuzz --help` for a full list of options. The `--hc 404` option is particul
 
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [Using Burp Suite](burp-suite.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 25, 2022

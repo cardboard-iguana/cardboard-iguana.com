@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-04-08
+
 ## Non-Persistence Concepts
 
 Ways of restoring OS failures:
@@ -17,8 +20,3 @@ Interesting idea here: Using PXE boot to pull recovery/live images over the netw
 Archive bits are only used on Windows, OS/2, and Amiga.
 
 * [Archvie bit (Wikipedia)](https://en.wikipedia.org/wiki/Archive_bit)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 8, 2022

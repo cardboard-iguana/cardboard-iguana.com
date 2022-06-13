@@ -1,5 +1,8 @@
 # Simple Mail Transfer Protocol (SMTP)
 
+author:: Nathan Acks  
+date:: 2022-04-03
+
 A set of commands to send an email:
 
 ```smtp
@@ -23,8 +26,3 @@ Note that `MAIL FROM` / `From` and `RCPT TO` / `To` are not actually required to
 
 * [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [In SMTP, must the RCPT TO: and TO: match?](https://stackoverflow.com/questions/10822190/in-smtp-must-the-rcpt-to-and-to-match)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 3, 2022

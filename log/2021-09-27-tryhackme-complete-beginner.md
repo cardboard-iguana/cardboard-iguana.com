@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-09-27
+
 ## Introductory Researching
 
 ### Vulnerability Searching
@@ -214,8 +217,3 @@ The second column of dig’s ANSWER section (so, right after the domain part, an
 
 * [Domain name (Wikipedia)](https://en.wikipedia.org/wiki/Domain_name)
 * [Internationalized domain name (Wikipedia)](https://en.wikipedia.org/wiki/Internationalized_domain_name)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 27, 2021

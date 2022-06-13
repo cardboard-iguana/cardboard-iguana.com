@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-11-11
+
 ## Splunk
 
 ### Ransomware
@@ -55,8 +58,3 @@ For virtual machines:
 * VirtualBox — .sav
 
 In all cases *except* VirtualBox, these files are maintained during run-time, and thus can provide a memory image without shutting the VM off (though I presume that it’s desirable to suspend it temporarily when copying). VirtualBox .sav files are kind of useless though, as they’re only partial; treat these VMs as if they were running on bare metal (for the purpose of memory dumps).
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 11, 2021

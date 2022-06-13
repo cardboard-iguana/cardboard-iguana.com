@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-30
+
 ## Linux PrivEsc
 
 ### Service Exploits
@@ -80,8 +83,3 @@ While the same code as LD_PRELOAD can be used as a starting point for an LD_LIBR
 NOTE that not every UNIX-like system calls their library path LD_LIBRARY_PATH!
 
 * [GTFOBins](https://gtfobins.github.io)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 30, 2021

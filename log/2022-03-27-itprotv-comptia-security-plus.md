@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-27
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be reading chapters 21 and 26 of the Security+ Exam Cram, “Secure Mobile Solutions” and “Organizational Security”.
@@ -333,8 +336,3 @@ Communication standards commonly used in specialized devices:
 With the exception of 5G, these are all distinguished by being very low power and very low bandwidth.
 
 Security concerns? It’s basically a universe of crap. Have fun!
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 27, 2022

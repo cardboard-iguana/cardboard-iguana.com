@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-04
+
 ## Burp Suite
 
 ### Installation
@@ -74,8 +77,3 @@ Many Burp Suite extensions require the standalone version of Jython, which unfor
 The SCANNER tab is a web vulnerability scanner and spider (this is a paid feature, however, and isn't present in the "community" edition of Burp Suite that is in Kali's repos). Both the scanner and spider functionality can be run in the background while other tasks are being worked on.
 
 Another paid tool is COLLABORATOR, which sounds like it allows tasks to be offloaded to PortSwigger's infrastructure for longer scans/testing than may be feasible in a single setting.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 4, 2021

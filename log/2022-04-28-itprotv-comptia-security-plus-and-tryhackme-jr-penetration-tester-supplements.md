@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements)
 
+author:: Nathan Acks  
+date:: 2022-04-28
+
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
 ### Organizational Security Policies — Data
@@ -35,8 +38,3 @@ Once again, the Lockheed Martin kill chain (my paraphrasing):
 * Install
 * Control
 * Endgame
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 28, 2022

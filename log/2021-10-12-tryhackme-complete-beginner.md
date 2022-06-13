@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-12
+
 ## John the Ripper
 
 ### Cracking Basic Hashes
@@ -51,8 +54,3 @@ Same deal as with zip files for rar files, except use rar2john as the pre-proces
 Same deal again for cracking ssh key passwords… Except that the tool’s in /usr/share/john/ssh2john.py this time (this script probably isn’t installed in the PATH because it needs to be run using python2).
 
 NOTE: John is susceptible to false positives when cracking ssh keys, and will thus try the entire provided wordlist (just in case!).
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 12, 2021

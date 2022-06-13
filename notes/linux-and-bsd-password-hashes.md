@@ -1,5 +1,8 @@
 # Linux (and BSD) Password Hashes
 
+author:: Nathan Acks  
+date:: 2021-10-12
+
 UNIX-style passwords are of the form `$format$rounds$salt$hash`. Common `format` parameters:
 
 * 1 — md5crypt (mostly older)
@@ -15,8 +18,3 @@ NOTE: 1 hex digit = 4 bits (2 hex digits per byte), which is why a 128-bit md5 h
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 12, 2021

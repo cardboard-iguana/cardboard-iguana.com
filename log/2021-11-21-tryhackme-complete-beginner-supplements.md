@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-11-21
+
 ## MAL: Researching
 
 ### Online Sandboxing
@@ -77,8 +80,3 @@ References:
 
 * [Packet Squirrel](https://hak5.org/products/packet-squirrel)
 * [LAN Turtle](https://hak5.org/products/lan-turtle)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 21, 2021

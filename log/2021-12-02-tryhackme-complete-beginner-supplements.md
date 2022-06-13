@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-12-02
+
 ## CC: Pen Testing
 
 ### smbmap
@@ -372,8 +375,3 @@ And that’s flag 2.
 * [Using “nmap”](../notes/nmap.md)
 * [Using “gobuster”](../notes/gobuster.md)
 * [Using Hashcat](../notes/hashcat.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> December 2, 2021

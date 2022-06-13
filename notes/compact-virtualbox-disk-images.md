@@ -1,5 +1,8 @@
 # Compact VirtualBox Disk Images
 
+author:: Nathan Acks  
+date:: 2022-01-28
+
 (1) Zero out free disk space *on the guest*:
 
 WINDOWS: Disable the paging file (Settings > System > About > Advanced system settings > Advanced > Performance > Settings... > Advanced > Virtual memory > Change...), clean all temporary files (C: > Properties > Disk Cleanup), defrag (`defrag C: /FreespaceConsolidate /Verbose`), and then zero out free space with SDelete (`sdelete -z C:`).
@@ -25,8 +28,3 @@ Note that this only works on a disk image *without any snapshots*.
 
 * [How to compact VirtualBox's VDI file size?](https://superuser.com/questions/529149/how-to-compact-virtualboxs-vdi-file-size/529183#529183)
 * [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 28, 2022

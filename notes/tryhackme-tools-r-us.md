@@ -1,5 +1,8 @@
 # Tools'R'us
 
+author:: Nathan Acks  
+date:: 2022-01-30
+
 * [TryHackMe: Tools'R'us](https://tryhackme.com/room/toolsrus)
 
 We're supposed to restrict ourselves to the following tools in this CTF:
@@ -398,8 +401,3 @@ ELAPSED TIME: 3 h 7 min
 * [Multiple Ways To Exploiting HTTP Authentication](https://www.hackingarticles.in/multiple-ways-to-exploiting-http-authentication/)
 * [Apache Tomcat 7.x vulnerabilities](https://tomcat.apache.org/security-7.html)
 * [Multiple Ways to Exploit Tomcat Manager](https://www.hackingarticles.in/multiple-ways-to-exploit-tomcat-manager/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 30, 2022

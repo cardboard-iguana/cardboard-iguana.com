@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-04-18
+
 ## CompTIA Security+ Exam Cram
 
 Today’s reading is Chapter 28 from the Security+ Exam Cram, “Incident Investigation”.
@@ -146,8 +149,3 @@ Note that migrating Meterpreter will change its current working directory to tha
 
 * [Using Mimikatz](../notes/mimikatz.md)
 * [How to view all network shares in Windows](https://www.computerhope.com/issues/ch000534.htm)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 18, 2022

@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-04-10
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be covering Chapters 7 and 8 of the Security+ Exam Cram, “Security Assessment Techniques” and “Penetration Testing Techniques”.
@@ -97,8 +100,3 @@ tcpdump -i $IFACE -w ${PCAP_FILE}.pcap
 #
 tcpreplay -i $IFACE ${PCAP_FILE}.pcap
 ```
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 10, 2022

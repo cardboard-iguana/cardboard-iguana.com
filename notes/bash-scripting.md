@@ -1,5 +1,7 @@
 # Bash Scripting Tricks
 
+author:: Nathan Acks
+
 ```bash
 # Brace expansion
 #
@@ -109,7 +111,3 @@ done < <(find $DIR -type f -print0)
 * [$IFS](https://bash.cyberciti.biz/guide/$IFS)
 * [Bash - variable variables](https://stackoverflow.com/a/10757531)
 * [Looping through find output in Bash where file name contains white spaces](https://stackoverflow.com/a/23748641)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

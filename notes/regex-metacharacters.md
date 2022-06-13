@@ -1,5 +1,8 @@
 # Regex Metacharacters
 
+author:: Nathan Acks  
+date:: 2021-09-21
+
 | Metacharacter | Meaning                                       |
 |:-------------:|:--------------------------------------------- |
 |     `\d`      | `[0-9]`                                       |
@@ -14,8 +17,3 @@ NOTE: Be aware that `\w` *includes* `_` (but not `-`)!
 ## References
 
 * [TryHackMe: Regular Expressions](tryhackme-regular-expressions.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 21, 2021

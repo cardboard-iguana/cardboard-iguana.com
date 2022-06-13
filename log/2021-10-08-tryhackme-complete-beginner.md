@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-08
+
 ## Upload Vulnerabilities
 
 ### Overwriting Existing Files
@@ -50,8 +53,3 @@ Common types of filtering:
 Apparently PHPv5 and higher has a poison null byte resistant extension filter.
 
 * [The Poison Null Byte](../notes/poison-null-byte.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 8, 2021

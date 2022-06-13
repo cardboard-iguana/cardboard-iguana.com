@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-11-08
+
 ## Steel Mountain
 
 Things got busy yesterday and I had to push finishing this section off a day. The machine’s new IP address is 10.10.174.199.
@@ -62,8 +65,3 @@ nc -lvnp 4443
 ```
 
 * [2021-11-07 - TryHackMe: Complete Beginner](2021-11-07-tryhackme-complete-beginner.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 8, 2021

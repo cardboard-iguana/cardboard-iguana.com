@@ -1,5 +1,8 @@
 # Inclusion
 
+author:: Nathan Acks  
+date:: 2022-02-01
+
 * [TryHackMe: Inclusion](https://tryhackme.com/room/inclusion)
 
 This room is intended to focus on local file inclusion attacks, so my guess is that hitting the machine with nmap and gobuster is probably unnecessary. But, I'm going to do it anyway, just in case.
@@ -299,8 +302,3 @@ ELAPSED TIME: 56 min
 * [LFI (Local File Inclusion) Attacks](local-file-inclusion-attacks.md)
 * [Using “nmap”](nmap.md)
 * [Using “gobuster”](gobuster.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 1, 2022

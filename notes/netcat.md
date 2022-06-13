@@ -1,5 +1,8 @@
 # Using “netcat”
 
+author:: Nathan Acks
+date:: 2022-05-10
+
 The netcat binary is *usually* `nc`, but some systems have it at `ncat` instead.
 
 Note that the `-c` and `-e` flags are considered security risks (for obvious reasons!), and are disabled on some systems.
@@ -110,8 +113,3 @@ If you just have netcat connect to a service directly, it functions exactly like
 * [2022-03-30 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
 * [2022-05-09 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks
-<span aria-hidden="true">📅</span> May 10, 2022

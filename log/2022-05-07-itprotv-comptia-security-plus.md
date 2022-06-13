@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-05-07
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be working through my *last* reading from the Security+ Exam Cram (chapter 35), “Sensitive Data and Privacy”.
@@ -121,8 +124,3 @@ Note that “use” and “share” are optional steps, and one or both may actu
 A “privacy impact assessment” is just an assessment covering how PII is collected, used, shared, and maintained… And what the *impact* to the business would be should any of these processes have a CIA breakdown. The goal is to make sure that privacy protections are integrated into the entire SDLC.
 
 A “privacy notice” is the externally-facing version/description of a “privacy policy”.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> May 7, 2022

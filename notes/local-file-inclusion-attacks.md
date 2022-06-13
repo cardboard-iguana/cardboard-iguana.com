@@ -1,5 +1,8 @@
 # LFI (Local File Inclusion) Attacks
 
+author:: Nathan Acks  
+date:: 2022-03-13
+
 LFI vulnerabilities are *most* common in PHP, but are sometimes found in other languages/frameworks.
 
 Since web servers are typically serving content from `/var/www`, `/var/www/srv`, or an immediate subdirectory for virtual hosts, you generally need to use `../../`, `../../../`, or `../../../../` to reach `/`.
@@ -17,8 +20,3 @@ Representing `../` as `....//` can bypass filters that replace `../`, as PHP sea
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [TryHackMe: Jr. Penetration Tester](tryhackme-jr-penetration-tester.md)
 * [The Poison Null Byte](poison-null-byte.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 13, 2022

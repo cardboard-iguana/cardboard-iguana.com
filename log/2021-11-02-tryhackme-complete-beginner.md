@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-11-02
+
 ## Linux PrivEsc
 
 ### Cron Jobs
@@ -61,8 +64,3 @@ Unrelatedly, msfvenom can be used to generate executables that immediately shell
 * [LinPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS)
 
 LinEnum is very fast, but LSE and LinPEAS produce more intelligible output.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 2, 2021

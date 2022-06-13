@@ -1,5 +1,7 @@
 # Quickly Find the Canonical Path of a File
 
+author:: Nathan Acks
+
 On Debian-based systems and derivatives, use `readlink`.
 
 Some useful options from the man page:
@@ -14,7 +16,3 @@ Some useful options from the man page:
 > canonicalize by following every symlink in every component of the given name recursively, without requirements on components existence
 
 Note that this follows symlinks, so it’s not suitable for every use.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

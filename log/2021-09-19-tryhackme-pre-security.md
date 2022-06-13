@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security
 
+author:: Nathan Acks  
+date:: 2021-09-19
+
 ## Windows Fundamentals
 
 ### Windows Updates
@@ -75,8 +78,3 @@ For example:
 References:
 
 * [Symbolic Permissions](../notes/symbolic-permissions.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 19, 2021

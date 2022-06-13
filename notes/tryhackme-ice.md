@@ -1,5 +1,8 @@
 # Ice
 
+author:: Nathan Acks  
+date:: 2021-12-07
+
 * [TryHackMe: Ice](https://tryhackme.com/room/ice)
 
 ## Recon
@@ -239,8 +242,3 @@ ELAPSED TIME: 2 h 39 min
 * [Using Hydra](hydra.md)
 * [Using John the Ripper](john-the-ripper.md)
 * [Kerberos](kerberos.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> December 7, 2021

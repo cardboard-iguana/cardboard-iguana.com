@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-28
+
 ## What the Shell?
 
 ### Socat Encrypted Shells
@@ -228,8 +231,3 @@ In practice, this is going to require uploading both a simple webshell *and* the
 > Create both staged and stageless meterpreter shells for either target. Upload and manually activate them, catching the shell with netcat — does this work?
 
 Unsurprisingly, neither version of Meterpreter works, though netcat at least catches an incoming connection in both cases.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 28, 2021

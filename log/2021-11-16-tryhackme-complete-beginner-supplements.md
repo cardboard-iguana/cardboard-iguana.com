@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-11-16
+
 ## Volatility
 
 ### Examining Our Patient
@@ -43,8 +46,3 @@ Maybe something’s up with my install of Volatility 3?
 
 * [VirusTotal](https://www.virustotal.com)
 * [Hybrid Analysis](https://www.hybrid-analysis.com)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 16, 2021

@@ -1,5 +1,8 @@
 # Equivalent Windows and \*NIX Commands
 
+author:: Nathan Acks  
+date:: 2022-04-25
+
 |      Linux | Windows           |
 | ----------:|:----------------- |
 |        cat | type              |
@@ -96,8 +99,3 @@ If credentials are saved for a particular user (use `cmdkey /list` to check), th
 * [How to find a file or folder in MS-DOS or Windows command line](https://www.computerhope.com/issues/ch000309.htm)
 * [Enumerate Windows Environments](enumerate-windows-environments.md)
 * [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 25, 2022

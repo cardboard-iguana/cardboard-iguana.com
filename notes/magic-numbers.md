@@ -1,5 +1,8 @@
 # Magic Numbers
 
+author:: Nathan Acks  
+date:: 2021-10-09
+
 Magic numbers comprise the first few bytes of a file (often, but not always, the first 4 bytes). Text files don't have magic number, so one trick you can do is just insert four ASCII characters in the front of your file and then use a hex editor to change them to an appropriate magic number.
 
 The `hexeditor` app is a quick-and-easy hex editor, and `file` can give you a sense of whether you've effectively spoofed a file's magic number.
@@ -10,8 +13,3 @@ Note that this can be a lot trickier if you're not dealing with PHP, since many 
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 9, 2021

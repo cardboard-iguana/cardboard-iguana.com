@@ -1,5 +1,8 @@
 # ARP Protocol
 
+author:: Nathan Acks  
+date:: 2022-03-31
+
 The ARP protocol links OSI layers 2 and 3 by mapping IP addresses to MAC addresses. ARP packet message headers contain two operation codes: REQUEST (1) and REPLY (2).
 
 Basically, an ARP request will broadcast “to” a particular IP address but using the “broadcast” MAC address (00:00:00:00:00:00), and the computer with that IP address will then reply in a non-broadcast fashion (since this requires that both the MAC address and IP address be filled in, such a direct reply provides the desired information by way of its very existence).
@@ -50,8 +53,3 @@ Note that the `r` here isn't a mistake -- rather it specifies a "raw string" (th
 * [Scapy](https://scapy.net/)
 * [Quick Answer: How Do You Write An F String In Python](https://whatisanything.com/how-do-you-write-an-f-string-in-python/#What_does_R_mean_Python)
 * [2022-03-31 - TryHackMe: Jr. Penetration Tester](../log/2022-03-31-tryhackme-jr-penetration-tester.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 31, 2022

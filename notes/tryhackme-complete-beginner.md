@@ -1,5 +1,9 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-09-26  
+tags:: #MOC
+
 ## Introduction
 
 ### Tutorial
@@ -143,9 +147,3 @@
 ## References
 
 * [TryHackMe: Complete Beginner](https://tryhackme.com/path/outline/beginner)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 26, 2021  
-<span aria-hidden="true">🏷️</span> #MOC

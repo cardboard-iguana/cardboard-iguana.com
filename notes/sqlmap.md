@@ -1,5 +1,8 @@
 # Using “sqlmap”
 
+author:: Nathan Acks  
+date:: 2022-01-30
+
 Used to automate SQLi attacks (and apparently banned on the OSCP because it makes things too easy).
 
 Useful flags:
@@ -40,8 +43,3 @@ One handy way to seed a URL is using requests harvested with Burp Suite.
 * [SQL Injection](sql-injection.md)
 * [Using Metasploit](metasploit.md)
 * [Using Burp Suite](burp-suite.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 30, 2022

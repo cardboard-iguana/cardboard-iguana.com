@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-06
+
 ## OWASP Top 10
 
 ### (Severity 04) XML External Entity
@@ -133,8 +136,3 @@ What’s getting encoded here is the `rce` class. Python will call `rce.__reduce
 (SIDE NOTE: Isn’t `nc` a more common name for `netcat`? Debian provides links to both in /etc/aleternatives, but it seems best not to assume we’re on a Debian system…)
 
 * [pickle — Python object serialization](https://docs.python.org/3/library/pickle.html)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 6, 2021

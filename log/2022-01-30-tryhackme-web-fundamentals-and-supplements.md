@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals & Supplements
 
+author:: Nathan Acks  
+date:: 2022-01-30
+
 ## Tools'R'us
 
 [See my Tools'R'us CTF write-up.](../notes/tryhackme-tools-r-us.md)
@@ -108,8 +111,3 @@ One handy way to seed a URL is using requests harvested with Burp Suite.
 * [Using “sqlmap”](../notes/sqlmap.md)
 * [Using Metasploit](../notes/metasploit.md)
 * [Using Burp Suite](../notes/burp-suite.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 30, 2022

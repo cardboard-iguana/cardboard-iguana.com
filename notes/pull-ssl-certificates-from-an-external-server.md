@@ -1,5 +1,7 @@
 # Pull SSL Certificates from an External Server
 
+author:: Nathan Acks
+
 ```bash
 # Pull a server's certificate:
 #
@@ -32,7 +34,3 @@ openssl x509 -noout -in $CERT -fingerprint -md5
 
 * [How to inspect remote SMTP server's TLS certificate?](https://serverfault.com/a/131628)
 * [SSL Shopper Certificate Decoder](https://www.sslshopper.com/certificate-decoder.html)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

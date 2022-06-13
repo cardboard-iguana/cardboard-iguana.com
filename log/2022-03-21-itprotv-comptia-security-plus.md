@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-21
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be reading chapter 20 of the Security+ Exam Cram, “Wireless Security Settings”.
@@ -150,8 +153,3 @@ Options for digital destruction:
 * Incineration
 
 The standard for overwriting (“shredding”) files is 3 passes (0, then 1, then random) as defined in the DoD 5220.22 standard. 
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 21, 2022

@@ -1,5 +1,8 @@
 # Using NFS
 
+author:: Nathan Acks  
+date:: 2022-04-21
+
 ## NFS Basics
 
 All versions of NFS use port 2049 to transfer data; NFSv1 - NFSv3 also depended on the “portmapper” service running on port 111, but this requirement was removed in NFSv4.
@@ -32,8 +35,3 @@ Root squashing can be *disabled* in `/etc/exports` with the `no_root_squash` fla
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [What is NFS port number in Linux?](https://racinpaper.com/auto-racing/what-is-nfs-port-number-in-linux.html)
 * [2022-04-20 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 21, 2022

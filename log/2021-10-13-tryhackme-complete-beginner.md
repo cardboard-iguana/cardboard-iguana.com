@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-13
+
 ## Encryption
 
 ### Key Terms
@@ -50,8 +53,3 @@ The `icacls` tool can be used to check (and change!) permissions at the command 
 * `(RX)` — read and execute
 * `(AD)` — append data (add subdirectories)
 * `(WD)` — write data and add files
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 13, 2021

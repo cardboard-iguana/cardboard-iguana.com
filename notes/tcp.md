@@ -1,5 +1,8 @@
 # TCP Protocol
 
+author:: Nathan Acks  
+date:: 2022-04-03
+
 ## Flags
 
 * URG — Process the current TCP packet immediately. Directs the receiving system to examine the “urgent pointer” field.
@@ -19,8 +22,3 @@ The TCP “acknowledgment number” contains the *next* sequence number that the
 * [Transmission Control Protocol (RFC 793)](https://datatracker.ietf.org/doc/html/rfc793.html)
 * [TCP Model](tcp-model.md)
 * [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 3, 2022

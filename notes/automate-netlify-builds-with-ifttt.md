@@ -1,5 +1,7 @@
 # Automate Netlify Builds with IFTTT
 
+author:: Nathan Acks
+
 ## In Netlify
 
 * Go into your Netlify site’s “Build & Deploy” settings.
@@ -29,7 +31,3 @@
 * [Trigger a Netlify Build Every Day With IFTTT](https://www.11ty.dev/docs/quicktips/netlify-ifttt/).
 * [Netlify](https://www.netlify.com)
 * [IFTTT](https://ifttt.com)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

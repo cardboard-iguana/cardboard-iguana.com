@@ -1,5 +1,7 @@
 # Using “xxd”
 
+author:: Nathan Acks
+
 The xxd command is actually pretty standard on Linux systems.
 
 ```bash
@@ -11,7 +13,3 @@ xxd $BINARY $HEXDUMP
 #
 xxd -r $HEXDUMP $BINARY 
 ```
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks

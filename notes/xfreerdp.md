@@ -1,5 +1,8 @@
 # Using XFreeRDP
 
+author:: Nathan Acks  
+date:: 2021-10-29
+
 ```bash
 xfreerdp /dynamic-resolution \
          +clipboard \
@@ -12,8 +15,3 @@ xfreerdp /dynamic-resolution \
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 29, 2021

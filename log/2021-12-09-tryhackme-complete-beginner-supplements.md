@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-12-09
+
 ## XXE
 
 ### Deploy the VM
@@ -75,8 +78,3 @@ These last two features are what we will leverage to attack applications that ac
 ```
 
 The SYSTEM directive allows us to include other files… Possibly quite sensitive ones, depending on the permissions of our webserver and how good the application’s input sanitization is.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> December 9, 2021

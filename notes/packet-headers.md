@@ -1,5 +1,8 @@
 # Packet Headers
 
+author:: Nathan Acks  
+date:: 2021-09-14
+
 Important common TCP and UDP packet headers.
 
 | Header                 | TCP | UDP | Description                                                                                                                                                             |
@@ -18,8 +21,3 @@ Important common TCP and UDP packet headers.
 ## References
 
 * [TryHackMe: Pre Security](tryhackme-pre-security.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 14, 2021

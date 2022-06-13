@@ -1,5 +1,8 @@
 # TryHackMe: Polkit
 
+author:: Nathan Acks  
+date:: 2022-02-13
+
 ## Polkit (CVE-2021-3560)
 
 ### Background
@@ -105,8 +108,3 @@ sleep ${TIME}s; kill $!
 Here `$UID` is the user ID retrieved in step 4 (note that there’s *no* space between `User` and the ID, so you’ll be hitting an endpoint that looks something like `/org/freedesktop/Accounts/User1003`), `$PASSWORD_HASH` is the hash returned in step 5, and `$TIME` is the same timing determined from step 3. The second `string`  being passed in the user password hint.
 
 (7) Log in as the new user (probably via `su`).
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 13, 2022

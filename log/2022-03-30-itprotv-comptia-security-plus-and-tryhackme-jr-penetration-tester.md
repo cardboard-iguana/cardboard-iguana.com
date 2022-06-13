@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-03-30
+
 ## CompTIA Security+ Exam Cram
 
 Today I’ll be covering Chapter 10 of the Security+ Exam Cram, “Virtualization and Cloud Computing”. I won’t be doing any ITPro.TV lectures, however, as this is the first in another long stretch of readings I want to finish before starting the next sequence there.
@@ -126,8 +129,3 @@ Useful flag I didn’t know before: `-k` keeps listening even after the initial 
 Given the general usefulness of netcat (you can straight up use it as a telnet replacement), it’s hard to see why you’d use telnet these days.
 
 * [Using “netcat”](../notes/netcat.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 30, 2022

@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-11-03
+
 ## Vulnversity
 
 ### Reconnaissance
@@ -434,8 +437,3 @@ $FILE.sh -p # Root!
 ```
 
 * [systemctl (GTFOBins)](https://gtfobins.github.io/gtfobins/systemctl/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 3, 2021

@@ -1,5 +1,8 @@
 # Using PowerShell
 
+author:: Nathan Acks  
+date:: 2021-11-25
+
 ## Access the Registry Through PowerShell
 
 You can actually access the registry from PowerShell using the `cd` command: `cd HKLM:\` will take you to the HKEY_LOCAL_MACHINE hive, for instance.
@@ -47,8 +50,3 @@ The algorithm can be excluded (in which case SHA-256 is used). *Lots* of differe
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Get-WinEvent](get-winevent.md)
 * [TryHackMe: MAL: Researching](tryhackme-mal-researching.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 25, 2021

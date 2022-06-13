@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-10-02
+
 ## Network Services
 
 ### Exploiting Telnet
@@ -7,7 +10,7 @@
 ```bash
 # Listen for ICMP ping packets on an interface:
 #
-sudo tcpdump ip proto \\icmp -i $IFACE
+sudo tcpdump ip proto \icmp -i $IFACE
 
 # Use Metasploit to generate the code for a remote shell:
 # 
@@ -65,8 +68,3 @@ Kali’s rockyou.txt.gz is apparently a list of 14 million passwords dumped duri
 
 * [rockyou.txt wordlist](https://github.com/zacheller/rockyou)
 * [RockYou Hack: From Bad To Worse](https://techcrunch.com/2009/12/14/rockyou-hack-security-myspace-facebook-passwords/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 2, 2021

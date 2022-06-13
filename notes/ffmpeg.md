@@ -1,5 +1,8 @@
 # Using “ffmpeg”
 
+author:: Nathan Acks  
+date:: 2021-09-10
+
 ## M4A to MP3
 
 ```bash
@@ -40,8 +43,3 @@ ffmpeg -i $INPUT.mp4 \
 * [FFmpeg MP3 Encoding Guide](https://trac.ffmpeg.org/wiki/Encode/MP3)
 * [Create animated GIFs from MP4 with FFmpeg](https://homehack.nl/create-animated-gifs-from-mp4-with-ffmpeg/)
 * [Create animated GIF and WebP from videos using FFmpeg](https://mattj.io/posts/2021-02-27-create-animated-gif-and-webp-from-videos-using-ffmpeg/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 10, 2021

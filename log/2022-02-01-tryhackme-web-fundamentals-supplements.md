@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals (Supplements)
 
+author:: Nathan Acks  
+date:: 2022-02-01
+
 ## Inclusion
 
 [See my Inclusion CTF write-up.](../notes/tryhackme-inclusion.md)
@@ -266,8 +269,3 @@ password_file.close()
 ```
 
 Note that, like the port scanner earlier, this is slooooooow... (At least it provides us with some feedback that it's actually working though.)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 1, 2022

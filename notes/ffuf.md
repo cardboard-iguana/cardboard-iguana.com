@@ -1,5 +1,8 @@
 # Using “fuff”
 
+author:: Nathan Acks  
+date:: 2022-02-28
+
 A general web fuzzing tool. Use `FUZZ` as your placeholder.
 
 ## Directory/File Enumeration
@@ -51,8 +54,3 @@ Note that ffuf will try every possible combination of elements between the two w
 
 * [TryHackMe: Jr. Penetration Tester](tryhackme-jr-penetration-tester.md)
 * [Using “gobuster”](gobuster.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 28, 2022

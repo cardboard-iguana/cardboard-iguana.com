@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
+author:: Nathan Acks  
+date:: 2022-03-06
+
 ## CompTIA Security+ Exam Cram
 
 Today I’m going to be reading through chapters 17 (Secure Protocols) and 25 (Public Key Infrastructure) of the CompTIA Security+ Exam Cram.
@@ -483,8 +486,3 @@ The distinction makes sense when you consider that tunnel mode is joining two ex
 Additionally, IPSec tunnels are built using either PPTP (the point-to-point tunneling protocol) or L2TP (the layer 2 tunneling protocol). Note, however, that only L2TP is considered secure.
 
 IKE occurs over the Internet Security Association and Key Management Protocol (ISAKMP), which is how its tagged in Wireshark.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> March 6, 2022

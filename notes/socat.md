@@ -1,5 +1,8 @@
 # Using “socat”
 
+author:: Nathan Acks  
+date:: 2021-10-28
+
 Socat: An anything-to-anything connector!
 
 ## “socat” vs. “netcat”
@@ -103,8 +106,3 @@ NOTE that the reverse shell will not pick up on your terminal size, so you’ll 
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Using “netcat”](netcat.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 28, 2021

@@ -1,5 +1,8 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-04-11
+
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
 ### Vulnerability Scans
@@ -66,8 +69,3 @@ That said, only ~20% of vulnerabilities have an actual exploit, and only ~2% are
 ### Finding Manual Exploits
 
 * [Rapid7 Vulnerability & Exploit Database](https://www.rapid7.com/db/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 11, 2022

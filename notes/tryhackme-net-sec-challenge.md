@@ -1,5 +1,8 @@
 # Net Sec Challenge
 
+author:: Nathan Acks  
+date:: 2022-04-03
+
 * [TryHackMe: Net Sec Challenge](https://tryhackme.com/room/netsecchallenge)
 
 This CTF is just a series of questions. All should be solvable using nmap, telnet, and Hydra… Though I’m going to substitute netcat for telnet. However, I’m sticking to the spirit of things, and will only use those three tools.
@@ -45,7 +48,8 @@ PORT      STATE SERVICE     REASON         VERSION
 10021/tcp open  ftp         syn-ack ttl 61 vsftpd 3.0.3
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
 SF-Port22-TCP:V=7.92%I=7%D=4/3%Time=624A60E5%P=x86_64-pc-linux-gnu%r(NULL,
-SF:29,"SSH-2\.0-OpenSSH_8\.2p1\x20THM{946219583339}\r\n");
+SF:29,"SSH-2\.0-OpenSSH_8\.2p1 THM{946219583339}
+");
 No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
 TCP/IP fingerprint:
 OS:SCAN(V=7.92%E=4%D=4/3%OT=22%CT=1%CU=32245%PV=Y%DS=4%DC=T%G=Y%TM=624A6111
@@ -206,8 +210,3 @@ ELAPSED TIME: 2 h 31 min
 * [How to list FTP directories using telnet?](https://stackoverflow.com/questions/50324402/how-to-list-ftp-directories-using-telnet#comment126707507_50324402)
 * [FTP Commands: QUIT, USER, ABOR, ACCT, SYST, XDEL](https://www.serv-u.com/resource/tutorial/quit-user-abor-acct-syst-xdel-ftp-command)
 * [FTP Commands: APPE, MLSD, MLST, LIST, RETR, STOR, STOU](https://www.serv-u.com/resource/tutorial/appe-stor-stou-retr-list-mlsd-mlst-ftp-command)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 3, 2022

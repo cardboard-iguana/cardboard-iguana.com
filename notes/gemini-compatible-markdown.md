@@ -1,5 +1,8 @@
 # Gemini Compatible Markdown
 
+author:: Nathan Acks  
+date:: 2022-02-16
+
 Gemini uses a syntax that is *almost* a subset of CommonMark.
 
 Be aware that Gemini treats all line breaks literally and clients are expected to wrap text. Line breaks are also rendered literally. So, one paragraph = one line!
@@ -22,7 +25,7 @@ Gemini doesn’t explicitly support any formatting tags *within* a line. However
 
 Instead of using two stars (\*\*) to denote bolded text, it’s probably better to use UPPER CASE for documents destined for Gemini.
 
-Since Markdown requires that these characters be escaped, so text destined for Gemini will need to be processed to remove back-slashed escapes (\\). Note that md2gmi can handle this automatically.
+Since Markdown requires that these characters be escaped, so text destined for Gemini will need to be processed to remove back-slashed escapes (\). Note that md2gmi can handle this automatically.
 
 ### Lists
 
@@ -103,8 +106,3 @@ Incidentally, this gives good guidance as to how to write image alt-text — alt
 * [Jekyll](https://jekyllrb.com/)
 * [Obsidian](https://obsidian.md)
 * [kepano / obsidian-minimal](https://github.com/kepano/obsidian-minimal)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> February 16, 2022

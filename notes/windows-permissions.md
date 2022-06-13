@@ -1,5 +1,8 @@
 # Windows Permissions
 
+author:: Nathan Acks  
+date:: 2022-04-22
+
 Windows access is default-deny.
 
 | Permission           | Meaning for Folders                                                                                               | Meaning for Files                                                                                     |
@@ -53,8 +56,3 @@ Note that non-admin domain users may still be local admins.
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [ITPro.TV CompTIA Security+](itprotv-comptia-security-plus.md)
 * [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 22, 2022

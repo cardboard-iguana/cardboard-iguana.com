@@ -1,5 +1,8 @@
 # TryHackMe: Complete Beginner
 
+author:: Nathan Acks  
+date:: 2021-09-28
+
 ## NMAP
 
 Interesting (but makes sense)… Each connection a web browser makes corresponds to a different local port (so, $RANDOM_PORT → 443).
@@ -117,8 +120,3 @@ Some useful flags for firewall avoidance:
 For whatever reason, Wireshark only works for me when run using `sudo -E wireshark` from the terminal (something seems to be broken with the GUI process elevation prompt, and Wireshark can’t see any interfaces).
 
 Nmap sends a RST after the three-way handshake in a TCP connect scan in order to quickly tear down the connection.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 28, 2021

@@ -1,5 +1,8 @@
 # OPSEC in Theory and Practice
 
+author:: Nathan Acks  
+date:: 2021-04-04
+
 An overview of OPSEC history and practice produced by The Grugq.
 
 The course is presented as self-paced, but seems to be just recordings of a set of live presentations. Occasionally there’s mentions of movies or other supplemental activities that aren’t included in the course site, so I think the fact that I watched/read the material well after its initial release means that I missed some “extracurricular” portions of the sequence.
@@ -1061,8 +1064,3 @@ Counterintelligence is a long game. You’re waiting for a mistake… And once a
 * [KGB (Wikipedia)](https://en.wikipedia.org/wiki/KGB)
 * [Foreign Intelligence Service (Russia) (Wikipedia)](https://en.wikipedia.org/wiki/Foreign_Intelligence_Service_%28Russia%29)
 * [Prisoner’s dilemma (Wikipedia)](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 4, 2021

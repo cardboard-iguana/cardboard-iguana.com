@@ -1,5 +1,8 @@
 # TryHackMe: Web Fundamentals
 
+author:: Nathan Acks  
+date:: 2022-01-25
+
 ## ZTH: Obscure Web Vulnerabilities (Part 2)
 
 ### IDOR Introduction
@@ -36,8 +39,3 @@ Use `wfuzz --help` for a full list of options. The `--hc 404` option is particul
 ### API Bypass Exploitation
 
 Basically, the idea here is that sometimes APIs (especially non-public ones!) are sloppy about checking user authentication or permissions. This is generally harder to work with than fuzzing a website directly (since you're often "flying blind" when experimenting with the API), but can be even more powerful.
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> January 25, 2022

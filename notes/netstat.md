@@ -1,5 +1,8 @@
 # Using “netstat”
 
+author:: Nathan Acks
+date:: 2022-04-21
+
 ## Flags
 
 * `-a` — all listening parts and established connections
@@ -14,8 +17,3 @@
 ## References
 
 * [2022-04-20 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks
-<span aria-hidden="true">📅</span> April 21, 2022

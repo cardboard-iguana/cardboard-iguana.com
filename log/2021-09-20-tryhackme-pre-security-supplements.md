@@ -1,5 +1,8 @@
 # TryHackMe: Pre Security (Supplements)
 
+author:: Nathan Acks  
+date:: 2021-09-20
+
 ## Bash Scripting
 
 ### Variables
@@ -83,8 +86,3 @@ echo "${MY_ARRAY[@]}" # item3 item2
 MY_ARRAY[3]="item4"
 echo "${MY_ARRAY[@]}" # item3 item2 item4
 ```
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> September 20, 2021

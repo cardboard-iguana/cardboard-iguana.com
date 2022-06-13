@@ -1,5 +1,9 @@
 # TryHackMe: Jr. Penetration Tester
 
+author:: Nathan Acks  
+date:: 2022-04-21  
+tags:: #MOC
+
 ## Introduction to Pentesting
 
 ### Pentesting Fundamentals
@@ -155,9 +159,3 @@
 ## References
 
 * [TryHackMe: Jr. Penetration Tester](https://tryhackme.com/path/outline/jrpenetrationtester)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 21, 2022  
-<span aria-hidden="true">🏷️</span> #MOC

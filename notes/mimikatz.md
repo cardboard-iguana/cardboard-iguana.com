@@ -1,5 +1,8 @@
 # Using Mimikatz
 
+author:: Nathan Acks  
+date:: 2021-12-06
+
 Mimikatz needs to be run with administrative privileges (on the local machine), and provides its own command prompt. Use the `privilege::debug` command to check if you’re running with the right privileges.
 
 ## Dumping Tickets
@@ -39,8 +42,3 @@ Obviously this isn’t very persistent itself, as the skeleton key will be lost 
 * [TryHackMe: Attacking Kerberos](tryhackme-attacking-kerberos.md)
 * [Kerberos](kerberos.md)
 * [Windows Password Hashes](windows-password-hashes.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> December 6, 2021

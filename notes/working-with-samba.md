@@ -1,5 +1,8 @@
 # Working With Samba
 
+author:: Nathan Acks  
+date:: 2022-04-25
+
 ## smbmap
 
 * `-h` — IP address or host to enumerate
@@ -53,8 +56,3 @@ Use `net share` on Windows to list *all* current shares (including some that are
 * [SAMBA (a.k.a. CIFS) Protocol](samba.md)
 * [How to view all network shares in Windows](https://www.computerhope.com/issues/ch000534.htm)
 * [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> April 25, 2022

@@ -1,5 +1,8 @@
 # Version Control with Git
 
+author:: Nathan Acks  
+date:: 2018-08-01
+
 ## DevOps and Git in a Nutshell
 
 DevOps is considered to be an implementation of the continuous development philosophy, as opposed to waterfall development. Lots of little version, each with only a few features or bug fixes.
@@ -478,8 +481,3 @@ Some common rules:
 
 * [Coursera: Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
 * [git: Reference](https://git-scm.com/docs/)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> August 1, 2018

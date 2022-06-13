@@ -1,5 +1,8 @@
 # Using Hashcat
 
+author:: Nathan Acks  
+date:: 2021-10-12
+
 ```bash
 hashcat -m $TYPE -O $HASHFILE $WORDLIST
 ```
@@ -47,8 +50,3 @@ The Hashcat `combinator.bin` utility combines two wordlists such that every entr
 * [hashcat - cracking a salted sha256](https://security.stackexchange.com/a/204978)
 * [TryHackMe: hackernote](tryhackme-hackernote.md)
 * [Using Metasploit](metasploit.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> October 12, 2021

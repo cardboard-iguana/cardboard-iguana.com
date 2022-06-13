@@ -1,5 +1,8 @@
 # How to Load a Shell with a Simple Executable
 
+author:: Nathan Acks  
+date:: 2021-11-02
+
 It’s actually trivial to write a C program that loads up a shell.
 
 ```c
@@ -40,8 +43,3 @@ msfvenom -p linux/x86/exec CMD="/bin/bash -p" -f elf \
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Exploiting LD_PRELOAD](exploiting-ld-preload.md)
 * [Using Metasploit](metasploit.md)
-
-- - - -
-
-<span aria-hidden="true">👤</span> Nathan Acks  
-<span aria-hidden="true">📅</span> November 2, 2021
