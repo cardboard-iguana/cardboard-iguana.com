@@ -193,7 +193,7 @@ Windows systems are also vulnerable to LFI attacks via PHP. In fact, `file_get_c
 
 Common files to check:
 
-* /boot.ini (a.k.a., `C:oot.ini` — boot options on Windows systems)
+* /boot.ini (a.k.a., `C:\boot.ini` — boot options on Windows systems)
 * /etc/issue
 * /etc/passwd
 * /etc/profile
