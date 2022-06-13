@@ -373,7 +373,7 @@ Host script results:
 |     Path: C:	mp
 |     Anonymous access: READ/WRITE
 |     Current user access: READ/WRITE
-|   \10.10.179.107nonymous: 
+|   \10.10.179.107\Anonymous: 
 |     Type: STYPE_DISKTREE
 |     Comment: 
 |     Users: 0
