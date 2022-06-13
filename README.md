@@ -20,7 +20,7 @@
 
 ## Elsewhere
 
-* [Homepage](https://necopinus.xyz)
+* [Personal Homepage](https://necopinus.xyz)
 * [GitHub](https://github.com/necopinus)
 * [Resume](https://registry.jsonresume.org/necopinus)
 * [LinkedIn](https://www.linkedin.com/in/necopinus/)
