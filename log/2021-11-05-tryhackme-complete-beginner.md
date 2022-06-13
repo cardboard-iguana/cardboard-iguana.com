@@ -386,7 +386,7 @@ Host script results:
 |     Comment: Printer Drivers
 |     Users: 0
 |     Max Users: <unlimited>
-|     Path: C:ar\lib\samba\printers
+|     Path: C:\var\lib\samba\printers
 |     Anonymous access: <none>
 |_    Current user access: <none>
 
