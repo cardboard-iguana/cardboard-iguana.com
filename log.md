@@ -1,5 +1,6 @@
 # A Hacker’s Log
 
+* [2022-06-23 - AWS Deep Dive](log/2022-06-23-aws-deep-dive.md)
 * [2022-06-09 - AWS Deep Dive](log/2022-06-09-aws-deep-dive.md)
 * [2022-06-06 - AWS Deep Dive](log/2022-06-06-aws-deep-dive.md)
 * [2022-06-05 - AWS Deep Dive](log/2022-06-05-aws-deep-dive.md)
