@@ -19,6 +19,18 @@ date:: 2022-04-25
 | traceroute | tracert           |
 |       wget | wget              |
 
+## cat
+
+```bash
+# Use cat to add line numbers to a file!
+#
+cat -n < $FILE
+
+# Only number non-blank lines
+#
+cat -b < $FILE
+```
+
 ## dig
 
 ```bash
