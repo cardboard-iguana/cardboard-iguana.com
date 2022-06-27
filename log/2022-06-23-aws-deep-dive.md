@@ -101,12 +101,6 @@ Policies actually support some limited variables: For example, `${aws:PrincipalT
 
 <!--
 
-## Enumerating AWS Roles through “AssumeRole“
-
-REFERENCES:
-
-* [Assume the Worst: Enumerating AWS Roles through “AssumeRole“](https://rhinosecuritylabs.com/aws/assume-worst-aws-assume-role-enumeration/)
-
 ## Amazon S3: Bucket Policies and User Policies
 
 (Step through this as an exercise.)

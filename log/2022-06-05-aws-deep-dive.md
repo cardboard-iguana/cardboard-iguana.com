@@ -100,11 +100,12 @@ REFERENCES:
 
 Services (really, objects in a service) in AWS can’t be assigned policies directly, but *can* be assigned *roles*.
 
-In general, roles are used to package policies for *service objects*, while groups are used to package policies for *users*.
+In general, roles are used to package policies for *service objects*, while groups are used to package policies for *users*. (That said, roles *can* be assigned to users as well; they’re quite flexible.)
 
 REFERENCES:
 
 * [AWS Essentials: IAM Roles (YouTube)](https://youtu.be/7sYE6J1_CsQ)
+* [Assume the Worst: Enumerating AWS Roles through ‘AssumeRole’](https://rhinosecuritylabs.com/aws/assume-worst-aws-assume-role-enumeration/)
 
 ### AWS Global Infrastructure
 
