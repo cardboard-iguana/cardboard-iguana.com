@@ -1,9 +1,9 @@
 # Using “netcat”
 
 author:: Nathan Acks
-date:: 2022-05-10
+date:: 2022-06-29
 
-The netcat binary is *usually* `nc`, but some systems have it at `ncat` instead.
+The netcat binary is *usually* `nc`, but some systems have it at `ncat` or `netcat` instead.
 
 Note that the `-c` and `-e` flags are considered security risks (for obvious reasons!), and are disabled on some systems.
 
@@ -38,7 +38,7 @@ A netcat server doesn’t have to be used just for reverse shells. For example, 
 * `-l` — listen for incoming connections (rather than make an outgoing connection)
 * `-v` — verbose
 * `-n` — skip DNS resolution (slightly faster, less noisy on the network)
-* `-p` — specify the port to listen to
+* `-p` — specify the port to *listen* to
 * `-u` — connect using UDP instead of TCP
 * `-k` — keep listening even after client disconnects
 
@@ -99,7 +99,13 @@ nc -lvnp $INCOMING_PORT -c "nc $TARGET_IP $TARGET_PORT"
 
 ## Other Uses
 
+### Telnet Replacement
+
 If you just have netcat connect to a service directly, it functions exactly like telnet.
+
+### Port Scanning
+
+With the `-z` option, netcat will attempt to connect to all TCP ports on the targets in a sequential fashion, reporting which are open. It’s like a simple, very slow version of Nmap!
 
 ## References
 
@@ -113,3 +119,5 @@ If you just have netcat connect to a service directly, it functions exactly like
 * [2022-03-30 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
 * [2022-05-09 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
+* [2022-06-29 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-06-29-offsec-live-pen-200-and-aws-deep-dive.md)
+* [Using “nmap”](nmap.md)

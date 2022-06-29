@@ -3,28 +3,58 @@
 author:: Nathan Acks  
 date:: 2022-06-29
 
-This entry was actually written over the course of most of the day, as the next session of Offensive Security’s free streaming “OffSec Live” class was in the morning, while I worked on the “AWS Deep Drive” learning path in the evening.
+This entry was actually written over the course of most of the day, as the next session of Offensive Security’s free streaming “OffSec Live” class was in the morning and I worked on the “AWS Deep Drive” learning path in the evening.
 
 REFERENCES:
 
 * [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
 * [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
 
-## OffSec Live: ==xxx==
+## OffSec Live: Basic Tools, Part 1
 
-==xxx==
+(Missed the first few minutes again…)
+
+```bash
+# Use netcat to connect to any port (like Telnet).
+#
+#     -n    Prevent DNS lookups (good to use with IP addresses, as
+#           otherwise netcat will try to look these up!)
+#     -v    Increase verbosity (connection status, etc.)
+#
+nc -nv $IP $PORT
+
+# Use netcat to scan for open ports (slow, TCP-only).
+#
+#     -z    Try to connect to all TCP ports, and report which are open
+#
+nc -nzv $IP
+```
+
+The difference between a “reverse” and “bind” shell depends on where you’re working/observing from. A “reverse” shell is when you’re *receiving* the connection, while a “bind” shell is when you’re *initiating* a connection.
+
+REFERENCES:
+
+* [Using “netcat”](../notes/netcat.md)
 
 ## AWS CloudFormation Tutorial
 
-==(Watch + set up a stack.)==
+As the first part of today’s ”AWS Deep Dive” I’ll be watching and taking notes on a video detailing how to set up a CloudFormation stack in AWS. I’ll follow this up by any additional notes about my experiences setting up a similar stack myself.
+
+### Video Notes
+
+* ==xxx==
 
 REFERENCES:
 
 * [AWS CloudFormation Tutorial (YouTube)](https://youtu.be/LDSMIvUuFOE)
 
+### Stack Setup Notes
+
+* ==xxx==
+
 ## Amazon EC2: Auto Scaling
 
-==xxx==
+* ==xxx==
 
 REFERENCES:
 
