@@ -13,7 +13,17 @@ REFERENCES:
 
 ## OffSec Live: Basic Tools, Part 2
 
-==xxx==
+(As is becoming normal, I missed some of the beginning of this. Though this time I was late because of technical difficulties, rather than poor planning.)
+
+### NMAP & Wireshark
+
+* Nmap host discovery scans use the following tests (in order) for host discovery: ICMP ping, port 443, port 80, ICMP timestamp. Note that ICMP packets can only be sent when nmap is run with root privileges.
+* Even nmap’s host discovery scan (when run as root) can miss windows hosts. OffSec recommends supplementing this with a full scan of the top 10 most common ports with host discovery disabled (`--top-ports 10 -Pn`), as well as perhaps using a tool like `arping` (if you’re on the same network, of course).
+* Windows will respond to connections to closed ports with a RST packet *if* the firewall is down. (If the firewall is up, it will simply *not* respond.)
+
+REFERENCES:
+
+* [Using “nmap”](../notes/nmap.md)
 
 ## Global Infrastructure and Reliability
 

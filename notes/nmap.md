@@ -22,7 +22,7 @@ Most nmap scans will generate ~2x the number of packets as scanned ports, as unr
 * `-n` — Don’t resolve host names using DNS (or do reverse DNS resolution).
 * `-O` — OS detection. Generally requires at least one open and one closed port to be detected, and results will be distorted if the target is virtualized. The OS type is much more reliably detected than the OS version.
 * `-p-` — Scan all ports. (The end/beginning of port ranges can be excluded to represent 1/65535, so `-p-` is equivalent to `-p1-65535`.) If omitted, the 1000 most common ports are scanned by default.
-* `-Pn` — Scan the host even if it doesn’t respond to an initial ping. Necessary for scanning modern Windows systems, since the Windows Firewall blocks ICMP by default.
+* `-Pn` — Scan the host even if it doesn’t respond to an initial ping. *Necessary for scanning/discovering modern Windows systems, since the Windows Firewall blocks ICMP by default.*
 * `-r` — Scan ports in sequential order (rather than randomly). Can make for more accurate scans for targets that have only recently been brought online.
 * `-R` — Perform reverse DNS resolution even for offline hosts.
 * `-sC` — Scan with “default” script set; equivalent to `--script default`. Mostly provides basic intelligence.
@@ -49,7 +49,7 @@ Most nmap scans will generate ~2x the number of packets as scanned ports, as unr
 * `--script` — Run specified scripts, or all scripts in a specified category (as applicable). Also accepts wildcard matches (e.g., `ftp*`). See next section for script category breakdown.
 * `--source-port` — Specify the source port for a scan. possibly useful to evade some firewall rules?
 * `--spoof-mac` — Use a spoofed MAC address for the scan. Obviously only matters when you’re on the same subnet as the target; otherwise has the same caveats as IP spoofing.
-* `--top-ports` — Scan only the X most common ports. Nmap’s default is `--top-ports 1000`. Overridden when using `-p`.
+* `--top-ports` — Scan only the X most common ports. Nmap’s default is `--top-ports 1000`. Can be useful for detecting locked-down hosts (use `--top-ports 10 -Pn`). Overridden when using `-p`.
 * `--traceroute` — Perform a traceroute between the attacker and target systems. Note that nmap’s traceroute works in the opposite fashion (high TTL to low TTL) than traceroute/tracert. Note that most routers will not send ICMP TTL exceeded packets, and will thus show up as `*`.
 * `--ttl` — Set a custom TTL. Does not always work as you’d expect in my experience!
 * `--version-intensity` — Determine how much service information to collect (and thus how noisy the associated probes will be) with `-sV`. Ranges from 0 – 9; `--version-light` is equivalent to 2, `--version-all` is equivalent to 9.
@@ -75,7 +75,7 @@ Most nmap scans will generate ~2x the number of packets as scanned ports, as unr
 
 ### Host Discovery Options
 
-By default, nmap uses the following host discovery methods:
+By default, nmap uses the following host discovery methods (in order):
 
 |              | Superuser                                                | Regular User               |
 | ------------:|:-------------------------------------------------------- |:-------------------------- |
@@ -135,3 +135,4 @@ By default, nmap uses the following host discovery methods:
 * [TCP Idle Scan (-sI) (Official Nmap Project Guide)](https://nmap.org/book/idlescan.html)
 * [Nmap Scripting Engine Usage and Examples (Official Nmap Project Guide)](https://nmap.org/book/nse-usage.html)
 * [2022-05-09 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
+* [2022-07-06 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-07-06-offsec-live-pen-200-and-aws-deep-dive.md)
