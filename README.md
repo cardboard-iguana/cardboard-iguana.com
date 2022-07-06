@@ -2,6 +2,7 @@
 
 ## Hacker’s Log (Recent)
 
+* [2022-07-05 - AWS Deep Dive](log/2022-07-05-aws-deep-dive.md)
 * [2022-07-01 - OffSec Live: PEN-200](log/2022-07-01-offsec-live-pen-200.md)
 * [2022-06-29 OffSec Live: PEN-200 & AWS Deep Dive](log/2022-06-29-offsec-live-pen-200-and-aws-deep-dive.md)
 * [2022-06-28 - AWS Deep Dive](log/2022-06-28-aws-deep-dive.md)
@@ -11,7 +12,6 @@
 * [2022-06-06 - AWS Deep Dive](log/2022-06-06-aws-deep-dive.md)
 * [2022-06-05 - AWS Deep Dive](log/2022-06-05-aws-deep-dive.md)
 * [2022-05-10 - TryHackMe: Jr. Penetration Tester (Supplements)](log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
-* [2022-05-09 - TryHackMe: Jr. Penetration Tester (Supplements)](log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
 
 ## Website Navigation
 
