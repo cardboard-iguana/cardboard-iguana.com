@@ -1,4 +1,4 @@
-# OffSec Live: PEN-200 & AWS Deep Dive #Draft
+# OffSec Live: PEN-200 & AWS Deep Dive
 
 author:: Nathan Acks  
 date:: 2022-07-06
