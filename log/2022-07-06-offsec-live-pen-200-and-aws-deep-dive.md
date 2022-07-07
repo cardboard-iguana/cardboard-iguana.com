@@ -27,13 +27,78 @@ REFERENCES:
 
 ## Global Infrastructure and Reliability
 
-==xxx==
+AWS controls (owns?) the fiber connections between data centers and regions.
+
+Features are sometimes deployed on a region-by-region basis (generally if they’re hardware-dependent).
+
+“Availability zones” are comprised on one or more data centers that act together as a unit. Regions contain multiple availability zones (*at least* two), which are distributed geographically to make local disasters unlikely (but still close enough so that latency is negligable).
+
+AWS recommends running across at least two availability zones in a region.
+
+### Edge Locations
+
+“Edge locations” are data centers that run services *apart* from regions — CloudFront, Route 53, and Outposts (on-prem AWS data centers). These are more distributed than actual availability zones, as the point is to get these services as close to the actual customers/users as possible.
+
+### Provisioning AWS Resources
+
+“Elastic Beanstalk” and “CloudFormation” are similar in purpose. The difference is that Beanstalk functions as an EC2-centric abstraction layer (think: Heroku), while CloudFormation supports more services and is a full “infrastructure as code” offering. (In fact, formally Beanstalk is an application that runs *on top of* CloudFormation!)
+
+REFERENCES:
+
+* [What is the difference between Elastic Beanstalk and CloudFormation for a .NET project?](https://stackoverflow.com/a/14429767)
+* [AWS CloudFormation FAQs](https://aws.amazon.com/cloudformation/faqs/)
 
 ## Networking
 
-==xxx==
+While “Internet Gateways” route public traffic into a VPC, “Virtual Private Gateways” take care of routing traffic from *private* networks (via a VPN).
+
+A third option for connecting a VPC is “Direct Connect”, which is a dedicated fiber line from an on-prem data center to AWS (and from there the appropriate VPC).
+
+VPCs can contain multiple Internet Gateways, Virtual Private Gateways, and Direct Connect lines, though each must be attached to its own distinct subnet (note, however, that a subnet does *not* need to have *any* of these features).
+
+### Subnets and NACLs
+
+All packets in AWS transiting between VPC subnets are checked using NACLs. Security groups provide EC2 instance level packet filtering. NACLs are stateless, while security groups are stateful (and always allow packets for established connections).
+
+### Global Networking
+
+Route 53 can provide geographically-dependent and load balanced DNS responses.
+
+<!--
 
 ## Storage and Databases
+
+==xxx==
+
+### EBS
+
+==xxx==
+
+### S3
+
+==xxx==
+
+### EFS
+
+==xxx==
+
+### RDS
+
+==xxx==
+
+### DynamoDB
+
+==xxx==
+
+### Redshift
+
+==xxx==
+
+### Database Migration Service
+
+==xxx==
+
+### Other AWS Database Services
 
 ==xxx==
 
@@ -41,7 +106,43 @@ REFERENCES:
 
 ==xxx==
 
+### Shared Responsibility
+
+==xxx==
+
+### User Permissions
+
+==xxx==
+
+### AWS Organizations
+
+==xxx==
+
+### Compliance
+
+==xxx==
+
+### DoS Attacks
+
+==xxx==
+
+### Additional Security Services
+
+==xxx==
+
 ## Monitoring and Analytics
+
+==xxx==
+
+### CloudWatch
+
+==xxx==
+
+### CloudTrail
+
+==xxx==
+
+### Trusted Advisor
 
 ==xxx==
 
@@ -49,11 +150,67 @@ REFERENCES:
 
 ==xxx==
 
+### Free Tier
+
+==xxx==
+
+### Pricing Concepts
+
+==xxx==
+
+### Billing Dashboard
+
+==xxx==
+
+### Consolidated Billing
+
+==xxx==
+
+### Budgets
+
+==xxx==
+
+### Cost Explorer
+
+==xxx==
+
+### Support Plans
+
+==xxx==
+
+### Marketplace
+
+==xxx==
+
 ## Migration and Innovation
 
 ==xxx==
 
+### Cloud Adoption Framework
+
+==xxx==
+
+### Migration Strategies
+
+==xxx==
+
+### The AWS Snow Family
+
+==xxx==
+
+### Innovate with AWS
+
+==xxx==
+
 ## The Cloud Journey
+
+==xxx==
+
+### The AWS Well-Architected Framework
+
+==xxx==
+
+### Benefits of the AWS Cloud
 
 ==xxx==
 
@@ -64,6 +221,12 @@ REFERENCES:
 ## Course Final Assessment
 
 ==xxx==
+
+## Feedback
+
+==xxx==
+
+-->
 
 <!--
 
