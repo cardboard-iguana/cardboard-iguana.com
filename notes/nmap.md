@@ -42,11 +42,13 @@ Most nmap scans will generate ~2x the number of packets as scanned ports, as unr
 * `--min-parallelism` — The minimum number of probes to run in parallel. Overrides `-T`.
 * `--min-rate` — The minimum number of packets/second to send. Overrides `-T`.
 * `--mtu` — Fragment packets into a chosen multiple of 8. Setting `--mtu 8` is equivalent to `-f`, and `--mtu 16` is the same as `-ff`.
+* `--open` — Only report back machines with open ports (most useful when used in conjunction with `-p`).
 * `--proxies` — Use an HTTP or SOCKS4 proxy. Specify a comma-separated list to chain proxies together.
 * `--reason` — Show the reason that nmap made a particular identification. Kinda fun.
 * `--scan-delay` — Add a delay (in milliseconds) between ports/hosts. Helpful for IDS evasion, but makes things *slow*.
 * `--scanflags` — Specify the TCP flags used to probe ports during a scan using URG, PSH, RST, SYN, ACK, FIN (e.g., `--scanflags URGPSHFIN` is the same as `-sX`). Overrides the explicit scanning options in the following sections.
 * `--script` — Run specified scripts, or all scripts in a specified category (as applicable). Also accepts wildcard matches (e.g., `ftp*`). See next section for script category breakdown.
+* `--script-help` — Return the “help” comment block at the top of a script file.
 * `--source-port` — Specify the source port for a scan. possibly useful to evade some firewall rules?
 * `--spoof-mac` — Use a spoofed MAC address for the scan. Obviously only matters when you’re on the same subnet as the target; otherwise has the same caveats as IP spoofing.
 * `--top-ports` — Scan only the X most common ports. Nmap’s default is `--top-ports 1000`. Can be useful for detecting locked-down hosts (use `--top-ports 10 -Pn`). Overridden when using `-p`.
@@ -136,3 +138,4 @@ By default, nmap uses the following host discovery methods (in order):
 * [Nmap Scripting Engine Usage and Examples (Official Nmap Project Guide)](https://nmap.org/book/nse-usage.html)
 * [2022-05-09 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
 * [2022-07-06 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-07-06-offsec-live-pen-200-and-aws-deep-dive.md)
+* [2022-07-08 - OffSec Live: PEN-200](../log/2022-07-08-offsec-live-pen-200.md)
