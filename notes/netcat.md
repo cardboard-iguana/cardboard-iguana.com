@@ -105,7 +105,7 @@ If you just have netcat connect to a service directly, it functions exactly like
 
 ### Port Scanning
 
-With the `-z` option, netcat will attempt to connect to all TCP ports on the targets in a sequential fashion, reporting which are open. It’s like a simple, very slow version of Nmap!
+With the `-z` option, netcat will attempt to connect to all TCP ports on the targets in a sequential fashion (if no ports are specified; otherwise just to the specified port), reporting which are open. It’s like a simple, very slow version of Nmap!
 
 ## References
 
@@ -121,3 +121,4 @@ With the `-z` option, netcat will attempt to connect to all TCP ports on the tar
 * [2022-05-09 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
 * [2022-06-29 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-06-29-offsec-live-pen-200-and-aws-deep-dive.md)
 * [Using “nmap”](nmap.md)
+* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

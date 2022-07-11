@@ -44,6 +44,12 @@ find / -type f \
        -exec ls -l {} \; 2> /dev/null
 ```
 
+### Find World Writable/Executable Folders
+
+```bash
+find / -type d -a \( -perm -o+w -perm -o+x \) 2>/dev/null
+```
+
 ## -Xmin and -Xtime
 
 Matches files accessed (a), had their *contents* modified (m), or had their *inode* changed (c) 𝑛 minutes (-Xmin) or days (-Xtime) ago.
@@ -64,3 +70,4 @@ For example:
 * [How to modify “last status change” (ctime) property of a file in Unix?](https://stackoverflow.com/questions/8346852/how-to-modify-last-status-change-ctime-property-of-a-file-in-unix#8346905)
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Symbolic Permissions](symbolic-permissions.md)
+* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

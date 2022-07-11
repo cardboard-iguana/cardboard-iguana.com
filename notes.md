@@ -44,6 +44,7 @@
 * [Using “basenc”](notes/basenc.md)
 * [Using “curl” and “jq” with Web APIs](notes/using-curl-and-jq-with-web-apis.md)
 * [Using “ffmpeg”](notes/ffmpeg.md)
+* [Using “gdb”](notes/gdb.md)
 * [Using “netcat”](notes/netcat.md)
 * [Using “netstat”](notes/netstat.md)
 * [Using NFS](notes/nfs.md)
@@ -80,6 +81,11 @@
 * [Download SD Movies in iTunes](notes/download-sd-movies-in-itunes.md)
 * [OneDrive Quirks](notes/onedrive-quirks.md)
 
+## Other Operating Systems
+
+* [AIX](notes/aix.md)
+* [Cisco IOS](notes/cisco-ios.md)
+
 ## Networks
 
 * [Different Representations of IPv4 Addresses](notes/different-representations-of-ipv4-addresses.md)
@@ -112,7 +118,7 @@
 ### Other Protocols
 
 * [Gemini Compatible Markdown](notes/gemini-compatible-markdown.md)
-* [Get an SSL Certificate from a Real Registrar](notes/get-an-ssl-certificate-from-a-real-registrar.md)
+* [Get an SSL Certificate](notes/get-an-ssl-certificate.md)
 
 ## Hardware Hacking
 
@@ -127,17 +133,21 @@
 * [DNSdumpster](https://dnsdumpster.com/)
 * [Enumerate Linux Environments](notes/enumerate-linux-environments.md)
 * [Enumerate NFS Shares](notes/enumerate-nfs-shares.md)
+* [Enumerate Oracle SQL Server](notes/enumerate-oracle-sql-server.md)
 * [Enumerate Samba Users and Shares](notes/enumerate-samba-users-and-shares.md)
 * [Enumerate “sudo” Access](notes/enumerate-sudo-access.md)
+* [Enumerate Users with “finger”](notes/enumerate-users-with-finger.md)
 * [Enumerate Windows Environments](notes/enumerate-windows-environments.md)
 * [Exploiting Bash](notes/exploiting-bash.md)
 * [Exploiting /etc/passwd](notes/exploiting-etc-passwd.md)
 * [Exploiting /etc/shadow](notes/exploiting-etc-shadow.md)
 * [Exploiting “find”](notes/exploiting-find.md)
+* [Exploiting IKE Aggressive Mode](notes/exploiting-ike-aggressive-mode.md)
 * [Exploiting Java](notes/exploiting-java.md)
 * [Exploiting LD_PRELOAD](notes/exploiting-ld-preload.md)
 * [Exploiting LD_LIBRARY_PATH](notes/exploiting-ld-library-path.md)
 * [Exploiting “less”](notes/exploiting-less.md)
+* [Exploiting MSSQL](notes/exploiting-mssql.md)
 * [Exploiting Nano](notes/exploiting-nano.md)
 * [Exploiting Node.js](notes/exploiting-node-js.md)
 * [Exploiting PHP](notes/exploiting-php.md)

@@ -6,8 +6,9 @@ date:: 2022-04-22
 * `cmdkey /list` — show saved credentials
 * `driverquery` — list installed drivers
 * `hostname` — return system hostname
+* `net group "Domain Admins" /domain` — list domain admins
 * `net localgroup` — list all (local) groups
-* `net localgroup $GROUP` —- list user in group `$GROUP`
+* `net localgroup $GROUP` — list user in group `$GROUP`
 * `net user` — list all (local) users
 * `net user $USERNAME` — get details for user `$USERNAME`
 * `netstat` — query open/listening ports
@@ -20,10 +21,20 @@ date:: 2022-04-22
 
 ## net
 
-Windows’ `net` command is can also be used to *manipulate* user and group information (*if* you already have admin/SYSTEM permission)! For example, to change user foo’s password to “bar”:
+Windows’ `net` command is can also be used to *manipulate* user and group information (*if* you already have admin/SYSTEM permission)! For example:
 
 ```powershell
-net user foo bar
+# Change a user’s password
+#
+net user $USERNAME $PASSWORD
+
+# Add a user to a domain
+#
+net user $USERNAME /add /domain
+
+# Make a user a domain admin
+#
+net group "Domain Admins" $USERNAME /add /domain
 ```
 
 ## netstat
@@ -57,3 +68,4 @@ Notes:
 
 * [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
 * [Using “netstat”](netstat.md)
+* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
