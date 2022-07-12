@@ -1,7 +1,7 @@
 # XSS (Cross Site Scripting) Attacks
 
 author:: Nathan Acks  
-date:: 2022-04-06
+date:: 2022-07-11
 
 Types of XSS attacks:
 
@@ -49,10 +49,6 @@ jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */onerror=alert('XSS') )//%0D%0A%0d%0a//</stY
 
 ## Filter Evasion
 
-### Bypass `<script/>` Tag Removal
-
-Use `onmouseover`, `onclick`, etc.
-
 ### Bypass Simple Word Filtering
 
 In general, you can break up strings to get around this.
@@ -79,15 +75,23 @@ For really heavy filtering, use something nutso like JSFuck.
 
 Sometimes filters are applied in a case-sensitive fashion. While JavaScript *is* case-sensitive, URL schemes, HTML tag names, and HTML tag attributes are case-*insensitive* (so, `javascript:` is treated the same as `javaSCRIPT:`, `onclick` is treated the same as `ONCLICK`, etc.).
 
-### Using iFrames
+### Using iFrames and Images
 
-Typically XSS attacks work by injecting `<script/>` tags, but it's also possible to inject JavaScript using the `<iframe/>` tag by setting the `src` attribute to the `javacript:` pseudo-protocol. For example:
+Typically XSS attacks work by injecting `<script/>` tags, but it's also possible to inject JavaScript using the `<iframe/>` and `<img/>` tags by setting the `src` attribute to the `javacript:` pseudo-protocol. For example:
 
 ```html
+<!-- iframe injection -->
 <iframe src="javascript:alert('XSS');"/>
+
+<!-- img injection -->
+<img src="javascript:alert('XSS');"/>
 ```
 
 Note, however, that JavaScript loaded in an `<iframe/>` won’t have access to the parent page’s DOM.
+
+### Fallbacks Requiring User Interaction
+
+Finally, `javascript:` URIs can also be included in anchor(`<a/>`) `href` attributes, as well as `onmouseover` and `onclick` attributes (which can be attached to almost any HTML tag). Getting these attacks to fire requires a user to interact with the modified tag, however.
 
 ## Attacks
 
@@ -145,3 +149,4 @@ The key to defending against XSS is really to get your encoding right. User-gene
 * [Document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 * [JSFuck](http://www.jsfuck.com/)
 * [JavaScript Obfuscator Tool](https://obfuscator.io/)
+* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

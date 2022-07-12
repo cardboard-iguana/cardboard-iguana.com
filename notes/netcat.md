@@ -107,6 +107,12 @@ If you just have netcat connect to a service directly, it functions exactly like
 
 With the `-z` option, netcat will attempt to connect to all TCP ports on the targets in a sequential fashion (if no ports are specified; otherwise just to the specified port), reporting which are open. It’s like a simple, very slow version of Nmap!
 
+### Port Forwarding
+
+```bash
+nc -lvkp $LOCAL_PORT -c "nc $REMOTE_IP $REMOTE_PORT"
+```
+
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)

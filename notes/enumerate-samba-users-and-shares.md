@@ -1,7 +1,7 @@
 # Enumerate Samba Users and Shares
 
 author:: Nathan Acks  
-date:: 2022-04-25
+date:: 2022-07-11
 
 ## NMAP
 
@@ -17,9 +17,19 @@ NOTE: While smb-enum-shares.nse returns results for UNIX-like systems, I’ve fo
 
 ## Metasploit
 
-Metasploit can also enumerate CIFS users using the auxiliary/smb/smb_lookupsid module.
+Metasploit can also enumerate CIFS users using the `auxiliary/smb/smb_lookupsid` module.
 
 Like NMAP, I’ve found this to be a bit unreliable on UNIX-like systems.
+
+## nbtscan
+
+You can scan a target machine or network using nbtscan to see what hosts are running Samba.
+
+```bash
+nbtscan -r $NETWORK_IP/$CIDR_NETMASK
+```
+
+This won’t give you detailed user and share information, but it will at least let you know what machines to target.
 
 ## enum4linux
 
@@ -62,3 +72,4 @@ smbmap -H $IP_ADDRESS -v
 * [Use of uninitialized value $user, what does this mean?](https://github.com/CiscoCXSecurity/enum4linux/issues/4)
 * [Working With Samba](working-with-samba.md)
 * [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
+* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
