@@ -20,7 +20,7 @@ Things you’ll want/need to follow along:
 
 * A Raspberry Pi. (I use a 8 GB Raspberry Pi 4B.)
 * A good USB C cable. (The DockCase USB C cable is surprisingly great.)
-* A good microSD card. (I use a 128 GB Samsung Pro Endurance.)
+* A good microSD card. (I use a 64 GB Kingston Canvass Go! Plus.)
 * A second "bootstrap" microSD card that’s at least 32 GB in size. (You need something *twice* the size that your operating system image requires. This will just be used to “bootstrap” the encrypted microSD card, so it’s only necessary if you’re spinning the Pi up for the first time.)
 * A USB microSD card reader (since you'll need to have *both* microSD cards connected to the Pi briefly.)
 * Physical access to a Linux system. (This could actually be the Pi itself, if you’ve already got it up and running with another operating system.)
@@ -121,7 +121,7 @@ mount /dev/loop0p2 /mnt/img-root
 # new partitions:
 #
 # The first partition should be a primary partition
-# 500MB in size of type 0c (W95 FAT32 LBA).
+# 256MB in size of type 0c (W95 FAT32 LBA).
 #
 # The second partition should also be a primary
 # partition. It should use the remainder of the space
@@ -827,6 +827,6 @@ As with the dropbear configuration in the previous section, please do *not* set 
 * [iPad Pro](https://www.apple.com/ipad-pro/)
 * [Raspberry Pi 4 Model B - 8 GB RAM (Adafruit)](https://www.adafruit.com/product/4564)
 * [DockCase USB C to USB C Cable (0.72ft), 3.1 Gen 2 (Amazon)](https://www.amazon.com/dp/B07THFJ1J5)
-* [Samsung PRO Endurance 128GB (Amazon)](https://www.amazon.com/dp/B07B984HJ5)
 * [Linux Performance: Why You Should Almost Always Add Swap Space](https://haydenjames.io/linux-performance-almost-always-add-swap-space/)
 * [Linux Performance: Almost Always Add Swap. Part 2: ZRAM](https://haydenjames.io/linux-performance-almost-always-add-swap-part2-zram/)
+* [Kingston Canvass Go! Plus](https://www.kingston.com/en/memory-cards/canvas-go-plus-microsd-card)
