@@ -107,6 +107,11 @@ If you just have netcat connect to a service directly, it functions exactly like
 
 With the `-z` option, netcat will attempt to connect to all TCP ports on the targets in a sequential fashion (if no ports are specified; otherwise just to the specified port), reporting which are open. It’s like a simple, very slow version of Nmap!
 
+Useful flags:
+
+* `-w` — set the timeout, in seconds
+* `-u` — try connecting over UDP rather than TCP
+
 ### Port Forwarding
 
 ```bash
@@ -128,3 +133,4 @@ nc -lvkp $LOCAL_PORT -c "nc $REMOTE_IP $REMOTE_PORT"
 * [2022-06-29 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-06-29-offsec-live-pen-200-and-aws-deep-dive.md)
 * [Using “nmap”](nmap.md)
 * [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
+* [2022-07-13 - OffSec Live: PEN-200](../log/2022-07-13-offsec-live-pen-200.md)
