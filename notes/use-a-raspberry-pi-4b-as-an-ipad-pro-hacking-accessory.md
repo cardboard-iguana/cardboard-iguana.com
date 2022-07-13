@@ -153,7 +153,7 @@ rsync -avh /mnt/img-root/ /mnt/ext-root/
 
 # Make the Pi load an initramfs on boot.
 #
-echo 'initramfs initramfs.gz followkernel' >> /mnt/ext-boot/config.txt
+echo 'initramfs initramfs.zst followkernel' >> /mnt/ext-boot/config.txt
 
 # Make sure the kernel knows where ROOTFS is. Note
 # that we use /dev/mmcblk0p2 here rather than
@@ -185,7 +185,7 @@ mount -o bind /mnt/ext-boot /mnt/ext-root/boot
 LANG=C chroot /mnt/ext-root
 cp /usr/src/linux-headers-$(uname -r)/.config \
    /boot/config-$(uname -r)
-mkinitramfs -o /boot/initramfs.gz $(uname -r)
+mkinitramfs -o /boot/initramfs.zst $(uname -r)
 exit
 
 # Cleanup our mess.
@@ -237,7 +237,7 @@ cp /usr/src/linux-headers-$(ls -1 /lib/modules | grep -e '-Re4son-v8l+$' | sort 
 
 # Regenerate initramfs.
 #
-mkinitramfs -o /boot/initramfs.gz \
+mkinitramfs -o /boot/initramfs.zst \
 	$(ls -1 /lib/modules | grep -e '-Re4son-v8l+$' | sort | tail -1)
 
 # Drop permissions.
@@ -376,7 +376,7 @@ EOF
 
 # Regenerate initramfs.
 #
-mkinitramfs -o /boot/initramfs.gz \
+mkinitramfs -o /boot/initramfs.zst \
 	$(ls -1 /lib/modules | grep -e '-Re4son-v8l+$' | sort | tail -1)
 
 # Drop permissions.
@@ -530,7 +530,7 @@ apt install dropbear-initramfs
 # the danger of having these keys disclosed in the
 # event that someone got ahold of the Pi’s microSD
 # card seems minimal (after all, such an attacker
-# could just trojan the initramfs.gz directly).
+# could just trojan the initramfs.zst directly).
 #
 # (Note that you should make sure to set an EMPTY
 # password when using ssh-keygen to convert they keys
@@ -731,7 +731,7 @@ chmod +x /usr/share/initramfs-tools/scripts/local-bottom/ipad
 
 # Regenerate initramfs.
 #
-mkinitramfs -o /boot/initramfs.gz $(ls -1 /lib/modules | grep -e '-Re4son-v8l+$' | sort | tail -1)
+mkinitramfs -o /boot/initramfs.zst $(ls -1 /lib/modules | grep -e '-Re4son-v8l+$' | sort | tail -1)
 
 # Drop permissions.
 #
