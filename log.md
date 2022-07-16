@@ -1,5 +1,6 @@
 # A Hacker’s Log
 
+* [2022-07-15 - OffSec Live: PEN-200](log/2022-07-15-offsec-live-pen-200.md)
 * [2022-07-13 - OffSec Live: PEN-200](log/2022-07-13-offsec-live-pen-200.md)
 * [2022-07-08 - OffSec Live: PEN-200](log/2022-07-08-offsec-live-pen-200.md)
 * [2022-07-06 - OffSec Live: PEN-200 & AWS Deep Dive](log/2022-07-06-offsec-live-pen-200-and-aws-deep-dive.md)
