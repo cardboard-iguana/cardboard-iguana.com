@@ -225,6 +225,7 @@
 
 ## Courses
 
+* [OffSec Live: PEN-200](notes/offsec-live-pen-200.md)
 * [OPSEC in Theory and Practice](notes/opsec-in-theory-and-practice.md)
 * [Version Control with Git](notes/version-control-with-git.md)
 
