@@ -269,3 +269,7 @@
 * [TryHackMe: Windows Event Logs](notes/tryhackme-windows-event-logs.md)
 * [TryHackMe: Wireshark 101](notes/tryhackme-wireshark-101.md)
 * [TryHackMe: XXE](notes/tryhackme-xxe.md)
+
+## Conferences
+
+* [A New HOPE](notes/hope-2022.md)

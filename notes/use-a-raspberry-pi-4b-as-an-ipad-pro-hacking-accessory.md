@@ -785,10 +785,20 @@ If you’re going to be using this device covertly, you almost certainly also wa
 #
 sudo -s
 
-# Install and set up xrdp.
+# Install xrdp.
 #
 apt install xrdp
+
+# Turn off “new” cursors, as this causes problems with some RDP clients.
+#
+sed -i -e 's/^new_cursors=true$/new_cursors=false/' /etc/xrdp/xrdp.ini
+
+# Allow connections in over usb0.
+#
 ufw allow in on usb0 from 10.55.0.0/29 to 10.55.0.1 port 3389 proto tcp
+
+# Enable xrdp.
+#
 systemctl enable xrdp.service
 
 # Drop permissions.
@@ -799,6 +809,8 @@ exit
 You should now be able to log in using RDP. Standard resolutions work well, but HiDPI/Retina is only marginally more responsive than a slideshow.
 
 As with the dropbear configuration in the previous section, please do *not* set up RDP like I’m presenting here if you’re using a device that’s exposed to a larger network, or worse yet the internet as a whole. In the real world, RDP servers should *only* be accessible over SSH, a VPN, or some other secure wrapper — never exposed directly as we’re doing here. The reason we can get away with less is (again) because we’re *only* exposing RDP over the usb0 interface, and the *only* other device that ever lives on that network is the iPad.
+
+NOTE: I use Jump Desktop as my RDP client, rather than Microsoft Remote Desktop — while Microsoft’s offering is overall nicer, Jump Desktop is faster and will connect even when the iPad’s Wi-Fi is disconnected (Microsoft will refuse to connect in this case, even though the Pi is accessible via USB!).
 
 ## References
 
@@ -830,3 +842,5 @@ As with the dropbear configuration in the previous section, please do *not* set 
 * [Linux Performance: Why You Should Almost Always Add Swap Space](https://haydenjames.io/linux-performance-almost-always-add-swap-space/)
 * [Linux Performance: Almost Always Add Swap. Part 2: ZRAM](https://haydenjames.io/linux-performance-almost-always-add-swap-part2-zram/)
 * [Kingston Canvass Go! Plus](https://www.kingston.com/en/memory-cards/canvas-go-plus-microsd-card)
+* [Remote Desktop Mobile](https://apps.apple.com/us/app/remote-desktop-mobile/id714464092)
+* [Jump Desktop](https://apps.apple.com/us/app/jump-desktop-rdp-vnc-fluid/id364876095)
