@@ -790,6 +790,10 @@ sudo -s
 apt install xrdp
 
 # Turn off “new” cursors, as this causes problems with some RDP clients.
+# This isn’t necessary if you’re using Microsoft Remote Desktop, but is
+# required to avoid the cursor being surrounded by a weird box on Jump
+# Desktop. The trade-off here is that the “new” cursors look really
+# nice, while the “old” cursors… Do not.
 #
 sed -i -e 's/^new_cursors=true$/new_cursors=false/' /etc/xrdp/xrdp.ini
 
@@ -810,7 +814,7 @@ You should now be able to log in using RDP. Standard resolutions work well, but 
 
 As with the dropbear configuration in the previous section, please do *not* set up RDP like I’m presenting here if you’re using a device that’s exposed to a larger network, or worse yet the internet as a whole. In the real world, RDP servers should *only* be accessible over SSH, a VPN, or some other secure wrapper — never exposed directly as we’re doing here. The reason we can get away with less is (again) because we’re *only* exposing RDP over the usb0 interface, and the *only* other device that ever lives on that network is the iPad.
 
-NOTE: I use Jump Desktop as my RDP client, rather than Microsoft Remote Desktop — while Microsoft’s offering is overall nicer, Jump Desktop is faster and will connect even when the iPad’s Wi-Fi is disconnected (Microsoft will refuse to connect in this case, even though the Pi is accessible via USB!).
+NOTE: I use Jump Desktop as my RDP client, rather than Microsoft Remote Desktop — while Microsoft’s offering is overall nicer, Jump Desktop is faster and will connect even when the iPad’s Wi-Fi is disconnected (Microsoft will refuse to connect if Wi-Fi is disabled, even though the Pi is accessible via USB etherent!).
 
 ## References
 
