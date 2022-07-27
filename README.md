@@ -2,6 +2,7 @@
 
 ## Hacker’s Log (Recent)
 
+* [2022-07-27 - OffSec Live: PEN-200](log/2022-07-27-offsec-live-pen-200.md)
 * [2022-07-24 - A New HOPE](log/2022-07-24-a-new-hope.md)
 * [2022-07-23 - A New HOPE](log/2022-07-23-a-new-hope.md)
 * [2022-07-22 - A New HOPE](log/2022-07-22-a-new-hope.md)
@@ -11,7 +12,6 @@
 * [2022-07-06 - OffSec Live: PEN-200 & AWS Deep Dive](log/2022-07-06-offsec-live-pen-200-and-aws-deep-dive.md)
 * [2022-07-05 - AWS Deep Dive](log/2022-07-05-aws-deep-dive.md)
 * [2022-07-01 - OffSec Live: PEN-200](log/2022-07-01-offsec-live-pen-200.md)
-* [2022-06-29 OffSec Live: PEN-200 & AWS Deep Dive](log/2022-06-29-offsec-live-pen-200-and-aws-deep-dive.md)
 
 ## Website Navigation
 

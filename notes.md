@@ -181,6 +181,7 @@
 * [The Poison Null Byte](notes/poison-null-byte.md)
 * [Rapid7 Vulnerability & Exploit Database](https://www.rapid7.com/db/)
 * [Request Bin](https://requestbin.com/)
+* [Reverse Shell Generator](https://www.revshells.com/)
 * [SETUID Bash](notes/setuid-bash.md)
 * [Shell Escapes](notes/shell-escapes.md)
 * [Shodan](https://www.shodan.io/)

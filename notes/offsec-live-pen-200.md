@@ -1,7 +1,7 @@
 # OffSec Live: PEN-200
 
 author:: Nathan Acks  
-date:: 2022-07-16  
+date:: 2022-07-27  
 tags:: #MOC
 
 * [2022-06-24 - OffSec Live: PEN-200](../log/2022-06-24-offsec-live-pen-200.md)
@@ -11,8 +11,10 @@ tags:: #MOC
 * [2022-07-08 - OffSec Live: PEN-200](../log/2022-07-08-offsec-live-pen-200.md)
 * [2022-07-13 - OffSec Live: PEN-200](../log/2022-07-13-offsec-live-pen-200.md)
 * [2022-07-15 - OffSec Live: PEN-200](../log/2022-07-15-offsec-live-pen-200.md)
+* [2022-07-27 - OffSec Live: PEN-200](../log/2022-07-27-offsec-live-pen-200.md)
 
 ## References
 
 * [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
+* [Join OffSec Live](https://learn.offensive-security.com/offsec-live-webinars)
 * [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
