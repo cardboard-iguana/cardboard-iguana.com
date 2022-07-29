@@ -1,5 +1,6 @@
 # A Hacker’s Log
 
+* [2022-07-29 - OffSec Live: PEN-200](log/2022-07-29-offsec-live-pen-200.md)
 * [2022-07-27 - OffSec Live: PEN-200](log/2022-07-27-offsec-live-pen-200.md)
 * [2022-07-24 - A New HOPE](log/2022-07-24-a-new-hope.md)
 * [2022-07-23 - A New HOPE](log/2022-07-23-a-new-hope.md)
