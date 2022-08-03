@@ -54,7 +54,7 @@ Useful MySQL keywords:
 * `user()` and `current_user()`
 * `version()` or `@@version`
 
-The `GROUP_CONCAT()` function can be useful here: It concatenates fields (and arbitrary strings) in a row, and then further groups rows separated by commas (or by a string specified using SEPARATOR).
+The `GROUP_CONCAT()` function can be useful here: It concatenates fields (and arbitrary strings) in a row, and then further groups rows separated by commas (or by a string specified using SEPARATOR). `CONCAT()` also works for this (use `0x3a` to insert “:” characters as separators). 
 
 It's worth checking out the Jurassic Park CTF for an example of how to use union-based SQLi (it's a little hard to summarize).
 
@@ -86,3 +86,4 @@ There are two main strategies for defending against SQLi:
 * [TryHackMe: Jr. Penetration Tester](tryhackme-jr-penetration-tester.md)
 * [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
 * [2022-07-29 - OffSec Live: PEN-200](../log/2022-07-29-offsec-live-pen-200.md)
+* [2022-08-03 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-03-offsec-live-pen-200-and-aws-deep-dive.md)

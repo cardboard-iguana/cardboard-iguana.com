@@ -149,6 +149,7 @@
 * [Exploiting LD_LIBRARY_PATH](notes/exploiting-ld-library-path.md)
 * [Exploiting “less”](notes/exploiting-less.md)
 * [Exploiting MSSQL](notes/exploiting-mssql.md)
+* [Exploiting MySQL](notes/exploiting-mysql.md)
 * [Exploiting Nano](notes/exploiting-nano.md)
 * [Exploiting Node.js](notes/exploiting-node-js.md)
 * [Exploiting Perl](notes/exploiting-perl.md)
