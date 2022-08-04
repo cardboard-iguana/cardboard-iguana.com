@@ -32,25 +32,27 @@ REFERENCES:
 
 ## Monitoring and Analytics
 
-Coming soon!
-
-<!--
-
-==xxx==
-
 ### CloudWatch
 
-==xxx==
+* CloudWatch is primarily about log *monitoring* — *metrics* are extracted from logs, which can be watched by *alarms* that trigger certain actions (like sending messages to SNS) when triggered.
+* CloudWatch can ingest data from on-prem systems, in addition to services/system in AWS.
 
 ### CloudTrail
 
-==xxx==
+* CloudTrail is AWS’s (API) logging engine.
+* Logs are stored in S3.
+* Events are logged with 15 minutes.
+* CloudTrail has its *own* alarm/automation system, called “CloudTrail Insights”.
+* You might thing of CloudTrail as being more concerned about account *activity*, and CloudWatch as being more focused on service/resource *performance*.
 
 ### Trusted Advisor
 
-==xxx==
+* This seems to be a more general version of AWS Inspector — Trusted Advisor is more about your *entire* AWS account, while AWS Inspector is geared more towards individual systems.
+* Trusted Advisor can detect S3 buckets with open access permissions. (It’s starting to sound a bit like Scout Suite.)
 
--->
+REFERENCES:
+
+* [nccgroup / ScoutSuite](https://github.com/nccgroup/ScoutSuite)
 
 <!--
 
