@@ -1,7 +1,7 @@
 # How to Use “find” With File Metadata
 
 author:: Nathan Acks  
-date:: 2022-04-21
+date:: 2022-08-05
 
 Some useful find flags related to file metadata.
 
@@ -30,10 +30,16 @@ Matches files with a given permission. Both numeric and symbolic permissions are
 
 Use the / or - prefix to match files with *any* of the specified permissions or *at least* the specified permissions. For example, `-perm -644` will match any file where the current user has *at least* read + write access and any other user has *at least* read access (so, `-` requires the specified permissions, but is agnostic as to the presence/absence of additional permissions). Likewise, `-perm /666` will match files where the current user has read + write access and/or the current group has read + write access and/or everyone has read + write access (so, `/` requires that at least *one* of the specified permissions groups matches exactly, but is agnostic to the state of any other group outside of that match).
 
-### Find SUID and SGID Files
+### Find SUID Files
 
 ```bash
 find / -type f -perm -04000 -ls 2>/dev/null
+```
+
+Or:
+
+```bash
+find / -type f -perm -u=s -ls 2>/dev/null
 ```
 
 ### Find SUID and SGID Executables
@@ -71,3 +77,4 @@ For example:
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Symbolic Permissions](symbolic-permissions.md)
 * [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
+* [2022-08-05 - OffSec Live: PEN-200](../log/2022-08-05-offsec-live-pen-200.md)

