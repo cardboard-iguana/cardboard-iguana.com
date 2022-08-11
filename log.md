@@ -1,5 +1,6 @@
 # A Hacker’s Log
 
+* [2022-08-11 - DEF CON 30](log/2022-08-11-def-con-30.md)
 * [2022-08-08 - AWS Deep Dive](log/2022-08-08-aws-deep-dive.md)
 * [2022-08-05 - OffSec Live: PEN-200](log/2022-08-05-offsec-live-pen-200.md)
 * [2022-08-04 - AWS Deep Dive](log/2022-08-04-aws-deep-dive.md)

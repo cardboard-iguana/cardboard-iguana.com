@@ -107,6 +107,8 @@ By default, nmap uses the following host discovery methods (in order):
 * `-sW` — TCP windows scan; the same as an ACK scan except that it examines the TCP window field of returned RST packets and uses it to discern if a port responded *differently*. Note that ports may be reported as closed (and open!) erroneously (as not all systems respond in the same way), but unfiltered ports will be identified. Look for patterns of open/closed ports to try to discern how the target system is responding.
 * `-sX` — Xmas scan; the FIN, URG, and PSH TCP flags are set. Use and output is similar to a null scan.
 
+Note that nmap by default uses a TCP window of 1024 bytes and an MSS of 1460. This is actually an unusual combination, and makes most nmap TCP scans stick out in packet captures. The exception to this is a full TCP connect scan, which uses the system TCP stack and thus tends to have more sensible options.
+
 ### Port States
 
 * `Open` — The port is reachable and there is a service listening on it.
@@ -139,3 +141,5 @@ By default, nmap uses the following host discovery methods (in order):
 * [2022-05-09 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
 * [2022-07-06 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-07-06-offsec-live-pen-200-and-aws-deep-dive.md)
 * [2022-07-08 - OffSec Live: PEN-200](../log/2022-07-08-offsec-live-pen-200.md)
+* [2022-08-11 - DEF CON 30](../log/2022-08-11-def-con-30.md)
+* [TCP Protocol](tcp.md)

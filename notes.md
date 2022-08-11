@@ -204,6 +204,7 @@
 * [Using Rubeus](notes/rubeus.md)
 * [Using ”sqlmap”](notes/sqlmap.md)
 * [Using “wfuzz”](notes/wfuzz.md)
+* [Using Wireshark](notes/wireshark.md)
 * [Wappalyzer](https://www.wappalyzer.com/)
 * [Windows Port Relay](notes/windows-port-relay.md)
 * [XSS (Cross Site Scripting) Attacks](notes/xss-attacks.md)
