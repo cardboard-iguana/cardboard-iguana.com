@@ -276,3 +276,4 @@
 ## Conferences
 
 * [A New HOPE](notes/hope-2022.md)
+* [DEF CON 30](notes/def-con-30.md)

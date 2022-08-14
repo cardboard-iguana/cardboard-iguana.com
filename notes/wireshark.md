@@ -1,7 +1,7 @@
 # Using Wireshark
 
 author:: Nathan Acks  
-date:: 2022-08-11
+date:: 2022-08-13
 
 ## User Interface
 
@@ -25,11 +25,15 @@ Wireshark will also use these fields to note unusual TCP packet behaviors (such 
 
 When you select an ACK packet in Wireshark, a checkmark will be displayed next to the packet that is being acknowledged.
 
+If you can find an encryption key in a packet dump, you can try applying them to encrypted packets in Wireshark using “Preferences > RSA Keys”.
+
+Wireshark can easily extract files from HTTP conversations. To extract them from raw TCP streams, (1) locate the beginning of the stream, (2) right-click on the packet and select “Follow > TCP Stream, (3) change “Show data as” to “Raw”, and (4) save it off using “Save As”.
+
 ## Filtering
 
-You can filter on a negation using `!`. (For example, `!arp` filters out ARP packets.)
-
-To see SYN/ACK packets, filter with `tcp.flags.syn == 1 && tcp.flags.ack == 1`.
+* Filter on a negation using `!` (for example, `!arp` filters out ARP packets).
+* To see SYN/ACK packets, filter with `tcp.flags.syn == 1 && tcp.flags.ack == 1`.
+* To search within packets use the filter `frame contains "$TEXT_TO_SEARCH"`.
 
 If you click on a field for a packet, the filter name is displayed in the lower left. (For example, TCP SYN packets are tcp.flags.syn.) You can automatically apply a filter (or “prepare” a filter, which lets you see the filter before it’s applied) by right-clicking on it and choosing “Apply as Filter” (or “Prepare as Filter”).
 
@@ -51,3 +55,4 @@ Color rules are just filters; they’re matched in order (from top down), with t
 
 * [2022-08-11 - DEF CON 30](../log/2022-08-11-def-con-30.md)
 * [TCP Protocol](tcp.md)
+* [2022-08-13 - DEF CON 30](../log/2022-08-13-def-con-30.md)
