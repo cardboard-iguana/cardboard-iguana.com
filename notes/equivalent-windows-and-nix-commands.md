@@ -1,7 +1,7 @@
 # Equivalent Windows and \*NIX Commands
 
 author:: Nathan Acks  
-date:: 2022-04-25
+date:: 2022-08-14
 
 |      Linux | Windows           |
 | ----------:|:----------------- |
@@ -43,6 +43,18 @@ dig @$NAME_SERVER $DOMAIN $QUERY_TYPE
 dig @8.8.8.8 microsoft.com A
 dig @1.1.1.1 tryhackme.com
 dig          google.com    MX
+```
+
+## grep
+
+```bash
+# Case-insensitive grep
+#
+grep -i $STRING $FILE
+
+# Recursive grep of all files in a folder (and its subfolders)
+#
+grep $STRING -r $DIRECTORY
 ```
 
 ## dir
