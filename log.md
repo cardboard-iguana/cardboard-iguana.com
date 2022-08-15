@@ -1,5 +1,7 @@
 # A Hacker’s Log
 
+* [2022-08-15 - Notes from HOPE and DEF CON](log/2022-08-15-notes-from-hope-and-def-con.md)
+* [2022-08-14 - DEF CON 30](log/2022-08-14-def-con-30.md)
 * [2022-08-13 - DEF CON 30](log/2022-08-13-def-con-30.md)
 * [2022-08-12 - DEF CON 30](log/2022-08-12-def-con-30.md)
 * [2022-08-11 - DEF CON 30](log/2022-08-11-def-con-30.md)
