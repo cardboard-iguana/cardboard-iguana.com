@@ -24,6 +24,7 @@ After much consideration, I’ve come to believe that much of this “advice” 
 * I run a minimal-ish set of applications, and regularly review and uninstall anything I’m not currently using.
 * Before leaving (generally the morning I head for the airport, unless i have a *really* early flight), I make sure that all of my devices are running the most up-to-date versions of their operating systems and apps, and run a complete backup.
 * I have Find My active on all of my devices so if the device is stolen I can lock/wipe it remotely.
+* Finally, I use Proton VPN on all my devices. I do this not for “privacy” reasons, but because using a VPN is a way to ensure that any applications that are *not* using encrypted connections or are vulnerable to downgrade attacks have an extra layer of protection. That ProtonVPN also provides some on-the-wire malware blocking is an added bonus.
 
 Now, hacker conferences *do* generally have a more hostile radio frequency environment, so I do take extra care here.
 
@@ -45,6 +46,7 @@ REFERENCES:
 * [Use a Raspberry Pi 4B as an iPad Pro Hacking Accessory](../notes/use-a-raspberry-pi-4b-as-an-ipad-pro-hacking-accessory.md)
 * [Apple Find My](https://www.apple.com/icloud/find-my/)
 * [Apple Pencil](https://www.apple.com/apple-pencil/)
+* [Proton VPN](https://protonvpn.com/)
 * [DEF CON Wi-Fi Registration](https://wifireg.defcon.org/)
 
 ### A Note About Credential Management
