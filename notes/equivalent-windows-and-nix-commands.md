@@ -1,7 +1,7 @@
 # Equivalent Windows and \*NIX Commands
 
 author:: Nathan Acks  
-date:: 2022-08-14
+date:: 2022-08-17
 
 |      Linux | Windows           |
 | ----------:|:----------------- |
@@ -13,6 +13,7 @@ date:: 2022-08-14
 |       more | more              |
 |    netstat | netstat           |
 |       ping | ping              |
+|   shutdown | shutdown          |
 |      sleep | timeout           |
 |       sudo | runas             |
 |    tcpdump | windump           |
@@ -55,6 +56,14 @@ grep -i $STRING $FILE
 # Recursive grep of all files in a folder (and its subfolders)
 #
 grep $STRING -r $DIRECTORY
+```
+
+## findstr
+
+```powershell
+# Use findstr to filter the output of systeminfo (or another command):
+#
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 ```
 
 ## dir
@@ -123,3 +132,4 @@ If credentials are saved for a particular user (use `cmdkey /list` to check), th
 * [How to find a file or folder in MS-DOS or Windows command line](https://www.computerhope.com/issues/ch000309.htm)
 * [Enumerate Windows Environments](enumerate-windows-environments.md)
 * [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
+* [2022-08-17 - OffSec Live: PEN-200](../log/2022-08-17-offsec-live-pen-200.md)

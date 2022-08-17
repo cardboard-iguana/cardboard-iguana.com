@@ -1,7 +1,7 @@
 # OffSec Live: PEN-200
 
 author:: Nathan Acks  
-date:: 2022-08-03  
+date:: 2022-08-17  
 tags:: #MOC
 
 * [2022-06-24 - OffSec Live: PEN-200](../log/2022-06-24-offsec-live-pen-200.md)
@@ -15,6 +15,7 @@ tags:: #MOC
 * [2022-07-29 - OffSec Live: PEN-200](../log/2022-07-29-offsec-live-pen-200.md)
 * [2022-08-03 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-03-offsec-live-pen-200-and-aws-deep-dive.md)
 * [2022-08-05 - OffSec Live: PEN-200](../log/2022-08-05-offsec-live-pen-200.md)
+* [2022-08-17 - OffSec Live: PEN-200](../log/2022-08-17-offsec-live-pen-200.md)
 
 ## References
 

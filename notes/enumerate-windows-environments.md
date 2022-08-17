@@ -1,7 +1,7 @@
 # Enumerate Windows Environments
 
 author:: Nathan Acks  
-date:: 2022-04-22
+date:: 2022-08-17
 
 * `cmdkey /list` — show saved credentials
 * `driverquery` — list installed drivers
@@ -41,6 +41,14 @@ net group "Domain Admins" $USERNAME /add /domain
 
 The `netstat` command on Windows *almost* works exactly like its Linux equivalent. The difference is that `-o` displays the PID of the process using the connection on Windows (which, IMHO, is more useful than `-o` on Linux).
 
+## systeminfo
+
+Use `findstr` to filter the output of `systeminfo`:
+
+```powershell
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
+```
+
 ## wmic
 
 The `wmic` command is extremely useful, but is also deprecated (*because* of its usefulness to attackers!). It can be used on Windows 10 21H1 and earlier. For later systems, PowerShell command-lets will need to be used instead (which increases the risk that activity will be logged).
@@ -69,3 +77,4 @@ Notes:
 * [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
 * [Using “netstat”](netstat.md)
 * [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
+* [2022-08-17 - OffSec Live: PEN-200](../log/2022-08-17-offsec-live-pen-200.md)
