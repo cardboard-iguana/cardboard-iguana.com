@@ -19,6 +19,8 @@ date:: 2022-08-17
 |    tcpdump | windump           |
 | traceroute | tracert           |
 |       wget | wget              |
+|   hostname | hostname          |
+|     whoami | whoami            |
 
 ## cat
 
@@ -118,6 +120,13 @@ runas /user:$USERNAME $EXECUTABLE
 
 If credentials are saved for a particular user (use `cmdkey /list` to check), then the `/savecred` flag will apply them automatically!
 
+## whoami
+
+Windows’ `whoami` supports a couple of useful flags:
+
+* `/all` — return detailed user information.
+* `/privs` — return information about current user privileges.
+
 ## References
 
 * [What is the Windows equivalent of the Unix command cat?](https://superuser.com/questions/434870/what-is-the-windows-equivalent-of-the-unix-command-cat#434876)
@@ -133,3 +142,4 @@ If credentials are saved for a particular user (use `cmdkey /list` to check), th
 * [Enumerate Windows Environments](enumerate-windows-environments.md)
 * [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
 * [2022-08-17 - OffSec Live: PEN-200](../log/2022-08-17-offsec-live-pen-200.md)
+* [2022-08-24 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-24-offsec-live-pen-200-and-aws-deep-dive.md)

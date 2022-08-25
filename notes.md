@@ -74,6 +74,7 @@
 * [Get-WinEvent](notes/get-winevent.md)
 * [How to Add Windows Users (at the Command Line)](notes/how-to-add-windows-users-at-the-command-line.md)
 * [Using “certutil”](notes/certutil.md)
+* [Using “net”](notes/net.md)
 * [Using PowerShell](notes/powershell.md)
 
 ### GUI
