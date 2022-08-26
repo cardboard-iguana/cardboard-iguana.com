@@ -18,6 +18,7 @@ tags:: #MOC
 * [2022-08-17 - OffSec Live: PEN-200](../log/2022-08-17-offsec-live-pen-200.md)
 * [2022-08-19 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-19-offsec-live-pen-200-and-aws-deep-dive.md)
 * [2022-08-24 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-24-offsec-live-pen-200-and-aws-deep-dive.md)
+* [2022-08-26 - OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)
 
 ## References
 

