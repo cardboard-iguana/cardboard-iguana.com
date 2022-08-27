@@ -1,7 +1,7 @@
 # Using PowerShell
 
 author:: Nathan Acks  
-date:: 2021-11-25
+date:: 2022-08-26
 
 ## Access the Registry Through PowerShell
 
@@ -9,40 +9,17 @@ You can actually access the registry from PowerShell using the `cd` command: `cd
 
 Major hives:
 
-* HKEY_CLASSES_ROOT
-* HKEY_CURRENT_USER
-* HKEY_LOCAL_MACHINE
-* HKEY_USERS
-* HKEY_CURRENT_CONFIG
+* `HKEY_CLASSES_ROOT`
+* `HKEY_CURRENT_USER`
+* `HKEY_LOCAL_MACHINE`
+* `HKEY_USERS`
+* `HKEY_CURRENT_CONFIG`
 
 ## Commands
 
 ### Accessing Windows Logs
 
 Use the `Get-WinEvent` cmdlet.
-
-### Domain Enumeration
-
-```powershell
-# Get domain users and associated groups
-#
-Get-DomainUsers | select name, memberof
-
-# Get all domain group members, including nested domain groups
-#
-Get-DomainGroupMember -Identity $GROUP_NAME
-
-# Show all users that previously logged on to a machine (defaults to
-# local machine; requires admin privileges to be run against remote
-# machines)
-#
-Get-NetLoggedon | select UserName
-
-# Show all users who are logged in to a machine RIGHT NOW (does not
-# require admin privileges for remote systems if run from Windows Server)
-#
-Get-NetSession
-```
 
 ### Download a File
 

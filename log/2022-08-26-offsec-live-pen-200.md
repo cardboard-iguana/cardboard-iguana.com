@@ -5,7 +5,7 @@ date:: 2022-08-26
 
 ## Active Directory Enumeration & Exploitation, Part 2
 
-* `Get-DomainUser -SPN` will list AD service accounts using `PowerView.ps1`.
+* `Get-DomainUsers -SPN` will list AD service accounts using `PowerView.ps1`.
 * In AD, the domain controller will grant a service ticket for *any* service to *any* user. Access is enforced by the *service* machine.
 * Since AD tickets are encrypted using account password hashes — so if weak passwords are chosen for service accounts, tickets can be cracked to retrieve service account passwords.
 * There is an `Invoke-Kerberos.ps1` PowerShell module out there that does native kerberoasting from PowerShell. Output can be passed to Hashcat, among others. Be sure to set the `-Width` parameter (vixx recommends 8000) when using `Out-File` with this module, or this function won’t output the entire ticket! — `Invoke-Kerberoast -OutputFormat Hashcat | Select-Object Hash | Out-File -filepath "$FILE_PATH" -Width 8000`

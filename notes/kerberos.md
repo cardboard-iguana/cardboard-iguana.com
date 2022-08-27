@@ -75,6 +75,12 @@ Kerberoasting is where a service ticket is used to brute force a service passwor
 
 Note that not every account is kerberoastable, though it’s not 100% obvious from this walk-through why that is. The Kali Linux tool `bloodhound` can be used to identify potentially kerberoastable accounts.
 
+The `Invoke-Kerberoast` PowerShell module can be used to create a dump of service tickets that can then be attacked offline using Hashcat of John the Ripper. (Note that calling `Out-File` with the `-Width 8000` option is important in the below example, as otherwise the ticket can be truncated!)
+
+```powershell
+Invoke-Kerberoast -OutputFormat Hashcat | Select-Object Hash | Out-File -filepath "$FILE_PATH" -Width 8000
+```
+
 The main defenses against kerberoasting are (1) strong passwords and (2) making sure you’re not running any services as domain admin (which you shouldn’t need to do in this day and age anyway).
 
 ### AS-REP Roasting
@@ -110,3 +116,7 @@ Golden tickets are powerful (since you can be anyone, it’s trivial to gain con
 * [Using Mimikatz](mimikatz.md)
 * [Using Rubeus](rubeus.md)
 * [ITPro.TV: CompTIA Security+ (SY0-601)](itprotv-comptia-security-plus.md)
+* [2022-08-26 - OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)
+* [EmpireProject / Empire / module_source / credentials / Invoke-Kerberoast.ps1](https://github.com/EmpireProject/Empire/blob/master/data/module_source/credentials/Invoke-Kerberoast.ps1)
+* [Using Hashcat](hashcat.md)
+* [Using John the Ripper](john-the-ripper.md)

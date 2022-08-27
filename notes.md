@@ -212,6 +212,11 @@
 * [XSS Hunter](https://xsshunter.com/)
 * [XXE (XML External Entity) Attacks](notes/xml-external-entity-attacks.md)
 
+## PowerShell Tools
+
+* [Using Powercat](notes/powercat.md)
+* [Using PowerView](notes/powerview.md)
+
 ## CTFs and Wargames
 
 * [Attacktive Directory](notes/tryhackme-attacktive-directory.md)
