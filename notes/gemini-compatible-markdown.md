@@ -21,15 +21,15 @@ In some cases, the first H1 tag in Gemini is treated as the page header (if it i
 
 ### Strong/Emphasis & Inline Code
 
-Gemini doesn’t explicitly support any formatting tags *within* a line. However, the convention of using single stars (\*) to denote emphasis and back-ticks (\`) to quote code is well established and can be used even in a “plain text” line without looking weird.
+Gemini doesn’t explicitly support any formatting tags *within* a line. However, the convention of using single stars (`*`) to denote emphasis and back-ticks (\`) to quote code is well established and can be used even in a “plain text” line without looking weird.
 
-Instead of using two stars (\*\*) to denote bolded text, it’s probably better to use UPPER CASE for documents destined for Gemini.
+Instead of using two stars (`**`) to denote bolded text, it’s probably better to use UPPER CASE for documents destined for Gemini.
 
-Since Markdown requires that these characters be escaped, so text destined for Gemini will need to be processed to remove back-slashed escapes (\). Note that md2gmi can handle this automatically.
+Since Markdown requires that these characters be escaped, so text destined for Gemini will need to be processed to remove back-slashed escapes (`\`). Note that md2gmi can handle this automatically.
 
 ### Lists
 
-Only *unordered* lists are permitted in Gemini, and no indentation is allowed. Lists *must* use star characters (\*) as their leaders.
+Only *unordered* lists are permitted in Gemini, and no indentation is allowed. Lists *must* use star characters (`*`) as their leaders.
 
 ### Quotes
 
