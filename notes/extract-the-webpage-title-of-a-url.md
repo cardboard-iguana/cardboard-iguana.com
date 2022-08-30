@@ -8,7 +8,7 @@ python3 -c "import bs4, requests; print(bs4.BeautifulSoup(requests.get('$URL').t
 
 This needs the python3-bs4 package on Debian-based distribution. Note that we use the .text method  instead of .content to ensure that we get back a unicode string (rather than just the raw bytes, which can and will get mangled by anything you pipe this into).
 
-NOTE: This won’t work on webpages for sites like Twitter that set the `<title/>` using JavaScript after initial page load.
+NOTE: This won't work on webpages for sites like Twitter that set the `<title/>` using JavaScript after initial page load.
 
 ## References
 

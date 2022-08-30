@@ -7,18 +7,18 @@ date:: 2021-12-09
 
 ### Deploy the VM
 
-I think I’ve basically done a different version of this room…
+I think I've basically done a different version of this room...
 
 Anyways, two types of XML External Entity (XXE) attacks:
 
 * IN-BAND attacks are where the attacker receives an immediate response.
-* OUT-OF-BAND (“blind”) attacks are when there is no immediate response and instead the attacker must receive the data indirectly (such as through a request to a second server under the attacker’s control).
+* OUT-OF-BAND ("blind") attacks are when there is no immediate response and instead the attacker must receive the data indirectly (such as through a request to a second server under the attacker's control).
 
 ### eXtensible Markup Language
 
 Some things to remember about XML documents:
 
-* Start with the standard prolog: `<?xml version="1.0" encoding="UTF-8"?>`. This is not *technically* compulsory, but some parsers will barf if it’s missing.
+* Start with the standard prolog: `<?xml version="1.0" encoding="UTF-8"?>`. This is not *technically* compulsory, but some parsers will barf if it's missing.
 * Every XML document has one and *only* one root element.
 * XML is case sensitive.
 
@@ -49,9 +49,9 @@ validate the XML document
 </note>
 ```
 
-The root node is defined immediately after the DOCTYPE declaration, with each ELEMENT declaration taking the form `element_name (contained_data)`. `#PCDATA` stands for “printable character data.
+The root node is defined immediately after the DOCTYPE declaration, with each ELEMENT declaration taking the form `element_name (contained_data)`. `#PCDATA` stands for "printable character data.
 
-The DTD can also define multiple ENTITY types — `&amp;` and similar.
+The DTD can also define multiple ENTITY types - `&amp;` and similar.
 
 ```xml
 <!DOCTYPE userInfo [
@@ -77,4 +77,4 @@ These last two features are what we will leverage to attack applications that ac
 <root>&read;</root>
 ```
 
-The SYSTEM directive allows us to include other files… Possibly quite sensitive ones, depending on the permissions of our webserver and how good the application’s input sanitization is.
+The SYSTEM directive allows us to include other files... Possibly quite sensitive ones, depending on the permissions of our webserver and how good the application's input sanitization is.

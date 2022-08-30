@@ -10,18 +10,18 @@ hydra -t 4 -l $USER_NAME -P $WORDLIST \
       -f $TARGET_IP_ADDRESS $SERVICE
 ```
 
-Here `$SERVICE` is “ssh”, “ftp”, etc. Note that "http" is not used directly; instead use "http-get", "http-put", etc.
+Here `$SERVICE` is "ssh", "ftp", etc. Note that "http" is not used directly; instead use "http-get", "http-put", etc.
 
 ### Options
 
-* `-f` — Stop after the first successful match. Useful if you are just trying to brute-force a single username!
-* `-l` — Specify the username whose password you want to brute force.
-* `-L` — Specify a file listing of usernames (one per line) you want to brute force.
-* `-p` — Specify the password you want to attempt. Most useful in conjunction with `-L`.
-* `-P` — Specify a file listing of passwords (one per line) you want to brute force.
-* `-s` — Use a non-default port for `$SERVICE`.
-* `-t` — Specifies the number of threads (parallel connection attempts) that Hydra should make at any one time.
-* `-V` — Verbose output. Use `-vV` for even more verbose output, or `-d` for debugging output.
+* `-f` - Stop after the first successful match. Useful if you are just trying to brute-force a single username!
+* `-l` - Specify the username whose password you want to brute force.
+* `-L` - Specify a file listing of usernames (one per line) you want to brute force.
+* `-p` - Specify the password you want to attempt. Most useful in conjunction with `-L`.
+* `-P` - Specify a file listing of passwords (one per line) you want to brute force.
+* `-s` - Use a non-default port for `$SERVICE`.
+* `-t` - Specifies the number of threads (parallel connection attempts) that Hydra should make at any one time.
+* `-V` - Verbose output. Use `-vV` for even more verbose output, or `-d` for debugging output.
 
 ## Attacking API Endpoints Using JSON
 

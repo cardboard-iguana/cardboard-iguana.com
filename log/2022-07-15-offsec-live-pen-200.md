@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2022-07-15
 
-Today we’ll be focusing on *passive* information gathering (which should really be the *first* thing you do).
+Today we'll be focusing on *passive* information gathering (which should really be the *first* thing you do).
 
-The big conceptual difference between “active” and “passive” information gathering is whether your activity “looks normal” to the defenders. So, browsing a website is passive (though it’s not *strictly* so), as is using third-party tools that would *not* alert the defenders (so Shodan, Google, and Netcraft are passive, but online port scanners are not).
+The big conceptual difference between "active" and "passive" information gathering is whether your activity "looks normal" to the defenders. So, browsing a website is passive (though it's not *strictly* so), as is using third-party tools that would *not* alert the defenders (so Shodan, Google, and Netcraft are passive, but online port scanners are not).
 
 ## Whois
 
@@ -19,8 +19,8 @@ whois $IP_ADDRESS
 
 Google search operators/hacks:
 
-* `site:` — restrict search to the specified domain
-* `filetype:` — only return results for a given file type (php, html, pdf, etc.)
+* `site:` - restrict search to the specified domain
+* `filetype:` - only return results for a given file type (php, html, pdf, etc.)
 
 ## Netcraft
 
@@ -28,7 +28,7 @@ You can get a lot of additional server and DNS information using https://searchd
 
 ## Harvesting Email
 
-“The Harvester” is a tool for harvesting email addresses and subdomains from public websites.
+"The Harvester" is a tool for harvesting email addresses and subdomains from public websites.
 
 ```bash
 theHarvester -d $EMAIL_DOMAIN -b $SERVICE_TO_SEARCH
@@ -36,13 +36,13 @@ theHarvester -d $EMAIL_DOMAIN -b $SERVICE_TO_SEARCH
 
 ## Shodan
 
-Give it an IP, get back open ports, service versions, etc. There’s a lot of overlap with Netcraft, though not enough to make either tool redundant.
+Give it an IP, get back open ports, service versions, etc. There's a lot of overlap with Netcraft, though not enough to make either tool redundant.
 
 Shodan supports a lot of different filters for different services, IoT devices, vulnerabilities, etc.
 
 ## Stack Overflow
 
-See if you can find accounts that are linked to your target, and then look for the questions they’ve asked. Sometimes the “answers” are not actually secure, and can be exploited!
+See if you can find accounts that are linked to your target, and then look for the questions they've asked. Sometimes the "answers" are not actually secure, and can be exploited!
 
 ## References
 

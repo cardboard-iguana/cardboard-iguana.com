@@ -2,7 +2,7 @@
 
 author:: Nathan Acks
 
-Open up D:/.kobo/Kobo/Kobo eReader.conf (where D: is the Kobo’s mount point) and add (or modify) the following block:
+Open up D:/.kobo/Kobo/Kobo eReader.conf (where D: is the Kobo's mount point) and add (or modify) the following block:
 
 ```ini
 [FeatureSettings]

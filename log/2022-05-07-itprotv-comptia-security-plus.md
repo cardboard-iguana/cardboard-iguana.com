@@ -5,7 +5,7 @@ date:: 2022-05-07
 
 ## CompTIA Security+ Exam Cram
 
-Today I’ll be working through my *last* reading from the Security+ Exam Cram (chapter 35), “Sensitive Data and Privacy”.
+Today I'll be working through my *last* reading from the Security+ Exam Cram (chapter 35), "Sensitive Data and Privacy".
 
 ### Data Sensitivity Labeling and Handling
 
@@ -17,7 +17,7 @@ Common data classification labels:
 * Confidential (typically internal-only and need-to-know)
 * Sensitive (highly damaging if disclosed; a step up in restrictions from confidential)
 
-Data often changes its sensitivity level depending on its stage of use (for example, quarterly financials move from sensitive → public).
+Data often changes its sensitivity level depending on its stage of use (for example, quarterly financials move from sensitive -> public).
 
 ### Privacy Laws and Regulatory Compliance
 
@@ -35,11 +35,11 @@ Key roles:
 * Controller (GDPR; determines the use of the data)
 * Processor (GDPR; an entity that processes or otherwise manipulates data).
 
-Note that it’s not uncommon for a single person to have multiple roles w.r.t. a given piece/type of data.
+Note that it's not uncommon for a single person to have multiple roles w.r.t. a given piece/type of data.
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Privacy and Data Sensitivity — Breaches & Data Types
+### Privacy and Data Sensitivity - Breaches & Data Types
 
 Initial steps when containing a data breach:
 
@@ -76,13 +76,13 @@ Equivalent common business data classifications:
 
 The idea here is to combine *both* categories and classifications to determine who should have access to a given piece of data.
 
-### Privacy and Data Sensitivity — Privacy Enhancing Tech
+### Privacy and Data Sensitivity - Privacy Enhancing Tech
 
 * Data minimization (in both collection *and* processing)
-* Masking (use “fake” data, normally for testing)
+* Masking (use "fake" data, normally for testing)
 * Tokenization (replace sensitive data with a non-meaningful, *possibly* reversible, representation)
 
-Data masking can either be “static” (a completely altered data set) or “deterministic” (mapping “fake” data to the actual data in a one-to-one fashion). Masking sometimes is done one-the-fly when it is transferred between systems (“on-the-fly” masking is called “dynamic” masking when there is no “testing” datastore on the other side, just a process/application of some kind).
+Data masking can either be "static" (a completely altered data set) or "deterministic" (mapping "fake" data to the actual data in a one-to-one fashion). Masking sometimes is done one-the-fly when it is transferred between systems ("on-the-fly" masking is called "dynamic" masking when there is no "testing" datastore on the other side, just a process/application of some kind).
 
 Data masking techniques:
 
@@ -90,25 +90,25 @@ Data masking techniques:
 * Scrambling
 * Nulling
 * Value variance (data is replaced by some mapping)
-* Substitution (like value variance, but care is taken to make the “fake” data realistic)
+* Substitution (like value variance, but care is taken to make the "fake" data realistic)
 * Shuffling (randomize values *within* a dataset)
-* Pseudonymization (any of the above, but with the goal that the link between the data set and the “real world” is broken while *maintaining* patterns *within* the data set)
+* Pseudonymization (any of the above, but with the goal that the link between the data set and the "real world" is broken while *maintaining* patterns *within* the data set)
 
 The key difference between pseudonymization and anonymization is that the former is theoretically reversible (and may be *functionally* reversible with access to the original mapping / lookup table), while the latter is not. Anonymization is actually quite difficult for real-world data without purposefully destroying the patterns/relationships within the data set.
 
-### Privacy and Data Sensitivity — Roles & Responsibilities
+### Privacy and Data Sensitivity - Roles & Responsibilities
 
-“Roles” correspond to a particular *job*, while “responsibilities” correspond to that job’s *functions*.
+"Roles" correspond to a particular *job*, while "responsibilities" correspond to that job's *functions*.
 
-* Subject (who’s the data about, anyway?)
+* Subject (who's the data about, anyway?)
 * Data Protection Offices (GDPR role; responsible for training, auditing internal processes, and acting as the governmental point-of-contact)
 * Owner (holds legal rights/controls over the data and is responsible for data categorization and classification) 
 * Custodian (responsible for dats custody, transport, storage, etc.)
 * Steward (responsible for ensuring that data is fit for purpose & is handled in a manner compliant with corporate policies, government regulations, etc.)
-* Controller (determines the why and how data will be processed, subject to the owner’s classification/direction)
-* Processor (whoever’s actually processing the data)
+* Controller (determines the why and how data will be processed, subject to the owner's classification/direction)
+* Processor (whoever's actually processing the data)
 
-### Privacy and Data Sensitivity — Other Areas
+### Privacy and Data Sensitivity - Other Areas
 
 Information lifecycle:
 
@@ -119,8 +119,8 @@ Information lifecycle:
 * Archive
 * Destroy
 
-Note that “use” and “share” are optional steps, and one or both may actually not happen.
+Note that "use" and "share" are optional steps, and one or both may actually not happen.
 
-A “privacy impact assessment” is just an assessment covering how PII is collected, used, shared, and maintained… And what the *impact* to the business would be should any of these processes have a CIA breakdown. The goal is to make sure that privacy protections are integrated into the entire SDLC.
+A "privacy impact assessment" is just an assessment covering how PII is collected, used, shared, and maintained... And what the *impact* to the business would be should any of these processes have a CIA breakdown. The goal is to make sure that privacy protections are integrated into the entire SDLC.
 
-A “privacy notice” is the externally-facing version/description of a “privacy policy”.
+A "privacy notice" is the externally-facing version/description of a "privacy policy".

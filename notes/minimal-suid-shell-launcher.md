@@ -33,7 +33,7 @@ main() {
 
 Once compiled, this needs to be called by an SUID binary. The `-p` is required to keep bash from dropping privileges.
 
-Note that this is very similar to the `LD_PRELOAD` trick, except that we’re using `execl()` instead of `system()` and dropping a header.
+Note that this is very similar to the `LD_PRELOAD` trick, except that we're using `execl()` instead of `system()` and dropping a header.
 
 ## References
 

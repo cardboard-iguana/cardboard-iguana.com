@@ -11,17 +11,17 @@ By default, S3 buckets are only accessible by the owner
 
 Available access control mechanism:
 
-* IAM — Best when dealing with internal Amazon users/systems. Controls access from the *user’s* perspective.
-* S3 Bucket Policy — Uses the same JSON structure as IAM. Controls access from the *bucket’s* perspective. Need to be used for cross-account authentication.
-* S3 ACLs — XML-based. Can only *add* access. “Full Control” is used for cross-account access.
-* VPC Endpoints — Use a VPC endpoint as a proxy, and then restrict access using VPC policies. Allows bucket *content* to be exposed externally without exposing the entire bucket.
-* Pre-Signed URLs — Basically, special URLs that can perform pre-defined actions. *Anyone who can access this URL can perform these actions.*
+* IAM - Best when dealing with internal Amazon users/systems. Controls access from the *user's* perspective.
+* S3 Bucket Policy - Uses the same JSON structure as IAM. Controls access from the *bucket's* perspective. Need to be used for cross-account authentication.
+* S3 ACLs - XML-based. Can only *add* access. "Full Control" is used for cross-account access.
+* VPC Endpoints - Use a VPC endpoint as a proxy, and then restrict access using VPC policies. Allows bucket *content* to be exposed externally without exposing the entire bucket.
+* Pre-Signed URLs - Basically, special URLs that can perform pre-defined actions. *Anyone who can access this URL can perform these actions.*
 
 IAM *authentication* is handled by the account itself, but *authorization* is handled on a service-by-service basis.
 
 ### S3 Block Public Access
 
-This is a set of security controls that blocks unrestricted (“public”) non-cross-account access, overriding (depending on the use case) existing permissions. There are four controls, each of which can be applied separately:
+This is a set of security controls that blocks unrestricted ("public") non-cross-account access, overriding (depending on the use case) existing permissions. There are four controls, each of which can be applied separately:
 
 * *Block* new public ACLs and objects
 * *Remove* existing public access granted by ACLS
@@ -30,11 +30,11 @@ This is a set of security controls that blocks unrestricted (“public”) non-c
 
 The last of these is intended to be an intermediate state allowing a bucket to be temporarily locked down while public policies are removed or restricted.
 
-These four policies can be applied in any combination at either the account (which applies to all buckets) or per-bucket level. When applied at the account level, new buckets will automatically inherit these policies. (Note that when new buckets are created on the console these settings are all selected by default, even if these policies have *not* been applied. These can be thought of as “safe defaults”. *However*, if the policies are not applied at the account level, then buckets created via the API will *not* be protected by default!)
+These four policies can be applied in any combination at either the account (which applies to all buckets) or per-bucket level. When applied at the account level, new buckets will automatically inherit these policies. (Note that when new buckets are created on the console these settings are all selected by default, even if these policies have *not* been applied. These can be thought of as "safe defaults". *However*, if the policies are not applied at the account level, then buckets created via the API will *not* be protected by default!)
 
 ### How S3 Authorizes a Request
 
-When S3 is checking authorization, it rolls up all applicable policies and then considers them as a single “master” policy. There are (conceptually) three stages to this check:
+When S3 is checking authorization, it rolls up all applicable policies and then considers them as a single "master" policy. There are (conceptually) three stages to this check:
 
 * User context (has the user been granted explicit access).
 * Bucket context (has the bucket owner granted the user authorization to perform a particular action).
@@ -48,13 +48,13 @@ Interestingly, by default bucket ownership does *not* grant object ownership. So
 
 Encryption keys can be managed directly in S3, via AWS KMS, using client-managed keys, or entirely client-side.
 
-It sounds like encryption is done using symmetric keys, at least in the KMS case. However, the key itself is encrypted by KMS. The encrypted key is then stored alongside the encrypted object, and handed back to KMS for decryption when the object is retrieved (this creates an additional layer of authorization, as KMS is *also* checking to see if decryption operations are authorized). I think the idea here is to enable per-object keys but still use a single “source of truth” for decryption authorization.
+It sounds like encryption is done using symmetric keys, at least in the KMS case. However, the key itself is encrypted by KMS. The encrypted key is then stored alongside the encrypted object, and handed back to KMS for decryption when the object is retrieved (this creates an additional layer of authorization, as KMS is *also* checking to see if decryption operations are authorized). I think the idea here is to enable per-object keys but still use a single "source of truth" for decryption authorization.
 
 ### Use Cases
 
-It turns out that Capitol One wrote a similar anti-ACL policy before AWS introduced the security features discussed above. One trick they used was to add an explicit “deny all” with the condition that the user was *not* within Capitol One’s AWS organization.
+It turns out that Capitol One wrote a similar anti-ACL policy before AWS introduced the security features discussed above. One trick they used was to add an explicit "deny all" with the condition that the user was *not* within Capitol One's AWS organization.
 
-A good use case here for when to use AssumeRole, but it’s kind of reverse what Amazon was describing: Capitol One’s high-security systems will do an AssumeRole to push lower security data into a segmented low-security system. Doing that means that data being placed into low-security S3 buckets is put there *by the low-security account* (whose role the high-security account has assumed). This allows the low-security account to then manage access to that data without the high-security account ever needing to interact with or know about downstream object consumers. This also gets Capitol One out of having to manage ACLs *entirely*.
+A good use case here for when to use AssumeRole, but it's kind of reverse what Amazon was describing: Capitol One's high-security systems will do an AssumeRole to push lower security data into a segmented low-security system. Doing that means that data being placed into low-security S3 buckets is put there *by the low-security account* (whose role the high-security account has assumed). This allows the low-security account to then manage access to that data without the high-security account ever needing to interact with or know about downstream object consumers. This also gets Capitol One out of having to manage ACLs *entirely*.
 
 ### References
 
@@ -64,36 +64,36 @@ A good use case here for when to use AssumeRole, but it’s kind of reverse what
 
 ### IAM Policy Language
 
-Basic IAM policy structure: “PARC” — Principal, Action, Resource, Condition. This is all led by an initial “effect”, which is allow/deny.
+Basic IAM policy structure: "PARC" - Principal, Action, Resource, Condition. This is all led by an initial "effect", which is allow/deny.
 
-* Principal — the entity with is allowed/denied access.
-* Action — the type of access being allowed/denied.
-* Resource — what the action is working on.
-* Condition — *when* should the policy be enforced.
+* Principal - the entity with is allowed/denied access.
+* Action - the type of access being allowed/denied.
+* Resource - what the action is working on.
+* Condition - *when* should the policy be enforced.
 
-I’m guessing that the “default” condition is `*`, since I’ve seen IAM policies without conditions.
+I'm guessing that the "default" condition is `*`, since I've seen IAM policies without conditions.
 
-A non-standard way to think about policy evaluation: It’s all about matching. (Does the incoming policy, which may include AWS-populated data, match a policy defined by the account? If so, then execute that policy, deny before allow. If not, then just deny.)
+A non-standard way to think about policy evaluation: It's all about matching. (Does the incoming policy, which may include AWS-populated data, match a policy defined by the account? If so, then execute that policy, deny before allow. If not, then just deny.)
 
 ### Policy Types & Interactions
 
-It sounds like AWS Organizations are basically just another policy layer on top of (and overriding?) regular accounts. In particular, these policies seem to be more geared towards controlling access to entire services (can a particular account even *use* S3 or EC2) more than user- or role-level permissioning. These “service control policies” are default deny, just like everything else in AWS, but all new accounts/organizations are provisioned with an explicit “allow everything” service control policy initially.
+It sounds like AWS Organizations are basically just another policy layer on top of (and overriding?) regular accounts. In particular, these policies seem to be more geared towards controlling access to entire services (can a particular account even *use* S3 or EC2) more than user- or role-level permissioning. These "service control policies" are default deny, just like everything else in AWS, but all new accounts/organizations are provisioned with an explicit "allow everything" service control policy initially.
 
-IAM has the concept of a “permission boundary”, which are defined *maximum* permission sets *within* an account.
+IAM has the concept of a "permission boundary", which are defined *maximum* permission sets *within* an account.
 
-”STS” in AWS stands for “Security Token Service”.
+"STS" in AWS stands for "Security Token Service".
 
 In general, you need an IAM policy *or* a resource-based policy to access something within an account. For cross-account access *both* the IAM and resource-based policies must be present and aligned.
 
 ### Policy Use Cases
 
-The recommendation here when using service control policies at the organization level is to blacklist, rather than whitelist, things. That’s kind of reverse from the normal way of doing things, and seems to mostly be motivated by the sheer number of services (and the growth rate of that number) that AWS supports.
+The recommendation here when using service control policies at the organization level is to blacklist, rather than whitelist, things. That's kind of reverse from the normal way of doing things, and seems to mostly be motivated by the sheer number of services (and the growth rate of that number) that AWS supports.
 
 When scoping service control policies by region, note that a handful of services (and actions within some otherwise normal services) that are *globally* scoped. That means that *denying* a region will not always have the effect you want! (I assume this means we should deny globally and then allow in specific regions in this case, opposite of the previous advice.)
 
 You can do some cool things with IAM and service control policies, like *requiring* that developer-created roles include a permission boundary or region.
 
-Policies actually support some limited variables: For example, `${aws:PrincipalTag/project}` let’s you reference user (“principal”) tags within a policy condition. This lets you, for example, require that developers always tag resources they create with a pre-assigned (role?) tag (you can also restrict the ability of developers to *control* resources that don’t share their tag). This sort of generality comes in handy if you have a lot of teams that have the *same* permission structure but need to be siloed from each other — write *one* policy (or set of policies), and then tag the associated users/groups/roles to apply that policy in an *identical but disjoint* fashion.
+Policies actually support some limited variables: For example, `${aws:PrincipalTag/project}` let's you reference user ("principal") tags within a policy condition. This lets you, for example, require that developers always tag resources they create with a pre-assigned (role?) tag (you can also restrict the ability of developers to *control* resources that don't share their tag). This sort of generality comes in handy if you have a lot of teams that have the *same* permission structure but need to be siloed from each other - write *one* policy (or set of policies), and then tag the associated users/groups/roles to apply that policy in an *identical but disjoint* fashion.
 
 ### References
 

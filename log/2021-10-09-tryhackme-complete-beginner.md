@@ -102,10 +102,10 @@ Initially I tried to add the relevant magic bytes to the front of my JS file wit
 
 Re-scanning the /content directory with gobuster for .js files revealed nothing, but rescanning for .jpg revealed that the server was renaming all files with the .jpg extension. Fortunately, the uploaded shell was so much smaller than either the pre-existing images or my uploaded test that it was easy to pick out
 
-THIS IS WHERE I GOT STUCK. I finally wound up looking at the challenge hints, most of which it turned out I'd already figured out. But Hint 9 suggested looking at the /admin page, which I hadn't bothered to try to visit. LET THAT BE A LESSON TO ME — POKE AROUND MORE!
+THIS IS WHERE I GOT STUCK. I finally wound up looking at the challenge hints, most of which it turned out I'd already figured out. But Hint 9 suggested looking at the /admin page, which I hadn't bothered to try to visit. LET THAT BE A LESSON TO ME - POKE AROUND MORE!
 
 The admin page indicates that it loads modules, so this is how we're going to get the Express app to execute the reverse shell (I'd been wondering how I was going to get it loaded into memory up until this point). Loading ../content/XKM.jpg (which is where my shell wound up) in this page resulted popped the shell, after which grabbing the flag was easy.
 
 * [Express](http://expressjs.com/)
 * [Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
-* [TryHackMe: File Upload Vulnerabilities — Hints](https://muirlandoracle.co.uk/2020/06/30/file-upload-vulnerabilities-hints/)
+* [TryHackMe: File Upload Vulnerabilities - Hints](https://muirlandoracle.co.uk/2020/06/30/file-upload-vulnerabilities-hints/)

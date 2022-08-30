@@ -38,7 +38,7 @@ Tools of the trade:
 
 ### Vulnerability Capstone
 
-I couldn’t get any of the exploits from Exploit DB to work for me, so I wound up doing a web search that landed me on a write-up for this room in GitHub; the provided exploit code is a little rough, but can be cleaned up to produce nice output without too much work:
+I couldn't get any of the exploits from Exploit DB to work for me, so I wound up doing a web search that landed me on a write-up for this room in GitHub; the provided exploit code is a little rough, but can be cleaned up to produce nice output without too much work:
 
 ```python
 #!/usr/bin/python3
@@ -104,13 +104,13 @@ Module categories:
 
 Payloads, in turn, can be divided into:
 
-* Singles (self-contained; also indicated by the use of an `_` separating “shell” from the rest of the payload name, as in `shell_reverse_tcp`)
+* Singles (self-contained; also indicated by the use of an `_` separating "shell" from the rest of the payload name, as in `shell_reverse_tcp`)
 * Stagers (small applications that establish a connection back to the attacker to download a larger, more complex payload)
-* Stages (payloads designed to be downloaded by a stager; also indicated by the use of a `/` separating “shell” from the rest of the payload name, as in `shell/reverse_tcp`)
+* Stages (payloads designed to be downloaded by a stager; also indicated by the use of a `/` separating "shell" from the rest of the payload name, as in `shell/reverse_tcp`)
 
 ### Msfconsole
 
-You can use msfconsole as a shell, but there’s no redirect functionality.
+You can use msfconsole as a shell, but there's no redirect functionality.
 
 Use `history` to display a command history.
 
@@ -120,7 +120,7 @@ The `show` command can be used with any module type to list modules of that type
 
 The `back` command leaves the context of the current module.
 
-Use `info` to get module information (which is not generally the same as “help”, though it often does contain useful informaiton).
+Use `info` to get module information (which is not generally the same as "help", though it often does contain useful informaiton).
 
 We can limit the `search` query to a particular type of module using the `type:` parameter (e.g., `search type:exploit wordpress`).
 
@@ -136,6 +136,6 @@ You can reset individual parameters using `unset`, and reset the entire module u
 * `unset -g` = `unsetg`
 * `run` = `exploit`
 
-Some exploit modules have a `check` option which attempts to determine if a target is vulnerable without actually exploiting it. Alternately, other modules have a paired auxiliary scanner. Many *don’t* have a check at all. YMMV!
+Some exploit modules have a `check` option which attempts to determine if a target is vulnerable without actually exploiting it. Alternately, other modules have a paired auxiliary scanner. Many *don't* have a check at all. YMMV!
 
 Meterpreter sessions can be backgrounded using the `background` command, and all sessions can be backgrounded using `CTRL + Z`. List sessions using the `sessions` command, and foreground a session using `session -i #`, where `#` is the session number.

@@ -392,10 +392,10 @@ ELAPSED TIME: 3 h 7 min
 ## References
 
 * [Using Hydra](hydra.md)
-* [Using “nmap”](nmap.md)
+* [Using "nmap"](nmap.md)
 * [Using Nikto](nikto.md)
 * [Using Metasploit](metasploit.md)
-* [Using “gobuster”](gobuster.md)
+* [Using "gobuster"](gobuster.md)
 * [Exploit Database](https://www.exploit-db.com)
 * [Defeating HTTP Basic Auth with Hydra](http://tylerrockwell.github.io/defeating-basic-auth-with-hydra/)
 * [Multiple Ways To Exploiting HTTP Authentication](https://www.hackingarticles.in/multiple-ways-to-exploiting-http-authentication/)

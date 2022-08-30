@@ -3,11 +3,11 @@
 author:: Nathan Acks  
 date:: 2022-02-22
 
-(So, I didn’t get to start this yesterday as I’d planned, because I needed to take The Yak Online Governance Primer live instead!)
+(So, I didn't get to start this yesterday as I'd planned, because I needed to take The Yak Online Governance Primer live instead!)
 
-It’s time to get down to business… Up until now, I’ve been trying to bring myself up to speed on the fundamentals. Now it’s time to actually start earning some certifications! First up: The CompTIA Security+.
+It's time to get down to business... Up until now, I've been trying to bring myself up to speed on the fundamentals. Now it's time to actually start earning some certifications! First up: The CompTIA Security+.
 
-I’ll be working on this by alternating episodes of ITPro.TV’s Security+ course and TryHackMe’s Jr. Penetration Tester path.
+I'll be working on this by alternating episodes of ITPro.TV's Security+ course and TryHackMe's Jr. Penetration Tester path.
 
 * [The Yak Online Governance Primer](https://www.yakcollective.org/projects/yak-online-governance-primer/)
 * [CompTIA Security+](https://www.comptia.org/certifications/security)
@@ -25,9 +25,9 @@ Recommended materials:
 
 Based on the Amazon reviews, I decided to go with the second of these, even though the instructors indicated that they were not going to be following it closely.
 
-The instructors are recommending an A+ or Networking+ certification before this. I don’t have that, so we’ll have to see how well I do.
+The instructors are recommending an A+ or Networking+ certification before this. I don't have that, so we'll have to see how well I do.
 
-The test itself is (up to) 90 question that are a mix of multiple-choice, drag-and-drop, and simulation. Passing score is 750/900 (so, ~75 questions correct). It’s currently $381 to take.
+The test itself is (up to) 90 question that are a mix of multiple-choice, drag-and-drop, and simulation. Passing score is 750/900 (so, ~75 questions correct). It's currently $381 to take.
 
 * [CompTIA Security+](https://www.comptia.org/certifications/security)
 
@@ -40,7 +40,7 @@ Basic terminology:
 * Threats: Something that violates the CIA triad. Hackers, criminals, insider threats, etc.
 * Attacks: The exploitation of a vulnerability (such as by a threat actor).
 
-Social engineering is an attack against people: “Bad people tricking authorized users.” Generally the social engineer (threat) tries to leverage (attack) common psychological traits (vulnerabilities) in order to gain access to a system, obtain sensitive information, or forward some other objective.
+Social engineering is an attack against people: "Bad people tricking authorized users." Generally the social engineer (threat) tries to leverage (attack) common psychological traits (vulnerabilities) in order to gain access to a system, obtain sensitive information, or forward some other objective.
 
 Types of phishing:
 
@@ -50,9 +50,9 @@ Types of phishing:
 * Spear phishing: Targeted phishing attacks (maybe to individuals, maybe just to a specific organization)
 * Whaling: Spear phishing against big targets (C-Suite, people with high level access to systems, etc.)
 
-There’s also spam and “spim” (instant messaging spam), which *can* be phishing, but can also just be annoying.
+There's also spam and "spim" (instant messaging spam), which *can* be phishing, but can also just be annoying.
 
-Phishing may not always involve credential harvesting; it can also be about installing malware, or even just getting someone to perform an action on behalf of the attacker (so, I guess gift card scams are actually a form of phishing…).
+Phishing may not always involve credential harvesting; it can also be about installing malware, or even just getting someone to perform an action on behalf of the attacker (so, I guess gift card scams are actually a form of phishing...).
 
 Techniques:
 
@@ -65,7 +65,7 @@ Techniques:
 * Shoulder surfing
 * Tailgating/Piggybacking
 * Pretexting (playing a particular part/role/story)
-* Invoice scams (the instructors are talking about this related to credential harvesting, but I’ve been seeing this mostly in relationship to call center credit card scams of late)
+* Invoice scams (the instructors are talking about this related to credential harvesting, but I've been seeing this mostly in relationship to call center credit card scams of late)
 * Hoaxes
 * Prepending (modifying the *start* of a URL to change its behavior)
 
@@ -85,6 +85,6 @@ Security Operations Centers (SOCs) are typically divided into three tiers:
 
 ### Security Operations Center (SOC)
 
-Interesting shout-out to Feedly as a threat monitoring tool. I periodically return to Feedly, but can’t help shake the feeling that I’m missing something that would help me use it more effectively…
+Interesting shout-out to Feedly as a threat monitoring tool. I periodically return to Feedly, but can't help shake the feeling that I'm missing something that would help me use it more effectively...
 
 * [Feedly](https://feedly.com/)

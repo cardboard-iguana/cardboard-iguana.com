@@ -1,4 +1,4 @@
-# Using “gdb”
+# Using "gdb"
 
 date:: 2022-07-10
 

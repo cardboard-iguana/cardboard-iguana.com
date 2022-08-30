@@ -300,5 +300,5 @@ ELAPSED TIME: 56 min
 ## References
 
 * [LFI (Local File Inclusion) Attacks](local-file-inclusion-attacks.md)
-* [Using “nmap”](nmap.md)
-* [Using “gobuster”](gobuster.md)
+* [Using "nmap"](nmap.md)
+* [Using "gobuster"](gobuster.md)

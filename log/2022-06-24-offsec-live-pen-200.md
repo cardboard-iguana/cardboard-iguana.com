@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-06-24
 
-While I don’t think I’m quite ready yet to take a crack at the OSCP, Offensive Security’s free streaming classes (“OffSec Live”) seem like too good of a deal to pass up. I wasn’t able to catch the first because I was traveling, but I’ll be watching (and taking notes on) as many other sections as I can moving forward.
+While I don't think I'm quite ready yet to take a crack at the OSCP, Offensive Security's free streaming classes ("OffSec Live") seem like too good of a deal to pass up. I wasn't able to catch the first because I was traveling, but I'll be watching (and taking notes on) as many other sections as I can moving forward.
 
 REFERENCES:
 
@@ -14,7 +14,7 @@ REFERENCES:
 
 ## Terminal Best Practices
 
-(I hopped on a few minutes late, unfortunately…)
+(I hopped on a few minutes late, unfortunately...)
 
 ### File Descriptors
 
@@ -34,10 +34,10 @@ dmesg > boot.log
 cat -n < boot.log
 ```
 
-This, incidentally, makes the “heredoc” syntax a little more explicable — it’s basically “appending” text to the `<` redirect.
+This, incidentally, makes the "heredoc" syntax a little more explicable - it's basically "appending" text to the `<` redirect.
 
 ```bash
-# “Heredoc”, which I always forget about.
+# "Heredoc", which I always forget about.
 #
 cat -n << EOF
 Line A
@@ -45,7 +45,7 @@ Line B
 Line C
 EOF
 
-# Also, redirect “heredoc” into a file.
+# Also, redirect "heredoc" into a file.
 #
 cat << EOF > file.txt
 Line A
@@ -60,6 +60,6 @@ Handy shortcut to clear the current terminal screen: `CTRL+K`.
 
 Handy command: `watch` will periodically run a program (specify the interval with `-n`) and display the output in the terminal.
 
-The extended regexp function with `grep` (`-E`) does *not* require the use of parentheses if you’re looking for a single “or” (for example, `grep -E "kali|root" /etc/passwd`).
+The extended regexp function with `grep` (`-E`) does *not* require the use of parentheses if you're looking for a single "or" (for example, `grep -E "kali|root" /etc/passwd`).
 
 Another trick: `cut` supports *negative* numbers to count fields from the right, rather than the left.

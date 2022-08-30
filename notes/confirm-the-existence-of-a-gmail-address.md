@@ -7,7 +7,7 @@ date:: 2021-07-13
 > 
 > `curl -v "https://mail.google.com/mail/gxlu?email=${USER}@gmail.com"`
 > 
-> — 7oaster on The OSINTion Discord
+> - 7oaster on The OSINTion Discord
 
 ## References
 

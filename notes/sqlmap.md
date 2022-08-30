@@ -1,4 +1,4 @@
-# Using “sqlmap”
+# Using "sqlmap"
 
 author:: Nathan Acks  
 date:: 2022-01-30
@@ -7,17 +7,17 @@ Used to automate SQLi attacks (and apparently banned on the OSCP because it make
 
 Useful flags:
 
-* `-u URL`/`--url=URL` — process URL (this *must* include the query parameters *or* you must specify POST parameters using `--data`)
-* `-p`/ — which URL parameter(s) (variables) to test
-* `--dbms=DB_TYPE` — only use injections for a given type of backend database (MySQL, PostgreSQL, etc.)
-* `--dbs` — enumerate DBs
-* `-D`/`-T`/`-C` — dump a specific database/table/column
-* `--dump`/`--dump-all`/`--all` — dump data
-* `--os-shell` — attempt to spawn an interactive shell
-* `--os-pwn` — attempt to spawn a Meterpreter shell or VNC session
-* `--forms` — parse target URL for forms, and use these
-* `--batch` — don't prompt for user input, just use the defaults
-* `--risk` — set the maximum risk level of tests (1 - 3, lowest to highest risk)
+* `-u URL`/`--url=URL` - process URL (this *must* include the query parameters *or* you must specify POST parameters using `--data`)
+* `-p`/ - which URL parameter(s) (variables) to test
+* `--dbms=DB_TYPE` - only use injections for a given type of backend database (MySQL, PostgreSQL, etc.)
+* `--dbs` - enumerate DBs
+* `-D`/`-T`/`-C` - dump a specific database/table/column
+* `--dump`/`--dump-all`/`--all` - dump data
+* `--os-shell` - attempt to spawn an interactive shell
+* `--os-pwn` - attempt to spawn a Meterpreter shell or VNC session
+* `--forms` - parse target URL for forms, and use these
+* `--batch` - don't prompt for user input, just use the defaults
+* `--risk` - set the maximum risk level of tests (1 - 3, lowest to highest risk)
 
 For example:
 

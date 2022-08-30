@@ -11,24 +11,24 @@ Here $TYPE is the hash type (check `man hashcat`), and -O requests that hashcat 
 
 Some values of -m:
 
-* 0 — md5
-* 100 — sha1
-* 900 — md4
-* 1000 — NTLM (Windows)
-* 1400 — sha256
-* 1800 — UNIX SHA-512 passwords (`$6$`)
-* 3000 — LANMAN (Windows)
-* 3200 — bcrypt
-* 13100 — Kerberos 5 hashes (TGS-REP)
-* 18200 — Kerberos 5 hashes (AS-REP)
+* 0 - md5
+* 100 - sha1
+* 900 - md4
+* 1000 - NTLM (Windows)
+* 1400 - sha256
+* 1800 - UNIX SHA-512 passwords (`$6$`)
+* 3000 - LANMAN (Windows)
+* 3200 - bcrypt
+* 13100 - Kerberos 5 hashes (TGS-REP)
+* 18200 - Kerberos 5 hashes (AS-REP)
 
-There are a large number of “Raw Hash, Salted and/or Iterated” modes That allow raw salted hashes (i.e., those not specific to a particular password type) to be processed; for these, specify the hashes as `$HASH:$SALT`.
+There are a large number of "Raw Hash, Salted and/or Iterated" modes That allow raw salted hashes (i.e., those not specific to a particular password type) to be processed; for these, specify the hashes as `$HASH:$SALT`.
 
 Passwords are output as HASH:PLAINTEXT tuples.
 
-Hashcat can accept the output of hashdump from Metasploit (use -m 1000), as well as raw hashes from /etc/shadow (assuming that they’re all the same type).
+Hashcat can accept the output of hashdump from Metasploit (use -m 1000), as well as raw hashes from /etc/shadow (assuming that they're all the same type).
 
-A “token length exception” means that the provided hash format is of the wrong length (probably because an additional character got accidentally added).
+A "token length exception" means that the provided hash format is of the wrong length (probably because an additional character got accidentally added).
 
 ## Utilities
 

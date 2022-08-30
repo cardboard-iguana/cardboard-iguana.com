@@ -30,7 +30,7 @@ hostname $HOSTNAME                 # Set switch hostname
 enable secret $MD5_PASS            # Set password using MD5 hash 
 enable password $PASSWORD          # Set password using clear text
 banner motd $BANNER                # Set login banner
-                                   # (use “$” like “EOF”)
+                                   # (use "$" like "EOF")
 ip default-gateway $IP_ADDRESS     # Set default gateway
 copy running-config startup-config # Persiste current config
 ```

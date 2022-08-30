@@ -7,7 +7,7 @@ date:: 2022-04-11
 
 ### Vulnerability Scans
 
-Nothing new here if you’ve ever been in charge of Nessus/Tenable.io
+Nothing new here if you've ever been in charge of Nessus/Tenable.io
 
 ### SIEM And SOAR Systems
 
@@ -41,7 +41,7 @@ Phases:
 
 ### Pentesting Exercise Types
 
-Red teams *within* organizations typically are less restricted than external pentesters. They have specific *goals* (not just “identify exploitable vulnerabilities”, but something more like “obtain access to X”) and *a lot* more latitude.
+Red teams *within* organizations typically are less restricted than external pentesters. They have specific *goals* (not just "identify exploitable vulnerabilities", but something more like "obtain access to X") and *a lot* more latitude.
 
 Purple teams are most common in smaller organizations with constrained resources.
 

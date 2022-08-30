@@ -35,19 +35,19 @@ mount -t nfs ${SERVER_IP}:${SHARE_PATH} \
 	$LOCAL_MOUNT_DIR -nolock
 ```
 
-All versions of NFS use port 2049 to transfer data; NFSv1 - NFSv3 also depended on the “portmapper” service running on port 111, but this requirement was removed in NFSv4.
+All versions of NFS use port 2049 to transfer data; NFSv1 - NFSv3 also depended on the "portmapper" service running on port 111, but this requirement was removed in NFSv4.
 
 * [What is NFS port number in Linux?](https://racinpaper.com/auto-racing/what-is-nfs-port-number-in-linux.html)
 
 ### Exploiting NFS
 
-By default NFS shares have “root squashing” turned on — attempts to connect as root are assigned to the least-privileged user nfsnobody. But if this is turned off, then it’s possible to set the SUID bit on a file.
+By default NFS shares have "root squashing" turned on - attempts to connect as root are assigned to the least-privileged user nfsnobody. But if this is turned off, then it's possible to set the SUID bit on a file.
 
-NOTE: I don’t see any way to identify that root squashing is disabled from the NMAP scan, so I think we’re just having to take it on faith that it is here. Either that, or this is just one of those “throw spaghetti against the wall and see what happens” times that I’ve run into before in online training CTFs (*cough* Bandit *cough*).
+NOTE: I don't see any way to identify that root squashing is disabled from the NMAP scan, so I think we're just having to take it on faith that it is here. Either that, or this is just one of those "throw spaghetti against the wall and see what happens" times that I've run into before in online training CTFs (*cough* Bandit *cough*).
 
 So the idea here is:
 
-* Gain access to the user’s home directory via NFS.
+* Gain access to the user's home directory via NFS.
 * Get their SSH key.
 * Log in as the user over SSH.
 * Copy the system bash executable to their home directory (`cp $(which bash) ~/.bash`).
@@ -55,11 +55,11 @@ So the idea here is:
 * Run the SUID bash executable (in the SSH session) using to become root (`~/.bash -p`).
 * Profit!
 
-The -p flag tells bash to not drop privileges (otherwise we won’t *actually* get a root shell).
+The -p flag tells bash to not drop privileges (otherwise we won't *actually* get a root shell).
 
-Note that this is a little bit different than the procedure outlined in the actual TryHackMe “room”, in that I’m copying the system executable rather than downloading a compatible executable from some random GitHub repo. Seems better to live off the land, no?
+Note that this is a little bit different than the procedure outlined in the actual TryHackMe "room", in that I'm copying the system executable rather than downloading a compatible executable from some random GitHub repo. Seems better to live off the land, no?
 
-Sometimes you need to unmount an unresponsive NFS share (for example, if you let a TryHackMe box expire while you still have an active mount). Use umount’s -f flag to force the unmount in this situation.
+Sometimes you need to unmount an unresponsive NFS share (for example, if you let a TryHackMe box expire while you still have an active mount). Use umount's -f flag to force the unmount in this situation.
 
 * [OverTheWire: Bandit](../notes/overthewire-bandit.md)
 
@@ -67,7 +67,7 @@ Sometimes you need to unmount an unresponsive NFS share (for example, if you let
 
 SMTP user enumeration uses a combination of the VRFY (verify user/list), EXPN (expand user/list aliases), and RCPT TO (receipt destination).
 
-Instead of (just) using nmap this time, we’re going to layer in the Metasploit smtp_version and smtp_enum modules!
+Instead of (just) using nmap this time, we're going to layer in the Metasploit smtp_version and smtp_enum modules!
 
 Basic Metasploit flow:
 
@@ -77,7 +77,7 @@ Basic Metasploit flow:
 
 ### Exploiting SMTP
 
-Now we’re going to use Hydra to try to brute-force an SSH password. This looks a lot like using Hydra to brute-force an FTP password.
+Now we're going to use Hydra to try to brute-force an SSH password. This looks a lot like using Hydra to brute-force an FTP password.
 
 ```bash
 hydra -t 4 -l $USER_NAME -P $WORDLIST \
@@ -94,11 +94,11 @@ Interesting. According to TryHackMe (and a quick search seems to confirm), Faceb
 
 ### Enumerating MySQL
 
-The Metasploit package for ”enumerating” MySQL data is mysql_sql, but this looks like it’s just a thin wrapper around the mysql client.
+The Metasploit package for "enumerating" MySQL data is mysql_sql, but this looks like it's just a thin wrapper around the mysql client.
 
 ### Exploiting MySQL
 
-In PL/SQL, “schema” represents only those parts of a database that are owned (writable?) by a particular user.
+In PL/SQL, "schema" represents only those parts of a database that are owned (writable?) by a particular user.
 
 The output of the mysql_hashdump Metasploit module is username:password tuples that are suitable for pushing straight into John the Ripper (simply save one or more hashes to a file and then run `john $FILE`).
 
@@ -113,17 +113,17 @@ SELECT Host,
 FROM mysql.user\G
 ```
 
-NOTE: John the Ripper records cracked hash:password tuples in ~/.john/john.pot, and then references this file to avoid cracking known hashes. It *doesn’t* output these passwords again (instead simply declaring “[n]o password hashes left to crack”), so if you get no output then you’ll want to just grep for your hash in john.pot.
+NOTE: John the Ripper records cracked hash:password tuples in ~/.john/john.pot, and then references this file to avoid cracking known hashes. It *doesn't* output these passwords again (instead simply declaring "[n]o password hashes left to crack"), so if you get no output then you'll want to just grep for your hash in john.pot.
 
 ## Web Fundamentals
 
 ### How Do We Load Websites?
 
-Different request types in HTTP are called “verbs”.
+Different request types in HTTP are called "verbs".
 
 ### More HTTP: Verbs and Request Formats
 
-HTTP “verbs” are also called “methods”, which is a term I’m more familiar with. There are 9 total methods, but the most common are GET (retrieve data) and POST (send data).
+HTTP "verbs" are also called "methods", which is a term I'm more familiar with. There are 9 total methods, but the most common are GET (retrieve data) and POST (send data).
 
 All HTTP requests begin with a line of the form `$METHOD $SERVER_PATH $OPTIONAL_PROTOCOL VERSION` (for example, `GET /index.html HTTP/1.1`). Request bodies are permitted for all methods, but are normally ignored for GET (really only the headers matter for GET).
 
@@ -145,6 +145,6 @@ HTTP response codes:
 
 Useful cURL flags:
 
-* `-v` — show full transaction, including headers (not just response bodies).
-* `--data "$DATA"` — send $DATA as the request body.
-* `--cookie "${COOKIE_NAME}=${COOKIE_VALUE}"` — send a cookie.
+* `-v` - show full transaction, including headers (not just response bodies).
+* `--data "$DATA"` - send $DATA as the request body.
+* `--cookie "${COOKIE_NAME}=${COOKIE_VALUE}"` - send a cookie.

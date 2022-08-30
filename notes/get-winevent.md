@@ -57,7 +57,7 @@ Get-WinEvent -FilterHashtable @{
 | Data         | String          |         ❌         |
 | [NamedData]  | String          |         ❌         |
 
-Event Viewer displays *most* of these values in the “General” when viewing an individual log entry, though note that Keywords is translated to a string.
+Event Viewer displays *most* of these values in the "General" when viewing an individual log entry, though note that Keywords is translated to a string.
 
 ### Keywords
 

@@ -31,17 +31,17 @@ Hybrid attacks seem to be the most common these days; for example, John the Ripp
 
 Birthday Attacks: Exploiting hash collisions to crack passwords.
 
-Note that this doesn’t really work when trying to crack a single password, as the probability of any particular hash collision is low. But when the password set it large, the probability that such a collision occurs for *some* password can grow much larger.
+Note that this doesn't really work when trying to crack a single password, as the probability of any particular hash collision is low. But when the password set it large, the probability that such a collision occurs for *some* password can grow much larger.
 
 * [Birthday problem (Wikipedia)](https://en.wikipedia.org/wiki/Birthday_problem)
 
 ### Downgrade Attacks
 
-A species of man-in-the-middle attack. Keep yo’ shit up-to-date!
+A species of man-in-the-middle attack. Keep yo' shit up-to-date!
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Password Attacks — Types
+### Password Attacks - Types
 
 Password attacks are a type of automated attack against authentication systems.
 
@@ -52,14 +52,14 @@ Types:
 * Rainbow tables (files of precomputed hashes; trades speed for memory/storage)
 * Password spraying (trying a single password on multiple accounts simultaneously; slow but stealthy)
 
-If you *can* use rainbow tables, they are the fastest method… But they’re also easily defeated (by salting).
+If you *can* use rainbow tables, they are the fastest method... But they're also easily defeated (by salting).
 
-### Password Attacks — Tools
+### Password Attacks - Tools
 
 Online Attacks: Require interacting directly with the target system (generally a remote login of some kind). Concerns:
 
 * How many attempts are available before a lockout?
-* What’s you’re available (attack) bandwidth?
+* What's you're available (attack) bandwidth?
 * How to avoid detection?
 
 Offline Attacks: Attacks data (typically password hashes) independently of the target system. Typically a step during post-exploitation. Concerns:
@@ -84,14 +84,14 @@ PACK and CeWL, for example, are tools for generating and ordering password lists
 ### The CIA Triad
 
 * Confidentiality (only authorized parties have access)
-* Integrity (only authorized changes are made — and changes are correct)
+* Integrity (only authorized changes are made - and changes are correct)
 * Availability (authorized users *have* access!)
 
 The point of the CIA triad is for a security policy to address *all three* aspects simultaneously. However, the *extent* to which a given system leans on one or more parts of the triad will be determined by its role and the data it holds.
 
 ### Principles of Privileges
 
-Privileged Identity Management (PIM): The translation of a user’s role in an organization to an access role on a system.
+Privileged Identity Management (PIM): The translation of a user's role in an organization to an access role on a system.
 
 Privileged Access Management (PAM): The management of privileges on a system (including how they are tied to access roles, and how access is authenticated).
 
@@ -99,9 +99,9 @@ So, PIM is a species of *identity* management, while PAM is about *access* manag
 
 ### Security Models
 
-The Bell-La Padula Model is used to manage confidentiality. It depends on an organization having well defined job rules and a hierarchical structure, and can be summarized as “no write down, no  read up” (i.e., information from higher confidentiality layers cannot be written to lower layers, and users in lower layers cannot read information from higher layers). Note, however, that the *existence* of higher level data is not necessarily concealed.
+The Bell-La Padula Model is used to manage confidentiality. It depends on an organization having well defined job rules and a hierarchical structure, and can be summarized as "no write down, no  read up" (i.e., information from higher confidentiality layers cannot be written to lower layers, and users in lower layers cannot read information from higher layers). Note, however, that the *existence* of higher level data is not necessarily concealed.
 
-The Biba Model is more concerned with integrity, and is basically the reverse of the Bell-La Padula Model — “no write up, no read down” (information can be read from higher levels, but only written to lower levels).
+The Biba Model is more concerned with integrity, and is basically the reverse of the Bell-La Padula Model - "no write up, no read down" (information can be read from higher levels, but only written to lower levels).
 
 The Bell-La Padula Model is more common in the government, military, and other high-trust, high structure organizations, while the Biba Model is more common in corporate and medical settings.
 

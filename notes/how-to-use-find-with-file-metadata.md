@@ -1,4 +1,4 @@
-# How to Use “find” With File Metadata
+# How to Use "find" With File Metadata
 
 author:: Nathan Acks  
 date:: 2022-08-05
@@ -11,9 +11,9 @@ Matches files owned by a particular user or group (both numeric and symbolic-rea
 
 ## -size
 
-Matches files of size 𝑛.
+Matches files of size `n`.
 
-Prefix 𝑛 with + or - to match files *strictly* greater than or less than 𝑛 in size. To specify useful sizes, use a suffix.
+Prefix `n` with + or - to match files *strictly* greater than or less than `n` in size. To specify useful sizes, use a suffix.
 
 | Suffix | Meaning   |
 |:------:|:--------- |
@@ -22,7 +22,7 @@ Prefix 𝑛 with + or - to match files *strictly* greater than or less than 𝑛
 |   M    | Megabytes |
 |   G    | Gigabytes |
 
-For example, use `-size +4G` to find files over 4 GB (i.e., those that can’t be written to a FAT32 file system).
+For example, use `-size +4G` to find files over 4 GB (i.e., those that can't be written to a FAT32 file system).
 
 ## -perm
 
@@ -58,11 +58,11 @@ find / -type d -a \( -perm -o+w -perm -o+x \) 2>/dev/null
 
 ## -Xmin and -Xtime
 
-Matches files accessed (a), had their *contents* modified (m), or had their *inode* changed (c) 𝑛 minutes (-Xmin) or days (-Xtime) ago.
+Matches files accessed (a), had their *contents* modified (m), or had their *inode* changed (c) `n` minutes (-Xmin) or days (-Xtime) ago.
 
 All mtime changes are ctime changes, but the reverse is not necessarily true.
 
-Prefix 𝑛 with + or - to match files *strictly* before or after the specified time in the *past*.
+Prefix `n` with + or - to match files *strictly* before or after the specified time in the *past*.
 
 For example:
 
@@ -73,7 +73,7 @@ For example:
 ## References
 
 * [TryHackMe: The find Command](tryhackme-the-find-command.md)
-* [How to modify “last status change” (ctime) property of a file in Unix?](https://stackoverflow.com/questions/8346852/how-to-modify-last-status-change-ctime-property-of-a-file-in-unix#8346905)
+* [How to modify "last status change" (ctime) property of a file in Unix?](https://stackoverflow.com/questions/8346852/how-to-modify-last-status-change-ctime-property-of-a-file-in-unix#8346905)
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Symbolic Permissions](symbolic-permissions.md)
 * [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

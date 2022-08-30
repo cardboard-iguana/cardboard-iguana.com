@@ -15,4 +15,4 @@ Some useful options from the man page:
 > -m, --canonicalize-missing
 > canonicalize by following every symlink in every component of the given name recursively, without requirements on components existence
 
-Note that this follows symlinks, so it’s not suitable for every use.
+Note that this follows symlinks, so it's not suitable for every use.

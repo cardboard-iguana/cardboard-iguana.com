@@ -5,7 +5,7 @@ date:: 2022-04-19
 
 ## CompTIA Security+ Exam Cram
 
-Today’s reading is Chapters 27 and 29, “Incident Response” and “Incident Mitigation”, from the Security+ Exam Cram.
+Today's reading is Chapters 27 and 29, "Incident Response" and "Incident Mitigation", from the Security+ Exam Cram.
 
 ### Cyber Kill Chain
 
@@ -19,7 +19,7 @@ As originally developed by Lockheed Martin. There are seven stages, and the goal
 * Command & Control (establishing remote control; may not always happen)
 * Actions on Objectives
 
-There are other “intrusion kill chains” out there.
+There are other "intrusion kill chains" out there.
 
 ### MITRE ATT&CK
 
@@ -47,7 +47,7 @@ This is an adversary-focused functional model. Four components are arrayed on a 
 * Capability
 * Victim
 
-There’s apparently math involved here, not that the Exam Cram is going to explain it.
+There's apparently math involved here, not that the Exam Cram is going to explain it.
 
 ### Incident Response Plan
 
@@ -56,7 +56,7 @@ There’s apparently math involved here, not that the Exam Cram is going to expl
 * Rules
 * Procedures
 
-“Procedures” in particular should include business continuity planning *under the assumption of continued attack*.
+"Procedures" in particular should include business continuity planning *under the assumption of continued attack*.
 
 Incident response plans will often cover *preventative* measures as part of preparing an organization for attack. Useful parts:
 
@@ -92,17 +92,17 @@ The current standard for investigating a potential data breach is to have a repo
 
 ### Cyber-Incident Response Teams
 
-A.k.a., the CIRT or CSIRT (Computer Security Incident Response Team). Which would be the “incident response team” above.
+A.k.a., the CIRT or CSIRT (Computer Security Incident Response Team). Which would be the "incident response team" above.
 
 Three models:
 
 * Centralized (single team)
 * Distributed (multiple teams responsible for different types of incidents or distinct geographic areas)
-* Coordinating (same as the “distributed” model, but coordinated by a central team)
+* Coordinating (same as the "distributed" model, but coordinated by a central team)
 
 ### Training, Tests, and Exercises
 
-The difference between a “test” and an “exercise” is that the former uses real systems (for example, the backup restoration procedure) while the later is a simulation (tabletop exercises, etc.). Tests tend to be *functional*, while exercises can be either functional or scenario-based (the latter are “tabletop” exercises).
+The difference between a "test" and an "exercise" is that the former uses real systems (for example, the backup restoration procedure) while the later is a simulation (tabletop exercises, etc.). Tests tend to be *functional*, while exercises can be either functional or scenario-based (the latter are "tabletop" exercises).
 
 ### Incident Response Process
 
@@ -119,7 +119,7 @@ Resources needed to respond to an incident:
 * Forensics tools
 * Documentation and baselines for existing systems
 
-These are typically consolidated into a “jump kit”.
+These are typically consolidated into a "jump kit".
 
 ### Incident Identification and Analysis
 
@@ -147,15 +147,15 @@ DRP = Disaster Recovery Planning
 * Disaster Recovery Policies (who does what during recovery)
 * Service Level Agreements
 
-(One of these things is not like the others…)
+(One of these things is not like the others...)
 
-One thing to keep in mind here is how to handle *active* sabotage or additional losses during the recovery efforts…
+One thing to keep in mind here is how to handle *active* sabotage or additional losses during the recovery efforts...
 
 ### Continuity of Operations Planning
 
 A.k.a. business continuity planning (but for government).
 
-Active succession planning is highlighted here, though in my experience it’s often neglected in the corporate world (but maybe I’ve just never interacted with the right corps).
+Active succession planning is highlighted here, though in my experience it's often neglected in the corporate world (but maybe I've just never interacted with the right corps).
 
 Tabletop exercises are used here too.
 
@@ -181,7 +181,7 @@ When responding to an incident, in general you want to implement the control tha
 
 ### Application Control
 
-Microsoft’s application black/whitelist solution is AppLocker. AppLocker can function based on digital signatures, application path, and hash.
+Microsoft's application black/whitelist solution is AppLocker. AppLocker can function based on digital signatures, application path, and hash.
 
 Allowed lists are more useful for *preventing* incidents; blocked lists are more useful as part of (short-term) incident response.
 
@@ -189,7 +189,7 @@ Allowed lists are more useful for *preventing* incidents; blocked lists are more
 
 Orchestration/Automation + threat intelligence + incident response. Basically, data goes in while policies and automated actions come out. The advantage here is that incident response can be more formalized and faster than is otherwise generally possible.
 
-“Incident response plans” provide general guidance, while “playbooks” outline formalized response steps for specific types of incidents.
+"Incident response plans" provide general guidance, while "playbooks" outline formalized response steps for specific types of incidents.
 
 Things a SOAR system can automate:
 

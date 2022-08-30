@@ -7,7 +7,7 @@ date:: 2021-10-16
 
 ### Introduction
 
-Active Directory proper encompasses not only user and machine management (which are handled by the domain controller), but also all of the other services that are necessary to allow an organization’s computers to act in unison from the users’ perspective. This includes file servers, etc.
+Active Directory proper encompasses not only user and machine management (which are handled by the domain controller), but also all of the other services that are necessary to allow an organization's computers to act in unison from the users' perspective. This includes file servers, etc.
 
 Domains are arranged into forests.
 
@@ -20,11 +20,11 @@ What makes a domain controller? The presence of Active Directory Domain Services
 * Pushes AD DS updates out to other domain controllers (replication).
 * Provides an overhead view of domain resources for admins.
 
-The AD data store lives in %SystemRoot%/NTDS. The key file is the NTDS.dit database, which actually holds all of the AD domain data + user password hashes (NThashes and, if it’s an older domain, LMhashes).
+The AD data store lives in %SystemRoot%/NTDS. The key file is the NTDS.dit database, which actually holds all of the AD domain data + user password hashes (NThashes and, if it's an older domain, LMhashes).
 
 ### The Forest
 
-Computers + users in an Active Directory environment are arranged into domains, which are grouped into hierarchical trees, which are then contained within a forest. Note that it’s possible for users and computers to not live in a domain, and domains to not live in a tree… But *everything* lives in the forest.
+Computers + users in an Active Directory environment are arranged into domains, which are grouped into hierarchical trees, which are then contained within a forest. Note that it's possible for users and computers to not live in a domain, and domains to not live in a tree... But *everything* lives in the forest.
 
 * TREE: A hierarchical collection of domains.
 * DOMAIN: A grouping of AD objects and OUs.
@@ -41,7 +41,7 @@ AD DS defines two default users: Administrator and Guest.
 By default, there are four types of users (more can be defined):
 
 * DOMAIN ADMINS: Manage the entire domain. The only permission level with access to domain controllers.
-* SERVICE ACCOUNTS: Used for automation and provide permissions for services. Can also be domain admins (though it’s probably not a good idea in most cases).
+* SERVICE ACCOUNTS: Used for automation and provide permissions for services. Can also be domain admins (though it's probably not a good idea in most cases).
 * LOCAL ADMINISTRATORS: Users with administrative rights but *no* domain controller access.
 * DOMAIN USERS: Everyone else. Technically these folks can *also* be local administrators.
 
@@ -73,7 +73,7 @@ Default security groups:
 * CLONEABLE DOMAIN CONTROLLERS: Domain controllers that may be cloned.
 * RAS AND IAS SERVERS: Servers allowed to access remote properties of users.
 
-Microsoft’s Active Directory Security Groups documentation is a little clearer than TryHackMe’s brief overview.
+Microsoft's Active Directory Security Groups documentation is a little clearer than TryHackMe's brief overview.
 
 A little.
 
@@ -81,7 +81,7 @@ A little.
 
 ### Trusts & Policies
 
-Trusts define the *permissions* an object in a domain has w.r.t. other objects in the domain, across domains, and between forests. Trusts can be “directional” (objects in domain A can access some set of objects in domain B) or “transitive” (objects in domain A can access a set of objects *as if* they were in domain B).
+Trusts define the *permissions* an object in a domain has w.r.t. other objects in the domain, across domains, and between forests. Trusts can be "directional" (objects in domain A can access some set of objects in domain B) or "transitive" (objects in domain A can access a set of objects *as if* they were in domain B).
 
 Essentially GPOs applied to an entire domain.
 
@@ -95,11 +95,11 @@ AD DS controls domain management, security certificates, LDAP, etc. Default serv
 
 LLMNT and NBT-NS are apparently services that provide a similar function to DNS.
 
-AD uses Kerberos (uses “tickets” to authenticate users and provide authorization to access domain resources) and NTLM (user authentication only challenge/response protocol) for authentication. Kerberos is used for granting access across the domain, while NTLM is the default protocol used by individual Windows machines.
+AD uses Kerberos (uses "tickets" to authenticate users and provide authorization to access domain resources) and NTLM (user authentication only challenge/response protocol) for authentication. Kerberos is used for granting access across the domain, while NTLM is the default protocol used by individual Windows machines.
 
 ### Active Directory in the Cloud
 
-Azure AD is typically designed to sit *between* users/computers and an on prem-Active Directory. To a certain extent this is a case of “there’s an extra step here somewhere”, but using that extra step has a couple of advantages:
+Azure AD is typically designed to sit *between* users/computers and an on prem-Active Directory. To a certain extent this is a case of "there's an extra step here somewhere", but using that extra step has a couple of advantages:
 
 * It allows AD trust relationships to be extended to website and web applications.
 * Because Azure AD is more locked down than a typical directory and is centrally controlled by Microsoft, it makes attacking the on-prem AD much harder.
@@ -113,11 +113,11 @@ Equivalencies between Azure AD and on-prem AD:
 | Domains / Forests | Tenants               |
 | Trusts            | Guests                |
 
-Azure AD does *not* use an OU structure, instead adopting a flat set of users. (I assume that permissioning must then be handled entirely through groups…)
+Azure AD does *not* use an OU structure, instead adopting a flat set of users. (I assume that permissioning must then be handled entirely through groups...)
 
 ### Hands-On Lab
 
-TryHackMe is using a set of PowerShell extensions called PowerView here. It doesn’t look like PowerView is maintained anymore though, and I’m curious how applicable all of this is anymore — I remember reading somewhere that PowerShellMafia’s work was largely protected against these days.
+TryHackMe is using a set of PowerShell extensions called PowerView here. It doesn't look like PowerView is maintained anymore though, and I'm curious how applicable all of this is anymore - I remember reading somewhere that PowerShellMafia's work was largely protected against these days.
 
 It looks like PowerShell needs to be run with execution protections bypassed in order to load PowerView. Fortunately, you can do this by running PowerShell from cmd.exe with a simple flag:
 
@@ -141,6 +141,6 @@ Get-NetUser | select cn
 Get-NetGroup
 ```
 
-[There’s also a PowerView tips & tricks cheat sheet.](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
+[There's also a PowerView tips & tricks cheat sheet.](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
 
 * [PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)

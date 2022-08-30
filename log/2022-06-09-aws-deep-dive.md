@@ -5,7 +5,7 @@ date:: 2022-06-09
 
 ## AWS Essentials
 
-Today I’ll be finishing up the “AWS Essentials” YouTube playlist put together by the Linux Academy.
+Today I'll be finishing up the "AWS Essentials" YouTube playlist put together by the Linux Academy.
 
 REFERENCES:
 
@@ -19,7 +19,7 @@ EBS volumes *can* be used as the root volume of EC2 images, but other options ar
 
 By default, root EBS volumes are set to be deleted on EC2 instance termination. However, other options are available, which can be useful in a variety of ways.
 
-EC2 instances can’t be booted from EBS snapshots directly. However, a snapshot can be used to populate the contents of a *new* EBS volume, which can then be used as the root drive of an EC2 instance, so this isn’t really a limitation in practice.
+EC2 instances can't be booted from EBS snapshots directly. However, a snapshot can be used to populate the contents of a *new* EBS volume, which can then be used as the root drive of an EC2 instance, so this isn't really a limitation in practice.
 
 Data stored as a snapshot is *a lot* less expensive than the same data stored on an EBS volume.
 
@@ -29,9 +29,9 @@ REFERENCES:
 
 ### Security Groups
 
-Security Groups are instance-level firewalls. In some ways they’re similar to NACLs, but allow/deny rules work a little differently: whereas traffic is processed by the first matching rule in a NACL (just as in a traditional stateless firewall), *all* rules in a Security Group are considered when evaluating traffic.
+Security Groups are instance-level firewalls. In some ways they're similar to NACLs, but allow/deny rules work a little differently: whereas traffic is processed by the first matching rule in a NACL (just as in a traditional stateless firewall), *all* rules in a Security Group are considered when evaluating traffic.
 
-By default, all inbound traffic is denied and all outbound traffic is allowed in new Security Groups. Somewhat confusingly, AWS also creates a “default” Security Group” for you as part of the provisioning process that allows *all* traffic, both inbound and outbound.
+By default, all inbound traffic is denied and all outbound traffic is allowed in new Security Groups. Somewhat confusingly, AWS also creates a "default" Security Group" for you as part of the provisioning process that allows *all* traffic, both inbound and outbound.
 
 There are no DENY rules for security groups, only ALLOW rules. Any traffic not matched by a rule will be dropped.
 
@@ -59,9 +59,9 @@ REFERENCES:
 
 ### RDS and DynamoDB Basics
 
-RDS provides relational database services and supports a variety of database engines under the hood: MySQL/MariaDB, PostgreSQL, Oracle, SQL Server, and Amazon’s own fork of MySQL, Aurora. Note that Aurora is *not* available in the AWS free tier.
+RDS provides relational database services and supports a variety of database engines under the hood: MySQL/MariaDB, PostgreSQL, Oracle, SQL Server, and Amazon's own fork of MySQL, Aurora. Note that Aurora is *not* available in the AWS free tier.
 
-DynamoDB is Amazon’s NoSQL option; there’s no choice of backends here, though DynamoDB itself is similar to MongoDB.
+DynamoDB is Amazon's NoSQL option; there's no choice of backends here, though DynamoDB itself is similar to MongoDB.
 
 Pricing for RDS parallels that for EC2 (which makes sense), while DynamoDB pricing is looks more like S3 (if you squint).
 
@@ -71,9 +71,9 @@ REFERENCES:
 
 ### Provisioning and RDS MySQL Database
 
-Not only can’t RDS use Aurora on the free tier, but it’s limited to running MySQL in “developer” mode (though it’s unclear what that means).
+Not only can't RDS use Aurora on the free tier, but it's limited to running MySQL in "developer" mode (though it's unclear what that means).
 
-RDS instances aren’t provisioned directly into subnets like EC2 instances. Instead, you define a “subnet group” (which might contain only a single subnet). This determines which EC2 instances the RDS instance can communicate with. Note that the RDS instance will be automatically deployed to an availability zone matching one of the subnets in its subnet group, though you can override this (though you are similarly restricted) if you wish.
+RDS instances aren't provisioned directly into subnets like EC2 instances. Instead, you define a "subnet group" (which might contain only a single subnet). This determines which EC2 instances the RDS instance can communicate with. Note that the RDS instance will be automatically deployed to an availability zone matching one of the subnets in its subnet group, though you can override this (though you are similarly restricted) if you wish.
 
 REFERENCES:
 
@@ -83,7 +83,7 @@ REFERENCES:
 
 SNS = Simple Notification Service
 
-SNS allows notifications from AWS to be pushed out to “subscribed” clients. These can be internal to AWS (SQS, Lambda) or external (HTTP push, SMS, email). Queues in SNS are called “topics”; sending a message to a topic will cause it to be pushed out to any “subscribed” endpoints (what this means in practice will vary depending on *how* the endpoints are subscribed).
+SNS allows notifications from AWS to be pushed out to "subscribed" clients. These can be internal to AWS (SQS, Lambda) or external (HTTP push, SMS, email). Queues in SNS are called "topics"; sending a message to a topic will cause it to be pushed out to any "subscribed" endpoints (what this means in practice will vary depending on *how* the endpoints are subscribed).
 
 SNS and CloudWatch are often used together as a server event/alarm notification system.
 

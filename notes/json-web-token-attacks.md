@@ -15,9 +15,9 @@ Use `basenc --base64url` and `basenc -d --base64url` to encode/decode URL-safe b
 
 ## Attacks
 
-### ”None” Attacks
+### "None" Attacks
 
-Sometimes servers will also support the `NONE` signature type, which indicates that no signing is used (so the JWT is then just `$HEADER.$PAYLOAD.` — note the trailing dot!). If the server allows the `none` signing method, then it's often possible to just arbitrarily edit the `$PAYLOAD` to gain access to other users.
+Sometimes servers will also support the `NONE` signature type, which indicates that no signing is used (so the JWT is then just `$HEADER.$PAYLOAD.` - note the trailing dot!). If the server allows the `none` signing method, then it's often possible to just arbitrarily edit the `$PAYLOAD` to gain access to other users.
 
 The base64-encoded version of `{"typ":"JWT","alg":"none"}` is `eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0`.
 
@@ -50,4 +50,4 @@ sed -e 's/=*$//'
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [JSON Web Tokens](https://jwt.io)
 * [lmammino / jwt-cracker](https://github.com/lmammino/jwt-cracker)
-* [Using “basenc”](basenc.md)
+* [Using "basenc"](basenc.md)

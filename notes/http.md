@@ -21,7 +21,7 @@ host: something
 | True-Client-IP  | Override the client IP address (direct connections to servers).                                                     |
 | X-Forwarded-For | Override the client IP address (connections forwarded through proxies).                                             |
 | X-Powered-By    | Added by some application engines to advertise themselves; useful for recon.                                        |
-| Content-Type    | Probably needs to be manipulated for POST requests — for example, form data uses application/x-www-form-urlencoded. |
+| Content-Type    | Probably needs to be manipulated for POST requests - for example, form data uses application/x-www-form-urlencoded. |
 | Content-Length  | The length of the body in bytes (which is just characters for ASCII) for POST requests.                             |
 
 ## References

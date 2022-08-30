@@ -5,11 +5,11 @@ date:: 2022-04-18
 
 ## CompTIA Security+ Exam Cram
 
-Today’s reading is Chapter 28 from the Security+ Exam Cram, “Incident Investigation”.
+Today's reading is Chapter 28 from the Security+ Exam Cram, "Incident Investigation".
 
 ### SIEM Dashboards
 
-The key to SIEM alerting is the correlation engine — looking for user connections *after* that user has left the office, etc.
+The key to SIEM alerting is the correlation engine - looking for user connections *after* that user has left the office, etc.
 
 ### Logging
 
@@ -43,27 +43,27 @@ A Windows-centric list of log types:
 * System
 * Audit (events important for auditing and forensics needs; user logins go here)
 * Security
-* Access (system-to-system — not user! — access events)
+* Access (system-to-system - not user! - access events)
 
 Anomaly detection generally works better on network logs than device logs.
 
-Heh… `journald` *still* doesn’t have remote logging, instead relying on forwarding to a syslog-compatible daemon.
+Heh... `journald` *still* doesn't have remote logging, instead relying on forwarding to a syslog-compatible daemon.
 
 * [An SEOs Guide To W3C Log Files](https://www.screamingfrog.co.uk/an-seos-guide-to-w3c-log-files/)
 
 ### Network Activity
 
-Most network activity monitoring tools don’t store actual packets, but rather just log metadata about those packets (minimally: source, destination, protocol).
+Most network activity monitoring tools don't store actual packets, but rather just log metadata about those packets (minimally: source, destination, protocol).
 
 ### Protocol Analyzers
 
 Protocol Analyzer = Packet Sniffer
 
-Now we’re talking about actual packet capture!
+Now we're talking about actual packet capture!
 
 ### Network Flow
 
-A.k.a. “NetFlow” (originally a Cisco thing, but since genericized). Basically, this is packet capture and analysis on router interfaces. NetFlow (and related tools like sFlow) are oriented towards understanding network usage rather than the behavior of individual machines/connections.
+A.k.a. "NetFlow" (originally a Cisco thing, but since genericized). Basically, this is packet capture and analysis on router interfaces. NetFlow (and related tools like sFlow) are oriented towards understanding network usage rather than the behavior of individual machines/connections.
 
 NetFlow data is exported using the IPFIX (Internet Protocol Flow Information Export) format.
 
@@ -81,7 +81,7 @@ Wireshark has some statistical packet-analysis capabilities.
 
 General log analysis flow: Filtered down to warnings/errors, locate an event of interest, and then expand your search around that timeframe to include lower-level/priority events.
 
-Call out to WinDbg Preview, which is a free Windows dump file analyzer in the Microsoft Store. Windows typically stores dump files in `C:\Windows`, so you’ll need to copy it out to view it.
+Call out to WinDbg Preview, which is a free Windows dump file analyzer in the Microsoft Store. Windows typically stores dump files in `C:\Windows`, so you'll need to copy it out to view it.
 
 ## TryHackMe: Jr. Penetration Tester
 
@@ -101,43 +101,43 @@ As always, be aware that some exploits may limit the available Meterpreter paylo
 
 ### Meterpreter Commands
 
-Meterpreter’s commands vary depending on host OS. Some notable commands:
+Meterpreter's commands vary depending on host OS. Some notable commands:
 
-* `background` — Background the current session
-* `clearenv` — Clears the (Windows) event logs (kinda obvious)
-* `download` — Transfer a file from the target to the attacker
-* `edit` — Edit a file
-* `execute` — Execute a command on the host
-* `getpid` — Get current process ID
-* `getsystem` — Attempt to elevate to SYSTEM/root
-* `getuid` — Get current process user
-* `guid` — Get session ID
-* `hashdump` — Dump NTLM hashes (on Windows)
-* `ifconfig` — Display host network interface information
-* `info` — Get information about a Meterpreter extension
-* `load` — Load Meterpreter extension
-* `migrate` — Migrate Meterpreter to another process
-* `netstat` — Display host network connections
-* `portfwd` — Forward a port on the host
-* `route` — Mess with the host routing tables
-* `run` — Run a meterpreter extension
-* `search` — Search for files
-* `sessions` — Switch to another (Metasploit) session
-* `shell` — Drop to system shell
-* `sysinfo` — Pull remote system information
-* `upload` — Transfer a file from the attacker to the target
+* `background` - Background the current session
+* `clearenv` - Clears the (Windows) event logs (kinda obvious)
+* `download` - Transfer a file from the target to the attacker
+* `edit` - Edit a file
+* `execute` - Execute a command on the host
+* `getpid` - Get current process ID
+* `getsystem` - Attempt to elevate to SYSTEM/root
+* `getuid` - Get current process user
+* `guid` - Get session ID
+* `hashdump` - Dump NTLM hashes (on Windows)
+* `ifconfig` - Display host network interface information
+* `info` - Get information about a Meterpreter extension
+* `load` - Load Meterpreter extension
+* `migrate` - Migrate Meterpreter to another process
+* `netstat` - Display host network connections
+* `portfwd` - Forward a port on the host
+* `route` - Mess with the host routing tables
+* `run` - Run a meterpreter extension
+* `search` - Search for files
+* `sessions` - Switch to another (Metasploit) session
+* `shell` - Drop to system shell
+* `sysinfo` - Pull remote system information
+* `upload` - Transfer a file from the attacker to the target
 
 ### Post-Exploitation with Meterpreter
 
 Migrating Meterpreter to another process sometimes makes new commands become available; for example, migrating to a text editor will allow you to capture keystrokes.
 
-Note that Meterpreter will happily let you migrate from a privileged to an unprivileged process — which may cause you to loose control of the target system!
+Note that Meterpreter will happily let you migrate from a privileged to an unprivileged process - which may cause you to loose control of the target system!
 
 You can background system shells launched from Meterpreter with `Ctrl + Z` to return to the parent (Meterpreter) process.
 
 ### Post-Exploitation Challenge
 
-It’s always good to look at `help` in Meterpreter after loading a new module.
+It's always good to look at `help` in Meterpreter after loading a new module.
 
 Remember that `load kiwi` will pull in a Meterpreter-specific version of Mimikatz!
 
@@ -145,7 +145,7 @@ Use `net share` on Windows to list *all* current shares. The Metasploit `post/wi
 
 To execute `hashdump` you will need to be connected to the `lsass.exe` process.
 
-Note that migrating Meterpreter will change its current working directory to that of the process it’s attaching to.
+Note that migrating Meterpreter will change its current working directory to that of the process it's attaching to.
 
 * [Using Mimikatz](../notes/mimikatz.md)
 * [How to view all network shares in Windows](https://www.computerhope.com/issues/ch000534.htm)

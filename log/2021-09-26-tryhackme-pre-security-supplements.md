@@ -23,25 +23,25 @@ From Windows Net command executed to enumerate administrators:
 
 ### Basic Terminology
 
-TTP stands for “Tactics, Techniques, and Procedures”, where:
+TTP stands for "Tactics, Techniques, and Procedures", where:
 
-* “Tactics” are goals.
-* “Techniques” are the methods used by the adversary to achieve its goals.
-* “Procedure” is the actual nitty-gritty of how a technique is executed.
+* "Tactics" are goals.
+* "Techniques" are the methods used by the adversary to achieve its goals.
+* "Procedure" is the actual nitty-gritty of how a technique is executed.
 
-So, something like “obtain access to a domain controller, using exploit X, delivered via a malicious attachment.”
+So, something like "obtain access to a domain controller, using exploit X, delivered via a malicious attachment."
 
-(I mostly say all of this to remind myself that these terms are being used in a slightly different fashion than my current workplace, which would probably use “goals, tactics, techniques” to represent the same steps.)
+(I mostly say all of this to remind myself that these terms are being used in a slightly different fashion than my current workplace, which would probably use "goals, tactics, techniques" to represent the same steps.)
 
 ### ATT&CK Framework
 
-”ATT&CK” stands for “Adversarial Tactics, Techniques, and Common Knowledge”.
+"ATT&CK" stands for "Adversarial Tactics, Techniques, and Common Knowledge".
 
 * [MITRE ATT&CK](https://attack.mitre.org)
 
 ### CAR Knowledge Base
 
-”CAR” stands for “Cyber Analytics Repository”.
+"CAR" stands for "Cyber Analytics Repository".
 
 The ATT&CK Navigator tool highlights analytics currently available in CAR using blue.
 
@@ -49,7 +49,7 @@ The ATT&CK Navigator tool highlights analytics currently available in CAR using 
 
 ### ATT&CK Emulation Plans
 
-Also known as “AEP”.
+Also known as "AEP".
 
 The MITRE AEPs are kinda hard to find:
 

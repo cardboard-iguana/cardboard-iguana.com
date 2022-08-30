@@ -5,7 +5,7 @@ date:: 2022-04-21
 
 ## NFS Basics
 
-All versions of NFS use port 2049 to transfer data; NFSv1 - NFSv3 also depended on the “portmapper” service running on port 111, but this requirement was removed in NFSv4.
+All versions of NFS use port 2049 to transfer data; NFSv1 - NFSv3 also depended on the "portmapper" service running on port 111, but this requirement was removed in NFSv4.
 
 ```bash
 # List NFS shares.
@@ -26,7 +26,7 @@ Note that the mount directory must be owned by root.
 
 ## Root Squashing
 
-Files created on NFS shares inherit the *remote* UID. By default, NFS enables “root squashing”, which maps UID 0 to the `nobody` user.
+Files created on NFS shares inherit the *remote* UID. By default, NFS enables "root squashing", which maps UID 0 to the `nobody` user.
 
 Root squashing can be *disabled* in `/etc/exports` with the `no_root_squash` flag. This is obviously insecure, however, as it allows a user that connects to that share as root to drop SUID binaries! (Remember that files on NFS mounts are created using the UID/GID values of the *local* user!)
 

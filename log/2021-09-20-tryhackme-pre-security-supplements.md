@@ -7,7 +7,7 @@ date:: 2021-09-20
 
 ### Variables
 
-Using the -x flag will force bash to output each line of the shell script you’re running before that line is executed. This can be useful for debugging.
+Using the -x flag will force bash to output each line of the shell script you're running before that line is executed. This can be useful for debugging.
 
 ```bash
 bash -x ./script.sh
@@ -18,7 +18,7 @@ The -x flag can also be incorporated into the interpreter line.
 ```bash
 #!/usr/bin/env bash -x
 
-# Script content…
+# Script content...
 ```
 
 Finally, this mode can be toggled on and off with the `set` command within the script itself.
@@ -26,7 +26,7 @@ Finally, this mode can be toggled on and off with the `set` command within the s
 ```bash
 #!/usr/bin/env bash
 
-# Some script content…
+# Some script content...
 
 set -x
 
@@ -34,7 +34,7 @@ set -x
 
 set +x
 
-# These lines will not be echoed…
+# These lines will not be echoed...
 ```
 
 Frequently `set -x` is used at the start of a script without a closing `set + x`, which will just cause all lines of the script to be echoed back before execution.
@@ -53,7 +53,7 @@ read INPUT
 echo "You typed: $INPUT"
 ```
 
-Will echo back whatever is typed in, prefixed by “You typed: “.
+Will echo back whatever is typed in, prefixed by "You typed: ".
 
 ### Arrays
 
@@ -73,11 +73,11 @@ echo "${MY_ARRAY[1]}" # item1
 unset MY_ARRAY[1]
 echo "${MY_ARRAY[@]}" # item0 item2
 
-# But be aware that this DOESN’t change the index of any
+# But be aware that this DOESN't change the index of any
 # element!
 
 echo "${MY_ARRAY[0]}" # item0
-echo "${MY_ARRAY[1]}" # Outputs nothing…
+echo "${MY_ARRAY[1]}" # Outputs nothing...
 echo "${MY_ARRAY[2]}" # item2
 
 MY_ARRAY[0]="item3"

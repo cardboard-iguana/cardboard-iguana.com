@@ -5,7 +5,7 @@ date:: 2022-04-12
 
 ## CompTIA Security+ Exam Cram
 
-Today’s reading is Chapter 30 from the Security+ Exam Cram, “Digital Forensics”.
+Today's reading is Chapter 30 from the Security+ Exam Cram, "Digital Forensics".
 
 ### Order of Volatility
 
@@ -29,7 +29,7 @@ Typical order of volatility:
 * Removable rewritable storage
 * Removable write-once storage
 
-I’m guessing that external logs probably sit between removable rewritable storage and removable write-once storage.
+I'm guessing that external logs probably sit between removable rewritable storage and removable write-once storage.
 
 ### Chain of Custody
 
@@ -37,7 +37,7 @@ Basically, log all the things. Time, date, action, people involved. Include thou
 
 * Admissible (following legal or organizational standards)
 * Authentic (shown to be related to the investigation at hand)
-* Complete (covers all angles — for example, *all* users logged into a system, not just accounts of interest)
+* Complete (covers all angles - for example, *all* users logged into a system, not just accounts of interest)
 * Reliable (shown to be unmodified)
 * Believable (basically, written in a way that non-technical audiences can follow)
 

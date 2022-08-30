@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-02-23
 
-Moving forward, I’m planning to read the appropriate chapter of “CompTIA Security+ Exam Cram” before watching the corresponding ITPro.TV lecture. But since I didn’t do that yesterday, I have two chapters to read today!
+Moving forward, I'm planning to read the appropriate chapter of "CompTIA Security+ Exam Cram" before watching the corresponding ITPro.TV lecture. But since I didn't do that yesterday, I have two chapters to read today!
 
 ## CompTIA Security+ Exam Cram
 
@@ -20,11 +20,11 @@ Moving forward, I’m planning to read the appropriate chapter of “CompTIA Sec
 | Typo squatting             | Password managers (with autofill), MFA                  |
 | Hoaxes/Influence campaigns | Snopes.com, communication response planning             |
 
-Note that CompTIA appears to lump general direct observational reconnaissance (watching a building) and video surveillance (hidden cameras) under “shoulder surfing”.
+Note that CompTIA appears to lump general direct observational reconnaissance (watching a building) and video surveillance (hidden cameras) under "shoulder surfing".
 
 Like so many other things on the criminal side, there is increasing market specialization in social engineering. Information gained via social engineering may often be exploited by a different actor!
 
-Phishing: “The attempt to acquire sensitive information via electronic communications.” Broad!
+Phishing: "The attempt to acquire sensitive information via electronic communications." Broad!
 
 * Spear phishing: Targeted phishing
 * Whaling: Spear phishing for the big phish
@@ -38,13 +38,13 @@ Goals:
 * Simple fraud
 * Invoice scams (same as the above, but targeting accounts payable; often requires a lot more research)
 
-I continue to find the inclusion of influence campaigns and hoaxes under social engineering odd, if just because they’re so divorced from the more targeted attacks we’ve been discussing and are significantly less controllable by the attacker. It makes sense to include them under a generalized “harm” framework, but the fit is still not perfect in my mind.
+I continue to find the inclusion of influence campaigns and hoaxes under social engineering odd, if just because they're so divorced from the more targeted attacks we've been discussing and are significantly less controllable by the attacker. It makes sense to include them under a generalized "harm" framework, but the fit is still not perfect in my mind.
 
-“Principles of influence”:
+"Principles of influence":
 
 * Authority
 * Intimidation
-* Consensus/Conformity (“social proof”)
+* Consensus/Conformity ("social proof")
 * Scarcity/Urgency
 * Familiarity/Likability/Helpfulness
 
@@ -56,7 +56,7 @@ Malware: Software designed to cause harm.
 
 Blended Threats: Attacks involving multiple types of malware (rootkits that provide persistence to a botnet that deploys spyware, etc.).
 
-“Endpoint protection” is the general class of technologies used to guard against and remediate malware.
+"Endpoint protection" is the general class of technologies used to guard against and remediate malware.
 
 Places to look for forensic clues:
 
@@ -82,41 +82,41 @@ Note that types are not exclusive.
 
 The rise of polymorphic viruses are the reason that signature-based detection has been gradually superseded by heuristic (behavioral) detection techniques.
 
-Note that fileless malware is distinct from memory-resident viruses in that it is *never* written to disk. Fileless malware typically embodies a strong “living off the land” ethic.
+Note that fileless malware is distinct from memory-resident viruses in that it is *never* written to disk. Fileless malware typically embodies a strong "living off the land" ethic.
 
 Worm: Similar to a virus, but is self replicating, does not require a host file, and can infect a machine without user intevention.
 
-(The Exam Cram book is very specific that worms don’t need to be attached to a file, but I’m pretty sure I’ve read about worms that persist across machine reboots and aren’t doing anything as sophisticated as attacking the boot loader…)
+(The Exam Cram book is very specific that worms don't need to be attached to a file, but I'm pretty sure I've read about worms that persist across machine reboots and aren't doing anything as sophisticated as attacking the boot loader...)
 
 Trojan: Malware hidden inside of an otherwise non-malicious application.
 
 Trojans are often the first stage of an attack, downloading information stealers, keyloggers, and the like (which may themselves be trojans).
 
-”Remote access trojans” and “backdoor trojans” are just two different words for the same thing. Exam Cram emphasizes that (at least on Windows) these are often associated with security warnings (at least during the initial infection).
+"Remote access trojans" and "backdoor trojans" are just two different words for the same thing. Exam Cram emphasizes that (at least on Windows) these are often associated with security warnings (at least during the initial infection).
 
 Rootkit: Malware that integrates itself into core system files and gains administrative rights.
 
-Rootkits are often incorporate key loggers, information stealers, and similar “applets” that used to be more commonly associated with trojans. Kernel rootkits attack the OS kernel directly, which make them *very* hard to detect!
+Rootkits are often incorporate key loggers, information stealers, and similar "applets" that used to be more commonly associated with trojans. Kernel rootkits attack the OS kernel directly, which make them *very* hard to detect!
 
-Many rootkits use the Windows “global hooks” functionality, so endpoint defense systems that monitor or prevent the installation of global hooks can help prevent initial rootkit infection. Avoiding running applications from administrative accounts can also thwart many rootkit installation attempts.
+Many rootkits use the Windows "global hooks" functionality, so endpoint defense systems that monitor or prevent the installation of global hooks can help prevent initial rootkit infection. Avoiding running applications from administrative accounts can also thwart many rootkit installation attempts.
 
 Logic Bomb: A virus or trojan that is designed to execute malicious actions when certain conditions are met (often, but not always, a date).
 
-Logic bombs also go by the name “slag code” (I’ve never heard that term before), and are a favorite of disgruntled employees.
+Logic bombs also go by the name "slag code" (I've never heard that term before), and are a favorite of disgruntled employees.
 
 Bots: Automated programs that do not require user interaction and are generally controlled/directed by outsiders.
 
-Typically “bot” is used to refer to the system itself once it is under attacker control, as long as it is being used in an automated fashion. a network of bots is, well, a botnet. Bot code is generally designed to be stealthy and not interfere with the normal functioning of the system (since detection would deprive the bot master of a device).
+Typically "bot" is used to refer to the system itself once it is under attacker control, as long as it is being used in an automated fashion. a network of bots is, well, a botnet. Bot code is generally designed to be stealthy and not interfere with the normal functioning of the system (since detection would deprive the bot master of a device).
 
 Crypto-Malware: Ransomware that encrypts files.
 
-Potentially Unwanted Program (PUP): Software that the user almost certainly doesn’t want, but technically consented to install (typically adware).
+Potentially Unwanted Program (PUP): Software that the user almost certainly doesn't want, but technically consented to install (typically adware).
 
 Spyware: A PUP that (continually) exfiltrates user information and activity.
 
-Adware: PUPs that display or inject ads. Often contains “light” spyware (browser activity exfiltration).
+Adware: PUPs that display or inject ads. Often contains "light" spyware (browser activity exfiltration).
 
-Cyptomining: Surreptitiously installed cryptocurrency miners; often part of a botnet. Sometimes called a “cryptojacking” attack.
+Cyptomining: Surreptitiously installed cryptocurrency miners; often part of a botnet. Sometimes called a "cryptojacking" attack.
 
 ### Physical Attacks
 
@@ -146,14 +146,14 @@ What malware does:
 * Logic bombs (execution triggered by some set of conditions)
 * Ransomware
 * Botnets
-* Trojan (looks like a benign application, but isn’t; typically installs other malware)
-* PUPs (potentially unwanted programs — adware, bundleware, etc.)
+* Trojan (looks like a benign application, but isn't; typically installs other malware)
+* PUPs (potentially unwanted programs - adware, bundleware, etc.)
 
 ## TryHackMe: Jr. Penetration Tester
 
 ### Penetration Testing Ethics
 
-A penetration test will typically be built around a “rules of engagement” (ROE) document containing the following sections:
+A penetration test will typically be built around a "rules of engagement" (ROE) document containing the following sections:
 
 * Permission: Provides explicit permission for the pentest, contact information for the authorizing party, etc.
 * Test Scope: Authorized targets (machines, individuals, facilities).

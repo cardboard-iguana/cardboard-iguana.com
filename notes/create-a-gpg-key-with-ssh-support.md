@@ -8,10 +8,10 @@ author:: Nathan Acks
 gpg --expert --full-generate-key
 ```
 
-* Choose “ECC (set your own capabilities)”
-* Toggle the “Sign” capability *off* (`S`).
+* Choose "ECC (set your own capabilities)"
+* Toggle the "Sign" capability *off* (`S`).
 * Finish choosing capabilities (`Q`).
-* Choose “Curve 25519”.
+* Choose "Curve 25519".
 * Expire in 2 years (`2y`).
 * Enter your name.
 * Enter the primary email address for the key.
@@ -33,25 +33,25 @@ gpg --expert --edit-key $KEYID
 ### Add a Signing Subkey
 
 * Use `addkey`.
-* Choose “ECC (sign only)”
-* Choose “Curve 25519”.
+* Choose "ECC (sign only)"
+* Choose "Curve 25519".
 * Expire in 2 years (`2y`).
 
 ### Add an Authentication Subkey
 
 * Use `addkey`.
-* Choose “ECC (set your own capabilities)”
-* Toggle the “Sign” capability *off* (`S`).
-* Toggle the “Authenticate” capability on (`A`).
+* Choose "ECC (set your own capabilities)"
+* Toggle the "Sign" capability *off* (`S`).
+* Toggle the "Authenticate" capability on (`A`).
 * Finish choosing capabilities (`Q`).
-* Choose “Curve 25519”.
+* Choose "Curve 25519".
 * Expire in 2 years (`2y`).
 
 ### Add an Encryption Subkey
 
 * Use `addkey`.
-* Choose “ECC (encrypt only)”
-* Choose “Curve 25519”.
+* Choose "ECC (encrypt only)"
+* Choose "Curve 25519".
 * Expire in 2 years (`2y`).
 
 ### Finish Up
@@ -74,7 +74,7 @@ gpg --delete-secret-keys $KEYID
 #
 gpg --import subkeys.gpg
 #
-# Optionally verify that eveything worked…
+# Optionally verify that eveything worked...
 #
 gpg --list-keys
 gpg --list-secret-keys
@@ -84,13 +84,13 @@ gpg --list-secret-keys
 rm subkeys.gpg
 ```
 
-Once this is done, `$KEYID.asc` can be stored “offline” on a secure (encrypted!) drive, etc. Note that this key will need to be re-imported to generate new subkeys, add UIDs, extend expiration dates, or create updated revocation certificates.
+Once this is done, `$KEYID.asc` can be stored "offline" on a secure (encrypted!) drive, etc. Note that this key will need to be re-imported to generate new subkeys, add UIDs, extend expiration dates, or create updated revocation certificates.
 
 ## Export the Authentication Subkey to SSH
 
 * Run `gpg --list-secret-keys --with-keygrip`.
 * Copy keygrips of the authentication subkeys (`[A]`) you want to use in SSH to `~/.gnupg/sshcontrol`.
-* Generate the SSH public key using `gpg --export-ssh-key $KEYID > ~/.ssh/id_${KEYID}.pub`. This key can then be referenced using the `IdentityFile` directive in `~/.ssh/config` or inserted into a host’s `~/.ssh/authorized_keys` file.
+* Generate the SSH public key using `gpg --export-ssh-key $KEYID > ~/.ssh/id_${KEYID}.pub`. This key can then be referenced using the `IdentityFile` directive in `~/.ssh/config` or inserted into a host's `~/.ssh/authorized_keys` file.
 
 ## References
 

@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-05-11
 
-Rubeus is a Windows-only post-exploitation tool for attacking Kerberos. No compiled binaries are available (either through the GitHub repo or Kali Linux’s `windows-binaries` package).
+Rubeus is a Windows-only post-exploitation tool for attacking Kerberos. No compiled binaries are available (either through the GitHub repo or Kali Linux's `windows-binaries` package).
 
 NOTE: To use Rebueus you need to already be on the domain you are attacking, or alternately need to have mapped the domain controller (which normally hosts the KDC) IP address properly in C:/Windows/System32/drivers/etc/hosts.
 
@@ -46,7 +46,7 @@ The password hashes output here can then be cracked with Hashcat (use the 13100 
 Rubeus.exe asreproast
 ```
 
-To use Hashcat to crack the hashes obtained in this fashin, first insert `23$` after the leading `$kerb5asrep$` (so `$kerb5asrep$` → `$kerb5asrep$23$`) and then use mode 18200.
+To use Hashcat to crack the hashes obtained in this fashin, first insert `23$` after the leading `$kerb5asrep$` (so `$kerb5asrep$` -> `$kerb5asrep$23$`) and then use mode 18200.
 
 ## Using a Certificate to Request a Ticket
 
@@ -62,9 +62,9 @@ Rubeus.exe asktgt /user:$USER \
                   /dc:$DC_IP_ADDRESS
 ```
 
-This is very useful if we’ve used an AD CS misconfiguration as described by SpectreOps’ “Certified Pre-Owned” research to forge a certificate that’s valid for another user.
+This is very useful if we've used an AD CS misconfiguration as described by SpectreOps' "Certified Pre-Owned" research to forge a certificate that's valid for another user.
 
-## Change a User’s Password
+## Change a User's Password
 
 ```powershell
 # We can use Rubeus to change the password for domain
@@ -86,4 +86,4 @@ Rubeus.exe changepw /ticket:$TICKET_FILE \
 * [Using Hashcat](hashcat.md)
 * [2022-05-10 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
 * [SpectreOps: Certified Pre-Owned](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
-* [Using “certutil”](certutil.md)
+* [Using "certutil"](certutil.md)

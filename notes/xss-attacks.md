@@ -9,7 +9,7 @@ Types of XSS attacks:
 * Stored
 * DOM-based (really client-side)
 
-DOM-based attacks are *client* side — with both reflected and stored XSS, the server is embedding the attack into the page that’s being rendered. For DOM-based attacks, it’s the *client* that inserts the malicious JavaScript into the page (even if the data was provided by the server). Ask yourself: “How did this get into the page? Did the server put it there (reflected/stored XSS), or did my client put it there (DOM-based XSS)?”
+DOM-based attacks are *client* side - with both reflected and stored XSS, the server is embedding the attack into the page that's being rendered. For DOM-based attacks, it's the *client* that inserts the malicious JavaScript into the page (even if the data was provided by the server). Ask yourself: "How did this get into the page? Did the server put it there (reflected/stored XSS), or did my client put it there (DOM-based XSS)?"
 
 The canonical (but highly annoying) XSS PoC is:
 
@@ -31,17 +31,17 @@ A much less annoying XSS test is to manipulate the `innerHTML` of page elements:
 
 JavaScript accepts back-ticks as a type of quotation mark, so we actually have three different marks to work with (single quote, double quote, and back-tick).
 
-Sometimes you’ll need to break out of a tag that you’re being inserted into. Various options:
+Sometimes you'll need to break out of a tag that you're being inserted into. Various options:
 
-* Use `">` if you’re being inserted into an HTML attribute.
+* Use `">` if you're being inserted into an HTML attribute.
 * Use `</pre>` or `</textarea>` for preformatted blocks and text areas.
-* Use `';` followed by `;//` for direct JavaScript inserts. (Note that it’s only possible to insert `<script/>` tags if the JavaScript you’re abusing is being included from a file, as HTML parsers are greedy about the closing `</script>` tag.)
+* Use `';` followed by `;//` for direct JavaScript inserts. (Note that it's only possible to insert `<script/>` tags if the JavaScript you're abusing is being included from a file, as HTML parsers are greedy about the closing `</script>` tag.)
 
-Most regular expressions and filters are only executed in a single pass. Thus, a regular expression that’s filtering out `<script>` and `</script>` tags can be circumvented by using `<s<script>cript>` and `</s</script>cript>`. That said, this trick doesn’t work for regular expressions that are removing single characters (for example, `<` and `>`).
+Most regular expressions and filters are only executed in a single pass. Thus, a regular expression that's filtering out `<script>` and `</script>` tags can be circumvented by using `<s<script>cript>` and `</s</script>cript>`. That said, this trick doesn't work for regular expressions that are removing single characters (for example, `<` and `>`).
 
 You can also use the `onload` attribute to pull in JavaScript, though note that this is only functional the first time the page is loaded. This will often require you to close out the preceding attribute (`"`) and *leave off* the trialing `"` of the `onload` attribute in order for everything to work properly.
 
-There’s also “polygot” strings which work in a variety of contexts. These have some pretty wild escaping going on; for example, the following (lightly modified from TryHackMe’s example) produces an “XSS” alert:
+There's also "polygot" strings which work in a variety of contexts. These have some pretty wild escaping going on; for example, the following (lightly modified from TryHackMe's example) produces an "XSS" alert:
 
 ```html
 jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */onerror=alert('XSS') )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!><sVg/<sVg/oNloAd=alert('XSS')//>>
@@ -63,7 +63,7 @@ The `eval()` function can be used to turn strings into function names if a funct
 eval("a" + "lert")("Hello")
 ```
 
-It’s also possible (and safer, though if we’re breaking into things we probably care a lot less about safety) to use `window[]`.
+It's also possible (and safer, though if we're breaking into things we probably care a lot less about safety) to use `window[]`.
 
 ```javascript
 window["a" + "lert"]("Hello")
@@ -87,7 +87,7 @@ Typically XSS attacks work by injecting `<script/>` tags, but it's also possible
 <img src="javascript:alert('XSS');"/>
 ```
 
-Note, however, that JavaScript loaded in an `<iframe/>` won’t have access to the parent page’s DOM.
+Note, however, that JavaScript loaded in an `<iframe/>` won't have access to the parent page's DOM.
 
 ### Fallbacks Requiring User Interaction
 
@@ -123,7 +123,7 @@ Finally, `javascript:` URIs can also be included in anchor(`<a/>`) `href` attrib
 </script>
 ```
 
-Adding the user’s session cookie here allows us to tell whose keystrokes are whose!
+Adding the user's session cookie here allows us to tell whose keystrokes are whose!
 
 ### Port Scanning
 
@@ -135,11 +135,11 @@ You can access elements of the DOM using `document.getElementById("element-id")`
 
 To get/set the content of an element, use the `innerHTML` method (to insert HTML directly into the DOM), or alternately `innerText` or `textContent` to set element text *only*.
 
-Note that `<script/>` tags inserted by setting an element’s `innerHTML` are *not* executed, however!
+Note that `<script/>` tags inserted by setting an element's `innerHTML` are *not* executed, however!
 
 ## Defense
 
-The key to defending against XSS is really to get your encoding right. User-generated code that’s passed off to JavaScript needs to be JavaScript-escaped first. User-generated code that’s written into the DOM needs to be HTML-escaped first. Know what the context is of your data, and escape/unescape appropriately when writing data from one context to another!
+The key to defending against XSS is really to get your encoding right. User-generated code that's passed off to JavaScript needs to be JavaScript-escaped first. User-generated code that's written into the DOM needs to be HTML-escaped first. Know what the context is of your data, and escape/unescape appropriately when writing data from one context to another!
 
 ## References
 

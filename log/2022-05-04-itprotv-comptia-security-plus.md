@@ -5,7 +5,7 @@ date:: 2022-05-04
 
 ## CompTIA Security+ Exam Cram
 
-Today I’ll be reading chapter 34 from the Security+ Exam Cram, “Risk Management”.
+Today I'll be reading chapter 34 from the Security+ Exam Cram, "Risk Management".
 
 ### Risk Analysis
 
@@ -13,11 +13,11 @@ Good definition!
 
 > *Risk* is the possibility of exposure to loss or danger.
 
-Normally we talk about “risk” as if it were synonymous with “the probability that bad thing X happens”, but the Exam Cram breaks it down more formally as “Threat × Vulnerability × Impact”. (Here “Threat × Vulnerability” is more-or-less the colloquial meaning of “risk”, which means that we can also think of this as impact weighted by probability of occurrence.)
+Normally we talk about "risk" as if it were synonymous with "the probability that bad thing X happens", but the Exam Cram breaks it down more formally as "Threat × Vulnerability × Impact". (Here "Threat × Vulnerability" is more-or-less the colloquial meaning of "risk", which means that we can also think of this as impact weighted by probability of occurrence.)
 
 ### Risk Register
 
-A “risk register” is a document/database documenting various risks. Typical elements:
+A "risk register" is a document/database documenting various risks. Typical elements:
 
 * Categorizations/Groupings
 * Name/Description
@@ -51,15 +51,15 @@ Threat source types:
 * Accidents
 * Acts of God
 
-The Exam Cram breaks the last of these down into “structural” (i.e., infrastructure failures) and “environmental”.
+The Exam Cram breaks the last of these down into "structural" (i.e., infrastructure failures) and "environmental".
 
 ### Risk Assessment
 
-“Risk assessment” formalizes the “Risk = Threat × Vulnerability × Impact” relationship defined above.
+"Risk assessment" formalizes the "Risk = Threat × Vulnerability × Impact" relationship defined above.
 
 * Identify threats
 * Identify vulnerabilities
-* Determine the likelihood the the threat will be realized (“threat × vulnerability”)
+* Determine the likelihood the the threat will be realized ("threat × vulnerability")
 * Determine the impact of the threat being realized
 * Determine the risk
 
@@ -69,21 +69,21 @@ There are, frankly, a lot of arbitrary numbers being thrown around in this secti
 
 ### Single Loss Expectancy
 
-“Single loss expectancy” (SLE) is the expected *monetary* loss should a given risk be realized.
+"Single loss expectancy" (SLE) is the expected *monetary* loss should a given risk be realized.
 
 ### Annual Rate of Occurrence
 
-The “annual rate of occurrence” (ARO) is just the probability that the risk is realized within the given timeframe (typically a fiscal year, as mentioned above).
+The "annual rate of occurrence" (ARO) is just the probability that the risk is realized within the given timeframe (typically a fiscal year, as mentioned above).
 
 ### Annual Loss Expectancy
 
-The “annual loss expectancy” (ALE) is the actual *expected monetary impact* of the risk (Annual Loss Expectancy = Single Loss Expectancy × Annual Rate of Occurrence).
+The "annual loss expectancy" (ALE) is the actual *expected monetary impact* of the risk (Annual Loss Expectancy = Single Loss Expectancy × Annual Rate of Occurrence).
 
-This is used in exactly the way you’d normally use expected values.
+This is used in exactly the way you'd normally use expected values.
 
 ### Business Impact Analysis
 
-What “risk assessment” is to risk, “business impact analysis” is to impacts.
+What "risk assessment" is to risk, "business impact analysis" is to impacts.
 
 ### Recovery Objectives
 
@@ -101,7 +101,7 @@ MTTR: Mean time to recovery.
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Risk Management Concepts — Vocabulary
+### Risk Management Concepts - Vocabulary
 
 Via NIST Special Publication 800-31r1:
 
@@ -110,12 +110,12 @@ Via NIST Special Publication 800-31r1:
 * Risk: The probability that a given threat will realize (via a vulnerability) an impact on the organization.
 * Likelihood: The probability that something may happen.
 * Impact: What a threat would cost/cause should it be realized. (Often expressed qualitatively rather than quantitatively.)
-* Control: A mechanism to minimize risk. (Also called a “countermeasure”.)
-* Residual: The risk that remains after all controls are applied. (Based on the Exam Cram’s discussion, I *think* this should *also* include any risks *introduced* by the controls themselves.)
+* Control: A mechanism to minimize risk. (Also called a "countermeasure".)
+* Residual: The risk that remains after all controls are applied. (Based on the Exam Cram's discussion, I *think* this should *also* include any risks *introduced* by the controls themselves.)
 
-Note that these definitions are much closer to the colloquial definition of “risk” than what is presented in the Exam Cram.
+Note that these definitions are much closer to the colloquial definition of "risk" than what is presented in the Exam Cram.
 
-### Risk Management Concepts — Types & Strategies
+### Risk Management Concepts - Types & Strategies
 
 Steps in the risk assessment process:
 
@@ -132,7 +132,7 @@ Conducting the assessment (step 2) can itself be broken down into five stages:
 * Determine impacts
 * Determine the actual risk (expected losses)
 
-Interestingly, Adam Gordon’s using “risk” within these substeps in a way that’s much closer to the Exam Cram than to the previous episode’s definitions.
+Interestingly, Adam Gordon's using "risk" within these substeps in a way that's much closer to the Exam Cram than to the previous episode's definitions.
 
 Key risk types:
 
@@ -143,7 +143,7 @@ Key risk types:
 * IP theft
 * Software licensing compliance (particularly important w.r.t. shadow IT)
 
-Note that there’s a lot of overlap here between categories.
+Note that there's a lot of overlap here between categories.
 
 Risk management strategies:
 
@@ -152,9 +152,9 @@ Risk management strategies:
 * Transfer
 * Mitigate
 
-Adam Gordon breaks cyberinsurance out as its own category, though it’s typically considered a type of risk transference. Cloud migration is also a type of (partial) risk transference.
+Adam Gordon breaks cyberinsurance out as its own category, though it's typically considered a type of risk transference. Cloud migration is also a type of (partial) risk transference.
 
-### Risk Management Concepts — Risk Analysis
+### Risk Management Concepts - Risk Analysis
 
 * Risk Register: The formal tracking system for all risks within an organization.
 * Risk Matrix: A plot of risk in terms of probability of occurrence vs. impact.
@@ -166,32 +166,32 @@ Adam Gordon breaks cyberinsurance out as its own category, though it’s typical
 * Inherent Risk: The native amount of risk that comes along with an activity, process, or system.
 * Residual Risk: The amount of risk left over once appropriate controls have been applied to a given activity, process, or system.
 
-Adam Gordon defines “risk analysis” as the *examination* of risk, while “risk assessment” is the process of *defining* risks in a given context. *Definitions* occur before *examinations*, and thus risk assessments occur before a risk analysis.
+Adam Gordon defines "risk analysis" as the *examination* of risk, while "risk assessment" is the process of *defining* risks in a given context. *Definitions* occur before *examinations*, and thus risk assessments occur before a risk analysis.
 
-Formally, the “single loss expectancy” (SLE) is defined as the asset value (which may be the income generated by the asset) multiplied by the “exposure factor” (which is the expected percentage of value of the asset in the event of an attack). This formula honestly only makes sense to me in the “asset as income” case; in other situations, wouldn’t the SLE be the repair/recovery costs?
+Formally, the "single loss expectancy" (SLE) is defined as the asset value (which may be the income generated by the asset) multiplied by the "exposure factor" (which is the expected percentage of value of the asset in the event of an attack). This formula honestly only makes sense to me in the "asset as income" case; in other situations, wouldn't the SLE be the repair/recovery costs?
 
-In general, risk controls are implemented even when they cost as much as the ALE of the risk, since such controls still guard against less tangible qualitative losses. It’s only when the cost of the control begins to *exceed* the risk’s ALE that an organization will accept the risk.
+In general, risk controls are implemented even when they cost as much as the ALE of the risk, since such controls still guard against less tangible qualitative losses. It's only when the cost of the control begins to *exceed* the risk's ALE that an organization will accept the risk.
 
-### Risk Management Concepts — Business Impact Analysis
+### Risk Management Concepts - Business Impact Analysis
 
-“Business Continuity and Disaster Recovery” (BCDR) is the combination of two different types of plans:
+"Business Continuity and Disaster Recovery" (BCDR) is the combination of two different types of plans:
 
-* “Business Continuity” plans attempt to continue normal (or diminished) business operations in the event of an emergency/disaster.
-* “Disaster Recovery” plans involve the prevention or minimization of data loss and operational disruption due to catastrophic events.
+* "Business Continuity" plans attempt to continue normal (or diminished) business operations in the event of an emergency/disaster.
+* "Disaster Recovery" plans involve the prevention or minimization of data loss and operational disruption due to catastrophic events.
 
-The the “BC” part is about *alternate* operations during an emergency, while the “DR” part is about *recovering* operations during a completely disruptive event.
+The the "BC" part is about *alternate* operations during an emergency, while the "DR" part is about *recovering* operations during a completely disruptive event.
 
 The plans for each of these are known as BCPs, DRPs, or BCDRPs for the combined plans.
 
-The reason business continuity and disaster recovery are increasingly lumped together is because events that take an organization *immediately* to disaster are actually somewhat rare. It’s more common for an organization to instead suffer progressive (abd potentially rapid) deterioration from “normal operations” to complete disruption. This means that the business continuity plan is generally engaged *before* the disaster recovery plan, and thus functions as something of a “final off ramp” before a formal disaster is declared and the DRP goes into effect.
+The reason business continuity and disaster recovery are increasingly lumped together is because events that take an organization *immediately* to disaster are actually somewhat rare. It's more common for an organization to instead suffer progressive (abd potentially rapid) deterioration from "normal operations" to complete disruption. This means that the business continuity plan is generally engaged *before* the disaster recovery plan, and thus functions as something of a "final off ramp" before a formal disaster is declared and the DRP goes into effect.
 
-“Business impact analysis” is basically about (1) identifying mission-critical functions/assets  and (2) characterizing the consequence of a disruption to these functions/assets. Goals:
+"Business impact analysis" is basically about (1) identifying mission-critical functions/assets  and (2) characterizing the consequence of a disruption to these functions/assets. Goals:
 
 * Determine critical systems
 * Determine maximum acceptable downtime for those systems
 * Evaluate internal and external requirements to determine restoration ordering
 
-Note that it’s sometimes desirable to bring up *less* critical systems before *more* critical ones as “guinea pigs” to help probe the post-disaster operational environment.
+Note that it's sometimes desirable to bring up *less* critical systems before *more* critical ones as "guinea pigs" to help probe the post-disaster operational environment.
 
 Steps:
 

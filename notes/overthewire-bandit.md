@@ -11,7 +11,7 @@ tags:: #MOC
 
 ## Bandit 13
 
-* [Using “xxd”](xxd.md)
+* [Using "xxd"](xxd.md)
 
 ## Bandit 16
 
@@ -19,6 +19,6 @@ tags:: #MOC
 
 ## Bandit 26
 
-* [Force “more” Into Interactive Mode](force-more-into-interactive-mode.md)
-* [Jump to an Editor in “more”](jump-to-an-editor-in-more.md)
+* [Force "more" Into Interactive Mode](force-more-into-interactive-mode.md)
+* [Jump to an Editor in "more"](jump-to-an-editor-in-more.md)
 * [Set a Shell in ViM](set-a-shell-in-vim.md)

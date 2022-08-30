@@ -20,21 +20,21 @@ Vocabulary:
 * Static Key: A key used multiple times (typically for days, months, or years).
 * Ephemeral Key: A key used for only a single session.
 * Stream Cypher: Combining the plaintext message with a stream of random or pseudo-random characters, one bit at a time. Stream cyphers are low diffusion algorithms.
-* Block Cypher: The encryption of a fixed-length “blocks” of bits from the plaintext. Typically uses padding to ensure consistent block sizes for all plaintext messages. Block cyphers are generally high diffusion algorithms.
+* Block Cypher: The encryption of a fixed-length "blocks" of bits from the plaintext. Typically uses padding to ensure consistent block sizes for all plaintext messages. Block cyphers are generally high diffusion algorithms.
 * Public Key: The *encrypting*/*verifying* half of an asymmetric keypair.
 * Private Key: The *decrypting*/*signing* half of an asymmetric keypair.
 * Nonrepudiation: The use of a cryptosystem to prevent deniability, typically via cryptographic signatures. Note that in a fully nonrepudiable client/server model the host will receive proof of origin (the message comes from the client), while the client will receive proof of submission (the data was sent), delivery (that data was received), and receipt (that data was read correctly).
 
 Block cyphers are generally high diffusion algorithms, while stream ciphers are (necessarily) low diffusion.
 
-Note that really, both the public and private keys in asymmetric encryption schemes and encrypt and decrypt messages — it’s just that you don’t use the public key to decrypt the actual message because *everyone* potentially has access to it. But the symmetry (heh) in asymmetric keys becomes apparent when you think about what a *signature* actually is — an encrypted hash of the plaintext.
+Note that really, both the public and private keys in asymmetric encryption schemes and encrypt and decrypt messages - it's just that you don't use the public key to decrypt the actual message because *everyone* potentially has access to it. But the symmetry (heh) in asymmetric keys becomes apparent when you think about what a *signature* actually is - an encrypted hash of the plaintext.
 
-Finally, the public key in asymmetric cryptography is generally derived from the private key (but the reverse is not possible). This means that it’s often (always?) possible to use the private half of an asymmetric keypair as a symmetric key (not that you’d actually *want* to do this…).
+Finally, the public key in asymmetric cryptography is generally derived from the private key (but the reverse is not possible). This means that it's often (always?) possible to use the private half of an asymmetric keypair as a symmetric key (not that you'd actually *want* to do this...).
 
 In a fully asymmetric cryptosystem, each user has a public/private keypair, and uses the recipients public key to encrypt messages to them. This is expensive though, so in general asymmetric cryptography is used in one of two ways:
 
-* To exchange a short-lived symmetric (“session”) key for use in the actual communication, or
-* More recently, simply to verify identities and begin a Diffie-Hellman key exchange (after the initial key creation, new Diffie-Hellman exchanges are subsequently conducted as part of every message, allowing session keys to be ratcheted for every message — a method called “forward secrecy”).
+* To exchange a short-lived symmetric ("session") key for use in the actual communication, or
+* More recently, simply to verify identities and begin a Diffie-Hellman key exchange (after the initial key creation, new Diffie-Hellman exchanges are subsequently conducted as part of every message, allowing session keys to be ratcheted for every message - a method called "forward secrecy").
 
 Note that while forward secrecy protects against both the (future) disclosure of the private key and harvesting of all on-the-wire messages, it still fails if the attacker has continuous access to the memory of one party and/or the ability to influence the generation of per-message ephemeral secrets.
 
@@ -69,9 +69,9 @@ To reiterate, a list of the roles of cryptography in security:
 
 ### Cryptography Concepts
 
-> [Cryptography] is trying to make us live in a world that’s “need to know”.
+> [Cryptography] is trying to make us live in a world that's "need to know".
 > 
-> — Dan Lowrie
+> - Dan Lowrie
 
 The three states of data:
 
@@ -86,9 +86,9 @@ Important cyphers for low-power devices (SCADA, etc.)
 
 ### Encryption And Steganography
 
-Encryption is about ensuring confidentiality; steganography is about hiding information (which may — and probably should be! — itself cyphertext).
+Encryption is about ensuring confidentiality; steganography is about hiding information (which may - and probably should be! - itself cyphertext).
 
-Interesting… ITPro.TV is defining a streaming cipher as operating byte-by-byte, whereas Exam Cram defined them as operating bit-by-bit. So either one of these is wrong, or the difference between stream and block cyphers are more a matter of degree than kind (I kind of suspect it’s the latter).
+Interesting... ITPro.TV is defining a streaming cipher as operating byte-by-byte, whereas Exam Cram defined them as operating bit-by-bit. So either one of these is wrong, or the difference between stream and block cyphers are more a matter of degree than kind (I kind of suspect it's the latter).
 
 | Stream Cypher         | Block Cypher                    |
 |:--------------------- |:------------------------------- |
@@ -108,7 +108,7 @@ Block cipher modes:
 
 ### Hashing
 
-Hashes are always fixed length (for a given hash type). Also, “message digest” == ”fingerprint” == “hash”!
+Hashes are always fixed length (for a given hash type). Also, "message digest" == "fingerprint" == "hash"!
 
 | Algorithm | Considerations                             |
 |:--------- |:------------------------------------------ |
@@ -117,11 +117,11 @@ Hashes are always fixed length (for a given hash type). Also, “message digest�
 | SHA2      | 224, 256, 384, 512 bit variants (modern)   |
 | RIPEMD    | 128, 160, 256, 320 bit variants (uncommon) |
 
-HMACs are “hashed message authentication codes” used to verify message integrity and authenticity. HMACs are not hash functions themselves, but are rather encrypted hashes that are appended to messages (so, a signature).
+HMACs are "hashed message authentication codes" used to verify message integrity and authenticity. HMACs are not hash functions themselves, but are rather encrypted hashes that are appended to messages (so, a signature).
 
 Checksums are not hashing algorithms, but serve a similar purpose.
 
-A note about salts: You *don’t* want your salt(s) to become public, but it also doesn’t completely negate their value if they are leaked. The reason for this is that, so long as you are using *unique* salts in every instance, you are still preventing the use of *mass* password/data cracking. So even a leaked salt buys you time… But that’s the only thing it buys you at that point, so it’s still important to re-encrypt / re-hash / invalidate passwords, etc. if this happens!
+A note about salts: You *don't* want your salt(s) to become public, but it also doesn't completely negate their value if they are leaked. The reason for this is that, so long as you are using *unique* salts in every instance, you are still preventing the use of *mass* password/data cracking. So even a leaked salt buys you time... But that's the only thing it buys you at that point, so it's still important to re-encrypt / re-hash / invalidate passwords, etc. if this happens!
 
 ### Symmetric vs. Asymmetric Encryption
 
@@ -129,7 +129,7 @@ Symmetric cyphers:
 
 | Name     | Considerations                         |
 |:-------- |:-------------------------------------- |
-| AES      | Block cypher, 128 – 256 bits           |
+| AES      | Block cypher, 128 - 256 bits           |
 | DES      | Block cypher, 56-bits                  |
 | 3DES     | Three DES rounds, 168-bits (effective) |
 | Blowfish | Block cipher, 64-bit                   |
@@ -145,11 +145,11 @@ Asymmetric cyphers:
 |:-------------- |:-------------------------------------- |
 | RSA            | Second oldest, common                  |
 | Diffie-Hellman | Oldest standard, used for key exchange |
-| DSA            | NIST “digital security standard”       |
+| DSA            | NIST "digital security standard"       |
 | EIGamal        | Used by PGP/GPG                        |
 | ECC            | New, fast, small keys                  |
 
-Two applications/machines that try to communicate cryptographically need to first agree on a “cipher suite” — a set of cryptographic algorithms — to use. These are represented in a standard(ish) fashion:
+Two applications/machines that try to communicate cryptographically need to first agree on a "cipher suite" - a set of cryptographic algorithms - to use. These are represented in a standard(ish) fashion:
 
 | TLS                 | _ | DHE          | _ | RSA               | \_WITH\_ | AES_256          | _ | GCM                   | _ | SHA384 |
 |:------------------- |:- |:------------ |:- |:----------------- |:-------- |:---------------- |:- |:--------------------- |:- |:------ |

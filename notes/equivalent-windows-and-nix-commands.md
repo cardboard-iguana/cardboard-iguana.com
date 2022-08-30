@@ -106,7 +106,7 @@ nslookup -type=MX google.com
 
 ## ping
 
-Windows `ping` uses the `-n` flag to specify the number of packets sent (in contrast to Linux’s `-c`).
+Windows `ping` uses the `-n` flag to specify the number of packets sent (in contrast to Linux's `-c`).
 
 ## runas
 
@@ -116,16 +116,16 @@ runas /user:$USERNAME $EXECUTABLE
 
 `$USERNAME` may also be specified as `$DOMAIN\$USERNAME` for domain-joined machines.
 
-`$EXECUTABLE` is treated normally (as if not prefixed by the `runas` command), so a full or relative path is only necessary when it’s not already in the Windows path.
+`$EXECUTABLE` is treated normally (as if not prefixed by the `runas` command), so a full or relative path is only necessary when it's not already in the Windows path.
 
 If credentials are saved for a particular user (use `cmdkey /list` to check), then the `/savecred` flag will apply them automatically!
 
 ## whoami
 
-Windows’ `whoami` supports a couple of useful flags:
+Windows' `whoami` supports a couple of useful flags:
 
-* `/all` — return detailed user information.
-* `/privs` — return information about current user privileges.
+* `/all` - return detailed user information.
+* `/privs` - return information about current user privileges.
 
 ## References
 

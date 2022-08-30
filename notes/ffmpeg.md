@@ -1,4 +1,4 @@
-# Using “ffmpeg”
+# Using "ffmpeg"
 
 author:: Nathan Acks  
 date:: 2021-09-10
@@ -10,7 +10,7 @@ ffmpeg -i ${INPUT}.m4a -c:v copy -c:a libmp3lame \
        -q:a 0 ${OUTPUT}.mp3
 ```
 
-The -q:a parameters correspond to LAME’s -V option, so 0 is the highest quality and 9 is the lowest quality. While everyone says to use 3 or 4 for this parameter, in my experience even using 0 will often result in a *smaller* file than an m4a original. (What’s up with that? I thought that m4a was supposed to be more efficient than mp3?)
+The -q:a parameters correspond to LAME's -V option, so 0 is the highest quality and 9 is the lowest quality. While everyone says to use 3 or 4 for this parameter, in my experience even using 0 will often result in a *smaller* file than an m4a original. (What's up with that? I thought that m4a was supposed to be more efficient than mp3?)
 
 ## MP4 to GIF
 

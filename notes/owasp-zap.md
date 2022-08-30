@@ -39,4 +39,4 @@ ZAP has gobuster-like functionality called "Forced Browse". The wordlist can be 
 
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [Using Burp Suite](burp-suite.md)
-* [Using “gobuster”](gobuster.md)
+* [Using "gobuster"](gobuster.md)

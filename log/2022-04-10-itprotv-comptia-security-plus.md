@@ -5,15 +5,15 @@ date:: 2022-04-10
 
 ## CompTIA Security+ Exam Cram
 
-Today I’ll be covering Chapters 7 and 8 of the Security+ Exam Cram, “Security Assessment Techniques” and “Penetration Testing Techniques”.
+Today I'll be covering Chapters 7 and 8 of the Security+ Exam Cram, "Security Assessment Techniques" and "Penetration Testing Techniques".
 
 ### Vulnerability Scans
 
 Types of scanners:
 
 * Network Scanners: Nessus, Nmap, etc.
-* Application Scanners: Static source code and/or binary analysis. Also called “static application security testing” (SAST).
-* Web Application Scanners: Automatic identification of XSS, SQLi, path traversal, etc. Also known as “dynamic application security testing” (DAST). Seems like something you could do with local binaries too, though the Exam Cram emphasizes web applications.
+* Application Scanners: Static source code and/or binary analysis. Also called "static application security testing" (SAST).
+* Web Application Scanners: Automatic identification of XSS, SQLi, path traversal, etc. Also known as "dynamic application security testing" (DAST). Seems like something you could do with local binaries too, though the Exam Cram emphasizes web applications.
 
 Dealing with discovered vulnerabilities:
 
@@ -26,11 +26,11 @@ Vocabulary:
 * CVE: Common Vulnerabilities and Exposures
 * CVSS: Common Vulnerability Scoring System
 
-Note that the US government uses OVAL — the “Open Vulnerability Assessment Language”, an XML-based vulnerability description language — instead of the CVE numbers used in private industry. That said, OVAL vulnerability representations are often based off of CVE data.
+Note that the US government uses OVAL - the "Open Vulnerability Assessment Language", an XML-based vulnerability description language - instead of the CVE numbers used in private industry. That said, OVAL vulnerability representations are often based off of CVE data.
 
 ### Intrusive vs. Non-Intrusive Scans
 
-“Intrusive” scans actually try to exploit potentially vulnerable systems.
+"Intrusive" scans actually try to exploit potentially vulnerable systems.
 
 ### Credentialed vs. Non-Credentialed Scans
 
@@ -38,7 +38,7 @@ Credentialed scans: More invasive, but also more accurate.
 
 ### Security Information and Event Management (SIEM)
 
-Strategies for identifying “events of interest”:
+Strategies for identifying "events of interest":
 
 * Pattern matching
 * Anomaly detection
@@ -60,16 +60,16 @@ Phases:
 
 * Planning: Define the rules of engagement.
 * Discovery: Reconnaissance and vulnerability analysis.
-* Attack: Exploitation, privesc, lateral movement, persistence, cleanup (only if you’re a good guy or APT).
+* Attack: Exploitation, privesc, lateral movement, persistence, cleanup (only if you're a good guy or APT).
 * Reporting
 
-Exam Cram refers to passive recon as “footprinting”.
+Exam Cram refers to passive recon as "footprinting".
 
 ### Team Exercises
 
-Exam Cram specifically defines red teaming as more focused than a regular penetration test, with specific operational objectives. These days, I’d imagine that most red teams focus on APT emulation.
+Exam Cram specifically defines red teaming as more focused than a regular penetration test, with specific operational objectives. These days, I'd imagine that most red teams focus on APT emulation.
 
-I have not heard of “white teams” — which apparently set the rules of engagement for red/blue teams and are the keepers of business GRC policies — before. Exam Cram refers to them as the “referees”.
+I have not heard of "white teams" - which apparently set the rules of engagement for red/blue teams and are the keepers of business GRC policies - before. Exam Cram refers to them as the "referees".
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
@@ -77,13 +77,13 @@ I have not heard of “white teams” — which apparently set the rules of enga
 
 Interesting tools:
 
-* `pathping` — Combines `ping` + `traceroute`.
-* `route` — Display (local) routing table.
-* `arp`  — Display (local) arp cache.
-* `netstat` — Current (local) network connections.
-* `hping` — Packet construction tool.
-* `scanless` — Port scanning via third-party services.
-* `dnsenum` — DNS enumeration tool; uses third-party services.
+* `pathping` - Combines `ping` + `traceroute`.
+* `route` - Display (local) routing table.
+* `arp`  - Display (local) arp cache.
+* `netstat` - Current (local) network connections.
+* `hping` - Packet construction tool.
+* `scanless` - Port scanning via third-party services.
+* `dnsenum` - DNS enumeration tool; uses third-party services.
 
 ### Packet Capture And Replay
 

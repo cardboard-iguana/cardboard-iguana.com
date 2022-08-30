@@ -9,23 +9,23 @@ date:: 2021-09-13
 
 Some common network topologies:
 
-* ”Star” topologies comprise the hierarchical branching networks most commonly seen today. It’s actually quite expensive relative to other topologies (because of the specialized hardware), and switches become a central point of failure, but its hierarchical nature makes it very scalable.
-* “Bus” topologies hang all machines off of a single “backbone” cable. Data travels in both directions down the cable, and machines listen for packets meant for them — a design prone to contention. But they *are* cheap.
-* “(Token) Ring” topologies are, well, big rings. Data flows in only one direction, which makes them very efficient, but any break severs the *two*-way connectivity of *every* machine. (I know that the phone networks are designed similarly to this, but use two rings running in opposite directions to work around this flaw.)
+* "Star" topologies comprise the hierarchical branching networks most commonly seen today. It's actually quite expensive relative to other topologies (because of the specialized hardware), and switches become a central point of failure, but its hierarchical nature makes it very scalable.
+* "Bus" topologies hang all machines off of a single "backbone" cable. Data travels in both directions down the cable, and machines listen for packets meant for them - a design prone to contention. But they *are* cheap.
+* "(Token) Ring" topologies are, well, big rings. Data flows in only one direction, which makes them very efficient, but any break severs the *two*-way connectivity of *every* machine. (I know that the phone networks are designed similarly to this, but use two rings running in opposite directions to work around this flaw.)
 
 Key hardware terminology:
 
-* “Hubs” are dumb devices that just repeat every packet they see in one port on every other port.
-* “Switches” are a bit smarter, keeping track of which machines are connected to which port and making sure that packets get routed only to those ports where destination machines are reachable.
-* “Routers” are switches that understand larger topologies — not just “which machine is connected to me?”, but also “which networks are connected to me?”
+* "Hubs" are dumb devices that just repeat every packet they see in one port on every other port.
+* "Switches" are a bit smarter, keeping track of which machines are connected to which port and making sure that packets get routed only to those ports where destination machines are reachable.
+* "Routers" are switches that understand larger topologies - not just "which machine is connected to me?", but also "which networks are connected to me?"
 
-While switches don’t (necessarily) know about IP addresses, the correspondence here is fairly clear: Switches generally handle devices on the same subnet (since each device expects to be able to directly communicate with all subnet IPs), while routers bridge (provide the “gateway” to) different subnets. This starts to get a little muddled when dealing with things like VLANs, though if you think of a VLAN-aware switch as a stack of “virtual switches” it helps.
+While switches don't (necessarily) know about IP addresses, the correspondence here is fairly clear: Switches generally handle devices on the same subnet (since each device expects to be able to directly communicate with all subnet IPs), while routers bridge (provide the "gateway" to) different subnets. This starts to get a little muddled when dealing with things like VLANs, though if you think of a VLAN-aware switch as a stack of "virtual switches" it helps.
 
 ### A Primer on Subnetting
 
 Subnetting is typically used to segment networks by function.
 
-The “network address” of a subnet is the first IP address available in the subnet, and is used to identify the network.
+The "network address" of a subnet is the first IP address available in the subnet, and is used to identify the network.
 
 ### The ARP Protocol
 
@@ -35,7 +35,7 @@ ARP uses a two-step exchange: The device looking for an IP address will broadcas
 
 ### The DHCP Protocol
 
-“DHCP” stands for “Dynamic Host Configuration Protocol”.
+"DHCP" stands for "Dynamic Host Configuration Protocol".
 
 DHCP uses a four-step exchange:
 
@@ -48,7 +48,7 @@ DHCP uses a four-step exchange:
 
 ### What is the OSI Model?
 
-OSI stands for “Open Systems Interconnection”; it is a seven-layer model that describes all parts of the network stack (though sometimes I’ve heard the user referred to as “layer 8”). The idea is that segmenting responsibilities by layer allows for more uniform network and device behavior.
+OSI stands for "Open Systems Interconnection"; it is a seven-layer model that describes all parts of the network stack (though sometimes I've heard the user referred to as "layer 8"). The idea is that segmenting responsibilities by layer allows for more uniform network and device behavior.
 
 * Layer 7: Application (highest)
 * Layer 6: Presentation
@@ -58,7 +58,7 @@ OSI stands for “Open Systems Interconnection”; it is a seven-layer model tha
 * Layer 2: Data link
 * Layer 1: Physical (lowest)
 
-Higher layers extend (“encapsulate”) lower layers.
+Higher layers extend ("encapsulate") lower layers.
 
 ### Layer 7: Application
 
@@ -74,7 +74,7 @@ In general, this is the layer where security features like SSL are layered on.
 
 ### Layer 5: Session
 
-The session layer is responsible for actually connecting two machines and transmitting the data between them. Data is transmitted in a “session” — a successful connection between two systems.
+The session layer is responsible for actually connecting two machines and transmitting the data between them. Data is transmitted in a "session" - a successful connection between two systems.
 
 This is the layer where packets live.
 
@@ -82,9 +82,9 @@ This is the layer where packets live.
 
 The transport layer determines *how* data is sent in a session. This is where TCP and UDP (as protocols) live.
 
-TCP stands for “Transmission Control Protocol”.
+TCP stands for "Transmission Control Protocol".
 
-UDP stands for “User Datagram Protocol”. One of the key aspects of UDP is that the *application* layer gets to decide how quickly packets are sent in a given session. ARP and DHCP both operate over UDP.
+UDP stands for "User Datagram Protocol". One of the key aspects of UDP is that the *application* layer gets to decide how quickly packets are sent in a given session. ARP and DHCP both operate over UDP.
 
 ### Layer 3: Network
 
@@ -105,9 +105,9 @@ Because switches (generally) only care about MAC addresses, they live in this la
 
 ### Layer 1: Physical
 
-This is where actual physical cabling lives — the layer of atoms and electricity.
+This is where actual physical cabling lives - the layer of atoms and electricity.
 
-I suppose that a hub would be a layer 1 device, since it’s just shuffling actual (electrical) packets.
+I suppose that a hub would be a layer 1 device, since it's just shuffling actual (electrical) packets.
 
 ## Packets & Frames
 
@@ -135,8 +135,8 @@ Key TCP headers:
 | Time to Live (TTL)     | How long a packet should live on the network before being discarded.                                                                                                    |
 | Source port            | A random (unused) port chosen by the sender.                                                                                                                            |
 | Destination port       | The port on the receiving end, which normally is determined by the application being used.                                                                              |
-| Source address         | “From” IP address.                                                                                                                                                      |
-| Destination address    | “To” IP address.                                                                                                                                                        |
+| Source address         | "From" IP address.                                                                                                                                                      |
+| Destination address    | "To" IP address.                                                                                                                                                        |
 | Sequence number        | A random number that identifies a given connection.                                                                                                                     |
 | Acknowledgement number | Starts at the sequence number and then increases by one for each packet sent. Used to ensure that no data is lost, and that packets are reassembled in the right order. |
 | Checksum               | Integrity check.                                                                                                                                                        |
@@ -152,15 +152,15 @@ Key TCP flags:
 * FIN: End connection.
 * RST: Error.
 
-TCP’s “three way handshake” opens a connection by establishing a random sequence number.
+TCP's "three way handshake" opens a connection by establishing a random sequence number.
 
 * Client sends SYN with an initial sequence number (ISN).
-* Server sends a SYN/ACK — its own ISN as well as the client ISN + 1.
+* Server sends a SYN/ACK - its own ISN as well as the client ISN + 1.
 * The client sends an ACK of the server ISN + 1.
 
-(Unfortunately, it’s still a little unclear to me how to think about the progression of sequence and acknowledgement numbers over the course of an entire connection. I did a little more searching around, but the other examples I’ve found are even more abbreviated and/or obtuse.)
+(Unfortunately, it's still a little unclear to me how to think about the progression of sequence and acknowledgement numbers over the course of an entire connection. I did a little more searching around, but the other examples I've found are even more abbreviated and/or obtuse.)
 
-Closing the connection uses a “four way handshake”:
+Closing the connection uses a "four way handshake":
 
 * Client FIN
 * Server ACK
@@ -180,14 +180,14 @@ UDP is *stateless*. It shares a few headers with TCP:
 | Time to Live (TTL)   | How long a packet should live on the network before being discarded.                                                                                                    |
 | Source port          | A random (unused) port chosen by the sender.                                                                                                                            |
 | Destination port     | The port on the receiving end, which normally is determined by the application being used.                                                                              |
-| Source address       | “From” IP address.                                                                                                                                                      |
-| Destination address  | “To” IP address.                                                                                                                                                        |
+| Source address       | "From" IP address.                                                                                                                                                      |
+| Destination address  | "To" IP address.                                                                                                                                                        |
 | Data                 | The, well, data.                                                                                                                                                        |
 
 Since there are no handshakes in UDP, data transmission is fairly simple:
 
 * Client request
-* Server response (and response and response and…)
+* Server response (and response and response and...)
 
 The connection ends when the server stops sending data or the client stops listening. In practice this means that the application layer does need to layer on *some* kind of client/server messaging system, but UDP does not concern itself with these details.
 
@@ -195,6 +195,6 @@ The connection ends when the server stops sending data or the client stops liste
 
 Ports identify applications (or services provided by an application). There are 2¹⁶ possible ports numbered 0 - 65535.
 
-Ports 0 - 1023 are “common ports” (I’ve typically heard this block called “reserved” or “system”; Wikipedia calls them “well-known”).
+Ports 0 - 1023 are "common ports" (I've typically heard this block called "reserved" or "system"; Wikipedia calls them "well-known").
 
 * [List of TCP and UDP port numbers (Wikipedia)](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)

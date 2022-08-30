@@ -5,11 +5,11 @@ date:: 2022-04-02
 
 ## CompTIA Security+ Exam Cram
 
-Today I’ll be covering Chapter 22 of the Security+ Exam Cram, “Cloud Cybersecurity Solutions”.
+Today I'll be covering Chapter 22 of the Security+ Exam Cram, "Cloud Cybersecurity Solutions".
 
 ### Introduction
 
-Cloud platform security controls: A wall of toggle. So many toggles…
+Cloud platform security controls: A wall of toggle. So many toggles...
 
 ### Cloud Workloads
 
@@ -33,9 +33,9 @@ Availability zones allow for redundancy.
 
 ### Virtual Private Cloud (VPC)
 
-This is basically the private internal networks used to connect cloud resources. “VPC endpoints” allow connections to other cloud resources, but are generally one-way (requests must be initiated by resources within the VPC).
+This is basically the private internal networks used to connect cloud resources. "VPC endpoints" allow connections to other cloud resources, but are generally one-way (requests must be initiated by resources within the VPC).
 
-Security best practices for a VPC are basically the same as those for a regular network, except that there’s often finer-grained control via security groups and cloud platform policies. API monitoring also needs to be taken into account.
+Security best practices for a VPC are basically the same as those for a regular network, except that there's often finer-grained control via security groups and cloud platform policies. API monitoring also needs to be taken into account.
 
 ### Security Groups
 
@@ -71,7 +71,7 @@ Basically, use the built-in secrets management functionality of your platform.
 
 ### Central Logging
 
-Basically, log all the things. But if you can’t log all the things, then log:
+Basically, log all the things. But if you can't log all the things, then log:
 
 * Privileged account actions
 * Log access
@@ -82,11 +82,11 @@ Basically, log all the things. But if you can’t log all the things, then log:
 
 CASB = Cloud Access Security Broker
 
-The use case I’m familiar with for CASBs is controlling SaaS access from corporate networks/devices. This can be extended to the management interface for cloud services. Similar functionality is apparently enabled by services known as “secure web gateways” (SWGs) and “software defined perimeters” (SDPs). Exam Cram is implying here that at least some of these technologies can be layered in front of the relevant application / management interface on the vendor side or via a proxy (in which case the application / management interface would be restricted to only talk to the relevant application IPs)
+The use case I'm familiar with for CASBs is controlling SaaS access from corporate networks/devices. This can be extended to the management interface for cloud services. Similar functionality is apparently enabled by services known as "secure web gateways" (SWGs) and "software defined perimeters" (SDPs). Exam Cram is implying here that at least some of these technologies can be layered in front of the relevant application / management interface on the vendor side or via a proxy (in which case the application / management interface would be restricted to only talk to the relevant application IPs)
 
-AWS apparently has a “marketplace” (sounds a bit like the Google Workspace add-ons “marketplace) that specifically offers integrations with security tools.
+AWS apparently has a "marketplace" (sounds a bit like the Google Workspace add-ons "marketplace) that specifically offers integrations with security tools.
 
-“Structural awareness” solutions (protections applied directly to resources/objects):
+"Structural awareness" solutions (protections applied directly to resources/objects):
 
 * Compliance / Best practices
 * Visibility / Monitoring
@@ -98,7 +98,7 @@ AWS apparently has a “marketplace” (sounds a bit like the Google Workspace a
 * DevSecOps
 * Risk management
 
-“Situational awareness” solutions (monitor and respond to events):
+"Situational awareness" solutions (monitor and respond to events):
 
 * Firewalls / Proxies (packet inspection)
 * EDR
@@ -114,12 +114,12 @@ AWS apparently has a “marketplace” (sounds a bit like the Google Workspace a
 
 Six nmap port states:
 
-* `Open` — The port is reachable and there is a service listening on it.
-* `Closed` — The port is reachable and there is no service listening on it.
-* `Filtered` — Nmap cannot determine the port state because the port is not accessible (probably because of a firewall).
-* `Unfiltered` — Nmap cannot determine the port state, but the port *is* accessible (only encountered in ACK scans).
-* `Open|Filtered` — Nmap can only determine that the port is not closed (only encountered in UDP scans and more exotic scans like Xmas).
-* `Closed|Filtered` — Nmap can only determine that the port is not open (only encountered in IP ID idle scans).
+* `Open` - The port is reachable and there is a service listening on it.
+* `Closed` - The port is reachable and there is no service listening on it.
+* `Filtered` - Nmap cannot determine the port state because the port is not accessible (probably because of a firewall).
+* `Unfiltered` - Nmap cannot determine the port state, but the port *is* accessible (only encountered in ACK scans).
+* `Open|Filtered` - Nmap can only determine that the port is not closed (only encountered in UDP scans and more exotic scans like Xmas).
+* `Closed|Filtered` - Nmap can only determine that the port is not open (only encountered in IP ID idle scans).
 
 Reference:
 
@@ -129,12 +129,12 @@ Reference:
 
 Available TCP flags:
 
-* URG — Process the current TCP packet immediately. Directs the receiving system to examine the “urgent pointer” field.
-* ACK — Acknowledgement. Directs the receiving system to examine the “acknowledgement number” field.
-* PSH — Push. Elevate the priority of the packet’s data, but does not otherwise change rules around packet processing.
-* RST — Reset. Terminates the connection forcefully.
-* SYN — Synchronize. Used during the initial three-way handshake to set a shared (starting) sequence number.
-* FIN — Finish. Indicates that the connection may be dropped gracefully.
+* URG - Process the current TCP packet immediately. Directs the receiving system to examine the "urgent pointer" field.
+* ACK - Acknowledgement. Directs the receiving system to examine the "acknowledgement number" field.
+* PSH - Push. Elevate the priority of the packet's data, but does not otherwise change rules around packet processing.
+* RST - Reset. Terminates the connection forcefully.
+* SYN - Synchronize. Used during the initial three-way handshake to set a shared (starting) sequence number.
+* FIN - Finish. Indicates that the connection may be dropped gracefully.
 
 Reference:
 
@@ -154,7 +154,7 @@ Nmap normally scans ports in a random order. However, ports are often brought up
 
 ### TCP SYN Scan
 
-TCP SYN scans (`-sS`) are nmap’s default; sends a RST instead of a ACK at the end of the three-way handshake.
+TCP SYN scans (`-sS`) are nmap's default; sends a RST instead of a ACK at the end of the three-way handshake.
 
 Fast. Limited to privileged users.
 
@@ -164,7 +164,7 @@ UDP scans are specified using `-sU`.
 
 There is no UDP handshake, but a UDP packet sent to a closed port will generate an ICMP port unreachable packet unless either the UDP packet or ICMP response is blocked by a firewall.
 
-Unfortunately, a UDP packet sent to an open port isn’t guaranteed to generate a reply. Nmap tries to work around this by sending packet that are likely to elicit a response for common protocols, but this is an inexact thing.
+Unfortunately, a UDP packet sent to an open port isn't guaranteed to generate a reply. Nmap tries to work around this by sending packet that are likely to elicit a response for common protocols, but this is an inexact thing.
 
 Note that `-sS` and `-sU` can be specified simultaneously, in which case nmap will perform *both* scans in parallel.
 
@@ -174,13 +174,13 @@ Note that `-sS` and `-sU` can be specified simultaneously, in which case nmap wi
 
 Use `--top-ports 10` to scan only the ten most common ports.
 
-Timing can be specified with the `-T` flag, which takes a template number 0 – 5.
+Timing can be specified with the `-T` flag, which takes a template number 0 - 5.
 
-`-T0` waits 5 minutes between port scans, and is thus *not* something you’d want to use when scanning a full port range (doing so would take over 7 months!). It is *very* unlikely to trigger IDS alerts.
+`-T0` waits 5 minutes between port scans, and is thus *not* something you'd want to use when scanning a full port range (doing so would take over 7 months!). It is *very* unlikely to trigger IDS alerts.
 
 `-T1` is also slow (but not nearly as slow as `T0`!), and is typically used in real engagements.
 
-`-T3` is nmap’s default.
+`-T3` is nmap's default.
 
 `-T4` is generally used during CTFs and learning exercises.
 
@@ -190,19 +190,19 @@ Packet rate can also be bounded using `--min-rate` and `--max-rate` (single numb
 
 ### TCP Null Scan, FIN Scan, and Xmas Scan
 
-* `-sN` — Null scan; no TCP flags are set. Used to circumvent *stateless* firewalls. Can distinguish between `closed` and `open|filtered`.
-* `-sF` — FIN scan. Use and output is similar to a null scan, but is slightly more likely to be blocked.
-* `-sX` — Xmas scan; the FIN, URG, and PSH TCP flags are set. Use and output is similar to a null scan.
+* `-sN` - Null scan; no TCP flags are set. Used to circumvent *stateless* firewalls. Can distinguish between `closed` and `open|filtered`.
+* `-sF` - FIN scan. Use and output is similar to a null scan, but is slightly more likely to be blocked.
+* `-sX` - Xmas scan; the FIN, URG, and PSH TCP flags are set. Use and output is similar to a null scan.
 
 ### TCP Maimon Scan
 
- `-sM` — Maimon scan (named after Uriel Maimon); the FIN and ACK TCP flags are set. Should always receive a RST, but some older BSD systems drop the packet on open ports. Of limited modern utility.
+ `-sM` - Maimon scan (named after Uriel Maimon); the FIN and ACK TCP flags are set. Should always receive a RST, but some older BSD systems drop the packet on open ports. Of limited modern utility.
 
 ### TCP Ack, Windows, and Custom Scan
 
-* `-sA` — ACK scan. All ports *should* respond with a RST, but firewalls will generally block these requests except for open/forwarded ports. Thus, an ACK scan is useful for probing the configuration of intermediate firewalls (but says nothing about whether services are actually *listening* on the identified ports).
-* `-sW` — TCP windows scan; the same as an ACK scan except that it examines the TCP window field of returned RST packets and uses it to discern if a port responded *differently*. Note that ports may be reported as closed (and open!) erroneously (as not all systems respond in the same way), but unfiltered ports will be identified. Look for patterns of open/closed ports to try to discern how the target system is responding.
-* `--scanflags` — Specify the TCP flags used to probe ports during a scan using URG, PSH, RST, SYN, ACK, FIN (e.g., `--scanflags URGPSHFIN` is the same as `-sX`).
+* `-sA` - ACK scan. All ports *should* respond with a RST, but firewalls will generally block these requests except for open/forwarded ports. Thus, an ACK scan is useful for probing the configuration of intermediate firewalls (but says nothing about whether services are actually *listening* on the identified ports).
+* `-sW` - TCP windows scan; the same as an ACK scan except that it examines the TCP window field of returned RST packets and uses it to discern if a port responded *differently*. Note that ports may be reported as closed (and open!) erroneously (as not all systems respond in the same way), but unfiltered ports will be identified. Look for patterns of open/closed ports to try to discern how the target system is responding.
+* `--scanflags` - Specify the TCP flags used to probe ports during a scan using URG, PSH, RST, SYN, ACK, FIN (e.g., `--scanflags URGPSHFIN` is the same as `-sX`).
 
 Reference:
 
@@ -210,16 +210,16 @@ Reference:
   
 ### Spoofing and Decoys
 
-* `-S` — Use a spoofed IP address for the scan. Only useful if you can actually capture incoming packets at that IP address! Generally must be combined with the `-e` and `-Pn` flags.
-* `-e` — Specify the network interface to use during scanning.
-* `-D` — Send multiple scan requests using decoys; specified using a list of arbitrary IP addresses. The special “addresses” ME and RND represent the attacker (you!) and a random IP address, respectively. Obviously, if you want results than “ME” will need to be included in the list *somewhere*. Trades stealth for “chaff”. Maybe only useful as a diversion?
-* `--spoof-mac` — Use a spoofed MAC address for the scan. Obviously only matters when you’re on the same subnet as the target; otherwise has the same caveats as IP spoofing.
+* `-S` - Use a spoofed IP address for the scan. Only useful if you can actually capture incoming packets at that IP address! Generally must be combined with the `-e` and `-Pn` flags.
+* `-e` - Specify the network interface to use during scanning.
+* `-D` - Send multiple scan requests using decoys; specified using a list of arbitrary IP addresses. The special "addresses" ME and RND represent the attacker (you!) and a random IP address, respectively. Obviously, if you want results than "ME" will need to be included in the list *somewhere*. Trades stealth for "chaff". Maybe only useful as a diversion?
+* `--spoof-mac` - Use a spoofed MAC address for the scan. Obviously only matters when you're on the same subnet as the target; otherwise has the same caveats as IP spoofing.
 
 ### Fragmented Packets
 
-* `-f` — Fragment packets so that the packet is 8 bytes or less. Specify twice to fragment into 16 byte chunks (which is reverse of how you’d intuitively expect this to work). Can help evade some next-gen firewall / IDS alarms.
-* `--mtu` — Choose the fragment length for `-f`; should always be a multiple of 8.
-* `--data-length` — Append random data to nmap TCP packets. By default, nmap appends no data after the TCP header; padding this out *can* make scans look more innocuous. Disables protocol-specific payloads, which can decrease scan accuracy, particularly for UDP scans.
+* `-f` - Fragment packets so that the packet is 8 bytes or less. Specify twice to fragment into 16 byte chunks (which is reverse of how you'd intuitively expect this to work). Can help evade some next-gen firewall / IDS alarms.
+* `--mtu` - Choose the fragment length for `-f`; should always be a multiple of 8.
+* `--data-length` - Append random data to nmap TCP packets. By default, nmap appends no data after the TCP header; padding this out *can* make scans look more innocuous. Disables protocol-specific payloads, which can decrease scan accuracy, particularly for UDP scans.
 
 Reference:
 
@@ -227,7 +227,7 @@ Reference:
 
 ### Idle/Zombie Scan
 
-* `-sI` — Idle/Zombie scan. The idea here is to choose a machine with *no* traffic on it and then spoof it’s IP address. Scans then consist of a SYN/ACK to the zombie to get the current IP ID value for the current port, then a SYN to the target (which should either reply with a RST to the zombie, which doesn’t trigger a response and thus doesn’t increment the IP ID, or a SYN/ACK to the zombie, which will respond with a RST which *will* increment the IP ID), then a second SYN/ACK to the zombie to see if the IP ID has been incremented by 1 (port closed or filtered on the target) or 2 (port open on the target). Note that zombies need to be systems that increment the IP ID sequentially *and* globally, and open/closed ports will be from the *zombie’s* perspective, not the attacker’s. These scans are also slooooow (though not as slow as `-T0`).
+* `-sI` - Idle/Zombie scan. The idea here is to choose a machine with *no* traffic on it and then spoof it's IP address. Scans then consist of a SYN/ACK to the zombie to get the current IP ID value for the current port, then a SYN to the target (which should either reply with a RST to the zombie, which doesn't trigger a response and thus doesn't increment the IP ID, or a SYN/ACK to the zombie, which will respond with a RST which *will* increment the IP ID), then a second SYN/ACK to the zombie to see if the IP ID has been incremented by 1 (port closed or filtered on the target) or 2 (port open on the target). Note that zombies need to be systems that increment the IP ID sequentially *and* globally, and open/closed ports will be from the *zombie's* perspective, not the attacker's. These scans are also slooooow (though not as slow as `-T0`).
 
 Reference:
 
@@ -235,27 +235,27 @@ Reference:
 
 ### Getting More Details
 
-* `-d` — Generate debugging output; use `-dd` for even more. This is essentially an additional verbosity leve, such that `-v` < `-vv` < `-d` < `-dd`.
-* `--reason` — Show the reason that nmap made a particular identification. Kinda fun.
+* `-d` - Generate debugging output; use `-dd` for even more. This is essentially an additional verbosity leve, such that `-v` < `-vv` < `-d` < `-dd`.
+* `--reason` - Show the reason that nmap made a particular identification. Kinda fun.
 
 ### Summary of Nmap Advanced Port Scans
 
-* `--source-port` — Specify the source port for a scan. possibly useful to evade some firewall rules?
+* `--source-port` - Specify the source port for a scan. possibly useful to evade some firewall rules?
 
 ### Service Detection
 
-* `-sV` — Service detection scan. The same as `-sT` (because a full TCP connection is required to gather the necessary information), but probes listening services for additional information.
-* `--version-intensity` — Determine how much service information to collect (and thus how noisy the associated probes will be) with `-sV`. Ranges from 0 – 9; `--version-light` is equivalent to 2, `--version-all` is equivalent to 9.
+* `-sV` - Service detection scan. The same as `-sT` (because a full TCP connection is required to gather the necessary information), but probes listening services for additional information.
+* `--version-intensity` - Determine how much service information to collect (and thus how noisy the associated probes will be) with `-sV`. Ranges from 0 - 9; `--version-light` is equivalent to 2, `--version-all` is equivalent to 9.
 
 ### OS Detection and Traceroute
 
-* `-O` — OS detection. Generally requires at least one open and one closed port to be detected, and results will be distorted if the target is virtualized. The OS type is much more reliably detected than the OS version.
-* `--traceroute` — Perform a traceroute between the attacker and target systems. Note that nmap’s traceroute works in the opposite fashion (high TTL to low TTL) than traceroute/tracert. Note that most routers will not send ICMP TTL exceeded packets, and will thus show up as `*`.
+* `-O` - OS detection. Generally requires at least one open and one closed port to be detected, and results will be distorted if the target is virtualized. The OS type is much more reliably detected than the OS version.
+* `--traceroute` - Perform a traceroute between the attacker and target systems. Note that nmap's traceroute works in the opposite fashion (high TTL to low TTL) than traceroute/tracert. Note that most routers will not send ICMP TTL exceeded packets, and will thus show up as `*`.
 
 ### Nmap Scripting Engine (NSE)
 
-* `-sC` — Run all default scripts (as applicable).
-* `--script` — Run specified scripts, or all scripts in a specified category (as applicable). Also accepts wildcard matches (e.g., `ftp*`).
+* `-sC` - Run all default scripts (as applicable).
+* `--script` - Run specified scripts, or all scripts in a specified category (as applicable). Also accepts wildcard matches (e.g., `ftp*`).
 
 Nmap script categories:
 
@@ -272,22 +272,22 @@ Nmap script categories:
 |    fuzzer | Fuzz identified services.                                                                                              |
 | intrusive | Scripts that may crash a service, generate lots of log messages, or are otherwise noise / may be considered malicious. |
 |   malware | Test for the possible presence of malware on the target.                                                               |
-|      safe | The opposite of “intrusive” — scripts that are unlikely to be noisy or perceived as malicious (no guarantees though).  |
-|   version | Scripts called by -sV. Unlike “default”, this category cannot be called directly.                                      |
-|      vuln | Check for potential vulnerabilities. I’ve found that scripts in this category generate a lot of false positives.       |
+|      safe | The opposite of "intrusive" - scripts that are unlikely to be noisy or perceived as malicious (no guarantees though).  |
+|   version | Scripts called by -sV. Unlike "default", this category cannot be called directly.                                      |
+|      vuln | Check for potential vulnerabilities. I've found that scripts in this category generate a lot of false positives.       |
 
 * [Nmap Scripting Engine Usage and Examples (Official Nmap Project Guide)](https://nmap.org/book/nse-usage.html)
 
 ### Saving the Output
 
-* `-oN` — Save results as “normal” output. This is more-or-less what nmap will print to STDOUT.
-* `-oG` — Save the results as “grepable” output. This is a compact format meant to automatically provide context when searched with grep.
-* `-oX` — Save the results as XML, designed to be importable by other applications.
-* `-oA` — Save the results in “normal”, “grepable”, and XML formats simultaneously. This option will automatically append meaningful extensions (the other options do not do this).
+* `-oN` - Save results as "normal" output. This is more-or-less what nmap will print to STDOUT.
+* `-oG` - Save the results as "grepable" output. This is a compact format meant to automatically provide context when searched with grep.
+* `-oX` - Save the results as XML, designed to be importable by other applications.
+* `-oA` - Save the results in "normal", "grepable", and XML formats simultaneously. This option will automatically append meaningful extensions (the other options do not do this).
 
 ### Summary of Nmap Post Port Scans
 
-* `-A` — Alias for `-sV -O -sC --traceroute`.
+* `-A` - Alias for `-sV -O -sC --traceroute`.
 
 ### Telnet
 
@@ -314,11 +314,11 @@ FTP commands:
 |    USER | Specify the username for the account logging on.        | 
 |    PASS | Specify the password for the account logging on.        |
 |    STAT | Provide connection/server information.                  |
-|    SYST | Provide system “type” information.                      |
+|    SYST | Provide system "type" information.                      |
 |    PASV | Switch to passive mode.                                 |
 |    TYPE | Switch between ASCII (A) and binary (I) transfer modes. |
 
-Note that you cannot receive files using FTP with telnet/netcat, as file transfers are conducted over a separate channel (either a channel originating from port 20 on the server for “active” mode or a random port above 1023 on the client for “passive” mode).
+Note that you cannot receive files using FTP with telnet/netcat, as file transfers are conducted over a separate channel (either a channel originating from port 20 on the server for "active" mode or a random port above 1023 on the client for "passive" mode).
 
 ### Simple Mail Transfer Protocol (SMTP)
 
@@ -371,9 +371,9 @@ Here `prefix` is a random prefix we provide to track server replies to various c
 
 ### Introduction to Attacking Protocols and Servers
 
-The CIA triad has an attacker’s counterpart:
+The CIA triad has an attacker's counterpart:
 
-| Defender’s Triad | Attacker’s Triad |
+| Defender's Triad | Attacker's Triad |
 | ----------------:|:---------------- |
 |  Confidentiality | Disclosure       |
 |        Integrity | Alteration       |
@@ -413,11 +413,11 @@ hydra -l john \
 
 Additional Hydra options:
 
-* `-s` — Specify a non-default port.
-* `-V` — Verbose. Also use `-vV` for something more verbose, or `-d` for debugging output.
-* `-t` — Specify the number of parallel attempts.
+* `-s` - Specify a non-default port.
+* `-V` - Verbose. Also use `-vV` for something more verbose, or `-d` for debugging output.
+* `-t` - Specify the number of parallel attempts.
 
-Note that Hydra doesn’t stop automatically after a password is found.
+Note that Hydra doesn't stop automatically after a password is found.
 
 * [Using Hydra](../notes/hydra.md)
 

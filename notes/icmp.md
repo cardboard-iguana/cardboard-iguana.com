@@ -5,10 +5,10 @@ date:: 2022-03-30
 
 ICMP headers are 8 bytes; the first 4 bytes have a fixed meaning, while the meaning of the last 4 bytes varies depending on the type of request specified in the first 4 bytes.
 
-ICMP traffic “types” correspond to the kind of packet being sent (though different ICMP services can have multiple types):
+ICMP traffic "types" correspond to the kind of packet being sent (though different ICMP services can have multiple types):
 
-* 0 — Ping reply
-* 8 — Ping request
+* 0 - Ping reply
+* 8 - Ping request
 
 Ping packets typically just include either random data or all zeros.
 

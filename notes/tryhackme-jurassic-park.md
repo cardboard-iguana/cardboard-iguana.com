@@ -449,7 +449,7 @@ ELAPSED TIME: 2 h 53 min
 
 ## References
 
-* [Using “sqlmap”](sqlmap.md)
+* [Using "sqlmap"](sqlmap.md)
 * [SQL Injection](sql-injection.md)
-* [Using “nmap”](nmap.md)
-* [Using “gobuster”](gobuster.md)
+* [Using "nmap"](nmap.md)
+* [Using "gobuster"](gobuster.md)

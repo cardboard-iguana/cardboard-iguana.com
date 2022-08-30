@@ -5,7 +5,7 @@ date:: 2022-04-25
 
 ## Default Shares
 
-Default SMB shares (which you generally can’t connect to):
+Default SMB shares (which you generally can't connect to):
 
 * IPC$
 * ADMIN$
@@ -13,8 +13,8 @@ Default SMB shares (which you generally can’t connect to):
 
 ## Associated Protocols
 
-* DCERPC is Windows Server‘s RPC connection protocol.
-* DRSUAPI is Windows’ implementation of the “Directory Replication Service” protocol, which is used to keep domain controllers in sync.
+* DCERPC is Windows Server's RPC connection protocol.
+* DRSUAPI is Windows' implementation of the "Directory Replication Service" protocol, which is used to keep domain controllers in sync.
 
 ## References
 

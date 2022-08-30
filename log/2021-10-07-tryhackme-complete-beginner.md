@@ -7,12 +7,12 @@ date:: 2021-10-07
 
 ### (Severity 09) Components With Known Vulnerabilities
 
-The trickiest part of this is that the project is called “CSE Bookstore”, but the exploit code in ExploitDB is listed under “Online Book Store”.
+The trickiest part of this is that the project is called "CSE Bookstore", but the exploit code in ExploitDB is listed under "Online Book Store".
 
 The actual vulnerability is two-fold:
 
 * Admin image uploads bypass authentication.
-* There’s no check on *what* actually gets uploaded, so we can push up a PHP script instead of an actual image.
+* There's no check on *what* actually gets uploaded, so we can push up a PHP script instead of an actual image.
 
 References:
 
@@ -20,7 +20,7 @@ References:
 
 ## OWASP Juice Shop
 
-### AH! Don’t Look!
+### AH! Don't Look!
 
 Finally, a useful piece of general knowledge.
 
@@ -39,7 +39,7 @@ $sanitized_string =
 
 [Defend the Web has a much better description of what's going on here than the one offered by TryHackMe.](https://defendtheweb.net/article/common-php-attacks-poison-null-byte)
 
-### Who’s Flying This Thing?
+### Who's Flying This Thing?
 
 Broken access control vulnerabilities can be classified into one of two types:
 

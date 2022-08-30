@@ -17,4 +17,4 @@ Normally `$PORT` is 111.
 ## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [Using “nmap”](nmap.md)
+* [Using "nmap"](nmap.md)

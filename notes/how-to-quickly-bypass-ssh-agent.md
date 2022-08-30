@@ -1,4 +1,4 @@
-# How to Quickly Bypass “ssh-agent”
+# How to Quickly Bypass "ssh-agent"
 
 author:: Nathan Acks  
 date:: 2022-07-10

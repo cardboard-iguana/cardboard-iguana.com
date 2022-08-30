@@ -1,4 +1,4 @@
-# Using “xxd”
+# Using "xxd"
 
 author:: Nathan Acks
 

@@ -51,7 +51,7 @@ If you're using the pre-configured ZAP browser, session cookies are automaticall
 
 ZAP has gobuster-like functionality called "Forced Browse". The wordlist can be configured in Tools > Options > Forced Browse; enumeration can be started by right-clicking on the target site and choosing Site > Force Browse Site.
 
-* [Using “gobuster”](../notes/gobuster.md)
+* [Using "gobuster"](../notes/gobuster.md)
 
 ### Brute Force Web Logins
 

@@ -7,7 +7,7 @@ date:: 2022-02-28
 
 ### Weak Configurations
 
-My favorite quip is here! “Unnecessary complexity” as a security vulnerability!
+My favorite quip is here! "Unnecessary complexity" as a security vulnerability!
 
 Elements of weak configurations:
 
@@ -21,9 +21,9 @@ Elements of weak configurations:
 
 Another gem that parallels something I like to repeat:
 
-> “An organization should never try to create its own cryptographic algorithms within systems.”
+> "An organization should never try to create its own cryptographic algorithms within systems."
 > 
-> — CompTIA Security+ SY0-601 Exam Cram, 6/e
+> - CompTIA Security+ SY0-601 Exam Cram, 6/e
 
 The Exam Cram implies that leaving all services enabled will seldom be the correct answer when presented with a device configuration scenario on the Security+ exam.
 
@@ -35,7 +35,7 @@ Types of updates:
 * Service Pack: A bundle all hotfixes and updates (security or not) up to a certain point. Mostly a Windows thing.
 * Update: A non-critical, non-security bugfix.
 
-Microsoft divides updates into “security updates” (which address security issues), “critical updates” (non-security updates that fix high-impact bugs), and just plain “updates” (everything else).
+Microsoft divides updates into "security updates" (which address security issues), "critical updates" (non-security updates that fix high-impact bugs), and just plain "updates" (everything else).
 
 ### Third-Party Risks
 
@@ -67,7 +67,7 @@ Some specifics that the Security+ exam targets:
 
 There are lots of third-party risks. Everything that might go wrong in-house can also go wrong with a vendor.
 
-Many times the reason organizations will attempt to refactor third-party applications or drivers (see yesterday’s notes) is because of lack of current vendor support (and occasionally lack of vendor entirely).
+Many times the reason organizations will attempt to refactor third-party applications or drivers (see yesterday's notes) is because of lack of current vendor support (and occasionally lack of vendor entirely).
 
 * [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](2022-02-27-itprotv-comptia-security-plus.md)
 
@@ -81,7 +81,7 @@ Also, another good reminder to look for indexable directories.
 
 ### Developer Tools: Debugger
 
-Good to know — JavaScript breakpoints persist across page loads. (This makes sense, as many times JavaScript will only be run once, immediately after page load.)
+Good to know - JavaScript breakpoints persist across page loads. (This makes sense, as many times JavaScript will only be run once, immediately after page load.)
 
 In Firefox, breakpoints can be set by clicking on the line number in a JavaScript file viewed in the Debugger (Sources in Chrome) pane.
 
@@ -116,7 +116,7 @@ Useful Google search modifiers:
 
 ### OSINT: S3 Buckets
 
-It can often be fruitful to just attempt to *guess* an organization’s S3 buckets. Common variants:
+It can often be fruitful to just attempt to *guess* an organization's S3 buckets. Common variants:
 
 * `https://${NAME}.s3.amazonaws.com`
 * `https://${NAME}-assets.s3.amazonaws.com`
@@ -124,14 +124,14 @@ It can often be fruitful to just attempt to *guess* an organization’s S3 bucke
 * `https://${NAME}-public.s3.amazonaws.com`
 * `https://${NAME}-private.s3.amazonaws.com`
 
-I’ll bet dollars to donuts that “dev” and “prod” are also common suffixes.
+I'll bet dollars to donuts that "dev" and "prod" are also common suffixes.
 
 ### Automated Discovery
 
 * [ffuf](../notes/ffuf.md)
 * [gobuster](../notes/gobuster.md)
 
-There’s also dirbuster, but I kinda prefer gobuster.
+There's also dirbuster, but I kinda prefer gobuster.
 
 Note that the SecLists web discovery `common.txt` wordlist lives in /usr/share/wordlists/dirb/common.txt on Kali Linux.
 
@@ -181,6 +181,6 @@ ffuf -w /usr/share/wordlists/metasploit/namelist.txt \
      -u https://$IP
 ```
 
-Use `-fs $SIZE` to remove results of a particular size from the list (which you’ll probably need to do in most cases).
+Use `-fs $SIZE` to remove results of a particular size from the list (which you'll probably need to do in most cases).
 
 * [ffuf](../notes/ffuf.md)

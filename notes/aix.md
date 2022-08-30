@@ -7,12 +7,12 @@ date:: 2022-07-10
 
 ```bash
 oslevel     # Report system version
-oslevel -rq # Report “technology level” (major release?)
+oslevel -rq # Report "technology level" (major release?)
             # information
 oslevel -sq # Report service pack information
 ```
 
-Different system components (“filesets”) can be at different technology levels / service packs. You can list which software that is more (`-g`) or less (`-l`) recent than a given technology level (`-r`) or service pack (`-s`); for example:
+Different system components ("filesets") can be at different technology levels / service packs. You can list which software that is more (`-g`) or less (`-l`) recent than a given technology level (`-r`) or service pack (`-s`); for example:
 
 ```bash
 oslevel -s -l $SERVICE_PACK # List filesets below the specified

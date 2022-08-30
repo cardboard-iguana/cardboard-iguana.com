@@ -586,7 +586,7 @@ ELAPSED TIME: 2 h 38 min
 ## References
 
 * [Kerberoasting initial: AS-REP Roasting](https://blog.certcube.com/as-rep-roasting-attack/)
-* [Using “nmap”](nmap.md)
+* [Using "nmap"](nmap.md)
 * [Enumerate Samba Users and Shares](enumerate-samba-users-and-shares.md)
 * [Using Kerbrute](kerbrute.md)
 * [attacktive-directory-tools / userlist.txt](https://github.com/Sq00ky/attacktive-directory-tools/blob/master/userlist.txt)

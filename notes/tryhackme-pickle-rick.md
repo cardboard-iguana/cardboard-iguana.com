@@ -7,9 +7,9 @@ date:: 2021-10-10
 
 ## Background
 
-This is a Rick & Morty themed web server / CTF. The fact that I’ve never watched the show may put me at a disadvantage.
+This is a Rick & Morty themed web server / CTF. The fact that I've never watched the show may put me at a disadvantage.
 
-There are three flags (“ingredients Rick needs for a potion to transform themself from a pickle back into a human”). Because of how TryHackMe masks answers, we already know the basic form of these strings (`*` characters are unknown, but ` ` and `.` characters are literals):
+There are three flags ("ingredients Rick needs for a potion to transform themself from a pickle back into a human"). Because of how TryHackMe masks answers, we already know the basic form of these strings (`*` characters are unknown, but ` ` and `.` characters are literals):
 
 ```
 Flag 1: **. ******* ****
@@ -17,9 +17,9 @@ Flag 2: * ***** ****
 Flag 3: ***** *****
 ```
 
-I’m guessing that flag 1 begins with either numbers or an abbreviation (`Mr.`?). Flag 2 probably begins with `A`.
+I'm guessing that flag 1 begins with either numbers or an abbreviation (`Mr.`?). Flag 2 probably begins with `A`.
 
-Because this is web server exploitation, it’s going to make sense to use Burp Suite. In order to make the experience a little more pleasant, I’m going to add a pattern of `10.10.158.139` (the IP address of the TryHackMe server I'm using) to FoxyProxy and then set it to “Use proxies based on their pre-defined patterns and priorities”; that way, only the CTF website will get proxied to Burp Suite.
+Because this is web server exploitation, it's going to make sense to use Burp Suite. In order to make the experience a little more pleasant, I'm going to add a pattern of `10.10.158.139` (the IP address of the TryHackMe server I'm using) to FoxyProxy and then set it to "Use proxies based on their pre-defined patterns and priorities"; that way, only the CTF website will get proxied to Burp Suite.
 
 ## Recon
 

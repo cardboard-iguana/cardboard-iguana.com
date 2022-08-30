@@ -150,7 +150,7 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Mon Jan 31 18:38:35 2022 -- 1 IP address (1 host up) scanned in 1459.69 seconds
 ```
 
-* [Using “nmap”](../notes/nmap.md)
+* [Using "nmap"](../notes/nmap.md)
 
 ### Exploit
 

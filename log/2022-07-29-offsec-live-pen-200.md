@@ -3,12 +3,12 @@
 author:: Nathan Acks  
 date:: 2022-07-29
 
-Joining late, because of OS updates. It looks like we’re talking about SQL Injection today.
+Joining late, because of OS updates. It looks like we're talking about SQL Injection today.
 
 ## SQL Injection (SQLi)
 
 * Remember that `#` can be used for comments in SQL, in addition to `--`.
-* It’s common to also test that login queries only return a single result. So sometimes you need to tack on `LIMIT 1` to achieve a login bypass. It’s worth always doing this, since adding a `LIMIT` won’t harm login bypass attempts that don’t have this check.
+* It's common to also test that login queries only return a single result. So sometimes you need to tack on `LIMIT 1` to achieve a login bypass. It's worth always doing this, since adding a `LIMIT` won't harm login bypass attempts that don't have this check.
 * If you find one SQLi error in a website/application, there will probably be others!
 * Remember that `information_schema.tables` and `information_schema.columns` tables can be used to extract database structural information in MySQL. Of these, `information_schema.columns` is perhaps the more useful, as it contains both `table_name` and `column_name` columns (`table_schema` is the database name).
 

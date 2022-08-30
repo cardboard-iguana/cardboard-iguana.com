@@ -7,13 +7,13 @@ date:: 2021-12-02
 
 ### smbmap
 
-* `-h` — IP address or host to enumerate
-* `-u` — username to use during enumeration (attempts to use the NULL session if not supplied)
-* `-p` — password or NTLM hash to use during enumeration
-* `-d` — domain (or workgroup) to use during enumeration
-* `-s` — share to enumerate (defaults to `C$` if not supplied)
-* `-x` — attempt to execute the supplied command (!!!) on the server (if the user you’re connecting as has permission to do so)
-* `--download`/`--upload` — download or upload a file to specified share
+* `-h` - IP address or host to enumerate
+* `-u` - username to use during enumeration (attempts to use the NULL session if not supplied)
+* `-p` - password or NTLM hash to use during enumeration
+* `-d` - domain (or workgroup) to use during enumeration
+* `-s` - share to enumerate (defaults to `C$` if not supplied)
+* `-x` - attempt to execute the supplied command (!!!) on the server (if the user you're connecting as has permission to do so)
+* `--download`/`--upload` - download or upload a file to specified share
 
 References:
 
@@ -21,12 +21,12 @@ References:
 
 ### smbclient
 
-* `-I` — IP address to connect to
-* `-U` — username to use for the connection
-* `-P` — password to use for the connection
-* `-N` — attempt to connect without a password
-* `-W` — domain (or workgroup) to use for the connection
-* `-c` — attempt to execute the supplied command (!!!) on the server (if the user you’re connecting as has permission to do so)
+* `-I` - IP address to connect to
+* `-U` - username to use for the connection
+* `-P` - password to use for the connection
+* `-N` - attempt to connect without a password
+* `-W` - domain (or workgroup) to use for the connection
+* `-c` - attempt to execute the supplied command (!!!) on the server (if the user you're connecting as has permission to do so)
 
 Once connected, `smbclient` provides an `ftp`-like interface.
 
@@ -321,7 +321,7 @@ So, only two services available: HTTP (port 80) and SSH (port 22).
 
 The web server is just running the Ubuntu Apache2 default page, but nmap has already identified the potentially interesting directory `/secret/`. Navigating to that directory reveals that it contains an empty `index.html` file, however.
 
-Let’s see what gobuster can find.
+Let's see what gobuster can find.
 
 ```bash
 gobuster -t 50 dir \
@@ -330,7 +330,7 @@ gobuster -t 50 dir \
          -x bak,htm,html,php,phtml,ppk,txt
 ```
 
-So, we’ve got the file `http://10.10.87.144/secret/secret.txt` containing `nyan:046385855FC9580393853D8E81F240B66FE9A7B8`. That could be a password, but it also looks like a hash of some kind (and who outside of me uses passwords that look like that?). It’s the right length for a SHA1 hash, so let’s see what hashcat can make of it.
+So, we've got the file `http://10.10.87.144/secret/secret.txt` containing `nyan:046385855FC9580393853D8E81F240B66FE9A7B8`. That could be a password, but it also looks like a hash of some kind (and who outside of me uses passwords that look like that?). It's the right length for a SHA1 hash, so let's see what hashcat can make of it.
 
 ```bash
 hashcat -m 100 \
@@ -338,9 +338,9 @@ hashcat -m 100 \
            ~/.local/share/red-team/wordlists/rockyou.txt
 ```
 
-And the hash is… `nyan`?
+And the hash is... `nyan`?
 
-Let’s see if we can log in via SSH to nyan@10.10.87.144 using the password “nyan”.
+Let's see if we can log in via SSH to nyan@10.10.87.144 using the password "nyan".
 
 We can! And there in the user directory is the magical `user.txt` containing our first flag.
 
@@ -348,7 +348,7 @@ We can! And there in the user directory is the magical `user.txt` containing our
 cat ~/user.txt
 ```
 
-Okay, we’re in and we have the first flag. Now to elevate privileges.
+Okay, we're in and we have the first flag. Now to elevate privileges.
 
 Can nyan do anything interesting?
 
@@ -356,13 +356,13 @@ Can nyan do anything interesting?
 grep nyan /etc/group
 ```
 
-Oooh… We have some level of sudo access. Let’s see how much
+Oooh... We have some level of sudo access. Let's see how much
 
 ```bash
 sudo -l
 ```
 
-NOPASSWD on /bin/su, so that’s our ticket.
+NOPASSWD on /bin/su, so that's our ticket.
 
 ```bash
 sudo su
@@ -370,8 +370,8 @@ ls /root
 cat /root/root.txt
 ```
 
-And that’s flag 2.
+And that's flag 2.
 
-* [Using “nmap”](../notes/nmap.md)
-* [Using “gobuster”](../notes/gobuster.md)
+* [Using "nmap"](../notes/nmap.md)
+* [Using "gobuster"](../notes/gobuster.md)
 * [Using Hashcat](../notes/hashcat.md)

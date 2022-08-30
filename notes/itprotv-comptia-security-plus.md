@@ -19,47 +19,47 @@ tags:: #MOC
 
 * [2022-02-23 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-23-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Password Attacks — Types
+### Password Attacks - Types
 
 * [2022-02-24 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-24-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Password Attacks — Tools
+### Password Attacks - Tools
 
 * [2022-02-24 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-24-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Application Attacks — Injections
+### Application Attacks - Injections
 
 * [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-02-27-itprotv-comptia-security-plus.md)
 
-### Application Attacks — System Resources
+### Application Attacks - System Resources
 
 * [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-02-27-itprotv-comptia-security-plus.md)
 
-### Application Attacks — XSS And XSRF
+### Application Attacks - XSS And XSRF
 
 * [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-02-27-itprotv-comptia-security-plus.md)
 
-### Application Attacks — Replay Attacks
+### Application Attacks - Replay Attacks
 
 * [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-02-27-itprotv-comptia-security-plus.md)
 
-### Network Attacks — DNS Attacks
+### Network Attacks - DNS Attacks
 
 * [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-02-27-itprotv-comptia-security-plus.md)
 
-### Network Attacks — Layer 2 Attacks
+### Network Attacks - Layer 2 Attacks
 
 * [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-02-27-itprotv-comptia-security-plus.md)
 
-### Network Attacks — DoS And DDoS
+### Network Attacks - DoS And DDoS
 
 * [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-02-27-itprotv-comptia-security-plus.md)
 
-### Network Attacks — MiTM And MiTB
+### Network Attacks - MiTM And MiTB
 
 * [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-02-27-itprotv-comptia-security-plus.md)
 
-### Network Attacks — Wireless
+### Network Attacks - Wireless
 
 * [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-02-27-itprotv-comptia-security-plus.md)
 
@@ -67,11 +67,11 @@ tags:: #MOC
 
 * [2022-02-28 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Threat Intelligence — OSINT
+### Threat Intelligence - OSINT
 
 * [2022-03-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Threat Intelligence — Threat Maps And Feeds
+### Threat Intelligence - Threat Maps And Feeds
 
 * [2022-03-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
@@ -139,19 +139,19 @@ tags:: #MOC
 
 * [2022-03-13 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Authentication Protocols — PAP And CHAP
+### Authentication Protocols - PAP And CHAP
 
 * [2022-03-13 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Authentication Protocols — EAP and 802.1X
+### Authentication Protocols - EAP and 802.1X
 
 * [2022-03-13 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Authentication Protocols — RADIUS and TACACS
+### Authentication Protocols - RADIUS and TACACS
 
 * [2022-03-13 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Authentication Protocols — Kerberos
+### Authentication Protocols - Kerberos
 
 * [2022-03-13 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
@@ -159,15 +159,15 @@ tags:: #MOC
 
 * [2022-03-14 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-14-itprotv-comptia-security-plus.md)
 
-### Account Management — Account Types
+### Account Management - Account Types
 
 * [2022-03-14 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-14-itprotv-comptia-security-plus.md)
 
-### Account Management — Password Policies
+### Account Management - Password Policies
 
 * [2022-03-14 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-14-itprotv-comptia-security-plus.md)
 
-### Account Management — Account Policies
+### Account Management - Account Policies
 
 * [2022-03-14 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-14-itprotv-comptia-security-plus.md)
 
@@ -189,11 +189,11 @@ tags:: #MOC
 
 * [2022-03-21 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-21-itprotv-comptia-security-plus.md)
 
-### Host Security — Endpoint Protection
+### Host Security - Endpoint Protection
 
 * [2022-03-24 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-24-itprotv-comptia-security-plus.md)
 
-### Host Security — Hardening
+### Host Security - Hardening
 
 * [2022-03-24 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-24-itprotv-comptia-security-plus.md)
 
@@ -213,27 +213,27 @@ tags:: #MOC
 
 * [2022-03-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-03-27-itprotv-comptia-security-plus.md)
 
-### Network Security — Segmentation
+### Network Security - Segmentation
 
 * [2022-03-29 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Network Security — VPNs
+### Network Security - VPNs
 
 * [2022-03-29 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Network Security — Proxies And Load Balancing
+### Network Security - Proxies And Load Balancing
 
 * [2022-03-29 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Network Security — Port Security
+### Network Security - Port Security
 
 * [2022-03-29 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Network Security — Firewalls
+### Network Security - Firewalls
 
 * [2022-03-29 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Network Security — NIDS And NIPS
+### Network Security - NIDS And NIPS
 
 * [2022-03-29 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
@@ -341,51 +341,51 @@ tags:: #MOC
 
 * [2022-04-26 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-26-itprotv-comptia-security-plus.md)
 
-### Organizational Security Policies — Personnel
+### Organizational Security Policies - Personnel
 
 * [2022-04-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-27-itprotv-comptia-security-plus.md)
 
-### Organizational Security Policies — 3rd Party Risk
+### Organizational Security Policies - 3rd Party Risk
 
 * [2022-04-27 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-04-27-itprotv-comptia-security-plus.md)
 
-### Organizational Security Policies — Data
+### Organizational Security Policies - Data
 
 * [2022-04-28 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-04-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester-supplements.md)
 
-### Organizational Security Policies — Other Areas
+### Organizational Security Policies - Other Areas
 
 * [2022-04-28 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-04-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester-supplements.md)
 
-### Risk Management Concepts — Vocabulary
+### Risk Management Concepts - Vocabulary
 
 * [2022-05-04 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
 
-### Risk Management Concepts — Types & Strategies
+### Risk Management Concepts - Types & Strategies
 
 * [2022-05-04 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
 
-### Risk Management Concepts — Risk Analysis
+### Risk Management Concepts - Risk Analysis
 
 * [2022-05-04 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
 
-### Risk Management Concepts — Business Impact Analysis
+### Risk Management Concepts - Business Impact Analysis
 
 * [2022-05-04 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-04-itprotv-comptia-security-plus.md)
 
-### Privacy and Data Sensitivity — Breaches & Data Types
+### Privacy and Data Sensitivity - Breaches & Data Types
 
 * [2022-05-07 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-07-itprotv-comptia-security-plus.md)
 
-### Privacy and Data Sensitivity — Privacy Enhancing Tech
+### Privacy and Data Sensitivity - Privacy Enhancing Tech
 
 * [2022-05-07 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-07-itprotv-comptia-security-plus.md)
 
-### Privacy and Data Sensitivity — Roles & Responsibilities
+### Privacy and Data Sensitivity - Roles & Responsibilities
 
 * [2022-05-07 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-07-itprotv-comptia-security-plus.md)
 
-### Privacy and Data Sensitivity — Other Areas
+### Privacy and Data Sensitivity - Other Areas
 
 * [2022-05-07 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-07-itprotv-comptia-security-plus.md)
 

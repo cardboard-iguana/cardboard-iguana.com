@@ -1,4 +1,4 @@
-# Using “ps”
+# Using "ps"
 
 author:: Nathan Acks
 date:: 2022-04-21

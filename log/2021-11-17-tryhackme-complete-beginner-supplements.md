@@ -30,15 +30,15 @@ Malware is generally classed by how it *executes* (i.e., what it does).
 
 The difference here basically boils down to: Did you run it?
 
-Seems like it’s probably best to do dynamic analysis in a cloud VM or something. Though a lot of malware tries to detect if it’s running in a VM these days, so…
+Seems like it's probably best to do dynamic analysis in a cloud VM or something. Though a lot of malware tries to detect if it's running in a VM these days, so...
 
 ### Discussion of Provided Tools & Their Uses
 
 Some malware can actually spread over RDP. Ack!
 
-### Now Let’s See if the MD5 Checksums Have Been Analyzed Before
+### Now Let's See if the MD5 Checksums Have Been Analyzed Before
 
-I hadn’t noticed this before, but you can submit a file hash to VirusTotal instead uploading a file or submitting a URL. Handy!
+I hadn't noticed this before, but you can submit a file hash to VirusTotal instead uploading a file or submitting a URL. Handy!
 
 * [VirusTotal](https://www.virustotal.com)
 

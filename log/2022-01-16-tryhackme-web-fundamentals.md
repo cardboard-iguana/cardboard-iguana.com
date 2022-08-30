@@ -49,7 +49,7 @@ JSON web token format: `$HEADER.$PAYLOAD.$SIGNATURE`, where each substring is ba
 
 See jwt.io for a detailed breakdown. These are typically passed around as a user cookie, HTTP header, or queried from local storage.
 
-Sometimes it's possible to brute-force a weak secret from the `$SIGNATURE` (which will allow tokens to be forged as desired), but sometimes servers will also support the `NONE` signature type, which indicates that no signing is used (so the JWT is then just `$HEADER.$PAYLOAD.` — note the trailing dot!). If the server allows the `NONE` signing method, then it's often possible to just arbitrarily edit the `$PAYLOAD` to gain access to other users.
+Sometimes it's possible to brute-force a weak secret from the `$SIGNATURE` (which will allow tokens to be forged as desired), but sometimes servers will also support the `NONE` signature type, which indicates that no signing is used (so the JWT is then just `$HEADER.$PAYLOAD.` - note the trailing dot!). If the server allows the `NONE` signing method, then it's often possible to just arbitrarily edit the `$PAYLOAD` to gain access to other users.
 
 * [JSON Web Tokens](https://jwt.io)
 

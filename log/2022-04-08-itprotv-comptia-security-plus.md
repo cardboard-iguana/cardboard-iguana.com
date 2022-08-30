@@ -7,11 +7,11 @@ date:: 2022-04-08
 
 Ways of restoring OS failures:
 
-* Returning to the “last known good” state (revert boot configuration, but no OS data/applications).
-* Reverting to a previous “known state” (revert all configurations and operating system files).
+* Returning to the "last known good" state (revert boot configuration, but no OS data/applications).
+* Reverting to a previous "known state" (revert all configurations and operating system files).
 * Reverting to a snapshot (most common in VMs; reverts all data on disk).
 
-Note that Windows writes the “last known good” state during the first login after a boot. “Known state” in Windows refers to “system restore points”.
+Note that Windows writes the "last known good" state during the first login after a boot. "Known state" in Windows refers to "system restore points".
 
 Interesting idea here: Using PXE boot to pull recovery/live images over the network for forensics/troubleshooting.
 

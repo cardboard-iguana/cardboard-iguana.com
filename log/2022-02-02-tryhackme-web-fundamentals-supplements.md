@@ -17,7 +17,7 @@ SQLMap supports a handy `-r` flag that loads the request from a file. When using
 
 The easiest way to generate a request file is to simply capture the request you want to use as the template for your attack with Burp Suite and then save it off to a file (you can use "Copy to file" from the right-click menu to do this).
 
-* [Using “sqlmap”](../notes/sqlmap.md)
+* [Using "sqlmap"](../notes/sqlmap.md)
 * [Using Burp Suite](../notes/burp-suite.md)
 
 ### Exposing Services with Reverse SSH Tunnels

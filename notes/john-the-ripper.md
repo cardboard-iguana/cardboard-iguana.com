@@ -8,23 +8,23 @@ john --format=$HASH_FORMAT \
      --wordlist=$WORDLIST $PASSWORD_HASH_FILE
 ```
 
-Using the `--format` option is recommended, as many different hash formats have the same basic appearance, which make’s john’s attempt to guess the hash format without this information somewhat unreliable. John can only crack one type of hash at a time — no mixing-and-matching of hash formats. Use `--list=formats` to see available formats.
+Using the `--format` option is recommended, as many different hash formats have the same basic appearance, which make's john's attempt to guess the hash format without this information somewhat unreliable. John can only crack one type of hash at a time - no mixing-and-matching of hash formats. Use `--list=formats` to see available formats.
 
 John the Ripper can accept the output of hashdump from Metasploit (use `--format=NT`).
 
-NOTE: John the Ripper records cracked hash:password tuples in `~/.john/john.pot`, and then references this file to avoid cracking known hashes. It *doesn’t* output these passwords again (instead simply declaring “[n]o password hashes left to crack”), so if you get no output then you’ll want to just grep for your hash in john.pot.
+NOTE: John the Ripper records cracked hash:password tuples in `~/.john/john.pot`, and then references this file to avoid cracking known hashes. It *doesn't* output these passwords again (instead simply declaring "[n]o password hashes left to crack"), so if you get no output then you'll want to just grep for your hash in john.pot.
 
 ## Single Crack Mode
 
-John’s “single crack mode” (`--single`) is just about exploiting bad password practice — basing passwords off of the username, or details of the operating system. It can be used over “unshadowed” UNIX-style passwords (in which case it will exploit not only the username, but data from other GECOS fields), or on single hashes (in which case the hash must be written as USERNAME:HASH so that john has something to go off of).
+John's "single crack mode" (`--single`) is just about exploiting bad password practice - basing passwords off of the username, or details of the operating system. It can be used over "unshadowed" UNIX-style passwords (in which case it will exploit not only the username, but data from other GECOS fields), or on single hashes (in which case the hash must be written as USERNAME:HASH so that john has something to go off of).
 
 Obviously, a wordlist is not required in single crack mode.
 
 ## Custom Rules
 
-People typically add “complexity” to a password by appending or prepending the required numbers and symbols (capital letters generally live on either the beginning or end of the password).
+People typically add "complexity" to a password by appending or prepending the required numbers and symbols (capital letters generally live on either the beginning or end of the password).
 
-John’s rules can be used to construct additional permutations of a wordlist to cover these cases. The rule syntax isn’t really covered in the TryHackMe room, but seems to be just close enough to regexes to be annoying. Examples can be found in /etc/john/john.conf; the comments make for interesting reading.
+John's rules can be used to construct additional permutations of a wordlist to cover these cases. The rule syntax isn't really covered in the TryHackMe room, but seems to be just close enough to regexes to be annoying. Examples can be found in /etc/john/john.conf; the comments make for interesting reading.
 
 ## Helper Applications
 

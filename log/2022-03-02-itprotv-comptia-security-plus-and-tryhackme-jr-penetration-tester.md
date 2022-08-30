@@ -7,20 +7,20 @@ date:: 2022-03-02
 
 ### An Introduction to Threat Actors, Vectors, and Intelligence Sources
 
-Threat actor: Someone or something that executes on a given threat. The “who” of a cybersecurity incident.
+Threat actor: Someone or something that executes on a given threat. The "who" of a cybersecurity incident.
 
 ### Threat Actor Attributes
 
 Things to consider:
 
-* What is the threat actor’s *relationship* to your organization?
+* What is the threat actor's *relationship* to your organization?
 * What it the *motive* of the threat actor?
 * What is the *intent* of the threat actor?
-* What are the threat actor’s *capabilities*?
+* What are the threat actor's *capabilities*?
 
-(Later on, Exam Cram talks about these factors as part of building a threat profile for an organization, though this seems like an odd take to me. Really, *anyone* could be targeted by *anything*, but the associated *risk* of attack by a given threat actor is going to vary depending upon the particular situation. This make threat *profiles* inherently probabilistic — you wouldn’t really say “my threat profile includes external threat actors”, but rather “the most common threat actors we expect to face are external”.)
+(Later on, Exam Cram talks about these factors as part of building a threat profile for an organization, though this seems like an odd take to me. Really, *anyone* could be targeted by *anything*, but the associated *risk* of attack by a given threat actor is going to vary depending upon the particular situation. This make threat *profiles* inherently probabilistic - you wouldn't really say "my threat profile includes external threat actors", but rather "the most common threat actors we expect to face are external".)
 
-The *intent* vs. *motive* is a question of the threat actor’s *proximate* vs. *distal* objectives. For example, a threat actor may *intend* to deploy ransomware because they are *motivated* by financial gain. Intents and motives may not necessarily be malicious: For example, a careless employee *motivated* to close a deal may *intend* to share documents that they think will help realize that end, without thinking through the consequence of those documents exposure to the wider organization.
+The *intent* vs. *motive* is a question of the threat actor's *proximate* vs. *distal* objectives. For example, a threat actor may *intend* to deploy ransomware because they are *motivated* by financial gain. Intents and motives may not necessarily be malicious: For example, a careless employee *motivated* to close a deal may *intend* to share documents that they think will help realize that end, without thinking through the consequence of those documents exposure to the wider organization.
 
 Exam Cram indicates that the primary *relationship* that the Security+ exam is concerned with is whether a threat actor is *internal* or *external*.
 
@@ -35,11 +35,11 @@ Common types from the Security+ exam:
 * Competitors
 * State actors
 
-Exam Cram uses the term “low and slow” to describe APT operations.
+Exam Cram uses the term "low and slow" to describe APT operations.
 
 ### Vectors
 
-A.k.a., “attack vectors” — the pathway used by the threat actor when attacking an organization. Common attack vectors from the Security+ exam:
+A.k.a., "attack vectors" - the pathway used by the threat actor when attacking an organization. Common attack vectors from the Security+ exam:
 
 * Direct access
 * Wireless
@@ -50,7 +50,7 @@ A.k.a., “attack vectors” — the pathway used by the threat actor when attac
 * Equipment damage/loss/theft
 * Supply chain
 
-(What, no “they just connected to the exposed RDP endpoint over the internet”? I guess that qualifies as “improper usage”?)
+(What, no "they just connected to the exposed RDP endpoint over the internet"? I guess that qualifies as "improper usage"?)
 
 ### Sharing Centers
 
@@ -60,18 +60,18 @@ ISAC: Information Sharing and Analysis Center
 
 OSINT: Open Source INTelligence
 
-Which is not “open source” like “open source software”, but rather “open” as in freely available. Exam Cram calls OSINT “*overtly* gathered intelligence”, which I kind of like.
+Which is not "open source" like "open source software", but rather "open" as in freely available. Exam Cram calls OSINT "*overtly* gathered intelligence", which I kind of like.
 
 Common sources:
 
 * Vulnerability databases
-* MITRE’s ATT&CK (Tactics, Techniques, and Procedures — a.k.a. TTPs)
+* MITRE's ATT&CK (Tactics, Techniques, and Procedures - a.k.a. TTPs)
 * Dark web
-* Indicators of compromise (a.k.a., IOCs — frequently published by threat intel firms)
-* Automated indicator sharing (a.k.a., AIS — a DHS program built on the structured threat information expression — STIX — language and the trusted automated exchange of indicator information — TAXII — protocol)
+* Indicators of compromise (a.k.a., IOCs - frequently published by threat intel firms)
+* Automated indicator sharing (a.k.a., AIS - a DHS program built on the structured threat information expression - STIX - language and the trusted automated exchange of indicator information - TAXII - protocol)
 * Threat maps (sometimes published by threat intel firms)
 * File/code repos
-* General web information — blog posts, papers, photos, RFCs, etc.
+* General web information - blog posts, papers, photos, RFCs, etc.
 
 Some specific links:
 
@@ -85,7 +85,7 @@ Exam Cram calls out TTP, IOC, and AIS as three acronyms to know for the exam.
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Threat Intelligence — OSINT
+### Threat Intelligence - OSINT
 
 Threat Intelligence: The gathering and analysis of data for the purpose of identifying, preventing, and remediating potential attacks.
 
@@ -99,7 +99,7 @@ Useful tools:
 
 Both Maltego and recon-ng require a large number of API keys to function
 
-### Threat Intelligence — Threat Maps And Feeds
+### Threat Intelligence - Threat Maps And Feeds
 
 Threat Map: A real- (or near-real-) time map of identified threats/attacks, normally visualized geographically.
 
@@ -114,9 +114,9 @@ Things that often go into a threat feed:
 
 VirusTotal is a *little bit* like a threat feed.
 
-STIX and TAXII together define a common (low-level) language for talking about IOCs and transmitting them between systems. STIX and TAXII come together in the Automated Indicator Sharing (AIS) system, which is CISA’s IOC clearinghouse mentioned by Exam Cram.
+STIX and TAXII together define a common (low-level) language for talking about IOCs and transmitting them between systems. STIX and TAXII come together in the Automated Indicator Sharing (AIS) system, which is CISA's IOC clearinghouse mentioned by Exam Cram.
 
-I’m a little skeptical about the overall utility of threat maps, though they do *look* cool.
+I'm a little skeptical about the overall utility of threat maps, though they do *look* cool.
 
 ### Threat Intelligence Vulnerability Databases & Feeds
 
@@ -133,7 +133,7 @@ NVD includes a number of components:
 * SCAP (the Security Content Automation Protocol, which is a common protocol for talking about software flaws, configuration issues, and automation)
 * CCE (the Common Configuration Enumeration, which provides unique identifiers for system configurations)
 * CPE (the Common Platform Enumeration, which provides a way to describe common clusters of applications, operating systems, etc.)
-* CVSS (the Common Vulnerability Scoring System, which provides severity scoring for CVEs that tries to weigh both impact and ease of exploitation, from “nothing to worry about here” 0 to “hair on fire” 10)
+* CVSS (the Common Vulnerability Scoring System, which provides severity scoring for CVEs that tries to weigh both impact and ease of exploitation, from "nothing to worry about here" 0 to "hair on fire" 10)
 
 A vulnerability feed is like a threat feed, but for vulnerabilities. MITRE and NVD both maintain vulnerability feeds.
 
@@ -163,7 +163,7 @@ Threat Vector: An avenue of attack.
 
 ### Username Enumeration
 
-Use ffuf to enumerate potential users based on a wordlist (assumes that the form we’re hitting is not AJAX-y):
+Use ffuf to enumerate potential users based on a wordlist (assumes that the form we're hitting is not AJAX-y):
 
 ```bash
 ffuf -w /usr/share/wordlists/wfuzz/others/names.txt \
@@ -172,11 +172,11 @@ ffuf -w /usr/share/wordlists/wfuzz/others/names.txt \
      -u $FORM_URL -mr "$ERROR_MEESAGE_SUBSTRING"
 ```
 
-Here `$POST_VARS` should look something like `username=FUZZ&email=FUZZ@example.com&password=1234&cpassword=1234` (recall that FUZZ is the variable that ffuf will be fuzzing over). The `-mr` flag instructs ffuf to filter on page text for a “successful hit”.
+Here `$POST_VARS` should look something like `username=FUZZ&email=FUZZ@example.com&password=1234&cpassword=1234` (recall that FUZZ is the variable that ffuf will be fuzzing over). The `-mr` flag instructs ffuf to filter on page text for a "successful hit".
 
 Note that ffuf is kind of noisy in its default output, so when generating user lists it may be useful to supply the `-s` flag, which will suppress all lines except those matched with `-mr`.
 
-* [Using “ffuf”](../notes/ffuf.md)
+* [Using "ffuf"](../notes/ffuf.md)
 
 ### Brute Forcing
 
@@ -197,19 +197,19 @@ Note that ffuf will try every possible combination of elements between the two w
 
 ### Logic Flaws
 
-It’s worth experimenting with forms to check how GET and POST variables interact (and if one can be used to override the other.
+It's worth experimenting with forms to check how GET and POST variables interact (and if one can be used to override the other.
 
 ### Cookie Tampering
 
-Interesting; sometimes cookies are hashes, rather than plain strings. I’m guessing that the reason you’d do this is that you’re concatenating some values together and then check to see if the hash matches before granting certain privileges? This seems potentially much less secure than password hashing (even with a salt) though, as the number of terms that could reasonably be included in a permission string is much smaller than the number of character combinations in even a modest password…
+Interesting; sometimes cookies are hashes, rather than plain strings. I'm guessing that the reason you'd do this is that you're concatenating some values together and then check to see if the hash matches before granting certain privileges? This seems potentially much less secure than password hashing (even with a salt) though, as the number of terms that could reasonably be included in a permission string is much smaller than the number of character combinations in even a modest password...
 
 [CrackStation is an online database of hashes (basically a rainbow table).](https://crackstation.net/)
 
-I guess the reason you’d do this is to try to minimize the number of database hits?
+I guess the reason you'd do this is to try to minimize the number of database hits?
 
-On the other hand, seeing base64-encoded cookies is something I’m much more familiar with!
+On the other hand, seeing base64-encoded cookies is something I'm much more familiar with!
 
-Remember that `basenc` can be used to encode/decode a variety of encodings, including URL-safe base64 (which there don’t seem to be any other good command line tools to work with).
+Remember that `basenc` can be used to encode/decode a variety of encodings, including URL-safe base64 (which there don't seem to be any other good command line tools to work with).
 
 ```bash
 # Encode $STRING to base64.

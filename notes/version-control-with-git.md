@@ -7,9 +7,9 @@ date:: 2018-08-01
 
 DevOps is considered to be an implementation of the continuous development philosophy, as opposed to waterfall development. Lots of little version, each with only a few features or bug fixes.
 
-A "branch" is a single line of development; there’s always a `MASTER` branch. Branches are good for developing new features; in general, development should occur on branches and then be merged back into `MASTER` when complete.
+A "branch" is a single line of development; there's always a `MASTER` branch. Branches are good for developing new features; in general, development should occur on branches and then be merged back into `MASTER` when complete.
 
-A "pull request" is a request to merge one branch into another (for example, a feature branch into `MASTER`). Pull requests can have required code reviews or tests attached to them (they’re not automatic, and in fact not a native feature of Git… GitHub, Bitbucket, and Gitlab all implement this as an additional layer).
+A "pull request" is a request to merge one branch into another (for example, a feature branch into `MASTER`). Pull requests can have required code reviews or tests attached to them (they're not automatic, and in fact not a native feature of Git... GitHub, Bitbucket, and Gitlab all implement this as an additional layer).
 
 ## Git Overview
 
@@ -17,7 +17,7 @@ Git is best for managing plain text files, which can include source code, automa
 
 Every user has a complete copy of the project history (at least up until their last pull from the remote).
 
-If you can do it at the command line, you can automate it. DevOps is built on the principle of “automate all the things!”
+If you can do it at the command line, you can automate it. DevOps is built on the principle of "automate all the things!"
 
 Of course, GUIs are better at visual tasks (such as comparisons) and merges.
 
@@ -35,11 +35,11 @@ The "working tree" is the directory/file structure of a single commit (and any u
 
 The "staging area" is the list of files to be included in the next `commit (git add $FILES`).
 
-The "local repository" is the “database” of all commits that have been made to the project (modulo the most recent `git pull`).
+The "local repository" is the "database" of all commits that have been made to the project (modulo the most recent `git pull`).
 
 Commonly, the "project directory" is a single directory that contains the working tree, staging area, and local repository. The staging area and local repository live in `.git`. If you delete `.git`, then you'll just have a normal directory corresponding to the commit of the current working tree.
 
-The "remote repository" contains all of the commits for the project, and is generally your “source of truth”.
+The "remote repository" contains all of the commits for the project, and is generally your "source of truth".
 
 ### Create a Local Repository
 
@@ -66,7 +66,7 @@ Use `git log --oneline` to get a compact, line-by-line view. Add `-#` (where `#`
 
 ### Create a Remote Repository
 
-Generally a remote repository is just a “bare” repo, which is just the contents of the `.git` directory. By convention, the names of bare repos end in `.git` (`foo.git`, etc.), though this isn't actually necessary.
+Generally a remote repository is just a "bare" repo, which is just the contents of the `.git` directory. By convention, the names of bare repos end in `.git` (`foo.git`, etc.), though this isn't actually necessary.
 
 ### Push to a Remote Repository
 
@@ -76,7 +76,7 @@ If the remote is new, then you probably want to *track* it so that you will be n
 
 * Clone a remote repository: `git clone $REMOTE_REPO_URL`
 
-You can also use `git clone $REMOTE_URL $LOCAL_REPO` to create a local repository with a different name than the remote repository (less the common `.git` “extension”).
+You can also use `git clone $REMOTE_URL $LOCAL_REPO` to create a local repository with a different name than the remote repository (less the common `.git` "extension").
 
 You can get remote information using `git remote --verbose`. Note that fetches *and* pushes can go to different remotes, though this is uncommon.
 
@@ -88,7 +88,7 @@ The `$REMOTE_NAME` is the alias we use to refer to the remote. Typically this is
 
 Push synchronizes the *remote* with the *local* repository. The first time you push, use the `--set-upstream` (`-u`) to track the remote (Git will then tell you if you're out-of-sync when you run `git status`). So, `git push -u $REMOTE_NAME $BRANCH_TO_PUSH`; by default `$BRANCH_TO_PUSH` is whatever branch you're currently on, so generally this doesn't need to be specified.
 
-## Git’s Graph Model
+## Git's Graph Model
 
 Graph theory! Nodes! Edges! Direction!
 
@@ -104,11 +104,11 @@ Using `git log --oneline --graph` will display the repository's commit tree at t
 
 Git objects are *commits* (a text file describing the commit), *annotated tags* (references to specific commits), *trees* (the actual file system structure of the project at a point in time), and *blobs* (file contents). Typically you only interact with *commits* and *tags*, but all of these live in the *object store*.
 
-A Git ID is a SHA-1 hash that “names” a Git object. It is statistically *very* unlikely that two different pieces of content will have the same SHA-1 hash. Small changes lead to *big* SHA-1 changes.
+A Git ID is a SHA-1 hash that "names" a Git object. It is statistically *very* unlikely that two different pieces of content will have the same SHA-1 hash. Small changes lead to *big* SHA-1 changes.
 
-Git uses `git hash-object $FILE` to generate a SHA-1 hash of a file. This is a low-level “plumbing command” that is generally *not* used directly.
+Git uses `git hash-object $FILE` to generate a SHA-1 hash of a file. This is a low-level "plumbing command" that is generally *not* used directly.
 
-Most Git clients only shows only the first 4 – 10 characters of the SHA-1 hash, as 40 character pseudo-random strings are a bit rough on the human brain.
+Most Git clients only shows only the first 4 - 10 characters of the SHA-1 hash, as 40 character pseudo-random strings are a bit rough on the human brain.
 
 Full Git IDs are displayed by `git log`, but `git log --oneline` only shows the first 7 characters of the hash.
 
@@ -120,7 +120,7 @@ You can use `git show $OBJECT_ID` to show information about any object Git is cu
 
 "References" can be used wherever we might use SHA-1 hashes, or part of a SHA-1 hash.
 
-Commits can be associated with reference, which point either to a SHA-1 hash or another reference (in which case it's called a “symbolic” reference). "Branch labels" are just references that “name” a given branch; they always point to the most recent commit on that branch (the “tip”).
+Commits can be associated with reference, which point either to a SHA-1 hash or another reference (in which case it's called a "symbolic" reference). "Branch labels" are just references that "name" a given branch; they always point to the most recent commit on that branch (the "tip").
 
 `HEAD` is a symbolic reference that points to the current commit of the current branch. There is only one head per repo, but it may be different in different clones, depending on when the last time was that everything got synced.
 
@@ -156,13 +156,13 @@ By default, commits all belong to master. All branches trace themselves back to 
 
 Sometimes versions are branches. This is common if you need to support a given version, rather than only the latest version.
 
-“Topic” branches are generally short-lived branches that are merged into a long-lived branch like "master" or a version branch.
+"Topic" branches are generally short-lived branches that are merged into a long-lived branch like "master" or a version branch.
 
 * View all branches (in the current repository): `git branch`
 
 Note that this doesn't include branches that are in origin or another remote that you haven't yet checked out. To see these, use `git branch -a`.
 
-* View all branches “graphically”: `git log --oneline --graph --all`
+* View all branches "graphically": `git log --oneline --graph --all`
 
 Normally `git log` only shows you commits *related* to the current branch.
 
@@ -187,13 +187,13 @@ Checkout does two things:
 
 Checking out a branch without either stashing or committing your results *will* cause any uncommitted changes to be lost!
 
-You can also checkout a specific commit (via SHA-1 or reference), but if that checkout doesn't correspond to a branch label you will wind up in a “detached `HEAD`” state. You should *only* be in a detached head to *view* a previous commit or create a new branch from an older commit. *Never work in a detached HEAD, or wackiness will ensue!*
+You can also checkout a specific commit (via SHA-1 or reference), but if that checkout doesn't correspond to a branch label you will wind up in a "detached `HEAD`" state. You should *only* be in a detached head to *view* a previous commit or create a new branch from an older commit. *Never work in a detached HEAD, or wackiness will ensue!*
 
-Deleting a branch just deletes that branch's label. If commits exist in a branch, then these will commits will become “dangling commits”. These generally won't be removed right away, but Git *will* periodically delete any such commits!
+Deleting a branch just deletes that branch's label. If commits exist in a branch, then these will commits will become "dangling commits". These generally won't be removed right away, but Git *will* periodically delete any such commits!
 
 * Deleting a branch label: `git branch -d $BRANCH_LABEL`
 
-Branches are typically only deleted after a “topic” branch is merged. Or not at all.
+Branches are typically only deleted after a "topic" branch is merged. Or not at all.
 
 The Git command line tool will happily let you delete branches *once they've been merged*.
 
@@ -205,14 +205,14 @@ This *only* works on local repos!
 
 ## Merging
 
-"Merges" combine branches, normally a short-lived “topic” branch and a longer-lived “base” branch. After a merge, the commits on the merged branch are considered to be part of *both* the “base” *and* “topic” branches. Because merges are a common Git activity, it's quite normal for commits to be members of multiple branches.
+"Merges" combine branches, normally a short-lived "topic" branch and a longer-lived "base" branch. After a merge, the commits on the merged branch are considered to be part of *both* the "base" *and* "topic" branches. Because merges are a common Git activity, it's quite normal for commits to be members of multiple branches.
 
-A "fast-forward merge" just moves the branch label of the “base” branch to the end of the of the topic branch. After a fast-forward merge, the “topic” and “base” branches contain the same commits. Fast-forward merges are only possible is *no* additional commits have been added to the base branch since the creation of the topic branch.
+A "fast-forward merge" just moves the branch label of the "base" branch to the end of the of the topic branch. After a fast-forward merge, the "topic" and "base" branches contain the same commits. Fast-forward merges are only possible is *no* additional commits have been added to the base branch since the creation of the topic branch.
 
 A fast-forward merge typically deletes the topic branch label to keep things tidy. Even though the branch label is deleted, many people will still memorialize the merged topic branch in a commit message, or using a tag.
 
 ```bash
-# …If you're not already on the base branch.
+# ...If you're not already on the base branch.
 #
 git checkout $BASE_BRANCH_LABEL
 
@@ -247,7 +247,7 @@ A "tracking branch" is a local branch that represents a corresponding remote bra
 
 Tracking branches are decoupled from both the remote and local branches, and are only updated on network operations (`clone`, `fetch`, `push`, `pull`, etc.). Basically, a tracking branch represents the state of a remote branch the last time the local repository checked in with it.
 
-Another way of thinking about tracking branches is that they represent the “last known state” of the remote's branches.
+Another way of thinking about tracking branches is that they represent the "last known state" of the remote's branches.
 
 By default, `git branch` only shows local branches; use `git branch --all` to see both local and tracking branches.
 
@@ -261,7 +261,7 @@ The `git status` command returns the state of both local and tracking branches. 
 
 ## Fetch, Pull, and Push
 
-Most Git commands only function on the local repository, but four – clone, fetch, pull, and push – interact with the remote repo.
+Most Git commands only function on the local repository, but four - clone, fetch, pull, and push - interact with the remote repo.
 
 ### clone
 
@@ -298,7 +298,7 @@ Some useful options:
 
 Git will abort the merge if there are local changes that would be over-written.
 
-We can think of the merge performed by a `pull` request as treating the current tracking branch as the topic branch. By default `pull` will fast-forward if possible (it's difficult to see why you *wouldn't* do this…).
+We can think of the merge performed by a `pull` request as treating the current tracking branch as the topic branch. By default `pull` will fast-forward if possible (it's difficult to see why you *wouldn't* do this...).
 
 Because a `pull` involves a merge, it's possible (if a fast forward is not possible) that the tracking branch will lag after the merge.
 
@@ -320,7 +320,7 @@ Small, frequent merges help to both avoid merge conflicts, and when such conflic
 
 ### Resolving a Merge Conflict
 
-Basically…
+Basically...
 
 * Checkout the base branch (let's say `MASTER`).
 * Attempt to merge in the feature branch. Git will inform you of the conflict and write out the conflicting file(s) in a manner that makes the two competing changes clear.
@@ -342,7 +342,7 @@ Feature branch changes
 >>>>>> Feature branch name
 ```
 
-Git will also automatically create a merge conflict commit message; note that the commented (“`#`”) lines describing the conflicting files will *not* be included in the final message unless you uncomment them.
+Git will also automatically create a merge conflict commit message; note that the commented ("`#`") lines describing the conflicting files will *not* be included in the final message unless you uncomment them.
 
 * See what files are conflicted: `git status` (this should also be reported during the initial merge attempt)
 
@@ -354,7 +354,7 @@ You can abort a merge conflict by resetting to the base branch, abandoning any c
 
 ## Rebasing
 
-Note that rebasing rewrites the commit history. It is generally considered *extremely* bad form to rewrite commit history that has been shared with others…
+Note that rebasing rewrites the commit history. It is generally considered *extremely* bad form to rewrite commit history that has been shared with others...
 
 A rebase changes the parent of a commit. Because the ancestor chain is different, the rebased commits IDs change.
 
@@ -368,7 +368,7 @@ PROS:
 CONS:
 
 * You can really screw up collaborators if you're rebasing commits that have already been shared.
-* Your commit history might be cleaner, but it's no longer “historically true”.
+* Your commit history might be cleaner, but it's no longer "historically true".
 
 Remember, each commit includes the *entire* project (Git is just smart enough to use internal pointers, rather than literally re-including entire files).
 
@@ -379,14 +379,14 @@ To executing a rebase:
 
 More specifically, at the command line there are two ways to do a rebase:
 
-* Check out the branch you wish to rebase using `git checkout $BRANCH_NAME` and then rebase onto the “upstream” parent using `git rebase $UPSTREAM_NAME`.
+* Check out the branch you wish to rebase using `git checkout $BRANCH_NAME` and then rebase onto the "upstream" parent using `git rebase $UPSTREAM_NAME`.
 * Use the equivalent command `git rebase $UPSTREAM_NAME $BRANCH_NAME`, which combines the above two operations.
 
 The `rebase` command attempts to move `$BRANCH_NAME` from its current base commit (where it joins `$UPSTREAM_NAME`) to the tip of `$UPSTREAM_NAME`.
 
 In general, it's better to use the `git checkout $BRANCH_NAME` + `git rebase $UPSTREAM_NAME` form of rebasing, as this makes it more obvious what's happening when a merge conflict occurs.
 
-Because a rebase can affect multiple commits, the conflict process is a little different; instead of just fixing the conflict, staging the changes, and then committing, you'll need to fix, stage, and then *explicitly* continue the rebase. So this is a bit of a “rolling process”.
+Because a rebase can affect multiple commits, the conflict process is a little different; instead of just fixing the conflict, staging the changes, and then committing, you'll need to fix, stage, and then *explicitly* continue the rebase. So this is a bit of a "rolling process".
 
 During conflict resolution, after you `add` the fixed conflicted file(s), you will need to continue using `git rebase --continue`. When a rebase runs into a conflict, Git will flag the conflicting file(s) for you, though you can always use `git status` during the rebase process to also see where you are. Note that if there are multiple commits in the branch that you're rebasing, it's possible that you'll run into additional conflicts as the rebase continues (i.e., after running `git rebase --continue`). Again, rebasing is essentially a *rolling* process. If this all gets to be too much, you can always abort the rebase (which will revert all changes). Use `git rebase --abort` to do this.
 
@@ -400,9 +400,9 @@ You can change the commit message, or even the project files, of the most recent
 
 Because this changes history, you should *not* do this if you've already shared your commits!
 
-Changing a single file works similarly (for some reason, this seems more wild to me than changing the commit message, though I suspect that under the hood there's really no difference…).
+Changing a single file works similarly (for some reason, this seems more wild to me than changing the commit message, though I suspect that under the hood there's really no difference...).
 
-To update a file, just stage the changes and execute `git commit --amend`; append `--no-edit` to re-use the previous commit message. (I presume that leaving off the `-m` above would interactively prompt you for a new commit message…)
+To update a file, just stage the changes and execute `git commit --amend`; append `--no-edit` to re-use the previous commit message. (I presume that leaving off the `-m` above would interactively prompt you for a new commit message...)
 
 Interactive rebasing allows you to modify multiple commits.
 
@@ -412,7 +412,7 @@ When doing an interactive rebase, you will choose a base commit on a branch, and
 * Edit the commit message,
 * Edit the commit files (this requires temporarily stopping the rebase),
 * Delete the commit entirely,
-* Combine the commit with its parent (“squashing” the commit), or
+* Combine the commit with its parent ("squashing" the commit), or
 * Move the commit to a different location in the commit sequence.
 
 You'll need to do an interactive rebase to change a commit before the most recent one.
@@ -427,9 +427,9 @@ When editing commits, you can move on to the next commit by running `git commit 
 
 During an interactive rebase, you'll be in a detached `HEAD` state while editing individual commits.
 
-(It's not entirely clear to me how an interactive rebase shares enough in common with a “regular” rebase to warrant such a similar name…)
+(It's not entirely clear to me how an interactive rebase shares enough in common with a "regular" rebase to warrant such a similar name...)
 
-“Squashing” a commit merges not only the changes in the current commit with its parent, but also (by default) combines their commit messages (though you can touch this up later).
+"Squashing" a commit merges not only the changes in the current commit with its parent, but also (by default) combines their commit messages (though you can touch this up later).
 
 Note that deleting a commit entirely generally greatly increases the chance of a merge conflict further down the rebase chain.
 
@@ -469,7 +469,7 @@ Finally, in "gitflow" work is done on a long-running "develop" branch, with rele
 
 When the "develop" branch is feature-complete w.r.t. a new version, it is forked into a "release" branch. Additional fixes may be added to that branch, which will then eventually be merged into "master" (if fixes are made, these should also merged back into "develop" at some point).
 
-Hotfixes are generally branched off of "master", and then merged into both "develop" and "master". Since there's a lot of branching going on, “gitflow” workflows generally also involve deleting old branches one they’re merged in.
+Hotfixes are generally branched off of "master", and then merged into both "develop" and "master". Since there's a lot of branching going on, "gitflow" workflows generally also involve deleting old branches one they're merged in.
 
 Some common rules:
 

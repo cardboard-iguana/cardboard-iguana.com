@@ -5,17 +5,17 @@ date:: 2022-03-29
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Network Security — Segmentation
+### Network Security - Segmentation
 
-A hub is a Layer 1 device — it’s just a multi-port repeater.
+A hub is a Layer 1 device - it's just a multi-port repeater.
 
-VLAN logic is applied to Layer 2 — they’re basically a way of dividing up the ports on a switch (this makes me feel better about how I’ve been using them at work…). Data is routed between VLANs by the router (i.e., at Layer 3).
+VLAN logic is applied to Layer 2 - they're basically a way of dividing up the ports on a switch (this makes me feel better about how I've been using them at work...). Data is routed between VLANs by the router (i.e., at Layer 3).
 
 While the canonical DMZ has a firewall on both the north and south side, in practice only a single firewall is generally used. Other terms for a DMZ:
 
 * Perimeter network
 * Screened subnet
-* “Neutral Zone” (per Dan Lowerie 😜)
+* "Neutral Zone" (per Dan Lowerie 😜)
 
 Think of an extranet as a *purposeful* network of intranets. Normally this is achieved via VPN  connections.
 
@@ -23,7 +23,7 @@ North/South traffic can be thought of as traffic that crosses a security boundar
 
 * [OSI Model](../notes/osi-model.md)
 
-### Network Security — VPNs
+### Network Security - VPNs
 
 Broad types of VPNs:
 
@@ -44,7 +44,7 @@ VPN tunneling protocols:
 * [Point-to-Point Tunneling Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Point-to-Point_Tunneling_Protocol)
 * [What Is SSTP?](https://www.proofpoint.com/us/threat-reference/sstp)
 
-### Network Security — Proxies And Load Balancing
+### Network Security - Proxies And Load Balancing
 
 These days, proxies are mostly about controlling *access* to resources. They are particularly important for logging purposes.
 
@@ -57,30 +57,30 @@ Load balancers help distribute load, and in doing so help ensure availability. T
 * Active/Active: All interfaces are up. Mostly about performance.
 * Active/Passive: Some interfaces are held in reserve and become active if an active interface fails. Mostly about ensuring availability.
 
-Servers behind a load balancer can also be set up in active/active or active/passive fashion. Additionally, active servers are typically accessed (“scheduled”) in one of two ways:
+Servers behind a load balancer can also be set up in active/active or active/passive fashion. Additionally, active servers are typically accessed ("scheduled") in one of two ways:
 
 * Round Robin: Backend servers are accessed in sequence.
 * Least Connection: Backend servers are accessed depending on current usage, so that as a server becomes less busy it becomes *more* likely to serve a request. Helps spread load out when dealing with a large number of heterogenous requests.
 
 Both of these access methods can be weighted in various ways.
 
-### Network Security — Port Security
+### Network Security - Port Security
 
 This is about the security of *physical* switch ports.
 
-Spanning Tree Protocol (STP) is used to protect against looping and packet storms. Basically, in STP switches will communicate to elect a “root node”, and then build a tree of reachable switches from that node. Ports are dynamically disabled as necessary when loops are detected.
+Spanning Tree Protocol (STP) is used to protect against looping and packet storms. Basically, in STP switches will communicate to elect a "root node", and then build a tree of reachable switches from that node. Ports are dynamically disabled as necessary when loops are detected.
 
 STP operates using BPDU (Bridge Protocol Data Unit) frames. To stop malicious BPDU frames, BPDU guard marks certain ports as privileged (those connected to other, legitimate, switches), and rejects BPDU frames on all other ports.
 
-Another security measure implemented on switches (though it’s not really a Layer 2 security protocol) is DHCP snooping. This is similar to BPDU guard, in that a privilege port is identified where the legitimate DHCP server is connected, and makes sure that server packets to and from unauthorized ports are blocked.
+Another security measure implemented on switches (though it's not really a Layer 2 security protocol) is DHCP snooping. This is similar to BPDU guard, in that a privilege port is identified where the legitimate DHCP server is connected, and makes sure that server packets to and from unauthorized ports are blocked.
 
 Switches can also do MAC address filtering (like wireless networks), and even restrict particular MAC addresses to particular ports.
 
-Some switches can also mirror ports (sometimes also called “port spanning”) for monitoring purposes.
+Some switches can also mirror ports (sometimes also called "port spanning") for monitoring purposes.
 
 * [OSI Model](../notes/osi-model.md)
 
-### Network Security — Firewalls
+### Network Security - Firewalls
 
 Stateless firewall = Packet filtering firewall (source, destination, port)
 
@@ -88,11 +88,11 @@ Stateful firewall = Dynamic packet filtering firewall (monitors connection reque
 
 Stateful firewalls keep track of connection state, and can block SYN flood attacks, etc.
 
-Next-gen firewalls can deal with more OSI layers than just 3 — all the way up to the application layer.
+Next-gen firewalls can deal with more OSI layers than just 3 - all the way up to the application layer.
 
 * [OSI Model](../notes/osi-model.md)
 
-### Network Security — NIDS And NIPS
+### Network Security - NIDS And NIPS
 
 NIDS (Network Intrusion Detection Systems) and NIPS (Network Intrusion Prevention Systems) are generally built into next-gen firewalls.
 
@@ -115,7 +115,7 @@ Active recon involved interacting with the target in some way. Connecting to sys
 
 ### Whois
 
-WHOIS responses include name server information (in the aptly-named “Name Server” field(s)).
+WHOIS responses include name server information (in the aptly-named "Name Server" field(s)).
 
 ### nslookup and dig
 
@@ -149,6 +149,6 @@ dig          google.com    MX
 
 ### DNSdumpster
 
-DNSdumpster is basically a search engine for domain data — type in a root domain, and get back (many of) its subdomains and other information. (In my testing DNSdumpster doesn’t always enumerate *every* subdomain, though it certainly does a better job than guessing.)
+DNSdumpster is basically a search engine for domain data - type in a root domain, and get back (many of) its subdomains and other information. (In my testing DNSdumpster doesn't always enumerate *every* subdomain, though it certainly does a better job than guessing.)
 
 * [DNSdumpster](https://dnsdumpster.com/)

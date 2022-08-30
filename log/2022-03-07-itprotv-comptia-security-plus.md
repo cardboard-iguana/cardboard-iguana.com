@@ -3,13 +3,13 @@
 author:: Nathan Acks  
 date:: 2022-03-07
 
-Because the next block of units on ITPro.TV cover three chapters in the Exam Cram (at least as best I can map them without having first read the chapters), I’m going to try something a bit different: For the next three days I’m only going to be doing the readings, and then I’ll set Exam Cram aside to work on the lectures.
+Because the next block of units on ITPro.TV cover three chapters in the Exam Cram (at least as best I can map them without having first read the chapters), I'm going to try something a bit different: For the next three days I'm only going to be doing the readings, and then I'll set Exam Cram aside to work on the lectures.
 
-I’m going to continue to title these posts after ITPro.TV though, since I’m thinking of the Exam Cram as just an adjunct to that.
+I'm going to continue to title these posts after ITPro.TV though, since I'm thinking of the Exam Cram as just an adjunct to that.
 
 ## CompTIA Security+ Exam Cram
 
-Today I’ll be covering chapter 12 of the Exam Cram, “Authentication and Authorization Design”.
+Today I'll be covering chapter 12 of the Exam Cram, "Authentication and Authorization Design".
 
 ### Identification and Authentication, Authorization, and Accounting (AAA)
 
@@ -52,9 +52,9 @@ Types of shared sign-ons:
 * Single sign-on
 * Transitive trust
 
-SOA: Service-oriented architecture. Basically, the use of proxies to sequester services behind a single sign-on and standardize the user experience. The standardization layer is often called a “wrapper”.
+SOA: Service-oriented architecture. Basically, the use of proxies to sequester services behind a single sign-on and standardize the user experience. The standardization layer is often called a "wrapper".
 
-Exam Cram defines SSO as basically password caching + automation, but its typical usage is closer to that of “federation”.
+Exam Cram defines SSO as basically password caching + automation, but its typical usage is closer to that of "federation".
 
 ### Federation
 
@@ -68,20 +68,20 @@ Transitive trust is more of an Active Directory thing, and is about establishing
 
 Presumably, transitive trust requires some level of federation, so really this is about the authenticating entities of the domains trusting each other.
 
-Connections between domains are called “trusts”, and trusts *can* be transitive across domains (essentially, one domain can delegate its trust relationships to another).
+Connections between domains are called "trusts", and trusts *can* be transitive across domains (essentially, one domain can delegate its trust relationships to another).
 
 ### Authentication Technologies
 
-Vocabulary that’s obvious when you think about it for a moment:
+Vocabulary that's obvious when you think about it for a moment:
 
 * Proximity card (for physical security)
 * Security token (for all kinds of security).
 
 ### Tokens
 
-Exam Cram defines a “key fob” basically as a physical login device like an RSA token, which is *not* how I’ve ever head the word used before.
+Exam Cram defines a "key fob" basically as a physical login device like an RSA token, which is *not* how I've ever head the word used before.
 
-Time-based one-time passwords (TOTP) schemes should now be pretty familiar to everyone. A related scheme is HMAC-based one-time-passwords (HOTP), which replace the use of the current time with the number of times a code has been requested. HOTP is seldom used anymore, as codes are valid for an unknown length of time and are more difficult to recover from if the token’s iteration count gets out-of-sync with the server’s expected iteration count.
+Time-based one-time passwords (TOTP) schemes should now be pretty familiar to everyone. A related scheme is HMAC-based one-time-passwords (HOTP), which replace the use of the current time with the number of times a code has been requested. HOTP is seldom used anymore, as codes are valid for an unknown length of time and are more difficult to recover from if the token's iteration count gets out-of-sync with the server's expected iteration count.
 
 Token types likely to show up on the Security+ exam:
 
@@ -90,7 +90,7 @@ Token types likely to show up on the Security+ exam:
 | TOTP           | Time-based one-time password                                      |
 | HOTP           | HMAC-based one-time password (uses a counter instead of the time) |
 | SMS            | One-time code sent via SMS                                        |
-| Token key      | Physical devices; sometimes called a “security key”               |
+| Token key      | Physical devices; sometimes called a "security key"               |
 | Static codes   | A list of single use codes; often used as a fail-safe backup      |
 | Phone callback | A phone call that provides a OTP or push notification             |
 

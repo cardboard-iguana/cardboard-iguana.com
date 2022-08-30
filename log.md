@@ -1,4 +1,4 @@
-# A Hacker’s Log
+# A Hacker's Log
 
 * [2022-08-26 - OffSec Live: PEN-200](log/2022-08-26-offsec-live-pen-200.md)
 * [2022-08-25 - AWS Deep Dive](log/2022-08-25-aws-deep-dive.md)

@@ -8,20 +8,20 @@ date:: 2022-04-22
 * `cat /proc/version`
 * `env`
 * `find`
-* `getcap` — find and list executable *capabilities*
+* `getcap` - find and list executable *capabilities*
 * `history`
 * `hostname`
 * `id`
 * `ifconfig`
 * `ip route`
 * `ls`
-* `netstat -ano` — list all listening parts and established connections, no domain resolution
-* `netstat -i` — list per interface statistics
-* `netstat -l` — list *only* listening ports
-* `netstat -p` — list protocol and service information (requires root to see everything)
-* `netstat -s` — list protocol statistics
-* `ps auxfww` — show process tree
-* `ps auxww` — show lots and lots of process info
+* `netstat -ano` - list all listening parts and established connections, no domain resolution
+* `netstat -i` - list per interface statistics
+* `netstat -l` - list *only* listening ports
+* `netstat -p` - list protocol and service information (requires root to see everything)
+* `netstat -s` - list protocol statistics
+* `ps auxfww` - show process tree
+* `ps auxww` - show lots and lots of process info
 * `sudo -l`
 * `uname -a`
 
@@ -37,7 +37,7 @@ date:: 2022-04-22
 
 * [2022-04-20 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [How to Find Executables with SUID Capabilities](how-to-find-executables-with-suid-capabilities.md)
-* [How to Use “find” with File Metadata](how-to-use-find-with-file-metadata.md)
-* [Using “netstat”](netstat.md)
-* [Using “ps”](ps.md)
-* [Enumerate “sudo” Access](enumerate-sudo-access.md)
+* [How to Use "find" with File Metadata](how-to-use-find-with-file-metadata.md)
+* [Using "netstat"](netstat.md)
+* [Using "ps"](ps.md)
+* [Enumerate "sudo" Access](enumerate-sudo-access.md)

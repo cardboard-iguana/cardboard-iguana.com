@@ -7,11 +7,11 @@ date:: 2021-12-06
 
 ## Mission Start!
 
-The CTF background notes that we’ll be attacking a Windows box. So no ping responses again.
+The CTF background notes that we'll be attacking a Windows box. So no ping responses again.
 
 ## Activate Forward Scanners and Launch Proton Torpedoes
 
-The machine we’ll be attacking is at 10.10.223.185. As usual, we’ll start out with an nmap scan:
+The machine we'll be attacking is at 10.10.223.185. As usual, we'll start out with an nmap scan:
 
 ```bash
 sudo nmap -v -oA blaster -Pn -A -T4 -sS -script vuln \
@@ -61,15 +61,15 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Wed Dec  8 20:12:16 2021 -- 1 IP address (1 host up) scanned in 982.31 seconds
 ```
 
-FLAG 1: How many ports are open on the target? — 2
+FLAG 1: How many ports are open on the target? - 2
 
-Looks like IIS running on port 80. Let’s go take a peek.
+Looks like IIS running on port 80. Let's go take a peek.
 
-…And, it’s just the default IIS “hello world” page. Looks a damn sight prettier than Apache’s.
+...And, it's just the default IIS "hello world" page. Looks a damn sight prettier than Apache's.
 
-FLAG 2: What is the title of the webserver’s index page? — IIS Windows Server
+FLAG 2: What is the title of the webserver's index page? - IIS Windows Server
 
-Since there’s nothing obvious here (and because the CTF is prompting us to do so), let’s sic gobuster on this to see if there’s anything interesting that’s not linked to the (default) index page.
+Since there's nothing obvious here (and because the CTF is prompting us to do so), let's sic gobuster on this to see if there's anything interesting that's not linked to the (default) index page.
 
 ```bash
 gobuster \
@@ -78,21 +78,21 @@ gobuster \
 	-u http://10.10.223.185/
 ```
 
-FLAG 3: What is the hidden directory on the webserver? — /retro
+FLAG 3: What is the hidden directory on the webserver? - /retro
 
-Browsing to this directory reveals an entire “Retro Fanatics” website. All posts are by “Wade”.
+Browsing to this directory reveals an entire "Retro Fanatics" website. All posts are by "Wade".
 
-FLAG 4: What username is associated with this hidden directory? — Wade
+FLAG 4: What username is associated with this hidden directory? - Wade
 
 Pocking around a bit more reveals a somewhat cryptic comment on a post:
 
 > Leaving myself a note here just in case I forget how to spell it: parzival
 
-Who wants to bet that this is Wade’s password?
+Who wants to bet that this is Wade's password?
 
-FLAG 5: What potential password is associated with this user? — parzival
+FLAG 5: What potential password is associated with this user? - parzival
 
-Let’s load up XFreeRDP and see if we can log in, shall we?
+Let's load up XFreeRDP and see if we can log in, shall we?
 
 ```bash
 xfreerdp /dynamic-resolution +clipboard /cert:ignore \
@@ -101,23 +101,23 @@ xfreerdp /dynamic-resolution +clipboard /cert:ignore \
 
 Boom!
 
-FLAG 6: What are the contents of `user.txt`? — `THM{HACK_PLAYER_ONE}`
+FLAG 6: What are the contents of `user.txt`? - `THM{HACK_PLAYER_ONE}`
 
 ## Breaching the Control Room
 
-There’s no obvious files when pocking around except an hhupd.exe file on the desktop, and IE’s history is empty.
+There's no obvious files when pocking around except an hhupd.exe file on the desktop, and IE's history is empty.
 
-Since I know we’re looking for a CVE name, at this point I just used the Windows File Explorer to search Wade’s home directory for “CVE”. And lo-and-behold, there’s a cached HTML file in C:/Users/Wade/AppData/Local/Microsoft/Windows/INetCache/Low/IE/7Z6YUWVY called cvename[1].htm which contains a website referencing CVE-2019-1388 (it looks like a slightly older version of the MITRE CVE page on CVE-2019-1388).
+Since I know we're looking for a CVE name, at this point I just used the Windows File Explorer to search Wade's home directory for "CVE". And lo-and-behold, there's a cached HTML file in C:/Users/Wade/AppData/Local/Microsoft/Windows/INetCache/Low/IE/7Z6YUWVY called cvename[1].htm which contains a website referencing CVE-2019-1388 (it looks like a slightly older version of the MITRE CVE page on CVE-2019-1388).
 
-FLAG 7: What CVE was the initially compromised user researching? — CVE-2019-1388
+FLAG 7: What CVE was the initially compromised user researching? - CVE-2019-1388
 
-(I feel like the approach I just used — making an educated guess about what the CTF was looking for and then just searching for it — is kind of a cop-out. *But*, the hint for this question states that I should check IE’s history, which I did… So perhaps the room’s broken?)
+(I feel like the approach I just used - making an educated guess about what the CTF was looking for and then just searching for it - is kind of a cop-out. *But*, the hint for this question states that I should check IE's history, which I did... So perhaps the room's broken?)
 
-Anyways, I’m guessing that the hhupd.exe file on the desktop is the one that will exploit this vulnerability, since it’s badged as needing administrative privileges and CVE-2019-1388 is a vulnerability in the UAC screen.
+Anyways, I'm guessing that the hhupd.exe file on the desktop is the one that will exploit this vulnerability, since it's badged as needing administrative privileges and CVE-2019-1388 is a vulnerability in the UAC screen.
 
-FLAG 8: What is the name of the executable the user was experimenting with? — hhupd.exe
+FLAG 8: What is the name of the executable the user was experimenting with? - hhupd.exe
 
-In fact, a search for “CVE-2019-1388 exploit” pulls up a page that references hhupd.exe and helpfully links to a YouTube video demoing how this exploit works. It looks like the steps here are:
+In fact, a search for "CVE-2019-1388 exploit" pulls up a page that references hhupd.exe and helpfully links to a YouTube video demoing how this exploit works. It looks like the steps here are:
 
 * Try to run hhupd.exe.
 * Show details on the UAC prompt.
@@ -127,19 +127,19 @@ In fact, a search for “CVE-2019-1388 exploit” pulls up a page that reference
 * Bring up the save dialog in IE.
 * Navigate to `C:/Windows/System32/*.*` and open cmd.exe.
 
-FLAG 9: What is the output of `whoami` in the terminal spawned using the user’s exploit? — `nt authority\system`
+FLAG 9: What is the output of `whoami` in the terminal spawned using the user's exploit? - `nt authority\system`
 
-The final flag is in the Administrator’s Desktop folder.
+The final flag is in the Administrator's Desktop folder.
 
-FLAG 10: What are the contents of `root.txt`? — `THM{COIN_OPERATED_EXPLOITATION}`
+FLAG 10: What are the contents of `root.txt`? - `THM{COIN_OPERATED_EXPLOITATION}`
 
 ## Adoption into the Collective
 
-Target information isn’t immediately obvious in Metasploit; after selecting `exploit/multi/script/web_delivery` we’ll need to run `info` to see all of the options.
+Target information isn't immediately obvious in Metasploit; after selecting `exploit/multi/script/web_delivery` we'll need to run `info` to see all of the options.
 
-FLAG 11: What is the target number for PSH when using `exploit/multi/script/web_delivery` in Metasploit? — 2
+FLAG 11: What is the target number for PSH when using `exploit/multi/script/web_delivery` in Metasploit? - 2
 
-Let’s set things up and run the exploit:
+Let's set things up and run the exploit:
 
 ```msfconsole
 set target 2
@@ -153,9 +153,9 @@ run -j
 
 This particular exploit outputs and encoded PowerShell script and then starts a local listener to deliver the actual Meterpreter shell. All we need to do is cut-and-paste into our elevated shell.
 
-(For whatever reason, I could *only* get this exploit working with the 32-bit version of Meterpreter *and* the `run -j` command. I’m not sure why…)
+(For whatever reason, I could *only* get this exploit working with the 32-bit version of Meterpreter *and* the `run -j` command. I'm not sure why...)
 
-FLAG 12: What command can be used in Meterpreter to establish on-boot persistence on this machine? — `run persistence -X`
+FLAG 12: What command can be used in Meterpreter to establish on-boot persistence on this machine? - `run persistence -X`
 
 (NOTE: Meterpreter flags this as being deprecated now; the modern pattern seems to be to background Meterpreter and then switch to and exploit the `exploit/windows/local/persistence` module, probably with `set STARTUP SYSTEM`.)
 
@@ -163,8 +163,8 @@ ELAPSED TIME: 2 h 15 min
 
 ## References
 
-* [Using “nmap”](nmap.md)
-* [Using “gobuster”](gobuster.md)
+* [Using "nmap"](nmap.md)
+* [Using "gobuster"](gobuster.md)
 * [Using XFreeRDP](xfreerdp.md)
 * [CVE-2019-1388 (MITRE)](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1388)
 * [CVE-2019-1388 (nagenrauft-consulting.com)](https://www.nagenrauft-consulting.com/2019/11/21/cve-2019-1388-hhupd-exe/)

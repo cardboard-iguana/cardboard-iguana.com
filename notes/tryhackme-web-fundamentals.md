@@ -94,7 +94,7 @@ tags:: #MOC
 
 ### Pickle Rick
 
-[See my “Pickle Rick” CTF write-up.](../notes/tryhackme-pickle-rick.md)
+[See my "Pickle Rick" CTF write-up.](../notes/tryhackme-pickle-rick.md)
 
 ### OWASP Juice Shop
 

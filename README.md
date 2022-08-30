@@ -1,6 +1,6 @@
 # Cardboard Iguana Security
 
-## Hacker’s Log (Recent)
+## Hacker's Log (Recent)
 
 * [2022-08-26 - OffSec Live: PEN-200](log/2022-08-26-offsec-live-pen-200.md)
 * [2022-08-25 - AWS Deep Dive](log/2022-08-25-aws-deep-dive.md)
@@ -20,8 +20,8 @@
 
 ## Website Navigation
 
-* [A Hacker’s Log](log.md)
-* [A Hacker’s Notes](notes.md)
+* [A Hacker's Log](log.md)
+* [A Hacker's Notes](notes.md)
 
 ## Elsewhere
 

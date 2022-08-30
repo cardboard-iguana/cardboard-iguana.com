@@ -10,19 +10,19 @@ sed -n "${LINE_NUMBER}{p;q}" $FILE
 
 The `p` command prints matching lines, and the `q` command causes sed to quit after the first match.
 
-You can’t use `q` if you want to print a block of lines, so you’ll just need to `^C` after the output is printed so that sed doesn’t keep needlessly reading the file.
+You can't use `q` if you want to print a block of lines, so you'll just need to `^C` after the output is printed so that sed doesn't keep needlessly reading the file.
 
 ```bash
 sed -n "${START_LINE},${END_LINE}p" $FILE
 ```
 
-If you want to replace a single line, you can use a similar trick (once you’ve identified the line number):
+If you want to replace a single line, you can use a similar trick (once you've identified the line number):
 
 ```bash
 sed -i "${LINE_NUMBER}s/.*/${REPLACEMENT_TEXT}/" $FILE
 ```
 
-It may be advisable to use single quote here, rather than double quotes + variable substitution, to prevent shell weirdness. Unfortunately, there’s really no way to tell when this command has finished (except to let it work through the whole file).
+It may be advisable to use single quote here, rather than double quotes + variable substitution, to prevent shell weirdness. Unfortunately, there's really no way to tell when this command has finished (except to let it work through the whole file).
 
 ## References
 

@@ -22,7 +22,7 @@ Event types:
 | Error         | An event that indicates a significant problem such as loss of data or loss of functionality. For example, if a service fails to load during startup, an Error event is logged.                                                                                                                           |
 | Warning       | An event that is not necessarily significant, but may indicate a possible future problem. For example, when disk space is low, a Warning event is logged. If an application can recover from an event without loss of functionality or data, it can generally classify the event as a Warning event.     |
 | Information   | An event that describes the successful operation of an application, driver, or service. For example, when a network driver loads successfully, it may be appropriate to log an Information event. Note that it is generally inappropriate for a desktop application to log an event each time it starts. |
-| Success Audit | An event that records an audited security access attempt that is successful. For example, a user’s successful attempt to log on to the system is logged as a Success Audit event.                                                                                                                        |
+| Success Audit | An event that records an audited security access attempt that is successful. For example, a user's successful attempt to log on to the system is logged as a Success Audit event.                                                                                                                        |
 | Failure Audit | An event that records an audited security access attempt that fails. For example, if a user tries to access a network drive and fails, the attempt is logged as a Failure Audit event.                                                                                                                   |
 
 Common logs:
@@ -34,13 +34,13 @@ Common logs:
 | System      | Contains events logged by system components, such as the failure of a driver or other system component to load during startup.                                                                                                               |
 | [CustomLog] | Contains events logged by applications that create a custom log. Using a custom log enables an application to control the size of the log or attach ACLs for security purposes without affecting other applications.                         |
 
-Windows log entry event IDs are not unique, but rather correspond to a “Task Category”. These values are set by the logging application, and are used to help filter log events. By default, the Event Viewer lists log entries in reverse chronological order (most recent first).
+Windows log entry event IDs are not unique, but rather correspond to a "Task Category". These values are set by the logging application, and are used to help filter log events. By default, the Event Viewer lists log entries in reverse chronological order (most recent first).
 
-You can control log rotation for each log file through its “Properties”.
+You can control log rotation for each log file through its "Properties".
 
 The Event Viewer can view logs on other computers (I assume this only applies to domain-joined machines that the current user has access to).
 
-Filtering for events can be achieved using the “Create Custom View” (across all logs) or “Filter Current Log” (for the current log) options on the right.
+Filtering for events can be achieved using the "Create Custom View" (across all logs) or "Filter Current Log" (for the current log) options on the right.
 
 NOTE: PowerShell produces a couple of different logs which, by default, log almost everything it does.
 

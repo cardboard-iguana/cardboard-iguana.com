@@ -1,4 +1,4 @@
-# Using “basenc”
+# Using "basenc"
 
 author:: Nathan Acks  
 date:: 2022-03-02
@@ -21,7 +21,7 @@ echo "$BASE64_STRING" | basenc -d --base64
 echo "$BASE64_STRING" | basenc -d --base64url
 ```
 
-The advantage of `basenc` over `base64` is that `basenc` supports URL-safe base64-encoding/decoding out of the box, which I’ve otherwise found is a pain to work with.
+The advantage of `basenc` over `base64` is that `basenc` supports URL-safe base64-encoding/decoding out of the box, which I've otherwise found is a pain to work with.
 
 ## References
 

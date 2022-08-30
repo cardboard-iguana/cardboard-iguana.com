@@ -7,13 +7,13 @@ date:: 2021-11-02
 
 ### Cron Jobs
 
-Remember the `locate` tool! It’s faster than `find` (assuming that it’s installed, and the database is up-to-date, and the file you’re looking for is accessible to `nobody`…).
+Remember the `locate` tool! It's faster than `find` (assuming that it's installed, and the database is up-to-date, and the file you're looking for is accessible to `nobody`...).
 
 Also, the Bash reverse shell makes an appearance here!
 
 Remember that SUID Bash will drop privileges by default; execute with the `-p` option to avoid this.
 
-Okay, this is wild… It looks like the wildcard expansion (`*`) in Bash scripts doesn’t get pushed to the command, but is instead expanded in place. This means that files named like command-line switches *will be interpreted as command line switches*. This can be used, for example, to exploit sloppy tar-based backup scripts.
+Okay, this is wild... It looks like the wildcard expansion (`*`) in Bash scripts doesn't get pushed to the command, but is instead expanded in place. This means that files named like command-line switches *will be interpreted as command line switches*. This can be used, for example, to exploit sloppy tar-based backup scripts.
 
 * [Exploiting Bash](../notes/exploiting-bash.md)
 * [tar (GTFOBins)](https://gtfobins.github.io/gtfobins/tar/)
@@ -34,7 +34,7 @@ Quickly see what shared libraries an executable is trying to load:
 strace $EXECUTABLE 2>&1 | grep open
 ```
 
-If there are missing libraries in paths that we’re able to access, then code similar to the LD_PRELOAD trick can be used to inject malicious code
+If there are missing libraries in paths that we're able to access, then code similar to the LD_PRELOAD trick can be used to inject malicious code
 
 Running `strings` on a binary can also give us a sense of what helper applications might be getting executed.
 
@@ -44,7 +44,7 @@ Running `strings` on a binary can also give us a sense of what helper applicatio
 
 ### NFS
 
-Files created on NFS shares inherit the *remote* UID. By default, NFS enables “root squashing”, which maps UID 0 to the `nobody` user.
+Files created on NFS shares inherit the *remote* UID. By default, NFS enables "root squashing", which maps UID 0 to the `nobody` user.
 
 Root squashing can be *disabled* in /etc/exports with the `no_root_squash` flag. 
 

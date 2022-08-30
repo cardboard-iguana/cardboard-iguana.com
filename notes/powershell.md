@@ -57,9 +57,9 @@ Be aware that AMSI bypasses are *per session*, not global!
 
 ### Manipulating Services
 
-* `Get-Service` — list all services, or drill down on a particular service.
-* `Start-Service -Name $SERVICE`/`sc start $SERVICE` — start $SERVICE.
-* `Stop-Service -Name $SERVICE`/`sc stop $SERVICE` — stop $SERVICE.
+* `Get-Service` - list all services, or drill down on a particular service.
+* `Start-Service -Name $SERVICE`/`sc start $SERVICE` - start $SERVICE.
+* `Stop-Service -Name $SERVICE`/`sc stop $SERVICE` - stop $SERVICE.
 
 ### Calculating File Hashes
 
@@ -67,7 +67,7 @@ Be aware that AMSI bypasses are *per session*, not global!
 Get-FileHash -Algorithm $ALGORITHM $FILE_PATH
 ```
 
-The algorithm can be excluded (in which case SHA-256 is used). *Lots* of different hashing algorithms are supported — run `help Get-FileHash` to see a list.
+The algorithm can be excluded (in which case SHA-256 is used). *Lots* of different hashing algorithms are supported - run `help Get-FileHash` to see a list.
 
 ## Run PowerShell from cmd.exe
 

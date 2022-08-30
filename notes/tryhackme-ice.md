@@ -7,9 +7,9 @@ date:: 2021-12-07
 
 ## Recon
 
-The machine we’ll be attacking is at 10.10.55.173. Since it’s a Windows box, we know that it won’t respond to `ping` by default.
+The machine we'll be attacking is at 10.10.55.173. Since it's a Windows box, we know that it won't respond to `ping` by default.
 
-As usual, we’ll start out with an nmap scan:
+As usual, we'll start out with an nmap scan:
 
 ```bash
 sudo nmap -v -oA ice -Pn -A -T4 -sS -script vuln \
@@ -141,101 +141,101 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Tue Dec  7 21:31:59 2021 -- 1 IP address (1 host up) scanned in 2174.84 seconds
 ```
 
-(An interesting effect of the -T4 flag, which uses a slightly more aggressive timing timing profile, is that port discovery seems to happen out-of-order…)
+(An interesting effect of the -T4 flag, which uses a slightly more aggressive timing timing profile, is that port discovery seems to happen out-of-order...)
 
-FLAG 1: What port is MSRDP open on? — 3389
+FLAG 1: What port is MSRDP open on? - 3389
 
-FLAG 2: What service is running on port 8000? — Icecast streaming media server
+FLAG 2: What service is running on port 8000? - Icecast streaming media server
 
-FLAG 3: What is the hostname of the machine? — DARK-PC
+FLAG 3: What is the hostname of the machine? - DARK-PC
 
 ## Gain Access
 
-The next few flags are about finding a particular vulnerability for Icecast on https://cvedetails.com. There’s actually a couple of different vulnerabilities that match the flag descriptions, but after a little trial-and-error we can find the right ones.
+The next few flags are about finding a particular vulnerability for Icecast on https://cvedetails.com. There's actually a couple of different vulnerabilities that match the flag descriptions, but after a little trial-and-error we can find the right ones.
 
-FLAG 4: What is a vulnerability impacting Icecast with a CVSS score of 7.5? — Execute Code Overflow
+FLAG 4: What is a vulnerability impacting Icecast with a CVSS score of 7.5? - Execute Code Overflow
 
-FLAG 5: What is the CVE number for the vulnerability in Flag 4? — CVE-2004-1561
+FLAG 5: What is the CVE number for the vulnerability in Flag 4? - CVE-2004-1561
 
-FLAG 6: What is the Metasploit module for exploiting this vulnerability? — exploit/windows/http/icecast_header
+FLAG 6: What is the Metasploit module for exploiting this vulnerability? - exploit/windows/http/icecast_header
 
-FLAG 7: What option must be set to use this module? — RHOSTS
+FLAG 7: What option must be set to use this module? - RHOSTS
 
-There’s not too much to this module — set RHOSTS and LHOST, run, get shell.
+There's not too much to this module - set RHOSTS and LHOST, run, get shell.
 
 ## Escalate
 
-FLAG 8: What shell does Metasploit provide us with? — meterpreter
+FLAG 8: What shell does Metasploit provide us with? - meterpreter
 
 We can find the current user using the `getuid` command.
 
-FLAG 9: What user is running the Icecast process? — Dark-PC/Dark
+FLAG 9: What user is running the Icecast process? - Dark-PC/Dark
 
 The `sysinfo` command will give us the OS version and architecture.
 
-FLAG 10: What is the build of this Windows system? — Windows 7 (6.1 Build 7601, Service Pack 1)
+FLAG 10: What is the build of this Windows system? - Windows 7 (6.1 Build 7601, Service Pack 1)
 
-FLAG 11: What is the system architecture? — x64
+FLAG 11: What is the system architecture? - x64
 
-We’ll now use `run post/multi/recon/local_exploit_suggester` to find potential paths to elevating privileges.
+We'll now use `run post/multi/recon/local_exploit_suggester` to find potential paths to elevating privileges.
 
-Unfortunately, for me this only returns one result — `exploit/windows/local/ms10_092_schelevator` — which is not accepted as the 12th flag. The flag hint states that the exploit will contain `eventvwr`. A quick search through Metasploit shows that the only exploit including this string is `exploit/windows/local/bypassuac_eventvwr`, which *is* accepted.
+Unfortunately, for me this only returns one result - `exploit/windows/local/ms10_092_schelevator` - which is not accepted as the 12th flag. The flag hint states that the exploit will contain `eventvwr`. A quick search through Metasploit shows that the only exploit including this string is `exploit/windows/local/bypassuac_eventvwr`, which *is* accepted.
 
-FLAG 12: What is the potential exploit `run post/multi/recon/local_exploit_suggester` returns? — `exploit/windows/local/bypassuac_eventvwr`
+FLAG 12: What is the potential exploit `run post/multi/recon/local_exploit_suggester` returns? - `exploit/windows/local/bypassuac_eventvwr`
 
-We can background meterpreter with Ctrl+Z and then switch to this exploit using `use exploit/windows/local/bypassuac_eventvwr`. This exploit runs through an existing session, so we need to set this using `set SESSION 2`. (I’m on session 2 because I previously backed out an unsuccessfully tried to pop a 64-bit meterpreter shell — I guess Icecast is running as a 32-bit process.)
+We can background meterpreter with Ctrl+Z and then switch to this exploit using `use exploit/windows/local/bypassuac_eventvwr`. This exploit runs through an existing session, so we need to set this using `set SESSION 2`. (I'm on session 2 because I previously backed out an unsuccessfully tried to pop a 64-bit meterpreter shell - I guess Icecast is running as a 32-bit process.)
 
-FLAG 13: What option needs to be set to ensure that our listener IP address is correct? — LHOST
+FLAG 13: What option needs to be set to ensure that our listener IP address is correct? - LHOST
 
-I also tweaked LPORT, as I’m nervous about killing the existing session (which is running on the default port, 4444).
+I also tweaked LPORT, as I'm nervous about killing the existing session (which is running on the default port, 4444).
 
 Using `run` quickly pops a new shell.
 
-FLAG 14: What permission allows taking ownership of files? — SeTakeOwnershipPrivilege
+FLAG 14: What permission allows taking ownership of files? - SeTakeOwnershipPrivilege
 
 ## Looting
 
-In order to harvest credentials from LSASS we’ll need to migrate meterpreter to a process with the same permissions (NT AUTHORITY/SYSTEM) and architecture as LSASS. The print spooler service is a good choice, as it runs with elevated permissions, has the same architecture as the system itself, and will restart itself automatically.
+In order to harvest credentials from LSASS we'll need to migrate meterpreter to a process with the same permissions (NT AUTHORITY/SYSTEM) and architecture as LSASS. The print spooler service is a good choice, as it runs with elevated permissions, has the same architecture as the system itself, and will restart itself automatically.
 
-FLAG 15: What is the name of the print spooler service? — `spoolsv.exe`
+FLAG 15: What is the name of the print spooler service? - `spoolsv.exe`
 
 ```meterpreter
 migrate -N spoolsv.exe
 ```
 
-FLAG 16: What user is the migrated meterpreter process running as after migration? — NT AUTHORITY/SYSTEM
+FLAG 16: What user is the migrated meterpreter process running as after migration? - NT AUTHORITY/SYSTEM
 
-We’re going to loot LSASS now using Mimikatz.
+We're going to loot LSASS now using Mimikatz.
 
 ```meterpreter
 load kiwi
 ```
 
-FLAG 17: What command retrieves all credentials from LSASS? — `creds_all`
+FLAG 17: What command retrieves all credentials from LSASS? - `creds_all`
 
 It turns out that Windows loads *unhashed* passwords into LSASS for any users with scheduled jobs!
 
-FLAG 18: What is Dark’s password? — `Password01!`
+FLAG 18: What is Dark's password? - `Password01!`
 
 ## Past-Exploitation
 
-FLAG 19: What meterpreter command allows us to dump all of the password hashes stored on the system? — `hashdump`
+FLAG 19: What meterpreter command allows us to dump all of the password hashes stored on the system? - `hashdump`
 
 Hashes dumped using `hashdump` can be cracked offline using Hydra or John the Ripper.
 
-FLAG 20: What meterpreter command allows us to watch the remote user’s desktop in real time? — `screenshare`
+FLAG 20: What meterpreter command allows us to watch the remote user's desktop in real time? - `screenshare`
 
-FLAG 21: What meterpreter command allows us to record using the system’s microphone? — `record_mic`
+FLAG 21: What meterpreter command allows us to record using the system's microphone? - `record_mic`
 
-FLAG 22: What meterpreter command can modify timestamps of files on the system? — `timestomp`
+FLAG 22: What meterpreter command can modify timestamps of files on the system? - `timestomp`
 
-FLAG 23: What meterpreter/`kiwi` command allows for the creation of a golden ticket? — `golden_ticket_create`
+FLAG 23: What meterpreter/`kiwi` command allows for the creation of a golden ticket? - `golden_ticket_create`
 
 ELAPSED TIME: 2 h 39 min
 
 ## References
 
-* [Using “nmap”](nmap.md)
+* [Using "nmap"](nmap.md)
 * [CVE-2004-1561](https://www.cvedetails.com/cve/CVE-2004-1561/)
 * [Using Metasploit](metasploit.md)
 * [Using Mimikatz](mimikatz.md)

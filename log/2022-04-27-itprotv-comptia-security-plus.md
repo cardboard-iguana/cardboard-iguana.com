@@ -5,7 +5,7 @@ date:: 2022-04-27
 
 ## CompTIA Security+ Exam Cram
 
-Today I’ll be reading Chapter 33 of the Security+ Exam Cram, “Organizational Security Policies”.
+Today I'll be reading Chapter 33 of the Security+ Exam Cram, "Organizational Security Policies".
 
 ### Policy Framework
 
@@ -16,7 +16,7 @@ Parts of a framework:
 * Guidelines (recommended methods of realizing the standards)
 * Procedures (specific, step-by-step instructions for implementing guidelines)
 
-The policy → procedure flow above transforms *descriptive* statements into *prescriptive* ones.
+The policy -> procedure flow above transforms *descriptive* statements into *prescriptive* ones.
 
 ### Human Resource Management Policies
 
@@ -36,11 +36,11 @@ The Exam Cram recommends mandatory vacations (to check for operational gaps) and
 
 ### Separation of Duties
 
-The Exam Cram emphasizes making sure that no one individual controls a process or transaction. Not sure how to reconcile this with the concept of a “single wringable neck” (perhaps by not allowing someone *responsible* for a process actually *perform* the process?).
+The Exam Cram emphasizes making sure that no one individual controls a process or transaction. Not sure how to reconcile this with the concept of a "single wringable neck" (perhaps by not allowing someone *responsible* for a process actually *perform* the process?).
 
 ### Job Rotation
 
-The Exam Cram also positions job rotation and mandatory vacations as a way of having admins check each other’s work.
+The Exam Cram also positions job rotation and mandatory vacations as a way of having admins check each other's work.
 
 ### Clean Desk Policies
 
@@ -59,7 +59,7 @@ User types:
 
 Typically System administrators work under data and system owners (who may be the same person, or may head up parallel teams).
 
-Executives and data/system owners are the people who should be designing and pushing policies, standards, and procedures (I’d expect the latter to be delegated to system admins sometimes).
+Executives and data/system owners are the people who should be designing and pushing policies, standards, and procedures (I'd expect the latter to be delegated to system admins sometimes).
 
 ### Acceptable Use Policy / Rules of Behavior
 
@@ -84,7 +84,7 @@ Exam Cram notes that only an ISA actually spells out security requirements.
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Organizational Security Policies — Personnel
+### Organizational Security Policies - Personnel
 
 Policies that help detect/prevent malicious behavior:
 
@@ -94,7 +94,7 @@ Policies that help detect/prevent malicious behavior:
 * Least privilege
 * Acceptable use policies
 
-Adam Gordon makes an interesting point: Separation of duties implies that roles like “backup administrator” should actually be split into “backup administrator” *and* “restore administrator”. It does seem like perhaps these duties should be rotated, though?
+Adam Gordon makes an interesting point: Separation of duties implies that roles like "backup administrator" should actually be split into "backup administrator" *and* "restore administrator". It does seem like perhaps these duties should be rotated, though?
 
 Permission = The *ability* to do something
 
@@ -120,7 +120,7 @@ Policies related to security awareness and training:
 * Computer-based trainings
 * Role-based trainings
 
-### Organizational Security Policies — 3rd Party Risk
+### Organizational Security Policies - 3rd Party Risk
 
 Elements the go into understanding the *structure* of third-party risk:
 
@@ -144,14 +144,14 @@ A new term: Measurement Systems Analysis (MSA). This is the process of determini
 * Repeatability
 * Reproducibility
 
-(It’s not clear here what the difference between “repeatability” and “reproducibility” is here…)
+(It's not clear here what the difference between "repeatability" and "reproducibility" is here...)
 
 Software/Hardware lifecycle components:
 
 * End of Life
 * End of Service
 
-Note that EOS (when security patches are no longer available) comes *after* EOL (when the system is no longer sold or actively supported). Note that increasingly EOL = EOS (for example, with Chrome OS devices), but this is not *always* true (Windows…).
+Note that EOS (when security patches are no longer available) comes *after* EOL (when the system is no longer sold or actively supported). Note that increasingly EOL = EOS (for example, with Chrome OS devices), but this is not *always* true (Windows...).
 
 PPRR risk management model for third-party & supply chain risk:
 

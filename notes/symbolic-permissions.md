@@ -3,11 +3,11 @@
 author:: Nathan Acks  
 date:: 2021-09-19
 
-Numeric permissions are sometimes called *absolute* permissions, because they exactly specify an object’s permissions. Symbolic permissions are a bit more flexible.
+Numeric permissions are sometimes called *absolute* permissions, because they exactly specify an object's permissions. Symbolic permissions are a bit more flexible.
 
 Like absolute permissions, symbolic permissions are divided into user (u), group (g), and others (o). *Unlike* absolute permissions, not all of these permission sets need to be specified. Sets are separated by commas, and identical sets can be combined (e.g., ug).
 
-This specifier is then followed by an *operator* that specifies whether the following permissions should be granted (+), removed (-), or set exactly (=). (Note that when using “find” only ”=“ makes sense.)
+This specifier is then followed by an *operator* that specifies whether the following permissions should be granted (+), removed (-), or set exactly (=). (Note that when using "find" only "=" makes sense.)
 
 Permissions themselves are given as one or more of the following:
 
@@ -16,9 +16,9 @@ Permissions themselves are given as one or more of the following:
 | Read       |    r   |   4   |                                                                                                                                                                                                                   |
 | Write      |    w   |   2   |                                                                                                                                                                                                                   |
 | Execute    |    x   |   1   |                                                                                                                                                                                                                   |
-| SUID       |   s,S  |   4   | Only applied to the user when set symbolically, or to the prefix digit if set numerically. Use lowercase if the user *also* has execute permissions, uppercase if the user *doesn’t* have execute permissions.    |
-| SGID       |   s,S  |   2   | Only applied to the group when set symbolically, or to the prefix digit if set numerically. Use lowercase if the group *also* has execute permissions, uppercase if the group *doesn’t* have execute permissions. |
-| Sticky Bit |    t   |   1   | Only applied to the “other” permission set, or to the prefix digit if set numically. *Only* applied to directories.                                                                                               |
+| SUID       |   s,S  |   4   | Only applied to the user when set symbolically, or to the prefix digit if set numerically. Use lowercase if the user *also* has execute permissions, uppercase if the user *doesn't* have execute permissions.    |
+| SGID       |   s,S  |   2   | Only applied to the group when set symbolically, or to the prefix digit if set numerically. Use lowercase if the group *also* has execute permissions, uppercase if the group *doesn't* have execute permissions. |
+| Sticky Bit |    t   |   1   | Only applied to the "other" permission set, or to the prefix digit if set numically. *Only* applied to directories.                                                                                               |
 
 ## SUID
 
@@ -42,5 +42,5 @@ If a user has *write* access to a directory, then they can write to any file the
 
 * [How to manage Linux permissions for users, groups, and others](https://www.redhat.com/sysadmin/manage-permissions)
 * [Linux permissions: SUID, SGID, and sticky bit](https://www.redhat.com/sysadmin/suid-sgid-sticky-bit)
-* [How to Use “find” With File Metadata](how-to-use-find-with-file-metadata.md)
+* [How to Use "find" With File Metadata](how-to-use-find-with-file-metadata.md)
 * [ITPro.TV CompTIA Security+](itprotv-comptia-security-plus.md)

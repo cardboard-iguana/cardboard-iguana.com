@@ -31,7 +31,7 @@ curl -O https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 #
 find / -type f -perm -u=s
 #
-# …or…
+# ...or...
 #
 find / -type f -perm -4000
 ```
@@ -40,7 +40,7 @@ Recall that leading a permission specified with `-` in `find` requires that *all
 
 ### Exploiting Writeable /etc/passwd
 
-Strangely, it turns out that the `x` in the password field for /etc/password isn’t just anachronistic — it still *literally* means “look in /etc/shadow”. If a password is present in that field instead… Well, the login process (at least on most Linux systems) will still use that!
+Strangely, it turns out that the `x` in the password field for /etc/password isn't just anachronistic - it still *literally* means "look in /etc/shadow". If a password is present in that field instead... Well, the login process (at least on most Linux systems) will still use that!
 
 Compliant password hashes can be created with the `openssl passwd` command. For example, to create an MD5 hashed password:
 
@@ -48,7 +48,7 @@ Compliant password hashes can be created with the `openssl passwd` command. For 
 openssl passwd -1 -salt $SALT $PASSWORD
 ```
 
-It’s also possible to have *multiple* users with the same UID and GID in /etc/passwd (wut?). So this is a way of “cloning” the root account.
+It's also possible to have *multiple* users with the same UID and GID in /etc/passwd (wut?). So this is a way of "cloning" the root account.
 
 ### Escaping the Vi Editor
 
@@ -61,6 +61,6 @@ The `sudo -l` command will helpfully tell us what we can run as the superuser wi
 Linux privilege escalation checklists:
 
 * [Linux Privilege Escalation](https://github.com/netbiosX/Checklists/blob/master/Linux-Privilege-Escalation.md)
-* [PayloadsAllTheThings: Linux — Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)
+* [PayloadsAllTheThings: Linux - Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)
 * [Total OSCP Guide: Privilege Escalation](https://sushant747.gitbooks.io/total-oscp-guide/content/privilege_escalation_-_linux.html)
 * [A Guide to Linux Privilege Escalation](https://payatu.com/guide-linux-privilege-escalation)

@@ -11,7 +11,7 @@ This CTF is an earlier version of Blaster without the step-by-step nature of tha
 
 The target IP is 10.10.20.185.
 
-As with Blaster, we'll start out As usual, we’ll start out by running an nmap scan:
+As with Blaster, we'll start out As usual, we'll start out by running an nmap scan:
 
 ```bash
 sudo nmap -v -oA retro -Pn -A -T4 -sS -script vuln \
@@ -78,7 +78,7 @@ Visiting http://10.10.20.185/retro/ reveals the same retro arcade website as Bla
 
 All of the posts are by "Wade". I hadn't noticed it the first time, but the "Ready Player One" post is actually suggestive that either Wade's username or password is "Parzival".
 
-> I can’t believe the movie based on my favorite book of all time is going to come out in a few days! Maybe it’s because my name is so similar to the main character, but I honestly feel a deep connection to the main character Wade. I keep mistyping the name of his avatar whenever I log in but I think I’ll eventually get it down. Either way, I’m really excited to see this movie!
+> I can't believe the movie based on my favorite book of all time is going to come out in a few days! Maybe it's because my name is so similar to the main character, but I honestly feel a deep connection to the main character Wade. I keep mistyping the name of his avatar whenever I log in but I think I'll eventually get it down. Either way, I'm really excited to see this movie!
 
 The comment immediately afterward seems to confirm this.
 
@@ -97,7 +97,8 @@ Unsurprisingly, this works. The `user.txt` file on the desktop contains the seco
 
 ## Flag 3: `root.txt`
 
-This flag is probably in `C:\Users\Administrator\Desktopoot.txt`. But now things are diverging a bit...
+This flag is probably in `C:\Users\Administrator\Desktop
+oot.txt`. But now things are diverging a bit...
 
 Wade has Google Chrome installed in this version of the CTF, and no other files are on the desktop.
 
@@ -108,17 +109,18 @@ But poking around a bit reveals that things aren't too far off Blaster.
 
 Of course, the TryHackMe machine doesn't have internet access, but we can follow this link locally. Moreover, searching for `hhupd` reveals that this is a program that can be used to perform the attack; that page helpfully links to a YouTube video demonstrating how to leverage `hhupd.exe` in exactly this way.
 
-The attack works somewhat differently on this system than in Blaster (or the demonstration video), however. Instead of opening up an Internet Explorer window outside of the secure desktop, IE is opened up *on* the UAC desktop itself, and all interaction needs to take place there (we also get a choice of using IE or Chrome...). Still, overall things work more-or-less as we'd expect, and we can use the resulting elevated command prompt to read `C:\Users\Administrator\Desktopoot.txt.txt` (note the extra `.txt`) to obtain the final flag.
+The attack works somewhat differently on this system than in Blaster (or the demonstration video), however. Instead of opening up an Internet Explorer window outside of the secure desktop, IE is opened up *on* the UAC desktop itself, and all interaction needs to take place there (we also get a choice of using IE or Chrome...). Still, overall things work more-or-less as we'd expect, and we can use the resulting elevated command prompt to read `C:\Users\Administrator\Desktop
+oot.txt.txt` (note the extra `.txt`) to obtain the final flag.
 
 (I kinda feel like I cheated now, since I did Blaster first without realizing that this room was almost *exactly* the same.)
  
 ELAPSED TIME: 1 h 16 min
 
 ## References
-
-* [TryHackMe: Blaster](tryhackme-blaster.md)
-* [Using “nmap”](nmap.md)
-* [Using “gobuster”](gobuster.md)
+"
+* [TryHac"Me: Blaster](tryhackme-blaster.md)
+* [Using "nmap"](nmap.md)
+* [Using "gobuster"](gobuster.md)
 * [Ready Player One (Wikipedia)](https://en.wikipedia.org/wiki/Ready_Player_One)
 * [Using XFreeRDP](xfreerdp.md)
 * [CVE-2019-1388 Detail (National Vulnerability Database)](https://nvd.nist.gov/vuln/detail/CVE-2019-1388)

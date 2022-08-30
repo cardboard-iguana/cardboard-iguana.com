@@ -1,4 +1,4 @@
-# Using “ss”
+# Using "ss"
 
 author:: Nathan Acks  
 date:: 2022-04-21
@@ -16,4 +16,4 @@ date:: 2022-04-21
 ## References
 
 * [TryHackMe: Game Zone](tryhackme-game-zone.md)
-* [Using “netstat”](netstat.md)
+* [Using "netstat"](netstat.md)

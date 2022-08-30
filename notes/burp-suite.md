@@ -19,15 +19,15 @@ date:: 2022-05-20
 
 ## The Burp Suite Browser
 
-I *strongly* recommend using the Burp Suite Browser, since it already has proxy and SSL interception set up. Also, it’s always best to keep your “hacker” and “normie” tools/identities as separate as possible!
+I *strongly* recommend using the Burp Suite Browser, since it already has proxy and SSL interception set up. Also, it's always best to keep your "hacker" and "normie" tools/identities as separate as possible!
 
 ### Using Firefox with Burp Suite
 
 The Burp Suite browser is compiled as an x86_64 binary, and thus *doesn't* work on a Raspberry Pi. As a work-around, Firefox can be used to interact with Burp Suite.
 
-First, make the following changes to Firefox’s settings:
+First, make the following changes to Firefox's settings:
 
-* Settings > General > Network Settings > Settings… > Manual proxy configuration > [set the “HTTP Proxy” to 127.0.0.1:8080 and check “Also use this proxy for HTTPS”]
+* Settings > General > Network Settings > Settings... > Manual proxy configuration > [set the "HTTP Proxy" to 127.0.0.1:8080 and check "Also use this proxy for HTTPS"]
 * Settings > Privacy & Security > Browser Privacy > Logins and Passwords > Ask to save logins and passwords for websites > Off
 * Settings > Privacy & Security > Browser Privacy > History > Use custom settings for history > Always use private browsing mode > On
 
@@ -35,14 +35,14 @@ Then install the Burp Suite CA certificate:
 
 * Start Burp Suite.
 * Go to http://127.0.0.1:8080.
-* Click on the “CA Certificate” link in the upper right to download Burp Suite’s certificate.
-* Go to Settings > Privacy & Security > Security > Certificates > View Certificates…
-* Import the Burp Suite CA certificate and check “Trust this CA to identify websites.”
+* Click on the "CA Certificate" link in the upper right to download Burp Suite's certificate.
+* Go to Settings > Privacy & Security > Security > Certificates > View Certificates...
+* Import the Burp Suite CA certificate and check "Trust this CA to identify websites."
 
 Other options:
 
-* Use FoxyProxy and set up Burp Suite as a togglable proxy, and then import the Burp Suite CA certificate as above. I don’t like this option because I think that hacking and normal browsing activities should be kept as separate as possible.
-* Use Chromium as the Burp Suite browser. This is actually a better option, and aligns more with Burp Suite’s built-in (x86_64) browser. Unfortunately, Chromium’s certificate import functionality appears to be broken on Kali Linux ARM right now.
+* Use FoxyProxy and set up Burp Suite as a togglable proxy, and then import the Burp Suite CA certificate as above. I don't like this option because I think that hacking and normal browsing activities should be kept as separate as possible.
+* Use Chromium as the Burp Suite browser. This is actually a better option, and aligns more with Burp Suite's built-in (x86_64) browser. Unfortunately, Chromium's certificate import functionality appears to be broken on Kali Linux ARM right now.
 
 ### Mobile App Testing
 

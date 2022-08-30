@@ -33,7 +33,7 @@ Shadow copies are stored in the System Volume Information folder, and managed by
 
 ### Start finding
 
-You can use wildcards as an alternative to find’s path spec. For example:
+You can use wildcards as an alternative to find's path spec. For example:
 
 ```bash
 find file*
@@ -42,13 +42,13 @@ find *.txt
 
 This implicitly only searches the current working directory, however.
 
-### Know Exactly What You’re Looking For
+### Know Exactly What You're Looking For
 
 The -user and -group flags match files owned by a particular user or group (both numeric and symbolic-readable names are allowed).
 
-The -size flag matches files of size 𝑛.
+The -size flag matches files of size `n`.
 
-Prefix 𝑛 with + or - to match files *strictly* greater than or less than 𝑛 in size. To specify useful sizes, use a suffix.
+Prefix `n` with + or - to match files *strictly* greater than or less than `n` in size. To specify useful sizes, use a suffix.
 
 | Suffix | Meaning   |
 |:------:|:--------- |
@@ -57,17 +57,17 @@ Prefix 𝑛 with + or - to match files *strictly* greater than or less than 𝑛
 |   M    | Megabytes |
 |   G    | Gigabytes |
 
-For example, use `-size +4G` to find files over 4 GB (i.e., those that can’t be written to a FAT32 file system).
+For example, use `-size +4G` to find files over 4 GB (i.e., those that can't be written to a FAT32 file system).
 
 The -perm flag matches files with a given permission. Both numeric and symbolic permissions are allowed.
 
 Use the / or - prefix to match files with *any* of the specified permissions or *at least* the specified permissions. For example, `-perm -644` will match any file where the current user has *at least* read + write access and any other user has *at least* read access. Likewise, `-perm /666` will match files where the current user has read + write access and/or the current group has read + write access and/or everyone has read + write access.
 
-The -Xmin and -Xtime flags match files accessed (a), had their *contents* modified (m), or had their *inode* changed (c) 𝑛 minutes (-Xmin) or days (-Xtime) ago.
+The -Xmin and -Xtime flags match files accessed (a), had their *contents* modified (m), or had their *inode* changed (c) `n` minutes (-Xmin) or days (-Xtime) ago.
 
 All mtime changes are ctime changes, but the reverse is not necessarily true.
 
-Prefix 𝑛 with + or - to match files *strictly* before or after the specified time in the *past*.
+Prefix `n` with + or - to match files *strictly* before or after the specified time in the *past*.
 
 For example:
 

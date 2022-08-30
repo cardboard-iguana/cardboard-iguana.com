@@ -7,7 +7,7 @@ date:: 2021-11-05
 
 ### Deploy the Vulnerable Machine
 
-The machine’s IP address is 10.10.179.107. Let’s run  an initial scan.
+The machine's IP address is 10.10.179.107. Let's run  an initial scan.
 
 ```bash
 sudo nmap -v -oA kenobi -A -sS --script vuln \
@@ -342,7 +342,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ### Enumerating Samba for Shares
 
-Apparently port 139 is left over from Window’s NetBIOS days.
+Apparently port 139 is left over from Window's NetBIOS days.
 
 Also, apparently the smb-enum-shares.nse and smb-enum-users.nse scripts work on this machine. I wonder why they produced null results in the Basic Pentesting CTF?
 
@@ -394,7 +394,7 @@ Read data files from: /usr/bin/../share/nmap
 # Nmap done at Fri Nov  5 22:13:32 2021 -- 1 IP address (1 host up) scanned in 28.92 seconds
 ```
 
-I still don’t think that smb-enum-users.nse is working for me…
+I still don't think that smb-enum-users.nse is working for me...
 
 NFS enumeration:
 

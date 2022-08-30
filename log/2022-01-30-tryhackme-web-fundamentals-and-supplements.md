@@ -108,6 +108,6 @@ Useful commands:
 
 One handy way to seed a URL is using requests harvested with Burp Suite.
 
-* [Using “sqlmap”](../notes/sqlmap.md)
+* [Using "sqlmap"](../notes/sqlmap.md)
 * [Using Metasploit](../notes/metasploit.md)
 * [Using Burp Suite](../notes/burp-suite.md)

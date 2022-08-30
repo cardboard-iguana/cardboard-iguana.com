@@ -7,7 +7,7 @@ Some languages use null bytes (`0x00`) to know when a string terminates, rather 
 
 Because % characters are themselves special, null bytes need to be encoded in URLs as `%2500`.
 
-Typically a null byte will either be inserted at the end of a string (to prevent a suffix from being appended or bypass simple path filters) or before a “fake” file extensions (which can cause some file-type checks to pass, again allowing us to download files we'd otherwise be denied access to).
+Typically a null byte will either be inserted at the end of a string (to prevent a suffix from being appended or bypass simple path filters) or before a "fake" file extensions (which can cause some file-type checks to pass, again allowing us to download files we'd otherwise be denied access to).
 
 ## References
 
