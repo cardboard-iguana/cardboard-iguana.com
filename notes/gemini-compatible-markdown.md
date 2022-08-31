@@ -27,6 +27,8 @@ Instead of using two stars (`**`) to denote bolded text, it's probably better to
 
 Since Markdown requires that these characters be escaped, so text destined for Gemini will need to be processed to remove back-slashed escapes (`\`). Note that md2gmi can handle this automatically.
 
+That said, when writing with Gemini in mind it's probably best to take a minimalist approach to inline formatting. Use when required to clarify, but otherwise let your words speak for themselves!
+
 ### Lists
 
 Only *unordered* lists are permitted in Gemini, and no indentation is allowed. Lists *must* use star characters (`*`) as their leaders.
