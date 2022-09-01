@@ -5,6 +5,8 @@ date:: 2022-06-23
 
 ## Deep Dive on Amazon S3 Security and Management
 
+* [AWS re:Invent 2018: Deep Dive on Amazon S3 Security and Management (YouTube)](https://youtu.be/x25FSsXrBqU)
+
 ### S3 Access Control Mechanisms
 
 By default, S3 buckets are only accessible by the owner
@@ -56,11 +58,9 @@ It turns out that Capitol One wrote a similar anti-ACL policy before AWS introdu
 
 A good use case here for when to use AssumeRole, but it's kind of reverse what Amazon was describing: Capitol One's high-security systems will do an AssumeRole to push lower security data into a segmented low-security system. Doing that means that data being placed into low-security S3 buckets is put there *by the low-security account* (whose role the high-security account has assumed). This allows the low-security account to then manage access to that data without the high-security account ever needing to interact with or know about downstream object consumers. This also gets Capitol One out of having to manage ACLs *entirely*.
 
-### References
-
-* [AWS re:Invent 2018: Deep Dive on Amazon S3 Security and Management (YouTube)](https://youtu.be/x25FSsXrBqU)
-
 ## Become an IAM Policy Master in 60 Minutes or Less
+
+* [AWS re:Invent 2018: Become an IAM Policy Master in 60 Minutes or Less (YouTube)](https://youtu.be/YQsK4MtsELU)
 
 ### IAM Policy Language
 
@@ -94,7 +94,3 @@ When scoping service control policies by region, note that a handful of services
 You can do some cool things with IAM and service control policies, like *requiring* that developer-created roles include a permission boundary or region.
 
 Policies actually support some limited variables: For example, `${aws:PrincipalTag/project}` let's you reference user ("principal") tags within a policy condition. This lets you, for example, require that developers always tag resources they create with a pre-assigned (role?) tag (you can also restrict the ability of developers to *control* resources that don't share their tag). This sort of generality comes in handy if you have a lot of teams that have the *same* permission structure but need to be siloed from each other - write *one* policy (or set of policies), and then tag the associated users/groups/roles to apply that policy in an *identical but disjoint* fashion.
-
-### References
-
-* [AWS re:Invent 2018: Become an IAM Policy Master in 60 Minutes or Less (YouTube)](https://youtu.be/YQsK4MtsELU)

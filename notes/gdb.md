@@ -2,6 +2,8 @@
 
 date:: 2022-07-10
 
+* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
+
 ## Startup
 
 ```bash
@@ -62,7 +64,3 @@ watch $eax == 0x0000ffaa # Break when register equals ..
 rwatch *[addr]           # Break on read memory location
 awatch *[addr]           # Break on read/write memory location
 ```
-
-## References
-
-* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

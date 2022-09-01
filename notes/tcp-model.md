@@ -30,7 +30,5 @@ date:: 2021-09-14
 +--------------+-------------------+
 ```
 
-## References
-
 * [TryHackMe: Pre Security](tryhackme-pre-security.md)
 * [OSI Model](osi-model.md)

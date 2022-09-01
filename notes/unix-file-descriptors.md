@@ -9,6 +9,4 @@ date:: 2021-10-02
 |  1 | STDOUT   |
 |  2 | STDERR   |
 
-## References
-
 * [Unix / Linux - Shell Input/Output Redirections](https://www.tutorialspoint.com/unix/unix-io-redirections.htm)

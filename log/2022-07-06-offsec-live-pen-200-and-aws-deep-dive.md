@@ -5,8 +5,6 @@ date:: 2022-07-06
 
 Another entry written in two parts. As before, the OffSec Live class notes were in the morning and the "AWS Cloud Practitioner Essentials" notes are from the evening.
 
-REFERENCES:
-
 * [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
 * [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
 * [AWS Cloud Practitioner Essentials](https://www.aws.training/learningobject/curriculum?id=27076)
@@ -17,11 +15,11 @@ REFERENCES:
 
 ### NMAP & Wireshark
 
-* Nmap host discovery scans use the following tests (in order) for host discovery: ICMP ping, port 443, port 80, ICMP timestamp. Note that ICMP packets can only be sent when nmap is run with root privileges.
-* Even nmap's host discovery scan (when run as root) can miss windows hosts. OffSec recommends supplementing this with a full scan of the top 10 most common ports with host discovery disabled (`--top-ports 10 -Pn`), as well as perhaps using a tool like `arping` (if you're on the same network, of course).
-* Windows will respond to connections to closed ports with a RST packet *if* the firewall is down. (If the firewall is up, it will simply *not* respond.)
+Nmap host discovery scans use the following tests (in order) for host discovery: ICMP ping, port 443, port 80, ICMP timestamp. Note that ICMP packets can only be sent when nmap is run with root privileges.
 
-REFERENCES:
+Even nmap's host discovery scan (when run as root) can miss windows hosts. OffSec recommends supplementing this with a full scan of the top 10 most common ports with host discovery disabled (`--top-ports 10 -Pn`), as well as perhaps using a tool like `arping` (if you're on the same network, of course).
+
+Windows will respond to connections to closed ports with a RST packet *if* the firewall is down. (If the firewall is up, it will simply *not* respond.)
 
 * [Using "nmap"](../notes/nmap.md)
 
@@ -42,8 +40,6 @@ AWS recommends running across at least two availability zones in a region.
 ### Provisioning AWS Resources
 
 "Elastic Beanstalk" and "CloudFormation" are similar in purpose. The difference is that Beanstalk functions as an EC2-centric abstraction layer (think: Heroku), while CloudFormation supports more services and is a full "infrastructure as code" offering. (In fact, formally Beanstalk is an application that runs *on top of* CloudFormation!)
-
-REFERENCES:
 
 * [What is the difference between Elastic Beanstalk and CloudFormation for a .NET project?](https://stackoverflow.com/a/14429767)
 * [AWS CloudFormation FAQs](https://aws.amazon.com/cloudformation/faqs/)

@@ -10,54 +10,60 @@ Get-WinEvent is a PowerShell command for working with Windows event logs.
 #
 Get-Help Get-WinEvent
 
-# Filter event log output using the Where-Object command.
-# This apparently pipes the entire output to the
-# Where-Object command, which then scans for the
-# appropriate field. So a bit inefficient for large logs.
+# Filter event log output using the Where-Object command. This
+# apparently pipes the entire output to the Where-Object command, which
+# then scans for the appropriate field. So a bit inefficient for large
+# logs.
 #
 Get-WinEvent -LogName Application | Where-Object {
 	$_.ProviderName -Match 'WLMS'
 }
 
-# To match event IDs with Where-Object, use the slightly
-# different form `Where-Object Id -eq  100`, etc.
+# To match event IDs with Where-Object, use the slightly different form
+# `Where-Object Id -eq  100`, etc.
 
-# Use the -FilterHashtable flag. This causes the
-# filtering to be done during the call made by
-# Get-WinEvent, and has a more straight-forward syntax
-# too. However, it only works when called against the
-# system event log; Where-Object needs to be used when
-# specifying an archived log via -Path.
+# Use the -FilterHashtable flag. This causes the filtering to be done
+# during the call made by Get-WinEvent, and has a more straight-forward
+# syntax too. However, it only works when called against the system
+# event log; Where-Object needs to be used when specifying an archived
+# log via -Path.
 #
-# Note that hashes can be specified with newlines instead
-# of semicolons as well, which can make scripts A LOT
-# more readable!
+# Note that hashes can be specified with newlines instead of semicolons
+# as well, which can make scripts A LOT more readable!
 #
 Get-WinEvent -FilterHashtable @{
-	LogName = 'Application'; ProviderName = 'WLMS'
+	LogName = 'Application';
+	ProviderName = 'WLMS'
 }
 
-# To display all information about an event, pipe the
-# output of Get-WinEvent to `Format-List -Property *`
+# To display all information about an event, pipe the output of
+# Get-WinEvent to `Format-List -Property *`
 ```
+
+* [TryHackMe: Windows Event Logs](tryhackme-windows-event-logs.md)
+* [Get-WinEvent](https://docs.microsoft.com/powershell/module/microsoft.powershell.diagnostics/get-winevent)
+* [Using PowerShell](powershell.md)
+* [Windows Event Logs](windows-event-logs.md).
 
 ## FilterHashtable Keys
 
 | Key Name     | Value Data Type | Wildcards Allowed? |
 |:------------ |:--------------- |:------------------:|
-| LogName      | String          |         ✅         |
-| ProviderName | String          |         ✅         |
-| Path         | String          |         ❌         |
-| Keywords     | Long            |         ❌         |
-| ID           | Int32           |         ❌         |
-| Level        | Int32           |         ❌         |
-| StartTime    | DateTime        |         ❌         |
-| EndTime      | DateTime        |         ❌         |
-| UserID       | SID             |         ❌         |
-| Data         | String          |         ❌         |
-| [NamedData]  | String          |         ❌         |
+| LogName      | String          |          Y         |
+| ProviderName | String          |          Y         |
+| Path         | String          |          N         |
+| Keywords     | Long            |          N         |
+| ID           | Int32           |          N         |
+| Level        | Int32           |          N         |
+| StartTime    | DateTime        |          N         |
+| EndTime      | DateTime        |          N         |
+| UserID       | SID             |          N         |
+| Data         | String          |          N         |
+| [NamedData]  | String          |          N         |
 
 Event Viewer displays *most* of these values in the "General" when viewing an individual log entry, though note that Keywords is translated to a string.
+
+* [Creating Get-WinEvent queries with FilterHashtable](https://docs.microsoft.com/powershell/scripting/samples/Creating-Get-WinEvent-queries-with-FilterHashtable)
 
 ### Keywords
 
@@ -83,11 +89,3 @@ Event Viewer displays *most* of these values in the "General" when viewing an in
 | Error         |   2   |
 | Critical      |   1   |
 | LogAlways     |   0   |
-
-## References
-
-* [TryHackMe: Windows Event Logs](tryhackme-windows-event-logs.md)
-* [Get-WinEvent](https://docs.microsoft.com/powershell/module/microsoft.powershell.diagnostics/get-winevent)
-* [Creating Get-WinEvent queries with FilterHashtable](https://docs.microsoft.com/powershell/scripting/samples/Creating-Get-WinEvent-queries-with-FilterHashtable)
-* [Using PowerShell](powershell.md)
-* [Windows Event Logs](windows-event-logs.md).

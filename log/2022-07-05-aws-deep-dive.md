@@ -5,8 +5,6 @@ date:: 2022-07-05
 
 Today I'll be starting the ~6 hour "AWS Cloud Practitioner Essentials" course as I continue to dive deeper into AWS.
 
-REFERENCES:
-
 * [AWS Cloud Practitioner Essentials](https://www.aws.training/learningobject/curriculum?id=27076)
 
 ## Introduction to Amazon Web Services
@@ -17,7 +15,7 @@ Wait... AWS has per-minute satellite rental?!?
 
 Instance types:
 
-* General Pupose
+* General Purpose
 * Compute Optimized
 * Memory Optimized
 * Accelerated Computing
@@ -29,11 +27,15 @@ Instance types:
 
 ### Pricing Options
 
-* On-Demand (the default model)
-* Savings Plan (commit to a certain numbers of *hours* of compute time; can include services like Lambda, and usage above the agreed-upon amount is charged at the regular rate)
-* Reserved Instances (commit to a certain number of *instances*)
-* Spot Instances (additional capacity purchased on the spot market; can be reclaimed by AWS with a 2 minute warning)
-* Dedicate Hosts (single-account hosts, mostly for high security/compliance workloads)
+On-Demand (the default model)
+
+Savings Plan (commit to a certain numbers of *hours* of compute time; can include services like Lambda, and usage above the agreed-upon amount is charged at the regular rate)
+
+Reserved Instances (commit to a certain number of *instances*)
+
+Spot Instances (additional capacity purchased on the spot market; can be reclaimed by AWS with a 2 minute warning)
+
+Dedicate Hosts (single-account hosts, mostly for high security/compliance workloads)
 
 Both the "savings plan" and "reserved instances" offer similar savings, but over different metrics.
 
@@ -45,8 +47,9 @@ ELB doesn't just have to be client facing, however - it can also be used between
 
 ### Messaging and Queueing
 
-* Simple Queue Service (SQS) - Queue/Buffer messages from one service to another *within* AWS
-* Simple Notification Service (SNS) - Queue/Buffer messages from a service in AWS to another service that may be *inside of or outside of* AWS (and could be directly user-facing, like SMS or push notifications)
+Simple Queue Service (SQS) - Queue/Buffer messages from one service to another *within* AWS
+
+Simple Notification Service (SNS) - Queue/Buffer messages from a service in AWS to another service that may be *inside of or outside of* AWS (and could be directly user-facing, like SMS or push notifications)
 
 SQS is a pure machine-to-machine buffer, while SNS is based around a one-to-many pub/sub model.
 

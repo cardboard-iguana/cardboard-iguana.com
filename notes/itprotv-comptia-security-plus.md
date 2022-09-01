@@ -4,6 +4,8 @@ author:: Nathan Acks
 date:: 2022-05-07  
 tags:: #MOC
 
+* [ITPro.TV: CompTIA Security+ (SY0-601)](https://www.itpro.tv/courses/security/security-sy0601/)
+
 ## Threats, Attacks, and Vulnerabilities
 
 ### Overview
@@ -388,7 +390,3 @@ tags:: #MOC
 ### Privacy and Data Sensitivity - Other Areas
 
 * [2022-05-07 - ITPro.TV: CompTIA Security+ (SY0-601)](../log/2022-05-07-itprotv-comptia-security-plus.md)
-
-## References
-
-* [ITPro.TV: CompTIA Security+ (SY0-601)](https://www.itpro.tv/courses/security/security-sy0601/)

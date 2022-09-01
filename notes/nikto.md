@@ -20,8 +20,6 @@ nikto -H            # Long help (all commands)
 nikto -list-plugins # List plugins
 ```
 
-## References
-
 * [TryHackMe: CC: Pen Testing](tryhackme-cc-pen-testing.md)
 * [Tools'R'us](tryhackme-tools-r-us.md)
 * [web enumeration](https://pentesting.one2bla.me/enumeration/web-enumeration)

@@ -11,10 +11,9 @@ The trickiest part of this is that the project is called "CSE Bookstore", but th
 
 The actual vulnerability is two-fold:
 
-* Admin image uploads bypass authentication.
-* There's no check on *what* actually gets uploaded, so we can push up a PHP script instead of an actual image.
+(1) Admin image uploads bypass authentication.
 
-References:
+(2) There's no check on *what* actually gets uploaded, so we can push up a PHP script instead of an actual image.
 
 * [Online Book Store 1.0 - Unauthenticated Remote Code Execution](https://www.exploit-db.com/exploits/47887)
 

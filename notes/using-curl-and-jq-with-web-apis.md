@@ -56,6 +56,8 @@ curl -X POST \
      -d "parameter2=value2" "https://web.site/" | jq .
 ```
 
+* [How to perform a POST request using Curl](https://www.educative.io/edpresso/how-to-perform-a-post-request-using-curl)
+
 ## Relevant Man Page Excerpts
 
 ### cURL
@@ -105,7 +107,3 @@ curl -X POST \
 > The absolute simplest filter is . . This is a filter that takes its input and produces it unchanged as output. That is, this is the identity operator.
 > 
 > Since jq by default pretty-prints all output, this trivial program can be a useful way of formatting JSON output from, say, curl.
-
-## References
-
-* [How to perform a POST request using Curl](https://www.educative.io/edpresso/how-to-perform-a-post-request-using-curl)

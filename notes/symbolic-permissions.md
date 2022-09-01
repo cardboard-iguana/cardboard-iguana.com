@@ -20,6 +20,10 @@ Permissions themselves are given as one or more of the following:
 | SGID       |   s,S  |   2   | Only applied to the group when set symbolically, or to the prefix digit if set numerically. Use lowercase if the group *also* has execute permissions, uppercase if the group *doesn't* have execute permissions. |
 | Sticky Bit |    t   |   1   | Only applied to the "other" permission set, or to the prefix digit if set numically. *Only* applied to directories.                                                                                               |
 
+* [How to manage Linux permissions for users, groups, and others](https://www.redhat.com/sysadmin/manage-permissions)
+* [Linux permissions: SUID, SGID, and sticky bit](https://www.redhat.com/sysadmin/suid-sgid-sticky-bit)
+* [How to Use "find" With File Metadata](how-to-use-find-with-file-metadata.md)
+
 ## SUID
 
 Execute as the file owner, rather than the user passing the command.
@@ -37,10 +41,3 @@ If set on a directory, files created in the directory will have their group owne
 ## Write Permissions and Directories
 
 If a user has *write* access to a directory, then they can write to any file they have at least *read* access to (!!!).
-
-## References
-
-* [How to manage Linux permissions for users, groups, and others](https://www.redhat.com/sysadmin/manage-permissions)
-* [Linux permissions: SUID, SGID, and sticky bit](https://www.redhat.com/sysadmin/suid-sgid-sticky-bit)
-* [How to Use "find" With File Metadata](how-to-use-find-with-file-metadata.md)
-* [ITPro.TV CompTIA Security+](itprotv-comptia-security-plus.md)

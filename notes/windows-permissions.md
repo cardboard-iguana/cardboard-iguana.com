@@ -20,6 +20,10 @@ The biggest differences between Windows and UNIX permissions:
 * Windows has *much more* fine-grained control across users and groups (there's no limit of three permission sets).
 * The ability to delete a folder or file, and to change its permissions, are essentially considered to be distinct "sub-permissions".
 
+As much as it pains me to say it, in many ways the Windows permission mode is much better than the (pre-ACL) Linux model.
+
+* [File and Folder Permissions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb727008)
+
 ## Checking Permissions
 
 Use `icacls` or `Get-Acl $PATH | Format-List` in PowerShell to check permissions at the command line. The `icacls` tool can also be used to update Windows ACLs.
@@ -49,10 +53,3 @@ In the case of multiple ACLs, or when a user is part of two groups with differen
 * Domain Admin
 
 Note that non-admin domain users may still be local admins.
-
-## References
-
-* [File and Folder Permissions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb727008)
-* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [ITPro.TV CompTIA Security+](itprotv-comptia-security-plus.md)
-* [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)

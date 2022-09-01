@@ -149,6 +149,8 @@ FLAG 2: What service is running on port 8000? - Icecast streaming media server
 
 FLAG 3: What is the hostname of the machine? - DARK-PC
 
+* [Using "nmap"](nmap.md)
+
 ## Gain Access
 
 The next few flags are about finding a particular vulnerability for Icecast on https://cvedetails.com. There's actually a couple of different vulnerabilities that match the flag descriptions, but after a little trial-and-error we can find the right ones.
@@ -162,6 +164,9 @@ FLAG 6: What is the Metasploit module for exploiting this vulnerability? - explo
 FLAG 7: What option must be set to use this module? - RHOSTS
 
 There's not too much to this module - set RHOSTS and LHOST, run, get shell.
+
+* [CVE-2004-1561](https://www.cvedetails.com/cve/CVE-2004-1561/)
+* [Using Metasploit](metasploit.md)
 
 ## Escalate
 
@@ -217,6 +222,10 @@ It turns out that Windows loads *unhashed* passwords into LSASS for any users wi
 
 FLAG 18: What is Dark's password? - `Password01!`
 
+* [Using Mimikatz](mimikatz.md)
+* [Using Hydra](hydra.md)
+* [Using John the Ripper](john-the-ripper.md)
+
 ## Past-Exploitation
 
 FLAG 19: What meterpreter command allows us to dump all of the password hashes stored on the system? - `hashdump`
@@ -229,16 +238,8 @@ FLAG 21: What meterpreter command allows us to record using the system's microph
 
 FLAG 22: What meterpreter command can modify timestamps of files on the system? - `timestomp`
 
-FLAG 23: What meterpreter/`kiwi` command allows for the creation of a golden ticket? - `golden_ticket_create`
+FLAG 23: What meterpreter/kiwi command allows for the creation of a golden ticket? - `golden_ticket_create`
+
+* [Kerberos](kerberos.md)
 
 ELAPSED TIME: 2 h 39 min
-
-## References
-
-* [Using "nmap"](nmap.md)
-* [CVE-2004-1561](https://www.cvedetails.com/cve/CVE-2004-1561/)
-* [Using Metasploit](metasploit.md)
-* [Using Mimikatz](mimikatz.md)
-* [Using Hydra](hydra.md)
-* [Using John the Ripper](john-the-ripper.md)
-* [Kerberos](kerberos.md)

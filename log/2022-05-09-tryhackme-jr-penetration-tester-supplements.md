@@ -32,8 +32,6 @@ The difference between an "operation plan" and a "mission plan" is one of audien
 
 ### Types of Firewalls
 
-Traditional firewalls cover OSI layers 2 - 4 (data link, network, and transport), while "next-gen" firewalls *additionally* cover layers 5 - 7 (session, presentation, and application).
-
 Types of firewalls:
 
 * Packet-Filtering Firewall (a.k.a., "Stateless inspection Firewall")
@@ -43,7 +41,7 @@ Types of firewalls:
 * Next-Generation Firewalls
 * Cloud Firewall (a.k.a., "Firewall as a Service"; obviously used the protect cloud-based applications/networks)
 
-References:
+Traditional firewalls cover OSI layers 2 - 4 (data link, network, and transport), while "next-gen" firewalls *additionally* cover layers 5 - 7 (session, presentation, and application).
 
 * [OSI Model](../notes/osi-model.md)
 

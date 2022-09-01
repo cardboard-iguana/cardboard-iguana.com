@@ -25,7 +25,7 @@ Wireshark breaks down packets into 5 - 7 layers that kinda-sorta-not-exactly cor
 * Application (OSI session, presentation, and application layers)
 * Application data (optional, breaks down the actual application data in some cases)
 
-References
+IMHO, this is actually a much clearer way to think about things though.
 
 * [OSI Model](../notes/osi-model.md)
 

@@ -14,7 +14,7 @@ CVE-2021-3560 impacted the following distros (at the time of its announcement):
 * Debian Testing ("Bullseye")
 * Ubuntu 20.04 LTS ("Focal Fossa")
 
-Ubuntu fixed with with version `0.105-26ubuntu1.1` of the `policykit-1` package (the last vulnerable version was `0.105-26ubuntu1`).
+Ubuntu fixed with with version 0.105-26ubuntu1.1 of the policykit-1 package (the last vulnerable version was 0.105-26ubuntu1).
 
 This bug is a combination of a race condition and bad error handling. Basically:
 

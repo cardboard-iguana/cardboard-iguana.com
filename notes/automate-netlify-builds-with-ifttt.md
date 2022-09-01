@@ -2,6 +2,10 @@
 
 author:: Nathan Acks
 
+* [Trigger a Netlify Build Every Day With IFTTT](https://www.11ty.dev/docs/quicktips/netlify-ifttt/).
+* [Netlify](https://www.netlify.com)
+* [IFTTT](https://ifttt.com)
+
 ## In Netlify
 
 * Go into your Netlify site's "Build & Deploy" settings.
@@ -25,9 +29,3 @@ author:: Nathan Acks
 * For the "Body" field, type `{}`.
 * Click the "Create action" button.
 * Rename the new applet and click "Finish".
-
-## References
-
-* [Trigger a Netlify Build Every Day With IFTTT](https://www.11ty.dev/docs/quicktips/netlify-ifttt/).
-* [Netlify](https://www.netlify.com)
-* [IFTTT](https://ifttt.com)

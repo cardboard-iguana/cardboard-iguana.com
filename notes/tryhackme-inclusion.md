@@ -171,7 +171,7 @@ I'm going to go out on a limb here and guess that we're going to exploit the `/a
 
 A common file on Linux systems is `/etc/os-release`, so let's see if we can include this. And, in fact, after a little experimentation it turns out that we can using `http://10.10.0.57/article?name=../../../etc/os-release`:
 
-```sh
+```bash
 NAME="Ubuntu";
 VERSION="18.04.3 LTS (Bionic Beaver)";
 ID=ubuntu
@@ -295,10 +295,8 @@ Fortunately, the names are pretty standard:
 
 And with that, we're done.
 
-ELAPSED TIME: 56 min
-
-## References
-
 * [LFI (Local File Inclusion) Attacks](local-file-inclusion-attacks.md)
 * [Using "nmap"](nmap.md)
 * [Using "gobuster"](gobuster.md)
+
+ELAPSED TIME: 56 min

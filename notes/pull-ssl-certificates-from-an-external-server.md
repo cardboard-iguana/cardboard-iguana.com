@@ -30,7 +30,5 @@ openssl x509 -noout -in $CERT -fingerprint
 openssl x509 -noout -in $CERT -fingerprint -md5
 ```
 
-## References
-
 * [How to inspect remote SMTP server's TLS certificate?](https://serverfault.com/a/131628)
 * [SSL Shopper Certificate Decoder](https://www.sslshopper.com/certificate-decoder.html)

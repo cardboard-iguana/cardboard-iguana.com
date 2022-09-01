@@ -5,8 +5,6 @@ date:: 2022-08-15
 
 Now that both HOPE and DEF CON are behind me, I want to summarize some of my initial thoughts. This is not a "what did I learn about hacking" post, but rather musings about *attending* these events.
 
-REFERENCES:
-
 * [A New HOPE](https://xiv.hope.net/)
 * [DEF CON 30](https://defcon.org/html/defcon-30/dc-30-index.html)
 
@@ -37,8 +35,6 @@ There's not some kind of magical "hacker miasma" at these conferences that puts 
 
 If your risk model is that a nation state is gunning for you, then you need to be worrying about a lot more than just conference security! Needless to say, this guide is not, then, for you.
 
-REFERENCES:
-
 * [Securing devices for DEFCON](https://blog.erratasec.com/2019/08/securing-devices-for-defcon.html)
 * [Apple iPad Pro](https://www.apple.com/ipad-pro/)
 * [Apple iPhone](https://www.apple.com/iphone/)
@@ -53,11 +49,11 @@ REFERENCES:
 
 An important layer of defense at hacker conferences, when traveling, or just *in life* is good credential management.
 
-* I use different usernames/emails for almost every service. Both Proton Mail and Google Workspace can be configured with catch-all email addresses. If you don't want to pay money, then sign up for Gmail and liberally use the `+` functionality.
-* Use unique, random passwords for as many services as you can. Use a password manager (KeePassXC and compatible applications are good choices) to make this easy to manage. Don't store these credentials in your browser or system keychain.
-* Set up multi-factor authentication on *every* account that supports it. Whenever possible, use a hardware key (like a YubiKey). As a bonus, you can use hardware security keys to further lock down access to your password manager: Do this using either built-in support, or by storing a long random string in one of your security key "slots" and then using this *in addition to* a string that you've memorized to access your password vault (full-featured YubiKeys - not the lower-end "security keys" Yubico sells - support both options).
+I use different usernames/emails for almost every service. Both Proton Mail and Google Workspace can be configured with catch-all email addresses. If you don't want to pay money, then sign up for Gmail and liberally use the `+` functionality.
 
-REFERENCES:
+Use unique, random passwords for as many services as you can. Use a password manager (KeePassXC and compatible applications are good choices) to make this easy to manage. Don't store these credentials in your browser or system keychain.
+
+Set up multi-factor authentication on *every* account that supports it. Whenever possible, use a hardware key (like a YubiKey). As a bonus, you can use hardware security keys to further lock down access to your password manager: Do this using either built-in support, or by storing a long random string in one of your security key "slots" and then using this *in addition to* a string that you've memorized to access your password vault (full-featured YubiKeys - not the lower-end "security keys" Yubico sells - support both options).
 
 * [Proton Mail: What is a catch-all email address?](https://proton.me/support/catch-all)
 * [Email routing and delivery options for Google Workspace](https://support.google.com/a/answer/2685650)
@@ -75,8 +71,6 @@ There's enough (low profile) pockets in the Peak Design Everyday backpack that I
 One thing that's enables me to pack light is that I've moved away from wearing jeans. Instead, I've switched to Bluffworks' Ascender 5-Pocket Pants, which are tough, light, wrinkle-resistant, *very* compressible, and have the bonus of being much harder to pick pocket than most other mens' pants (though again, a determined thief can still defeat them). I pair these with Icebreaker underwear and socks, which are also exceptionally light and durable. Bluffworks also makes travel blazers and other outfits for less casual situations; these are also good for traveling light, but by necessity take up a bit more space. There's a trade-off between looking nice and packing light that is just difficult to navigate.
 
 One disadvantage of this setup is that it's difficult to bring multiple pairs of shoes. I opt to just wear a pair of black running shoes - they're not dress shoes, but they're comfortable and sufficiently understated that you can get away with using them in less casual situations in a pinch.
-
-REFERENCES:
 
 * [Peak Design Everyday Backpack](https://www.peakdesign.com/products/everyday-backpack)
 * [Peak Design Packing Cubes](https://www.peakdesign.com/products/packing-cube/)
@@ -98,7 +92,5 @@ I don't like wearing masks, but if I'm going to wear one I'm going to wear an *e
 The problem with a well-fitted N95 masks is that they're kind of a pain to take off. This makes both eating and (more importantly) drinking a less attractive proposition. I wound up going back to my hotel to do both during the day, which created larger gaps in my schedule than I planned.
 
 Moving forward, I don't think it makes sense to bring a water bottle to any events that have a mask requirement. I also need to remember that I can't effectively pull off my normal back-to-back-to-back event schedule at conferences with mask requirements. This means doing *less* at these events than I otherwise would, but *c'est la vie* in the time of plague.
-
-REFERENCES:
 
 * [BNX N95 Mask Respirator (NIOSH)](https://bnx.com/products/n95-mask-black-made-in-usa-bifold-h95b/)

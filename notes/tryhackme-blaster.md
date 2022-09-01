@@ -103,6 +103,10 @@ Boom!
 
 FLAG 6: What are the contents of `user.txt`? - `THM{HACK_PLAYER_ONE}`
 
+* [Using "nmap"](nmap.md)
+* [Using "gobuster"](gobuster.md)
+* [Using XFreeRDP](xfreerdp.md)
+
 ## Breaching the Control Room
 
 There's no obvious files when pocking around except an hhupd.exe file on the desktop, and IE's history is empty.
@@ -133,6 +137,10 @@ The final flag is in the Administrator's Desktop folder.
 
 FLAG 10: What are the contents of `root.txt`? - `THM{COIN_OPERATED_EXPLOITATION}`
 
+* [CVE-2019-1388 (MITRE)](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1388)
+* [CVE-2019-1388 (nagenrauft-consulting.com)](https://www.nagenrauft-consulting.com/2019/11/21/cve-2019-1388-hhupd-exe/)
+* [CVE-2019-1388: Windows Privilege Escalation Through UAC](https://www.youtube.com/watch?v=3BQKpPNlTSo)
+
 ## Adoption into the Collective
 
 Target information isn't immediately obvious in Metasploit; after selecting `exploit/multi/script/web_delivery` we'll need to run `info` to see all of the options.
@@ -159,15 +167,7 @@ FLAG 12: What command can be used in Meterpreter to establish on-boot persistenc
 
 (NOTE: Meterpreter flags this as being deprecated now; the modern pattern seems to be to background Meterpreter and then switch to and exploit the `exploit/windows/local/persistence` module, probably with `set STARTUP SYSTEM`.)
 
-ELAPSED TIME: 2 h 15 min
-
-## References
-
-* [Using "nmap"](nmap.md)
-* [Using "gobuster"](gobuster.md)
-* [Using XFreeRDP](xfreerdp.md)
-* [CVE-2019-1388 (MITRE)](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1388)
-* [CVE-2019-1388 (nagenrauft-consulting.com)](https://www.nagenrauft-consulting.com/2019/11/21/cve-2019-1388-hhupd-exe/)
-* [CVE-2019-1388: Windows Privilege Escalation Through UAC](https://www.youtube.com/watch?v=3BQKpPNlTSo)
 * [Using Metasploit](metasploit.md)
 * [Using PowerShell](powershell.md)
+
+ELAPSED TIME: 2 h 15 min

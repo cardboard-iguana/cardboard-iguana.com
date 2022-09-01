@@ -12,6 +12,4 @@ MAC ("Media Access Control") are unique 48-bit identifying numbers burned into n
 
 Some network cards and operating systems allow MAC addresses to be overridden (for example, this is used for Wi-Fi privacy, and can be done explicitly on UNIX systems using the macchanger tool).
 
-## References
-
 * [TryHackMe: Pre Security](tryhackme-pre-security.md)

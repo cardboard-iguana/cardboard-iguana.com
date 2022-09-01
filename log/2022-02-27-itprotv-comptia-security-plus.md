@@ -272,7 +272,7 @@ Domain hijacking is then about actually compromising the domain record (via the 
 
 Display current Windows DNS settings:
 
-```bat
+```powershell
 ipconfig /displaydns | more
 ```
 
@@ -280,7 +280,7 @@ ipconfig /displaydns | more
 
 Flush local DNS cache on Windows:
 
-```bat
+```powershell
 ipconfig /flushdns
 ```
 

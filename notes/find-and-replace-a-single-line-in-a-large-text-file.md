@@ -24,7 +24,5 @@ sed -i "${LINE_NUMBER}s/.*/${REPLACEMENT_TEXT}/" $FILE
 
 It may be advisable to use single quote here, rather than double quotes + variable substitution, to prevent shell weirdness. Unfortunately, there's really no way to tell when this command has finished (except to let it work through the whole file).
 
-## References
-
 * [Getting one line in a huge file with bash](http://stackoverflow.com/a/2796347)
 * [How to replace an entire line in a text file by line number](http://stackoverflow.com/a/11145362)

@@ -3,6 +3,9 @@
 author:: Nathan Acks  
 date:: 2018-08-01
 
+* [Coursera: Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
+* [git: Reference](https://git-scm.com/docs/)
+
 ## DevOps and Git in a Nutshell
 
 DevOps is considered to be an implementation of the continuous development philosophy, as opposed to waterfall development. Lots of little version, each with only a few features or bug fixes.
@@ -476,8 +479,3 @@ Some common rules:
 * Only use merge commits on "master".
 * Commits to "master" only come from release or hotfix branches (this helps with quality control).
 * If you commit to "master", also merge into "develop" (this prevents bugs from re-appearing in later releases).
-
-## References
-
-* [Coursera: Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
-* [git: Reference](https://git-scm.com/docs/)

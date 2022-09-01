@@ -17,6 +17,8 @@ ZAP (the "Zed Attack Proxy") is basically an open-source version of Burp Suite.
 | Scanner                         | Active Scan        |
 | BApp Store                      | Add On Marketplace |
 
+* [Using Burp Suite](burp-suite.md)
+
 ### The ZAP Browser
 
 At least on Kali Linux, ZAP can launch a pre-configured Firefox session using web automation; thus, like Burp Suite, there's really no need to configure a local proxy (and probably every reason not to -- keep your profiles separate!).
@@ -35,8 +37,4 @@ The "traditional spider" option spiders the website as you would expect, while t
 
 ZAP has gobuster-like functionality called "Forced Browse". The wordlist can be configured in Tools > Options > Forced Browse; enumeration can be started by right-clicking on the target site and choosing Site > Force Browse Site.
 
-## References
-
-* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
-* [Using Burp Suite](burp-suite.md)
 * [Using "gobuster"](gobuster.md)

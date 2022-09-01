@@ -19,6 +19,4 @@ Some useful python3 http.server flags:
 > --directory DIRECTORY, -d DIRECTORY
 > Specify alternative directory [default: current directory]
 
-## References
-
 * [How to make a simple HTTP server using python?](https://spoofing.medium.com/how-to-make-a-simple-http-server-using-python-ea35f0b741a4)

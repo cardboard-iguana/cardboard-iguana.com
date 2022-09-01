@@ -297,11 +297,15 @@ There's a hidden `/protected/` directory on port 80 that seems to be password-pr
 
 No obvious exploits here, but this is enough information to get us a few flags.
 
-* FLAG 3: What directory has basic authentication? -- `protected`
-* FLAG 5: What other port that serves a webs service is open on the machine? -- `1234`
-* FLAG 6: What is the name and version of the software running on that port? -- `Apache Tomcat/7.0.88`
-* FLAG 8: What is the server version (run the scan against port 80)? -- `Apache/2.4.18`
-* FLAG 9: What version of Apache-Coyote is this service using? -- `1.1`
+> FLAG 3: What directory has basic authentication? - protected
+> 
+> FLAG 5: What other port that serves a webs service is open on the machine? - 1234
+> 
+> FLAG 6: What is the name and version of the software running on that port? - Apache Tomcat/7.0.88
+> 
+> FLAG 8: What is the server version (run the scan against port 80)? - Apache/2.4.18
+> 
+> FLAG 9: What version of Apache-Coyote is this service using? - 1.1
 
 We'll also run a scan with dirbuster (normally I use gobuster, but I'm trying to operate in the spirit of this CTF):
 
@@ -321,7 +325,7 @@ This finds the following directories:
 
 This gives us another flag.
 
-* FLAG 1: What directory can you find, that begins with a "g"? -- `guidelines`
+> FLAG 1: What directory can you find, that begins with a "g"? -- `guidelines`
 
 Going to this directory reveals a single message:
 
@@ -331,7 +335,7 @@ Hey <b>bob</b>, did you update that TomCat server?
 
 So, that kinda does imply that Tomcat or Coyote might be vulnerable, even though I couldn't find anything obvious on Exploit DB. I'll come back to that, since we have another flag.
 
-* FLAG 2: Whose name can you find from this directory? -- `bob`
+> FLAG 2: Whose name can you find from this directory? -- `bob`
 
 We'll deploy Hydra against the http-basic authentication protecting `/protected/`. I've never done this before, but a quick internet search reveals a potentially useful guide, as well as an additional walk-through clarifying how to use Hydra to crack Apache conf-based http-basic authentication. With this information in hand, we should (hopefully) be able to crack Bob's password using the following:
 
@@ -343,7 +347,7 @@ hydra -l bob \
 
 This gets us another flag!
 
-* FLAG 4: What is bob's password to the protected part of the website? -- `bubbles`
+> FLAG 4: What is bob's password to the protected part of the website? -- `bubbles`
 
 While it probably won't get us any more flags, I'm kinda curious what's in `/protected/`. Unfortunately, the experience is kinda anti-climatic.
 
@@ -363,7 +367,7 @@ nikto -Format txt \
 
 The next flag is just looking for the number of "Tomcat documentation" files Nikto finds. Unfortunately, these don't get spit out until near the end of Nikto's run, so expect to wait a *long* time!
 
-* FLAG 7: How many documentation files did Nikto identify? -- `5`
+> FLAG 7: How many documentation files did Nikto identify? -- `5`
 
 Alright, let's switch over to our last two flags, which imply that we can get RCE on this version of Tomcat. It looks like Apache Tomcat 7.0.88 was released on May 16, 2018. There's no obvious *vulnerability* to exploit for this version, but after searching around a bit on the net I found a guide mentioning that RCE on Tomcat could be obtained via the "manager" application. And, indeed, looking at the info for the corresponding module in Metasploit (`exploit/multi/http/tomcat_mgr_upload`) reveals that we can obtain RCE if we have access to the `/manager/html/upload` component. Which we *do*, because `/manager/html` has the option to "Select WAR file to upload".
 
@@ -381,15 +385,11 @@ exploit
 
 And we have a meterpreter shell! Running `getuid` reveals that we're also running as `root`. Ouch.
 
-* FLAG 10: What user did you get a shell as? -- `root`
+> FLAG 10: What user did you get a shell as? -- `root`
 
 We'll just drop to `shell` in meterpreter to get the contents of `/root/flag.txt`.
 
-* FLAG 11: What text is in the file /root/flag.txt? -- `ff1fc4a81affcc7688cf89ae7dc6e0e1`
-
-ELAPSED TIME: 3 h 7 min
-
-## References
+> FLAG 11: What text is in the file /root/flag.txt? -- `ff1fc4a81affcc7688cf89ae7dc6e0e1`
 
 * [Using Hydra](hydra.md)
 * [Using "nmap"](nmap.md)
@@ -401,3 +401,5 @@ ELAPSED TIME: 3 h 7 min
 * [Multiple Ways To Exploiting HTTP Authentication](https://www.hackingarticles.in/multiple-ways-to-exploiting-http-authentication/)
 * [Apache Tomcat 7.x vulnerabilities](https://tomcat.apache.org/security-7.html)
 * [Multiple Ways to Exploit Tomcat Manager](https://www.hackingarticles.in/multiple-ways-to-exploit-tomcat-manager/)
+
+ELAPSED TIME: 3 h 7 min

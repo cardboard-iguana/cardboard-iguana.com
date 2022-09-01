@@ -7,6 +7,8 @@ Sometimes you don't want to download the 1080p, or even 720p, version of a movie
 
 Unfortunately, iTunes can be stubborn about this, even when you've unchecked "Download full-sized HD videos" and checked "Download high-quality SD videos" in the "Downloads" tab of the preferences.
 
+* [Download Lower Resolution Show](https://discussions.apple.com/thread/6516175?answerId=26546126022#26546126022)
+
 ## Downloading Movies and Entire TV Series as SD
 
 This is the easiest way to grab SD content:
@@ -26,7 +28,3 @@ For TV shows, you can also download individual episodes in SD, but you need to u
 * Right-click on any episode of the season, and choose "Show in iTunes Store".
 * In the left-hand sidebar, toggle from HD to SD (just below the series cover).
 * Download individual episodes FROM THIS PAGE. Again, if you switch back to your library, you'll download the HD version instead.
-
-## References
-
-* [Download Lower Resolution Show](https://discussions.apple.com/thread/6516175?answerId=26546126022#26546126022)

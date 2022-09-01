@@ -121,7 +121,7 @@ TryHackMe is using a set of PowerShell extensions called PowerView here. It does
 
 It looks like PowerShell needs to be run with execution protections bypassed in order to load PowerView. Fortunately, you can do this by running PowerShell from cmd.exe with a simple flag:
 
-```bat
+```powershell
 powershell -ep bypass
 ```
 

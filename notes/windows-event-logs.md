@@ -25,6 +25,8 @@ date:: 2022-04-18
 | Event ID      | Standardized (*not* unique!) identifier                                 |
 | Description   | Self-explanatory                                                        |
 
+* [Eventlog Key](https://docs.microsoft.com/en-us/windows/win32/eventlog/eventlog-key)
+
 ## Event Types
 
 | Event Type    | Description                                                                                                                                                                                                                                                                                              |
@@ -35,6 +37,8 @@ date:: 2022-04-18
 | Success Audit | An event that records an audited security access attempt that is successful. For example, a user's successful attempt to log on to the system is logged as a Success Audit event.                                                                                                                        |
 | Failure Audit | An event that records an audited security access attempt that fails. For example, if a user tries to access a network drive and fails, the attempt is logged as a Failure Audit event.                                                                                                                   |
 
+* [Event Types](https://docs.microsoft.com/en-us/windows/win32/eventlog/event-types)
+
 ## Event IDs
 
 | Event ID | Description                                              |
@@ -42,10 +46,5 @@ date:: 2022-04-18
 |      104 | Event log was cleared.                                   |
 |     1102 | Audit log was cleared (517 on Windows 2003 and earlier). |
 
-## References
-
-* [Eventlog Key](https://docs.microsoft.com/en-us/windows/win32/eventlog/eventlog-key)
-* [Event Types](https://docs.microsoft.com/en-us/windows/win32/eventlog/event-types)
 * [How to find out who deleted Event Viewer logs](https://serverfault.com/questions/743575/how-to-find-out-who-deleted-event-viewer-logs)
 * [Windows Security Event Log Cleared](https://support.alertlogic.com/hc/articles/115004121423-Windows-Security-Event-Log-Cleared)
-* [2022-04-18 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)

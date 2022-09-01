@@ -26,8 +26,6 @@ exiftool -r -d %s \
 
 Note that this will fail for any photos with a timestamp before 1970; for these photos, replace `"-DateTimeOriginal<PhotoTakenTimeTimestamp"` with `"-DateTimeOriginal<PhotoTakenTimeFormatted" -d "%b %d, %Y, %I:%M:%S %p UTC"`.
 
-## References
-
 * [How To Correctly Export And Migrate Away From Google Photos](https://legault.me/post/correctly-migrate-away-from-google-photos-to-icloud)
 * [ExifTool Dies on One Specific Photo](https://exiftool.org/forum/index.php?topic=10636.0)
 * [Google Takeout](https://takeout.google.com/settings/takeout)

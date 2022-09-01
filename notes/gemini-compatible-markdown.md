@@ -7,6 +7,9 @@ Gemini uses a syntax that is *almost* a subset of CommonMark.
 
 Be aware that Gemini treats all line breaks literally and clients are expected to wrap text. Line breaks are also rendered literally. So, one paragraph = one line!
 
+* [Project Gemini Speculative Specification](gemini://gemini.circumlunar.space/docs/specification.gmi)
+* [CommonMark Spec](https://spec.commonmark.org/current/)
+
 ## Allowed Formatting Elements
 
 The trick with Gemini formatting is to remember that the protocol is *line* oriented, so all formatting (including linking) is applied to the entire block. Inline formatting isn't supported, but can be used to the extent that raw markdown is easily readable.
@@ -41,22 +44,7 @@ Quote blocks cannot be nested in Gemini, and all interior formatting is preserve
 
 Gemini allows code blocks. In Gemini the code block type (normally something like `bash` or `html` in Markdown) is used by clients as "alt text". Unfortunately, many Markdown processors (including Jekyll) don't handle arbitrary strings in the code block type gracefully, so we need to stick with Markdown's conventions here.
 
-### "Code" Block Width
-
-Getting the width of code blocks right is a bit tricky. As of February 16, 2022, here's the maximum width of a line in a code block in Obsidian using the Minimal theme before wrapping occurs under a variety of circumstances:
-
-| Test Case                                | Max Line Width |
-|:---------------------------------------- | :-------------:|
-| Desktop 1/2 width with sidebar             |       57       |
-| Desktop without sidebar                  |       69       |
-| iPad Pro horizontal                      |       62       |
-| iPad Pro vertical with sidebar           |       49       |
-| iPad Pro vertical without sidebar        |       62       |
-| iPad Pro slide-over                      |       34       |
-| iPhone 11 Pro vertical                   |       34       |
-| iPhone 11 Pro horizontal without sidebar |       62       |
-
-This all actually suggests that 57 - 62 characters is a reasonable target for wrapping (I kind of wish it was 72, but *c'est la vie*).
+* [Jekyll](https://jekyllrb.com/)
 
 ### Tables
 
@@ -100,11 +88,4 @@ An image follows.
 
 Incidentally, this gives good guidance as to how to write image alt-text - alt-text should be thought of as the *linked text* for the image.
 
-## References
-
-* [Project Gemini Speculative Specification](gemini://gemini.circumlunar.space/docs/specification.gmi)
-* [CommonMark Spec](https://spec.commonmark.org/current/)
 * [tdemin / gmnhg](https://github.com/tdemin/gmnhg)
-* [Jekyll](https://jekyllrb.com/)
-* [Obsidian](https://obsidian.md)
-* [kepano / obsidian-minimal](https://github.com/kepano/obsidian-minimal)

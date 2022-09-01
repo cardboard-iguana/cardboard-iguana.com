@@ -5,8 +5,6 @@ date:: 2022-08-02
 
 Today I'll be covering the "Security" module of the "AWS Cloud Practitioner Essentials" course.
 
-REFERENCES:
-
 * [AWS Cloud Practitioner Essentials](https://www.aws.training/learningobject/curriculum?id=27076)
 
 ## Shared Responsibility

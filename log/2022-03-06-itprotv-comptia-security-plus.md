@@ -33,13 +33,7 @@ Types of DNS servers:
 
 DNSSEC is designed to provide an authentication layer for DNS to prevent cache poisoning. DNS responses are signed in DNSSEC, and the keys used to sign those responses are themselves signed in a hierarchical fashion that parallels the arrangement for authoritative servers. For example, in DNSSEC, the response for `www.example.com` will be signed by `example.com`, the key used by `example.com` will in turn be signed by `.com`, and the key used by `.com` will in turn be signed by one of the root servers.
 
-One reason DNSSEC is important is because DNS is increasingly used as a PKI for example:
-
-* DANE (DNS-based Authentication of Named Entities) enables X.509 certificates used in TLS to be validated using DNS.
-* SSHFP (SSH fingerprint posting) puts host fingerprints in DNS (what a great idea!).
-* DKIM
-
-References:
+One reason DNSSEC is important is because DNS is increasingly used as a PKI: DANE (DNS-based Authentication of Named Entities) enables X.509 certificates used in TLS to be validated using DNS, SSHFP (SSH fingerprint posting) puts host fingerprints in DNS (what a great idea!), and DKIM is used to authenticate email.
 
 * [Secure Hypertext Transfer Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Secure_Hypertext_Transfer_Protocol)
 * [Heartbleed (Wikipedia)](https://en.wikipedia.org/wiki/Heartbleed)
@@ -291,9 +285,9 @@ Other types of certificates:
 * Email: A certificate specifically flagged for use with S/MIME.
 * Root Signing: The certificate for a CA itself, such as those included with web browsers.
 * User/Client: Identifies an individual. Typically used for certificate-based authentication.
-* Machine/Computer: Identifies a particular machine. Typically used for peer-to-peer communications
+* Machine/Computer: Identifies a particular machine. Typically used for peer-to-peer communications.
 
-References:
+Code signing implementations are kind of wild, and not always in good ways.
 
 * [Verifying Windows binaries, without Windows](https://blog.trailofbits.com/2020/05/27/verifying-windows-binaries-without-windows/)
 

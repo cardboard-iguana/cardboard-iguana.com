@@ -12,6 +12,4 @@ xfreerdp /dynamic-resolution \
          /p:$PASSWORD
 ```
 
-## References
-
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)

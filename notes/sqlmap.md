@@ -35,8 +35,6 @@ sqlmap -u http://example.com/test.php \
 
 One handy way to seed a URL is using requests harvested with Burp Suite.
 
-## References
-
 * [TryHackMe: CC - Pen Testing](tryhackme-cc-pen-testing.md)
 * [How to use SQLMAP to test a website for SQL Injection vulnerability](https://www.geeksforgeeks.org/use-sqlmap-test-website-sql-injection-vulnerability/)
 * [TryHackMe: SQL Injection](tryhackme-sql-injection.md)

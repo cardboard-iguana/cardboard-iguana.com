@@ -19,7 +19,5 @@ wfuzz -z file,rockyou.txt \
 
 Use `wfuzz --help` for a full list of options. The `--hc 404` option is particularly useful for hiding pages that return a 404.
 
-## References
-
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [Using Burp Suite](burp-suite.md)

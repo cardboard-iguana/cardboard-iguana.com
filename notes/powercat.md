@@ -5,6 +5,10 @@ date:: 2022-08-26
 
 Powercat is a PowerShell-native reimplementation of netcat. Powercat can be installed on Kali Linux using `sudo apt install powercat`.
 
+* [besimorhino / powercat](https://github.com/besimorhino/powercat)
+* [Using PowerShell](powershell.md)
+* [Using "netcat"](netcat.md)
+
 ## One Line Reverse Shell
 
 This disables AMSI, downloads Powercat into memory and invokes the module and then fires up a reverse shell.
@@ -14,10 +18,5 @@ This disables AMSI, downloads Powercat into memory and invokes the module and th
 ```
 
 It's probably advisable to use your own server to host Powercat in order to make tripping network alarms less likely.
- 
-## References
 
-* [besimorhino / powercat](https://github.com/besimorhino/powercat)
-* [Using PowerShell](powershell.md)
-* [Using "netcat"](netcat.md)
 * [2022-08-26 - OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)

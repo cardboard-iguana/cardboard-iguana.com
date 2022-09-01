@@ -13,7 +13,5 @@ date:: 2022-04-21
 | `-p` | Show the process using the socket (broken?)                  |
 | `-n` | Show raw port numbers (not named services)                   |
 
-## References
-
 * [TryHackMe: Game Zone](tryhackme-game-zone.md)
 * [Using "netstat"](netstat.md)

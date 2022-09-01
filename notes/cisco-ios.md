@@ -1,5 +1,7 @@
 # Cisco IOS
 
+* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
+
 ## System Information
 
 ```bash
@@ -62,7 +64,3 @@ config
 interface $IFACE_TYPE $IFACE_NUM
 ip address $IP_ADDRESS $NETMASK
 ```
-
-## References
-
-* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

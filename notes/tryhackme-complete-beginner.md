@@ -4,6 +4,8 @@ author:: Nathan Acks
 date:: 2021-09-26  
 tags:: #MOC
 
+* [TryHackMe: Complete Beginner](https://tryhackme.com/path/outline/beginner)
+
 ## Introduction
 
 ### Tutorial
@@ -143,7 +145,3 @@ tags:: #MOC
 
 * [2021-11-07 - TryHackMe: Complete Beginner](../log/2021-11-07-tryhackme-complete-beginner.md)
 * [2021-11-08 - TryHackMe: Complete Beginner](../log/2021-11-08-tryhackme-complete-beginner.md)
-
-## References
-
-* [TryHackMe: Complete Beginner](https://tryhackme.com/path/outline/beginner)

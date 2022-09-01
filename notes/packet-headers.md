@@ -18,6 +18,4 @@ Important common TCP and UDP packet headers.
 | Data                   |  Y  |  Y  | The, well, data.                                                                                                                                                        |
 | Flag(s)                |  Y  |     | How the packet should be handled (SYN, ACK, FIN, RST, etc.).                                                                                                            |
 
-## References
-
 * [TryHackMe: Pre Security](tryhackme-pre-security.md)

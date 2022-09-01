@@ -65,6 +65,7 @@
 
 * [Kerberos](notes/kerberos.md)
 * [Windows Event Logs](notes/windows-event-logs.md)
+* [Windows Firewall](notes/windows-firewall.md)
 * [Windows Password Hashes](notes/windows-password-hashes.md)
 * [Windows Permissions](notes/windows-permissions.md)
 
@@ -204,6 +205,7 @@
 * [Using OWASP ZAP](notes/owasp-zap.md)
 * [Using Rubeus](notes/rubeus.md)
 * [Using "sqlmap"](notes/sqlmap.md)
+* [Use SSH as a Proxy](notes/use-ssh-as-a-proxy.md)
 * [Using "wfuzz"](notes/wfuzz.md)
 * [Using Wireshark](notes/wireshark.md)
 * [Wappalyzer](https://www.wappalyzer.com/)

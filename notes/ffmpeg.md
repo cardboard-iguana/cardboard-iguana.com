@@ -12,6 +12,9 @@ ffmpeg -i ${INPUT}.m4a -c:v copy -c:a libmp3lame \
 
 The -q:a parameters correspond to LAME's -V option, so 0 is the highest quality and 9 is the lowest quality. While everyone says to use 3 or 4 for this parameter, in my experience even using 0 will often result in a *smaller* file than an m4a original. (What's up with that? I thought that m4a was supposed to be more efficient than mp3?)
 
+* [FFMPEG: Convert m4a to mp3 without significant loss](https://superuser.com/a/704535)
+* [FFmpeg MP3 Encoding Guide](https://trac.ffmpeg.org/wiki/Encode/MP3)
+
 ## MP4 to GIF
 
 ```bash
@@ -27,6 +30,8 @@ ffmpeg -i $INPUT.mp4 -i $PALETTE.png \
 	                    $OUTPUT.gif
 ```
 
+* [Create animated GIFs from MP4 with FFmpeg](https://homehack.nl/create-animated-gifs-from-mp4-with-ffmpeg/)
+
 ## MP4 to WebP
 
 ```bash
@@ -37,9 +42,4 @@ ffmpeg -i $INPUT.mp4 \
        -vsync 0 $OUTPUT.webp
 ```
 
-## References
-
-* [FFMPEG: Convert m4a to mp3 without significant loss](https://superuser.com/a/704535)
-* [FFmpeg MP3 Encoding Guide](https://trac.ffmpeg.org/wiki/Encode/MP3)
-* [Create animated GIFs from MP4 with FFmpeg](https://homehack.nl/create-animated-gifs-from-mp4-with-ffmpeg/)
 * [Create animated GIF and WebP from videos using FFmpeg](https://mattj.io/posts/2021-02-27-create-animated-gif-and-webp-from-videos-using-ffmpeg/)

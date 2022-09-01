@@ -15,8 +15,4 @@ If the poison null byte doesn't work, another trick relies on the fact that for 
 
 Representing `../` as `....//` can bypass filters that replace `../`, as PHP search-and-replace only does a single pass through a string (it should be obvious how to extend this if a developer tries  to just run a search and replace *twice*).
 
-## References
-
-* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
-* [TryHackMe: Jr. Penetration Tester](tryhackme-jr-penetration-tester.md)
 * [The Poison Null Byte](poison-null-byte.md)

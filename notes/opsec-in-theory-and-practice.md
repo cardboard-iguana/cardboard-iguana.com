@@ -7,6 +7,9 @@ An overview of OPSEC history and practice produced by The Grugq.
 
 The course is presented as self-paced, but seems to be just recordings of a set of live presentations. Occasionally there's mentions of movies or other supplemental activities that aren't included in the course site, so I think the fact that I watched/read the material well after its initial release means that I missed some "extracurricular" portions of the sequence.
 
+* [OPSEC in Theory and Practice](https://learn.opsec.institute/courses/opsec-in-theory-and-practice)
+* [The Grugq (Twitter)](https://twitter.com/thegrugq)
+
 ## How to Use This Course
 
 This is just a quick introduction to the online course software. If you've ever taken an online course (or, I dunno, used the web?), this is all 100% obvious.
@@ -46,6 +49,8 @@ The most famous implementation here is probably the CIA's "three Cs":
 
 There's also the simpler "denial and deception" conception.
 
+* [Operations security (Wikipedia)](https://en.wikipedia.org/wiki/Operations_security)
+
 ### The Three Cs
 
 COVER: Make sure that what people see on the surface doesn't stand out. You don't want to be interesting, or worth taking notice of.
@@ -57,6 +62,8 @@ COMPARTMENTALIZATION: "Need to know." But a bigger key here is making sure that 
 COUNTER(INTELLIGENCE): The Grugq likes to add an additional, active component. Think of this as "active cover" - allowing misdirection to limit the effectiveness of the opposition.
 
 This is like Corey Doctorow's "chaff" (from "Little Brother") or canarytokens. In cybersecurity, an attacker might leave behind a more easily discovered rootkit for the defenders to find, while attempting to conceal the intrusion tools they actually care most about.
+
+* [Canarytokens](https://canary.tools/help/canarytokens)
 
 ### Operational Security
 
@@ -148,6 +155,9 @@ Again, this reminds me a bit of the corollary to the Quinn Norton maxim that I'm
 TREAT PERSONNEL COMPROMISE AS CATASTROPHIC: Assume that the information that anyone who has been arrested or compromised has is now known to your adversary, and act appropriately.
 
 ### Disguise on the Run
+
+* [How Spies Use Disguises](https://www.wired.com/video/watch/how-spies-use-disguises)
+* [Former CIA Operative Explains How Spies Use Disguises](https://youtu.be/JASUsVY5YJ8)
 
 This is a video from Wired.
 
@@ -304,6 +314,8 @@ From an offensive ("red team") perspective, this reminds me of the old Kali Linu
 
 A lot of this feels like admonishes to take your time, even under pressure. "Meticulous thought and planning are a must."
 
+* [Kali Linux](https://www.kali.org)
+
 ## Never Get Busted Again
 
 The Grugq outlines what they see as the "core OPSEC principles" in the preface to this section:
@@ -436,6 +448,8 @@ This has very strong security, but has the drawback that you don't know if the m
 Active *impersonal* communications (phone, radio, internet) reduces the risk that messages sent through a cut-out are misunderstood (since there's an opportunity for two-way, closer to real-time communications). But this obviously elevates the risk that members of different cells can be linked or communications intercepted.
 
 Passive impersonal communications thus tend to be preferred in higher risk environments (where simply not being caught often dominates the success of any particular mission), while active impersonal communications is used in environments with a lower risk to individual cells and agents (since it increases operational efficiency).
+
+* [The Troubles (Wikipedia)](https://en.wikipedia.org/wiki/The_Troubles)
 
 ### Couriers
 
@@ -610,6 +624,8 @@ On a more personal note:
 
 I've personally found this a much harder balancing act than one would think.
 
+* [Johnny Mnemonic (film) (Wikipedia)](https://en.m.wikipedia.org/wiki/Johnny_Mnemonic_%28film%29)
+
 ## Selected SOE Training Lectures
 
 ### Individual and Collective Security
@@ -743,6 +759,8 @@ Security is a process, and good security habits make it easier to follow that pr
 > You don't turn to the rules for answers, you turn to the process.
 > 
 > - The Grugq
+
+* [Ethan Mollick on Twitter](https://twitter.com/emollick/status/1435302327045472257)
 
 ### Covert Interactions
 
@@ -924,6 +942,8 @@ a.k.a. "Cut-outs".
 
 The discussion of the new abilities vs. new risks opened up by the internet reminds me a lot of Zeynep Tufekci's deeper conversation about the "affordances" of different technologies from "Twitter and Tear Gas".
 
+* [Twitter and Tear Gas](https://www.twitterandteargas.org)
+
 ### Counter Surveillance
 
 If there's a take-away to this section, it seems to be that unmanned, computer-assisted aerial surveillance has been more of a counterintelligence game-changer than the signals intelligence work of the NSA, *et al.* A lot of older counter surveillance techniques (such as switching vehicles) are much less effective against modern aerial surveillance (which, if it is previously tracking someone, can often identify the switch).
@@ -984,6 +1004,10 @@ Apparently there's a book out about this from the *KGB's* called *Spy Handler*, 
 
 Hanssen worked for the FBI's counterintelligence unit, and leaked *CIA* secrets that came through that team to the KGB. Hanssen worked for the KGB from the mid-1980s through the 1990s.
 
+* [Robert Hanssen (Wikipedia)](https://en.wikipedia.org/wiki/Robert_Hanssen)
+* [KGB (Wikipedia)](https://en.wikipedia.org/wiki/KGB)
+* [Foreign Intelligence Service (Russia) (Wikipedia)](https://en.wikipedia.org/wiki/Foreign_Intelligence_Service_%28Russia%29)
+
 ### Hanssen's Tradecraft
 
 Hanssen knew that the KGB had been compromised previously, and so aimed to use extreme compartmentalization to provide information without ever revealing themself to them.
@@ -1026,6 +1050,8 @@ Despite all of these precautions, Hanssen doesn't make the next drop because the
 
 (Apparently the CIA had a real problem in the 1980s with overseas agents skimming money that was earmarked to pay assets... And sometimes just completely making up assets and pocket the entire funding stream!)
 
+* [Prisoner's dilemma (Wikipedia)](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
+
 ### For Sale Ad
 
 Eventually, Hanssen became confident that the surveillance of the agent being used as a cut-out was not related to them and arranged another meeting. This time, Hanssen set up a new communications method: the use of a for sale ad. The ad would specify a number and time to call, Hanssen would call and after a brief authentication exchange leave a second number were the KGB could deposit a *recorded* message. So again, we're trying to minimize all real time interactions, even over the phone.
@@ -1045,22 +1071,3 @@ Real life is messy, and even spies often allow efficiency to trump security.
 That said, since 1945 no (US?) agents have been uncovered because of tradecraft errors. "The Moscow Rules" work.
 
 Counterintelligence is a long game. You're waiting for a mistake... And once a mistake is made, it's often possible to unravel the entire thing.
-
-## References
-
-* [OPSEC in Theory and Practice](https://learn.opsec.institute/courses/opsec-in-theory-and-practice)
-* [Operations security (Wikipedia)](https://en.wikipedia.org/wiki/Operations_security)
-* [The Grugq (Twitter)](https://twitter.com/thegrugq)
-* [Canarytokens](https://canary.tools/help/canarytokens)
-* [How Spies Use Disguises](https://www.wired.com/video/watch/how-spies-use-disguises)
-* [Former CIA Operative Explains How Spies Use Disguises](https://youtu.be/JASUsVY5YJ8)
-* [Kali Linux](https://www.kali.org)
-* [Thinkst Canary](https://canary.tools)
-* [The Troubles (Wikipedia)](https://en.wikipedia.org/wiki/The_Troubles)
-* [Johnny Mnemonic (film) (Wikipedia)](https://en.m.wikipedia.org/wiki/Johnny_Mnemonic_%28film%29)
-* [Ethan Mollick on Twitter](https://twitter.com/emollick/status/1435302327045472257)
-* [Twitter and Tear Gas](https://www.twitterandteargas.org)
-* [Robert Hanssen (Wikipedia)](https://en.wikipedia.org/wiki/Robert_Hanssen)
-* [KGB (Wikipedia)](https://en.wikipedia.org/wiki/KGB)
-* [Foreign Intelligence Service (Russia) (Wikipedia)](https://en.wikipedia.org/wiki/Foreign_Intelligence_Service_%28Russia%29)
-* [Prisoner's dilemma (Wikipedia)](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)

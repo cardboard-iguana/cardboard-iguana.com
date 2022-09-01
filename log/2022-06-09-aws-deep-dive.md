@@ -7,8 +7,6 @@ date:: 2022-06-09
 
 Today I'll be finishing up the "AWS Essentials" YouTube playlist put together by the Linux Academy.
 
-REFERENCES:
-
 * [AWS Essentials (YouTube)](https://youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)
 
 ### Elastic Block Store (EBS)
@@ -23,8 +21,6 @@ EC2 instances can't be booted from EBS snapshots directly. However, a snapshot c
 
 Data stored as a snapshot is *a lot* less expensive than the same data stored on an EBS volume.
 
-REFERENCES:
-
 * [AWS Essentials: Elastic Block Store (EBS) (YouTube)](https://youtu.be/S0gzrxsVQHo)
 
 ### Security Groups
@@ -35,8 +31,6 @@ By default, all inbound traffic is denied and all outbound traffic is allowed in
 
 There are no DENY rules for security groups, only ALLOW rules. Any traffic not matched by a rule will be dropped.
 
-REFERENCES:
-
 * [AWS Essentials: Security Groups (YouTube)](https://youtu.be/-9j7BvAyb2w)
 
 ### IP Addressing
@@ -45,15 +39,11 @@ EC2 instances can be launched with public IP addresses so long as the subnet its
 
 EC2 instances in the default VPC will launch with public IP addresses out-of-the-box.
 
-REFERENCES:
-
 * [AWS Essentials: IP Addressing (YouTube)](https://youtu.be/U32bPhQyQ6I)
 
 ### Launching and Using an EC2 Instance
 
 When setting up an EC2 instance, you have the ability to specify a script that will be run on first boot. This is generally used to install and configure software.
-
-REFERENCES:
 
 * [AWS Essentials: Launching and Using an EC2 Instance (YouTube)](https://youtu.be/BCM9aaaWvR0)
 
@@ -65,8 +55,6 @@ DynamoDB is Amazon's NoSQL option; there's no choice of backends here, though Dy
 
 Pricing for RDS parallels that for EC2 (which makes sense), while DynamoDB pricing is looks more like S3 (if you squint).
 
-REFERENCES:
-
 * [AWS Essentials: RDS and DynamoDB Basics (YouTube)](https://youtu.be/KcJ8-I7kD_w)
 
 ### Provisioning and RDS MySQL Database
@@ -74,8 +62,6 @@ REFERENCES:
 Not only can't RDS use Aurora on the free tier, but it's limited to running MySQL in "developer" mode (though it's unclear what that means).
 
 RDS instances aren't provisioned directly into subnets like EC2 instances. Instead, you define a "subnet group" (which might contain only a single subnet). This determines which EC2 instances the RDS instance can communicate with. Note that the RDS instance will be automatically deployed to an availability zone matching one of the subnets in its subnet group, though you can override this (though you are similarly restricted) if you wish.
-
-REFERENCES:
 
 * [AWS Essentials: Provisioning and RDS MySQL Database (YouTube)](https://youtu.be/OE25Sni15vo)
 
@@ -86,7 +72,5 @@ SNS = Simple Notification Service
 SNS allows notifications from AWS to be pushed out to "subscribed" clients. These can be internal to AWS (SQS, Lambda) or external (HTTP push, SMS, email). Queues in SNS are called "topics"; sending a message to a topic will cause it to be pushed out to any "subscribed" endpoints (what this means in practice will vary depending on *how* the endpoints are subscribed).
 
 SNS and CloudWatch are often used together as a server event/alarm notification system.
-
-REFERENCES:
 
 * [AWS Essentials: SNS Basics (YouTube)](https://youtu.be/M4gQ8MLlgiY)

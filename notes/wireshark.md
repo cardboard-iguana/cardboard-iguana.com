@@ -50,9 +50,3 @@ Protocol names can be resolved in the Wireshark preferences by checking the "Nam
 ### Color Rules
 
 Color rules are just filters; they're matched in order (from top down), with the first matched coloring rule applying. Note that Wireshark is not really consistent about applying new coloring rules - it's best to reload the file after creating/modifying rules.
-
-## References
-
-* [2022-08-11 - DEF CON 30](../log/2022-08-11-def-con-30.md)
-* [TCP Protocol](tcp.md)
-* [2022-08-13 - DEF CON 30](../log/2022-08-13-def-con-30.md)

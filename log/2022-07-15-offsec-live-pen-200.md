@@ -7,6 +7,9 @@ Today we'll be focusing on *passive* information gathering (which should really 
 
 The big conceptual difference between "active" and "passive" information gathering is whether your activity "looks normal" to the defenders. So, browsing a website is passive (though it's not *strictly* so), as is using third-party tools that would *not* alert the defenders (so Shodan, Google, and Netcraft are passive, but online port scanners are not).
 
+* [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
+* [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
+
 ## Whois
 
 The `whois` tool can also be used on IP addresses (in which case it will do a reverse lookup):
@@ -43,8 +46,3 @@ Shodan supports a lot of different filters for different services, IoT devices, 
 ## Stack Overflow
 
 See if you can find accounts that are linked to your target, and then look for the questions they've asked. Sometimes the "answers" are not actually secure, and can be exploited!
-
-## References
-
-* [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
-* [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)

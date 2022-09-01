@@ -31,8 +31,6 @@ curl -X POST -F "submit=$SUBMIT_VALUE" \
 
 Basically, bypassing server-side filters is going to involve a lot of trial and error until we figure out what the filter is (and how to work around it).
 
-The trick, of course, is not only that you need to upload your file, but that you need to use an extension that the server will execute!
-
 Note that sometimes developers just check to see if a valid extension exists within a file, so things like reverse-shell.jpg.php will work. Happy days if this is you.
 
 Common file extensions for PHP:
@@ -44,7 +42,7 @@ Common file extensions for PHP:
 * .phps (though I've always seen this as *source* code)
 * .php# (where `#` is the running PHP major version)
 
-References:
+The trick, of course, is not only that you need to upload your file, but that you need to use an extension that the server will execute!
 
 * [PHP (Wikipedia)](https://en.wikipedia.org/wiki/PHP)
 

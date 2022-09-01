@@ -2,6 +2,8 @@
 
 date:: 2022-07-11
 
+* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
+
 SIP usually uses ports 5060 TCP or UDP for unencrypted signaling or 5061 for encrypted transportation using TLS.
 
 SIP is an ASCII based protocol which has some similar elements like in the HTTP protocol by using a request/response model. Much like an HTTP request from a browser a SIP client request is made using a SIP URI a user agent and a method/request. SIP uses e-mail like addresses format:
@@ -67,7 +69,3 @@ Content-Length: 310
 * Conversation begins via RTP.
 * When the caller hangs up the phone a BYE request is sent.
 * The calling phone responds with 200 (OK).
-
-## References
-
-* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

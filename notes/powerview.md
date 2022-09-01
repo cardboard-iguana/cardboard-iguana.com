@@ -5,6 +5,9 @@ date:: 2022-08-26
 
 PowerView is a PowerShell reconnaissance tool. Note that AMSI will need to be disabled in the current session before it can be used.
 
+ * [PowerShellMafia / PowerSploit / Recon / PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
+* [Using PowerShell](powershell.md)
+
 ## Domain Enumeration
 
 ```powershell
@@ -32,9 +35,5 @@ Get-NetLoggedon | select UserName
 Get-NetSession
 ```
  
-## References
-
- * [PowerShellMafia / PowerSploit / Recon / PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
-* [Using PowerShell](powershell.md)
 * [2022-08-24 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-24-offsec-live-pen-200-and-aws-deep-dive.md)
 * [2022-08-26 - OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)

@@ -27,11 +27,11 @@ Bluetooth communication actually involves the creation of a very small (two devi
 
 There are three NFC modes:
 
-* Read/Write (only in one direction, with the "active" device initiating the read/write)
-* Peer-to-Peer (read/write in *both* directions)
-* Card Emulation (for credit card payments)
+(1) Read/Write (only in one direction, with the "active" device initiating the read/write)
 
-References:
+(2) Peer-to-Peer (read/write in *both* directions)
+
+(3) Card Emulation (for credit card payments)
 
 * [General Packet Radio Service (Wikipedia)](https://en.wikipedia.org/wiki/General_Packet_Radio_Service)
 

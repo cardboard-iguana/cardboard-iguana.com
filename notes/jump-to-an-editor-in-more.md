@@ -8,6 +8,4 @@ Note that using `!` to invoke a command (!/bin/bash, etc.) won't work, as by def
 
 (Exotic shells in /etc/passwd can also cause commands executed via ssh to fail for the same reason.)
 
-## References
-
 * [ssh works with my custom shell but can't execute commands directly using ssh](https://stackoverflow.com/a/52673010)

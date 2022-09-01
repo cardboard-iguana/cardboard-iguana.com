@@ -27,7 +27,4 @@ openssl req -new -config $SITE.cnf \
             -key $SITE.key -out $SITE.csr
 ```
 
-## References
-
-* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
 * [Let's Encrypt](https://letsencrypt.org/)

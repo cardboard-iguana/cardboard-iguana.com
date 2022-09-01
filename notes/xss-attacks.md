@@ -27,6 +27,8 @@ A much less annoying XSS test is to manipulate the `innerHTML` of page elements:
 </script>
 ```
 
+* [Document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+
 ## Tips for Writing JavaScript
 
 JavaScript accepts back-ticks as a type of quotation mark, so we actually have three different marks to work with (single quote, double quote, and back-tick).
@@ -74,6 +76,9 @@ For really heavy filtering, use something nutso like JSFuck.
 (Note that things like the JavaScript Obfuscator Tool won't always remove functions and strings, as they tend to be geared more towards thwarting script analysis than bypassing filters.)
 
 Sometimes filters are applied in a case-sensitive fashion. While JavaScript *is* case-sensitive, URL schemes, HTML tag names, and HTML tag attributes are case-*insensitive* (so, `javascript:` is treated the same as `javaSCRIPT:`, `onclick` is treated the same as `ONCLICK`, etc.).
+
+* [JSFuck](http://www.jsfuck.com/)
+* [JavaScript Obfuscator Tool](https://obfuscator.io/)
 
 ### Using iFrames and Images
 
@@ -125,6 +130,8 @@ Finally, `javascript:` URIs can also be included in anchor(`<a/>`) `href` attrib
 
 Adding the user's session cookie here allows us to tell whose keystrokes are whose!
 
+* [Document.cookie](https://developer.mozilla.org/docs/Web/API/Document/cookie)
+
 ### Port Scanning
 
 [An example JavaScript port scanner (possibly broken).](https://github.com/aabeling/portscan)
@@ -140,13 +147,3 @@ Note that `<script/>` tags inserted by setting an element's `innerHTML` are *not
 ## Defense
 
 The key to defending against XSS is really to get your encoding right. User-generated code that's passed off to JavaScript needs to be JavaScript-escaped first. User-generated code that's written into the DOM needs to be HTML-escaped first. Know what the context is of your data, and escape/unescape appropriately when writing data from one context to another!
-
-## References
-
-* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [TryHackMe: Cross-Site Scripting](tryhackme-cross-site-scripting.md)
-* [Document.cookie](https://developer.mozilla.org/docs/Web/API/Document/cookie)
-* [Document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
-* [JSFuck](http://www.jsfuck.com/)
-* [JavaScript Obfuscator Tool](https://obfuscator.io/)
-* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

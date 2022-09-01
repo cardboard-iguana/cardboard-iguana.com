@@ -9,7 +9,5 @@ The `hexeditor` app is a quick-and-easy hex editor, and `file` can give you a se
 
 Note that this can be a lot trickier if you're not dealing with PHP, since many languages don't have PHP's concept of interpreted vs. non-interpreted bits. In these cases, you'll need to intercept the upload request and remove the extra bytes, less you end up with an unexecutable reverse shell!
 
-## References
-
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)

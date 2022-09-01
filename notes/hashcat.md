@@ -30,6 +30,10 @@ Hashcat can accept the output of hashdump from Metasploit (use -m 1000), as well
 
 A "token length exception" means that the provided hash format is of the wrong length (probably because an additional character got accidentally added).
 
+* [Kali Hashcat and John the Ripper Crack Windows Password hashdump](https://pentesthacker.com/2020/12/27/kali-hashcat-and-john-the-ripper-crack-windows-password-hashdump/)
+* [Cracking Linux Password Hashes with Hashcat](https://samsclass.info/123/proj10/p12-hashcat.htm)
+* [hashcat - cracking a salted sha256](https://security.stackexchange.com/a/204978)
+
 ## Utilities
 
 ### Combinator
@@ -40,13 +44,3 @@ The Hashcat `combinator.bin` utility combines two wordlists such that every entr
 /usr/lib/hashcat-utils/combinator.bin \
 	$WORDLIST1 $WORDLIST2 > $COMBINED_WORDLIST
 ```
-
-## References
-
-* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [Kali Hashcat and John the Ripper Crack Windows Password hashdump](https://pentesthacker.com/2020/12/27/kali-hashcat-and-john-the-ripper-crack-windows-password-hashdump/)
-* [TryHackMe: CC - Pen Testing](tryhackme-cc-pen-testing.md)
-* [Cracking Linux Password Hashes with Hashcat](https://samsclass.info/123/proj10/p12-hashcat.htm)
-* [hashcat - cracking a salted sha256](https://security.stackexchange.com/a/204978)
-* [TryHackMe: hackernote](tryhackme-hackernote.md)
-* [Using Metasploit](metasploit.md)

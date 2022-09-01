@@ -178,8 +178,6 @@ for username in usernames.readlines():
 usernames.close()
 ```
 
-References used while writing this:
-
 * [Opening and Closing Files in Python](https://www.tutorialspoint.com/opening-and-closing-files-in-python)
 * [Python - Command Line Arguments](https://www.tutorialspoint.com/python/python_command_line_arguments.htm)
 * [Python File readlines() Method](https://www.tutorialspoint.com/python/file_readlines.htm)

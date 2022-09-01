@@ -71,10 +71,18 @@ Prefix `n` with + or - to match files *strictly* before or after the specified t
 
 For example:
 
-* `-amin +30` matches files accessed *more* than 30 minutes ago.
-* `-mtime -7` matches files modified *less* than 7 days ago.
-* `-mtime 0` matches files modified *today*.
+```bash
+# Matches files accessed *more* than 30 minutes ago
+#
+find . -type f -amin +30
 
-References:
+# Matches files modified *less* than 7 days ago
+#
+find . -type f -mtime -7
+
+# Matches files modified *today*
+#
+find . -type f -mtime 0
+```
 
 * [Symbolic Permissions](../notes/symbolic-permissions.md)

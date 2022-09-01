@@ -105,8 +105,6 @@ done < <(find $DIR -type f -print0)
 # Bash interprets as the null character) is *required*.
 ```
 
-## References
-
 * [Bash scripting cheatsheet](https://devhints.io/bash)
 * [$IFS](https://bash.cyberciti.biz/guide/$IFS)
 * [Bash - variable variables](https://stackoverflow.com/a/10757531)

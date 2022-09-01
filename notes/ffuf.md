@@ -49,8 +49,3 @@ ffuf -w /usr/share/wordlists/wfuzz/others/names.txt:W1,$HOME/.local/share/red-te
 Here we assign W1 and W2 to take terms from the two supplied wordlists; `$POST_VARS` then looks something like `username=W1&password=W2`. This example assumes that a successful login will return an HTTP status code *other* than 200 (probably a 301 or 302);  `-s` supresses all output except successful fuzzes (the inverse of `-fc`).
 
 Note that ffuf will try every possible combination of elements between the two wordlists, which means that the number of combinations tried grows geometrically. So you probably *don't* want to try the above example directly, but rather generate a shorter user list first via enumeration (see the previous section).
-
-## References
-
-* [TryHackMe: Jr. Penetration Tester](tryhackme-jr-penetration-tester.md)
-* [Using "gobuster"](gobuster.md)

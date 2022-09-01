@@ -59,6 +59,9 @@ OS and Service detection performed. Please report any incorrect results at https
 
 So we've got IIS and RDP running. Let's start by taking a look around IIS.
 
+* [TryHac"Me: Blaster](tryhackme-blaster.md)
+* [Using "nmap"](nmap.md)
+
 ## Flag 1: The Hidden Directory
 
 As with Blaster, we just have the default IIS welcome page. So let's follow up with gobuster since we know from the flag list that there's a hidden directory
@@ -71,6 +74,8 @@ gobuster \
 ```
 
 Still paralleling Blaster, the hidden directory is `/retro`.
+
+* [Using "gobuster"](gobuster.md)
 
 ## Flag 2: `user.txt`
 
@@ -95,6 +100,9 @@ xfreerdp /dynamic-resolution +clipboard /cert:ignore \
 
 Unsurprisingly, this works. The `user.txt` file on the desktop contains the second flag (which is different than in Blaster!).
 
+* [Ready Player One (Wikipedia)](https://en.wikipedia.org/wiki/Ready_Player_One)
+* [Using XFreeRDP](xfreerdp.md)
+
 ## Flag 3: `root.txt`
 
 This flag is probably in `C:\Users\Administrator\Desktop
@@ -114,15 +122,8 @@ oot.txt.txt` (note the extra `.txt`) to obtain the final flag.
 
 (I kinda feel like I cheated now, since I did Blaster first without realizing that this room was almost *exactly* the same.)
  
-ELAPSED TIME: 1 h 16 min
-
-## References
-"
-* [TryHac"Me: Blaster](tryhackme-blaster.md)
-* [Using "nmap"](nmap.md)
-* [Using "gobuster"](gobuster.md)
-* [Ready Player One (Wikipedia)](https://en.wikipedia.org/wiki/Ready_Player_One)
-* [Using XFreeRDP](xfreerdp.md)
 * [CVE-2019-1388 Detail (National Vulnerability Database)](https://nvd.nist.gov/vuln/detail/CVE-2019-1388)
 * [CVE-2019-1388 (nagenrauft-consulting.com)](https://www.nagenrauft-consulting.com/2019/11/21/cve-2019-1388-hhupd-exe/)
 * [CVE-2019-1388: Windows Privilege Escalation Through UAC](https://www.youtube.com/watch?v=3BQKpPNlTSo)
+
+ELAPSED TIME: 1 h 16 min

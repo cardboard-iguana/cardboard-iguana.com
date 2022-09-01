@@ -9,11 +9,13 @@ Basically, an ARP request will broadcast "to" a particular IP address but using 
 
 Because ARP requests are about binding a MAC address to an IP address, they are necessarily limited to the current subnet.
 
+* [OSI Model](osi-model.md)
+
 ## ARP Cache
 
 Examine the ARP cache on Windows:
 
-```bat
+```powershell
 arp -a
 ```
 
@@ -45,11 +47,6 @@ for send, receive in ans:
 
 Note that the `r` here isn't a mistake -- rather it specifies a "raw string" (the use of which, incidentally, requires Python 3.6+).
 
-## References
-
-* [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md)
 * [TryHackMe: Python for Pentesters](tryhackme-python-for-pentesters.md)
-* [OSI Model](osi-model.md)
 * [Scapy](https://scapy.net/)
 * [Quick Answer: How Do You Write An F String In Python](https://whatisanything.com/how-do-you-write-an-f-string-in-python/#What_does_R_mean_Python)
-* [2022-03-31 - TryHackMe: Jr. Penetration Tester](../log/2022-03-31-tryhackme-jr-penetration-tester.md)

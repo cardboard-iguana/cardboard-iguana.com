@@ -24,7 +24,5 @@ Remember to turn the paging file back on after compacting the drive (for Windows
 
 Note that this only works on a disk image *without any snapshots*.
 
-## References
-
 * [How to compact VirtualBox's VDI file size?](https://superuser.com/questions/529149/how-to-compact-virtualboxs-vdi-file-size/529183#529183)
 * [SDelete](https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete)

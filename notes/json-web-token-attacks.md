@@ -13,6 +13,9 @@ JSON web token format: `$HEADER.$PAYLOAD.$SIGNATURE`, where each substring is (U
 
 Use `basenc --base64url` and `basenc -d --base64url` to encode/decode URL-safe base64, rather than the `base64` binary. Be sure to strip the trailing `=` signs!
 
+* [JSON Web Tokens](https://jwt.io)
+* [Using "basenc"](basenc.md)
+
 ## Attacks
 
 ### "None" Attacks
@@ -45,9 +48,4 @@ sed -e 's/=*$//'
 
 *If* a weak secret (a simple string) is used to sign the JWT token, then it is sometimes possible to brute-force it using JWT-Cracker.
 
-## References
-
-* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
-* [JSON Web Tokens](https://jwt.io)
 * [lmammino / jwt-cracker](https://github.com/lmammino/jwt-cracker)
-* [Using "basenc"](basenc.md)

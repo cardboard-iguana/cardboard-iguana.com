@@ -14,6 +14,4 @@ POP3 commands:
 |    RETR | Retrieve message `$MESSAGE_NUMBER`                      |
 |    QUIT | Close connection                                        |
 
-## References
-
 * [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)

@@ -25,6 +25,8 @@ Note that Active Directory bundles the authentication service, ticket granting s
 
 The below steps are cut-and-pasted from Wikipedia's walk-through, but with language adapted to match the Windows-specific environment Kerberos is most commonly deployed in. (A close reading of these steps will also explain why it's sometimes said that "a hash is as good as a password" for a Window's domain.)
 
+* [Wikipedia: Kerberos (protocol)](https://en.wikipedia.org/wiki/Kerberos_%28protocol%29)
+
 ### Client Authentication to the KDC (a.k.a. "Pre-Authentication")
 
 (1) AS-REQ: The client sends the client/user ID + the current timestamp (the timestamp is used to prevent replay attacks) encrypted with the NT hash of the user's password + a cleartext message of the user ID to the authentication server to request services on behalf of the user.
@@ -67,6 +69,10 @@ The below steps are cut-and-pasted from Wikipedia's walk-through, but with langu
 
 There's a bit of terminology creep when discussing Kerberos tickets. Mimikatz and Rubeus are actually dumping Kerberos data structures (as .kirbi files), which contain *both* a ticket *and* the corresponding session key. People tend to call these .kirbi files "tickets", but it's worth keeping in mind that they contain *both* pieces of data (as a "ticket" in the Kerberos sense, not the hacker's sense, isn't useful without the corresponding session key).
 
+* [Rubeus - Now With More Kekeo](http://www.harmj0y.net/blog/redteaming/rubeus-now-with-more-kekeo/)
+* [Using Mimikatz](mimikatz.md)
+* [Using Rubeus](rubeus.md)
+
 ## Atacking Kerberos
 
 ### Kerberoasting
@@ -78,10 +84,16 @@ Note that not every account is kerberoastable, though it's not 100% obvious from
 The `Invoke-Kerberoast` PowerShell module can be used to create a dump of service tickets that can then be attacked offline using Hashcat of John the Ripper. (Note that calling `Out-File` with the `-Width 8000` option is important in the below example, as otherwise the ticket can be truncated!)
 
 ```powershell
-Invoke-Kerberoast -OutputFormat Hashcat | Select-Object Hash | Out-File -filepath "$FILE_PATH" -Width 8000
+Invoke-Kerberoast -OutputFormat Hashcat |
+	Select-Object Hash |
+	Out-File -filepath "$FILE_PATH" -Width 8000
 ```
 
 The main defenses against kerberoasting are (1) strong passwords and (2) making sure you're not running any services as domain admin (which you shouldn't need to do in this day and age anyway).
+
+* [EmpireProject / Empire / module_source / credentials / Invoke-Kerberoast.ps1](https://github.com/EmpireProject/Empire/blob/master/data/module_source/credentials/Invoke-Kerberoast.ps1)
+* [Using Hashcat](hashcat.md)
+* [Using John the Ripper](john-the-ripper.md)
 
 ### AS-REP Roasting
 
@@ -90,6 +102,8 @@ AES-REP roasting is basically kerberoasting for regular user accounts. The only 
 (When pre-authentication is disabled, the authentication server will supply a ticket granting ticket and a session key automatically when requested, *without first verifying the user*. This data is then stored offline by the Windows machine for later decryption when the user with pre-authentication disabled logs in. But this means that all we need to do is to break the user's NT hash!)
 
 Basically the only mitigation for this attack is to keep pre-authentication enabled, though strong password policies can help.
+
+* [Windows Password Hashes](windows-password-hashes.md)
 
 ### Pass the Ticket Attacks
 
@@ -105,18 +119,5 @@ Golden tickets take things a step further - if you can get the `krbtgt` *user*'s
 
 Golden tickets are powerful (since you can be anyone, it's trivial to gain control of the domain), but also noisier - because you're running through the KDC infrastructure, golden ticket still generate (almost) all of the normal logging, while silver tickets allow you to bypass the KDC completely and only generate logs on the service server (if that).
 
-## References
-
-* [TryHackMe: Attacking Kerberos](tryhackme-attacking-kerberos.md)
 * [Golden ticket attacks: How they work - and how to defend against them](https://blog.quest.com/golden-ticket-attacks-how-they-work-and-how-to-defend-against-them/)
-* [Wikipedia: Kerberos (protocol)](https://en.wikipedia.org/wiki/Kerberos_%28protocol%29)
-* [Rubeus - Now With More Kekeo](http://www.harmj0y.net/blog/redteaming/rubeus-now-with-more-kekeo/)
 * [Silver & Golden Tickets](https://en.hackndo.com/kerberos-silver-golden-tickets/)
-* [Windows Password Hashes](windows-password-hashes.md)
-* [Using Mimikatz](mimikatz.md)
-* [Using Rubeus](rubeus.md)
-* [ITPro.TV: CompTIA Security+ (SY0-601)](itprotv-comptia-security-plus.md)
-* [2022-08-26 - OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)
-* [EmpireProject / Empire / module_source / credentials / Invoke-Kerberoast.ps1](https://github.com/EmpireProject/Empire/blob/master/data/module_source/credentials/Invoke-Kerberoast.ps1)
-* [Using Hashcat](hashcat.md)
-* [Using John the Ripper](john-the-ripper.md)

@@ -434,6 +434,8 @@ There's honestly not much here, though we can see that the NETBIOS domain name f
 
 The AD domain itself is using the standard (invalid) .local TLD, but that's not actually something that enum4linux tells us -- instead, we can see this in the earlier output from nmap.
 
+* [Using "nmap"](nmap.md)
+
 ## Enumerating Users via Kerberos
 
 We'll now try to enumerate users using Kerbrute and the provided user list.
@@ -480,6 +482,9 @@ Version: v1.0.3 (9dad6e1) - 12/30/21 - Ronnie Flathers @ropnop
 
 We'll be targeting the `svc-admin` and `backup` accounts. (These are supposed to "jump out" at me, but honestly I'm not sure why they're more interesting than the other users, or `administrator`. Maybe because they're *not* obviously people but also not the `administrator` account?)
 
+* [attacktive-directory-tools / userlist.txt](https://github.com/Sq00ky/attacktive-directory-tools/blob/master/userlist.txt)
+* [Using Kerbrute](kerbrute.md)
+
 ## Abusing Kerberos
 
 We're going to try AS-REP Roasting using Impacket's GetNPUsers.py script. We first create an `attacktive-directory.targets` file containing the following:
@@ -520,6 +525,14 @@ xfreerdp /dynamic-resolution +clipboard /cert:ignore \
 
 This flag is in a file called `user.txt` on `svc-admin`'s desktop.
 
+* [Kerberoasting initial: AS-REP Roasting](https://blog.certcube.com/as-rep-roasting-attack/)
+* [Kerberos](kerberos.md)
+* [Using Impacket](impacket.md)
+* [attacktive-directory-tools / passwordlist.txt](https://github.com/Sq00ky/attacktive-directory-tools/blob/master/passwordlist.txt)
+* [Using Hashcat](hashcat.md)
+* [hashcat: Example hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
+* [Using XFreeRDP](xfreerdp.md)
+
 ## Back to the Basics
 
 We're going to drop down and use smbclient to enumerate potential shares on the target. This is where the NetBIOS domain name we discovered above comes in handy (we need to supply it with the `-L` switch).
@@ -558,6 +571,8 @@ xfreerdp /dynamic-resolution +clipboard /cert:ignore \
 
 This flag is in a file called `PrivEsc` on `backup`'s desktop.
 
+* [Enumerate Samba Users and Shares](enumerate-samba-users-and-shares.md)
+
 ## Elevating Privileges Within the Domain
 
 The CTF now reveals that the `backup` account has all AD changes synced to it, including NT hashes, and that we can use Impacket's secretsdump.py file to obtain these from NTDS.DIT.
@@ -581,20 +596,6 @@ evil-winrm --ip 10.10.177.198 --user Administrator \
 
 The final flag is in a file called `root.txt` on the `Administrator` account's desktop.
 
-ELAPSED TIME: 2 h 38 min
-
-## References
-
-* [Kerberoasting initial: AS-REP Roasting](https://blog.certcube.com/as-rep-roasting-attack/)
-* [Using "nmap"](nmap.md)
-* [Enumerate Samba Users and Shares](enumerate-samba-users-and-shares.md)
-* [Using Kerbrute](kerbrute.md)
-* [attacktive-directory-tools / userlist.txt](https://github.com/Sq00ky/attacktive-directory-tools/blob/master/userlist.txt)
-* [Kerberos](kerberos.md)
-* [Using Impacket](impacket.md)
-* [Using Hashcat](hashcat.md)
-* [hashcat: Example hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
-* [attacktive-directory-tools / passwordlist.txt](https://github.com/Sq00ky/attacktive-directory-tools/blob/master/passwordlist.txt)
-* [Using XFreeRDP](xfreerdp.md)
-* [Enumerate Samba Users and Shares](enumerate-samba-users-and-shares.md)
 * [Pass the hash (Wikipedia)](https://en.wikipedia.org/wiki/Pass_the_hash)
+
+ELAPSED TIME: 2 h 38 min

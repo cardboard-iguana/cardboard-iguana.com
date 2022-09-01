@@ -34,15 +34,13 @@ Exam Cram recommends that access to high-risk applications be reviewed quarterly
 
 ### Time of Day and Location Restrictions
 
-Time of day login restrictions are handled under Windows using the Kerberos group policy "Enforce User Login Restrictions". In particular, "Automatically Log Off users" controls whether or not users can remain logged in "after hours".
-
 Location-based restriction vocabulary:
 
 * Geofencing: Triggering an action when a device enters or leaves a defined geographic area.
 * Geolocation: Determining the geographic (coordinate-based) location of a device.
 * Geotagging: Metadata added to something based on its geographic location.
 
-References:
+Time of day login restrictions are handled under Windows using the Kerberos group policy "Enforce User Login Restrictions". In particular, "Automatically Log Off users" controls whether or not users can remain logged in "after hours".
 
 * [Kerberos](../notes/kerberos.md)
 

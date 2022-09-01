@@ -135,7 +135,7 @@ Check out /usr/share/webshells on Kali Linux for some example webshells. In gene
 
 Adding a user on Windows (once you have access to SYSTEM or an administrator account):
 
-```bat
+```powershell
 net user $USERNAME $PASSWORD /add
 net localgroup administrators $USERNAME /add
 ```
@@ -202,7 +202,7 @@ One annoying thing about this reverse shell... There's no initial prompt, so you
 
 Use:
 
-```bat
+```powershell
 net user $USERNAME $PASSWORD /add
 net localgroup administrators $USERNAME /add
 ```

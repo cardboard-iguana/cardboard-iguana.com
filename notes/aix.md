@@ -19,6 +19,9 @@ oslevel -s -l $SERVICE_PACK # List filesets below the specified
                             # service pack
 ```
 
+* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
+* [oslevel Command](https://www.ibm.com/docs/en/aix/7.2?topic=o-oslevel-command)
+
 ## Fileset Information
 
 ```bash
@@ -28,9 +31,5 @@ lslpp -h $FILESET_NAME # Detailed fileset information
 
 Some versions of AIX can also apparently use the RPM package manager.
 
-## References
-
-* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
-* [oslevel Command](https://www.ibm.com/docs/en/aix/7.2?topic=o-oslevel-command)
 * [lslpp Command](https://www.ibm.com/docs/en/aix/7.2?topic=l-lslpp-command)
 * [How to Match Files to Packages](how-to-match-files-to-packages.md)

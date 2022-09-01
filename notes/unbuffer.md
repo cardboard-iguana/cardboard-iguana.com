@@ -11,6 +11,4 @@ The `unbuffer` command restores line buffering in pipes. Use like so:
 unbuffer $APPLICATION | tee $LOG
 ```
 
-## References
-
 * [Force line-buffering of stdout in a pipeline](https://stackoverflow.com/questions/11337041/force-line-buffering-of-stdout-in-a-pipeline#comment111940075_11337310)

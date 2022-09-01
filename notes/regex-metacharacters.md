@@ -14,6 +14,4 @@ date:: 2021-09-21
 
 NOTE: Be aware that `\w` *includes* `_` (but not `-`)!
 
-## References
-
 * [TryHackMe: Regular Expressions](tryhackme-regular-expressions.md)

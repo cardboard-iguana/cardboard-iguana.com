@@ -71,12 +71,13 @@ Useful Google search modifiers:
 
 Ways to gather packets:
 
-* Just listen to the packets that you can see normally (really only works on very simple/insecure networks).
-* Physical taps (Packet Squirrel, LAN Turtle, etc.)
-* MAC flooding (fill up a switch's CAM table with bogus requests until it is forced to fall back to acting like a dum hub; somewhat dangerous).
-* ARP poisoning (falsely advertise yourself as the router or another machine; less dangerous than MAC flooding but harder to successfully pull off).
+(1) Just listen to the packets that you can see normally (really only works on very simple/insecure networks).
 
-References:
+(2) Physical taps (Packet Squirrel, LAN Turtle, etc.)
+
+(3) MAC flooding (fill up a switch's CAM table with bogus requests until it is forced to fall back to acting like a dum hub; somewhat dangerous).
+
+(4) ARP poisoning (falsely advertise yourself as the router or another machine; less dangerous than MAC flooding but harder to successfully pull off).
 
 * [Packet Squirrel](https://hak5.org/products/packet-squirrel)
 * [LAN Turtle](https://hak5.org/products/lan-turtle)

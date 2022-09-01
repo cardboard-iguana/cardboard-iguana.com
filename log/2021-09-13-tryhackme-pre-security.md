@@ -160,14 +160,7 @@ TCP's "three way handshake" opens a connection by establishing a random sequence
 
 (Unfortunately, it's still a little unclear to me how to think about the progression of sequence and acknowledgement numbers over the course of an entire connection. I did a little more searching around, but the other examples I've found are even more abbreviated and/or obtuse.)
 
-Closing the connection uses a "four way handshake":
-
-* Client FIN
-* Server ACK
-* Server FIN
-* Client ACK
-
-References:
+Closing the connection uses a "four way handshake": Client FIN > Server ACK > Server FIN > Client ACK
 
 * [Transmission Control Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)
 

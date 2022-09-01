@@ -22,7 +22,7 @@ SSRF can be "blind", where not information is returned (but the request is still
 
 Directory traversal can still be used with API requests!
 
-When attacking an API via SSRF, it's sometimes necessary to append an empty dummy parameter (`&x=`, etc.) to break parsing of appended information. For example, suppose we have a URL like `https://example.com/item?server=api&id=123` which gets translated to an API request of `https://api.example.com/api/item?id=123`. Then calling `https://example.com/item?server=api.example.com/api/user&x=&id=123` could translate into an API request of `https://api.example.com/api/user?x=.example.com/api/item?id=123`, allowing us to access the `/api/usr` endpoint. (Note that the server here is constructing a *new* API request string using the values of the `server` and `id` parameters. We can even add additional parameters here using `?`!)
+When attacking an API via SSRF, it's sometimes necessary to append an empty dummy parameter (`&x=`, etc.) to break parsing of appended information. For example, suppose we have a URL like https://example.com/item?server=api&id=123 which gets translated to an API request of https://api.example.com/api/item?id=123. Then calling https://example.com/item?server=api.example.com/api/user&x=&id=123 could translate into an API request of https://api.example.com/api/user?x=.example.com/api/item?id=123, allowing us to access the /api/usr endpoint. (Note that the server here is constructing a *new* API request string using the values of the `server` and `id` parameters. We can even add additional parameters here using `?`!)
 
 Sometimes we can trigger a request to a server we control entirely, allowing the capture of API credentials.
 

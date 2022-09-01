@@ -59,6 +59,9 @@ This ironically *doesn't* include `james`!
 
 FLAG 5: How many of the system passwords were crackable? - 4
 
+* [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md)
+* [Using "netcat"](netcat.md)
+
 ## Research: Analyze the Code
 
 It turns out that https://github.com/NinjaJc01/ssh-backdoor is a real thing, with the code itself living in https://github.com/NinjaJc01/ssh-backdoor/blob/master/main.go.
@@ -85,6 +88,9 @@ hashcat \
 ```
 
 FLAG 9: What's the password? - `november16`
+
+* [Using Hashcat](hashcat.md)
+* [ssh-backdoor / main.go](https://github.com/NinjaJc01/ssh-backdoor/blob/master/main.go)
 
 ## Attack: Get Back In!
 
@@ -121,14 +127,7 @@ The root flag is then in /root/root.txt.
 
 FLAG 12: What's the root flag? - `thm{d53b2684f169360bb9606c333873144d}`
 
-ELAPSED TIME: 1 h 43 min
-
-## References
-
-* [TryHackMe: Wireshark 101](tryhackme-wireshark-101.md)
-* [Using "netcat"](netcat.md)
-* [Using Hashcat](hashcat.md)
-* [ssh-backdoor / main.go](https://github.com/NinjaJc01/ssh-backdoor/blob/master/main.go)
 * [Exploiting Bash](exploiting-bash.md)
-* [Exploiting ViM](exploiting-vim.md)
 * [GTFOBins](https://gtfobins.github.io/)
+
+ELAPSED TIME: 1 h 43 min

@@ -10,8 +10,6 @@ This needs the python3-bs4 package on Debian-based distribution. Note that we us
 
 NOTE: This won't work on webpages for sites like Twitter that set the `<title/>` using JavaScript after initial page load.
 
-## References
-
 * [How do I get a websites title using command line?](https://unix.stackexchange.com/a/563920)
 * [Python Requests and Unicode](https://stackoverflow.com/a/12843406)
 * [Requests Developer Interface: class requests.Response](https://docs.python-requests.org/en/latest/api/#requests.Response)

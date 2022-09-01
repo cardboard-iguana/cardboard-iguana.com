@@ -33,6 +33,9 @@ Note that nc will exit once the first connection closes.
 
 A netcat server doesn't have to be used just for reverse shells. For example, you can also use it to catch web requests in conjunction with XSS or SQLi attacks.
 
+* [XSS (Cross-Site Scripting) Attacks](xss-attacks.md)
+* [SQL Injection](sql-injection.md)
+
 ## Useful Flags
 
 * `-l` - listen for incoming connections (rather than make an outgoing connection)
@@ -91,6 +94,8 @@ Or just use socat!
 
 NOTE that in *none* of these cases will the reverse shell pick up on your terminal size, so you'll need to manually specify it using `stty rows` and `stty cols`.
 
+* [Using "socat"](socat.md)
+
 ## Port Forwarding
 
 ```bash
@@ -107,30 +112,14 @@ If you just have netcat connect to a service directly, it functions exactly like
 
 With the `-z` option, netcat will attempt to connect to all TCP ports on the targets in a sequential fashion (if no ports are specified; otherwise just to the specified port), reporting which are open. It's like a simple, very slow version of Nmap!
 
-Useful flags:
+Use `-w` to set the timeout in seconds.
 
-* `-w` - set the timeout, in seconds
-* `-u` - try connecting over UDP rather than TCP
+Use `-u` to try connecting over UDP rather than TCP.
+
+* [Using "nmap"](nmap.md)
 
 ### Port Forwarding
 
 ```bash
 nc -lvkp $LOCAL_PORT -c "nc $REMOTE_IP $REMOTE_PORT"
 ```
-
-## References
-
-* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [TryHackMe: CC: Pen Testing](tryhackme-cc-pen-testing.md)
-* [TryHackMe: Exploiting Log4j](tryhackme-exploiting-log4j.md)
-* [Using Metasploit](metasploit.md)
-* [Using "socat"](socat.md)
-* [XSS (Cross-Site Scripting) Attacks](xss-attacks.md)
-* [SQL Injection](sql-injection.md)
-* [2022-03-30 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-* [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
-* [2022-05-09 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-09-tryhackme-jr-penetration-tester-supplements.md)
-* [2022-06-29 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-06-29-offsec-live-pen-200-and-aws-deep-dive.md)
-* [Using "nmap"](nmap.md)
-* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
-* [2022-07-13 - OffSec Live: PEN-200](../log/2022-07-13-offsec-live-pen-200.md)

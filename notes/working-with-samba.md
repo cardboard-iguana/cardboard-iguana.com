@@ -48,11 +48,3 @@ Use -R (and omit `$FILE`) to recursively download an entire directory.
 ## net share
 
 Use `net share` on Windows to list *all* current shares (including some that are just control processes).
-
-## References
-
-* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [Windows Password Hashes](windows-password-hashes.md)
-* [SAMBA (a.k.a. CIFS) Protocol](samba.md)
-* [How to view all network shares in Windows](https://www.computerhope.com/issues/ch000534.htm)
-* [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)

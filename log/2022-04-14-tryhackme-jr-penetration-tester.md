@@ -43,8 +43,6 @@ The `hosts` and `services` commands can then be used to display the, well, hosts
 
 Show the payloads available for a particular exploit using `show payloads`. Use `set payload` to set the payload for the exploit; re-run `show options` after this to check if the payload has added any additional options that will need to be set before exploitation.
 
-Use `sessions` to, well, manage your sessions (most useful when you've backgrounded a payload and/or are working with multiple targets).
-
 To dump NTLM hashes from Meterpreter, use the `hashdump` command. Normally only the first four fields are relevant:
 
 * Username
@@ -52,7 +50,7 @@ To dump NTLM hashes from Meterpreter, use the `hashdump` command. Normally only 
 * The user's LM password hash
 * The user's NTLM password hash
 
-References:
+Use `sessions` to, well, manage your sessions (most useful when you've backgrounded a payload and/or are working with multiple targets).
 
 * [Dumping Windows Password Hashes Using Metasploit](https://www.utc.edu/sites/default/files/2021-04/4660-lab6.pdf)
 * [Windows Password Hashes](../notes/windows-password-hashes.md)

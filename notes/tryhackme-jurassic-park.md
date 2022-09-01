@@ -445,11 +445,9 @@ FLAG 6: Whats the contents of the second flag? -- `96ccd6b429be8c9a4b501c7a0b117
 
 But, as the TryHackMe room notes, there is no fourth flag. So actually we're done.
 
-ELAPSED TIME: 2 h 53 min
-
-## References
-
 * [Using "sqlmap"](sqlmap.md)
 * [SQL Injection](sql-injection.md)
 * [Using "nmap"](nmap.md)
 * [Using "gobuster"](gobuster.md)
+
+ELAPSED TIME: 2 h 53 min

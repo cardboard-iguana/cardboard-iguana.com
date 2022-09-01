@@ -8,6 +8,4 @@ Fortunately, Vi and ViM can be set to override the default $SHELL using `:set sh
 
 (Exotic shells in /etc/passwd can also cause commands executed via ssh to fail for the same reason.)
 
-## References
-
 * [ssh works with my custom shell but can't execute commands directly using ssh](https://stackoverflow.com/questions/52604245/ssh-works-with-my-custom-shell-but-cant-execute-commands-directly-using-ssh)

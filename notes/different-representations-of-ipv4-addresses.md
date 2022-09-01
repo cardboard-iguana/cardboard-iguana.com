@@ -27,6 +27,9 @@ Converting to hexadecimal is trivial using the excellent Qalculate tool.
 2130706433 to hex = 0x7F000001
 ```
 
+* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
+* [Qalculate!](https://qalculate.github.io/)
+
 ## Common IP Addresses
 
 |              IP |    Decimal | Hexadecimal | Notes                                                      |
@@ -36,8 +39,4 @@ Converting to hexadecimal is trivial using the excellent Qalculate tool.
 
 The nip.io service can be used to provide a domain name for an arbitrary IP address.
 
-## References
-
-* [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
-* [Qalculate!](https://qalculate.github.io/)
 * [nip.io](https://nip.io/)

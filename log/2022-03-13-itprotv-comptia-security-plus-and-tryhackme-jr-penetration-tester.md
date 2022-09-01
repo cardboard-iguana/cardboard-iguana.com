@@ -189,8 +189,6 @@ File inclusion vulnerabilities are a species of input validation errors.
 
 "Path traversal" and "directory traversal" are the same thing. This is about using LFI to access system files; this often occurs when improperly sanitized user input is passed to PHP's `file_get_contents()` function.
 
-Windows systems are also vulnerable to LFI attacks via PHP. In fact, `file_get_contents()` will happily use UNIX slashes on Windows.
-
 Common files to check:
 
 * /boot.ini (a.k.a., `C:\boot.ini` - boot options on Windows systems)
@@ -205,7 +203,7 @@ Common files to check:
 * /var/log/dmessage (lots of variants of this...)
 * /var/mail/root
 
-References:
+Windows systems are also vulnerable to LFI attacks via PHP. In fact, `file_get_contents()` will happily use UNIX slashes on Windows.
 
 * [file_get_contents() (PHP Documentation)](https://www.php.net/manual/function.file-get-contents.php)
 

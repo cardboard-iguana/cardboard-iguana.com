@@ -107,20 +107,19 @@ BOOL WINAPI DllMain
 Compile with mingw (this *can* be done on Linux!):
 
 ```powershell
-x86_64-w64-mingw32-gcc windows_dll.c \
-	-shared -o output.dll
+x86_64-w64-mingw32-gcc windows_dll.c -shared -o output.dll
 ```
 
 Note that Windows *also* comes with `wget`!
 
 ```powershell
-# Change user foo's password to "bar" (requires
-# admin/SYSTEM authority):
+# Change user foo's password to "bar" (requires admin/SYSTEM
+# authority):
 #
 net user foo bar
 #
-# Note that this does *NOT* bypass any password
-# complexity requirements!
+# Note that this does *NOT* bypass any password complexity
+# requirements!
 ```
 
 * [Exploiting LD_PRELOAD](../notes/exploiting-ld-preload.md)
@@ -167,11 +166,9 @@ Exploits in this family are typically named "X Potato" after the first exploit, 
 (2) If `AlwaysInstallElevated`  is set to 1 under both of the following keys, then MSI installers will run as SYSTEM.
 
 ```powershell
-reg query \
-	HKCU\Software\Policies\Microsoft\Windows\Installer
+reg query HKCU\Software\Policies\Microsoft\Windows\Installer
 
-reg query \
-	HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
+reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
 ```
 
 Generate a malicious MSI file with msfvenom:

@@ -13,8 +13,6 @@ Splunk stores imported data in "indexes"; log timestamps are stored in the `_tim
 
 The `bucket` command can be used to group results by time or other metrics *during processing*. However, chart processing uses the `span` directive instead.
 
-Various Splunk apps (extensions, really) can be found at https://splunkbase.splunk.com. Forums and the like can be found at https://community.splunk.com.
-
 Some acronyms:
 
 * SOC: Security Operations Center
@@ -22,7 +20,7 @@ Some acronyms:
 * BOTS: Boss of the SOC (some kind of Splunk competition)
 * CIM: Common Information Model
 
-References:
+Various Splunk apps (extensions, really) can be found at https://splunkbase.splunk.com. Forums and the like can be found at https://community.splunk.com.
 
 * [Splunk Quick Reference Guide](https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf)
 

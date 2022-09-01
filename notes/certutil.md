@@ -11,6 +11,8 @@ CertUtil -hashfile $FILE_PATH $ALGORITHM
 
 The algorithm can be excluded (in which case SHA1 is used).
 
+* [TryHackMe: MAL: Researching](tryhackme-mal-researching.md)
+
 ## Enumerating AD CS Templates
 
 AD CS is AD's PKI, and is used on the back end for everything from provisioning disk encryption keys to user authentication. Certificate templates are a way to automate the certificate request process: Rather than an admin approving all CSRs manually, AD CS checks to see if a relevant "template" (which is really a template + associated settings + an access policy) exists that matches the supplied CSR and is configured to allow the requesting user to generate a certificate.
@@ -29,10 +31,6 @@ certutil -v -template
 
 If a certificate has the following properties, then we can use it to create a certificate in the name of another user and then *forge* Kerberos tickets for that user with a tool like Rubeus.
 
-## References
-
-* [TryHackMe: MAL: Researching](tryhackme-mal-researching.md)
-* [2022-05-10 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
 * [SpectreOps: Certified Pre-Owned](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
 * [Kerberos](kerberos.md)
 * [Using Rubeus](rubeus.md)

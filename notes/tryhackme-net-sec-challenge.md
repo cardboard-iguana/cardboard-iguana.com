@@ -98,12 +98,17 @@ OS and Service detection performed. Please report any incorrect results at https
 
 This enables us to answer a set of questions immediately.
 
-* What is the highest port number being open less than 10,000? - `8080`
-* There is an open port outside the common 1000 ports; it is above 10,000. What is it? - `10021`
-* How many TCP ports are open? - `6`
-* What is the flag hidden in the HTTP server header? - `THM{web_server_25352}`
-* What is the flag hidden in the SSH server header? - `THM{946219583339}`
-* We have an FTP server listening on a nonstandard port. What is the version of the FTP server? - `vsftpd 3.0.3`
+> What is the highest port number being open less than 10,000? - 8080
+>
+> There is an open port outside the common 1000 ports; it is above 10,000. What is it? - 10021
+>
+> How many TCP ports are open? - 6
+>
+> What is the flag hidden in the HTTP server header? - THM{web_server_25352}
+>
+> What is the flag hidden in the SSH server header? - THM{946219583339}
+>
+> We have an FTP server listening on a nonstandard port. What is the version of the FTP server? - vsftpd 3.0.3
 
 That's all pretty easy. The next one is a bit harder with our limited toolset...
 
@@ -169,7 +174,7 @@ QUIT
 
 This time we need to open *two* auxiliary netcat sessions. The first, `nc -nv 10.10.152.115 30754`, catches the LIST command, which reveals that `quinn` has access to an `ftp_flag.txt` file. The second, `nc -nv 10.10.152.115 30037`, catches the contents of that file after issuing the RETR command. This is the answer to our penultimate challenge.
 
-* We learned two usernames using social engineering: `eddie` and `quinn`. What is the flag hidden in one of these two account files and accessible via FTP? - `THM{321452667098}`
+> We learned two usernames using social engineering: `eddie` and `quinn`. What is the flag hidden in one of these two account files and accessible via FTP? - THM{321452667098}
 
 For the final challenge, we go to `http://10.10.152.115:8080`. The challenge is to scan 10.10.152.115 "as covertly as possible". I'm not really willing to wait 7 months for a scan, but I'll bet that all we need to do is use `-T1` and drop `-A`.
 
@@ -197,11 +202,7 @@ sudo nmap -v -Pn -n -T4 -sN -p- 10.10.34.244
 
 "Null scan" is apparently the right answer, as the challenge provided the flag almost immediately (which doesn't *actually* make any sense, but whatever...).
 
-* Browsing to `http://10.10.152.115:8080` displays a small challenge that will give you a flag once you solve it. What is the flag? - `THM{f7443f99}`
-
-ELAPSED TIME: 2 h 31 min
-
-## References
+> Browsing to http://10.10.152.115:8080 displays a small challenge that will give you a flag once you solve it. What is the flag? - THM{f7443f99}
 
 * [Using "nmap"](nmap.md)
 * [Using Hydra](hydra.md)
@@ -210,3 +211,5 @@ ELAPSED TIME: 2 h 31 min
 * [How to list FTP directories using telnet?](https://stackoverflow.com/questions/50324402/how-to-list-ftp-directories-using-telnet#comment126707507_50324402)
 * [FTP Commands: QUIT, USER, ABOR, ACCT, SYST, XDEL](https://www.serv-u.com/resource/tutorial/quit-user-abor-acct-syst-xdel-ftp-command)
 * [FTP Commands: APPE, MLSD, MLST, LIST, RETR, STOR, STOU](https://www.serv-u.com/resource/tutorial/appe-stor-stou-retr-list-mlsd-mlst-ftp-command)
+
+ELAPSED TIME: 2 h 31 min

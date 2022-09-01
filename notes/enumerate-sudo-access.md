@@ -7,8 +7,6 @@ The `sudo -l` command will helpfully tell us what we can run as the superuser wi
 
 NOTE: The use of `sudo -l` requires that the user have *some* level of sudo access to begin with, and *will* be logged!
 
-## References
-
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Basic Pentesting](tryhackme-basic-pentesting.md)
 * [Shell Escapes](shell-escapes.md)

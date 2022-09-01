@@ -18,6 +18,8 @@ Equivalent commands between socat and netcat:
 
 Socat gets us an interactive login shell right out the gate, though we're still vulnerable to Ctrl+C. Note that when binding to PowerShell, use `powershell.exe,pipes` in order to force PowerShell to use UNIX-style STDIN/STDOUT.
 
+* [Using "netcat"](netcat.md)
+
 ### Socat Encrypted Shells
 
 Socat can also make encrypted connections, which foil after-the-fact network analysis and may circumvent IDS entirely.
@@ -101,8 +103,3 @@ socat \
 ```
 
 NOTE that the reverse shell will not pick up on your terminal size, so you'll need to manually specify it using `stty rows` and `stty cols`.
-
-## References
-
-* [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
-* [Using "netcat"](netcat.md)

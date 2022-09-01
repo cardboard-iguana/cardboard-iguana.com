@@ -43,10 +43,9 @@ What's going on here?
 
 The active vs. passive FTP distinction is about how the *server* handles establishing the data channel (the command channel is always set up by the client connecting to the server).
 
-* Active FTP: The client opens a port which the server *actively* connects to when establishing the data channel.
-* Passive FTP: The server opens a port which the client connects to when establishing the data channel.
+Active FTP: The client opens a port which the server *actively* connects to when establishing the data channel.
 
-References:
+Passive FTP: The server opens a port which the client connects to when establishing the data channel.
 
 * [File Transfer Protocol (Wikipedia)](https://en.wikipedia.org/wiki/File_Transfer_Protocol)
 

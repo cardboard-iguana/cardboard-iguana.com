@@ -12,6 +12,4 @@ This requires SYSTEM privileges or an administrator account.
 
 It's worth noting that users added via `net user` seem to bypass Windows' password policies...
 
-## References
-
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)

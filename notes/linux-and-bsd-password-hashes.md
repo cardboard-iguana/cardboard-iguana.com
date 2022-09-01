@@ -15,6 +15,4 @@ Bcrypt is designed to take approximately the same amount of time when hashed on 
 
 NOTE: 1 hex digit = 4 bits (2 hex digits per byte), which is why a 128-bit md5 hash is 32 characters long.
 
-## References
-
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)

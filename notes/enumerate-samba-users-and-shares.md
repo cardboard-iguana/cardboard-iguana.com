@@ -15,11 +15,16 @@ nmap -vv -sT \
 
 NOTE: While smb-enum-shares.nse returns results for UNIX-like systems, I've found smb-enum-users.nse to be kind of hit-or-miss.
 
+* [Nmap SMB Scripts and SMB Enumeration Step-By-Step Pentesting Guide](https://www.infosecademy.com/nmap-smb-scripts-enumeration/)
+* [Using "nmap"](nmap.md)
+
 ## Metasploit
 
 Metasploit can also enumerate CIFS users using the `auxiliary/smb/smb_lookupsid` module.
 
 Like NMAP, I've found this to be a bit unreliable on UNIX-like systems.
+
+* [Using Metasploit](metasploit.md)
 
 ## nbtscan
 
@@ -41,6 +46,9 @@ enum4linux -a $TARGET_IP
 
 As of the time of this writing (November 5, 2021) however, it looks like enum4linux's normal user enumeration has been broken for quite some time. However, the "RID cycling" method of discovering users still works - so just call enum4linux with either the -r flag (to specifically use RID cycling to enumerate users) or the -a flag (which does a complete enumeration, including RID cycling) rather than the -U flag.
 
+* [Enumerate SMB with Enum4linux & Smbclient](https://null-byte.wonderhowto.com/how-to/enumerate-smb-with-enum4linux-smbclient-0198049/)
+* [Use of uninitialized value $user, what does this mean?](https://github.com/CiscoCXSecurity/enum4linux/issues/4)
+
 ## smbclient
 
 Samba services can be enumerated by smbclient using:
@@ -51,6 +59,8 @@ smbclient -L $SERVER_NAME -I $IP_ADDRESS
 
 Here `$SERVER_NAME` is the machine's NetBIOS domain name, which can be found with enum4linux (see above).
 
+* [Working With Samba](working-with-samba.md)
+
 ## smbmap
 
 Get Windows version information:
@@ -58,18 +68,3 @@ Get Windows version information:
 ```bash
 smbmap -H $IP_ADDRESS -v
 ```
-
-## References
-
-* [Basic Pentesting](tryhackme-basic-pentesting.md)
-* [Nmap SMB Scripts and SMB Enumeration Step-By-Step Pentesting Guide](https://www.infosecademy.com/nmap-smb-scripts-enumeration/)
-* [A Little Guide to SMB Enumeration](https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/)
-* [Enumerate SMB with Enum4linux & Smbclient](https://null-byte.wonderhowto.com/how-to/enumerate-smb-with-enum4linux-smbclient-0198049/)
-* [Kenobi](tryhackme-complete-beginner.md)
-* [Attacktive Directory](tryhackme-attacktive-directory.md)
-* [Using "nmap"](nmap.md)
-* [Using Metasploit](metasploit.md)
-* [Use of uninitialized value $user, what does this mean?](https://github.com/CiscoCXSecurity/enum4linux/issues/4)
-* [Working With Samba](working-with-samba.md)
-* [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
-* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

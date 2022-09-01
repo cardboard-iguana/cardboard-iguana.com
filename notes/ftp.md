@@ -17,6 +17,9 @@ date:: 2022-04-03
 |    TYPE | Switch between ASCII (A) and binary (I) transfer modes       |
 |    USER | Specify the username for the account logging on              | 
 
+* [FTP Commands: QUIT, USER, ABOR, ACCT, SYST, XDEL](https://www.serv-u.com/resource/tutorial/quit-user-abor-acct-syst-xdel-ftp-command)
+* [FTP Commands: APPE, MLSD, MLST, LIST, RETR, STOR, STOU](https://www.serv-u.com/resource/tutorial/appe-stor-stou-retr-list-mlsd-mlst-ftp-command)
+
 ## File Retrieval
 
 Note that you cannot receive files using FTP with a *single* telnet/netcat session, as file transfers are conducted over a separate channel (either a channel originating from port 20 on the server for "active" mode or a random port above 1023 on the client for "passive" mode).
@@ -29,14 +32,12 @@ However, you *can* retrieve files using *two* sessions.
 * Connect a *second* telnet/netcat client to the IP + port provided by the server.
 * Issue the appropriate file retrieval (RETR) command in the original telnet/netcat client. The file will be sent to the second client.
 
+Which is a lot of work, but sometimes you just don't have an FTP client.
+
+* [How to list FTP directories using telnet?](https://stackoverflow.com/questions/50324402/how-to-list-ftp-directories-using-telnet#comment126707507_50324402)
+
 ## FTPS
 
 FTPS (FTP over SSL) uses port 990 by default. Mostly supplanted by SFTP.
 
-## References
-
 * [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-* [Net Sec Challenge](tryhackme-net-sec-challenge.md)
-* [How to list FTP directories using telnet?](https://stackoverflow.com/questions/50324402/how-to-list-ftp-directories-using-telnet#comment126707507_50324402)
-* [FTP Commands: QUIT, USER, ABOR, ACCT, SYST, XDEL](https://www.serv-u.com/resource/tutorial/quit-user-abor-acct-syst-xdel-ftp-command)
-* [FTP Commands: APPE, MLSD, MLST, LIST, RETR, STOR, STOU](https://www.serv-u.com/resource/tutorial/appe-stor-stou-retr-list-mlsd-mlst-ftp-command)

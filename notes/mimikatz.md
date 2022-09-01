@@ -1,7 +1,7 @@
 # Using Mimikatz
 
 author:: Nathan Acks  
-date:: 2021-12-06
+date:: 2022-08-31
 
 Mimikatz needs to be run with administrative privileges (on the local machine), and provides its own command prompt. Use the `privilege::debug` command to check if you're running with the right privileges.
 
@@ -10,6 +10,8 @@ Mimikatz needs to be run with administrative privileges (on the local machine), 
 Mimikatz can dump ticket granting tickets (and session keys) from the memory of Windows' Local Security Authority Subsystem Service (LSASS); these can then be used to for privilege elevation or lateral movement (depending on which users are active on that machine).
 
 Use the `sekurlsa::tickets /export` command to dump any Kerberos "tickets" (really ticket + session key data structures) from LSASS's memory as .kirbi files. Tickets are named like ID-USER-SERVICE-DOMAIN.kirbi; ticket granting tickets have a `krbtgt` SERVICE name. If you can find a `krbtgt` ticket belonging to an administrator account, then you've (almost) struck gold.
+
+* [Kerberos](kerberos.md)
 
 ## Pass the Ticket Attacks
 
@@ -31,14 +33,24 @@ To actually create and cache the ticket, use `Kerberos::golden /user:USER /domai
 
 Once the ticket has been created, use `misc::cmd` to open a command prompt using the newly forged ticket.
 
+* [Windows Password Hashes](windows-password-hashes.md)
+
 ## KDC Skeleton Key
 
 If Mimikatz is run on a domain controller, it can modify the authentication service's memory using the `misc::skeleton` command to cause it to attempt to decrypt the AS-REQ using *both* the user's NT hash *and* an NT hash of your choosing (by default `60BA4FCADC466C7A033C178194C03DF6`, which is just `mimikatz`).  This means that you can send an AS-REQ as any user using the "skeleton key" hash to gain access as that user, similar to a golden ticket attack.
 
 Obviously this isn't very persistent itself, as the skeleton key will be lost if the server is rebooted or the authentication service restarted.
 
-## References
+## Pure PowerShell Implementation
 
-* [TryHackMe: Attacking Kerberos](tryhackme-attacking-kerberos.md)
-* [Kerberos](kerberos.md)
-* [Windows Password Hashes](windows-password-hashes.md)
+Mimikatz binaries are generally detected by AV on download these days, but fortunately there's a PowerShell reimplementation available from the Empire Project that can be run after bypassing AMSI.
+
+```powershell
+Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::sam" "exit"' > C:\mkat.txt
+```
+
+Note that Microsoft Defender will still detect the execution of Invoke-Mimikatz and kill the hosting PowerShell process. This is why we need to redirect the output to a file.
+
+* [2022-08-31 - OffSec Live: PEN-200](../log/2022-08-31-offsec-live-pen-200.md)
+* [EmpireProject / Empire / data / module_source / credentials / Invoke-Mimikatz.ps1](https://github.com/EmpireProject/Empire/blob/master/data/module_source/credentials/Invoke-Mimikatz.ps1)
+* [Using PowerShell](powershell.md)

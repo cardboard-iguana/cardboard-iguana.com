@@ -12,7 +12,7 @@ hydra -t 4 -l $USER_NAME -P $WORDLIST \
 
 Here `$SERVICE` is "ssh", "ftp", etc. Note that "http" is not used directly; instead use "http-get", "http-put", etc.
 
-### Options
+## Options
 
 * `-f` - Stop after the first successful match. Useful if you are just trying to brute-force a single username!
 * `-l` - Specify the username whose password you want to brute force.
@@ -35,12 +35,5 @@ hydra -vV -f -l $USERNAME -P $PASSWORDLIST \
 
 The `$TEMPLATE` is basically the JSON request body with the special placeholders `^USER^` and `^PASS^` (colons escaped). `$INVALID` is a string that will appear for login *failures* (note that this string *cannot* contain a colon, but fortunately is a substring match). The `H` parameter at the end allows us to override specific headers (necessary because otherwise Hydra sends a Content-Type of application/x-www-form-urlencoded).
 
-## References
-
-* [Basic Pentesting](tryhackme-basic-pentesting.md)
-* [Defeating HTTP Basic Auth with Hydra](http://tylerrockwell.github.io/defeating-basic-auth-with-hydra/)
-* [Multiple Ways To Exploiting HTTP Authentication](https://www.hackingarticles.in/multiple-ways-to-exploiting-http-authentication/)
 * [Hydra bruteforce and JSON](https://security.stackexchange.com/questions/57839/hydra-bruteforce-and-json)
 * [Bruteforce - Using Hydra with JSON](https://security.stackexchange.com/questions/203501/bruteforce-using-hydra-with-json)
-* [TryHackMe: hackernote](tryhackme-hackernote.md)
-* [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)

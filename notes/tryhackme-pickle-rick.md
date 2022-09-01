@@ -21,6 +21,8 @@ I'm guessing that flag 1 begins with either numbers or an abbreviation (`Mr.`?).
 
 Because this is web server exploitation, it's going to make sense to use Burp Suite. In order to make the experience a little more pleasant, I'm going to add a pattern of `10.10.158.139` (the IP address of the TryHackMe server I'm using) to FoxyProxy and then set it to "Use proxies based on their pre-defined patterns and priorities"; that way, only the CTF website will get proxied to Burp Suite.
 
+* [Rick and Morty (Wikipedia)](https://en.wikipedia.org/wiki/Rick_and_Morty)
+
 ## Recon
 
 The server is running Apache 2.4.18 on some version of Ubuntu. The provided web page is very simple:
@@ -112,11 +114,11 @@ ssh -v -F /dev/null \
     -o IdentityAgent=none R1ckRul3s@10.10.158.139
 ```
 
-Looks like password authentication is turned off -- only the `publickey` method is available. So no brute forcing here -- we need Rick's private SSH key.
+Looks like password authentication is turned off - only the `publickey` method is available. So no brute forcing here - we need Rick's private SSH key.
 
 No obvious Apache or SSH RCEs for this version in Exploit DB...
 
-At this point I'm basically stuck, so I decide to see if I can get a hint by (partially!) reading someone else's walk-through. Most of the initial recon in that walk-through (I only scanned down that far) aligns with what I've already done, but it mentions two tools I've not yeat heard of -- dirb (which looks like gobuster but possibly more straight-forward) and nikto (which I know *of* but not *about*). So let's try those!
+At this point I'm basically stuck, so I decide to see if I can get a hint by (partially!) reading someone else's walk-through. Most of the initial recon in that walk-through (I only scanned down that far) aligns with what I've already done, but it mentions two tools I've not yeat heard of - dirb (which looks like gobuster but possibly more straight-forward) and nikto (which I know *of* but not *about*). So let's try those!
 
 ```bash
 dirb http://10.10.158.139
@@ -132,6 +134,8 @@ Nikto is a scanner for common web vulnerabilities. A couple of interesting thing
 
 * Despite the simple page, it looks like the server is running PHP. So if I can figure out how to upload something, I've got a good shot at popping a reverse shell.
 * There's a /login.php file. Now THAT looks interesting!
+
+* [TryHackMe Pickle Rick CTF Walkthrough](https://razrexe.medium.com/tryhackme-pickle-rick-ctf-walkthrough-9ed36eff17fe)
 
 ## Flag 1
 
@@ -247,8 +251,3 @@ fleeb juice
 Oh well, I still got a root shell (albeit in a totally noisy fashion).
 
 ELAPSED TIME: 3 h 11 min
-
-## References
-
-* [Rick and Morty (Wikipedia)](https://en.wikipedia.org/wiki/Rick_and_Morty)
-* [TryHackMe Pickle Rick CTF Walkthrough](https://razrexe.medium.com/tryhackme-pickle-rick-ctf-walkthrough-9ed36eff17fe)

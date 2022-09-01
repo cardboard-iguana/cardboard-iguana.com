@@ -3,8 +3,6 @@
 author:: Nathan Acks  
 date:: 2021-11-05
 
-## NMAP
-
 NFS shares can be enumerated by nmap during scanning:
 
 ```bash
@@ -13,8 +11,6 @@ nmap -v -sT --script nfs-ls,nfs-statfs,nfs-showmount \
 ```
 
 Normally `$PORT` is 111.
-
-## References
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [Using "nmap"](nmap.md)

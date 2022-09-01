@@ -16,7 +16,7 @@ Many common UNIX applications allow you to escape to a shell. This is particular
 * `nmap` - create a file containing `os.execute("/bin/sh")` and then run `nmap --script=$FILE`
 * `vim` - see "Set a Shell in ViM"
 
-## References
+GTFOBins is your one-stop resource for shell escape information.
 
 * [TryHackMe: Complete Beginner](tryhackme-complete-beginner.md)
 * [GTFOBins](https://gtfobins.github.io)
