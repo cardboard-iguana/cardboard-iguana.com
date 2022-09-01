@@ -5,12 +5,10 @@ date:: 2022-04-03
 
 IMAP commands are much more complicated than POP3. Some examples:
 
-|                  Command | Meaning              |
-| ------------------------:|:-------------------- |
-| `prefix LOGIN user pass` | Login user           | 
-|     `prefix LIST "" "*"` | List folders         |
-|   `prefix EXAMINE INBOX` | List emails in INBOX |
-|          `prefix LOGOUT` | Close connection     |
+* Login User - prefix LOGIN user pass
+* Lost Folders - prefix LIST "" "\*"
+* List Emails in INBOX - prefix EXAMINE INBOX
+* Close Connection - prefix LOGOUT
 
 Here `prefix` is a random prefix we provide to track server replies to various commands. IMAP accepts a lot of different user authentication methods; LOGIN is just the simplest (and least secure).
 

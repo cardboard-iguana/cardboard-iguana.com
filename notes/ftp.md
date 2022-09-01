@@ -5,17 +5,17 @@ date:: 2022-04-03
 
 ## Commands
 
-| Command | Meaning                                                      |
-| -------:|:------------------------------------------------------------ |
-|    LIST | List contents of the supplied directory (or user's FTP root) |
-|    PASS | Specify the password for the account logging on              |
-|    PASV | Switch to passive mode                                       |
-|    QUIT | End the current session/connection                           |
-|    RETR | Retrieve the provided file                                   |
-|    STAT | Provide connection/server information                        |
-|    SYST | Provide system "type" information                            |
-|    TYPE | Switch between ASCII (A) and binary (I) transfer modes       |
-|    USER | Specify the username for the account logging on              | 
+* LIST - List contents of the supplied directory (or user's FTP root)
+* PASS - Specify the password for the account logging on
+* PASV - Switch to passive mode
+* QUIT - End the current session/connection
+* RETR - Retrieve the provided file
+* STAT - Provide connection/server information
+* SYST - Provide system "type" information
+* TYPE - Switch between ASCII (A) and binary (I) transfer modes
+* USER - Specify the username for the account logging on
+
+There are a lot more obscure commands as well, though the above is sufficient for basic operations.
 
 * [FTP Commands: QUIT, USER, ABOR, ACCT, SYST, XDEL](https://www.serv-u.com/resource/tutorial/quit-user-abor-acct-syst-xdel-ftp-command)
 * [FTP Commands: APPE, MLSD, MLST, LIST, RETR, STOR, STOU](https://www.serv-u.com/resource/tutorial/appe-stor-stou-retr-list-mlsd-mlst-ftp-command)
