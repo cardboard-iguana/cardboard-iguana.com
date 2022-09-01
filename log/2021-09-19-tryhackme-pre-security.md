@@ -17,11 +17,9 @@ control /name Microsoft.WindowsUpdate
 
 Windows Firewall network classifications:
 
-| Network Type | Description                                                                                                                                         |
-|:------------ |:--------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Domain       | The domain profile applies to networks where the host system can authenticate to a domain controller.                                               |
-| Private      | The private profile is a user-assigned profile and is used to designate private or home networks.                                                   |
-| Public       | The default profile is the public profile, used to designate public networks such as Wi-Fi hotspots at coffee shops, airports, and other locations. |
+* Domain - The domain profile applies to networks where the host system can authenticate to a domain controller.
+* Private - The private profile is a user-assigned profile and is used to designate private or home networks.
+* Public - The default profile is the public profile, used to designate public networks such as Wi-Fi hotspots at coffee shops, airports, and other locations.
 
 The Windows Firewall snap-in is WF.msc.
 
@@ -50,12 +48,10 @@ The -size flag matches files of size `n`.
 
 Prefix `n` with + or - to match files *strictly* greater than or less than `n` in size. To specify useful sizes, use a suffix.
 
-| Suffix | Meaning   |
-|:------:|:--------- |
-|   c    | Bytes     |
-|   k    | Kilobytes |
-|   M    | Megabytes |
-|   G    | Gigabytes |
+* `c` -  Bytes
+* `k` - Kilobytes
+* `M` - Megabytes
+* `G` - Gigabytes
 
 For example, use `-size +4G` to find files over 4 GB (i.e., those that can't be written to a FAT32 file system).
 

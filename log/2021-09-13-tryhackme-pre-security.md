@@ -130,18 +130,16 @@ Same approach to encapsulation as OSI.
 
 Key TCP headers:
 
-| Header                 | Description                                                                                                                                                             |
-|:---------------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Time to Live (TTL)     | How long a packet should live on the network before being discarded.                                                                                                    |
-| Source port            | A random (unused) port chosen by the sender.                                                                                                                            |
-| Destination port       | The port on the receiving end, which normally is determined by the application being used.                                                                              |
-| Source address         | "From" IP address.                                                                                                                                                      |
-| Destination address    | "To" IP address.                                                                                                                                                        |
-| Sequence number        | A random number that identifies a given connection.                                                                                                                     |
-| Acknowledgement number | Starts at the sequence number and then increases by one for each packet sent. Used to ensure that no data is lost, and that packets are reassembled in the right order. |
-| Checksum               | Integrity check.                                                                                                                                                        |
-| Data                   | The, well, data.                                                                                                                                                        |
-| Flag(s)                | How the packet should be handled (SYN, ACK, FIN, RST, etc.).                                                                                                            |
+* Time to Live (TTL) - How long a packet should live on the network before being discarded.
+* Source port - A random (unused) port chosen by the sender.
+* Destination port - The port on the receiving end, which normally is determined by the application being used.
+* Source address - "From" IP address.
+* Destination address - "To" IP address.
+* Sequence number - A random number that identifies a given connection.
+* Acknowledgement number - Starts at the sequence number and then increases by one for each packet sent. Used to ensure that no data is lost, and that packets are reassembled in the right order.
+* Checksum - Integrity check.
+* Data - The, well, data.
+* Flag(s) - How the packet should be handled (SYN, ACK, FIN, RST, etc.).
 
 Key TCP flags:
 
@@ -168,14 +166,12 @@ Closing the connection uses a "four way handshake": Client FIN > Server ACK > Se
 
 UDP is *stateless*. It shares a few headers with TCP:
 
-| Header               | Description                                                                                                                                                             |
-|:-------------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Time to Live (TTL)   | How long a packet should live on the network before being discarded.                                                                                                    |
-| Source port          | A random (unused) port chosen by the sender.                                                                                                                            |
-| Destination port     | The port on the receiving end, which normally is determined by the application being used.                                                                              |
-| Source address       | "From" IP address.                                                                                                                                                      |
-| Destination address  | "To" IP address.                                                                                                                                                        |
-| Data                 | The, well, data.                                                                                                                                                        |
+* Time to Live (TTL) - How long a packet should live on the network before being discarded.
+* Source port - A random (unused) port chosen by the sender.
+* Destination port - The port on the receiving end, which normally is determined by the application being used.
+* Source address - "From" IP address.
+* Destination address - "To" IP address.
+* Data - The, well, data.
 
 Since there are no handshakes in UDP, data transmission is fairly simple:
 

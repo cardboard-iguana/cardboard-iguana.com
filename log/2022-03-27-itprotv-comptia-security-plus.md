@@ -145,21 +145,19 @@ I just realized this, but \*NIX numeric permissions are listed in "descending" o
 
 Some \*NIX commands that I'm less familiar with:
 
-|        Command | Function                                                              |
-| --------------:|:--------------------------------------------------------------------- |
-|       `logger` | Send messages to syslog                                               |
-|          `arp` | Display the system ARP table                                          |
-|      `tracert` | Windows 'traceroute' equivalent                                       |
-|      `nbtstat` | NetBIOS troubleshooting tool, similar to `netstat`                    |
-|        `hping` | General packet creation/manipulation/disassembly tool                 |
-|      `dnsenum` | General DNS enumeration/reconnaissance tool                           |
-| `theharvester` | OSINT reconnaissance tool                                             |
-|     `scanless` | Simple port scanner that uses third-party webservices to mask your IP |
-|       `cuckoo` | Malware analysis sandbox                                              |
-|      `tcpdump` | TCP/IP packet capture tool                                            |
-|      `windump` | Windows equivalent of `tcpdump`                                       |
-|    `tcpreplay` | Replay previously captured TCP/IP traffic                             |
-|      `memdump` | Dumps the contents of system memory                                   |
+* logger - Send messages to syslog
+* arp - Display the system ARP table
+* tracert - Windows 'traceroute' equivalent
+* nbtstat - NetBIOS troubleshooting tool, similar to netstat
+* hping - General packet creation/manipulation/disassembly tool
+* dnsenum - General DNS enumeration/reconnaissance tool
+* theharvester - OSINT reconnaissance tool
+* scanless - Simple port scanner that uses third-party webservices to mask your IP
+* cuckoo - Malware analysis sandbox
+* tcpdump - TCP/IP packet capture tool
+* windump - Windows equivalent of tcpdump
+* tcpreplay - Replay previously captured TCP/IP traffic
+* memdump - Dumps the contents of system memory
 
 ### Network Reconnaissance and Discovery
 
@@ -205,9 +203,9 @@ Data Sanitization: The removal of data from a device in a fashion designed to ma
 
 Types of data sanitization:
 
-* Clear: Normal read/write commands.
-* Purge: The use of techniques designed to make data recovery difficult/impossible. Normally what we mean when we talk about "data sanitization".
-* Destroy: Render the device inoperative and the data inaccessible/unrecoverable.
+* Clear - Normal read/write commands.
+* Purge - The use of techniques designed to make data recovery difficult/impossible. Normally what we mean when we talk about "data sanitization".
+* Destroy - Render the device inoperative and the data inaccessible/unrecoverable.
 
 Some other tools that Exam Cram mentions explicitly:
 

@@ -5,17 +5,15 @@ date:: 2022-05-20
 
 ## Keyboard Shortcuts
 
-| Shortcut        | Action                                        |
-|:--------------- |:--------------------------------------------- |
-| `Ctrl + Shift + D` | Switch to Dashboard                           |
-| `Ctrl + Shift + T` | Switch to Target                              |
-| `Ctrl + Shift + P` | Switch to Proxy                               |
-| `Ctrl + Shift + I` | Switch to Intruder                            |
-| `Ctrl + Shift + R` | Switch to Repeater                            |
-| `Ctrl + F`        | Forward intercepted request                   |
-| `Ctrl + U`        | URL encode selected text in Proxy > Intercept |
-| `Ctrl + R`        | Send request from Proxy to Repeater           |
-| `Ctrl + R`        | Send request from Proxy to Intruder           |
+* `Ctrl + Shift + D` - Switch to Dashboard
+* `Ctrl + Shift + T` - Switch to Target
+* `Ctrl + Shift + P` - Switch to Proxy
+* `Ctrl + Shift + I` - Switch to Intruder
+* `Ctrl + Shift + R` - Switch to Repeater
+* `Ctrl + F` - Forward intercepted request
+* `Ctrl + U` - URL encode selected text in Proxy > Intercept
+* `Ctrl + R` - Send request from Proxy to Repeater
+* `Ctrl + R` - Send request from Proxy to Intruder
 
 ## The Burp Suite Browser
 

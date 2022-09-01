@@ -259,22 +259,20 @@ Reference:
 
 Nmap script categories:
 
-|  Category | Description                                                                                                            |
-| ---------:|:---------------------------------------------------------------------------------------------------------------------- |
-|      auth | Probes for information about service authentication and bypasses. Does not conduct brute-force attacks.                |
-| broadcast | Host/network probes using broadcast packets.                                                                           |
-|     brute | Attempt to brute-force service credentials.                                                                            |
-|   default | A curated list of fast, reliable scripts. Can also be called using -sC.                                                |
-| discovery | Gather additional information about scanned machines/ports.                                                            |
-|       dos | Scripts that may crash machines/services.                                                                              |
-|   exploit | Attempt to actually exploit identified services.                                                                       |
-|  external | Scripts that send data to third-party services.                                                                        |
-|    fuzzer | Fuzz identified services.                                                                                              |
-| intrusive | Scripts that may crash a service, generate lots of log messages, or are otherwise noise / may be considered malicious. |
-|   malware | Test for the possible presence of malware on the target.                                                               |
-|      safe | The opposite of "intrusive" - scripts that are unlikely to be noisy or perceived as malicious (no guarantees though).  |
-|   version | Scripts called by -sV. Unlike "default", this category cannot be called directly.                                      |
-|      vuln | Check for potential vulnerabilities. I've found that scripts in this category generate a lot of false positives.       |
+* auth - Probes for information about service authentication and bypasses. Does not conduct brute-force attacks.
+* broadcast - Host/network probes using broadcast packets.
+* brute - Attempt to brute-force service credentials.
+* default - A curated list of fast, reliable scripts. Can also be called using -sC.
+* discovery - Gather additional information about scanned machines/ports.
+* dos - Scripts that may crash machines/services.
+* exploit - Attempt to actually exploit identified services.
+* external - Scripts that send data to third-party services.
+* fuzzer - Fuzz identified services.
+* intrusive - Scripts that may crash a service, generate lots of log messages, or are otherwise noise / may be considered malicious.
+* malware - Test for the possible presence of malware on the target.
+* safe - The opposite of "intrusive" - scripts that are unlikely to be noisy or perceived as malicious (no guarantees though).
+* version - Scripts called by -sV. Unlike "default", this category cannot be called directly.
+* vuln - Check for potential vulnerabilities. I've found that scripts in this category generate a lot of false positives.
 
 * [Nmap Scripting Engine Usage and Examples (Official Nmap Project Guide)](https://nmap.org/book/nse-usage.html)
 
@@ -309,14 +307,12 @@ host: something
 
 FTP commands:
 
-| Command | Meaning                                                 |
-| -------:|:------------------------------------------------------- |
-|    USER | Specify the username for the account logging on.        | 
-|    PASS | Specify the password for the account logging on.        |
-|    STAT | Provide connection/server information.                  |
-|    SYST | Provide system "type" information.                      |
-|    PASV | Switch to passive mode.                                 |
-|    TYPE | Switch between ASCII (A) and binary (I) transfer modes. |
+* USER - Specify the username for the account logging on.
+* PASS - Specify the password for the account logging on.
+* STAT - Provide connection/server information.
+* SYST - Provide system "type" information.
+* PASV - Switch to passive mode.
+* TYPE - Switch between ASCII (A) and binary (I) transfer modes.
 
 Note that you cannot receive files using FTP with telnet/netcat, as file transfers are conducted over a separate channel (either a channel originating from port 20 on the server for "active" mode or a random port above 1023 on the client for "passive" mode).
 
@@ -339,7 +335,7 @@ Here is another line.
 QUIT
 ```
 
-Note that `MAIL FROM` / `From` and `RCPT TO` / `To` are not actually required to match, though failure to fill in the `MAIL FROM` / `RCPT TO` commands *may* result in the message being rejected. The commands above are *not* case-sensitive, and the message ends with a `.` on a single line.
+Note that MAIL FROM / From and RCPT TO / To are not actually required to match, though failure to fill in the MAIL FROM / RCPT TO commands *may* result in the message being rejected. The commands above are *not* case-sensitive, and the message ends with a `.` on a single line.
 
 * [In SMTP, must the RCPT TO: and TO: match?](https://stackoverflow.com/questions/10822190/in-smtp-must-the-rcpt-to-and-to-match)
 
@@ -347,25 +343,21 @@ Note that `MAIL FROM` / `From` and `RCPT TO` / `To` are not actually required to
 
 POP3 commands:
 
-| Command | Meaning                                                 |
-| -------:|:------------------------------------------------------- |
-|    USER | Username to use for authentication                      |
-|    PASS | Password to use for authentication                      |
-|    STAT | Mailbox statistics (`+OK $TOTAL_MSGS $MBOX_SIZE_BYTES`) |
-|    LIST | List messages (`$MSG_NUMBER $MSG_SIZE_BYTES`)           |
-|    RETR | Retrieve message `$MESSAGE_NUMBER`                      |
-|    QUIT | Close connection                                        |
+* USER - Username to use for authentication
+* PASS - Password to use for authentication
+* STAT - Mailbox statistics (+OK $TOTAL_MSGS $MBOX_SIZE_BYTES)
+* LIST - List messages ($MSG_NUMBER $MSG_SIZE_BYTES)
+* RETR - Retrieve message $MESSAGE_NUMBER
+* QUIT - Close connection
 
 ### Internet Message Access Protocol (IMAP)
 
 IMAP commands are much more complicated than POP3. Some examples:
 
-|                  Command | Meaning              |
-| ------------------------:|:-------------------- |
-| `prefix LOGIN user pass` | Login user           | 
-|     `prefix LIST "" "*"` | List folders         |
-|   `prefix EXAMINE INBOX` | List emails in INBOX |
-|          `prefix LOGOUT` | Close connection     |
+* Login User - prefix LOGIN user pass
+* List Folders - prefix LIST "" "\*"
+* List Emails in INBOX - prefix EXAMINE INBOX
+* Close Connection - prefix LOGOUT
 
 Here `prefix` is a random prefix we provide to track server replies to various commands. IMAP accepts a lot of different user authentication methods; LOGIN is just the simplest (and least secure).
 

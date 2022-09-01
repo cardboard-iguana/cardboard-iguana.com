@@ -150,27 +150,25 @@ The TCP/IP model (which comes out of the DOD's work on ARPANET) actually pre-dat
 
 Key TCP headers:
 
-| Header                 | Description                                                                                                                                                             |
-|:---------------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Time to Live (TTL)     | How long a packet should live on the network before being discarded.                                                                                                    |
-| Source port            | A random (unused) port chosen by the sender.                                                                                                                            |
-| Destination port       | The port on the receiving end, which normally is determined by the application being used.                                                                              |
-| Source address         | "From" IP address.                                                                                                                                                      |
-| Destination address    | "To" IP address.                                                                                                                                                        |
-| Sequence number        | A random number that identifies a given connection.                                                                                                                     |
-| Acknowledgement number | Starts at the sequence number and then increases by one for each packet sent. Used to ensure that no data is lost, and that packets are reassembled in the right order. |
-| Checksum               | Integrity check.                                                                                                                                                        |
-| Data                   | The, well, data.                                                                                                                                                        |
-| Flag(s)                | How the packet should be handled (SYN, ACK, FIN, RST, etc.).                                                                                                            |
+* Time to Live (TTL) - How long a packet should live on the network before being discarded.
+* Source port - A random (unused) port chosen by the sender.
+* Destination port - The port on the receiving end, which normally is determined by the application being used.
+* Source address - "From" IP address.
+* Destination address - "To" IP address.
+* Sequence number - A random number that identifies a given connection.
+* Acknowledgement number - Starts at the sequence number and then increases by one for each packet sent. Used to ensure that no data is lost, and that packets are reassembled in the right order.
+* Checksum - Integrity check.
+* Data - The, well, data.
+* Flag(s) - How the packet should be handled (SYN, ACK, FIN, RST, etc.).
 
 Key TCP flags:
 
-* SYN: Initialize connection.
-* SYN/ACK: Acknowledge connection initialization (not an *actual* flag, but rather a SYN flag + an ACK flag).
-* ACK: Acknowledge packet receipt.
-* DATA: Actual connection data (not sure if this is *actually* a flag).
-* FIN: End connection.
-* RST: Error.
+* SYN - Initialize connection.
+* SYN/ACK - Acknowledge connection initialization (not an *actual* flag, but rather a SYN flag + an ACK flag).
+* ACK - Acknowledge packet receipt.
+* DATA - Actual connection data (not sure if this is *actually* a flag).
+* FIN - End connection.
+* RST - Error.
 
 TCP's "three way handshake" opens a connection by establishing a random sequence number.
 

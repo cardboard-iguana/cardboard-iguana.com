@@ -118,13 +118,11 @@ In general, POST should be for record creation, PUT for record updates.
 
 HTTP status code blocks:
 
-|   Block   | Purpose                                              |
-|:---------:|:---------------------------------------------------- |
-| 100 - 199 | Informational response (uncommon).                   |
-| 200 - 299 | Success                                              |
-| 300 - 399 | Redirects                                            |
-| 400 - 499 | Client errors (problems with the request content)    |
-| 500 - 599 | Server errors (problems with processing the request) |
+* 100 - 199 - Informational response (uncommon)
+* 200 - 299 - Success
+* 300 - 399 - Redirects
+* 400 - 499 - Client errors (problems with the request content)
+* 500 - 599 - Server errors (problems with processing the request)
 
 While some HTTP status codes are pre-defined, applications are free to make up their own as well (!).
 

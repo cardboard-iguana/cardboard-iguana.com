@@ -11,16 +11,23 @@ NTFS actually natively supports file-level encryption via EFS ("Encryption File 
 
 NTFS is actually a forking file system like HFS. Microsoft calls these forks "alternate data streams" (ADS), and there is always at least one stream (called $DATA) that holds the actual file contents. (ADS is, for example, used to store the "mark of the web".) While the File Explorer doesn't display ADS stream information, it can be accessed from Powershell.
 
-Windows permissions:
+Windows permissions for folders:
 
-| Permission           | Meaning for Folders.                                                                                              | Meaning for Files                                                                     |
-|:-------------------- |:----------------------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------- |
-| Read                 | Permits viewing and listing of files and subfolders                                                                | Permits viewing or accessing of the file's contents                                  |
-| Write                | Permits adding of files and subfolders                                                                            | Permits writing to a file.                                                            |
-| Read & Execute       | Permits viewing and listing of files and subfolders as well as executing of files; inherited by files and folders | Permits viewing and accessing of the file's contents as well as executing of the file |
-| List Folder Contents | Permits viewing and listing of files and subfolders as well as executing of files; inherited by folders only      | N/A                                                                                   |
-| Modify               | Permits reading and writing of files and subfolders; allows deletion of the folder                                | Permits reading and writing of the file; allows deletion of the file.                 |
-| Full Control         | Permits reading, writing, changing, and deleting of files and subfolders                                          | Permits reading, writing, changing and deleting of the file.                          |
+* Read - Permits viewing and listing of files and subfolders
+* Write - Permits adding of files and subfolders
+* Read & Execute - Permits viewing and listing of files and subfolders as well as executing of files; inherited by files and folders
+* List Folder Contents - Permits viewing and listing of files and subfolders as well as executing of files; inherited by folders only
+* Modify - Permits reading and writing of files and subfolders; allows deletion of the folder
+* Full Control - Permits reading, writing, changing, and deleting of files and subfolders
+
+Windows permissions for files:
+
+* Read - Permits viewing or accessing of the file's contents
+* Write - Permits writing to a file
+* Read & Execute - Permits viewing and accessing of the file's contents as well as executing of the file
+* List Folder Contents - N/A
+* Modify - Permits reading and writing of the file; allows deletion of the file
+* Full Control - Permits reading, writing, changing and deleting of the file
 
 Windows access is default-deny.
 

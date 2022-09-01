@@ -24,13 +24,11 @@ The easiest way to generate a request file is to simply capture the request you 
 
 `ss` is a `netstat`-like tool with slightly nicer formatting; `ss -tulpn` will produce a nice list of open ports.
 
-| Flag | Purpose                                                      |
-|:----:|:------------------------------------------------------------ |
-| `-t` | Display TCP sockets                                          |
-| `-u` | Display UDP sockets                                          |
-| `-l` | Display listening sockets (not just established connections) |
-| `-p` | Show the process using the socket (broken?)                  |
-| `-n` | Show raw port numbers (not named services)                   |
+* `-t` - Display TCP sockets
+* `-u` - Display UDP sockets
+* `-l` - Display listening sockets (not just established connections)
+* `-p` - Show the process using the socket (broken?)
+* `-n` - Show raw port numbers (not named services)
 
 ### Privilege Escalation with Metasploit
 

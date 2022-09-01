@@ -131,13 +131,13 @@ HTTP responses start out with the line `$PROTOCOL_VERSION $RESPONSE_CODE $OPTION
 
 HTTP response codes:
 
-|   Block   | Purpose                                              |
-|:---------:|:---------------------------------------------------- |
-| 100 - 199 | Informational response (uncommon).                   |
-| 200 - 299 | Success                                              |
-| 300 - 399 | Redirects                                            |
-| 400 - 499 | Client errors (problems with the request content)    |
-| 500 - 599 | Server errors (problems with processing the request) |
+* 100 - 199 - Informational response (uncommon)
+* 200 - 299 - Success
+* 300 - 399 - Redirects
+* 400 - 499 - Client errors (problems with the request content)
+* 500 - 599 - Server errors (problems with processing the request)
+
+Note that the server-defined message cannot include any line breaks.
 
 * [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 

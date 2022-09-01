@@ -23,16 +23,14 @@ Huh?
 
 Windows Event Log fields:
 
-| Field         | Data                                                                    |
-|:------------- |:----------------------------------------------------------------------- |
-| Type          | Warning, error, information, etc.                                       |
-| Time          | Date/time for the computer *sending* the log                            |
-| Computer      | Computer name                                                           |
-| Provider Type | The facility that generated the event (generally the Windows Event Log) |
-| Provider Name | The name of the log (Application, Security, etc.)                       |
-| Source        | Application                                                             |
-| Event ID      | Standardized (*not* unique!) identifier                                 |
-| Description   | Self-explanatory                                                        |
+* Type - Warning, error, information, etc.
+* Time - Date/time for the computer *sending* the log
+* Computer - Computer name
+* Provider Type - The facility that generated the event (generally the Windows Event Log)
+* Provider Name - The name of the log (Application, Security, etc.)
+* Source - Application
+* Event ID - Standardized (*not* unique!) identifier
+* Description - Self-explanatory
 
 Event IDs from the Windows Event Log can generally be looked up in the Microsoft Knowledge base.
 

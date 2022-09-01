@@ -9,15 +9,13 @@ date:: 2022-01-06
 
 Useful Burp Suite shortcuts:
 
-| Shortcut        | Action                                        |
-|:--------------- |:--------------------------------------------- |
-| `Ctrl + Shift + D` | Switch to Dashboard                           |
-| `Ctrl + Shift + T` | Switch to Target                              |
-| `Ctrl + Shift + P` | Switch to Proxy                               |
-| `Ctrl + Shift + I` | Switch to Intruder                            |
-| `Ctrl + Shift + R` | Switch to Repeater                            |
-| `Ctrl + F`        | Forward intercepted request                   |
-| `Ctrl + U`        | URL encode selected text in Proxy > Intercept |
+* `Ctrl + Shift + D` - Switch to Dashboard
+* `Ctrl + Shift + T` - Switch to Target
+* `Ctrl + Shift + P` - Switch to Proxy
+* `Ctrl + Shift + I` - Switch to Intruder
+* `Ctrl + Shift + R` - Switch to Repeater
+* `Ctrl + F` - Forward intercepted request
+* `Ctrl + U` - URL encode selected text in Proxy > Intercept
 
 ### Options
 

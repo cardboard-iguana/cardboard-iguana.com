@@ -103,12 +103,10 @@ The look it up:
 
 Useful Google search modifiers:
 
-| Modifier  | Effect                                           |
-|:--------- |:------------------------------------------------ |
-| site:     | Search only within the specified domain          |
-| inurl:    | Require term to be present in the URL            |
-| filetype: | Only return results with the specified extension |
-| intitle:  | Require term to be present in the page title     |
+* site: -  Search only within the specified domain
+* inurl: - Require term to be present in the URL
+* filetype: - Only return results with the specified extension
+* intitle: - Require term to be present in the page title
 
 ### OSINT: Wappalyzer
 

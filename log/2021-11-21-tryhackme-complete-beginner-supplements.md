@@ -58,12 +58,10 @@ It turns out that most web crawlers support regexes in the `Allow`/`Disallow` st
 
 Useful Google search modifiers:
 
-| Directive   | Effect                                                  |
-|:----------- |:------------------------------------------------------- |
-| `site:`     | Limit results to the provided domain                    |
-| `filetype:` | Limit results to the provided file type (PDF, etc.)     |
-| `intitle:`  | Require that the page title contain particular keywords |
-| `cache:`    | View the most recent cached version of a particular URL |
+* `site:` - Limit results to the provided domain
+* `filetype:` - Limit results to the provided file type (PDF, etc.)
+* `intitle:` - Require that the page title contain particular keywords
+* `cache:` - View the most recent cached version of a particular URL
 
 ## Wireshark 101
 
