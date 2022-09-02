@@ -15,17 +15,15 @@ SIP is an ASCII based protocol which has some similar elements like in the HTTP 
 
 ## SIP Requests/Methods
 
-|   Request | Description                                                                                                                                     |
-| ---------:|:----------------------------------------------------------------------------------------------------------------------------------------------- |
-|    INVITE | Used to invite and account to participate in a call session.                                                                                    |
-|       ACK | Acknowledge an INVITE request.                                                                                                                  |
-|    CANCEL | Cancel a pending request.                                                                                                                       |
-|  REGISTER | Register user with a SIP server.                                                                                                                |
-|   OPTIONS | Lists information about the capabilities of a caller.                                                                                           |
-|       BYE | Terminates a session between two users in a call.                                                                                               |
-|     REFER | Indicates that the recipient(identified by the Request URI) should contact a third party using the contact information provided in the request. |
-| SUBSCRIBE | The SUBSCRIBE method is used to request current state and state updates from a remote node.                                                     |
-|    NOTIFY | The NOTIFY method is used to notify a SIP node that an event which has been requested by an earlier SUBSCRIBE method has occurred.              |
+* INVITE - Used to invite and account to participate in a call session.
+* ACK - Acknowledge an INVITE request.
+* CANCEL - Cancel a pending request.
+* REGISTER - Register user with a SIP server.
+* OPTIONS - Lists information about the capabilities of a caller.
+* BYE - Terminates a session between two users in a call.
+* REFER - Indicates that the recipient(identified by the Request URI) should contact a third party using the contact information provided in the request.
+* SUBSCRIBE - The SUBSCRIBE method is used to request current state and state updates from a remote node.
+* NOTIFY - The NOTIFY method is used to notify a SIP node that an event which has been requested by an earlier SUBSCRIBE method has occurred.
 
 ### Example SIP INVITE Request
 
@@ -50,14 +48,12 @@ Content-Length: 310
 
 ## SIP Responses
 
-| Response | Description                                                                                      |
-| --------:|:------------------------------------------------------------------------------------------------ |
-|      1xx | Informational responses.                                                                         |
-|      2xx | Successful responses: The action was successfully received, understood, and accepted.            |
-|      3xx | Redirection responses.                                                                           |
-|      4xx | Request failure responses: The request contains bad syntax or cannot be fulfilled at the server. |
-|      5xx | Server failure responses: The server failed to fulfill an apparently valid request.              |
-|      6xx | Global failure responses: The request cannot be fulfilled at any server.                         |
+* 1xx - Informational responses.
+* 2xx - Successful responses: The action was successfully received, understood, and accepted.
+* 3xx - Redirection responses.
+* 4xx - Request failure responses: The request contains bad syntax or cannot be fulfilled at the server.
+* 5xx - Server failure responses: The server failed to fulfill an apparently valid request.
+* 6xx - Global failure responses: The request cannot be fulfilled at any server.
 
 ## Example SIP Call
 

@@ -3,10 +3,10 @@
 author:: Nathan Acks  
 date:: 2021-10-02
 
-| FD | I/O Name |
-|:--:|:-------- |
-|  0 | STDIN    |
-|  1 | STDOUT   |
-|  2 | STDERR   |
+* STDIN - 0
+* STDOUT - 1
+* STDERR - 2
+
+You can also create your own file descriptors in an ad hoc fashion.
 
 * [Unix / Linux - Shell Input/Output Redirections](https://www.tutorialspoint.com/unix/unix-io-redirections.htm)

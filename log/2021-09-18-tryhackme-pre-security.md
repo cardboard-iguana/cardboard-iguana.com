@@ -69,7 +69,7 @@ There's a hand search bar at the bottom of this utility.
 
 Where UNIX applications generally use -h or --help to display help information, Windows typically uses /?. (The "/" switches was pretty standard in early DOS and Windows applications, but in the Windows 10 era UNIX-style "-" and "--" are used instead.)
 
-The `net` command is a Windows-specific command line tool that is a kind of Swiss Army knife for controlling various Windows network-related settings (everything from network shares to NTP to - wait for it - user accounts). Like, it's kinda nuts.
+The "net" command is a Windows-specific command line tool that is a kind of Swiss Army knife for controlling various Windows network-related settings (everything from network shares to NTP to - wait for it - user accounts). Like, it's kinda nuts.
 
 * [An A-Z Index of Windows CMD commands](https://ss64.com/nt/)
 

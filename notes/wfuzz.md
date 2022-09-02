@@ -5,10 +5,8 @@ date:: 2022-01-25
 
 wfuzz is a URL fuzzer -- basically the command-line version of the Burp Suite Intruder (but it's *much* faster, which is what one would generally expect from a command-line tool).
 
-| Flag | Meaning                                                    |
-|:----:|:---------------------------------------------------------- |
-| `-c` | Use color                                                  |
-| `-z` | Specify the wordlist that will replace FUZZ in the request |
+* `-c` - Use color
+* `-z` - Specify the wordlist that will replace FUZZ in the request
 
 Basically, the word "FUZZ" in the URL will be replaced by elements of the wordlist specified by `-z`. Multiple slots can be specified using "FUZ2Z", "FUZ3Z", etc.
 
