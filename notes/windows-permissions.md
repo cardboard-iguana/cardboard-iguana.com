@@ -5,14 +5,23 @@ date:: 2022-04-22
 
 Windows access is default-deny.
 
-| Permission           | Meaning for Folders                                                                                               | Meaning for Files                                                                                     |
-|:-------------------- |:----------------------------------------------------------------------------------------------------------------- |:----------------------------------------------------------------------------------------------------- |
-| Read                 | Permits viewing and listing of files and subfolders                                                               | Permits viewing or accessing of the file's contents                                                   |
-| Write                | Permits adding of files and subfolders                                                                            | Permits writing to a file                                                                             |
-| Read & Execute       | Permits viewing and listing of files and subfolders as well as executing of files; inherited by files and folders | Permits viewing and accessing of the file's contents as well as executing of the file                 |
-| List Folder Contents | Permits viewing and listing of files and subfolders as well as executing of files; inherited by folders only      | N/A                                                                                                   |
-| Modify               | Permits reading and writing of files and subfolders as well as executing of files; allows deletion of the folder  | Permits reading and writing of the file as well as executing of the file; allows deletion of the file |
-| Full Control         | Permits reading, writing, changing, and deleting of files and subfolders                                          | Permits reading, writing, changing and deleting of the file                                           |
+Windows folder permissions:
+
+* Read - Permits viewing and listing of files and subfolders
+* Write - Permits adding of files and subfolders
+* Read & Execute - Permits viewing and listing of files and subfolders as well as executing of files; inherited by files and folders
+* List Folder Contents - Permits viewing and listing of files and subfolders as well as executing of files; inherited by folders only
+* Modify - Permits reading and writing of files and subfolders as well as executing of files; allows deletion of the folder
+* Full Control - Permits reading, writing, changing, and deleting of files and subfolders
+
+Windows file permissions:
+
+* Read - Permits viewing or accessing of the file's contents
+* Write - Permits writing to a file
+* Read & Execute - Permits viewing and accessing of the file's contents as well as executing of the file
+* List Folder Contents - N/A
+* Modify - Permits reading and writing of the file as well as executing of the file; allows deletion of the file
+* Full Control - Permits reading, writing, changing and deleting of the file
 
 The biggest differences between Windows and UNIX permissions:
 
