@@ -6,7 +6,7 @@ tags:: #MOC
 
 * [DEF CON 30](https://defcon.org/html/defcon-30/dc-30-index.html)
 
-## Notes
+# Conference Notes
 
 * [2022-08-11 - DEF CON 30](../log/2022-08-11-def-con-30.md)
 * [2022-08-12 - DEF CON 30](../log/2022-08-12-def-con-30.md)

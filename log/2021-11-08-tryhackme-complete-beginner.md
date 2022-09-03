@@ -3,11 +3,11 @@
 author:: Nathan Acks  
 date:: 2021-11-08
 
-## Steel Mountain
+# Steel Mountain
 
 Things got busy yesterday and I had to push finishing this section off a day. The machine's new IP address is 10.10.174.199.
 
-### Access and Escalation Without Metasploit
+## Access and Escalation Without Metasploit
 
 The alternate exploit we're going to run for this is located at /usr/share/exploitdb/exploits/windows/remote/39161.py on Kali Linux. To set this up, we're going to use a quick-n-dirty Python web server containing a statically-compiled version of netcat. This needs to be running on port 80 for the exploit to work (don't forget to punch a hole through the firewall for this!).
 

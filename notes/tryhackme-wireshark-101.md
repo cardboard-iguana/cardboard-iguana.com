@@ -6,7 +6,7 @@ tags:: #MOC
 
 * [TryHackMe: Wireshark 101](https://tryhackme.com/room/wireshark)
 
-## Notes
+# Course Notes
 
 * [2021-11-21 - TryHackMe: Complete Beginner (Supplements)](../log/2021-11-21-tryhackme-complete-beginner-supplements.md)
 * [2021-11-22 - TryHackMe: Complete Beginner (Supplments)](../log/2021-11-22-tryhackme-complete-beginner-supplements.md)

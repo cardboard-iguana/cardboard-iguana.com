@@ -3,15 +3,15 @@
 author:: Nathan Acks  
 date:: 2022-04-02
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
 Today I'll be covering Chapter 22 of the Security+ Exam Cram, "Cloud Cybersecurity Solutions".
 
-### Introduction
+## Introduction
 
 Cloud platform security controls: A wall of toggle. So many toggles...
 
-### Cloud Workloads
+## Cloud Workloads
 
 Key security concerns:
 
@@ -21,7 +21,7 @@ Key security concerns:
 
 In AWS, both servers and users are assigned permissions.
 
-### Regions and Availability Zones
+## Regions and Availability Zones
 
 Region = Geographic area
 
@@ -31,13 +31,13 @@ Regions provide control over pricing, local regulations, and (gross) latency.
 
 Availability zones allow for redundancy.
 
-### Virtual Private Cloud (VPC)
+## Virtual Private Cloud (VPC)
 
 This is basically the private internal networks used to connect cloud resources. "VPC endpoints" allow connections to other cloud resources, but are generally one-way (requests must be initiated by resources within the VPC).
 
 Security best practices for a VPC are basically the same as those for a regular network, except that there's often finer-grained control via security groups and cloud platform policies. API monitoring also needs to be taken into account.
 
-### Security Groups
+## Security Groups
 
 Security groups can be thought of as firewalls, as they determine what traffic may be sent/received by resources within the group. General properties (seems AWS-specific):
 
@@ -48,7 +48,7 @@ Security groups can be thought of as firewalls, as they determine what traffic m
 
 Network ACLs basically function as *stateless* firewalls.
 
-### Policies
+## Policies
 
 Policies are bundles of permissions. Two general categories:
 
@@ -65,11 +65,11 @@ So, the way to think of composite policies is basically to sum up the explicitly
 
 Note that on all (most?) cloud systems, policies only apply to actions, *not* network traffic.
 
-### Managing Secrets
+## Managing Secrets
 
 Basically, use the built-in secrets management functionality of your platform.
 
-### Central Logging
+## Central Logging
 
 Basically, log all the things. But if you can't log all the things, then log:
 
@@ -78,7 +78,7 @@ Basically, log all the things. But if you can't log all the things, then log:
 * Authentication attempts
 * Resource/Object creation/deletion
 
-### Third-Party Cloud Security Solutions
+## Third-Party Cloud Security Solutions
 
 CASB = Cloud Access Security Broker
 
@@ -108,9 +108,9 @@ AWS apparently has a "marketplace" (sounds a bit like the Google Workspace add-o
 * SIEM
 * Workload-based security controls
 
-## TryHackMe: Jr. Penetration Tester
+# TryHackMe: Jr. Penetration Tester
 
-### TCP and UDP Ports
+## TCP and UDP Ports
 
 Six nmap port states:
 
@@ -125,7 +125,7 @@ Reference:
 
 * [Port Scanning Basics (Official Nmap Project Guide)](https://nmap.org/book/man-port-scanning-basics.html)
 
-### TCP Flags
+## TCP Flags
 
 Available TCP flags:
 
@@ -140,7 +140,7 @@ Reference:
 
 * [Transmission Control Protocol (RFC 793)](https://datatracker.ietf.org/doc/html/rfc793.html)
 
-### TCP Connect Scan
+## TCP Connect Scan
 
 TCP connect scans attempt to perform the full three-way handshake for each port, but then immediately tears down the connection using RST/ACK.
 
@@ -152,13 +152,13 @@ Unless `-p` is specified, only the 1000 most common ports are scanned. If `-F` i
 
 Nmap normally scans ports in a random order. However, ports are often brought up consecutively, so for freshly booted targets the `-r` flag (which *removes* this randomization) can be advisable.
 
-### TCP SYN Scan
+## TCP SYN Scan
 
 TCP SYN scans (`-sS`) are nmap's default; sends a RST instead of a ACK at the end of the three-way handshake.
 
 Fast. Limited to privileged users.
 
-### UDP Scan
+## UDP Scan
 
 UDP scans are specified using `-sU`.
 
@@ -170,7 +170,7 @@ Note that `-sS` and `-sU` can be specified simultaneously, in which case nmap wi
 
 * [UDP Scan (-sU) (Official Nmap Project Guide)](https://nmap.org/book/scan-methods-udp-scan.html)
 
-### Fine-Tuning Scope and Performance
+## Fine-Tuning Scope and Performance
 
 Use `--top-ports 10` to scan only the ten most common ports.
 
@@ -188,17 +188,17 @@ Timing can be specified with the `-T` flag, which takes a template number 0 - 5.
 
 Packet rate can also be bounded using `--min-rate` and `--max-rate` (single numbers representing packets-per-second). The number of *parallel* probes that nmap will have running at any one time can be bounded using `--min-parallelism` and `--max-parallelism`.
 
-### TCP Null Scan, FIN Scan, and Xmas Scan
+## TCP Null Scan, FIN Scan, and Xmas Scan
 
 * `-sN` - Null scan; no TCP flags are set. Used to circumvent *stateless* firewalls. Can distinguish between `closed` and `open|filtered`.
 * `-sF` - FIN scan. Use and output is similar to a null scan, but is slightly more likely to be blocked.
 * `-sX` - Xmas scan; the FIN, URG, and PSH TCP flags are set. Use and output is similar to a null scan.
 
-### TCP Maimon Scan
+## TCP Maimon Scan
 
  `-sM` - Maimon scan (named after Uriel Maimon); the FIN and ACK TCP flags are set. Should always receive a RST, but some older BSD systems drop the packet on open ports. Of limited modern utility.
 
-### TCP Ack, Windows, and Custom Scan
+## TCP Ack, Windows, and Custom Scan
 
 * `-sA` - ACK scan. All ports *should* respond with a RST, but firewalls will generally block these requests except for open/forwarded ports. Thus, an ACK scan is useful for probing the configuration of intermediate firewalls (but says nothing about whether services are actually *listening* on the identified ports).
 * `-sW` - TCP windows scan; the same as an ACK scan except that it examines the TCP window field of returned RST packets and uses it to discern if a port responded *differently*. Note that ports may be reported as closed (and open!) erroneously (as not all systems respond in the same way), but unfiltered ports will be identified. Look for patterns of open/closed ports to try to discern how the target system is responding.
@@ -208,14 +208,14 @@ Reference:
 
 * [TCP Window Scan (-sW) (Official Nmap Project Guide)](https://nmap.org/book/scan-methods-window-scan.html)
   
-### Spoofing and Decoys
+## Spoofing and Decoys
 
 * `-S` - Use a spoofed IP address for the scan. Only useful if you can actually capture incoming packets at that IP address! Generally must be combined with the `-e` and `-Pn` flags.
 * `-e` - Specify the network interface to use during scanning.
 * `-D` - Send multiple scan requests using decoys; specified using a list of arbitrary IP addresses. The special "addresses" ME and RND represent the attacker (you!) and a random IP address, respectively. Obviously, if you want results than "ME" will need to be included in the list *somewhere*. Trades stealth for "chaff". Maybe only useful as a diversion?
 * `--spoof-mac` - Use a spoofed MAC address for the scan. Obviously only matters when you're on the same subnet as the target; otherwise has the same caveats as IP spoofing.
 
-### Fragmented Packets
+## Fragmented Packets
 
 * `-f` - Fragment packets so that the packet is 8 bytes or less. Specify twice to fragment into 16 byte chunks (which is reverse of how you'd intuitively expect this to work). Can help evade some next-gen firewall / IDS alarms.
 * `--mtu` - Choose the fragment length for `-f`; should always be a multiple of 8.
@@ -225,7 +225,7 @@ Reference:
 
 * [Firewall/IDS Evasion and Spoofing (Official Nmap Project Guide)](https://nmap.org/book/man-bypass-firewalls-ids.html)
 
-### Idle/Zombie Scan
+## Idle/Zombie Scan
 
 * `-sI` - Idle/Zombie scan. The idea here is to choose a machine with *no* traffic on it and then spoof it's IP address. Scans then consist of a SYN/ACK to the zombie to get the current IP ID value for the current port, then a SYN to the target (which should either reply with a RST to the zombie, which doesn't trigger a response and thus doesn't increment the IP ID, or a SYN/ACK to the zombie, which will respond with a RST which *will* increment the IP ID), then a second SYN/ACK to the zombie to see if the IP ID has been incremented by 1 (port closed or filtered on the target) or 2 (port open on the target). Note that zombies need to be systems that increment the IP ID sequentially *and* globally, and open/closed ports will be from the *zombie's* perspective, not the attacker's. These scans are also slooooow (though not as slow as `-T0`).
 
@@ -233,26 +233,26 @@ Reference:
 
 * [TCP Idle Scan (-sI) (Official Nmap Project Guide)](https://nmap.org/book/idlescan.html)
 
-### Getting More Details
+## Getting More Details
 
 * `-d` - Generate debugging output; use `-dd` for even more. This is essentially an additional verbosity leve, such that `-v` < `-vv` < `-d` < `-dd`.
 * `--reason` - Show the reason that nmap made a particular identification. Kinda fun.
 
-### Summary of Nmap Advanced Port Scans
+## Summary of Nmap Advanced Port Scans
 
 * `--source-port` - Specify the source port for a scan. possibly useful to evade some firewall rules?
 
-### Service Detection
+## Service Detection
 
 * `-sV` - Service detection scan. The same as `-sT` (because a full TCP connection is required to gather the necessary information), but probes listening services for additional information.
 * `--version-intensity` - Determine how much service information to collect (and thus how noisy the associated probes will be) with `-sV`. Ranges from 0 - 9; `--version-light` is equivalent to 2, `--version-all` is equivalent to 9.
 
-### OS Detection and Traceroute
+## OS Detection and Traceroute
 
 * `-O` - OS detection. Generally requires at least one open and one closed port to be detected, and results will be distorted if the target is virtualized. The OS type is much more reliably detected than the OS version.
 * `--traceroute` - Perform a traceroute between the attacker and target systems. Note that nmap's traceroute works in the opposite fashion (high TTL to low TTL) than traceroute/tracert. Note that most routers will not send ICMP TTL exceeded packets, and will thus show up as `*`.
 
-### Nmap Scripting Engine (NSE)
+## Nmap Scripting Engine (NSE)
 
 * `-sC` - Run all default scripts (as applicable).
 * `--script` - Run specified scripts, or all scripts in a specified category (as applicable). Also accepts wildcard matches (e.g., `ftp*`).
@@ -276,22 +276,22 @@ Nmap script categories:
 
 * [Nmap Scripting Engine Usage and Examples (Official Nmap Project Guide)](https://nmap.org/book/nse-usage.html)
 
-### Saving the Output
+## Saving the Output
 
 * `-oN` - Save results as "normal" output. This is more-or-less what nmap will print to STDOUT.
 * `-oG` - Save the results as "grepable" output. This is a compact format meant to automatically provide context when searched with grep.
 * `-oX` - Save the results as XML, designed to be importable by other applications.
 * `-oA` - Save the results in "normal", "grepable", and XML formats simultaneously. This option will automatically append meaningful extensions (the other options do not do this).
 
-### Summary of Nmap Post Port Scans
+## Summary of Nmap Post Port Scans
 
 * `-A` - Alias for `-sV -O -sC --traceroute`.
 
-### Telnet
+## Telnet
 
 The default port for `telnetd` is TCP 23.
 
-### Hypertext Transfer Protocol (HTTP)
+## Hypertext Transfer Protocol (HTTP)
 
 Minimal valid HTTP request:
 
@@ -303,7 +303,7 @@ host: something
 
 (Note the blank line at the end.)
 
-### File Transfer Protocol (FTP)
+## File Transfer Protocol (FTP)
 
 FTP commands:
 
@@ -316,7 +316,7 @@ FTP commands:
 
 Note that you cannot receive files using FTP with telnet/netcat, as file transfers are conducted over a separate channel (either a channel originating from port 20 on the server for "active" mode or a random port above 1023 on the client for "passive" mode).
 
-### Simple Mail Transfer Protocol (SMTP)
+## Simple Mail Transfer Protocol (SMTP)
 
 A set of commands to send an email:
 
@@ -339,7 +339,7 @@ Note that MAIL FROM / From and RCPT TO / To are not actually required to match, 
 
 * [In SMTP, must the RCPT TO: and TO: match?](https://stackoverflow.com/questions/10822190/in-smtp-must-the-rcpt-to-and-to-match)
 
-### Post Office Protocol 3 (POP3)
+## Post Office Protocol 3 (POP3)
 
 POP3 commands:
 
@@ -350,7 +350,7 @@ POP3 commands:
 * RETR - Retrieve message $MESSAGE_NUMBER
 * QUIT - Close connection
 
-### Internet Message Access Protocol (IMAP)
+## Internet Message Access Protocol (IMAP)
 
 IMAP commands are much more complicated than POP3. Some examples:
 
@@ -361,17 +361,15 @@ IMAP commands are much more complicated than POP3. Some examples:
 
 Here `prefix` is a random prefix we provide to track server replies to various commands. IMAP accepts a lot of different user authentication methods; LOGIN is just the simplest (and least secure).
 
-### Introduction to Attacking Protocols and Servers
+## Introduction to Attacking Protocols and Servers
 
 The CIA triad has an attacker's counterpart:
 
-| Defender's Triad | Attacker's Triad |
-| ----------------:|:---------------- |
-|  Confidentiality | Disclosure       |
-|        Integrity | Alteration       |
-|     Availability | Destruction      |
+* Confidentiality <-> Disclosure
+* Integrity <-> Alteration
+* Availability <-> Destruction
 
-### Sniffing Attack
+## Sniffing Attack
 
 ```bash
 # Quick-n-dirty packet capture
@@ -381,7 +379,7 @@ sudo tcpdump port $PORT_TO_FILTER_ON -A
 
 The `-A` flag prints packet contents in ASCII. Wireshark is obviously nicer.
 
-### Transport Layer Security (TLS)
+## Transport Layer Security (TLS)
 
 SSL/TLS operate on the OSI presentation layer (layer 6).
 
@@ -389,7 +387,7 @@ DoT = DNS-over-TLS
 
 * [OSI Model](../notes/osi-model.md)
 
-### Password Attack
+## Password Attack
 
 ```bash
 # Generic Hydra invocation
@@ -413,6 +411,6 @@ Note that Hydra doesn't stop automatically after a password is found.
 
 * [Using Hydra](../notes/hydra.md)
 
-### Summary of Attacking Protocols and Servers
+## Summary of Attacking Protocols and Servers
 
 FTPS uses TCP 990 by default.

@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2022-02-13
 
-## Polkit (CVE-2021-3560)
+# Polkit (CVE-2021-3560)
 
-### Background
+## Background
 
 CVE-2021-3560 impacted the following distros (at the time of its announcement):
 
@@ -26,7 +26,7 @@ This bug is a combination of a race condition and bad error handling. Basically:
 
 The race condition is obviously kind of tricky, so best to request something that can perhaps provide some persistence, like the creation of a new user account or changing the password on an existing account.
 
-### Exploitation Process
+## Exploitation Process
 
 (0) Construct a message similar to the following:
 

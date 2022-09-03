@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-04-25
 
-## Default Shares
+# Default Shares
 
 Default SMB shares (which you generally can't connect to):
 
@@ -11,7 +11,7 @@ Default SMB shares (which you generally can't connect to):
 * ADMIN$
 * C$
 
-## Associated Protocols
+# Associated Protocols
 
 DCERPC is Windows Server's RPC connection protocol.
 

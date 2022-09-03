@@ -33,7 +33,7 @@ As much as it pains me to say it, in many ways the Windows permission mode is mu
 
 * [File and Folder Permissions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb727008)
 
-## Checking Permissions
+# Checking Permissions
 
 Use `icacls` or `Get-Acl $PATH | Format-List` in PowerShell to check permissions at the command line. The `icacls` tool can also be used to update Windows ACLs.
 
@@ -53,7 +53,7 @@ Note that the Windows File Explorer only displays the *first* ACL for a particul
 
 In the case of multiple ACLs, or when a user is part of two groups with different groups, keep in mind that allow permissions only override *inherited* deny permissions. Explicitly set deny permissions *cannot* be overridden.
 
-## Common User Types
+# Common User Types
 
 * Local Admin
 * Local User

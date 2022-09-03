@@ -9,7 +9,7 @@ Powercat is a PowerShell-native reimplementation of netcat. Powercat can be inst
 * [Using PowerShell](powershell.md)
 * [Using "netcat"](netcat.md)
 
-## One Line Reverse Shell
+# One Line Reverse Shell
 
 This disables AMSI, downloads Powercat into memory and invokes the module and then fires up a reverse shell.
 

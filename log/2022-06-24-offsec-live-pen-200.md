@@ -10,11 +10,11 @@ While I don't think I'm quite ready yet to take a crack at the OSCP, Offensive S
 * [OffSec Live FAQ](https://help.offensive-security.com/hc/en-us/articles/6702904332564-OffSec-Live-FAQ)
 * [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
 
-## Terminal Best Practices
+# Terminal Best Practices
 
 (I hopped on a few minutes late, unfortunately...)
 
-### File Descriptors
+## File Descriptors
 
 * STDIN = 0
 * STDOUT = 1

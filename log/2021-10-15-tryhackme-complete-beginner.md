@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2021-10-15
 
-## Introduction to Windows
+# Introduction to Windows
 
-### Users and Groups Management
+## Users and Groups Management
 
 AD user management can be started by opening up the Server Manager and going to Tools > Active Directory Users and Computers (aka, dsa.msc).
 
@@ -13,7 +13,7 @@ Users (and groups!) live in OUs in Active Directory. Feels very much like Google
 
 There are a number of groups pre-populated under /Users in a fresh AD tree.
 
-### Creating Your First GPO
+## Creating Your First GPO
 
 The GPO snap-in can be started by opening up the Server Manager and going to Tools > Group Policy Management (aka, gpmc.msc).
 

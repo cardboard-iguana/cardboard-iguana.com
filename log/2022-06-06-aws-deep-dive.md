@@ -3,19 +3,19 @@
 author:: Nathan Acks  
 date:: 2022-06-06
 
-## AWS Essentials
+# AWS Essentials
 
 More notes today from Linux Academy's "AWS Essentials" YouTube playlist.
 
 * [AWS Essentials (YouTube)](https://youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)
 
-### Object Lifecycles
+## Object Lifecycles
 
 An "object lifecycle" is a set of rules in S3 that migrate objects between storage classes (or even delete them!) based on the age of an object.
 
 * [AWS Essentials: Object Lifecycles (YouTube)](https://youtu.be/B-z9hNj3Fw4)
 
-### Permissions
+## Permissions
 
 Permissions granted to (non-admin) users (at the individual/group level) or resources (at the individual/role level) only apply to *using* a service in AWS. Permissioning for object create in a given service is still handled at the object level.
 
@@ -25,7 +25,7 @@ Note that making a bucket public is *not* enough to make its contents viewable o
 
 * [AWS Essentials: Permissions (YouTube)](https://youtu.be/X7vfDa1ygeo)
 
-### Object Versioning
+## Object Versioning
 
 Note that suspending versioning *doesn't* delete old versions - it simply stops the creation of new object versions in that bucket. (And yes - once you've *enabled* versioning for a bucket, you cannot disable it. Versioning can only be "suspended".)
 
@@ -33,7 +33,7 @@ Be aware that new object versions do *not* inherit the original version's storag
 
 * [AWS Essentials: Object Versioning (YouTube)](https://youtu.be/I-OW9Kr2NGs)
 
-### EC2 Basics
+## EC2 Basics
 
 EC2 = Elastic Compute Cloud
 
@@ -41,7 +41,7 @@ In addition to "on-demand" and "reserved" instances, Amazon also has "spot" inst
 
 * [AWS Essentials: EC2 Basics (YouTube)](https://youtu.be/dO1X7QG_4xw)
 
-### Amazon Machine Images (AMIs)
+## Amazon Machine Images (AMIs)
 
 An AMI is basically just a templated VM with some configuration knobs. (Mostly these knobs are about "pre-installing" applications and setting up desired configurations. In practice, this translates to kicking off scripts during the AMI's first run that *actually* install and configure things for you.)
 

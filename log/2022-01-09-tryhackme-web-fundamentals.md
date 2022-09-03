@@ -3,26 +3,26 @@
 author:: Nathan Acks  
 date:: 2022-01-09
 
-## Burp Suite: Repeater
+# Burp Suite: Repeater
 
-### Basic Usage
+## Basic Usage
 
 More handy keyboard shortcuts:
 
 * `Ctrl + R` -- Send request to Repeater (from Proxy)
 
-### Views
+## Views
 
 The `
 ` button in the Repeater Request and Response views toggles non-printable characters (not just line endings).
 
-### SQLi with Repeater
+## SQLi with Repeater
 
 A handy MySQL function is `group_concat()`, which concatenates all values of a particular column in a `GROUP BY` statement (or all values period if there's no `GROUP BY`). When applied to `information_schema.columns WHERE table_name="target_table"`, this lets us quickly pull all of the column names for the target table.
 
-## Burp Suite: Intruder
+# Burp Suite: Intruder
 
-### What is Intruder?
+## What is Intruder?
 
 More handy keyboard shortcuts:
 
@@ -30,7 +30,7 @@ More handy keyboard shortcuts:
 
 Note that Intruder is configured tab-by-tab, rather than Repeater which is pane-based.
 
-### Sniper
+## Sniper
 
 Sniper takes a *single* word list and inserts each element into each defined position, one element and one position at a time.
 
@@ -45,7 +45,7 @@ For example, assume a three-element word list containing `one`, `two`, and `thre
 
 Sniper is most useful when attacking a *single* position, however.
 
-### Battering Ram
+## Battering Ram
 
 Battering Ram again takes a *single* word list, but then inserts the *same* payload into *every* position on each run.
 
@@ -57,7 +57,7 @@ For example, assume a three-element word list containing `one`, `two`, and `thre
 
 It's a little mysterious to me why this attack is useful.
 
-### Pitchfork
+## Pitchfork
 
 Pitchfork takes *one word list per position*, and then iterates through them in sequence (thus all word lists need to be the same length; if the lists are of different lengths, then Pitchfork will stop upon reaching the end of the *shortest* list).
 
@@ -69,7 +69,7 @@ For example, assume one three-element word list containing `one`, `two`, and `th
 
 This is generally the approach that would be used in order to test against a potential list of username/password tuples.
 
-### Cluster Bomb
+## Cluster Bomb
 
 Cluster Bomb takes *one word list per position*, and then tests every possible combination in sequence.
 
@@ -89,11 +89,11 @@ This is a good approach for attacking login forms if you *don't* already know th
 
 Obviously this is the most expensive attack in terms of connections/time, and thus also the one most likely to get you noticed!
 
-### Challenge
+## Challenge
 
 IDOR (Insecure Direct Object Reference) happens when user permissions aren't checked when accessing data. This means that if you can guess how a particular piece of data is referenced, you can access it even if you don't have "permission" to view it.
 
-### CSRF Token Bypass
+## CSRF Token Bypass
 
 When dealing with forms that include session cookies or anti-CSRF tokens, we can either grab these tokens directly in Intruder using the Recursive Grep function (*not* covered in this section), or construct a macro in Project options > Sessions > Macros (necessary if there's, for example, a random redirect to make our life harder).
 

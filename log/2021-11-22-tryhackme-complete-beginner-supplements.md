@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2021-11-22
 
-## Wireshark 101
+# Wireshark 101
 
-### Filtering Captures
+## Filtering Captures
 
 Wireshark filters are generally pretty straight forward boolean operations (`and` / `&&`, `ne` / `!=`, etc.). These operate on objects that are generally written as protocol.property. For example: `ip.src`, `ip.dst`, and `ip.addr` (where `ip.addr = ip.src ∪ ip.dst` for a given IP address).
 
@@ -13,7 +13,7 @@ Protocol filters an also use a service name as shorthand. For example, `tcp.port
 
 NOTE: Wireshark is very picky about everything being *lower* case, but will also helpfully offer to auto-complete your input and will indicate a correctly formed query by highlighting the search bar green.
 
-### Packet Dissection
+## Packet Dissection
 
 Wireshark breaks down packets into 5 - 7 layers that kinda-sorta-not-exactly correspond to the OSI Model.
 
@@ -29,7 +29,7 @@ IMHO, this is actually a much clearer way to think about things though.
 
 * [OSI Model](../notes/osi-model.md)
 
-### ARP Traffic
+## ARP Traffic
 
 The ARP protocol links OSI layers 2 and 3 by mapping IP addresses to MAC addresses. ARP packet message headers contain two operation codes: REQUEST (1) and REPLY (2).
 

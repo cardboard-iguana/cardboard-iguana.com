@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2022-04-13
 
-## ITPro.TV: CompTIA Security+ (SY0-601)
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Digital Forensics Concepts
+## Digital Forensics Concepts
 
 Order of volatility:
 
@@ -34,9 +34,9 @@ Tools of the trade:
 * EnCase Forensic
 * `dd`
 
-## TryHackMe: Jr. Penetration Tester
+# TryHackMe: Jr. Penetration Tester
 
-### Vulnerability Capstone
+## Vulnerability Capstone
 
 I couldn't get any of the exploits from Exploit DB to work for me, so I wound up doing a web search that landed me on a write-up for this room in GitHub; the provided exploit code is a little rough, but can be cleaned up to produce nice output without too much work:
 
@@ -90,7 +90,7 @@ if __name__ == '__main__':
 * [Python String split() Method](https://www.w3schools.com/python/ref_string_split.asp)
 * [Replace all newline characters using python](https://stackoverflow.com/questions/54760850/replace-all-newline-characters-using-python)
 
-### Main Components of Metasploit
+## Main Components of Metasploit
 
 Module categories:
 
@@ -108,7 +108,7 @@ Payloads, in turn, can be divided into:
 * Stagers (small applications that establish a connection back to the attacker to download a larger, more complex payload)
 * Stages (payloads designed to be downloaded by a stager; also indicated by the use of a `/` separating "shell" from the rest of the payload name, as in `shell/reverse_tcp`)
 
-### Msfconsole
+## Msfconsole
 
 You can use msfconsole as a shell, but there's no redirect functionality.
 
@@ -124,7 +124,7 @@ Use `info` to get module information (which is not generally the same as "help",
 
 We can limit the `search` query to a particular type of module using the `type:` parameter (e.g., `search type:exploit wordpress`).
 
-### Working with Modules
+## Working with Modules
 
 The common `RHOSTS` module option accepts IP addresses, ranges, CIDR networks, and even a file with one target per line (specify as `file:/path/to/file.txt`).
 

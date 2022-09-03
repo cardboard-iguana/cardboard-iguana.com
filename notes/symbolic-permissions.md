@@ -11,33 +11,35 @@ This specifier is then followed by an *operator* that specifies whether the foll
 
 Permissions themselves are given as one or more of the following:
 
-| Permission | Symbol | Value | Notes                                                                                                                                                                                                             |
-|:---------- |:------:|:-----:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Read       |    r   |   4   |                                                                                                                                                                                                                   |
-| Write      |    w   |   2   |                                                                                                                                                                                                                   |
-| Execute    |    x   |   1   |                                                                                                                                                                                                                   |
-| SUID       |   s,S  |   4   | Only applied to the user when set symbolically, or to the prefix digit if set numerically. Use lowercase if the user *also* has execute permissions, uppercase if the user *doesn't* have execute permissions.    |
-| SGID       |   s,S  |   2   | Only applied to the group when set symbolically, or to the prefix digit if set numerically. Use lowercase if the group *also* has execute permissions, uppercase if the group *doesn't* have execute permissions. |
-| Sticky Bit |    t   |   1   | Only applied to the "other" permission set, or to the prefix digit if set numically. *Only* applied to directories.                                                                                               |
+* Read - r (4)
+* Write - w (2)
+* Execute - x (1)
+* SUID - s/S (4)
+* SGID - s/S (2)
+* Sticky Bit - t (1)
+
+The SUID/SGID bits are applied to the user or group (respectively) when set symbolically; the sticky bit is applied to the "other" permission set. When set numerically, all three of these values are applied to the "prefix" digit.
+
+Symbolically, the SUID/SGID bits can be represented as either "s" or "S". The different is whether the user/group *also* has execute permissions ("s"), or lacks these permissions themself ("S").
 
 * [How to manage Linux permissions for users, groups, and others](https://www.redhat.com/sysadmin/manage-permissions)
 * [Linux permissions: SUID, SGID, and sticky bit](https://www.redhat.com/sysadmin/suid-sgid-sticky-bit)
 * [How to Use "find" With File Metadata](how-to-use-find-with-file-metadata.md)
 
-## SUID
+# SUID
 
 Execute as the file owner, rather than the user passing the command.
 
-## SGID
+# SGID
 
 If set on a file, this operates similarly to SUID: The file is executed as if the user passing the command was in the *group* with the SGID bit set. (I honestly have rarely seen this used.)
 
 If set on a directory, files created in the directory will have their group ownership set to the same group as the directory itself. (In my experience this is the more common use case.)
 
-## Sticky Bit
+# Sticky Bit
 
 *Only* applied to directories. A file in a directory with the sticky bit set can only be deleted by its owner (and root). For example, /tmp always has the sticky bit set.
 
-## Write Permissions and Directories
+# Write Permissions and Directories
 
 If a user has *write* access to a directory, then they can write to any file they have at least *read* access to (!!!).

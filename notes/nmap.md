@@ -11,7 +11,7 @@ Most nmap scans will generate ~2x the number of packets as scanned ports, as unr
 
 * [TCP Protocol](tcp.md)
 
-## Useful Flags
+# Useful Flags
 
 * `-A` - "Aggressive" scan; alias for `-O -sC -sV --traceroute`.
 * `-D` - Send multiple scan requests using decoys; specified using a list of arbitrary IP addresses. The special "addresses" `ME` and `RND` represent the attacker (you!) and a random IP address, respectively. If `ME` isn't included in the list, it will be inserted into a random position. Trades stealth for "chaff". Maybe only useful as a diversion?
@@ -37,7 +37,7 @@ There's more, but these are the big ones.
 
 * [Port Scanning Basics (Official Nmap Project Guide)](https://nmap.org/book/man-port-scanning-basics.html)
 
-### Long Flags
+## Long Flags
 
 * `--badsum` - Produce packets with an invalid checksum. These should be dropped by normal hosts, but many IDS solutions *respond* to these. This can be useful for reconnaissance.
 * `--data-length` - Append random data to nmap TCP packets to ensure that all packets are the same length. By default, nmap appends no data after the TCP header; padding this out *can* make scans look more innocuous. Values < 24 only effect fragmented packets (since the TCP header is already 24 bytes). Disables protocol-specific payloads, which can decrease scan accuracy, particularly for UDP scans.
@@ -66,7 +66,7 @@ Nmap has a ton of flags. Be sure to check the man page and official documentatio
 
 * [Firewall/IDS Evasion and Spoofing (Official Nmap Project Guide)](https://nmap.org/book/man-bypass-firewalls-ids.html)
 
-### Scripting Engine
+## Scripting Engine
 
 Script categories:
 
@@ -89,14 +89,11 @@ You can also run your own scripts.
 
 * [Nmap Scripting Engine Usage and Examples (Official Nmap Project Guide)](https://nmap.org/book/nse-usage.html)
 
-### Host Discovery Options
+## Host Discovery Options
 
-By default, nmap uses the following host discovery methods (in order):
+When called as the superuser, Nmap uses ARP for local host discovery and a combination of ICMP Echo, TCP SYN to 443, TCP ACK to 80, and ICMP Timestamp requests for remote host discovery.
 
-|              | Superuser                                                | Regular User               |
-| ------------:|:-------------------------------------------------------- |:-------------------------- |
-| Local Hosts  | ARP                                                      | TCP SYN to port 80 and 443 |
-| Remote Hosts | ICMP Echo, TCP SYN to 443, TCP ACK to 80, ICMP Timestamp | TCP SYN to port 80 and 443 |
+When called as a normal user, Nmap has more limited options and uses TCP SYN packets sent for ports 80 and 443 for both local and remote host discovery.
 
 Discovery methods:
 
@@ -112,7 +109,7 @@ Most of the time the default discovery options (or -Pn) is fine. The above optio
 
 * [Host Discovery (Official Nmap Project Guide)](https://nmap.org/book/man-host-discovery.html)
 
-### Scan Types
+## Scan Types
 
 * `-sA` - ACK scan. All ports *should* respond with a RST, but firewalls will generally block these requests except for open/forwarded ports. Thus, an ACK scan is useful for probing the configuration of intermediate firewalls (but says nothing about whether services are actually *listening* on the identified ports).
 * `-sF` - FIN scan. Use and output is similar to a null scan, but is slightly more likely to be blocked.
@@ -133,7 +130,7 @@ Note that nmap by default uses a TCP window of 1024 bytes and an MSS of 1460. Th
 * [TCP Window Scan (-sW) (Official Nmap Project Guide)](https://nmap.org/book/scan-methods-window-scan.html)
 * [TCP Idle Scan (-sI) (Official Nmap Project Guide)](https://nmap.org/book/idlescan.html)
 
-### Port States
+## Port States
 
 * `Open` - The port is reachable and there is a service listening on it.
 * `Closed` - The port is reachable and there is no service listening on it.
@@ -142,7 +139,7 @@ Note that nmap by default uses a TCP window of 1024 bytes and an MSS of 1460. Th
 * `Open|Filtered` - Nmap can only determine that the port is not closed (only encountered in UDP scans and more exotic scans like Xmas).
 * `Closed|Filtered` - Nmap can only determine that the port is not open (only encountered in IP ID idle scans).
 
-## Output
+# Output
 
 * `-oA` - Save the results in "normal", "grepable", and XML formats simultaneously. This option will automatically append meaningful extensions (the other options do not do this).
 * `-oG` - Save the results as "grepable" output. This is a compact format meant to automatically provide context when searched with grep.

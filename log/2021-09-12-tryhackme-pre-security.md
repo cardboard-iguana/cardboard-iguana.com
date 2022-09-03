@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2021-09-12
 
-## What is Networking?
+# What is Networking?
 
-### Identifying Devices on a Network
+## Identifying Devices on a Network
 
 The IPv4 address space has a size of 2³² (~4.29 billion), and addresses are typically represented as four octets (4 × 8 = 32).
 
@@ -13,12 +13,12 @@ IPv6 by contrast has a size of 2¹²⁸ (~340 trillion), with addresses typicall
 
 MAC ("Media Access Control") are unique 48-bit identifying numbers burned into network cards. They are typically represented as six octets each composed of two hexadecimal numbers (0 - f). The first three octets designate the network interface vendor while the last three constitute device serial number. On most operating systems octets are separated using colons, but Windows uses dashes instead.
 
-|         | MAC Address       | Vendor ID | NIC ID   |
-| -------:|:-----------------:|:---------:|:--------:| 
-|    UNIX | a4:c3:f0:85:ac:2d |  a4:c3:f0 | 85:ac:2d |
-| Windows | A4-C3-F0-85-AC-2D |  A4-C3-F0 | 85-AC-2D |
+* UNIX-style MAC address - a4:c3:f0:85:ac:2d
+* Vendor ID - a4:c3:f0
+* NIC ID - 85:ac:2d
+* Windows version of the same MAC address - A4-C3-F0-85-AC-2D
 
-### Ping (ICMP)
+## Ping (ICMP)
 
 ICMP stands for "Internet Control Message Protocol".
 

@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2022-02-24
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
-### Password Attacks
+## Password Attacks
 
 Common password attacks:
 
@@ -27,7 +27,7 @@ Hybrid attacks seem to be the most common these days; for example, John the Ripp
 * [Burp Suite](../notes/burp-suite.md)
 * [OWASP Zap](../notes/owasp-zap.md)
 
-### Birthday Attacks
+## Birthday Attacks
 
 Birthday Attacks: Exploiting hash collisions to crack passwords.
 
@@ -35,13 +35,13 @@ Note that this doesn't really work when trying to crack a single password, as th
 
 * [Birthday problem (Wikipedia)](https://en.wikipedia.org/wiki/Birthday_problem)
 
-### Downgrade Attacks
+## Downgrade Attacks
 
 A species of man-in-the-middle attack. Keep yo' shit up-to-date!
 
-## ITPro.TV: CompTIA Security+ (SY0-601)
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Password Attacks - Types
+## Password Attacks - Types
 
 Password attacks are a type of automated attack against authentication systems.
 
@@ -54,7 +54,7 @@ Types:
 
 If you *can* use rainbow tables, they are the fastest method... But they're also easily defeated (by salting).
 
-### Password Attacks - Tools
+## Password Attacks - Tools
 
 Online Attacks: Require interacting directly with the target system (generally a remote login of some kind). Concerns:
 
@@ -79,9 +79,9 @@ Tools (not all of these are password crackers per se):
 
 PACK and CeWL, for example, are tools for generating and ordering password lists.
 
-## TryHackMe: Jr. Penetration Tester
+# TryHackMe: Jr. Penetration Tester
 
-### The CIA Triad
+## The CIA Triad
 
 * Confidentiality (only authorized parties have access)
 * Integrity (only authorized changes are made - and changes are correct)
@@ -89,7 +89,7 @@ PACK and CeWL, for example, are tools for generating and ordering password lists
 
 The point of the CIA triad is for a security policy to address *all three* aspects simultaneously. However, the *extent* to which a given system leans on one or more parts of the triad will be determined by its role and the data it holds.
 
-### Principles of Privileges
+## Principles of Privileges
 
 Privileged Identity Management (PIM): The translation of a user's role in an organization to an access role on a system.
 
@@ -97,7 +97,7 @@ Privileged Access Management (PAM): The management of privileges on a system (in
 
 So, PIM is a species of *identity* management, while PAM is about *access* management.
 
-### Security Models
+## Security Models
 
 The Bell-La Padula Model is used to manage confidentiality. It depends on an organization having well defined job rules and a hierarchical structure, and can be summarized as "no write down, no  read up" (i.e., information from higher confidentiality layers cannot be written to lower layers, and users in lower layers cannot read information from higher layers). Note, however, that the *existence* of higher level data is not necessarily concealed.
 
@@ -105,7 +105,7 @@ The Biba Model is more concerned with integrity, and is basically the reverse of
 
 The Bell-La Padula Model is more common in the government, military, and other high-trust, high structure organizations, while the Biba Model is more common in corporate and medical settings.
 
-### Threat Modeling & Incident Response
+## Threat Modeling & Incident Response
 
 Principles:
 

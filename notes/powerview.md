@@ -8,7 +8,7 @@ PowerView is a PowerShell reconnaissance tool. Note that AMSI will need to be di
  * [PowerShellMafia / PowerSploit / Recon / PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 * [Using PowerShell](powershell.md)
 
-## Domain Enumeration
+# Domain Enumeration
 
 ```powershell
 # Get domain users and associated groups

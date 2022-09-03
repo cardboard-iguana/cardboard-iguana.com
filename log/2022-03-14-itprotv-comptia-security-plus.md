@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2022-03-14
 
-## ITPro.TV: CompTIA Security+ (SY0-601)
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Access Control Schemes
+## Access Control Schemes
 
 Access control is about how authorization is actually *enforced*.
 
@@ -33,7 +33,7 @@ Examples: Thycotic, CyberArk, Arcon, One Identity Safeguard.
 * [Arcon](https://arconnet.com/)
 * [One Identity Safeguard](https://www.oneidentity.com/one-identity-safeguard/)
 
-### Account Management - Account Types
+## Account Management - Account Types
 
 * "Administrators" have full system access.
 * "Standard users" are your everyday users. This user class is distinguished by its inability to make system-wide changes (for example, software installation).
@@ -41,14 +41,14 @@ Examples: Thycotic, CyberArk, Arcon, One Identity Safeguard.
 * "Service accounts" are non-human users. Generally highly restricted. "Managed" service accounts are managed by the system itself and thus don't require explicit passwords or other user setup.
 * "Shared accounts" are shared between users. Breaks non-repudiation, and generally is a bad idea. Should be avoided whenever possible.
 
-### Account Management - Password Policies
+## Account Management - Password Policies
 
 * Complexity & length (everything from simple character set & length rules to more complicated measures of entropy)
 * History (a.k.a., reuse)
 * Maximum password age (a.k.a., expiration)
 * Minimum password age (how long a user must wait before they can change their password again; used in conjunction with password history to force users to *actually* use different passwords)
 
-### Account Management - Account Policies
+## Account Management - Account Policies
 
 This is more Windows-specific. In particular, account policies in Active Directory apply to all objects in the directory (users, computers, etc.)
 

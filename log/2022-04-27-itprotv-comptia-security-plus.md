@@ -3,11 +3,11 @@
 author:: Nathan Acks  
 date:: 2022-04-27
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
 Today I'll be reading Chapter 33 of the Security+ Exam Cram, "Organizational Security Policies".
 
-### Policy Framework
+## Policy Framework
 
 Parts of a framework:
 
@@ -18,35 +18,35 @@ Parts of a framework:
 
 The policy -> procedure flow above transforms *descriptive* statements into *prescriptive* ones.
 
-### Human Resource Management Policies
+## Human Resource Management Policies
 
 Policies should be reviewed by *both* legal and HR.
 
-### Background Checks
+## Background Checks
 
 The Exam Cram lumps everything from reference checks to more traditional background checks and drug testing here.
 
-### Onboarding and Offboarding
+## Onboarding and Offboarding
 
 The Exam Cram recommends that employees sign formal ethics statements.
 
-### Mandatory Vacations
+## Mandatory Vacations
 
 The Exam Cram recommends mandatory vacations (to check for operational gaps) and regular rotation of duties (for cross-training purposes).
 
-### Separation of Duties
+## Separation of Duties
 
 The Exam Cram emphasizes making sure that no one individual controls a process or transaction. Not sure how to reconcile this with the concept of a "single wringable neck" (perhaps by not allowing someone *responsible* for a process actually *perform* the process?).
 
-### Job Rotation
+## Job Rotation
 
 The Exam Cram also positions job rotation and mandatory vacations as a way of having admins check each other's work.
 
-### Clean Desk Policies
+## Clean Desk Policies
 
 Basically, keeping work areas free of *any* information is a simple way to make sure that they do not contain unattended *sensitive* information.
 
-### Role-Based Awareness and Training
+## Role-Based Awareness and Training
 
 User types:
 
@@ -61,17 +61,17 @@ Typically System administrators work under data and system owners (who may be th
 
 Executives and data/system owners are the people who should be designing and pushing policies, standards, and procedures (I'd expect the latter to be delegated to system admins sometimes).
 
-### Acceptable Use Policy / Rules of Behavior
+## Acceptable Use Policy / Rules of Behavior
 
 Ah, codes of conduct.
 
 Exam Cram suggests that all users get notifications about network/computer use being monitored on logon.
 
-### Disciplinary and Adverse Actions
+## Disciplinary and Adverse Actions
 
 Exam Cram notes that all policy documents should include jurisdictional information in case they become subject to a legal dispute or part of a criminal action.
 
-### Interoperability Agreements
+## Interoperability Agreements
 
 Types of third-party IT/security agreements:
 
@@ -82,9 +82,9 @@ Types of third-party IT/security agreements:
 
 Exam Cram notes that only an ISA actually spells out security requirements.
 
-## ITPro.TV: CompTIA Security+ (SY0-601)
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Organizational Security Policies - Personnel
+## Organizational Security Policies - Personnel
 
 Policies that help detect/prevent malicious behavior:
 
@@ -120,7 +120,7 @@ Policies related to security awareness and training:
 * Computer-based trainings
 * Role-based trainings
 
-### Organizational Security Policies - 3rd Party Risk
+## Organizational Security Policies - 3rd Party Risk
 
 Elements the go into understanding the *structure* of third-party risk:
 

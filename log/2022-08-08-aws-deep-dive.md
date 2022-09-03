@@ -7,7 +7,7 @@ Today I'll be covering the "Migration and Innovation" module from the "AWS Cloud
 
 * [AWS Cloud Practitioner Essentials](https://www.aws.training/learningobject/curriculum?id=27076)
 
-## Cloud Adoption Framework
+# Cloud Adoption Framework
 
 This is actually a compilation of frameworks around AWS migration, each one geared towards a different class of stakeholders (called "perspectives"): Business, People, Governance, Platform, Security, and Operations.
 
@@ -23,7 +23,7 @@ The SECURITY perspective focuses on IT security issues and systems (including us
 
 The OPERATIONS perspective is about day-to-day IT operations. It's focused on IT staff (specifically support and operations).
 
-## Migration Strategies
+# Migration Strategies
 
 Amazon categorizes cloud migration strategies into six broad buckets (called the "6 Rs"): Rehosting, Replatforming, Refactoring, Repurchasing, Retaining, and Retiring.
 
@@ -36,7 +36,7 @@ The "6 Rs" aren't about company-wide strategies - rather, they're strategies tha
 * REPURCHASING means purchasing an entirely new, cloud-native solution for an application or capability. This can be expensive up-front.
 * REFACTORING (also called "re-architecting") is about actually writing new software, or new software components to migrate an application. This is the highest risk/reward option.
 
-## The AWS Snow Family
+# The AWS Snow Family
 
 The "snow family" is a set of special-purpose devices used to aid in the migration of large amounts of data to AWS.
 
@@ -48,7 +48,7 @@ SNOWMOBILE is a mini data center (up to 100 PB of storage) that's housed in a sh
 
 All snow family devices use encryption at rest, with keys that can be managed by AWS KMS.
 
-## Innovate with AWS
+# Innovate with AWS
 
 AWS supports VMWare (though it's a special service).
 

@@ -12,6 +12,6 @@ These are a little hard to find.
 * [Carbanak Group](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/master/carbanak)
 * [FIN7](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/fin7)
 
-## Resources
+# Resources
 
 * [TryHackMe: MITRE](tryhackme-mitre.md)

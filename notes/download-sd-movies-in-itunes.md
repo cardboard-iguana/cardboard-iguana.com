@@ -9,7 +9,7 @@ Unfortunately, iTunes can be stubborn about this, even when you've unchecked "Do
 
 * [Download Lower Resolution Show](https://discussions.apple.com/thread/6516175?answerId=26546126022#26546126022)
 
-## Downloading Movies and Entire TV Series as SD
+# Downloading Movies and Entire TV Series as SD
 
 This is the easiest way to grab SD content:
 
@@ -19,7 +19,7 @@ This is the easiest way to grab SD content:
 * Uncheck the "Download HD When Available" box in the lower right of the tab.
 * Download the movie or *full* TV series FROM THIS PAGE. If you switch back to your library, you'll download the HD version - you *must* download the SD version from the "Purchased" page.
 
-## Downloading Individual TV Show Episodes
+# Downloading Individual TV Show Episodes
 
 For TV shows, you can also download individual episodes in SD, but you need to use a different method.
 

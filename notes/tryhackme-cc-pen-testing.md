@@ -6,7 +6,7 @@ tags:: #MOC
 
 * [TryHackMe: CC: Pen Testing](https://tryhackme.com/room/ccpentesting)
 
-## Notes
+# Course Notes
 
 * [2021-11-28 - TryHackMe: Complete Beginner (Supplements)](../log/2021-11-28-tryhackme-complete-beginner-supplements.md)
 * [2021-11-30 - TryHackMe: Complete Beginner (Supplements)](../log/2021-11-30-tryhackme-complete-beginner-supplements.md)

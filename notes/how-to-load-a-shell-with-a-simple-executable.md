@@ -31,7 +31,7 @@ A simple binary like this is useful for exploiting SUID/SGID applications that c
 
 * [Exploiting LD_PRELOAD](exploiting-ld-preload.md)
 
-## Metasploit
+# Metasploit
 
 The msfvenom tool can generate binaries with essentially the same functionality as above.
 

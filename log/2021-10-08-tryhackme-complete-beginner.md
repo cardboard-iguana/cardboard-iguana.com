@@ -3,13 +3,13 @@
 author:: Nathan Acks  
 date:: 2021-10-08
 
-## Upload Vulnerabilities
+# Upload Vulnerabilities
 
-### Overwriting Existing Files
+## Overwriting Existing Files
 
 One reason to randomize upload names is to prevent file overwrites. If a webapp isn't doing this (or using some other form of isolating upload files), then it's possible to inject arbitrary files into it via its upload mechanism (of course, whether or not those do anything is a separate question...).
 
-### Remote Code Execution
+## Remote Code Execution
 
 The gobuster tool is fuzzing/enumeration tool that can be used to find upload directories. Example invocation:
 
@@ -35,7 +35,7 @@ Where web shells get the web server to execute commands for us, reverse shells a
 
 The Kali Linux webshells package provides a variety of webshells, some of which are reverse shells. A common option is /usr/share/webshells/php/php-reverse-shell.php.
 
-### Filtering
+## Filtering
 
 Client-side filtering -- obviously easy to bypass!
 

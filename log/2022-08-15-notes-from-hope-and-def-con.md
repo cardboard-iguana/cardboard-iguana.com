@@ -8,7 +8,7 @@ Now that both HOPE and DEF CON are behind me, I want to summarize some of my ini
 * [A New HOPE](https://xiv.hope.net/)
 * [DEF CON 30](https://defcon.org/html/defcon-30/dc-30-index.html)
 
-## Device Security
+# Device Security
 
 The internet is awash with advice to only bring burner phones/laptops to DEF CON (or hacker conferences in general), to assume any credit card you use while attending (or even being near) DEF CON is compromised, etc.
 
@@ -45,7 +45,7 @@ If your risk model is that a nation state is gunning for you, then you need to b
 * [Proton VPN](https://protonvpn.com/)
 * [DEF CON Wi-Fi Registration](https://wifireg.defcon.org/)
 
-### A Note About Credential Management
+## A Note About Credential Management
 
 An important layer of defense at hacker conferences, when traveling, or just *in life* is good credential management.
 
@@ -62,7 +62,7 @@ Set up multi-factor authentication on *every* account that supports it. Whenever
 * [YubiKey 5 Series](https://www.yubico.com/products/yubikey-5-overview/)
 * [KeePassXC User Guide: Database Settings](https://keepassxc.org/docs/KeePassXC_UserGuide.html#_database_settings)
 
-## Packing
+# Packing
 
 I'm a light packer, partly because I don't like checking bags, and partly because I enjoy the challenge. This year I managed to fit all of my gear into a single Peak Design 20 L Everyday Backpack (with the help of two small packing cubes). However, this is all a tight fit - there's next to no room for conference swag on the return trip, and the laptop compartments are compressed more than I'm comfortable with. Moving forward, I intend to switch to a Peak Design 30 L Everyday Backpack, as I think that the extra 10 L should be more than enough for me.
 
@@ -79,13 +79,13 @@ One disadvantage of this setup is that it's difficult to bring multiple pairs of
 * [Bluffworks Gramercy Blazer](https://shop.bluffworks.com/products/gramercy-blazer-classic-fit-blue-hour)
 * [Bluffworks Performance Suites](https://shop.bluffworks.com/pages/performance-suits)
 
-## At the Con
+# At the Con
 
 At the conference, or really when traveling in general, I try to avoid being conspicuous. I don't wear conference swag/merch. I don't put stickers on my devices. I take off my conference badge and put it in my backpack when it's not required. I don't flash (or carry) big wads of cash.
 
 In short, I try not to *look* like a target. Ideally, there should be no way for someone who sees you outside of the conference to know that you are an attendee.
 
-### A Note on Masks
+## A Note on Masks
 
 I don't like wearing masks, but if I'm going to wear one I'm going to wear an *effective* one. Since HOPE and DEF CON were both masked events, I brought along tight-fitting N95 masks for use while attending the conference.
 

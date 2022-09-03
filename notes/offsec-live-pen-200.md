@@ -8,7 +8,7 @@ tags:: #MOC
 * [Join OffSec Live](https://learn.offensive-security.com/offsec-live-webinars)
 * [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
 
-## Notes
+# Course Notes
 
 * [2022-06-24 - OffSec Live: PEN-200](../log/2022-06-24-offsec-live-pen-200.md)
 * [2022-06-29 - OffSec Live: PEN-200 & AWS Deeps Dive](../log/2022-06-29-offsec-live-pen-200-and-aws-deep-dive.md)
@@ -26,3 +26,4 @@ tags:: #MOC
 * [2022-08-24 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-24-offsec-live-pen-200-and-aws-deep-dive.md)
 * [2022-08-26 - OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)
 * [2022-08-31 - OffSec Live: PEN-200](../log/2022-08-31-offsec-live-pen-200.md)
+* [2022-09-02 - OffSec Live: PEN-200](../log/2022-09-02-offsec-live-pen-200.md)

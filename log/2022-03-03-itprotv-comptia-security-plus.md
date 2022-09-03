@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2022-03-03
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
-### Cryptosystems
+## Cryptosystems
 
 Cryptosystems are concerned with data confidentiality (encrypting) and integrity (hashing/signing).
 
@@ -46,15 +46,15 @@ Asymmetric key algorithms are also called public key algorithms.
 * [Forward secrecy (Wikipedia)](https://en.wikipedia.org/wiki/Forward_secrecy)
 * [Diffie-Hellman key exchange (Wikipedia)](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)
 
-### Use of Proven Technologies and Implementations
+## Use of Proven Technologies and Implementations
 
 Exam Cram emphasizes several times the efficiency of elliptic curve cryptography (ECC) and its application for mobile devices with more constrained computational or energetic profiles. Which I suspect means that a question like this is likely to be on the Security+ exam.
 
-### Steganography
+## Steganography
 
 Exam Cram indicates that the Security+ test is likely to have some kind of question about the difference between steganography and cryptography.
 
-### Cryptography Use Cases
+## Cryptography Use Cases
 
 To reiterate, a list of the roles of cryptography in security:
 
@@ -63,11 +63,11 @@ To reiterate, a list of the roles of cryptography in security:
 * Nonrepudiation (signing)
 * Authentication (can be accomplished via a public/private key cryptography during the initial handshake)
 
-## ITPro.TV: CompTIA Security+ (SY0-601)
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
-## Cryptography
+# Cryptography
 
-### Cryptography Concepts
+## Cryptography Concepts
 
 > [Cryptography] is trying to make us live in a world that's "need to know".
 > 
@@ -84,38 +84,40 @@ Important cyphers for low-power devices (SCADA, etc.)
 * PRESENT
 * TWINE
 
-### Encryption And Steganography
+## Encryption And Steganography
 
 Encryption is about ensuring confidentiality; steganography is about hiding information (which may - and probably should be! - itself cyphertext).
 
 Interesting... ITPro.TV is defining a streaming cipher as operating byte-by-byte, whereas Exam Cram defined them as operating bit-by-bit. So either one of these is wrong, or the difference between stream and block cyphers are more a matter of degree than kind (I kind of suspect it's the latter).
 
-| Stream Cypher         | Block Cypher                    |
-|:--------------------- |:------------------------------- |
-| Bit/Byte-based        | Block-based (64 bits or higher) |
-| Generally less secure | Generally more secure           |
-| Faster                | Slower                          |
+Stream cipher bullet points:
+
+* Bit/Byte-based
+* Generally less secure
+* Faster
+
+Block cipher bullet points:
+
+* Block-based (64 bits or higher)
+* Generally more secure
+* Slower
 
 Block cipher modes:
 
-| Mode                        | Considerations                                              |
-|:--------------------------- |:----------------------------------------------------------- |
-| Electronic Code Book (ECB)  | Old, weak                                                   |
-| Cypher Block Encoding (ECC) | Errors in one block will effect the rest of the chain       |
-| Cypher Feedback (CFB)       | Allows a block cipher to function more like a stream cipher |
-| Output Feedback (OFB)       | Allows a block cipher to function more like a stream cipher |
-| Counter Mode (CTR)          | Strongest, used by AES                                      |
+* Electronic Code Book (ECB) - Old, weak
+* Cypher Block Encoding (ECC) - Errors in one block will effect the rest of the chain
+* Cypher Feedback (CFB) - Allows a block cipher to function more like a stream cipher
+* Output Feedback (OFB) - Allows a block cipher to function more like a stream cipher
+* Counter Mode (CTR) - Strongest, used by AES
 
-### Hashing
+## Hashing
 
 Hashes are always fixed length (for a given hash type). Also, "message digest" == "fingerprint" == "hash"!
 
-| Algorithm | Considerations                             |
-|:--------- |:------------------------------------------ |
-| MD5       | 128-bit, prone to collisions (old, weak)   |
-| SHA1      | 160-bit, some collisions                   |
-| SHA2      | 224, 256, 384, 512 bit variants (modern)   |
-| RIPEMD    | 128, 160, 256, 320 bit variants (uncommon) |
+* MD5 - 128-bit, prone to collisions (old, weak)
+* SHA1 - 160-bit, some collisions
+* SHA2 - 224, 256, 384, 512 bit variants (modern)
+* RIPEMD - 128, 160, 256, 320 bit variants (uncommon)
 
 HMACs are "hashed message authentication codes" used to verify message integrity and authenticity. HMACs are not hash functions themselves, but are rather encrypted hashes that are appended to messages (so, a signature).
 
@@ -123,34 +125,39 @@ Checksums are not hashing algorithms, but serve a similar purpose.
 
 A note about salts: You *don't* want your salt(s) to become public, but it also doesn't completely negate their value if they are leaked. The reason for this is that, so long as you are using *unique* salts in every instance, you are still preventing the use of *mass* password/data cracking. So even a leaked salt buys you time... But that's the only thing it buys you at that point, so it's still important to re-encrypt / re-hash / invalidate passwords, etc. if this happens!
 
-### Symmetric vs. Asymmetric Encryption
+## Symmetric vs. Asymmetric Encryption
 
 Symmetric cyphers:
 
-| Name     | Considerations                         |
-|:-------- |:-------------------------------------- |
-| AES      | Block cypher, 128 - 256 bits           |
-| DES      | Block cypher, 56-bits                  |
-| 3DES     | Three DES rounds, 168-bits (effective) |
-| Blowfish | Block cipher, 64-bit                   |
-| RC4      | Stream cypher, used in WEP and WPA     |
-| RC5      | Block cipher variant of RC4            |
-| RC6      | Block cipher variant of RC4            |
+* AES - Block cypher, 128 - 256 bits
+* DES - Block cypher, 56-bits
+* 3DES - Three DES rounds, 168-bits (effective)
+* Blowfish - Block cipher, 64-bit
+* RC4 - Stream cypher, used in WEP and WPA
+* RC5 - Block cipher variant of RC4
+* RC6 - Block cipher variant of RC4
 
 Of these, only AES is considered strong these days.
 
 Asymmetric cyphers:
 
-| Name           | Considerations                         |
-|:-------------- |:-------------------------------------- |
-| RSA            | Second oldest, common                  |
-| Diffie-Hellman | Oldest standard, used for key exchange |
-| DSA            | NIST "digital security standard"       |
-| EIGamal        | Used by PGP/GPG                        |
-| ECC            | New, fast, small keys                  |
+* RSA - Second oldest, common
+* Diffie-Hellman - Oldest standard, used for key exchange
+* DSA - NIST "digital security standard"
+* EIGamal - Used by PGP/GPG
+* ECC - New, fast, small keys
 
-Two applications/machines that try to communicate cryptographically need to first agree on a "cipher suite" - a set of cryptographic algorithms - to use. These are represented in a standard(ish) fashion:
+Two applications/machines that try to communicate cryptographically need to first agree on a "cipher suite" - a set of cryptographic algorithms - to use. These are represented in a standard(ish) fashion as "standard name + key exchange + asymmetric cipher (with) symmetric cipher + symmetric cipher mode + HMAC". For example:
 
-| TLS                 | _ | DHE          | _ | RSA               | \_WITH\_ | AES_256          | _ | GCM                   | _ | SHA384 |
-|:------------------- |:- |:------------ |:- |:----------------- |:-------- |:---------------- |:- |:--------------------- |:- |:------ |
-| Standard identifier |   | Key exchange |   | Asymmetric cipher |          | Symmetric cipher |   | Symmetric cipher mode |   | HMAC   |
+```
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+```
+
+Has the following parts:
+
+* TLS - standard
+* DHE - key exchange method
+* RSA - asymmetric cipher
+* AES-256 - symmetric cipher
+* GCM - symmetric cipher mode
+* SHA384 - HMAC

@@ -5,11 +5,11 @@ date:: 2021-12-06
 
 * [TryHackMe: Blaster](https://tryhackme.com/room/blaster)
 
-## Mission Start!
+# Mission Start!
 
 The CTF background notes that we'll be attacking a Windows box. So no ping responses again.
 
-## Activate Forward Scanners and Launch Proton Torpedoes
+# Activate Forward Scanners and Launch Proton Torpedoes
 
 The machine we'll be attacking is at 10.10.223.185. As usual, we'll start out with an nmap scan:
 
@@ -107,7 +107,7 @@ FLAG 6: What are the contents of `user.txt`? - `THM{HACK_PLAYER_ONE}`
 * [Using "gobuster"](gobuster.md)
 * [Using XFreeRDP](xfreerdp.md)
 
-## Breaching the Control Room
+# Breaching the Control Room
 
 There's no obvious files when pocking around except an hhupd.exe file on the desktop, and IE's history is empty.
 
@@ -141,7 +141,7 @@ FLAG 10: What are the contents of `root.txt`? - `THM{COIN_OPERATED_EXPLOITATION}
 * [CVE-2019-1388 (nagenrauft-consulting.com)](https://www.nagenrauft-consulting.com/2019/11/21/cve-2019-1388-hhupd-exe/)
 * [CVE-2019-1388: Windows Privilege Escalation Through UAC](https://www.youtube.com/watch?v=3BQKpPNlTSo)
 
-## Adoption into the Collective
+# Adoption into the Collective
 
 Target information isn't immediately obvious in Metasploit; after selecting `exploit/multi/script/web_delivery` we'll need to run `info` to see all of the options.
 

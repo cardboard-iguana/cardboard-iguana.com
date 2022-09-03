@@ -12,13 +12,13 @@ Qapla'!
 * [CMD+CTRL Cyber Range: LetSee Marketplace](https://www.securityinnovation.com/training/cmd-ctrl-cyber-range-security-training/cyber-range-suite/cmdctrl-cyber-range-letsee/)
 * [Qapla'](https://www.urbandictionary.com/define.php?term=Qapla%27)
 
-## What Is an SSRF?
+# What Is an SSRF?
 
 SSRF: Server-Side Request Forgery. Basically, this is when an attacker (me!) can cause the web server to make a malicious request to another server (possibly on the back-end, possibly in an entirely different organization).
 
 SSRF can be "blind", where not information is returned (but the request is still made).
 
-## SSRF Examples
+# SSRF Examples
 
 Directory traversal can still be used with API requests!
 
@@ -26,7 +26,7 @@ When attacking an API via SSRF, it's sometimes necessary to append an empty dumm
 
 Sometimes we can trigger a request to a server we control entirely, allowing the capture of API credentials.
 
-## Finding an SSRF
+# Finding an SSRF
 
 Places to look for SSRF:
 
@@ -39,16 +39,14 @@ Places to look for SSRF:
 
 * [Request Bin](https://requestbin.com/)
 
-## Defeating Common SSRF Defenses
+# Defeating Common SSRF Defenses
 
 SSRF defenses are normally just a allowed/blocked lists.
 
 Typically localhost and 169.254.169.254 (TryHackMe indicates that this IP often contains configuration information in cloud systems, though I'm not familiar with it) are often on block lists. This can be bypassed by using non-standard representations of IP addresses, or by using a service such as nip.io to map an arbitrary subdomain to an IP address of your choosing.
 
-|              IP |    Decimal | Hexadecimal |            Octal |
-| ---------------:| ----------:| -----------:| ----------------:|
-| 127.0.0.1       | 2130706433 |  0x7F000001 | 0177000000000001 |
-| 169.254.169.254 | 2852039166 |  0xA9FEA9FE | 0251037602510376 |
+* 127.0.0.1 -> 0x7F000001 -> 0177000000000001 (octal) -> 2130706433 (decimal)
+* 169.254.169.254 -> 0xA9FEA9FE -> 0251037602510376 (octal) -> 2852039166 (decimal)
 
 Allowed lists are harder to circumvent; often you'll need to be able to create your own subdomains somewhere. The ngrok service can help tunnel these subdomains back to your local system, though the SSL certificate won't match for non-ngrok subdomains (i.e., domains you entirely control).
 
@@ -57,11 +55,11 @@ If the server allows for open redirects, then this functionality can also be use
 * [nip.io](https://nip.io/)
 * [ngrok](https://ngrok.io/)
 
-## SSRF Practical
+# SSRF Practical
 
 Note that returned SSRF information may be in a variety of formats (for example, a base64-encoded image or cookie).
 
-## XSS Payloads
+# XSS Payloads
 
 Typical (but highly annoying) XSS PoC:
 
@@ -95,7 +93,7 @@ Simple keylogger (seems best to combine with cookie stealing, since otherwise it
 
 You can also use XSS to call functions defined on the target website to manipulate user accounts.
 
-## Reflected XSS
+# Reflected XSS
 
 This is when user input is echoed back in an unsafe way *without* being stored somewhere. Places vulnerable to reflected XSS:
 
@@ -105,7 +103,7 @@ This is when user input is echoed back in an unsafe way *without* being stored s
 
 An attacker requires user cooperation to launch a reflected XSS attack - someone needs to click on a URL, open up a malicious iframe, etc.
 
-## Stored XSS
+# Stored XSS
 
 Relevant JavaScript is stored server-side (for example, in a comment).
 
@@ -113,17 +111,17 @@ Basically, all places that store user information need to be tested for this. Tr
 
 * [Using Burp Suite](../notes/burp-suite.md)
 
-## DOM-Based XSS
+# DOM-Based XSS
 
 The difference between this and reflected XSS mostly seems to be that in DOM-based attacks we're taking advantage of JavaScript code that's already running on the page - basically looking for interaction points that we can control (such as `window.location.*`) that are then passed to unsafe methods (such as `eval()` or `innerHTML`). The idea is to again use a malicious link, but rather than having the code included directly in the page we're looking to launder it through an existing (legitimate) JavaScript process. 
 
-## Blind XSS
+# Blind XSS
 
 Like stored XSS, but where the code goes someplace you can't directly/initially observe or interact with (for example, a support portal). Because you can't directly observe blind XSS inclusion, a callback URL (either one you control or something like XSS Hunter) is required.
 
 * [XSS Hunter](https://xsshunter.com/)
 
-## Perfecting Your Payload
+# Perfecting Your Payload
 
 A much less annoying XSS test than the typical `<alert/>` popup is to use something that manipulates a page element:
 
@@ -156,7 +154,7 @@ How one comes up with one of these is a bit beyond me.
 
 * [SQL Injection](../notes/sql-injection.md)
 
-## Blind XSS Practical
+# Blind XSS Practical
 
 You can also use `nc -nvlp $PORT` as a quick-n-dirty HTTP listener (netcat, it's not just for catching shells anymore!).
 
@@ -164,15 +162,15 @@ I have some doubts about how well this works in real, modern life... Every time 
 
 * [Using "netcat"](../notes/netcat.md)
 
-## What is Command Injection
+# What is Command Injection
 
 Command injection - a.k.a. RCE!
 
-## Discovering Command Injection
+# Discovering Command Injection
 
 PHP `exec()`, Python `subprocess.Popen()`, and other other functions that directly execute operating system commands are potentially vulnerable to command injection if they accept user input.
 
-## Exploiting Command Injection
+# Exploiting Command Injection
 
 As usual, two types:
 
@@ -183,13 +181,13 @@ The canonical tests for blind command injection are things like `ping` and `slee
 
 The Windows equivalent of `sleep` is `timeout`.
 
-## Remediating Command Injection
+# Remediating Command Injection
 
 PHP functions susceptible to command injection (again!): `exec()`, `passthru()`, `system()`.
 
 Note that PHP accepts hexadecimal characters codes in strings (`/` is `/`, for example).
 
-## In-Band SQLi
+# In-Band SQLi
 
 In-band SQLi is just when the results of the injection are returned directly to the attacker.
 
@@ -199,15 +197,15 @@ Useful MySQL function: `GROUP_CONCAT()` concatenates fields (and arbitrary strin
 
 * [TryHackMe: Jurassic park](../notes/tryhackme-jurassic-park.md)
 
-## Blind SQLi
+# Blind SQLi
 
 Blind SQLi is just in-band SQLi without error messages for feedback.
 
-### Authentication Bypasses
+## Authentication Bypasses
 
 The trick here is that most login forms use the backing database for authentication, so all we need to do is return a "true" result - we don't really need to guess anyone's password. Sometimes we don't even need to know a username (though I suspect that in practice this may lead to weird authorization problems).
 
-### Boolean-Based SQLi
+## Boolean-Based SQLi
 
 This is where we just learn if our query was successful or not. Common with API endpoints.
 
@@ -215,17 +213,17 @@ You can enumerate a database this way, and even exfiltrate information, but it k
 
 * [Using SQLmap](../notes/sqlmap.md)
 
-### Time-Based SQLi
+## Time-Based SQLi
 
 This is basically boolean-based SQLi, except that we're not even getting back true/false information anymore. However, we can introduce a timing attack by replacing a column with `sleep()` (which sleeps the connection for the specified number of seconds). If the query fails we'll get a return immediately, but if it succeeds then we'll experience the programmed pause.
 
-## Out-of-Band SQLi
+# Out-of-Band SQLi
 
 Out-of-band SQLi only works if the application or database makes external calls (preferably to a system we control!) based on the results of a database query (that we can inject into). Thus, there are always two channels - an attack channel and a data channel.
 
 DNS is a popular data channel for out-of-band SQLi attacks.
 
-## Remediating SQLi
+# Remediating SQLi
 
 * Use prepared statements.
 * Use input validation.

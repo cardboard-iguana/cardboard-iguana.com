@@ -3,11 +3,11 @@
 author:: Nathan Acks  
 date:: 2022-03-06
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
 Today I'm going to be reading through chapters 17 (Secure Protocols) and 25 (Public Key Infrastructure) of the CompTIA Security+ Exam Cram.
 
-### Secure Web Protocols
+## Secure Web Protocols
 
 Remember: SSL/TLS is a *transport layer* security protocol (sitting between HTTP and TCP).
 
@@ -38,7 +38,7 @@ One reason DNSSEC is important is because DNS is increasingly used as a PKI: DAN
 * [Secure Hypertext Transfer Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Secure_Hypertext_Transfer_Protocol)
 * [Heartbleed (Wikipedia)](https://en.wikipedia.org/wiki/Heartbleed)
 
-### Internet Protocol Security (IPsec)
+## Internet Protocol Security (IPsec)
 
 IPsec is a *network layer* encryption protocol, and is commonly used as a VPN solution. IPsec uses the Internet Key Exchange (IKE) protocol for, well, key exchange.
 
@@ -56,7 +56,7 @@ IPsec headers immediately follow the header fields in an IP datagram. ESP can be
 
 The IKE protocol is part of the larger Internet Security Association and Key Management Protocol (ISAKMP).
 
-### Secure File Transfer Protocols
+## Secure File Transfer Protocols
 
 FTPS is to FTP what HTTPS is to HTTP (though there are additional complications since FTP is a two-channel protocol). FTPS uses port 990 for commands in *implicit* mode, and good old port 21 for commands in *explicit* mode.
 
@@ -66,31 +66,30 @@ Note that FTPS, like FTP, requires multiple ports to function. This makes SFTP (
 
 "Managed File Transfer" (MFT) services/applications allow FTP to be wrapped in a more secure protocol (HTTPS?) as well. These are popular in regulated industries.
 
-### Secure Email Protocols
-
-S/MIME leverages MIME to provide authentication, message confidentiality and integrity, and nonrepudiation. S/MIME uses the "Cryptographic Message Syntax" to ensure the security of the underlying keys. Best practices dictate that separate S/MIME certificates be used for signing vs. encryption so that the encryption key can be escrowed without damaging non-repudiation.
+## Secure Email Protocols
 
 Important ports:
 
-| Protocol      | Port |
-|:------------- |:----:|
-| POP3          | 110  |
-| POP3S         | 995  |
-| IMAP          | 143  |
-| IMAPS         | 993  |
-| SMTP          |  25  |
-| SMTP+SSL      | 465  |
-| SMTP+STARTTLS | 587  |
+* 110 - POP3
+* 995 - POP3S
+* 143 - IMAP
+* 993 - IMAPS
+* 25 - SMTP
+* 465 - SMTP+SSL
+* 587 - SMTP+STARTTLS
 
-* [S/MIME (Wikipedia)](https://en.wikipedia.org/wiki/S/MIME)
+S/MIME leverages MIME to provide authentication, message confidentiality and integrity, and nonrepudiation. S/MIME uses the "Cryptographic Message Syntax" to ensure the security of the underlying keys. Best practices dictate that separate S/MIME certificates be used for signing vs. encryption so that the encryption key can be escrowed without damaging non-repudiation.
+
+
 * [Simple Mail Transfer Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol)
 * [Email encryption (Wikipedia)](https://en.wikipedia.org/wiki/Email_encryption)
+* [S/MIME (Wikipedia)](https://en.wikipedia.org/wiki/S/MIME)
 
-### Secure Internet Protocols
+## Secure Internet Protocols
 
 By default SSH tunnels are actually encrypted using IDEA (the International Data Encryption Algorithm) with a 128-bit symmetric key cipher that is agreed upon during the initial authentication/negotiation. Blowfish (32- to 448-bit keys), DES, and 3DES are also available. (Note that DES, and I suppose by extension 3DES, is still export-controlled.)
 
-### Lightweight Directory Access Protocol (LDAP)
+## Lightweight Directory Access Protocol (LDAP)
 
 There's also LDAP-over-SSL (LDAPS), which again riffs off of HTTPS. As a total set of asides...
 
@@ -101,11 +100,11 @@ At the very least, LDAPS should be used when authenticating with Active Director
 
 * [Lightweight Directory Access Protocol (LDAP): The Binary Encoding Option (RFC 4522)](https://datatracker.ietf.org/doc/html/rfc4522)
 
-### Secure Real-Time Transport Protocol (SRTP)
+## Secure Real-Time Transport Protocol (SRTP)
 
 SRTP is *similar* to HTTPS in that keys must be exchanged before transmission begins, but is otherwise unlike HTTPS as it operates over UDP and applies the encryption to the protocol payload (rather than firing up an encrypted tunnel and then running an unencrypted protocol over it).
 
-### Simple Network Management Protocol (SNMP)
+## Simple Network Management Protocol (SNMP)
 
 SNMP is used to collect statistics from devices over TCP/IP, and is typically used for monitoring equipment health (finally, an explanation for *what* SNMP is actually *for*!).
 
@@ -134,26 +133,22 @@ Defined SNMP applications:
 
 Other vendor and custom-built SNMP applications are also allowed.
 
-### Using Network Address Allocation
+## Using Network Address Allocation
 
 The most basic security aspect of network design is the use of subnetting.
 
 IP address classes:
 
-| Class   | IP Range                    | Subnet Mask   |
-|:------- |:--------------------------- |:------------- |
-| Class A | 0.0.0.0 - 126.255.255.255   | 255.0.0.0     |
-| Class B | 128.0.0.0 - 191.255.255.255 | 255.255.0.0   |
-| Class C | 192.0.0.0 - 223.255.255.255 | 255.255.255.0 |
+* Class A (0.0.0.0 - 126.255.255.255, netmask 255.0.0.0)
+* Class B (128.0.0.0 - 191.255.255.255, netmask 255.255.0.0)
+* Class C (192.0.0.0 - 223.255.255.255, netmask 255.255.255.0)
 
 Common reserved network blocks:
 
-| Class   | IP Range       | Notes                              |
-|:------- |:-------------- |:---------------------------------- |
-| Class A | 10.0.0.0/8     |                                    |
-| Class A | 127.0.0.0/8    | Reserved for localhost             |
-| Class B | 172.16.0.0/12  | a.k.a. 172.16.0.0 - 172.31.255.255 |
-| Class C | 192.168.0.0/16 |                                    |
+* 10.0.0.0/8 (Class A)
+* 127.0.0.0/8 (Class A, reserved for localhost)
+* 172.16.0.0/12 (Class B, 172.16.0.0 - 172.31.255.255)
+* 192.168.0.0/16 (Class C)
 
 Note that, except for the Class A reservations, all of these use larger subnet masks than you would typically suspect. There are actually far more reserved blocks than just these four; Wikipedia has a good list.
 
@@ -174,17 +169,17 @@ Exam Cram notes that the Security+ exam will likely have questions related to id
 * [Recommendation on Stable IPv6 Interface Identifiers (RFC 8064)](https://datatracker.ietf.org/doc/html/rfc8064)
 * [A Method for Generating Semantically Opaque Interface Identifiers with IPv6 Stateless Address Autoconfiguration (SLAAC) (RFC 7217)](https://datatracker.ietf.org/doc/html/rfc7217)
 
-### Using Time Synchronization
+## Using Time Synchronization
 
 NTP operates over UDP. Time servers operate on a DNS-like hierarchy. The secure version of NTP is NTS (Network Time Security), which uses TLS + a second standard called "Authenticated Encryption with Associated Data (AEAD, which is used to extend integrity and authenticity guarantees to unencrypted header data). NTS only recently was submitted for publication as a standard.
 
 * [Authenticated Encryption (Wikipedia)](https://en.wikipedia.org/wiki/Authenticated_encryption)
 
-### Using Subscription Services
+## Using Subscription Services
 
 New acronym: "Anything" as a Service (XaaS, which probably *actually* stands for "X as a Service"). An umbrella term for all of the \*aaS things.
 
-### PKI Components
+## PKI Components
 
 A PKI should ideally provide the following:
 
@@ -195,7 +190,7 @@ A PKI should ideally provide the following:
 * Transaction authorization
 * Nonrepudiation support
 
-### Certificate Authorities (CAs)
+## Certificate Authorities (CAs)
 
 A certificate authority (CA) is a trusted entity that issues certificates.
 
@@ -203,13 +198,13 @@ A registration authority (RA) sits between users and the CA, handling identity v
 
 Certificates issued by a CA are trusted in a transitive fashion, anchored in the CA's "root certificate". This allows CAs to themselves be arranged in a hierarchy.
 
-### Certification Practice Statement
+## Certification Practice Statement
 
 The certification practice statement (CPS) is the legal document outlining the identity of the CA, the types of certificates it issues, the requirements it has for issuing these certificates, the CA's operating procedures (issuing, renewing, revoking), and the security controls used in the process.
 
 Not to be confused with certificate *policies*, which are the rules describing how a certificate may be used.
 
-### Trust Models
+## Trust Models
 
 You could, of course, just have a single CA. Probably fine for a small or medium organization, but not a great idea in the real world.
 
@@ -221,7 +216,7 @@ An alternative to a hierarchy is the "cross-certification model" - a.k.a., the "
 
 * [Introduction to PKI Models](http://pkiglobe.org/pki_models.html)
 
-### Key Escrow
+## Key Escrow
 
 This is when the private half of a public/private keypair is held by a third party (which may or may not be the issuing CA) in addition to the user the key is issued to.
 
@@ -229,7 +224,7 @@ Escrow agents are not only able to read data encrypted by the public half of thi
 
 Key escrow is common in corporate environments. This both enables corporate access to employee data and allows for new user certificates to be quickly regenerated in the event of a lost password.
 
-### Digital Certificates
+## Digital Certificates
 
 A "digital certificate" is a block of data used for identification purposes. Typically a certificate is signed by a CA's private key, providing integrity and authenticity guarantees. Non-PGP certificates generally use the X.509v3 hierarchy, which contain the following (common) fields:
 
@@ -254,19 +249,19 @@ Exam Cram indicates that it is likely the Security+ exam will require recognizin
 * [X.500 (Wikipedia)](https://en.m.wikipedia.org/wiki/X.500)
 * [Lightweight Directory Access Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol)
 
-### Public and Private Key usage
+## Public and Private Key usage
 
 The X.509 standard does not support multiple keys, so if different keys are used for different purposes then multiple certificates must be exchanged.
 
-### Certificate Signing Requests
+## Certificate Signing Requests
 
 A certificate signing request (CSR) is just a structured request to a CA to generate a digital certificate, including the information required for that certificate (as well as anything else the CA requires). CSRs are signed by the private half of the included public key.
 
-### Certificate Policies
+## Certificate Policies
 
 The rules indicating how a certificate may be used. While the certificate policies are distinct from the certification practice statement (above), there can also be a lot of overlap (for example, renewal policies). The key here is that the certification practice statement describes the CA's practices *as a whole*, which the certificate policies apply only to the certificate being issued.
 
-### Certificate Types
+## Certificate Types
 
 For server TLS certificates:
 
@@ -291,16 +286,14 @@ Code signing implementations are kind of wild, and not always in good ways.
 
 * [Verifying Windows binaries, without Windows](https://blog.trailofbits.com/2020/05/27/verifying-windows-binaries-without-windows/)
 
-### Certificate Formats
+## Certificate Formats
 
 Certificates can be binary of base64 encoded. Common formats:
 
-| Format        | Encoding | Used In                | Extensions        |
-|:------------- |:-------- |:---------------------- |:----------------- |
-| DER           |  Binary  | Java                   | .der, .cers, .crt |
-| PEM           |  Base64  | Linux, macOS           | .pem, .cer, .crt  |
-| PFX (PKCS#12) |  Binary  | Windows                | .pfx, .p12        |
-| P7B (PKCS#7)  |  Base64  | Windows, Apache Tomcat | .p7b, .p7c        |
+* DER - Binary format used by Java (.der, .cers, .crt)
+* PEM - Base64 encoded format used by Linux and macOS (.pem, .cer, .crt)
+* PFX (PKCS#12) - Binary format used by Windows (.pfx, .p12)
+* P7B (PKCS#7) - Base64 encoded format used by Windows and Apache Tomcat (.p7b, .p7c)
 
 PEM stands for "privacy enhanced mail", and is the most common format. PEM files can actually contain multiple certificates and private keys, separated by BEGIN CERTIFICATE / END CERTIFICATE and BEGIN PRIVATE KEY / END PRIVATE KEY specifiers (each specifier is preceded and followed by `-----`). The .key extension is also sometimes used for PEM files, but only when the file contains a single private key.
 
@@ -310,7 +303,7 @@ DER stands for "distinguished encoding rules".
 
 PFX stands for "personal information exchange". Like PEM, multiple certificates and private keys can be stored in a single .p12 file.
 
-### Certificate Revocation
+## Certificate Revocation
 
 Revocation occurs when a certificate is invalidated *before* its expiration date. Revocations can be communicated in one of two ways:
 
@@ -319,7 +312,7 @@ Revocation occurs when a certificate is invalidated *before* its expiration date
 
 Certificates can also be "suspended", which is a state that indicates it is under investigation for revocation. While a suspended certificate may remain in place, it is not valid for any uses.
 
-### OCSP Stapling
+## OCSP Stapling
 
 OCSP stapling involves the *web server* providing OCSP validity information as part of the TLS handshake. To perform stapling, the web server does the following:
 
@@ -334,13 +327,13 @@ OCSP stapling tries to work around the problem of clients failing open when no O
 * [Transport Layer Security (TLS) Extensions: Extension Definitions (RFC 6066)](https://datatracker.ietf.org/doc/html/rfc6066)
 * [X.509 Internet Public Key Infrastructure Online Certificate Status Protocol - OCSP (RFC 6960)](https://datatracker.ietf.org/doc/html/rfc6960)
 
-### Pinning
+## Pinning
 
 While Exam Cram's assertion that certificate pinning exists to thwart man-in-the-middle attacks is *technically* true, I think it misses the broader picture of how weak the CA system has turned out to be in practice (if the CA system worked correctly, man-in-the-middle attacks on SSL connections would be *much* harder).
 
-## ITPro.TV: CompTIA Security+ (SY0-601)
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Secure Protocols
+## Secure Protocols
 
 The TLS handshake:
 
@@ -354,20 +347,18 @@ This encrypted shared secret then becomes the basis of the shared session key(s)
 
 Important ports:
 
-| Protocol      | Port | Encrypted? |
-|:------------- | ----:|:----------:|
-| SSH           |   22 |      Y     |
-| LDAP          |  389 |            |
-| LDAPS         |  636 |      Y     |
-| HTTP          |   80 |            |
-| HTTPS         |  443 |      Y     |
-| POP3          |  110 |            |
-| POP3S         |  995 |      Y     |
-| IMAP          |  143 |            |
-| IMAPS         |  993 |      Y     |
-| SMTP          |   25 |            |
-| SMTP+SSL      |  465 |      Y     |
-| SMTP+STARTTLS |  587 |      Y     |
+* 22 - SSH
+* 389 - LDAP
+* 636 - LDAPS
+* 80 - HTTP
+* 443 - HTTPS
+* 110 - POP3
+* 995 - POP3S
+* 143 - IMAP
+* 993 - IMAPS
+* 25 - SMTP
+* 465 - SMTP+SSL
+* 587 - SMTP+STARTTLS
 
 (Dan Lowrie states that scp is considered deprecated now... Which surprisingly turns out to be true! Though there's apparently a version of scp that's actually sftp under the hood in development, so the end impact of this deprecation will probably be close to zero.)
 
@@ -381,7 +372,7 @@ SNMP handles not just reporting, but also device configuration. Only SNMPv3 has 
 * [TLS Handshake (OSDev.org)](https://wiki.osdev.org/TLS_Handshake)
 * [Deprecating scp](https://lwn.net/Articles/835962/)
 
-### Keys
+## Keys
 
 Cryptographic Service Provider: The algorithm used to generate an encryption key (AES, etc.).
 
@@ -398,7 +389,7 @@ The most popular key derivation protocol is probably ECDHE at this point, as it 
 
 * [RSA (cryptosystem) (Wikipedia)](https://en.wikipedia.org/wiki/RSA_%28cryptosystem%29)
 
-### PKI Concepts
+## PKI Concepts
 
 OCSP: Online Certificate Status Protocol.
 
@@ -412,7 +403,7 @@ Typically, root CAs have longer keys than subordinate CAs, which have longer key
 
 Root CA certificates are self-signed by default, though in a bridged PKI system they will also be signed by the bridge CA key.
 
-### Certificates
+## Certificates
 
 Important types:
 
@@ -427,16 +418,14 @@ Important types:
 
 Certificate formats:
 
-| Format                                | Purpose                                                                          |
-|:------------------------------------- |:-------------------------------------------------------------------------------- |
-| Distinguished Encoding Rules (.der)   | Binary encoded, .cer if no private key                                           |
-| Privacy Enhanced Mail (PEM)           | Base64 encoded, lots of extensions (.pem, .cer, .crt)                            |
-| Public Key Cryptography Standard \#7  | Includes public key + certificate chain (.p7b)                                   |
-| Public Key Cryptography Standard \#12 | Everything in PKCS#7 + private key and additional certificate information (.p12) |
+* Distinguished Encoding Rules (.der) - Binary encoded, .cer if no private key
+* Privacy Enhanced Mail (PEM) - Base64 encoded, lots of extensions (.pem, .cer, .crt)
+* Public Key Cryptography Standard \#7 - Includes public key + certificate chain (.p7b)
+* Public Key Cryptography Standard \#12 - Everything in PKCS#7 + private key and additional certificate information (.p12)
 
 PKCS#12 is generally used for backing up CAs, while PKCS#7 is used for normal key exchange. Both of these are (almost exclusively) used by Windows.
 
-### IPSec
+## IPSec
 
 IPSec: Internet Protocol Security. Not really a single protocol - more a family of inter-related protocols.
 

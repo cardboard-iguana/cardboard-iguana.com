@@ -19,7 +19,7 @@ date:: 2022-08-17
 * `systeminfo` - return system info
 * `whoami /priv` - current user + privileges
 
-## net
+# net
 
 Windows' `net` command is can also be used to *manipulate* user and group information (*if* you already have admin/SYSTEM permission)! For example:
 
@@ -37,13 +37,13 @@ net user $USERNAME /add /domain
 net group "Domain Admins" $USERNAME /add /domain
 ```
 
-## netstat
+# netstat
 
 The `netstat` command on Windows *almost* works exactly like its Linux equivalent. The difference is that `-o` displays the PID of the process using the connection on Windows (which, IMHO, is more useful than `-o` on Linux).
 
 * [Using "netstat"](netstat.md)
 
-## systeminfo
+# systeminfo
 
 Use `findstr` to filter the output of `systeminfo`:
 
@@ -51,7 +51,7 @@ Use `findstr` to filter the output of `systeminfo`:
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 ```
 
-## wmic
+# wmic
 
 The `wmic` command is extremely useful, but is also deprecated (*because* of its usefulness to attackers!). It can be used on Windows 10 21H1 and earlier. For later systems, PowerShell command-lets will need to be used instead (which increases the risk that activity will be logged).
 
@@ -60,7 +60,7 @@ The `wmic` command is extremely useful, but is also deprecated (*because* of its
 * `wmic qfe get Caption,Description,HotFixID,InstalledOn` - list installed updates
 * `wimc service list brief` - another way of listing services
 
-## Useful Scripts
+# Useful Scripts
 
 * [WinPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)
 * [PowerUp](https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc)

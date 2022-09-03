@@ -1,28 +1,28 @@
-# Equivalent Windows and \*NIX Commands
+# Equivalent Windows and UNIX Commands
 
 author:: Nathan Acks  
 date:: 2022-08-17
 
-|      Linux | Windows           |
-| ----------:|:----------------- |
-|        cat | type              |
-|        dig | nslookup          |
-|       grep | findstr / select  |
-|   ifconfig | ipconfig          |
-|         ls | dir               |
-|       more | more              |
-|    netstat | netstat           |
-|       ping | ping              |
-|   shutdown | shutdown          |
-|      sleep | timeout           |
-|       sudo | runas             |
-|    tcpdump | windump           |
-| traceroute | tracert           |
-|       wget | wget              |
-|   hostname | hostname          |
-|     whoami | whoami            |
+UNIX <-> Windows command equivalencies (more-or-less):
 
-## cat
+* cat <-> type
+* dig <-> nslookup
+* grep <-> findstr / select
+* ifconfig <-> ipconfig
+* ls <-> dir
+* more <-> more
+* netstat <-> netstat
+* ping <-> ping
+* shutdown <-> shutdown
+* sleep <-> timeout
+* sudo <-> runas
+* tcpdump <-> windump
+* traceroute <-> tracert
+* wget <-> wget
+* hostname <-> hostname
+* whoami <-> whoami
+
+# cat
 
 ```bash
 # Use cat to add line numbers to a file!
@@ -36,7 +36,7 @@ cat -b < $FILE
 
 * [What is the Windows equivalent of the Unix command cat?](https://superuser.com/questions/434870/what-is-the-windows-equivalent-of-the-unix-command-cat#434876)
 
-## dig
+# dig
 
 ```bash
 # dig command syntax; only $DOMAIN is required
@@ -50,7 +50,7 @@ dig @1.1.1.1 tryhackme.com
 dig          google.com    MX
 ```
 
-## grep
+# grep
 
 ```bash
 # Case-insensitive grep
@@ -62,7 +62,7 @@ grep -i $STRING $FILE
 grep $STRING -r $DIRECTORY
 ```
 
-## findstr
+# findstr
 
 ```powershell
 # Use findstr to filter the output of systeminfo (or another command):
@@ -70,7 +70,7 @@ grep $STRING -r $DIRECTORY
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
 ```
 
-## dir
+# dir
 
 The `dir` command accepts wildcard listings (`*.txt`, etc.), and will perform a subdirectory search if given the `/S` flag. For example:
 
@@ -78,21 +78,21 @@ The `dir` command accepts wildcard listings (`*.txt`, etc.), and will perform a 
 dir /S /P example.txt
 ```
 
-## ipconfig
+# ipconfig
 
-### Display Current DNS Settings
+## Display Current DNS Settings
 
 ```powershell
 ipconfig /displaydns | more
 ```
 
-### Flush Local DNS Cache
+## Flush Local DNS Cache
 
 ```powershell
 ipconfig /flushdns
 ```
 
-## nslookup
+# nslookup
 
 ```powershell
 # nslookup command syntax; only $DOMAIN is required
@@ -106,11 +106,11 @@ nslookup          tryhackme.com 1.1.1.1
 nslookup -type=MX google.com
 ```
 
-## ping
+# ping
 
 Windows `ping` uses the `-n` flag to specify the number of packets sent (in contrast to Linux's `-c`).
 
-## runas
+# runas
 
 ```powershell
 runas /user:$USERNAME $EXECUTABLE
@@ -125,7 +125,7 @@ If credentials are saved for a particular user (use `cmdkey /list` to check), th
 * [Windows: Run as Different User](https://www.shellhacks.com/windows-run-as-different-user/)
 * [Windows runas command syntax and examples](https://www.windows-commandline.com/windows-runas-command-prompt/)
 
-## whoami
+# whoami
 
 Windows' `whoami` supports a couple of useful flags:
 

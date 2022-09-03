@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-08-23
 
-## DNS Demystified: Amazon Route 53
+# DNS Demystified: Amazon Route 53
 
 Route 53 has a 100% SLA (!!!).
 

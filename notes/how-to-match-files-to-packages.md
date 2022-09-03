@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-07-10
 
-## Debian
+# Debian
 
 ```bash
 # List all installed packages
@@ -23,7 +23,7 @@ dpkg-query -S $FULL_PATH_TO_FILE
 * [How do I get a list of installed files from a package?](https://askubuntu.com/questions/32507/how-do-i-get-a-list-of-installed-files-from-a-package)
 * [How do I find out which package owns a file?](https://superuser.com/questions/179353/how-do-i-find-out-which-package-owns-a-file)
 
-## Red Hat
+# Red Hat
 
 ```bash
 # List all installed packages

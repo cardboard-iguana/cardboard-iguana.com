@@ -34,9 +34,7 @@ A "token length exception" means that the provided hash format is of the wrong l
 * [Cracking Linux Password Hashes with Hashcat](https://samsclass.info/123/proj10/p12-hashcat.htm)
 * [hashcat - cracking a salted sha256](https://security.stackexchange.com/a/204978)
 
-## Utilities
-
-### Combinator
+# Combinator
 
 The Hashcat `combinator.bin` utility combines two wordlists such that every entry of the first list is concatenated with every entry from the second list.
 

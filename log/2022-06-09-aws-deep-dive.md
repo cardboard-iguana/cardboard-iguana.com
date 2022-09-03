@@ -3,13 +3,13 @@
 author:: Nathan Acks  
 date:: 2022-06-09
 
-## AWS Essentials
+# AWS Essentials
 
 Today I'll be finishing up the "AWS Essentials" YouTube playlist put together by the Linux Academy.
 
 * [AWS Essentials (YouTube)](https://youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)
 
-### Elastic Block Store (EBS)
+## Elastic Block Store (EBS)
 
 IOPS is basically a measure of reads/writes (i.e., I/O) per unit time.
 
@@ -23,7 +23,7 @@ Data stored as a snapshot is *a lot* less expensive than the same data stored on
 
 * [AWS Essentials: Elastic Block Store (EBS) (YouTube)](https://youtu.be/S0gzrxsVQHo)
 
-### Security Groups
+## Security Groups
 
 Security Groups are instance-level firewalls. In some ways they're similar to NACLs, but allow/deny rules work a little differently: whereas traffic is processed by the first matching rule in a NACL (just as in a traditional stateless firewall), *all* rules in a Security Group are considered when evaluating traffic.
 
@@ -33,7 +33,7 @@ There are no DENY rules for security groups, only ALLOW rules. Any traffic not m
 
 * [AWS Essentials: Security Groups (YouTube)](https://youtu.be/-9j7BvAyb2w)
 
-### IP Addressing
+## IP Addressing
 
 EC2 instances can be launched with public IP addresses so long as the subnet its own is attached to a route that has an associated Internet Gateway.
 
@@ -41,13 +41,13 @@ EC2 instances in the default VPC will launch with public IP addresses out-of-the
 
 * [AWS Essentials: IP Addressing (YouTube)](https://youtu.be/U32bPhQyQ6I)
 
-### Launching and Using an EC2 Instance
+## Launching and Using an EC2 Instance
 
 When setting up an EC2 instance, you have the ability to specify a script that will be run on first boot. This is generally used to install and configure software.
 
 * [AWS Essentials: Launching and Using an EC2 Instance (YouTube)](https://youtu.be/BCM9aaaWvR0)
 
-### RDS and DynamoDB Basics
+## RDS and DynamoDB Basics
 
 RDS provides relational database services and supports a variety of database engines under the hood: MySQL/MariaDB, PostgreSQL, Oracle, SQL Server, and Amazon's own fork of MySQL, Aurora. Note that Aurora is *not* available in the AWS free tier.
 
@@ -57,7 +57,7 @@ Pricing for RDS parallels that for EC2 (which makes sense), while DynamoDB prici
 
 * [AWS Essentials: RDS and DynamoDB Basics (YouTube)](https://youtu.be/KcJ8-I7kD_w)
 
-### Provisioning and RDS MySQL Database
+## Provisioning and RDS MySQL Database
 
 Not only can't RDS use Aurora on the free tier, but it's limited to running MySQL in "developer" mode (though it's unclear what that means).
 
@@ -65,7 +65,7 @@ RDS instances aren't provisioned directly into subnets like EC2 instances. Inste
 
 * [AWS Essentials: Provisioning and RDS MySQL Database (YouTube)](https://youtu.be/OE25Sni15vo)
 
-### SNS Basics
+## SNS Basics
 
 SNS = Simple Notification Service
 

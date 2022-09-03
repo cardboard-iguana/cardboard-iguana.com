@@ -6,6 +6,6 @@ tags:: #MOC
 
 * [TryHackMe: Attacking Kerberos](https://tryhackme.com/room/attackingkerberos)
 
-## Notes
+# Course Notes
 
 * [2021-12-05 - TryHackMe: Complete Beginner (Supplements)](../log/2021-12-05-tryhackme-complete-beginner-supplements.md)

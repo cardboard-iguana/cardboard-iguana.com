@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-08-20
 
-## Amazon VPC: Security at the Speed of Light
+# Amazon VPC: Security at the Speed of Light
 
 VPC = Virtual Private Cloud
 
@@ -41,7 +41,7 @@ HyperPlane nodes are actually based on the S3 load balancer.
 
 * [AWS re:Invent 2018: Amazon VPC - Security at the Speed of Light (YouTube)](https://youtu.be/uhXalpNzPU4)
 
-## Deep Dive on New Amazon EC2 Instances and Virtualization Technologies
+# Deep Dive on New Amazon EC2 Instances and Virtualization Technologies
 
 The basic problem of virtualization: There are certain machine instructions that are "privileged" for the operating system (because of the processor-level security mode that OS code runs at). A processor can be virtualized when the errors caused when these instructions are run with a lower privilege level can be trapped and dealt with by more privileged code (which is why hardware virtualization requires OS support of some kind as well).
 

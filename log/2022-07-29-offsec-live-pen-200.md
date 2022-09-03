@@ -5,7 +5,7 @@ date:: 2022-07-29
 
 Joining late, because of OS updates. It looks like we're talking about SQL Injection today.
 
-## SQL Injection (SQLi)
+# SQL Injection (SQLi)
 
 Remember that `#` can be used for comments in SQL, in addition to `--`.
 
@@ -15,7 +15,7 @@ If you find one SQLi error in a website/application, there will probably be othe
 
 Remember that `information_schema.tables` and `information_schema.columns` tables can be used to extract database structural information in MySQL. Of these, `information_schema.columns` is perhaps the more useful, as it contains both `table_name` and `column_name` columns (`table_schema` is the database name).
 
-## Other Notes
+# Other Notes
 
 In PHP, `==` checks for value equality (which may result in one of the values being tested being implicitly cast to a different data type), while `===` checks for *both* value equality *and* type equality (no implicit casting).
 

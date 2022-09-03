@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2021-10-07
 
-## OWASP Top 10
+# OWASP Top 10
 
-### (Severity 09) Components With Known Vulnerabilities
+## (Severity 09) Components With Known Vulnerabilities
 
 The trickiest part of this is that the project is called "CSE Bookstore", but the exploit code in ExploitDB is listed under "Online Book Store".
 
@@ -17,9 +17,9 @@ The actual vulnerability is two-fold:
 
 * [Online Book Store 1.0 - Unauthenticated Remote Code Execution](https://www.exploit-db.com/exploits/47887)
 
-## OWASP Juice Shop
+# OWASP Juice Shop
 
-### AH! Don't Look!
+## AH! Don't Look!
 
 Finally, a useful piece of general knowledge.
 
@@ -38,7 +38,7 @@ $sanitized_string =
 
 [Defend the Web has a much better description of what's going on here than the one offered by TryHackMe.](https://defendtheweb.net/article/common-php-attacks-poison-null-byte)
 
-### Who's Flying This Thing?
+## Who's Flying This Thing?
 
 Broken access control vulnerabilities can be classified into one of two types:
 
@@ -47,7 +47,7 @@ Broken access control vulnerabilities can be classified into one of two types:
 
 Mostly this section seems to be driving home that one should look everywhere for clues (in the present case, there's clues about hidden parts of the site structure in some of the JavaScript files loaded with the page), and also that accessing sensitive information (for example, through URL enumeration) doesn't necessarily *look* like accessing "new" information (in the OWASP Juice Shop, accessing another user's shopping car can be done without actually changing the header that says it's "your" shopping cart).
 
-### Where Did That Come From?
+## Where Did That Come From?
 
 In addition to the `<script/>` tag, it's also possible to inject JavaScript using the `<iframe/>` tag by setting the `src` attribute to the `javacript:` pseudo-protocol. For example:
 

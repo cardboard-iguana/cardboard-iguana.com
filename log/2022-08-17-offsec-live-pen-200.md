@@ -9,7 +9,7 @@ OffSec Live returns today after taking a week off for DEF CON.
 * [Join OffSec Live](https://learn.offensive-security.com/offsec-live-webinars)
 * [DEF CON 30](https://defcon.org/html/defcon-30/dc-30-index.html)
 
-## Windows Privilege Escalation
+# Windows Privilege Escalation
 
 Recommended privilege escalation resource: g0tm1lk's Blog.
 

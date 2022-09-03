@@ -10,7 +10,7 @@ The big conceptual difference between "active" and "passive" information gatheri
 * [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
 * [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
 
-## Whois
+# Whois
 
 The `whois` tool can also be used on IP addresses (in which case it will do a reverse lookup):
 
@@ -18,18 +18,18 @@ The `whois` tool can also be used on IP addresses (in which case it will do a re
 whois $IP_ADDRESS 
 ```
 
-## Google Hacking
+# Google Hacking
 
 Google search operators/hacks:
 
 * `site:` - restrict search to the specified domain
 * `filetype:` - only return results for a given file type (php, html, pdf, etc.)
 
-## Netcraft
+# Netcraft
 
 You can get a lot of additional server and DNS information using https://searchdns.netcraft.com/. This can also turn up subdomains.
 
-## Harvesting Email
+# Harvesting Email
 
 "The Harvester" is a tool for harvesting email addresses and subdomains from public websites.
 
@@ -37,12 +37,12 @@ You can get a lot of additional server and DNS information using https://searchd
 theHarvester -d $EMAIL_DOMAIN -b $SERVICE_TO_SEARCH
 ```
 
-## Shodan
+# Shodan
 
 Give it an IP, get back open ports, service versions, etc. There's a lot of overlap with Netcraft, though not enough to make either tool redundant.
 
 Shodan supports a lot of different filters for different services, IoT devices, vulnerabilities, etc.
 
-## Stack Overflow
+# Stack Overflow
 
 See if you can find accounts that are linked to your target, and then look for the questions they've asked. Sometimes the "answers" are not actually secure, and can be exploited!

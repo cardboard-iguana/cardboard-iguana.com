@@ -10,7 +10,7 @@ date:: 2022-04-22
 * [Using "ps"](ps.md)
 * [Enumerate "sudo" Access](enumerate-sudo-access.md)
 
-## Useful Commands
+# Useful Commands
 
 * `cat /etc/issue`
 * `cat /etc/passwd`
@@ -34,7 +34,7 @@ date:: 2022-04-22
 * `sudo -l`
 * `uname -a`
 
-## Useful Scripts
+# Useful Scripts
 
 * [LinPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 * [LinEnum](https://github.com/rebootuser/LinEnum)

@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-08-31
 
-## Active Directory Enumeration & Exploitation, Part 3
+# Active Directory Enumeration & Exploitation, Part 3
 
 To use SSH as a generic SOCKS5 proxy, just use remote port forwarding.
 

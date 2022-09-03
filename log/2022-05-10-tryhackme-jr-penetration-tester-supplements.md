@@ -7,17 +7,17 @@ Today's TryHackMe Jr. Penetration Tester "supplements":
 
 * [TryHackMe: AD Certificate Templates](https://tryhackme.com/room/adcertificatetemplates)
 
-### Introduction: AD Certificate Templates
+## Introduction: AD Certificate Templates
 
 This room is based on SpectreOps' "Certified Pre-Owned" research, and will deal with misconfigured templated in the Active Directory Certificate Service (AD CS).
 
 * [SpectreOps: Certified Pre-Owned](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
 
-### A Brief Look at Certificate Templates
+## A Brief Look at Certificate Templates
 
 AD CS is AD's PKI, and is used on the back end for everything from provisioning disk encryption keys to user authentication. Certificate templates are a way to automate the certificate request process: Rather than an admin approving all CSRs manually, AD CS checks to see if a relevant "template" (which is really a template + associated settings + an access policy) exists that matches the supplied CSR and is configured to allow the requesting user to generate a certificate.
 
-### Certificate Template Enumeration
+## Certificate Template Enumeration
 
 Enumerate all certificate templates from a domain-joined computer and domain-authenticated user:
 
@@ -43,7 +43,7 @@ Note that the special group "Domain Users" represents all users in the domain, a
 
 * [Kerberos](../notes/kerberos.md)
 
-### Generating a Malicious Certificate
+## Generating a Malicious Certificate
 
 * Open up the Microsoft Management Console (`mmc`).
 * Add the "Certificates" snap-in. (If you have local admin, you'll be able to add the snap-in for local service accounts or the machine account itself.)
@@ -54,7 +54,7 @@ Note that the special group "Domain Users" represents all users in the domain, a
 
 The vulnerable cert will be added under the "Personal" folder that was initially clicked on. Once the certificate has been generated, export it (be sure to include the associated private key!) for use in other exploitation tools.
 
-### User Impersonation Through a Certificate
+## User Impersonation Through a Certificate
 
 Rubeus can be used to request a Kerberos ticket granting ticket using the certificate:
 

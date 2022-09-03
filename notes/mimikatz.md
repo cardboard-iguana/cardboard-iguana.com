@@ -5,7 +5,7 @@ date:: 2022-08-31
 
 Mimikatz needs to be run with administrative privileges (on the local machine), and provides its own command prompt. Use the `privilege::debug` command to check if you're running with the right privileges.
 
-## Dumping Tickets
+# Dumping Tickets
 
 Mimikatz can dump ticket granting tickets (and session keys) from the memory of Windows' Local Security Authority Subsystem Service (LSASS); these can then be used to for privilege elevation or lateral movement (depending on which users are active on that machine).
 
@@ -13,11 +13,11 @@ Use the `sekurlsa::tickets /export` command to dump any Kerberos "tickets" (real
 
 * [Kerberos](kerberos.md)
 
-## Pass the Ticket Attacks
+# Pass the Ticket Attacks
 
 Use the `kerberos::ptt TICKET_FILE` command to load the data structure in the specified .kirbi file into memory (allowing the account you're logged in as to "pass the ticket" and impersonate the user whose ticket you've harvested).
 
-## Golden/Silver Ticket Attacks
+# Golden/Silver Ticket Attacks
 
 To generate a gold or silver ticket using Mimikatz, begin by running the `lsadump::lsa /inject /name:SERVICE` command to retrieve the service SID and NTLM password hash for that service. If SERVICE is `krbtgt` then this will allow the creation of a golden ticket, otherwise you'll be creating a silver ticket.
 
@@ -35,13 +35,13 @@ Once the ticket has been created, use `misc::cmd` to open a command prompt using
 
 * [Windows Password Hashes](windows-password-hashes.md)
 
-## KDC Skeleton Key
+# KDC Skeleton Key
 
 If Mimikatz is run on a domain controller, it can modify the authentication service's memory using the `misc::skeleton` command to cause it to attempt to decrypt the AS-REQ using *both* the user's NT hash *and* an NT hash of your choosing (by default `60BA4FCADC466C7A033C178194C03DF6`, which is just `mimikatz`).  This means that you can send an AS-REQ as any user using the "skeleton key" hash to gain access as that user, similar to a golden ticket attack.
 
 Obviously this isn't very persistent itself, as the skeleton key will be lost if the server is rebooted or the authentication service restarted.
 
-## Pure PowerShell Implementation
+# Pure PowerShell Implementation
 
 Mimikatz binaries are generally detected by AV on download these days, but fortunately there's a PowerShell reimplementation available from the Empire Project that can be run after bypassing AMSI.
 

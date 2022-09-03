@@ -3,22 +3,20 @@
 author:: Nathan Acks  
 date:: 2021-09-18
 
-## System Configuration
+# System Configuration
 
 The Tools tab of msconfig.exe can be quite useful, as it provides full pats to various Windows system utilities (in the "Selected command" line).
 
-## Computer Management
+# Computer Management
 
 Want access to (almost) all of the Windows "snap-ins" in one hierarchical tree view? Then run compmgmt.msc!
 
-Some Windows/UNIX equivalents:
+Some UNIX <-> Windows equivalents:
 
-| UNIX       | Windows          |
-|:---------- |:---------------- |
-| cron       | Task Scheduler   |
-| journalctl | Event Viewer     |
-| htop       | Resource Monitor |
-| bash       | Command Prompt   |
+* cron <-> Task Scheduler
+* journalctl <-> Event Viewer
+* htop <-> Resource Monitor
+* bash <-> Command Prompt
 
 Event types:
 
@@ -49,7 +47,7 @@ WMI is an interface for allowing the scripting of computer management, now super
 
 * [lusrmgr.msc](2021-09-17-tryhackme-pre-security.md)
 
-## System Information
+# System Information
 
 Lots of great stuff in msinfo32.exe (System Information).
 
@@ -57,15 +55,15 @@ All current user and system environment variables are listed here (though to acr
 
 There's a hand search bar at the bottom of this utility.
 
-## Command Prompt
+# Command Prompt
 
-| UNIX     | Command Prompt |
-|:-------- |:-------------- |
-| hostname | hostname       |
-| whoami   | whoami         |
-| ifconfig | ipconfig       |
-| clear    | cls            |
-| netstat  | netstat        |
+More UNIX <-> Windows equivalents (command line edition):
+
+* hostname <-> hostname
+* whoami <-> whoami
+* ifconfig <-> ipconfig
+* clear <-> cls
+* netstat <-> netstat
 
 Where UNIX applications generally use -h or --help to display help information, Windows typically uses /?. (The "/" switches was pretty standard in early DOS and Windows applications, but in the Windows 10 era UNIX-style "-" and "--" are used instead.)
 
@@ -73,6 +71,6 @@ The "net" command is a Windows-specific command line tool that is a kind of Swis
 
 * [An A-Z Index of Windows CMD commands](https://ss64.com/nt/)
 
-## Registry Editor
+# Registry Editor
 
 Apparently the Registry Editor goes by regedt32.exe in addition to the more familiar regedit.exe.

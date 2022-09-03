@@ -3,16 +3,16 @@
 author:: Nathan Acks  
 date:: 2021-11-21
 
-## MAL: Researching
+# MAL: Researching
 
-### Online Sandboxing
+## Online Sandboxing
 
 Online automated malware analysis sandboxes:
 
 * [any.run](https://any.run/)
 * [hybrid-analysis](https://hybrid-analysis.com/)
 
-### Practical: Calculating & Reporting Checksums
+## Practical: Calculating & Reporting Checksums
 
 Calculating file hashes with PowerShell!
 
@@ -28,9 +28,9 @@ Get-FileHash -Algorithm $ALGORITHM $FILE_PATH
 
 In both cases, the algorithm can be excluded (in which case SHA1 is used for CertUtil and SHA-256 is used for Get-FileHash). *Lots* of different hashing algorithms are supported - run `help Get-FileHash`, etc. to see a list.
 
-## MAL: Strings
+# MAL: Strings
 
-### Practical: Finding Bitcoin Addresses in Ransomware
+## Practical: Finding Bitcoin Addresses in Ransomware
 
 Blockchain exploration tool (search for hashes):
 
@@ -40,21 +40,21 @@ Blockchain exploration tool (search for hashes):
 
 Fun side-note: PowerShell can use Linux-style redirects (`>`)!
 
-## Google Dorking
+# Google Dorking
 
-### Enter: Search Engine Optimization
+## Enter: Search Engine Optimization
 
 It looks like all of Google's optimization tests live at web.dev now.
 
 * [web.dev: Measure page quality](https://web.dev/measure/)
 
-### BeepBoop - Robots.txt
+## BeepBoop - Robots.txt
 
 I always forget that the `Sitemap` directive lives in `robots.txt`.
 
 It turns out that most web crawlers support regexes in the `Allow`/`Disallow` statements. Also, directives for different crawlers can be given by using multiple `User-agent` directives (apparently a crawler will only use the first block that it matches up until a new `User-agent` directive).
 
-### What is Google Dorking?
+## What is Google Dorking?
 
 Useful Google search modifiers:
 
@@ -63,9 +63,9 @@ Useful Google search modifiers:
 * `intitle:` - Require that the page title contain particular keywords
 * `cache:` - View the most recent cached version of a particular URL
 
-## Wireshark 101
+# Wireshark 101
 
-### Collection Methods
+## Collection Methods
 
 Ways to gather packets:
 

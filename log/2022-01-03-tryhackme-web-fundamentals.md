@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2022-01-03
 
-## Introduction to Django
+# Introduction to Django
 
-### Introduction
+## Introduction
 
 > "Additionally, Django is arguably one of the most secure developing frameworks, which in the right configuration, can strongly resist against SQL injections and XSS."
 > 
@@ -16,17 +16,17 @@ That's a hell of a statement. We shall see.
 * [Swafox (TryHackMe user profile)](https://tryhackme.com/p/Swafox)
 * [TryHackMe: Introduction to Django](https://tryhackme.com/room/django)
 
-### Getting Started
+## Getting Started
 
 Kali Linux comes with Django 3.2.10 pre-installed. I'm going to use that and hope it's not *too* different from 2.2.12.
 
-### Creating a Website
+## Creating a Website
 
 Okay, one difference between Django 2.2 and 3.2 is that the import of `django.urls` in `urls.py` does *not* pull in `include()` in 3.2. So this needs to be added manually before inserting additional `urlpattern` elements.
 
 The app created with `python3 manage.py startapp articles` also doesn't include a `urls.py` file (though this seems to be by design; I checked a few other tutorials, and it isn't listed there either). This meant that I had to construct *both* a basic `urls.py` and `views.py` file in `articles/` before `python3 manage.py migrate` could successfully set up the new app.
 
-### CTF
+## CTF
 
 This CTF involves a Django site. The target is at 10.10.219.71.
 

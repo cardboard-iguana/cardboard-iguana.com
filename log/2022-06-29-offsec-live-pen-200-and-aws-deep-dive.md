@@ -8,7 +8,7 @@ This entry was actually written over the course of most of the day, as the next 
 * [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
 * [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
 
-## OffSec Live: Basic Tools, Part 1
+# OffSec Live: Basic Tools, Part 1
 
 (Missed the first few minutes again...)
 
@@ -32,11 +32,11 @@ The difference between a "reverse" and "bind" shell depends on where you're work
 
 * [Using "netcat"](../notes/netcat.md)
 
-## AWS CloudFormation Tutorial
+# AWS CloudFormation Tutorial
 
 As the first part of today's "AWS Deep Dive" I'll be watching and taking notes on a video detailing how to set up a CloudFormation stack in AWS. I'll follow this up by any additional notes about my experiences setting up my own version of the two demos.
 
-### Video Notes
+## Video Notes
 
 The idea behind CloudFormation is to manage the multiple services that are required to run an application in AWS. It's the same idea as AMIs in EC2, except that CloudFormation templates snapshotting AWS *infrastructure* rather than just VMs. Once you have a CloudFormation template, you can use it to spin up identical copies of your infrastructure in multiple regions.
 
@@ -55,7 +55,7 @@ The default EC2 SSH login is `ec2-user`; only private key logins are allowed.
 
 * [AWS CloudFormation Tutorial (YouTube)](https://youtu.be/LDSMIvUuFOE)
 
-### Demo Stack Setup Notes
+## Demo Stack Setup Notes
 
 Note that the CloudFormation Designer does *not* work well in iOS browsers! (In particular, drag-and-drop is next-to-broken...)
 
@@ -67,7 +67,7 @@ As far as I can tell, the random string appended to default CloudFormation names
 
 EC2 instances created by CloudFormation have names like `i-${RANDOM_HEX_NUMBER}`, where `$RANDOM_HEX_NUMBER` is always 17 (👀) digits.
 
-## Capacity Management Made Easy with Amazon EC2 Auto Scaling
+# Capacity Management Made Easy with Amazon EC2 Auto Scaling
 
 There are three different methods of autoscaling in AWS: EC2 autoscaling, application autoscaling (EC2 Containers, Aurora, DynamoDB, and AppStream), and AWS autoscaling (which scales bundles of resources in AWS, rather than just single services).
 

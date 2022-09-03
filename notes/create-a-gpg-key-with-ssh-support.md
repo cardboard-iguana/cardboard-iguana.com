@@ -7,7 +7,7 @@ author:: Nathan Acks
 * [How to enable SSH access using a GPG key for authentication](https://opensource.com/article/19/4/gpg-subkeys-ssh)
 * [Force the use of a gpg-key as an ssh-key for a given server](https://serverfault.com/a/964317)
 
-## Create the Initial Key
+# Create the Initial Key
 
 ```bash
 gpg --expert --full-generate-key
@@ -22,27 +22,27 @@ gpg --expert --full-generate-key
 * Enter the primary email address for the key.
 * *Do not enter a comment.*
 
-## Edit the Key
+# Edit the Key
 
 ```bash
 gpg --expert --edit-key $KEYID
 ```
 
-### Add UIDs
+## Add UIDs
 
 * Use `adduid`.
 * Enter your name.
 * Enter the primary email address for the key.
 * *Do not enter a comment.*
 
-### Add a Signing Subkey
+## Add a Signing Subkey
 
 * Use `addkey`.
 * Choose "ECC (sign only)"
 * Choose "Curve 25519".
 * Expire in 2 years (`2y`).
 
-### Add an Authentication Subkey
+## Add an Authentication Subkey
 
 * Use `addkey`.
 * Choose "ECC (set your own capabilities)"
@@ -52,18 +52,18 @@ gpg --expert --edit-key $KEYID
 * Choose "Curve 25519".
 * Expire in 2 years (`2y`).
 
-### Add an Encryption Subkey
+## Add an Encryption Subkey
 
 * Use `addkey`.
 * Choose "ECC (encrypt only)"
 * Choose "Curve 25519".
 * Expire in 2 years (`2y`).
 
-### Finish Up
+## Finish Up
 
 Be sure to save the key before exiting.
 
-## Remove the Primary Key for Safe Keeping
+# Remove the Primary Key for Safe Keeping
 
 ```bash
 # Export keys
@@ -91,7 +91,7 @@ rm subkeys.gpg
 
 Once this is done, `$KEYID.asc` can be stored "offline" on a secure (encrypted!) drive, etc. Note that this key will need to be re-imported to generate new subkeys, add UIDs, extend expiration dates, or create updated revocation certificates.
 
-## Export the Authentication Subkey to SSH
+# Export the Authentication Subkey to SSH
 
 * Run `gpg --list-secret-keys --with-keygrip`.
 * Copy keygrips of the authentication subkeys (`[A]`) you want to use in SSH to `~/.gnupg/sshcontrol`.

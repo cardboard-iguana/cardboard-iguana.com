@@ -3,15 +3,15 @@
 author:: Nathan Acks  
 date:: 2022-03-12
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
 It actually took me a couple of days to work through chapter 24 of the Exam Cram, "Authentication and Authorization Solutions". Lots of little details here.
 
-### Authentication
+## Authentication
 
 AUTHENTICATION MANAGEMENT: The management of user credentials across the entire user lifecycle.
 
-### Unencrypted Plaintext Credentials
+## Unencrypted Plaintext Credentials
 
 Wait, wut?!?
 
@@ -19,7 +19,7 @@ Wait, wut?!?
 
 I guess people must forget their *usernames* with relative frequency, as Exam Cram is suggesting that a failed login attempt followed by a successful one has a high probability of revealing the user's password (at least in smaller/less busy environments).
 
-### Filesystem Permissions
+## Filesystem Permissions
 
 Exam Cram notes that the Security+ test's main concern with insecure permissions is the violation of the principle of least access.
 
@@ -50,21 +50,19 @@ Windows permissions for files:
 
 Windows "advanced permissions" are just bundles of the above.
 
-| Advanced Permission            | Full Control | Modify | List Folder Contents | Read & Execute | Write | Read |
-|:------------------------------ |:------------:|:------:|:--------------------:|:--------------:|:-----:|:----:|
-| Traverse folder / execute file |       X      |    X   |           X          |        X       |       |      |
-| List folder / read data        |       X      |    X   |           X          |        X       |       |      |
-| Read attributes                |       X      |    X   |           X          |        X       |       |      |
-| Read extended attributes       |       X      |    X   |           X          |        X       |       |      |
-| Create files / write data      |       X      |    X   |                      |                |       |   X  |
-| Create folders / append data   |       X      |    X   |                      |                |       |   X  |
-| Write attributes               |       X      |    X   |                      |                |       |   X  |
-| Write extended attributes      |       X      |    X   |                      |                |       |   X  |
-| Delete subfolders and files    |       X      |        |                      |                |       |      |
-| Delete                         |       X      |    X   |                      |                |       |      |
-| Read permissions               |       X      |    X   |           X          |        X       |   X   |   X  |
-| Change permissions             |       X      |        |                      |                |       |      |
-| Take ownership                 |       X      |        |                      |                |       |      |
+* Traverse folder / execute file = Full Control + Modify + List Folder Contents + Read & Execute
+* List folder / read data = Full Control + Modify + List Folder Contents + Read & Execute
+* Read attributes = Full Control + Modify + List Folder Contents + Read & Execute
+* Read extended attributes = Full Control + Modify + List Folder Contents + Read & Execute
+* Create files / write data = Full Control + Modify + Read
+* Create folders / append data = Full Control + Modify + Read
+* Write attributes = Full Control + Modify + Read
+* Write extended attributes = Full Control + Modify + Read
+* Delete subfolders and files = Full Control
+* Delete = Full Control + Modify
+* Read permissions = Full Control + Modify + List Folder Contents + Read & Execute + Write + Read
+* Change permissions = Full Control
+* Take ownership = Full Control
 
 I suspect that there must be a bit more to advanced permissions than this, as otherwise there's a lot of duplication here (either that, or Windows is supporting a lot of legacy permission bundles, which also wouldn't surprise me). Also, all of these advanced permissions *include* the "full control" permission, which would seem to make them all equivalent to... "full control"?
 
@@ -76,14 +74,14 @@ Okay, learned something new about Linux permissions I wasn't expecting: If a use
 * [AccessChk v6.14](https://docs.microsoft.com/sysinternals/downloads/accesschk)
 * [Windows Permissions](../notes/windows-permissions.md)
 
-### Access Violations
+## Access Violations
 
 The Windows "Microsoft Operations Manager" (MOM) includes an "Audit Collection Service" (ACS) that collects various audit events into a single database. There are two preconfigured reports:
 
 * The "Access Violation Account  Locked" report
 * The "Access Violation Unsuccessful Login Attempts" report
 
-### Authentication Protocols
+## Authentication Protocols
 
 PASSWORD AUTHENTICATION PROTOCOL (PAP): Username and password are sent to the server in plaintext. That's it. Was used for PPP connections.
 
@@ -95,11 +93,11 @@ MICROSOFT CHAP (MS-CHAP): Is a Microsoft variant of CHAP. Both Exam Cram and Wik
 * [MS-CHAP (Wikipedia)](https://en.m.wikipedia.org/wiki/MS-CHAP)
 * [Windows Password Hashes](../notes/windows-password-hashes.md)
 
-### 802.1X
+## 802.1X
 
 802.1X is an IEEE standard for port-based access control on a network. It works by encapsulating EAP with some IEEE network protocol, and relies on a dedicated authentication server rather than having the system the client is connecting to handle the authentication.
 
-### AAA Protocols and Services
+## AAA Protocols and Services
 
 Recall that "AAA" stands for "authentication, authorization, and accounting".
 
@@ -115,11 +113,11 @@ TACACS+ cleanly separates out the authentication and authorization  stages, whic
 * [RADIUS Authentication, Authorization, and Accounting (Microsoft Documentation)](https://docs.microsoft.com/windows/win32/nps/ias-radius-authentication-and-accounting)
 * [TACACS+ (Wikipedia)](https://en.wikipedia.org/wiki/TACACS)
 
-### Federated Services
+## Federated Services
 
 Federated services typically use token-based authentication, where the user authenticates with with a central server once and then receives a token that can provide access to further resources. Tokens can be scoped in time, space (which resources they're valid for), or both.
 
-### SAML
+## SAML
 
 SAML ("Security Assertion Markup Language") provides authentication (user identity), attribute (user metadata), and authorization (user permissions) attestation in a single XML bundle. SAML terminology:
 
@@ -141,7 +139,7 @@ SAML authentication responses assert the validity of a user's identity, rather t
 
 Note that both OAuth 2.0 and OpenID Connect (below) *can* use SAML for user authentication/authorization.
 
-### OAuth 2.0
+## OAuth 2.0
 
 OAuth ("Open Authorization") is primarily used for API-level authorization. Terminology:
 
@@ -165,7 +163,7 @@ OAuth 2.0 uses JSON rather than SAML's XML, and is overall a simpler protocol. P
 
 * [OAuth (Wikipedia)](https://en.wikipedia.org/wiki/OAuth)
 
-### OpenID Connect
+## OpenID Connect
 
 Besides an explicit login, authentication can also be layered on to OAuth 2.0 using OpenID Connect, which extends the OAuth 2.0 authorization process to include an authentication step. Generic OpenID Connect flow:
 
@@ -200,11 +198,11 @@ In short, in OpenID Connect the access token provides long lived or renewable AP
 * [Auth Code Flow pt. 2 (OneLogin OpenID Connect API Reference)](https://developers.onelogin.com/openid-connect/api/authorization-code-grant)
 * [Understanding identity tokens](https://www.scottbrady91.com/openid-connect/identity-tokens)
 
-### Shibboleth
+## Shibboleth
 
 Shibboleth is an open source federated SAML implementation. It layers on the concept of a (optional) "discovery service" that is used to determine a user's IdP across organizational boundaries. Apparently tricky to configure.
 
-### Kerberos
+## Kerberos
 
 Kerberos uses symmetric keys for protocol encryption. Kerberos uses TCP/UDP 88, though UDP is preferred except for large tickets; UDP (?) 749 is used for administrative access.
 
@@ -229,7 +227,7 @@ Unfortunately, the most common Kerberos implementation is Active Directory, whic
 * [Using Rubeus](../notes/rubeus.md)
 * [Using Mimikatz](../notes/mimikatz.md)
 
-### Access Control
+## Access Control
 
 ACCESS CONTROL: The process by which resources are made available only to those entities that should have access (and access is denied to all others).
 
@@ -247,7 +245,7 @@ Note that the "Trusted Computer System Evaluation Criteria" (TCSEC) specificatio
 
 * [Control access to apps based on user & device context (Google Workspace Admin Documentation)](https://support.google.com/a/answer/9275380)
 
-### Privileged Access Management
+## Privileged Access Management
 
 PAM systems are access control systems with the following properties:
 

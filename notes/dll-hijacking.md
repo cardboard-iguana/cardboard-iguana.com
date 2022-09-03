@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-04-22
 
-## Windows DLL Search Order
+# Windows DLL Search Order
 
 Windows DLL search order if `SafeDllSearchMode` is enabled:
 
@@ -29,7 +29,7 @@ Note that it seems more-or-less impossible to determine what DLLs an application
 * [Exploiting LD_PRELOAD](exploiting-ld-preload.md)
 * [Exploiting LD_LIBRARY_PATH](exploiting-ld-library-path.md)
 
-## Malicious DLL Skeleton
+# Malicious DLL Skeleton
 
 ```c
 #include <windows.h>

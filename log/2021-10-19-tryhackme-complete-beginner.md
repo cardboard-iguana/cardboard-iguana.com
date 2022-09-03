@@ -3,13 +3,13 @@
 author:: Nathan Acks  
 date:: 2021-10-19
 
-## Metasploit
+# Metasploit
 
-### Rock 'em To the Core
+## Rock 'em To the Core
 
 The `spool` command can be used to save all Metasploit console output to a log file, which can be useful for record-keeping.
 
-### Modules for Every Occasion!
+## Modules for Every Occasion!
 
 Core Metasploit modules:
 

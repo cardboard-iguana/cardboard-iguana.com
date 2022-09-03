@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2021-11-30
 
-## CC: Pen Testing
+# CC: Pen Testing
 
-### Metasploit Modules
+## Metasploit Modules
 
 Search for modules using `search`.
 
@@ -15,7 +15,7 @@ Most modules support the ARCH and PAYLOAD options (for specifying target archite
 
 * [Using Metasploit](../notes/metasploit.md)
 
-### Meterpreter
+## Meterpreter
 
 Sometimes the `migrate` process will allow you to move laterally or even escalate privileges within a system.
 
@@ -25,11 +25,11 @@ Some more commands:
 * The `search` command acts similarly to the NIX "find" command.
 * Use `cat` to dump a file's contents.
 
-### Hashcat
+## Hashcat
 
 Hashcat mode 100 corresponds to SHA1; 900 is MD4.
 
-### SQLMap
+## SQLMap
 
 `-u URL`/`--url=URL` - process URL (this *must* include the query parameters *with values* to test *or* you must specify POST parameters *with values* using `--data`)
 
@@ -47,11 +47,11 @@ Hashcat mode 100 corresponds to SHA1; 900 is MD4.
 
 * [Using Metasploit](../notes/metasploit.md)
 
-### A Note on Manual SQL Injection
+## A Note on Manual SQL Injection
 
 [OWASP actually has a good tutorial for SQL injection attacks.](https://owasp.org/www-community/attacks/SQL_Injection)
 
-### Web Application SQL Injection Vulnerabilities
+## Web Application SQL Injection Vulnerabilities
 
 * `--forms` - parse target URL for forms, and use these
 * `--dbs` - enumerate DBs

@@ -4,7 +4,7 @@ author:: Nathan Acks
 
 * [Remove duplicate lines without sorting](https://stackoverflow.com/a/20639730)
 
-## Quick-and-Dirty
+# Quick-and-Dirty
 
 ```bash
 cat $FILE | sort -u
@@ -12,13 +12,13 @@ cat $FILE | sort -u
 
 This works in a pinch, but as a side effect will sort the lines lexicographicly.
 
-## Remove All But the First Occurrence of a Line
+# Remove All But the First Occurrence of a Line
 
 ```bash
 cat $FILE | cat -n | sort -uk2 | sort -nk1 | cut -f2-
 ```
 
-## Remove All But the Last Occurrence of a Line
+# Remove All But the Last Occurrence of a Line
 
 ```bash
 cat $FILE | cat -n | sort -rk2 | sort -uk2 | sort -nk1 | cut -f2-

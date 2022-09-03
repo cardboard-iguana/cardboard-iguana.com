@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2022-01-06
 
-## Burp Suite: The Basics
+# Burp Suite: The Basics
 
-### Navigation
+## Navigation
 
 Useful Burp Suite shortcuts:
 
@@ -17,26 +17,26 @@ Useful Burp Suite shortcuts:
 * `Ctrl + F` - Forward intercepted request
 * `Ctrl + U` - URL encode selected text in Proxy > Intercept
 
-### Options
+## Options
 
 Burp Suite settings:
 
 * The "User options" tab contains *global* settings.
 * The "Project options" tab contains project-specific settings.
 
-### Introduction to the Burp Proxy
+## Introduction to the Burp Proxy
 
 Even when the proxy is not set to intercept traffic, it *will* log traffic; check the "HTTP history" and "WebSockets history" Proxy sub-tabs. Any of these logged requests can be modified or replayed.
 
 Server responses can be intercepted per request (though this obviously needs to be set when forwarding a request through the Proxy). Automatic rules can also be set in Proxy > Options > Intercept Server Responses.
 
-### The Burp Suite Browser
+## The Burp Suite Browser
 
 The Burp Suite embedded browser is a fully up-to-date version of Chromium with a custom user agent string that matches the current version of Google Chrome. The Burp Suite proxy is already set up and active, and a Burp Suite TLS certificate is installed.
 
 So, basically no need for FoxyProxy or any Firefox modifications!
 
-### Scoping and Targeting
+## Scoping and Targeting
 
 Sites can be added to the project scope under Target > Scope.
 
@@ -46,6 +46,6 @@ You can further restrict the Proxy to only intercept in-scope requests under Pro
 
 All of these settings are project-specific.
 
-### Site Map and Issue Definitions
+## Site Map and Issue Definitions
 
 Target > Issue definitions provides a list of the issues used by the vulnerability scanner built into the paid version of Burp Suite. For the Community Edition (i.e., what comes with Kali Linux), it's basically just a massive reference.

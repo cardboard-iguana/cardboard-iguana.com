@@ -3,13 +3,13 @@
 author:: Nathan Acks  
 date:: 2021-09-14
 
-## Extending Your Network
+# Extending Your Network
 
-### Introduction to Port Forwarding
+## Introduction to Port Forwarding
 
 Technically, it's routers that are in charge of port forwarding, not firewalls (the prevelance of devices that are *both* routers *and* firewalls does a lot to muddy this situation).
 
-### Firewalls 101
+## Firewalls 101
 
 Firewalls operate on layers 3 and 4 of the OSI Model.
 
@@ -22,13 +22,13 @@ What muddies the water here is that modern firewalls generally support *both* st
 
 * [OSI Model](../notes/osi-model.md)
 
-### LAN Networking Devices
+## LAN Networking Devices
 
 "Dumb" switches are purely layer 2 devices, but VLAN-aware switches support limited layer 3 awareness (since virtual logic about the network lives on this layer).
 
-## DNS in Detail
+# DNS in Detail
 
-### Domain Hierarchy
+## Domain Hierarchy
 
 When you're "registering" a domain, what you're actually doing is registering a "second-level domain" (as distinct from TLDs like .net, .co.uk, etc.).
 
@@ -41,7 +41,7 @@ Technically TLDs are *not* actually the top of the domain hierarchy - that would
 * [Domain name (Wikipedia)](https://en.wikipedia.org/wiki/Domain_name)
 * [Internationalized domain name (Wikipedia)](https://en.wikipedia.org/wiki/Internationalized_domain_name)
 
-### Making a Request
+## Making a Request
 
 ```
 Client
@@ -65,13 +65,15 @@ Everything that happens first between the client and the root DNS server is just
 
 * [Domain Name System (Wikipedia)](https://en.wikipedia.org/wiki/Domain_Name_System)
 
-## HTTP in Detail
+# HTTP in Detail
 
-### Requests and Responses
+## Requests and Responses
 
-| Scheme |     | User |   | Password |   |    Domain   |   | Port |   |      Path      |   |    Query    |   |      Fragment     |
-|:------:|:---:|:----:|:-:|:--------:|:-:|:-----------:|:-:|:----:|:-:|:--------------:|:-:|:-----------:|:-:|:-----------------:|
-|  http  | :// |  foo | : |    bar   | @ | example.tld | : | 8080 | / | this/is/a/path | ? | id=1&task=1 | # | in_page_reference |
+scheme://user:password@domain:port/some/path?a=query#fragment
+
+... or, in the "real world" ...
+
+http://foo:bar@example.tld:8080/this/is/a/path?id=1&task=2#in_page_reference
 
 Obviously, not all parts are required.
 
@@ -110,11 +112,11 @@ Note that HTTP is a stateless protocol.
 
 * [Content-Length (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length)
 
-### HTTP Methods
+## HTTP Methods
 
 In general, POST should be for record creation, PUT for record updates.
 
-### HTTP Status Codes
+## HTTP Status Codes
 
 HTTP status code blocks:
 
@@ -126,7 +128,7 @@ HTTP status code blocks:
 
 While some HTTP status codes are pre-defined, applications are free to make up their own as well (!).
 
-### Cookies
+## Cookies
 
 Cookies are key-value pairs (key=value) sent by the server using the Set-Cookie header (additional semi-colon separated parameters can determine when the cookie expires, whether it's restricted to HTTPS connections, etc.). Once set, the client is expected to return the cookie with the Cookie header in subsequent requests (at least until the cookie expires).
 

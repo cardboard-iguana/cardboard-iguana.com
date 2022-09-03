@@ -6,7 +6,7 @@ date:: 2018-08-01
 * [Coursera: Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
 * [git: Reference](https://git-scm.com/docs/)
 
-## DevOps and Git in a Nutshell
+# DevOps and Git in a Nutshell
 
 DevOps is considered to be an implementation of the continuous development philosophy, as opposed to waterfall development. Lots of little version, each with only a few features or bug fixes.
 
@@ -14,7 +14,7 @@ A "branch" is a single line of development; there's always a `MASTER` branch. Br
 
 A "pull request" is a request to merge one branch into another (for example, a feature branch into `MASTER`). Pull requests can have required code reviews or tests attached to them (they're not automatic, and in fact not a native feature of Git... GitHub, Bitbucket, and Gitlab all implement this as an additional layer).
 
-## Git Overview
+# Git Overview
 
 Git is best for managing plain text files, which can include source code, automated tests, server configuration, documentation, books, and websites.
 
@@ -24,7 +24,7 @@ If you can do it at the command line, you can automate it. DevOps is built on th
 
 Of course, GUIs are better at visual tasks (such as comparisons) and merges.
 
-### Installation and Getting Started
+## Installation and Getting Started
 
 It's best to keep all of your repos in a single folder (glad I already do this!).
 
@@ -32,7 +32,7 @@ As I'm running a Chromebook (with Linux apps), Sourcetree isn't available. Howev
 
 Git's online help can also be accessed via git help $COMMAND. Use the -h flag for a concise version of the help file (generally a single line).
 
-### Git Locations
+## Git Locations
 
 The "working tree" is the directory/file structure of a single commit (and any uncommitted changes you've made).
 
@@ -44,11 +44,11 @@ Commonly, the "project directory" is a single directory that contains the workin
 
 The "remote repository" contains all of the commits for the project, and is generally your "source of truth".
 
-### Create a Local Repository
+## Create a Local Repository
 
 A.K.A. `mkdir $REPO && cd $REPO && git init`.
 
-### Commit to a Local Repository
+## Commit to a Local Repository
 
 These notes are all for the command line client, as the Sourcetree track was pretty straight-forward.
 
@@ -67,11 +67,11 @@ Leave off the `-m` flag if you need to create a long, detailed message, or if yo
 
 Use `git log --oneline` to get a compact, line-by-line view. Add `-#` (where `#` is a number) to see only the most recent `#` commits.
 
-### Create a Remote Repository
+## Create a Remote Repository
 
 Generally a remote repository is just a "bare" repo, which is just the contents of the `.git` directory. By convention, the names of bare repos end in `.git` (`foo.git`, etc.), though this isn't actually necessary.
 
-### Push to a Remote Repository
+## Push to a Remote Repository
 
 A "clone" is a local copy of a remote repository. This is created using the "clone" command. The remote repository of a clone is referred to as the "origin" by default.
 
@@ -91,7 +91,7 @@ The `$REMOTE_NAME` is the alias we use to refer to the remote. Typically this is
 
 Push synchronizes the *remote* with the *local* repository. The first time you push, use the `--set-upstream` (`-u`) to track the remote (Git will then tell you if you're out-of-sync when you run `git status`). So, `git push -u $REMOTE_NAME $BRANCH_TO_PUSH`; by default `$BRANCH_TO_PUSH` is whatever branch you're currently on, so generally this doesn't need to be specified.
 
-## Git's Graph Model
+# Git's Graph Model
 
 Graph theory! Nodes! Edges! Direction!
 
@@ -103,7 +103,7 @@ A *branch* occurs when a commit has more than one *child*. A *merge* occurs when
 
 Using `git log --oneline --graph` will display the repository's commit tree at the command line (graphical clients are definitely prettier though).
 
-### Git IDs
+## Git IDs
 
 Git objects are *commits* (a text file describing the commit), *annotated tags* (references to specific commits), *trees* (the actual file system structure of the project at a point in time), and *blobs* (file contents). Typically you only interact with *commits* and *tags*, but all of these live in the *object store*.
 
@@ -119,7 +119,7 @@ Git IDs can be referenced by any of the first 4 or more ID characters; in the ev
 
 You can use `git show $OBJECT_ID` to show information about any object Git is currently tracking.
 
-### Git References
+## Git References
 
 "References" can be used wherever we might use SHA-1 hashes, or part of a SHA-1 hash.
 
@@ -153,7 +153,7 @@ To push tags, use `git push $REMOTE_NAME $TAG_NAME` for a single tag, or `git pu
 
 You can delete a tag using `git tag -d $TAG_NAME`. Again, note that tag deletions will *not* automatically be pushed to the origin.
 
-## Branches
+# Branches
 
 By default, commits all belong to master. All branches trace themselves back to the first commit in the repo.
 
@@ -206,7 +206,7 @@ Let's say you *accidentally* delete a branch label. Then you can use `git reflog
 
 This *only* works on local repos!
 
-## Merging
+# Merging
 
 "Merges" combine branches, normally a short-lived "topic" branch and a longer-lived "base" branch. After a merge, the commits on the merged branch are considered to be part of *both* the "base" *and* "topic" branches. Because merges are a common Git activity, it's quite normal for commits to be members of multiple branches.
 
@@ -244,7 +244,7 @@ You can *force* the creation of a merge commit as well, even in situations where
 
 One typical development pattern is to create "master" and "development" branches, and then periodically merge "development" into "master" using a merge commit for releases.
 
-## Tracking Branches
+# Tracking Branches
 
 A "tracking branch" is a local branch that represents a corresponding remote branch. These branches are always named `$REMOTE_NAME/$BRANCH_NAME`. By default, cloning a remote repository will automatically create a `origin/master` (or whatever your remote is named + whatever the default remote branch is called) tracking branch, while at the same time creating a "master" local branch that corresponds to it.
 
@@ -262,15 +262,15 @@ In Bitbucket, the default branch is called the "main" branch.
 
 The `git status` command returns the state of both local and tracking branches. The `git log --all` similarly returns the combined log of all local and tracking branches.
 
-## Fetch, Pull, and Push
+# Fetch, Pull, and Push
 
 Most Git commands only function on the local repository, but four - clone, fetch, pull, and push - interact with the remote repo.
 
-### clone
+## clone
 
 Copies the remote repository and sets up a corresponding local repository (only used during initial setup).
 
-### fetch
+## fetch
 
 Retrieves commits from the remote repository and updates tracking branches.
 
@@ -284,7 +284,7 @@ Most Git clients will automatically fetch new data from the relevant remotes aut
 
 Local branch labels are *not* updated by a `fetch`; however, the local repository will now contain all of the commits found in the remote.
 
-### pull
+## pull
 
 Fetch + merge remote commits into the current branch to bring the corresponding tracking branch up-to-date with the local `HEAD` (obviously, this only replies to local branches that are also tracked remotely).
 
@@ -305,7 +305,7 @@ We can think of the merge performed by a `pull` request as treating the current 
 
 Because a `pull` involves a merge, it's possible (if a fast forward is not possible) that the tracking branch will lag after the merge.
 
-### push
+## push
 
 Sends local commits to the remote (requires the local and remote repositories to already be in sync, as the remote obviously can't deal with merge conflicts).
 
@@ -315,13 +315,13 @@ If you use `--set-upstream`/`-u`, the push will also tie `$BRANCH_NAME` to the c
 
 Because remotes can't resolve conflicts, you can't `push` if the remote is ahead of your local branch. It's therefore considered a best practice to do a `fetch` or a `pull` before doing a `push` (a `fetch` will be faster because there's no merge, but if changes *are* retrieved, you'll need to do a `pull` anyway).
 
-## Merge Conflicts
+# Merge Conflicts
 
 Merge conflicts only occur if there are conflicting changes in the *same part* of the *same file*.
 
 Small, frequent merges help to both avoid merge conflicts, and when such conflicts do occur they are easier to resolve in this case. Modularizing code also (obviously) helps here, since it isolates work on one module from work on other parts of the program. (The prevalence and severity of merge conflicts is a strong indication of how modular a project's code is.)
 
-### Resolving a Merge Conflict
+## Resolving a Merge Conflict
 
 Basically...
 
@@ -355,7 +355,7 @@ Resolving a merge conflict simply involves editing the conflicted files, and the
 
 You can abort a merge conflict by resetting to the base branch, abandoning any changes if prompted.
 
-## Rebasing
+# Rebasing
 
 Note that rebasing rewrites the commit history. It is generally considered *extremely* bad form to rewrite commit history that has been shared with others...
 
@@ -395,7 +395,7 @@ During conflict resolution, after you `add` the fixed conflicted file(s), you wi
 
 (You can also apparently skip patches/diffs during a rebase, though it's not clear to me what this does. Perhaps it throws away the changes made in that patch?)
 
-## Rewriting History
+# Rewriting History
 
 You can change the commit message, or even the project files, of the most recent commit. Note that doing this *will* change the commit ID.
 
@@ -444,7 +444,7 @@ If possible, Git will fast-forward a squash merge.
 
 Typically `$BRANCH_TO_MERGE` is deleted after a squash merge.
 
-## Pull Requests, Forks, and Merges
+# Pull Requests, Forks, and Merges
 
 "Pull requests" are a feature of Git hosting sites, not Git itself, and are used as a form of code review. Pull requests can either be within a single repo (in which case they're simply a request to merge a branch), or between repos (in which case they're a request to merge a branch from the forked repo into the upstream repo). The fork approach is generally used when the submitter doesn't have direct write access to the repo being forked.
 
@@ -460,7 +460,7 @@ Forking is another Git hosting feature. Kinda like a clone, except that it's rem
 
 "Merges" can be accomplished either within the Git host's web interface, or by adding the fork as a remote and then merging from there (and pushing upstream).
 
-## Git Workflows
+# Git Workflows
 
 A "centralized workflow" uses a single branch (generally "master"). More-or-less how I work alone.
 

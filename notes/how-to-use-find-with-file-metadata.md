@@ -5,34 +5,32 @@ date:: 2022-08-05
 
 Some useful find flags related to file metadata.
 
-## -user and -group
+# -user and -group
 
 Matches files owned by a particular user or group (both numeric and symbolic-readable names are allowed).
 
-## -size
+# -size
 
-Matches files of size `n`.
+Matches files of size n.
 
-Prefix `n` with + or - to match files *strictly* greater than or less than `n` in size. To specify useful sizes, use a suffix.
+Prefix n with + or - to match files *strictly* greater than or less than n in size. To specify useful sizes, use a suffix.
 
-| Suffix | Meaning   |
-|:------:|:--------- |
-|   c    | Bytes     |
-|   k    | Kilobytes |
-|   M    | Megabytes |
-|   G    | Gigabytes |
+* c - Bytes
+* k - Kilobytes
+* M - Megabytes
+* G - Gigabytes
 
 For example, use `-size +4G` to find files over 4 GB (i.e., those that can't be written to a FAT32 file system).
 
-## -perm
+# -perm
 
 Matches files with a given permission. Both numeric and symbolic permissions are allowed.
 
-Use the / or - prefix to match files with *any* of the specified permissions or *at least* the specified permissions. For example, `-perm -644` will match any file where the current user has *at least* read + write access and any other user has *at least* read access (so, `-` requires the specified permissions, but is agnostic as to the presence/absence of additional permissions). Likewise, `-perm /666` will match files where the current user has read + write access and/or the current group has read + write access and/or everyone has read + write access (so, `/` requires that at least *one* of the specified permissions groups matches exactly, but is agnostic to the state of any other group outside of that match).
+Use the / or - prefix to match files with *any* of the specified permissions or *at least* the specified permissions. For example, `-perm -644` will match any file where the current user has *at least* read + write access and any other user has *at least* read access (so, "-" requires the specified permissions, but is agnostic as to the presence/absence of additional permissions). Likewise, `-perm /666` will match files where the current user has read + write access and/or the current group has read + write access and/or everyone has read + write access (so, "/" requires that at least *one* of the specified permissions groups matches exactly, but is agnostic to the state of any other group outside of that match).
 
 * [Symbolic Permissions](symbolic-permissions.md)
 
-### Find SUID Files
+## Find SUID Files
 
 ```bash
 find / -type f -perm -04000 -ls 2>/dev/null
@@ -44,7 +42,7 @@ Or:
 find / -type f -perm -u=s -ls 2>/dev/null
 ```
 
-### Find SUID and SGID Executables
+## Find SUID and SGID Executables
 
 ```bash
 find / -type f \
@@ -52,19 +50,19 @@ find / -type f \
        -exec ls -l {} \; 2> /dev/null
 ```
 
-### Find World Writable/Executable Folders
+## Find World Writable/Executable Folders
 
 ```bash
 find / -type d -a \( -perm -o+w -perm -o+x \) 2>/dev/null
 ```
 
-## -Xmin and -Xtime
+# -Xmin and -Xtime
 
-Matches files accessed (a), had their *contents* modified (m), or had their *inode* changed (c) `n` minutes (-Xmin) or days (-Xtime) ago.
+Matches files accessed (a), had their *contents* modified (m), or had their *inode* changed (c) n minutes (-Xmin) or days (-Xtime) ago.
 
 All mtime changes are ctime changes, but the reverse is not necessarily true.
 
-Prefix `n` with + or - to match files *strictly* before or after the specified time in the *past*.
+Prefix n with + or - to match files *strictly* before or after the specified time in the *past*.
 
 For example:
 

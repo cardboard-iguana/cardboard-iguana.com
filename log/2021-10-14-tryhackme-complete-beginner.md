@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2021-10-14
 
-## Introduction to Windows
+# Introduction to Windows
 
-### Understanding the Authentication Process
+## Understanding the Authentication Process
 
 Windows uses the protected Local Security Authority (LSA) subsystem to manage local logins and maintain local security policies.
 
@@ -17,7 +17,7 @@ An easy way to remember what a "service provider" is in SAML: It provides a *ser
 
 OAuth 2.0 is about providing applications access to data. OpenID Connect extends OAuth 2.0 to provide user authentication.
 
-### Utility Tools
+## Utility Tools
 
 COMPUTER MANAGEMENT: The snap-in of snap-ins. Combines Task Scheduler, Event Viewer, Shared Folders (manage all system shared folders), Local Users and Computers (user and policy management), Performance Monitor, Disk Management, and Services & Applications (service management).
 
@@ -37,7 +37,7 @@ COMMAND LINE: Meta-category: cmd.exe, PowerShell, Windows Terminal.
 
 You can actually access the registry from PowerShell using the `cd` command: `cd HKLM:\` will take you to the HKEY_LOCAL_MACHINE hive, for instance.
 
-### Types of Servers
+## Types of Servers
 
 "Domain Controllers" are just servers that handle authentication requests. The term is most commonly used in Windows networks, but technically any server that handles identity management is a domain controller.
 

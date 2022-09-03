@@ -164,6 +164,7 @@
 * [Exploiting "tar"](notes/exploiting-tar.md)
 * [Exploiting Unquoted Paths](notes/exploiting-unquoted-paths.md)
 * [Exploiting ViM](notes/exploiting-vim.md)
+* [Exploiting the Windows "Feature on Demand" Helper](notes/exploiting-fodhelper.md)
 * [Exploiting Xterm](notes/exploiting-xterm.md)
 * [GTFOBins](https://gtfobins.github.io/)
 * [How to Find Executables with SUID Capabilities](notes/how-to-find-executables-with-suid-capabilities.md)

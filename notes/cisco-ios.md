@@ -2,7 +2,7 @@
 
 * [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
 
-## System Information
+# System Information
 
 ```bash
 show version                 # Software & hardware information
@@ -17,7 +17,7 @@ show crypto key mypubkey rsa # Current SSH public key
 show dhcp lease              # Current DHCP status/information
 ```
 
-## Configuration Modes
+# Configuration Modes
 
 ```bash
 config           # General configuration mode
@@ -25,7 +25,7 @@ config interface # Interface configuration mode
 config line      # Serial console configuration mode
 ```
 
-### General Configuration
+## General Configuration
 
 ```bash
 hostname $HOSTNAME                 # Set switch hostname
@@ -37,7 +37,7 @@ ip default-gateway $IP_ADDRESS     # Set default gateway
 copy running-config startup-config # Persiste current config
 ```
 
-### Interface Configuration
+## Interface Configuration
 
 ```bash
 # Configure console port
@@ -55,7 +55,7 @@ password $PASSWORD
 login
 ```
 
-### Line Configuration
+## Line Configuration
 
 ```bash
 # Configure network interface

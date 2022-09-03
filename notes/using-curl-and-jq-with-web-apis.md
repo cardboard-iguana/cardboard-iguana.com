@@ -58,9 +58,9 @@ curl -X POST \
 
 * [How to perform a POST request using Curl](https://www.educative.io/edpresso/how-to-perform-a-post-request-using-curl)
 
-## Relevant Man Page Excerpts
+# Relevant Man Page Excerpts
 
-### cURL
+## cURL
 
 > -d, --data DATA
 > (HTTP)  Sends  the  specified  data in a POST request to the HTTP server, in the same way that a browser does when a user has filled in an HTML form and presses the submit button. This will cause curl to pass the data to the server using the content-type application/x-www-form-urlencoded.  Compare to -F, --form.
@@ -99,7 +99,7 @@ curl -X POST \
 > 
 > The method string you set with -X, --request will be used for all requests, which if you for example use -L, --location may cause unintended side-effects when curl doesn't change request method according to the HTTP 30x response codes - and similar.
 
-### jq
+## jq
 
 > BASIC FILTERS
 > 

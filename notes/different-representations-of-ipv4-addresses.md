@@ -30,12 +30,13 @@ Converting to hexadecimal is trivial using the excellent Qalculate tool.
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [Qalculate!](https://qalculate.github.io/)
 
-## Common IP Addresses
+# Common IP Addresses
 
-|              IP |    Decimal | Hexadecimal | Notes                                                      |
-| ---------------:| ----------:| -----------:|:---------------------------------------------------------- |
-| 127.0.0.1       | 2130706433 |  0x7F000001 | localhost                                                  |
-| 169.254.169.254 | 2852039166 |  0xA9FEA9FE | Often used in to store configuration data in cloud systems |
+* localhost -> 127.0.0.1 -> 0x7F000001 -> 2130706433 (decimal)
+
+169.254.169.254 is often used in to reference configuration data in cloud systems (just AWS?).
+
+* 169.254.169.254 -> 0xA9FEA9FE -> 2852039166 (decimal)
 
 The nip.io service can be used to provide a domain name for an arbitrary IP address.
 

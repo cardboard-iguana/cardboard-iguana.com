@@ -3,13 +3,13 @@
 author:: Nathan Acks  
 date:: 2022-03-02
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
-### An Introduction to Threat Actors, Vectors, and Intelligence Sources
+## An Introduction to Threat Actors, Vectors, and Intelligence Sources
 
 Threat actor: Someone or something that executes on a given threat. The "who" of a cybersecurity incident.
 
-### Threat Actor Attributes
+## Threat Actor Attributes
 
 Things to consider:
 
@@ -24,7 +24,7 @@ The *intent* vs. *motive* is a question of the threat actor's *proximate* vs. *d
 
 Exam Cram indicates that the primary *relationship* that the Security+ exam is concerned with is whether a threat actor is *internal* or *external*.
 
-### Threat Actor Types
+## Threat Actor Types
 
 Common types from the Security+ exam:
 
@@ -37,7 +37,7 @@ Common types from the Security+ exam:
 
 Exam Cram uses the term "low and slow" to describe APT operations.
 
-### Vectors
+## Vectors
 
 A.k.a., "attack vectors" - the pathway used by the threat actor when attacking an organization. Common attack vectors from the Security+ exam:
 
@@ -52,11 +52,11 @@ A.k.a., "attack vectors" - the pathway used by the threat actor when attacking a
 
 (What, no "they just connected to the exposed RDP endpoint over the internet"? I guess that qualifies as "improper usage"?)
 
-### Sharing Centers
+## Sharing Centers
 
 ISAC: Information Sharing and Analysis Center
 
-### Open-Source Intelligence
+## Open-Source Intelligence
 
 OSINT: Open Source INTelligence
 
@@ -83,9 +83,9 @@ Some specific links:
 
 Exam Cram calls out TTP, IOC, and AIS as three acronyms to know for the exam.
 
-## ITPro.TV: CompTIA Security+ (SY0-601)
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Threat Intelligence - OSINT
+## Threat Intelligence - OSINT
 
 Threat Intelligence: The gathering and analysis of data for the purpose of identifying, preventing, and remediating potential attacks.
 
@@ -99,7 +99,7 @@ Useful tools:
 
 Both Maltego and recon-ng require a large number of API keys to function
 
-### Threat Intelligence - Threat Maps And Feeds
+## Threat Intelligence - Threat Maps And Feeds
 
 Threat Map: A real- (or near-real-) time map of identified threats/attacks, normally visualized geographically.
 
@@ -118,7 +118,7 @@ STIX and TAXII together define a common (low-level) language for talking about I
 
 I'm a little skeptical about the overall utility of threat maps, though they do *look* cool.
 
-### Threat Intelligence Vulnerability Databases & Feeds
+## Threat Intelligence Vulnerability Databases & Feeds
 
 Vulnerability Database: A collection of information about security flaws (and sometimes information about how to exploit them).
 
@@ -137,7 +137,7 @@ NVD includes a number of components:
 
 A vulnerability feed is like a threat feed, but for vulnerabilities. MITRE and NVD both maintain vulnerability feeds.
 
-### Threat Actors And Vectors
+## Threat Actors And Vectors
 
 Common threat actors that are important to know for the Security+ exam:
 
@@ -159,9 +159,9 @@ Threat Vector: An avenue of attack.
 * Removable media
 * Cloud-based avenues (S3 buckets, etc.)
 
-## TryHackMe: Jr. Penetration Tester
+# TryHackMe: Jr. Penetration Tester
 
-### Username Enumeration
+## Username Enumeration
 
 Use ffuf to enumerate potential users based on a wordlist (assumes that the form we're hitting is not AJAX-y):
 
@@ -178,7 +178,7 @@ Note that ffuf is kind of noisy in its default output, so when generating user l
 
 * [Using "ffuf"](../notes/ffuf.md)
 
-### Brute Forcing
+## Brute Forcing
 
 Ffuf can also be used as a simple brute-forcer:
 
@@ -195,11 +195,11 @@ Again, the `-s` flag can be advisable here.
 
 Note that ffuf will try every possible combination of elements between the two wordlists, which means that the number of combinations tried grows geometrically.
 
-### Logic Flaws
+## Logic Flaws
 
 It's worth experimenting with forms to check how GET and POST variables interact (and if one can be used to override the other.
 
-### Cookie Tampering
+## Cookie Tampering
 
 Interesting; sometimes cookies are hashes, rather than plain strings. I'm guessing that the reason you'd do this is that you're concatenating some values together and then check to see if the hash matches before granting certain privileges? This seems potentially much less secure than password hashing (even with a salt) though, as the number of terms that could reasonably be included in a permission string is much smaller than the number of character combinations in even a modest password...
 

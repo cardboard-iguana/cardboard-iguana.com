@@ -24,19 +24,19 @@ Once I'm done with both of these I'll turn back to the remaining TryHackMe "supp
 * [PortSwigger: Burp Suite](https://portswigger.net/burp)
 * [PortSwigger: Web Security Academy](https://portswigger.net/web-security/learning-path)
 
-## AWS Essentials
+# AWS Essentials
 
 I'll be starting off by watching through the "AWS Essentials" YouTube playlist put together by the Linux Academy.
 
 * [AWS Essentials (YouTube)](https://youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)
 
-### Project Omega!
+## Project Omega!
 
 This is apparently the framing device for the entire series. Pretty skippable.
 
 * [AWS Essentials: Project Omega! (YouTube)](https://youtu.be/CGFrYNDpzUM)
 
-### AWS Free Tier
+## AWS Free Tier
 
 Core AWS services:
 
@@ -51,19 +51,19 @@ Core AWS services:
 These all have some kind of free version.
 * [AWS Essentials: AWS Free Tier (YouTube)](https://youtu.be/8p1bTTV6ATE)
 
-### Create an AWS Account
+## Create an AWS Account
 
 Wow, AWS is using *voice calls* for account authentication! (At least they're automated...)
 
 * [AWS Essentials: Create an AWS Account (YouTube)](https://youtu.be/_siSwgpVQNc)
 
-### How to Navigate the AWS Console
+## How to Navigate the AWS Console
 
 You can switch between regions in AWS using a simple drop-down in the AWS Console's header.
 
 * [AWS Essentials: How to Navigate the AWS Console (YouTube)](https://youtu.be/A43m4TDFCUM)
 
-### What is IAM?
+## What is IAM?
 
 The first user in an AWS account is the "root" user, and has the sort of privileges this name implies.
 
@@ -71,7 +71,7 @@ While the root user gets permission to *everything*, subsequent users receive no
 
 * [AWS Essentials: What is IAM? (YouTube)](https://youtu.be/4ngYrnJb7F8)
 
-### IAM Initial Setup and Configuration
+## IAM Initial Setup and Configuration
 
 After initially creating the root account, the first thing you should do is work through all of the "Security Status" items in the IAM console.
 
@@ -81,7 +81,7 @@ For obvious reasons, the first thing you should probably do is create an additio
 
 * [AWS Essentials: IAM Initial Setup and Configuration (YouTube)](https://youtu.be/W_eu0rJN0yU)
 
-### IAM Roles
+## IAM Roles
 
 Services (really, objects in a service) in AWS can't be assigned policies directly, but *can* be assigned *roles*.
 
@@ -90,7 +90,7 @@ In general, roles are used to package policies for *service objects*, while grou
 * [AWS Essentials: IAM Roles (YouTube)](https://youtu.be/7sYE6J1_CsQ)
 * [Assume the Worst: Enumerating AWS Roles through 'AssumeRole'](https://rhinosecuritylabs.com/aws/assume-worst-aws-assume-role-enumeration/)
 
-### AWS Global Infrastructure
+## AWS Global Infrastructure
 
 VPC (Virtual Private Cloud)  is the backbone of AWS's offerings.
 
@@ -102,7 +102,7 @@ Every data center is assigned to *only* one availability zone; the purpose of av
 
 * [AWS Essentials: AWS Global Infrastructure (YouTube)](https://youtu.be/J_Kh1gZaMd4)
 
-### What is a VPC?
+## What is a VPC?
 
 VPC settings can be changed in the AWS console under Networking > VPC.
 
@@ -114,7 +114,7 @@ The VPC "internet gateway" is roughly equivalent to a modem in a home or SMB, wh
 
 * [AWS Essentials: What is a VPC? (YouTube)](https://youtu.be/7XnpdZF_COA)
 
-### Internet Gateways (IGWs)
+## Internet Gateways (IGWs)
 
 Basically: The part of a VPC that provides the actual connection to the internet. It's automatically scaled by Amazon as needed, so there's little that needs to be configured here.
 
@@ -122,7 +122,7 @@ Really, all a IGW is providing is a *route* from the attached VPC to the interne
 
 * [AWS Essentials: Internet Gateways (IGWs) (YouTube)](https://youtu.be/pAOrBxZ7584)
 
-### Route Tables (RTs)
+## Route Tables (RTs)
 
 The Route Table is presented (almost) as a literal route table (think of the Linux `route` command). So, no surprises here.
 
@@ -130,7 +130,7 @@ There can be *multiple* RTs per VPC. Similar to IGWs, however, RTs can only be d
 
 * [AWS Essentials: Route Tables (RTs) (YouTube)](https://youtu.be/GrfOsWUVCfg)
 
-### Network Access Control Lists (NACLs)
+## Network Access Control Lists (NACLs)
 
 Think: Stateless firewall.
 
@@ -144,7 +144,7 @@ Note that additional network security controls ("security groups") can be applie
 
 * [AWS Essentials: Network Access Control Lists (NACLs) (YouTube)](https://youtu.be/vJzHn24TNQE)
 
-### Subnets
+## Subnets
 
 VPC subnets are limited to particular availability zones; by default, one subnet is created per availability zone for the region a VPC is created in.
 
@@ -154,13 +154,13 @@ Subnets can be "public" (internet routable) or "private" (*not* internet routabl
 
 * [AWS Essentials: Subnets (YouTube)](https://youtu.be/KNT463WSjjY)
 
-### Availability Zones (VPC Specific)
+## Availability Zones (VPC Specific)
 
 The point of availability zones within a VPC is to allow redundancy to be engineered via mirrored subnets + resources.
 
 * [AWS Essentials: Availability Zones (VPC Specific) (YouTube)](https://youtu.be/ET_CSqdGsYg)
 
-### S3 Basics
+## S3 Basics
 
 Objects = Files
 
@@ -168,13 +168,13 @@ Buckets are limited to particular regions; data is automatically replicated acro
 
 * [AWS Essentials: S3 Basics (YouTube)](https://youtu.be/f9hXcxHnQuE)
 
-### Buckets & Objects
+## Buckets & Objects
 
 Bucket names are *globally* unique.
 
 * [AWS Essentials: Buckets & Objects (YouTube)](https://youtu.be/skJosIhDNF0)
 
-### Storage Classes
+## Storage Classes
 
 Storage classes in S3 (standard, glacier, etc.) can be defined *per object*. Classes:
 

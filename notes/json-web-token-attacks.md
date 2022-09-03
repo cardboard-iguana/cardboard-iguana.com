@@ -16,15 +16,15 @@ Use `basenc --base64url` and `basenc -d --base64url` to encode/decode URL-safe b
 * [JSON Web Tokens](https://jwt.io)
 * [Using "basenc"](basenc.md)
 
-## Attacks
+# Attacks
 
-### "None" Attacks
+## "None" Attacks
 
 Sometimes servers will also support the `NONE` signature type, which indicates that no signing is used (so the JWT is then just `$HEADER.$PAYLOAD.` - note the trailing dot!). If the server allows the `none` signing method, then it's often possible to just arbitrarily edit the `$PAYLOAD` to gain access to other users.
 
 The base64-encoded version of `{"typ":"JWT","alg":"none"}` is `eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0`.
 
-### Public Key Attacks
+## Public Key Attacks
 
 JWT algorithms can use a server's *public* key if `alg` is `HS256`. If the public half of the keypair used to sign the JWT is available somehow (for example, if it's been re-used as the server's HTTPS certificate), then we can harvest it and use it to forge new JWTs.
 
@@ -44,7 +44,7 @@ basenc --base64url | \
 sed -e 's/=*$//'
 ```
 
-### Brute-Forcing Weak Secrets
+## Brute-Forcing Weak Secrets
 
 *If* a weak secret (a simple string) is used to sign the JWT token, then it is sometimes possible to brute-force it using JWT-Cracker.
 

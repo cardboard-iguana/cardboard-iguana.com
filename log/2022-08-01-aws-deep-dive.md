@@ -7,7 +7,7 @@ Finally getting back to the "AWS Cloud Practitioner Essentials" course! Today I'
 
 * [AWS Cloud Practitioner Essentials](https://www.aws.training/learningobject/curriculum?id=27076)
 
-## EBS
+# EBS
 
 * Instance Store Volumes - storage attached to the "physical" EC2 hardware. This storage is as ephemeral as an EC2 instance, as when an EC2 instance is restarted it may be spun up on a different VM.
 * Elastic Block Store - EC2-independent block storage. Think of it like an external hard drive.
@@ -16,7 +16,7 @@ EBS volumes support snapshotting. Snapshots are *incremental* backups.
 
 EBS volumes can be up to 16 TB in size, and come in SSD and HDD flavors. They are limited to a single availability zone (data center).
 
-## S3
+# S3
 
 The maximum S3 object size is 5 TB. There are *no* limits to total bucket size.
 
@@ -35,7 +35,7 @@ Objects in S3 have three components: data, metadata, and key (name). Just like a
 
 S3 works best for write-once, read-many applications.
 
-## EFS
+# EFS
 
 Elastic Filesystem is a "managed" filesystem - think something like NFS, or a SAN.
 
@@ -49,7 +49,7 @@ Like S3, data stored in EFS is replicated across multiple availability zones.
 
 The AWS Direct Connect client allows for EFS deployments to be accessed by on-prem systems.
 
-## RDS
+# RDS
 
 Amazon's "Relational Database Service" supports most common DBs:
 
@@ -64,7 +64,7 @@ Amazon also provides a "lift and shift" service to aid migration from on-prem DB
 
 Aurora is an in-house database developed by Amazon for high availability scenarios. It supports up to 15 replicase across up to 3 availability zones, and can be configured in MySQL or PostgreSQL compatibility mode. Aurora is only available on RDS (it *cannot* be deployed on a managed server).
 
-## DynamoDB
+# DynamoDB
 
 DynamoDB is a serverless NoSQL database. Scaling and redundancy is handled automatically.
 
@@ -72,11 +72,11 @@ NoSQL systems work best when searching through a large number of objects in a si
 
 Basically, NoSQL systems work best when dealing with data structured as a lookup table, without much/any relationship between the objects in the table (or between tables).
 
-## Redshift
+# Redshift
 
 Redshift is Amazon's solution for data lakes/warehouses. It's optimized for dealing with large quantities of *static* data. Structured (pentabytes) and unstructured (exabytes) data is supported.
 
-## Database Migration Service
+# Database Migration Service
 
 Amazon DMS is designed to handle realtime migration from on-prem databases to EC2, RDS, or DynamoDB. It supports both homogenous (between databases of the same type) and heterogenous (between databases of different types) migrations. DMS is designed to migrate data without requiring downtime in either the source or destination DBs.
 
@@ -84,7 +84,7 @@ DMS also supports migration *between* EC2 and RDS accounts.
 
 DMS can also be used for replication, DB consolidation, and the creation of development/testing data sets from production data.
 
-## Other AWS Database Services
+# Other AWS Database Services
 
 Additional, more specialized, DB options:
 

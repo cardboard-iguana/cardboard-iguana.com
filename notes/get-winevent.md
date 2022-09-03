@@ -45,47 +45,43 @@ Get-WinEvent -FilterHashtable @{
 * [Using PowerShell](powershell.md)
 * [Windows Event Logs](windows-event-logs.md).
 
-## FilterHashtable Keys
+# FilterHashtable Keys
 
-| Key Name     | Value Data Type | Wildcards Allowed? |
-|:------------ |:--------------- |:------------------:|
-| LogName      | String          |          Y         |
-| ProviderName | String          |          Y         |
-| Path         | String          |          N         |
-| Keywords     | Long            |          N         |
-| ID           | Int32           |          N         |
-| Level        | Int32           |          N         |
-| StartTime    | DateTime        |          N         |
-| EndTime      | DateTime        |          N         |
-| UserID       | SID             |          N         |
-| Data         | String          |          N         |
-| [NamedData]  | String          |          N         |
+* LogName (String)
+* ProviderName (String)
+* Path (String)
+* Keywords (Long)
+* ID (Int32)
+* Level (Int32)
+* StartTime (DateTime)
+* EndTime (DateTime)
+* UserID (SID)
+* Data (String)
+* \[NamedData\] (String)
+
+Wildcards can be used with LogName and ProviderName, but not with other keys.
 
 Event Viewer displays *most* of these values in the "General" when viewing an individual log entry, though note that Keywords is translated to a string.
 
 * [Creating Get-WinEvent queries with FilterHashtable](https://docs.microsoft.com/powershell/scripting/samples/Creating-Get-WinEvent-queries-with-FilterHashtable)
 
-### Keywords
+## Keywords
 
-| Name             | Value             |
-|:---------------- | -----------------:|
-| AuditFailure     |  4503599627370496 |
-| AuditSuccess     |  9007199254740992 |
-| CorrelationHint2 | 18014398509481984 |
-| EventLogClassic  | 36028797018963968 |
-| Sqm              |  2251799813685248 |
-| WdiDiagnostic    |  1125899906842624 |
-| WdiContext       |   562949953421312 |
-| ResponseTime     |   281474976710656 |
-| None             |                 0 |
+* AuditFailure (4503599627370496)
+* AuditSuccess (9007199254740992)
+* CorrelationHint2 (18014398509481984)
+* EventLogClassic (36028797018963968)
+* Sqm (2251799813685248)
+* WdiDiagnostic (1125899906842624)
+* WdiContext (562949953421312)
+* ResponseTime (281474976710656)
+* None (0)
 
-### Levels
+## Levels
 
-| Name          | Value |
-|:------------- |:-----:|
-| Verbose       |   5   |
-| Informational |   4   |
-| Warning       |   3   |
-| Error         |   2   |
-| Critical      |   1   |
-| LogAlways     |   0   |
+* Verbose (5)
+* Informational (4)
+* Warning (3)
+* Error (2)
+* Critical (1)
+* LogAlways (0)

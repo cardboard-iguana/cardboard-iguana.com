@@ -5,20 +5,20 @@ date:: 2022-02-23
 
 Moving forward, I'm planning to read the appropriate chapter of "CompTIA Security+ Exam Cram" before watching the corresponding ITPro.TV lecture. But since I didn't do that yesterday, I have two chapters to read today!
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
-### Social Engineering Techniques
+## Social Engineering Techniques
 
-| Attack                     | Countermeasure                                          |
-|:-------------------------- |:------------------------------------------------------- |
-| Impersonation/Pretexting   | User education                                          |
-| Tailgating                 | Mantraps                                                |
-| Dumpster diving            | Shredding, disk wiping, etc.                            |
-| Shoulder surfing           | User education, screen guards                           |
-| Phishing, etc.             | User education, subject prepending, attachment blocking |
-| Watering hole attacks      | EDR/Antivirus                                           |
-| Typo squatting             | Password managers (with autofill), MFA                  |
-| Hoaxes/Influence campaigns | Snopes.com, communication response planning             |
+Social engineering attacks and associated countermeasures:
+
+* Impersonation/Pretexting -> User education
+* Tailgating -> Mantraps
+* Dumpster diving -> Shredding, disk wiping, etc.
+* Shoulder surfing -> User education, screen guards
+* Phishing, etc. -> User education, subject prepending, attachment blocking
+* Watering hole attacks -> EDR/Antivirus
+* Typo squatting -> Password managers (with autofill), MFA
+* Hoaxes/Influence campaigns -> Snopes.com, communication response planning
 
 Note that CompTIA appears to lump general direct observational reconnaissance (watching a building) and video surveillance (hidden cameras) under "shoulder surfing".
 
@@ -50,7 +50,7 @@ I continue to find the inclusion of influence campaigns and hoaxes under social 
 
 These principles are all about subverting our mechanisms for building trust.
 
-### Malware
+## Malware
 
 Malware: Software designed to cause harm.
 
@@ -118,17 +118,17 @@ Adware: PUPs that display or inject ads. Often contains "light" spyware (browser
 
 Cyptomining: Surreptitiously installed cryptocurrency miners; often part of a botnet. Sometimes called a "cryptojacking" attack.
 
-### Physical Attacks
+## Physical Attacks
 
 This basically covers attacks using malicious USB drives, cables, etc. Includes credit card skimming and RFID cloning.
 
-### Adversarial Artificial Intelligence
+## Adversarial Artificial Intelligence
 
 Basically, tainting training data. This could happen during the initial training, or by forging/presenting tainted data to systems designed for continuous learning (such as most recommendation algorithms).
 
-## ITPro.TV: CompTIA Security+ (SY0-601)
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Malware
+## Malware
 
 Malware: Any application that performs an unauthorized, unwanted action on a machine.
 
@@ -149,9 +149,9 @@ What malware does:
 * Trojan (looks like a benign application, but isn't; typically installs other malware)
 * PUPs (potentially unwanted programs - adware, bundleware, etc.)
 
-## TryHackMe: Jr. Penetration Tester
+# TryHackMe: Jr. Penetration Tester
 
-### Penetration Testing Ethics
+## Penetration Testing Ethics
 
 A penetration test will typically be built around a "rules of engagement" (ROE) document containing the following sections:
 
@@ -159,7 +159,7 @@ A penetration test will typically be built around a "rules of engagement" (ROE) 
 * Test Scope: Authorized targets (machines, individuals, facilities).
 * Rules: Authorized techniques (and sometimes tools)
 
-### Penetration Testing Methodologies
+## Penetration Testing Methodologies
 
 Generic pentest framework:
 
@@ -180,6 +180,6 @@ The OSSTMM focuses primarily on telecommunications and networking, but is someti
 
 The NIST and CAF frameworks are US/UK government frameworks, and thus more likely to be used in their respective countries of origin.
 
-### Black Box, White Box, and Grey Box Penetration Testing
+## Black Box, White Box, and Grey Box Penetration Testing
 
 Grey boxing is the most common form of penetration testing. White boxing is generally reserved for software QA.

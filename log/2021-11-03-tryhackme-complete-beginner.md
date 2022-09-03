@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2021-11-03
 
-## Vulnversity
+# Vulnversity
 
-### Reconnaissance
+## Reconnaissance
 
 Scanning the machine with:
 
@@ -401,7 +401,7 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Wed Nov  3 21:20:50 2021 -- 1 IP address (1 host up) scanned in 1547.16 seconds
 ```
 
-### Compromising the Webserver
+## Compromising the Webserver
 
 Common (alternate) PHP extensions:
 
@@ -419,7 +419,7 @@ Recall that the "Intruder" module in Burp Suite is the one that is used to attac
 
 One nice trick is that after fuzzing your way around file extension filters, you can just return to the Proxy tab and complete your upload...
 
-### Privilege Escalation
+## Privilege Escalation
 
 It turns out that SUID systemctl doesn't require sudo to run, which means that you can craft a malicious service file to gain root access:
 

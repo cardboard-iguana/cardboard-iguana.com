@@ -6,6 +6,6 @@ tags:: #MOC
 
 * [TryHackMe: Bash Scripting](https://tryhackme.com/room/bashscripting)
 
-## Notes
+# Course Notes
 
 * [2021-09-20 - TryHackMe: Pre Security (Supplements)](../log/2021-09-20-tryhackme-pre-security-supplements.md)

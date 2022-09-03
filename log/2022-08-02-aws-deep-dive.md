@@ -7,7 +7,7 @@ Today I'll be covering the "Security" module of the "AWS Cloud Practitioner Esse
 
 * [AWS Cloud Practitioner Essentials](https://www.aws.training/learningobject/curriculum?id=27076)
 
-## Shared Responsibility
+# Shared Responsibility
 
 A good way of describing the shared security model:
 
@@ -17,11 +17,11 @@ A good way of describing the shared security model:
 
 Apparently, "AWS phone support scams" are a thing.
 
-## User Permissions
+# User Permissions
 
 Only the permissions for a single role are in effect at any one time.
 
-## AWS Organizations
+# AWS Organizations
 
 AWS accounts are commonly used to provide hard(er) permission boundaries between teams and application functions.
 
@@ -33,21 +33,19 @@ Permissions are enforced using "service control policies (SCPs), which enable/di
 
 Note that SCPs do *not* apply directly to IAM objects. Instead, think of them as providing limits that those IAM objects (and the account's root user!) must operate within.
 
-## Compliance
+# Compliance
 
 AWS compliance reports and agreements are consolidated into a single portal, called "Artifact".
 
-## DDoS Attacks
+# DDoS Attacks
 
-DDoS mitigations in AWS:
+DDoS attacks and associated AWS mitigations:
 
-| Attack                        | Mitigation            |
-|:----------------------------- |:--------------------- |
-| UDP Flood, Reflection Attacks | Security Groups       |
-| Slowloris                     | Elastic Load Balancer |
-| Targeted Attacks              | AWS Shield / WAF      |
+* UDP Flood, Reflection Attacks -> Security Groups
+* Slowloris -> Elastic Load Balancer
+* Targeted Attacks -> AWS Shield / WAF
 
-## Additional Security Services
+# Additional Security Services
 
 AWS Inspector is a service that can audit an AWS account configuration and report on deviations from baseline best practices.
 

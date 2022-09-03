@@ -5,7 +5,7 @@ date:: 2022-01-02
 
 * [TryHackMe: Retro](https://tryhackme.com/room/retro)
 
-## Initial Reconnaissance 
+# Initial Reconnaissance 
 
 This CTF is an earlier version of Blaster without the step-by-step nature of that room. Not 100% sure what the differences are.
 
@@ -62,7 +62,7 @@ So we've got IIS and RDP running. Let's start by taking a look around IIS.
 * [TryHac"Me: Blaster](tryhackme-blaster.md)
 * [Using "nmap"](nmap.md)
 
-## Flag 1: The Hidden Directory
+# Flag 1: The Hidden Directory
 
 As with Blaster, we just have the default IIS welcome page. So let's follow up with gobuster since we know from the flag list that there's a hidden directory
 
@@ -77,7 +77,7 @@ Still paralleling Blaster, the hidden directory is `/retro`.
 
 * [Using "gobuster"](gobuster.md)
 
-## Flag 2: `user.txt`
+# Flag 2: `user.txt`
 
 Visiting http://10.10.20.185/retro/ reveals the same retro arcade website as Blaster. (I'm noticing a parallel here... I suspect that the rest of the CTF will also be the same, though I'm going to see if I can do this one with less guessing.)
 
@@ -103,7 +103,7 @@ Unsurprisingly, this works. The `user.txt` file on the desktop contains the seco
 * [Ready Player One (Wikipedia)](https://en.wikipedia.org/wiki/Ready_Player_One)
 * [Using XFreeRDP](xfreerdp.md)
 
-## Flag 3: `root.txt`
+# Flag 3: `root.txt`
 
 This flag is probably in `C:\Users\Administrator\Desktop
 oot.txt`. But now things are diverging a bit...

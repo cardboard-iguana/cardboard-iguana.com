@@ -29,7 +29,7 @@ A much less annoying XSS test is to manipulate the `innerHTML` of page elements:
 
 * [Document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 
-## Tips for Writing JavaScript
+# Tips for Writing JavaScript
 
 JavaScript accepts back-ticks as a type of quotation mark, so we actually have three different marks to work with (single quote, double quote, and back-tick).
 
@@ -49,9 +49,9 @@ There's also "polygot" strings which work in a variety of contexts. These have s
 jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */onerror=alert('XSS') )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!><sVg/<sVg/oNloAd=alert('XSS')//>>
 ```
 
-## Filter Evasion
+# Filter Evasion
 
-### Bypass Simple Word Filtering
+## Bypass Simple Word Filtering
 
 In general, you can break up strings to get around this.
 
@@ -80,7 +80,7 @@ Sometimes filters are applied in a case-sensitive fashion. While JavaScript *is*
 * [JSFuck](http://www.jsfuck.com/)
 * [JavaScript Obfuscator Tool](https://obfuscator.io/)
 
-### Using iFrames and Images
+## Using iFrames and Images
 
 Typically XSS attacks work by injecting `<script/>` tags, but it's also possible to inject JavaScript using the `<iframe/>` and `<img/>` tags by setting the `src` attribute to the `javacript:` pseudo-protocol. For example:
 
@@ -94,13 +94,13 @@ Typically XSS attacks work by injecting `<script/>` tags, but it's also possible
 
 Note, however, that JavaScript loaded in an `<iframe/>` won't have access to the parent page's DOM.
 
-### Fallbacks Requiring User Interaction
+## Fallbacks Requiring User Interaction
 
 Finally, `javascript:` URIs can also be included in anchor(`<a/>`) `href` attributes, as well as `onmouseover` and `onclick` attributes (which can be attached to almost any HTML tag). Getting these attacks to fire requires a user to interact with the modified tag, however.
 
-## Attacks
+# Attacks
 
-### Accessing Browser Cookies
+## Accessing Browser Cookies
 
 ```html
 <script>
@@ -112,7 +112,7 @@ Finally, `javascript:` URIs can also be included in anchor(`<a/>`) `href` attrib
 </script>
 ```
 
-### Keylogging
+## Keylogging
 
 ```html
 <script>
@@ -132,11 +132,11 @@ Adding the user's session cookie here allows us to tell whose keystrokes are who
 
 * [Document.cookie](https://developer.mozilla.org/docs/Web/API/Document/cookie)
 
-### Port Scanning
+## Port Scanning
 
 [An example JavaScript port scanner (possibly broken).](https://github.com/aabeling/portscan)
 
-### Website Defacement
+## Website Defacement
 
 You can access elements of the DOM using `document.getElementById("element-id")` or `document.querySelector("#element-id")`. The `querySelector()` method is a bit more flexible (you can use CSS-style selectors here) and should probably be preferred.
 
@@ -144,6 +144,6 @@ To get/set the content of an element, use the `innerHTML` method (to insert HTML
 
 Note that `<script/>` tags inserted by setting an element's `innerHTML` are *not* executed, however!
 
-## Defense
+# Defense
 
 The key to defending against XSS is really to get your encoding right. User-generated code that's passed off to JavaScript needs to be JavaScript-escaped first. User-generated code that's written into the DOM needs to be HTML-escaped first. Know what the context is of your data, and escape/unescape appropriately when writing data from one context to another!

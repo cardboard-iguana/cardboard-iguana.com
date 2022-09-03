@@ -6,7 +6,7 @@ date:: 2022-07-08
 * [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
 * [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
 
-## Common Failure Modes
+# Common Failure Modes
 
 Common early failure modes with information gathering:
 
@@ -18,7 +18,7 @@ The big lesson here is to be careful and methodical about your time. The recomme
 
 Another suggestion: Create (and update) a network map *by hand* to keep track of where you are in the information gathering & attack process.
 
-## Active Information Gathering
+# Active Information Gathering
 
 `filecap`: Check the privileges attached to a file in Linux.
 

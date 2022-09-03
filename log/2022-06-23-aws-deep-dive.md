@@ -3,11 +3,11 @@
 author:: Nathan Acks  
 date:: 2022-06-23
 
-## Deep Dive on Amazon S3 Security and Management
+# Deep Dive on Amazon S3 Security and Management
 
 * [AWS re:Invent 2018: Deep Dive on Amazon S3 Security and Management (YouTube)](https://youtu.be/x25FSsXrBqU)
 
-### S3 Access Control Mechanisms
+## S3 Access Control Mechanisms
 
 By default, S3 buckets are only accessible by the owner
 
@@ -21,7 +21,7 @@ Available access control mechanism:
 
 IAM *authentication* is handled by the account itself, but *authorization* is handled on a service-by-service basis.
 
-### S3 Block Public Access
+## S3 Block Public Access
 
 This is a set of security controls that blocks unrestricted ("public") non-cross-account access, overriding (depending on the use case) existing permissions. There are four controls, each of which can be applied separately:
 
@@ -34,7 +34,7 @@ The last of these is intended to be an intermediate state allowing a bucket to b
 
 These four policies can be applied in any combination at either the account (which applies to all buckets) or per-bucket level. When applied at the account level, new buckets will automatically inherit these policies. (Note that when new buckets are created on the console these settings are all selected by default, even if these policies have *not* been applied. These can be thought of as "safe defaults". *However*, if the policies are not applied at the account level, then buckets created via the API will *not* be protected by default!)
 
-### How S3 Authorizes a Request
+## How S3 Authorizes a Request
 
 When S3 is checking authorization, it rolls up all applicable policies and then considers them as a single "master" policy. There are (conceptually) three stages to this check:
 
@@ -46,23 +46,23 @@ S3 starts by checking for an *explicit* deny, and if one exists evaluation stops
 
 Interestingly, by default bucket ownership does *not* grant object ownership. So in a cross-account situation, objects uploaded by one account to a bucket owned by another account are *not* readable by the bucket owner unless an ACL exists for the object providing that permission. Object-level permissions *cannot* be changed at the bucket level. (To allow other bucket users to view uploaded objects, either the object owner must either add the users to the object ACL or add a role controlled by the bucket owner that other users can assume.)
 
-### S3 Encryption
+## S3 Encryption
 
 Encryption keys can be managed directly in S3, via AWS KMS, using client-managed keys, or entirely client-side.
 
 It sounds like encryption is done using symmetric keys, at least in the KMS case. However, the key itself is encrypted by KMS. The encrypted key is then stored alongside the encrypted object, and handed back to KMS for decryption when the object is retrieved (this creates an additional layer of authorization, as KMS is *also* checking to see if decryption operations are authorized). I think the idea here is to enable per-object keys but still use a single "source of truth" for decryption authorization.
 
-### Use Cases
+## Use Cases
 
 It turns out that Capitol One wrote a similar anti-ACL policy before AWS introduced the security features discussed above. One trick they used was to add an explicit "deny all" with the condition that the user was *not* within Capitol One's AWS organization.
 
 A good use case here for when to use AssumeRole, but it's kind of reverse what Amazon was describing: Capitol One's high-security systems will do an AssumeRole to push lower security data into a segmented low-security system. Doing that means that data being placed into low-security S3 buckets is put there *by the low-security account* (whose role the high-security account has assumed). This allows the low-security account to then manage access to that data without the high-security account ever needing to interact with or know about downstream object consumers. This also gets Capitol One out of having to manage ACLs *entirely*.
 
-## Become an IAM Policy Master in 60 Minutes or Less
+# Become an IAM Policy Master in 60 Minutes or Less
 
 * [AWS re:Invent 2018: Become an IAM Policy Master in 60 Minutes or Less (YouTube)](https://youtu.be/YQsK4MtsELU)
 
-### IAM Policy Language
+## IAM Policy Language
 
 Basic IAM policy structure: "PARC" - Principal, Action, Resource, Condition. This is all led by an initial "effect", which is allow/deny.
 
@@ -75,7 +75,7 @@ I'm guessing that the "default" condition is `*`, since I've seen IAM policies w
 
 A non-standard way to think about policy evaluation: It's all about matching. (Does the incoming policy, which may include AWS-populated data, match a policy defined by the account? If so, then execute that policy, deny before allow. If not, then just deny.)
 
-### Policy Types & Interactions
+## Policy Types & Interactions
 
 It sounds like AWS Organizations are basically just another policy layer on top of (and overriding?) regular accounts. In particular, these policies seem to be more geared towards controlling access to entire services (can a particular account even *use* S3 or EC2) more than user- or role-level permissioning. These "service control policies" are default deny, just like everything else in AWS, but all new accounts/organizations are provisioned with an explicit "allow everything" service control policy initially.
 
@@ -85,7 +85,7 @@ IAM has the concept of a "permission boundary", which are defined *maximum* perm
 
 In general, you need an IAM policy *or* a resource-based policy to access something within an account. For cross-account access *both* the IAM and resource-based policies must be present and aligned.
 
-### Policy Use Cases
+## Policy Use Cases
 
 The recommendation here when using service control policies at the organization level is to blacklist, rather than whitelist, things. That's kind of reverse from the normal way of doing things, and seems to mostly be motivated by the sheer number of services (and the growth rate of that number) that AWS supports.
 

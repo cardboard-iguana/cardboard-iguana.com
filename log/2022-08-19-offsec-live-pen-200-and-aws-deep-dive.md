@@ -9,9 +9,9 @@ Two things today: OffSec Live in the morning and finishing up the "AWS Cloud Pra
 * [Join OffSec Live](https://learn.offensive-security.com/offsec-live-webinars)
 * [AWS Cloud Practitioner Essentials](https://www.aws.training/learningobject/curriculum?id=27076)
 
-## OffSec Live: PEN-200
+# OffSec Live: PEN-200
 
-### Linux Privilege Escalation
+## Linux Privilege Escalation
 
 Recommended privilege escalation resource (again): g0tm1lk's Blog.
 
@@ -31,9 +31,9 @@ Also remember that multiple users with the same UID can be specified in `/etc/pa
 
 * [g0tm1lk's Blog](https://blog.g0tmi1k.com/)
 
-## AWS Cloud Practitioner Essentials
+# AWS Cloud Practitioner Essentials
 
-### The AWS Well-Architected Framework
+## The AWS Well-Architected Framework
 
 * OPERATIONAL EXCELLENCE - Actual, well, operations work, with a focus on those aspects that most directly impact the organizational mission.
 * SECURITY - mostly focused on encryption.
@@ -43,7 +43,7 @@ Also remember that multiple users with the same UID can be specified in `/etc/pa
 
 This isn't just a written framework, but is now also embodied by a tool accessible through the AWS console (though this tool is still just a simple questionnaire, rather than an actual automated analysis of the current AWS account).
 
-### Benefits of the AWS Cloud
+## Benefits of the AWS Cloud
 
 Trade fixed expenses for variable expenses.
 
@@ -57,7 +57,7 @@ Stop spending money running and maintaining data centers.
 
 Go global in minutes.
 
-### Course Final Assessment
+## Course Final Assessment
 
 For S3 storage tiers, the "-IA" suffix stands for "Infrequent Access".
 

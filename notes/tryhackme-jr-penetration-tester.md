@@ -6,154 +6,154 @@ tags:: #MOC
 
 * [TryHackMe: Jr. Penetration Tester](https://tryhackme.com/path/outline/jrpenetrationtester)
 
-## Introduction to Pentesting
+# Introduction to Pentesting
 
-### Pentesting Fundamentals
+## Pentesting Fundamentals
 
 * [2022-02-23 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-23-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Principles of Security
+## Principles of Security
 
 * [2022-02-24 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-24-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-## Introduction to Web Hacking
+# Introduction to Web Hacking
 
-### Walking an Application
-
-* [2022-02-28 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-
-### Content Discovery
+## Walking an Application
 
 * [2022-02-28 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Subdomain Enumeration
+## Content Discovery
 
 * [2022-02-28 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Authentication Bypass
+## Subdomain Enumeration
+
+* [2022-02-28 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-02-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
+## Authentication Bypass
 
 * [2022-03-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### IDOR
+## IDOR
 
 * [2022-03-13 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### File Inclusion
+## File Inclusion
 
 * [2022-03-13 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### SSRF
+## SSRF
 
 * [2022-03-19 - TryHackMe: Jr. Penetration Tester](../log/2022-03-19-tryhackme-jr-penetration-tester.md)
 
-### Cross-Site Scripting
+## Cross-Site Scripting
 
 * [2022-03-19 - TryHackMe: Jr. Penetration Tester](../log/2022-03-19-tryhackme-jr-penetration-tester.md)
 
-### Command Injection
+## Command Injection
 
 * [2022-03-19 - TryHackMe: Jr. Penetration Tester](../log/2022-03-19-tryhackme-jr-penetration-tester.md)
 
-### SQL Injection
+## SQL Injection
 
 * [2022-03-19 - TryHackMe: Jr. Penetration Tester](../log/2022-03-19-tryhackme-jr-penetration-tester.md)
 
-## Burp Suite
+# Burp Suite
 
-### The Basics
+## The Basics
 
 * [2022-01-04 - TryHackMe: Web Fundamentals](../log/2022-01-04-tryhackme-web-fundamentals.md)
 * [2022-01-06 - TryHackMe: Web Fundamentals](../log/2022-01-06-tryhackme-web-fundamentals.md)
 
-### Repeater
+## Repeater
 
 * [2022-01-09 - TryHackMe: Web Fundamentals](../log/2022-01-09-tryhackme-web-fundamentals.md)
 
-### Intruder
+## Intruder
 
 * [2022-01-09 - TryHackMe: Web Fundamentals](../log/2022-01-09-tryhackme-web-fundamentals.md)
 
-### Other Modules
+## Other Modules
 
 * [2022-01-10 - TryHackMe: Web Fundamentals](../log/2022-01-10-tryhackme-web-fundamentals.md)
 
-### Extender
+## Extender
 
 * [2022-01-10 - TryHackMe: Web Fundamentals](../log/2022-01-10-tryhackme-web-fundamentals.md)
 
-## Network Security
+# Network Security
 
-### Passive Reconnaissance
+## Passive Reconnaissance
 
 * [2022-03-29 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-29-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Active Reconnaissance
+## Active Reconnaissance
 
 * [2022-03-30 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-03-30-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Nmap Live Host Discovery
+## Nmap Live Host Discovery
 
 * [2022-03-31 - TryHackMe: Jr. Penetration Tester](../log/2022-03-31-tryhackme-jr-penetration-tester.md)
 
-### Nmap Basic Port Scans
+## Nmap Basic Port Scans
 
 * [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Nmap Advanced Port Scans
+## Nmap Advanced Port Scans
 
 * [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Nmap Post Port Scans
+## Nmap Post Port Scans
 
 * [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Protocols and Servers
+## Protocols and Servers
 
 * [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Net Sec Challenge
+## Net Sec Challenge
 
 * [2022-04-03 - TryHackMe: Jr. Penetration Tester](../log/2022-04-03-tryhackme-jr-penetration-tester.md)
 
-## Vulnerability Research
+# Vulnerability Research
 
-### Vulnerabilities 101
-
-* [2022-04-11 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-11-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
-
-### Exploit Vulnerabilities
+## Vulnerabilities 101
 
 * [2022-04-11 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-11-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Vulnerability Capstone
+## Exploit Vulnerabilities
+
+* [2022-04-11 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-11-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+
+## Vulnerability Capstone
 
 * [2022-04-13 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-## Metasploit
+# Metasploit
 
-### Introduction
+## Introduction
 
 * [2022-04-13 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-13-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Exploitation
+## Exploitation
 
 * [2022-04-14 - TryHackMe: Jr. Penetration Tester](../log/2022-04-14-tryhackme-jr-penetration-tester.md)
 
-### Meterpreter
+## Meterpreter
 
 * [2022-04-18 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-18-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-## Privilege Escalation
+# Privilege Escalation
 
-### What the Shell?
+## What the Shell?
 
 * [2021-10-27 - TryHackMe: Complete Beginner](../log/2021-10-27-tryhackme-complete-beginner.md)
 * [2021-10-28 - TryHackMe: Complete Beginner](../log/2021-10-28-tryhackme-complete-beginner.md)
 
-### Linux PrivEsc
+## Linux PrivEsc
 
 * [2022-04-20 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 
-### Windows PrivEsc
+## Windows PrivEsc
 
 * [2022-04-21 - TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)

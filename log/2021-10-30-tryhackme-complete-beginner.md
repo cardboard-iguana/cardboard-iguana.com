@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2021-10-30
 
-## Linux PrivEsc
+# Linux PrivEsc
 
-### Service Exploits
+## Service Exploits
 
 [Exploiting MySQL running as root via a malicious user-defined function dynamic library.](https://www.exploit-db.com/exploits/1518)
 
@@ -26,7 +26,7 @@ mysql -u root mysql < rootme.sql
 /tmp/rootbash -p # Root!
 ```
 
-### Weak File Permissions
+## Weak File Permissions
 
 Make a new password hash for /etc/password or /etc/shadow:
 
@@ -36,7 +36,7 @@ mkpasswd -m sha-512 $PASSWORD
 
 [It's also possible to generate MD5 passwords for /etc/passwd using the openssl binary.](../notes/local-file-inclusion-attacks.md)
 
-### Sudo
+## Sudo
 
 Some shell escapes via GTFOBins:
 

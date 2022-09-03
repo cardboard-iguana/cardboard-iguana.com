@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2022-04-20
 
-## ITPro.TV: CompTIA Security+ (SY0-601)
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Incident Response Process
+## Incident Response Process
 
 Event = Something that raises a potential security flag.
 
@@ -33,7 +33,7 @@ Things to have in your after action report:
 * How was the attack accomplished?
 * How can existing systems be improved?
 
-### Incident Response Plans
+## Incident Response Plans
 
 * Who are you reporting to? Who approves your actions? Who initiates the incidence response process?
 * Who's on your team? (IT, experts, consultants, LEOs, etc.)
@@ -53,7 +53,7 @@ There's actually a tabletop game created by Black Hills Information Security tha
 
 * [Backdoors & Breaches](https://www.blackhillsinfosec.com/projects/backdoorsandbreaches/)
 
-### Attack Frameworks
+## Attack Frameworks
 
 An "attack framework" is just a way to describe an attack in a standardized fashion.
 
@@ -67,9 +67,9 @@ MITRE ATT&CK is really the gold standard though.
 
 * [MITRE ATT&CK](https://attack.mitre.org/)
 
-## TryHackMe: Jr. Penetration Tester
+# TryHackMe: Jr. Penetration Tester
 
-### Enumeration
+## Enumeration
 
 Useful Linux post-exploit enumeration commands
 
@@ -100,7 +100,7 @@ Instead of `u`, `j` can be used with `ps` to get a slightly different column out
 
 The `netstat` command supports the `-t` and `-u` flags to limit returned ports to TCP and UDP, respectively. Note that by default `netstat` will try to resolve hostnames, which can cause hangs; use `-n` to skip this (and only display IP addresses).
 
-### Automated Enumeration Tools
+## Automated Enumeration Tools
 
 * [LinPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 * [LinEnum](https://github.com/rebootuser/LinEnum)
@@ -110,7 +110,7 @@ The `netstat` command supports the `-t` and `-u` flags to limit returned ports t
 
 Of these, only LES is available in the Kali Linux repos (`sudo apt install linux-exploit-suggester`).
 
-### Privilege Escalation: Sudo
+## Privilege Escalation: Sudo
 
 Basically: GTFOBins!
 
@@ -131,7 +131,7 @@ If `find` can be run with `sudo`, then try `sudo find . -exec /bin/sh \; -quit`.
 * [GTFOBins](https://gtfobins.github.io)
 * [Exploiting LD_PRELOAD](../notes/exploiting-ld-preload.md)
 
-### Privilege Escalation: SUID
+## Privilege Escalation: SUID
 
 Find (not always so quickly) SUID and SGID files:
 
@@ -147,13 +147,13 @@ To generate a password acceptable for inclusion in `/etc/passwd`:
 openssl passwd -1 -salt $SALT $PASSWORD
 ```
 
-### Privilege Escalation: Capabilities
+## Privilege Escalation: Capabilities
 
 "Capabilities" are finer-grained permissions that can be assigned to a binary. Think of them as a kind of granular SUID/SGID.
 
 The `getcap` command displays a binary's capabilities (if there are any), and can even be used to perform a search for such binaries using `getcap -r $PATH 2> /dev/null`.
 
-### Privilege Escalation: Cron Jobs
+## Privilege Escalation: Cron Jobs
 
 Basically, check to see if any scripts run by a privileged user can be written to by an unprivileged user.
 
@@ -161,6 +161,6 @@ Also look for "zombie" cron jobs that are still running but refer to a non-exist
 
 Bash as a reverse proxy makes an appearance again here.
 
-### Privilege Escalation: NFS
+## Privilege Escalation: NFS
 
 NFS exports are listed in `/etc/exports`; if an export is configured with `no_root_squash`, then root permissions won't be stripped from created files and it's possible to create root-owned SUID/SGID binaries on the mount. (Remember that files on NFS mounts are created using the UID/GID values of the *local* user!)

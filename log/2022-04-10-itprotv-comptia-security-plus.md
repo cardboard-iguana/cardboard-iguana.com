@@ -3,11 +3,11 @@
 author:: Nathan Acks  
 date:: 2022-04-10
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
 Today I'll be covering Chapters 7 and 8 of the Security+ Exam Cram, "Security Assessment Techniques" and "Penetration Testing Techniques".
 
-### Vulnerability Scans
+## Vulnerability Scans
 
 Types of scanners:
 
@@ -28,15 +28,15 @@ Vocabulary:
 
 Note that the US government uses OVAL - the "Open Vulnerability Assessment Language", an XML-based vulnerability description language - instead of the CVE numbers used in private industry. That said, OVAL vulnerability representations are often based off of CVE data.
 
-### Intrusive vs. Non-Intrusive Scans
+## Intrusive vs. Non-Intrusive Scans
 
 "Intrusive" scans actually try to exploit potentially vulnerable systems.
 
-### Credentialed vs. Non-Credentialed Scans
+## Credentialed vs. Non-Credentialed Scans
 
 Credentialed scans: More invasive, but also more accurate.
 
-### Security Information and Event Management (SIEM)
+## Security Information and Event Management (SIEM)
 
 Strategies for identifying "events of interest":
 
@@ -50,11 +50,11 @@ Exam Cram notes that SIEMs only become cost-effective when ingesting a million+ 
 
 Some SIEMs are now beginning to include sentiment analysis functionality, often leveraging external data sources.
 
-### Security Orchestration, Automation, and Response (SOAR)
+## Security Orchestration, Automation, and Response (SOAR)
 
 SOAR is to SIEM as broader threat intelligence it to log aggregation. It also layers on incident response automation. Seems to be a bit of a marketing term.
 
-### Testing Methodology
+## Testing Methodology
 
 Phases:
 
@@ -65,15 +65,15 @@ Phases:
 
 Exam Cram refers to passive recon as "footprinting".
 
-### Team Exercises
+## Team Exercises
 
 Exam Cram specifically defines red teaming as more focused than a regular penetration test, with specific operational objectives. These days, I'd imagine that most red teams focus on APT emulation.
 
 I have not heard of "white teams" - which apparently set the rules of engagement for red/blue teams and are the keepers of business GRC policies - before. Exam Cram refers to them as the "referees".
 
-## ITPro.TV: CompTIA Security+ (SY0-601)
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Network Reconnaissance And Discovery
+## Network Reconnaissance And Discovery
 
 Interesting tools:
 
@@ -85,7 +85,7 @@ Interesting tools:
 * `scanless` - Port scanning via third-party services.
 * `dnsenum` - DNS enumeration tool; uses third-party services.
 
-### Packet Capture And Replay
+## Packet Capture And Replay
 
 ```bash
 # Start dumping packets observed on interface $IFACE.

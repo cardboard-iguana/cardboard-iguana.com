@@ -8,7 +8,7 @@ With the course work for the Security+ exam out of the way, it's time to turn ba
 * [TryHackMe: Red Team Engagements](https://tryhackme.com/room/redteamengagements)
 * [TryHackMe: Firewalls](https://tryhackme.com/room/redteamfirewalls)
 
-### Defining Scope and Objectives
+## Defining Scope and Objectives
 
 New term:
 
@@ -18,19 +18,19 @@ Reference:
 
 * [Penetration Testing Vocabulary](https://security.stackexchange.com/a/114788)
 
-### Rules of Engagement
+## Rules of Engagement
 
 The "rules of engagement" are basically the legally formalized (and binding) form of the test's scope and objectives. *Not* a formal campaign plan.
 
-### Mission Plan
+## Mission Plan
 
 The difference between an "operation plan" and a "mission plan" is one of audience: The former is externally-facing (clients), while the latter is internally facing (red team members).
 
-### Introduction: Firewalls
+## Introduction: Firewalls
 
 * [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
 
-### Types of Firewalls
+## Types of Firewalls
 
 Types of firewalls:
 
@@ -45,7 +45,7 @@ Traditional firewalls cover OSI layers 2 - 4 (data link, network, and transport)
 
 * [OSI Model](../notes/osi-model.md)
 
-### Evasion via Controlling the Source MAC/IP/Port
+## Evasion via Controlling the Source MAC/IP/Port
 
 Nmap firewall evasion techniques:
 
@@ -61,19 +61,19 @@ An Nmap SYN scan will send ~2x the number of packets as scanned ports, as all un
 
 * [Nmap](../notes/nmap.md)
 
-### Evasion via Forcing Fragmentation, MTU, and Data Length
+## Evasion via Forcing Fragmentation, MTU, and Data Length
 
 Fragmenting packets in Nmap will generally let them get through a firewall *if* the firewall is not itself reassembling packets. Note this means that fragmenting packets to 8 bytes results in packets that are 28 bytes long. Use `-f` to fragment packets to 8 bytes, `-ff` to fragment packets to 16 bytes, or `--mtu` to fragment packets into a chosen multiple of 8.
 
 Fragmentation can lead to uneven packet sizes (in particular, the final fragment may be shorter than the others). Nmap will produce packets of a specified length (again, a multiple of 8) when called with `--data-length`; enough random bits will be added to the packet data field to ensure that the final packet is the same length as all the others. (You can also use this option to add random data to normal Nmap TCP packets by specifying a length greater than 24 bytes; note again that the IP header is uneffected.)
 
-### Evasion via Modifying Header Fields
+## Evasion via Modifying Header Fields
 
 * `--ttl` - set a custom TTL.
 * `--ip-options` - specify the IP "Options" field as either a string of hex-encoded bytes (`\x00`, etc.) or *one* of the shortcut options `R` (record-route), `T` (record-timestamp), `U` (`R` *and* `T`), `L` (loose source routing), and `S` (strict source routing); both `L` and `S` must be followed by a space-separated list of IP addresses to route the packet through (the entire sting must be quoted), and are used to route around security appliances.
 * `--badsum` - send a packet with an intentionally bad checksum; whether or not the packet is dropped will depend on the system being scanned.
 
-### Evasion Using Port Tunneling
+## Evasion Using Port Tunneling
 
 Port forwarding with netcat (requires `-c` to be available):
 
@@ -83,7 +83,7 @@ nc -lvnp $INCOMING_PORT -c "nc $TARGET_IP $TARGET_PORT"
 
 * [Using "netcat"](../notes/netcat.md)
 
-### Evasion Using Non-Standard Ports
+## Evasion Using Non-Standard Ports
 
 Sometimes the netcat binary is named `ncat` instead of `nc`...
 

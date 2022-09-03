@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2022-02-28
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
-### Weak Configurations
+## Weak Configurations
 
 My favorite quip is here! "Unnecessary complexity" as a security vulnerability!
 
@@ -27,7 +27,7 @@ Another gem that parallels something I like to repeat:
 
 The Exam Cram implies that leaving all services enabled will seldom be the correct answer when presented with a device configuration scenario on the Security+ exam.
 
-### Improper of Weak Patch Management
+## Improper of Weak Patch Management
 
 Types of updates:
 
@@ -37,11 +37,11 @@ Types of updates:
 
 Microsoft divides updates into "security updates" (which address security issues), "critical updates" (non-security updates that fix high-impact bugs), and just plain "updates" (everything else).
 
-### Third-Party Risks
+## Third-Party Risks
 
 Exam Cram indicates that the Security+ exam will likely ask about the dangers of end-of-life systems.
 
-### Impacts
+## Impacts
 
 Type of potential incident impacts:
 
@@ -53,9 +53,9 @@ Type of potential incident impacts:
 * Downtime
 * Physical danger and loss of life
 
-## ITPro.TV: CompTIA Security+ (SY0-601)
+# ITPro.TV: CompTIA Security+ (SY0-601)
 
-### Vulnerabilities
+## Vulnerabilities
 
 Vulnerability: Any weakness that creates an avenue for attack.
 
@@ -71,21 +71,21 @@ Many times the reason organizations will attempt to refactor third-party applica
 
 * [2022-02-27 - ITPro.TV: CompTIA Security+ (SY0-601)](2022-02-27-itprotv-comptia-security-plus.md)
 
-## TryHackMe: Jr. Penetration Tester
+# TryHackMe: Jr. Penetration Tester
 
-### Viewing the Page Source
+## Viewing the Page Source
 
 Who tries to hide secret links on their web page? But apparently, this is something more than one org does, and is a good reason to view source and/or inspect the DOM.
 
 Also, another good reminder to look for indexable directories.
 
-### Developer Tools: Debugger
+## Developer Tools: Debugger
 
 Good to know - JavaScript breakpoints persist across page loads. (This makes sense, as many times JavaScript will only be run once, immediately after page load.)
 
 In Firefox, breakpoints can be set by clicking on the line number in a JavaScript file viewed in the Debugger (Sources in Chrome) pane.
 
-### Manual Discovery: Favicon
+## Manual Discovery: Favicon
 
 Quickly match a favicon to its framework!
 
@@ -99,7 +99,7 @@ The look it up:
 
 * [OWASP favicon database](https://wiki.owasp.org/index.php/OWASP_favicon_database)
 
-### OSINT: Google Hacking / Dorking
+## OSINT: Google Hacking / Dorking
 
 Useful Google search modifiers:
 
@@ -108,11 +108,11 @@ Useful Google search modifiers:
 * filetype: - Only return results with the specified extension
 * intitle: - Require term to be present in the page title
 
-### OSINT: Wappalyzer
+## OSINT: Wappalyzer
 
 * [Wappalyzer](https://www.wappalyzer.com/)
 
-### OSINT: S3 Buckets
+## OSINT: S3 Buckets
 
 It can often be fruitful to just attempt to *guess* an organization's S3 buckets. Common variants:
 
@@ -124,7 +124,7 @@ It can often be fruitful to just attempt to *guess* an organization's S3 buckets
 
 I'll bet dollars to donuts that "dev" and "prod" are also common suffixes.
 
-### Automated Discovery
+## Automated Discovery
 
 * [ffuf](../notes/ffuf.md)
 * [gobuster](../notes/gobuster.md)
@@ -133,13 +133,13 @@ There's also dirbuster, but I kinda prefer gobuster.
 
 Note that the SecLists web discovery `common.txt` wordlist lives in /usr/share/wordlists/dirb/common.txt on Kali Linux.
 
-### OSINT: SSL/TLS Certificates
+## OSINT: SSL/TLS Certificates
 
 Certificate transparency logs can be used to find subdomains with specially provisioned SSL certificates. The main option (given that the Google search tool is being taken down in a few months:
 
 * [crt.sh](https://crt.sh/)
 
-### OSINT: Search Enginers
+## OSINT: Search Enginers
 
 A google search for subdomain enumeration:
 
@@ -149,7 +149,7 @@ site:*.example.com -site:www.example.com
 
 Note that `*.example.com` searches subdomains of `example.com`!
 
-### DNS Brute Forcing
+## DNS Brute Forcing
 
 The dnsrecon tool actually allows us to (attempt) to brute force subdomains from a wordlist:
 
@@ -159,7 +159,7 @@ dnsrecon --type brt \
          --dictionary /usr/share/wordlists/metasploit/namelist.txt
 ```
 
-### OSINT: Sublist3r
+## OSINT: Sublist3r
 
 Alternative to dnsrecon (above), though not installed on Kali by default.
 
@@ -169,7 +169,7 @@ Alternative to dnsrecon (above), though not installed on Kali by default.
 sudo apt install sublist3r
 ```
 
-### Virtual Hosts
+## Virtual Hosts
 
 It turns out that ffuf can fuzz HTTP headers, which can be used to try to brute force virtual host entries.
 

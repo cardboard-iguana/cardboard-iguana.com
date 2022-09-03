@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-03-13
 
-## A Minimal HTTP Request
+# A Minimal HTTP Request
 
 ```http
 GET / HTTP/1.1
@@ -13,7 +13,7 @@ host: something
 
 (Note the blank line at the end.)
 
-## Useful HTTP Headers
+# Useful HTTP Headers
 
 * Server - Web server information (Apache, NGINX, etc.); useful for recon.
 * True-Client-IP - Override the client IP address (direct connections to servers).

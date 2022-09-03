@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2021-10-06
 
-## OWASP Top 10
+# OWASP Top 10
 
-### (Severity 04) XML External Entity
+## (Severity 04) XML External Entity
 
 As with injection attacks, XML external entity (XXE) attacks are broken down into two types: in-band (analogous us to active injection attacks) and out-of-band (OOB-XXE or "blind" XXE, which are of course analogous to blind injection attacks).
 
@@ -76,11 +76,11 @@ It looks like this is something that would be more commonly attacked over an API
 * [ENTITY Declaration](https://xmlwriter.net/xml_guide/entity_declaration.shtml)
 * [Exploitation: XML External Entity (XXE) Injection](https://depthsecurity.com/blog/exploitation-xml-external-entity-xxe-injection)
 
-### (Severity 06) Security Misconfiguration
+## (Severity 06) Security Misconfiguration
 
 Basically, this about the use of defaults or bad configurations of existing security controls, whereas "broken access control" (which didn't really include anything worth noting explicitly) is about missing or non-functional controls.
 
-### (Severity 07) Cross-Site Scripting
+## (Severity 07) Cross-Site Scripting
 
 Three varieties:
 
@@ -92,7 +92,7 @@ Three varieties:
 
 Mostly, this is about injecting `<script/>` tags.
 
-### (Severity 08) Insecure Deserialization
+## (Severity 08) Insecure Deserialization
 
 Basically, this is about trusting user-provided input to determine state.
 

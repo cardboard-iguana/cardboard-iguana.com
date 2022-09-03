@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-07-10
 
-## System Information
+# System Information
 
 ```bash
 oslevel     # Report system version
@@ -22,7 +22,7 @@ oslevel -s -l $SERVICE_PACK # List filesets below the specified
 * [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
 * [oslevel Command](https://www.ibm.com/docs/en/aix/7.2?topic=o-oslevel-command)
 
-## Fileset Information
+# Fileset Information
 
 ```bash
 lslpp -l               # List all filesets

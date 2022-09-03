@@ -8,7 +8,7 @@ The "Transmission Control Protocol". TCP was formalized in September 1981 in RFC
 * [Transmission Control Protocol (RFC 793)](https://datatracker.ietf.org/doc/html/rfc793.html)
 * [TCP Model](tcp-model.md)
 
-## Flags
+# Flags
 
 * URG - Process the current TCP packet immediately. Directs the receiving system to examine the "urgent pointer" field.
 * ACK - Acknowledgement. Directs the receiving system to examine the "acknowledgement number" field.
@@ -17,7 +17,7 @@ The "Transmission Control Protocol". TCP was formalized in September 1981 in RFC
 * SYN - Synchronize. Used during the initial three-way handshake to set a shared (starting) sequence number.
 * FIN - Finish. Indicates that the connection may be dropped gracefully.
 
-## Acknowledgement Number
+# Acknowledgement Number
 
 The TCP "acknowledgment number" contains the *next* sequence number that the sender is expecting to receive (so basically senders determine the next sequence number). This is the current sequence number (for the other host) + the number of bytes in the data segment of the packet being sent to that host.
 
@@ -27,11 +27,11 @@ The acknowledgement number for RST packets is always 0.
 
 The initial SYN packet that starts the three-way handshake should *not* have an acknowledgement number
 
-## Window Size
+# Window Size
 
 The TCP "Window" is the maximum number of bits that the sending system expects to receive from a request (it represents the current buffer size for that connection on that system). This is a 2-byte number, such that the maximum (unscaled) window size if 65535 bytes.
 
-## TCP Options
+# TCP Options
 
 TCP "options" are set in the initial handshake (the initiating host will propose in the SYN packet, and the receiving host will reply with what it supports in the SYN/ACK packet). Note that each system sets its own window scale and MSS values (but these value must be set by both hosts in order to be used in a connection).
 
@@ -44,7 +44,7 @@ If SACK is used, then acknowledge packet numbers are also placed in the options 
 
 Differences in how TCP options are responded to for incoming SYN packets or ordered for outgoing SYN/ACK packets are important for fingerprinting operating systems and TCP stacks.
 
-## Initial Round Trip Time
+# Initial Round Trip Time
 
 The "initial round trip time" (IRTT) is the time taken for the initial SYN packet in the TCP handshake to the final ACK packet in the initial three-way handshake. Most TCP implementations will *initially* wait for up to 0.5 seconds until retransmitting a packet, but will dynamically adjust this to 3x - 4x the IRTT after the initial handshake. Wireshark will report the IRTT value in the final ACK packet of the three-way handshake.
 

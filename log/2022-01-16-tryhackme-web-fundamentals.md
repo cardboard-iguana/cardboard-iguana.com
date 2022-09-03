@@ -3,9 +3,9 @@
 author:: Nathan Acks  
 date:: 2022-01-16
 
-## LFI
+# LFI
 
-### Deploy
+## Deploy
 
 LFI = Local File Inclusion
 
@@ -13,31 +13,31 @@ Basically, this is when user input can cause a server to include the contents of
 
 Most common in PHP-based websites.
 
-### Getting User Access via LFI
+## Getting User Access via LFI
 
 The effects of this can range from basic information disclosure issues (including the source of PHP files) that are most useful during reconnaissance to things like including the contents of `/etc/passwd`, *et al.* (which can be *really* bad).
 
 NOTE: Typically web servers are serving content from `/var/www`, `/var/www/srv`, or an immediate subdirectory for virtual hosts. Thus to get to `/` generally requires `../../`, `../../../`, or `../../../../`.
 
-### Escalating Your Privileges to Root
+## Escalating Your Privileges to Root
 
 A reminder that GTFOBins is your friend.
 
 * [GTFOBins](https://gtfobins.github.io/)
 
-## Authenticate
+# Authenticate
 
-### Dictionary Attack
+## Dictionary Attack
 
 NOTE: It doesn't look like Burp Suite can effectively run an attack using the entire `rockyou.txt` data set.
 
 * [Using Burp Suite](../notes/burp-suite.md)
 
-### Re-Registration
+## Re-Registration
 
 The idea here is to register a username with leading or trailing whitespace, since that can be eaten by SQL parsers when querying for permissions. If the username isn't properly sanitized before registration, this means that we can register accounts like "` admin`" and get the same permissions as the "real" `admin` account.
 
-### JSON Web Token
+## JSON Web Token
 
 JSON web token format: `$HEADER.$PAYLOAD.$SIGNATURE`, where each substring is base64 encoded.
 
@@ -53,19 +53,19 @@ Sometimes it's possible to brute-force a weak secret from the `$SIGNATURE` (whic
 
 * [JSON Web Tokens](https://jwt.io)
 
-### No Auth
+## No Auth
 
 This is basically just an enumeration attack (the application is generating easily-guessed URLs and isn't checking that the user actually has permission to view a particular URL).
 
-## ZTH: Obscure Web Vulnerabilities
+# ZTH: Obscure Web Vulnerabilities
 
-### What is SSTI?
+## What is SSTI?
 
 SSTI = Server-side template injection.
 
 This is where the server is building web pages using a template system and, because of inadequate input sanitization, the user can pass a parameter that can control the templating engine (beyond its intended limits).
 
-### Manual Exploitation of SSTI
+## Manual Exploitation of SSTI
 
 Typically you'd test for SSTI by passing something simple like "2 + 2" and seeing what the template splits out. *How* you pass "2 + 2" is going to depend heavily on the template system being used, however.
 
@@ -73,17 +73,17 @@ The "PayloadsAllTheThings: Server Side Template Injection" document is a useful 
 
 * [PayloadsAllTheThings: Template Injection](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
 
-### What is CSRF?
+## What is CSRF?
 
 CSRF = Cross Site Request Forgery
 
 This is when a user interacting with one website causes an action to be performed on another website *as that user* (in an unintended fashion). Basically, malicious URLs or JavaScript is causing the user's browser to make requests to another site as the user but performing the actions specified by the attacker.
 
-### What is JWT?
+## What is JWT?
 
 JWT algorithms can sometimes use a server's *public* key (for example, `HS256` generates a signature using the public half of a keypair, while `RS256` uses the private half of a keypair). If the public half of the keypair used to sign the JWT is available somehow (for example, if it's been re-used as the server's HTTPS certificate), then we can harvest it and use it to forge new JWTs.
 
-### JWT Challenge
+## JWT Challenge
 
 The base64-encoded version of `{"typ":"JWT","alg":"HS256"}` is `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9Cg`. 
 
@@ -105,11 +105,11 @@ sed -e 's/=*$//'
 
 Here `$HEADER` is our base64-encoded header (see above), `$PAYLOAD` is our base64-encoded payload, and `$PUBLIC_KEY_FILE` is the PEM-formatted server public key (that we've obviously obtained using another method).
 
-### Automatic Exploitation of the JWT "None Vulnerability"
+## Automatic Exploitation of the JWT "None Vulnerability"
 
 The base64-encoded version of `{"typ":"JWT","alg":"none"}` is `eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0`.
 
-### Manual Exploitation of XXE
+## Manual Exploitation of XXE
 
 [PayloasAllTheThings on XXE.](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection)
 
@@ -117,7 +117,7 @@ The base64-encoded version of `{"typ":"JWT","alg":"none"}` is `eyJ0eXAiOiJKV1QiL
 
 NOTE: From the examples, it appears that while you need to add a DOCTYPE declaration with an ELEMENT to define an ENTITY, this DOCTYPE/ELEMENT can just be garbage.
 
-### XXE Challenge
+## XXE Challenge
 
 Confirming that a garbage DOCTYPE/ELEMENT definition are fine, the following appears to get me access to `/etc/passwd` on a vulnerable box:
 

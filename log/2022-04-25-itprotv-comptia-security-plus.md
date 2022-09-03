@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-04-25
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
 Today we're going to read through three chapters of the Security+ Exam Cram:
 
@@ -11,7 +11,7 @@ Today we're going to read through three chapters of the Security+ Exam Cram:
 * Chapter 31, "Control Types"
 * Chapter 32, "Regulations, Standards, and Frameworks"
 
-### Configuration Management
+## Configuration Management
 
 Configuration Management: The process of identifying, controlling, and auditing the creation and modification of an IT baseline.
 
@@ -26,15 +26,15 @@ Security baselines can either be layered onto system baselines, or may be presen
 
 The Exam Cram emphasizes the importance of guarding against both intentional and unintentional "attacks" as part of the hardening process.
 
-### Data Loss Prevention
+## Data Loss Prevention
 
 The Exam Cram emphasizes the role of not only the software controls that I'm more familiar with in service of DLP, but also hardware restrictions (for example, forbidding USB drive access).
 
-### Cloud Access Security Brokers
+## Cloud Access Security Brokers
 
 I'm mostly familiar with CASBs as a way of *discovering* and managing cloud usage. But Exam Cram explicitly situates them as primarily a DLP solution. More generally, they're conceptualized as "extending on-prem security solutions to cloud systems".
 
-### Encryption and Data Obfuscation
+## Encryption and Data Obfuscation
 
 Apparently the term "data in processing" has come to supplant the notion of "data in use", at least w.r.t. homomorphic encryption. This terminology difference appears to be an attempt to emphasize that humans can't actually work directly with ("use") encrypted data.
 
@@ -52,31 +52,31 @@ Interesting: The first 4 - 6 digits of a credit card number identify the issuing
 
 * [Bank Identification Number (BIN)](https://www.investopedia.com/terms/b/bank-identification-number.asp)
 
-### Rights Management
+## Rights Management
 
 DRM and IRM ("digital" vs. "information" rights management); the former is generally consumer facing, while the latter is used within organization. While DRM is based around tightly controlled encryption keys, IRM functions a lot more like device management. To a certain extent, the sharing capabilities within Google Drive (being able to control who can access the document in a fine-grained fashion, being able to revoke this access, being able to restrict printing, etc.) can be thought of as a form of IRM.
 
-### Encrypted Traffic Management
+## Encrypted Traffic Management
 
 Basically, SSL intercept/MitM solutions.
 
-### Data Integrity
+## Data Integrity
 
 Hashing, signing, etc.
 
 Oddly, the Exam Cram states that "[r]enaming the file ... will produce different [hash] output", which is not actually true (only the file contents, not its name on disk, will influence its hash).
 
-### Data Availability
+## Data Availability
 
 Backups, disaster response/preparedness, etc.
 
-### Site Resiliency
+## Site Resiliency
 
 Warm (backup) sites are generally shared by multiple organizations.
 
 Cold (backup) sites are often just *contracts* for facilities.
 
-### Deception and Disruption
+## Deception and Disruption
 
 * Decoys (entirely fictitious networks)
 * Lures (honeypots configured to look like laptops, workstations, servers, etc.)
@@ -86,7 +86,7 @@ Exam Cram emphasizes that traditional honeypots are generally not used anymore, 
 
 * [Canary Tokens](https://www.canarytokens.org/)
 
-### Nature of Controls
+## Nature of Controls
 
 This is about "controls" in the risk mitigation sense of the word.
 
@@ -96,7 +96,7 @@ Types:
 * Managerial (a.k.a. "administrative controls")
 * Operational (physical controls and general organizational culture)
 
-### Functional Use of Controls
+## Functional Use of Controls
 
 Controls can be *further* divided into:
 
@@ -105,21 +105,21 @@ Controls can be *further* divided into:
 * Detection (logs, anti-malware, regular audits, etc.)
 * Corrective (mitigation/recovery)
 
-### Compensating Controls
+## Compensating Controls
 
 Basically, if you can't (or won't) implement a given control, what control(s) do you layer in instead to provide equivalent security guarantees?
 
-### Industry-Standard Frameworks and Reference Architectures
+## Industry-Standard Frameworks and Reference Architectures
 
 * Standards: Descriptions of mandatory behavior/configurations/implementation
 * Guides: Best practices for implementing standards
 * Frameworks: Basically hyper-detailed guides
 
-### Regulatory and Non-Regulatory Requirements
+## Regulatory and Non-Regulatory Requirements
 
 The difference here boils down to: Which have teeth, and which are just fancy specifications?
 
-### Industry-Specific Frameworks
+## Industry-Specific Frameworks
 
 * ISO 27002 (information security best practices; most commonly used by cloud providers)
 * ISO 27001 (information security certification)
@@ -135,6 +135,6 @@ The difference here boils down to: Which have teeth, and which are just fancy sp
 
 SOC = Service Organizational Control
 
-### Benchmarks and Secure Configuration Guides
+## Benchmarks and Secure Configuration Guides
 
 CIS Critical Security Controls + related benchmarks and guides.

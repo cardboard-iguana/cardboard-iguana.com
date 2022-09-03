@@ -1,21 +1,30 @@
 # Packet Headers
 
 author:: Nathan Acks  
-date:: 2021-09-14
+date:: 2021-08-11
 
-Important common TCP and UDP packet headers.
+# Important/Common TCP Packet Headers
 
-| Header                 | TCP | UDP | Description                                                                                                                                                             |
-|:---------------------- |:---:|:---:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Time to Live (TTL)     |  Y  |  Y  | How long a packet should live on the network before being discarded.                                                                                                    |
-| Source port            |  Y  |  Y  | A random (unused) port chosen by the sender.                                                                                                                            |
-| Destination port       |  Y  |  Y  | The port on the receiving end, which normally is determined by the application being used.                                                                              |
-| Source address         |  Y  |  Y  | "From" IP address.                                                                                                                                                      |
-| Destination address    |  Y  |  Y  | "To" IP address.                                                                                                                                                        |
-| Sequence number        |  Y  |     | A random number that identifies a given connection.                                                                                                                     |
-| Acknowledgement number |  Y  |     | Starts at the sequence number and then increases by one for each packet sent. Used to ensure that no data is lost, and that packets are reassembled in the right order. |
-| Checksum               |  Y  |     | Integrity check.                                                                                                                                                        |
-| Data                   |  Y  |  Y  | The, well, data.                                                                                                                                                        |
-| Flag(s)                |  Y  |     | How the packet should be handled (SYN, ACK, FIN, RST, etc.).                                                                                                            |
+* Time to Live (TTL) - How long a packet should live on the network before being discarded.
+* Source port - A random (unused) port chosen by the sender.
+* Destination port - The port on the receiving end, which normally is determined by the application being used.
+* Source address - "From" IP address.
+* Destination address - "To" IP address.
+* Sequence number - A random number that identifies a given connection.
+* Acknowledgement number - Starts at the sequence number and then increases by the number of bytes received in the previous packet (or 1 is the previous packet did not include a data segment). Used to ensure that no data is lost, and that packets are reassembled in the right order.
+* Checksum - Integrity check.
+* Data - The, well, data.
+* Flag(s) - How the packet should be handled (SYN, ACK, FIN, RST, etc.).
 
-* [TryHackMe: Pre Security](tryhackme-pre-security.md)
+There's potentially *a lot* more detail then this in a TCP packet header, however.
+
+* [2022-08-11 - DEF CON 30](../log/2022-08-11-def-con-30.md)
+
+# Important/Common UDP Packet Headers
+
+* Time to Live (TTL) - How long a packet should live on the network before being discarded.
+* Source port - A random (unused) port chosen by the sender.
+* Destination port - The port on the receiving end, which normally is determined by the application being used.
+* Source address - "From" IP address.
+* Destination address - "To" IP address.
+* Data - The, well, data.

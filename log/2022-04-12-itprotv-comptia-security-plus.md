@@ -3,11 +3,11 @@
 author:: Nathan Acks  
 date:: 2022-04-12
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
 Today's reading is Chapter 30 from the Security+ Exam Cram, "Digital Forensics".
 
-### Order of Volatility
+## Order of Volatility
 
 The idea here is to gather evidence from the most volatile storage (generally RAM) to the least volatile (generally backups or off-system logs). Prioritize imaging/copying/investigating storage so that you run the minimum risk of loosing information!
 
@@ -31,7 +31,7 @@ Typical order of volatility:
 
 I'm guessing that external logs probably sit between removable rewritable storage and removable write-once storage.
 
-### Chain of Custody
+## Chain of Custody
 
 Basically, log all the things. Time, date, action, people involved. Include thought processes and inferences. Properties:
 
@@ -48,7 +48,7 @@ Investigative steps:
 * Extract, process, log, interpret, etc.
 * Clean up for presentation (corporate or legal)
 
-### Data Acquisition
+## Data Acquisition
 
 * System Images (be careful to ensure that these cannot be inadvertently written to during analysis!)
 * Network Traffic & Logs (traffic is generally only captured in the event that the incident is ongoing when the investigation begins)

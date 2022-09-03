@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2022-05-11
 
-## Calculating File Hashes
+# Calculating File Hashes
 
 ```powershell
 CertUtil -hashfile $FILE_PATH $ALGORITHM
@@ -13,7 +13,7 @@ The algorithm can be excluded (in which case SHA1 is used).
 
 * [TryHackMe: MAL: Researching](tryhackme-mal-researching.md)
 
-## Enumerating AD CS Templates
+# Enumerating AD CS Templates
 
 AD CS is AD's PKI, and is used on the back end for everything from provisioning disk encryption keys to user authentication. Certificate templates are a way to automate the certificate request process: Rather than an admin approving all CSRs manually, AD CS checks to see if a relevant "template" (which is really a template + associated settings + an access policy) exists that matches the supplied CSR and is configured to allow the requesting user to generate a certificate.
 

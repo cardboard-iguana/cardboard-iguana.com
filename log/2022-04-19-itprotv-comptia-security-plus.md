@@ -3,11 +3,11 @@
 author:: Nathan Acks  
 date:: 2022-04-19
 
-## CompTIA Security+ Exam Cram
+# CompTIA Security+ Exam Cram
 
 Today's reading is Chapters 27 and 29, "Incident Response" and "Incident Mitigation", from the Security+ Exam Cram.
 
-### Cyber Kill Chain
+## Cyber Kill Chain
 
 As originally developed by Lockheed Martin. There are seven stages, and the goal is to disrupt the attacker as early in the kill chain as possible.
 
@@ -21,7 +21,7 @@ As originally developed by Lockheed Martin. There are seven stages, and the goal
 
 There are other "intrusion kill chains" out there.
 
-### MITRE ATT&CK
+## MITRE ATT&CK
 
 Divides an attack up into stages (which makes it similar to a kill chain), but then focuses on providing a library of potential attacker tactics at each stage.
 
@@ -38,7 +38,7 @@ Divides an attack up into stages (which makes it similar to a kill chain), but t
 * Exfiltration
 * Impact (i.e., goals)
 
-### Diamond Model of Intrusion Analysis
+## Diamond Model of Intrusion Analysis
 
 This is an adversary-focused functional model. Four components are arrayed on a diamond:
 
@@ -49,7 +49,7 @@ This is an adversary-focused functional model. Four components are arrayed on a 
 
 There's apparently math involved here, not that the Exam Cram is going to explain it.
 
-### Incident Response Plan
+## Incident Response Plan
 
 * Preparation
 * Roles
@@ -70,14 +70,14 @@ Incident response plans will often cover *preventative* measures as part of prep
 
 See NIST Special Publication 800-61r2. Revise annually.
 
-### Documented Incident Type/Category Definitions
+## Documented Incident Type/Category Definitions
 
 * Web/Cloud
 * Email
 * Improper Usage
 * Equipment Damage/Loss/Theft
 
-### Roles and Responsibilities
+## Roles and Responsibilities
 
 * Who can confiscate equipment, terminate accounts, etc.?
 * Who can disconnect networks?
@@ -86,11 +86,11 @@ See NIST Special Publication 800-61r2. Revise annually.
 
 Also: Stakeholder management!
 
-### Reporting Requirements and Escalation
+## Reporting Requirements and Escalation
 
 The current standard for investigating a potential data breach is to have a report ready within 24 hours of becoming aware of the potential incident.
 
-### Cyber-Incident Response Teams
+## Cyber-Incident Response Teams
 
 A.k.a., the CIRT or CSIRT (Computer Security Incident Response Team). Which would be the "incident response team" above.
 
@@ -100,18 +100,18 @@ Three models:
 * Distributed (multiple teams responsible for different types of incidents or distinct geographic areas)
 * Coordinating (same as the "distributed" model, but coordinated by a central team)
 
-### Training, Tests, and Exercises
+## Training, Tests, and Exercises
 
 The difference between a "test" and an "exercise" is that the former uses real systems (for example, the backup restoration procedure) while the later is a simulation (tabletop exercises, etc.). Tests tend to be *functional*, while exercises can be either functional or scenario-based (the latter are "tabletop" exercises).
 
-### Incident Response Process
+## Incident Response Process
 
 * Preparation
 * Identification & Analysis
 * Containment, Eradication, Recovery
 * Post-Incident
 
-### Preparation
+## Preparation
 
 Resources needed to respond to an incident:
 
@@ -121,7 +121,7 @@ Resources needed to respond to an incident:
 
 These are typically consolidated into a "jump kit".
 
-### Incident Identification and Analysis
+## Incident Identification and Analysis
 
 Impact classification axis:
 
@@ -129,11 +129,11 @@ Impact classification axis:
 * Information (e.g., data breach)
 * Difficulty (of recovery)
 
-### Containment, Eradication, and Recovery
+## Containment, Eradication, and Recovery
 
 The emphasis here is on treating work areas experiencing an incident as crime scenes, though this seems potentially less applicable as more systems/services are mored to the cloud.
 
-### Continuity and Recovery Plans
+## Continuity and Recovery Plans
 
 BCP = Business Continuity Planning
 
@@ -141,7 +141,7 @@ COOP = Continuity of Operations Planning
 
 DRP = Disaster Recovery Planning
 
-### Disaster Recovery
+## Disaster Recovery
 
 * Disaster Recovery Plan (how to recover)
 * Disaster Recovery Policies (who does what during recovery)
@@ -151,7 +151,7 @@ DRP = Disaster Recovery Planning
 
 One thing to keep in mind here is how to handle *active* sabotage or additional losses during the recovery efforts...
 
-### Continuity of Operations Planning
+## Continuity of Operations Planning
 
 A.k.a. business continuity planning (but for government).
 
@@ -159,11 +159,11 @@ Active succession planning is highlighted here, though in my experience it's oft
 
 Tabletop exercises are used here too.
 
-### Containment and Eradication
+## Containment and Eradication
 
 Generally containment is accomplished via network isolation or endpoint configuration changes, rather than by shutting things down.
 
-### Quarantining
+## Quarantining
 
 Three types of systems:
 
@@ -171,7 +171,7 @@ Three types of systems:
 * Patched
 * Unpatched
 
-### Configuration Changes
+## Configuration Changes
 
 * Content/Email/URL filtering
 * Certificate revocation
@@ -179,13 +179,13 @@ Three types of systems:
 
 When responding to an incident, in general you want to implement the control that prevents the widest range of attacks *without* compromising needed functionality.
 
-### Application Control
+## Application Control
 
 Microsoft's application black/whitelist solution is AppLocker. AppLocker can function based on digital signatures, application path, and hash.
 
 Allowed lists are more useful for *preventing* incidents; blocked lists are more useful as part of (short-term) incident response.
 
-### Secure Orchestration, Automation, and Response (SOAR)
+## Secure Orchestration, Automation, and Response (SOAR)
 
 Orchestration/Automation + threat intelligence + incident response. Basically, data goes in while policies and automated actions come out. The advantage here is that incident response can be more formalized and faster than is otherwise generally possible.
 

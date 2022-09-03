@@ -3,7 +3,7 @@
 author:: Nathan Acks  
 date:: 2021-09-10
 
-## M4A to MP3
+# M4A to MP3
 
 ```bash
 ffmpeg -i ${INPUT}.m4a -c:v copy -c:a libmp3lame \
@@ -15,7 +15,7 @@ The -q:a parameters correspond to LAME's -V option, so 0 is the highest quality 
 * [FFMPEG: Convert m4a to mp3 without significant loss](https://superuser.com/a/704535)
 * [FFmpeg MP3 Encoding Guide](https://trac.ffmpeg.org/wiki/Encode/MP3)
 
-## MP4 to GIF
+# MP4 to GIF
 
 ```bash
 # Generate an optimized palette.
@@ -32,7 +32,7 @@ ffmpeg -i $INPUT.mp4 -i $PALETTE.png \
 
 * [Create animated GIFs from MP4 with FFmpeg](https://homehack.nl/create-animated-gifs-from-mp4-with-ffmpeg/)
 
-## MP4 to WebP
+# MP4 to WebP
 
 ```bash
 ffmpeg -i $INPUT.mp4 \

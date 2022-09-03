@@ -12,7 +12,7 @@ hydra -t 4 -l $USER_NAME -P $WORDLIST \
 
 Here `$SERVICE` is "ssh", "ftp", etc. Note that "http" is not used directly; instead use "http-get", "http-put", etc.
 
-## Options
+# Options
 
 * `-f` - Stop after the first successful match. Useful if you are just trying to brute-force a single username!
 * `-l` - Specify the username whose password you want to brute force.
@@ -23,7 +23,7 @@ Here `$SERVICE` is "ssh", "ftp", etc. Note that "http" is not used directly; ins
 * `-t` - Specifies the number of threads (parallel connection attempts) that Hydra should make at any one time.
 * `-V` - Verbose output. Use `-vV` for even more verbose output, or `-d` for debugging output.
 
-## Attacking API Endpoints Using JSON
+# Attacking API Endpoints Using JSON
 
 Hydra can be used to attack API endpoints that accept JSON (though apparently there can be some problems with the headers that are passed along):
 
