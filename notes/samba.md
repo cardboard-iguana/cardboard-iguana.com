@@ -19,4 +19,7 @@ DRSUAPI is Windows' implementation of the "Directory Replication Service" protoc
 
 * [DCE/RPC (Wikipedia)](https://en.wikipedia.org/wiki/DCE/RPC)
 * [DRSUAPI](https://wiki.samba.org/index.php/DRSUAPI)
-* [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
+
+## Related Video
+
+[Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)

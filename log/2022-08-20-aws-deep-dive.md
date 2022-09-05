@@ -5,6 +5,8 @@ date:: 2022-08-20
 
 # Amazon VPC: Security at the Speed of Light
 
+[AWS re:Invent 2018: Amazon VPC - Security at the Speed of Light (YouTube)](https://youtu.be/uhXalpNzPU4)
+
 VPC = Virtual Private Cloud
 
 Think of a VPC as a "virtual data center".
@@ -39,9 +41,9 @@ While HyperPlane nodes are shared, every customer gets a *unique* set of nodes. 
 
 HyperPlane nodes are actually based on the S3 load balancer.
 
-* [AWS re:Invent 2018: Amazon VPC - Security at the Speed of Light (YouTube)](https://youtu.be/uhXalpNzPU4)
-
 # Deep Dive on New Amazon EC2 Instances and Virtualization Technologies
+
+[Deep Dive on New Amazon EC2 Instances and Virtualization Technologies (YouTube)](https://youtu.be/AAq-DDbFiIE)
 
 The basic problem of virtualization: There are certain machine instructions that are "privileged" for the operating system (because of the processor-level security mode that OS code runs at). A processor can be virtualized when the errors caused when these instructions are run with a lower privilege level can be trapped and dealt with by more privileged code (which is why hardware virtualization requires OS support of some kind as well).
 
@@ -74,5 +76,3 @@ The full "Nitro" infrastructure moves the VMM and the "pass through" device mode
 But now all the hypervisor does is run the VMM. So the latest generation of EC2 has moved to using a special hardware chip to enforcing cross-processor security boundaries, and then just runs the "virtual machines" directly on the host CPUs. Which means tat such "bare metal" instances aren't even really "virtualized" anymore - its more like "partitioned hardware".
 
 This "bare metal" implementation is what enables VMWare to run in AWS. So we've now come full-circle - AWS started as a virtualization solution and moved through the "Nitro" system to something that looks, if you squint at it, philosophically similar to an FPGA (except using traditional CPUs, etc.). And because there's no virtualization actually happening anymore, this means that this kind of "programable hardware" can itself run virtual machines!
-
-* [Deep Dive on New Amazon EC2 Instances and Virtualization Technologies (YouTube)](https://youtu.be/AAq-DDbFiIE)

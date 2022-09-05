@@ -5,6 +5,8 @@ date:: 2022-08-25
 
 # A Serverless Journey: AWS Lambda Under the Hood
 
+[AWS re:Invent 2018: A Serverless Journey - AWS Lambda Under the Hood (YouTube)](https://youtu.be/3qln2u1Vr2E)
+
 Lambda is a containerized service on the backend - function code is run by workers, each of which manages multiple "sandboxes". Workers are managed by a "worker manager", and are recycled every 8 - 10 hours. Sandboxes are destroyed if they become idle for some period of time in order to free up resources.
 
 A worker is an entire physical server.
@@ -29,9 +31,9 @@ The AWS API gateway can call into Lambda functions for actual execution.
 
 In order to optimize Lambda worker placement, one subnet should be dedicated to Lambda *per availability zone*.
 
-* [AWS re:Invent 2018: A Serverless Journey - AWS Lambda Under the Hood (YouTube)](https://youtu.be/3qln2u1Vr2E)
-
 # Introduction to the AWS CLI
+
+[AWS re:Invent 2017: Introduction to the AWS CLI (YouTube)](https://youtu.be/QdzV04T_kec)
 
 Order of preference for account configuration in the AWS CLI: Command line options > Environment variables > `~/.aws/credentials` and `~/.aws/config` files > AWS container-level credentials > AWS EC2-level credentials.
 
@@ -45,7 +47,6 @@ The AWS CLI supports asking for MFA codes, and will cache the resulting authenti
 
 The AWS CLI `--filter` option is server-side but only supported for a few commands, while the `--query` option is client-side but is supported for all commands. Both commands define searches using JMESPath.
 
-* [AWS re:Invent 2017: Introduction to the AWS CLI (YouTube)](https://youtu.be/QdzV04T_kec)
 * [awslabs / aws-shell](https://github.com/awslabs/aws-shell)
 * [JMESPath](https://jmespath.org/)
 
@@ -53,9 +54,9 @@ The AWS CLI `--filter` option is server-side but only supported for a few comman
 
 # HTTP Desync Attacks
 
-xxx
+[HTTP Desync Attacks: Smashing into the Cell Next Door (DEF CON 27) (YouTube)](https://www.youtube.com/watch?v=w-eJM2Pc0KI)
 
-* [HTTP Desync Attacks: Smashing into the Cell Next Door (DEF CON 27)](https://www.youtube.com/watch?v=w-eJM2Pc0KI)
+xxx
 
 # AWS IAM Policies in a Nutshell
 

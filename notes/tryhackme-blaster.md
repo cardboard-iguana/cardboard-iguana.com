@@ -139,7 +139,10 @@ FLAG 10: What are the contents of `root.txt`? - `THM{COIN_OPERATED_EXPLOITATION}
 
 * [CVE-2019-1388 (MITRE)](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-1388)
 * [CVE-2019-1388 (nagenrauft-consulting.com)](https://www.nagenrauft-consulting.com/2019/11/21/cve-2019-1388-hhupd-exe/)
-* [CVE-2019-1388: Windows Privilege Escalation Through UAC](https://www.youtube.com/watch?v=3BQKpPNlTSo)
+
+## Related Video
+
+[CVE-2019-1388: Windows Privilege Escalation Through UAC (YouTube)](https://www.youtube.com/watch?v=3BQKpPNlTSo)
 
 # Adoption into the Collective
 

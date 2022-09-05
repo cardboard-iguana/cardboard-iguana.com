@@ -32,11 +32,13 @@ I'll be starting off by watching through the "AWS Essentials" YouTube playlist p
 
 ## Project Omega!
 
+[AWS Essentials: Project Omega! (YouTube)](https://youtu.be/CGFrYNDpzUM)
+
 This is apparently the framing device for the entire series. Pretty skippable.
 
-* [AWS Essentials: Project Omega! (YouTube)](https://youtu.be/CGFrYNDpzUM)
-
 ## AWS Free Tier
+
+[AWS Essentials: AWS Free Tier (YouTube)](https://youtu.be/8p1bTTV6ATE)
 
 Core AWS services:
 
@@ -49,29 +51,30 @@ Core AWS services:
 * Lambda
 
 These all have some kind of free version.
-* [AWS Essentials: AWS Free Tier (YouTube)](https://youtu.be/8p1bTTV6ATE)
 
 ## Create an AWS Account
 
-Wow, AWS is using *voice calls* for account authentication! (At least they're automated...)
+[AWS Essentials: Create an AWS Account (YouTube)](https://youtu.be/_siSwgpVQNc)
 
-* [AWS Essentials: Create an AWS Account (YouTube)](https://youtu.be/_siSwgpVQNc)
+Wow, AWS is using *voice calls* for account authentication! (At least they're automated...)
 
 ## How to Navigate the AWS Console
 
+[AWS Essentials: How to Navigate the AWS Console (YouTube)](https://youtu.be/A43m4TDFCUM)
+
 You can switch between regions in AWS using a simple drop-down in the AWS Console's header.
 
-* [AWS Essentials: How to Navigate the AWS Console (YouTube)](https://youtu.be/A43m4TDFCUM)
-
 ## What is IAM?
+
+[AWS Essentials: What is IAM? (YouTube)](https://youtu.be/4ngYrnJb7F8)
 
 The first user in an AWS account is the "root" user, and has the sort of privileges this name implies.
 
 While the root user gets permission to *everything*, subsequent users receive no permissions beyond what's required to log in - any additional capabilities must be added in the IAM interface.
 
-* [AWS Essentials: What is IAM? (YouTube)](https://youtu.be/4ngYrnJb7F8)
-
 ## IAM Initial Setup and Configuration
+
+[AWS Essentials: IAM Initial Setup and Configuration (YouTube)](https://youtu.be/W_eu0rJN0yU)
 
 After initially creating the root account, the first thing you should do is work through all of the "Security Status" items in the IAM console.
 
@@ -79,18 +82,19 @@ Amazon MFA is *always* TOTP-based (when AWS refers to a "hardware key fob", it m
 
 For obvious reasons, the first thing you should probably do is create an additional (admin) user, and then generally *avoid* using the root user. Admin users are defined by having the `AdministratorAccess` policy attached.
 
-* [AWS Essentials: IAM Initial Setup and Configuration (YouTube)](https://youtu.be/W_eu0rJN0yU)
-
 ## IAM Roles
+
+[AWS Essentials: IAM Roles (YouTube)](https://youtu.be/7sYE6J1_CsQ)
 
 Services (really, objects in a service) in AWS can't be assigned policies directly, but *can* be assigned *roles*.
 
 In general, roles are used to package policies for *service objects*, while groups are used to package policies for *users*. (That said, roles *can* be assigned to users as well; they're quite flexible.)
 
-* [AWS Essentials: IAM Roles (YouTube)](https://youtu.be/7sYE6J1_CsQ)
 * [Assume the Worst: Enumerating AWS Roles through 'AssumeRole'](https://rhinosecuritylabs.com/aws/assume-worst-aws-assume-role-enumeration/)
 
 ## AWS Global Infrastructure
+
+[AWS Essentials: AWS Global Infrastructure (YouTube)](https://youtu.be/J_Kh1gZaMd4)
 
 VPC (Virtual Private Cloud)  is the backbone of AWS's offerings.
 
@@ -100,9 +104,9 @@ VPC (Virtual Private Cloud)  is the backbone of AWS's offerings.
 
 Every data center is assigned to *only* one availability zone; the purpose of availability zones is to provide redundancy within a region.
 
-* [AWS Essentials: AWS Global Infrastructure (YouTube)](https://youtu.be/J_Kh1gZaMd4)
-
 ## What is a VPC?
+
+[AWS Essentials: What is a VPC? (YouTube)](https://youtu.be/7XnpdZF_COA)
 
 VPC settings can be changed in the AWS console under Networking > VPC.
 
@@ -112,25 +116,25 @@ Note that a "default" VPC is created along with a new AWS account, but *addition
 
 The VPC "internet gateway" is roughly equivalent to a modem in a home or SMB, while VPC "route tables" function like an actual router. VPC NACLs roughly fill the role of a (very simple, stateless) firewall.
 
-* [AWS Essentials: What is a VPC? (YouTube)](https://youtu.be/7XnpdZF_COA)
-
 ## Internet Gateways (IGWs)
+
+[AWS Essentials: Internet Gateways (IGWs) (YouTube)](https://youtu.be/pAOrBxZ7584)
 
 Basically: The part of a VPC that provides the actual connection to the internet. It's automatically scaled by Amazon as needed, so there's little that needs to be configured here.
 
 Really, all a IGW is providing is a *route* from the attached VPC to the internet. There can only be *one* IGW attached to a VPC at any given time. (Amazon also won't allow a IGW to be detached if there are any live resources like EC2 or RDS instances in the VPC.)
 
-* [AWS Essentials: Internet Gateways (IGWs) (YouTube)](https://youtu.be/pAOrBxZ7584)
-
 ## Route Tables (RTs)
+
+[AWS Essentials: Route Tables (RTs) (YouTube)](https://youtu.be/GrfOsWUVCfg)
 
 The Route Table is presented (almost) as a literal route table (think of the Linux `route` command). So, no surprises here.
 
 There can be *multiple* RTs per VPC. Similar to IGWs, however, RTs can only be deleted if they have no dependencies (active routes).
 
-* [AWS Essentials: Route Tables (RTs) (YouTube)](https://youtu.be/GrfOsWUVCfg)
-
 ## Network Access Control Lists (NACLs)
+
+[AWS Essentials: Network Access Control Lists (NACLs) (YouTube)](https://youtu.be/vJzHn24TNQE)
 
 Think: Stateless firewall.
 
@@ -142,9 +146,9 @@ NACL rules are evaluated from lowest-to-highest rule number. Fortunately, the AW
 
 Note that additional network security controls ("security groups") can be applied to AWS resources like EC2 instances, etc. But NACLs are the only *subnet* level protection that's available.
 
-* [AWS Essentials: Network Access Control Lists (NACLs) (YouTube)](https://youtu.be/vJzHn24TNQE)
-
 ## Subnets
+
+[AWS Essentials: Subnets (YouTube)](https://youtu.be/KNT463WSjjY)
 
 VPC subnets are limited to particular availability zones; by default, one subnet is created per availability zone for the region a VPC is created in.
 
@@ -152,29 +156,29 @@ Resources *must* be provisioned within a subnet. Since subnets cannot span avail
 
 Subnets can be "public" (internet routable) or "private" (*not* internet routable), which is determined by the associated route table. Note that every subnets *must* be associated with a route table.
 
-* [AWS Essentials: Subnets (YouTube)](https://youtu.be/KNT463WSjjY)
-
 ## Availability Zones (VPC Specific)
+
+[AWS Essentials: Availability Zones (VPC Specific) (YouTube)](https://youtu.be/ET_CSqdGsYg)
 
 The point of availability zones within a VPC is to allow redundancy to be engineered via mirrored subnets + resources.
 
-* [AWS Essentials: Availability Zones (VPC Specific) (YouTube)](https://youtu.be/ET_CSqdGsYg)
-
 ## S3 Basics
+
+[AWS Essentials: S3 Basics (YouTube)](https://youtu.be/f9hXcxHnQuE)
 
 Objects = Files
 
 Buckets are limited to particular regions; data is automatically replicated across availability zones within that region.
 
-* [AWS Essentials: S3 Basics (YouTube)](https://youtu.be/f9hXcxHnQuE)
-
 ## Buckets & Objects
+
+[AWS Essentials: Buckets & Objects (YouTube)](https://youtu.be/skJosIhDNF0)
 
 Bucket names are *globally* unique.
 
-* [AWS Essentials: Buckets & Objects (YouTube)](https://youtu.be/skJosIhDNF0)
-
 ## Storage Classes
+
+[AWS Essentials: Storage Classes (YouTube)](https://youtu.be/DFfgYapmu9s)
 
 Storage classes in S3 (standard, glacier, etc.) can be defined *per object*. Classes:
 
@@ -190,5 +194,3 @@ Storage classes in S3 (standard, glacier, etc.) can be defined *per object*. Cla
 Storage class can be set during upload, by using the object lifecycle tool, or just by editing in the AWS console (note that Glacier cannot be chosen in this way). Changing the storage type of a folder will change the storage class of all contained objects but will *not* effect subsequent uploads.
 
 Reduced Redundancy Storage is actually recommended for backup (!), though Glacier is intended for actual *archival* usage.
-
-* [AWS Essentials: Storage Classes (YouTube)](https://youtu.be/DFfgYapmu9s)

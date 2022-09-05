@@ -5,7 +5,7 @@ date:: 2022-06-23
 
 # Deep Dive on Amazon S3 Security and Management
 
-* [AWS re:Invent 2018: Deep Dive on Amazon S3 Security and Management (YouTube)](https://youtu.be/x25FSsXrBqU)
+[AWS re:Invent 2018: Deep Dive on Amazon S3 Security and Management (YouTube)](https://youtu.be/x25FSsXrBqU)
 
 ## S3 Access Control Mechanisms
 
@@ -60,7 +60,7 @@ A good use case here for when to use AssumeRole, but it's kind of reverse what A
 
 # Become an IAM Policy Master in 60 Minutes or Less
 
-* [AWS re:Invent 2018: Become an IAM Policy Master in 60 Minutes or Less (YouTube)](https://youtu.be/YQsK4MtsELU)
+[AWS re:Invent 2018: Become an IAM Policy Master in 60 Minutes or Less (YouTube)](https://youtu.be/YQsK4MtsELU)
 
 ## IAM Policy Language
 

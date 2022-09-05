@@ -156,10 +156,9 @@ TREAT PERSONNEL COMPROMISE AS CATASTROPHIC: Assume that the information that any
 
 ## Disguise on the Run
 
-* [How Spies Use Disguises](https://www.wired.com/video/watch/how-spies-use-disguises)
-* [Former CIA Operative Explains How Spies Use Disguises](https://youtu.be/JASUsVY5YJ8)
+[Former CIA Operative Explains How Spies Use Disguises (YouTube)](https://youtu.be/JASUsVY5YJ8)
 
-This is a video from Wired.
+* [How Spies Use Disguises](https://www.wired.com/video/watch/how-spies-use-disguises)
 
 > We talk about disguise as an onion, whether you're building it or peeling it off.
 > 
@@ -748,19 +747,13 @@ Security has an environmental impact - your actions (or failure to act) visits r
 
 Security is a process, and good security habits make it easier to follow that process. This actually reminds me of something I just encountered today on Twitter:
 
-> Rituals are a powerful tool for self-control: across multiple contexts, people who are given arbitrary, fixed, and rigid rituals to follow have lower self-control conflicts & higher self-discipline (one example, on reducing calories eaten, is in the image)
-> 
-> https://www.alexandria.unisg.ch/255299/2/Enacting%20Rituals%20to%20Improve%20Self-Control.pdf
-> 
-> - Ethan Mollick, via Twitter
+[Rituals are a powerful tool for self-control: across multiple contexts, people who are given arbitrary, fixed, and rigid rituals to follow have lower self-control conflicts & higher self-discipline. (Ethan Mollick) (Twitter)](https://twitter.com/emollick/status/1435302327045472257)
 
 *Habit* create *space* for self-control, and self-control is conversely what allows you to follow process. So while security isn't *just* a set of rules, having a set of good habits *gives you mental space* to consider the implication of security situations beyond that habit's rule set ("day-to-day" vs. "during an operation").
 
 > You don't turn to the rules for answers, you turn to the process.
 > 
 > - The Grugq
-
-* [Ethan Mollick on Twitter](https://twitter.com/emollick/status/1435302327045472257)
 
 ## Covert Interactions
 

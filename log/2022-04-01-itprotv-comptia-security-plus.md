@@ -64,14 +64,12 @@ Apparently, internal device communications within automobiles is all plaintext, 
 
 This section reminds me of a trilemma I coined during a discussion with other members of the Yak Collective:
 
-> NECOPINUS' TRILEMMA: For any computational system, there is a trade-off between the integrity of the system's computations, the speed at which these computations can be made, and the energy used by the system while making those computations.
+[For any computational system, there is a trade-off between the integrity of the system's computations, the speed at which these computations can be made, and the energy used by the system while making those computations. (Necopinus' Trilemma) (Twitter)](https://twitter.com/necopinus/status/1488201961144913923)
 
 I later posted that to Twitter, and came up with a pithier corollary:
 
-> Secure, fast, inexpensive: Pick two.
+[Secure, fast, inexpensive: Pick two. (Corollary to Necopinus' Trilemma) (Twitter)](https://twitter.com/necopinus/status/1488201962394767360)
 
 So it goes.
 
 * [The Yak Collective](https://yakcollective.org)
-* [Necopinus' Trilemma (Twitter)](https://twitter.com/necopinus/status/1488201961144913923)
-* [Corollary to Necopinus' Trilemma (Twitter)](https://twitter.com/necopinus/status/1488201962394767360)

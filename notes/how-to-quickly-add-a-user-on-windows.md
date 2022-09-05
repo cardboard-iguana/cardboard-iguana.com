@@ -14,4 +14,6 @@ reg add `
 	/v fDenyTSConnections /t REG_DWORD /d 0 /f
 ```
 
-* [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
+## Related Video
+
+[Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)

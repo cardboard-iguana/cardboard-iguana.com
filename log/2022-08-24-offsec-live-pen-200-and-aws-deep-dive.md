@@ -56,6 +56,8 @@ Be aware that AMSI bypasses are *per session*, not global!
 
 # Another Day, Another Billion Packets
 
+[AWS re:Invent 2015: Another Day, Another Billion Packets (YouTube)](https://youtu.be/R-n4dDGfQd4)
+
 VPC was originally created to help *Amazon* migrate their data centers to AWS.
 
 EC2 originally just assigned new instances random IP addresses in the 10.44.x.x range. Every new instance got its own IP address, and there was no concept of unified subnets.
@@ -83,5 +85,3 @@ The last non-AWS Amazon web server was deactivated on November 10, 2010. Since t
 Edges can also now route to S3, enabling S3 buckets to be exposed *privately* within a VPC. Packets routed to S2 buckets configured in this fashion *never* traverse the public internet - they go out to an edge device and then are routed from there to S3.
 
 S3 buckets can be restricted to particular VPCs, and EC2 instances can be restricted to accessing particular EC2 buckets. All of this is done with the standard Amazon ("Aspen") policy document structure.
-
-* [AWS re:Invent 2015: Another Day, Another Billion Packets (YouTube)](https://youtu.be/R-n4dDGfQd4)

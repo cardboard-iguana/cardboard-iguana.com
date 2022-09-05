@@ -15,4 +15,6 @@ Update the current PATH in Linux:
 export PATH=$PATH:/some/other/directory
 ```
 
-* [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)
+## Related Video
+
+[Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)

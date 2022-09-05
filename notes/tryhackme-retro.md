@@ -124,6 +124,9 @@ oot.txt.txt` (note the extra `.txt`) to obtain the final flag.
  
 * [CVE-2019-1388 Detail (National Vulnerability Database)](https://nvd.nist.gov/vuln/detail/CVE-2019-1388)
 * [CVE-2019-1388 (nagenrauft-consulting.com)](https://www.nagenrauft-consulting.com/2019/11/21/cve-2019-1388-hhupd-exe/)
-* [CVE-2019-1388: Windows Privilege Escalation Through UAC](https://www.youtube.com/watch?v=3BQKpPNlTSo)
+
+## Related Video
+
+[CVE-2019-1388: Windows Privilege Escalation Through UAC (YouTube)](https://www.youtube.com/watch?v=3BQKpPNlTSo)
 
 ELAPSED TIME: 1 h 16 min

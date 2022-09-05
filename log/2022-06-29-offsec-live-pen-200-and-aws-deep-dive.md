@@ -38,6 +38,8 @@ As the first part of today's "AWS Deep Dive" I'll be watching and taking notes o
 
 ## Video Notes
 
+[AWS CloudFormation Tutorial (YouTube)](https://youtu.be/LDSMIvUuFOE)
+
 The idea behind CloudFormation is to manage the multiple services that are required to run an application in AWS. It's the same idea as AMIs in EC2, except that CloudFormation templates snapshotting AWS *infrastructure* rather than just VMs. Once you have a CloudFormation template, you can use it to spin up identical copies of your infrastructure in multiple regions.
 
 CloudFormation templates are defined as JSON or YAML blobs (normally configured using the AWS CloudFormation Designer).
@@ -53,8 +55,6 @@ Information that needs to be filled in during stack creation is specified by the
 
 The default EC2 SSH login is `ec2-user`; only private key logins are allowed.
 
-* [AWS CloudFormation Tutorial (YouTube)](https://youtu.be/LDSMIvUuFOE)
-
 ## Demo Stack Setup Notes
 
 Note that the CloudFormation Designer does *not* work well in iOS browsers! (In particular, drag-and-drop is next-to-broken...)
@@ -68,6 +68,8 @@ As far as I can tell, the random string appended to default CloudFormation names
 EC2 instances created by CloudFormation have names like `i-${RANDOM_HEX_NUMBER}`, where `$RANDOM_HEX_NUMBER` is always 17 (👀) digits.
 
 # Capacity Management Made Easy with Amazon EC2 Auto Scaling
+
+[AWS re:Invent 2018: Capacity Management Made Easy with Amazon EC2 Auto Scaling (YouTube)](https://youtu.be/PideBMIcwBQ)
 
 There are three different methods of autoscaling in AWS: EC2 autoscaling, application autoscaling (EC2 Containers, Aurora, DynamoDB, and AppStream), and AWS autoscaling (which scales bundles of resources in AWS, rather than just single services).
 
@@ -92,5 +94,3 @@ How is the minimum, maximum, and desired number of instances for a group determi
 *Do not set your scale-up and scale-down thresholds to the same value!* Netflix has a story of a team doing this, and it caused the EC2 autoscaling service to continually churn instances.
 
 The general take-away from Netflix's part of the presentation seems to be "just use dynamic scaling with a single target". That target should be indicative of instance *capacity*, not overall service *usage*; in practice, this *generally* means scaling on CPU usage.
-
-* [AWS re:Invent 2018: Capacity Management Made Easy with Amazon EC2 Auto Scaling (YouTube)](https://youtu.be/PideBMIcwBQ)
