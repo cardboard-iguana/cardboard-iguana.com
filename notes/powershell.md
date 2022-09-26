@@ -59,8 +59,8 @@ powershell.exe -enc $EncodedText
 ## Manipulating Services
 
 * `Get-Service` - list all services, or drill down on a particular service.
-* `Start-Service -Name $SERVICE`/`sc start $SERVICE` - start $SERVICE.
-* `Stop-Service -Name $SERVICE`/`sc stop $SERVICE` - stop $SERVICE.
+* `Start-Service -Name $SERVICE`/`sc.exe start $SERVICE` - start $SERVICE.
+* `Stop-Service -Name $SERVICE`/`sc.exe stop $SERVICE` - stop $SERVICE.
 
 ## Calculating File Hashes
 
