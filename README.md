@@ -2,6 +2,7 @@
 
 ## Hacker's Log (Recent)
 
+* [2022-09-27 - AWS Deep Dive](log/2022-09-27-aws-deep-dive.md)
 * [2022-09-19 - AWS Deep Dive](log/2022-09-19-aws-deep-dive.md)
 * [2022-09-02 - OffSec Live: PEN-200](log/2022-09-02-offsec-live-pen-200.md)
 * [2022-08-31 - OffSec Live: PEN-200](log/2022-08-31-offsec-live-pen-200.md)
@@ -16,7 +17,6 @@
 * [2022-08-14 - DEF CON 30](log/2022-08-14-def-con-30.md)
 * [2022-08-13 - DEF CON 30](log/2022-08-13-def-con-30.md)
 * [2022-08-12 - DEF CON 30](log/2022-08-12-def-con-30.md)
-* [2022-08-11 - DEF CON 30](log/2022-08-11-def-con-30.md)
 
 ## Website Navigation
 
