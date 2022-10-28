@@ -40,7 +40,7 @@ Interestingly, metrics associated with individual API methods incur a charge, bu
 # AWS Deep Dive
 
 author:: Nathan Acks  
-date:: 2022-10-27
+date:: 2022-10-28
 
 # Amazon API Gateway
 
@@ -54,7 +54,9 @@ Continued notes about the Amazon API Gateway.
 
 ### Deploying a REST API in Amazon API Gateway (Continued)
 
-> https://docs.aws.amazon.com/apigateway/latest/developerguide/stage-variables.html
+Stage variables can be referenced directly as `stageVariables.VARIABLE_NAME` in request and response header parameter mappings, but must be referenced as `${stageVariables.VARIABLE_NAME}` everywhere else (including mapping *templates*). Interestingly, stage variables cannot be used to construct ARNs referencing Lambda functions in other accounts.
+
+> https://docs.aws.amazon.com/apigateway/latest/developerguide/canary-release.html
 
 * [2022-10-26 - AWS Deep Dive (Deploying a REST API in Amazon API Gateway, Part 1)](2022-10-26-aws-deep-dive.md)
 * [Deploying a REST API in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-deploy-api.html)
