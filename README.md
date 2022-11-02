@@ -12,11 +12,6 @@
 * [2022-10-10 - AWS Deep Dive](log/2022-10-10-aws-deep-dive.md)
 * [2022-10-08 - AWS Deep Dive](log/2022-10-08-aws-deep-dive.md)
 * [2022-10-04 - AWS Deep Dive](log/2022-10-04-aws-deep-dive.md)
-* [2022-10-02 - AWS Deep Dive](log/2022-10-02-aws-deep-dive.md)
-* [2022-09-29 - AWS Deep Dive](log/2022-09-29-aws-deep-dive.md)
-* [2022-09-27 - AWS Deep Dive](log/2022-09-27-aws-deep-dive.md)
-* [2022-09-19 - AWS Deep Dive](log/2022-09-19-aws-deep-dive.md)
-* [2022-09-02 - OffSec Live: PEN-200](log/2022-09-02-offsec-live-pen-200.md)
 
 ## Website Navigation
 

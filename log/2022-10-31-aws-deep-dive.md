@@ -66,7 +66,7 @@ To be continued...
 # AWS Deep Dive
 
 author:: Nathan Acks  
-date:: 2022-11-01
+date:: 2022-11-02
 
 # Amazon API Gateway
 
@@ -80,7 +80,9 @@ Continued notes about the Amazon API Gateway.
 
 ### Setting Up Custom Domain Names for REST APIs in Amazon API Gateway (Continued)
 
-> https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains-prerequisites.html
+API Gateway custom domains are all managed through CloudFront.
+
+> https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-regional-api-custom-domain-create.html
 
 * [2022-10-31 - AWS Deep Dive (Setting Up Custom Domain Names for REST APIs in Amazon API Gateway, Part 1)](2022-10-31-aws-deep-dive.md)
 * [Setting up custom domain names for REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html)
