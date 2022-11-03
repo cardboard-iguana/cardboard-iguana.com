@@ -66,7 +66,7 @@ To be continued...
 # AWS Deep Dive
 
 author:: Nathan Acks  
-date:: 2022-11-02
+date:: 2022-11-03
 
 # Amazon API Gateway
 
