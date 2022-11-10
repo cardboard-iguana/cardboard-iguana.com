@@ -2,6 +2,7 @@
 
 ## Hacker's Log (Recent)
 
+* [2022-11-09 - AWS Deep Dive](log/2022-11-09-aws-deep-dive.md)
 * [2022-11-03 - AWS Deep Dive](log/2022-11-03-aws-deep-dive.md)
 * [2022-10-31 - AWS Deep Dive](log/2022-10-31-aws-deep-dive.md)
 * [2022-10-26 - AWS Deep Dive](log/2022-10-26-aws-deep-dive.md)
@@ -11,7 +12,6 @@
 * [2022-10-15 - AWS Deep Dive](log/2022-10-15-aws-deep-dive.md)
 * [2022-10-11 - AWS Deep Dive](log/2022-10-11-aws-deep-dive.md)
 * [2022-10-10 - AWS Deep Dive](log/2022-10-10-aws-deep-dive.md)
-* [2022-10-08 - AWS Deep Dive](log/2022-10-08-aws-deep-dive.md)
 
 ## Website Navigation
 
