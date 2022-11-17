@@ -49,7 +49,7 @@ A `type` property can also be assigned (both to the API method and its response)
 # AWS Deep Dive
 
 author:: Nathan Acks  
-date:: 2022-11-11
+date:: 2022-11-17
 
 # Amazon API Gateway
 
@@ -61,11 +61,11 @@ Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### # Use the Serverless Developer Portal to Catalog Your API Gateway APIs
+### Configuring Mutual TLS Authentication for a REST API in API Gateway
 
-> https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-developer-portal.html
+> https://docs.aws.amazon.com/apigateway/latest/developerguide/rest-api-mutual-tls.html
 
-* [Use the serverless developer portal to catalog your API Gateway APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-developer-portal.html)
+* [Configuring mutual TLS authentication for a REST API](https://docs.aws.amazon.com/apigateway/latest/developerguide/rest-api-mutual-tls.html)
 
 ## Working With HTTP APIs
 
