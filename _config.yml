@@ -19,7 +19,8 @@ author: Nathan Acks
 optional_front_matter:
   remove_originals: true
 
-# Readme index defaults:
+# Readme index defaults.
+#
 readme_index:
   remove_originals: true
 
