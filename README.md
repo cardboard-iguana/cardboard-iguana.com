@@ -21,6 +21,7 @@
 ## Elsewhere
 
 * [Personal Homepage](https://necopinus.xyz)
+* [Farcaster](https://fcast.me/necopinus)
 * [GitHub](https://github.com/necopinus)
 * [Resume](https://registry.jsonresume.org/necopinus)
 * [LinkedIn](https://www.linkedin.com/in/necopinus/)
