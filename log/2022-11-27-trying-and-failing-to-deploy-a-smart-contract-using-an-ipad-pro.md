@@ -30,7 +30,7 @@ While working on the iPad, I used Safari with the Light Wallet extension for int
 
 * [Light Wallet](https://wallet.light.so)
 
-As fate would have it, I started using a standard location for my avatar (`https://necopinus.xyz/avatar/avatar.webp`) when I set up my ENS domains. For some reason the correct URL isn't showing up on the ENS console, even though it appears to be set when I view it in the controling Safe app. I'm not sure why this is, but the important thing is that I already have a standard location for my avatar.
+As fate would have it, I started using a standard location for my avatar (`https://necopinus.xyz/​avatar/​avatar.webp`) when I set up my ENS domains. For some reason the correct URL isn't showing up on the ENS console, even though it appears to be set when I view it in the controling Safe app. I'm not sure why this is, but the important thing is that I already have a standard location for my avatar.
 
 * [necopinus.xyz on ENS](https://app.ens.domains/name/necopinus.xyz/details)
 * [Safe](https://app.safe.global/)
@@ -46,7 +46,7 @@ The first real step was thus to upload a JSON metadata file pointing to this ava
 }
 ```
 
-I put this at `https://necopinus.xyz/avatar/ethereum/<WALLET_ADDRESS>.json` to make it straight forward to support additional wallets and blockchains in the future.
+I put this at `https://necopinus.xyz/​avatar/​ethereum/​<WALLET_ADDRESS>.json` to make it straight forward to support additional wallets and blockchains in the future.
 
 Once this was done, I decided to more-or-less follow the "How to Develop an NFT Smart Contract (ERC721) with Alchemy" walk-through. I'm going to skip a lot of the details here, so if you're trying to do this yourself you should also read through that document.
 
