@@ -16,7 +16,7 @@ My personal project this weekend was to deploy a smart contract to the Ethereum 
 
 The central problem here is that if I use an NFT as my avatar, then I need to pay for another NFT (either to buy one or mint one myself) whenever I decide I want to change my avatar. Also, my current (and favorite) avatar is taken from a John Schoenherr painting of one of the great sandworms of Arrakis - I'm not sure I want to "mint" that in any way that could be interpreted as me claiming "ownership" of it. It's Schoenherr's painting after all!
 
-* [The Artists Who Visited "Dune" and "The Most Important Science FictionArt Ever Created"](https://dangerousminds.net/comments/the_artist_who_visited_dune)
+* [The Artists Who Visited "Dune" and "The Most Important Science Fiction Art Ever Created"](https://dangerousminds.net/comments/the_artist_who_visited_dune)
 
 Finally, all of the services I've seen that allow you to mint your own NFT store the associated JSON metadata and image file using a decentralized solution like IPFS or Arweave. This is actually a good thing, because it gives "collectable" NFTs a degree of permanence, but in my case I actually *want* to be able to update the associated metadata and image arbitrarily. Fortunately, I control my own domain and EIP-721 (which defines the NFT standard) doesn't forbid using "non-permenant" URIs, so all this means is that I need to deploy my own smart contract to create my NFT avatar(s), rather than using a pre-packaged solution.
 
