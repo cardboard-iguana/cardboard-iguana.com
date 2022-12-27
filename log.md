@@ -1,5 +1,6 @@
 # A Hacker's Log
 
+* [2022-12-22 - AWS Deep Dive](log/2022-12-22-aws-deep-dive.md)
 * [2022-12-20 - AWS Deep Dive](log/2022-12-20-aws-deep-dive.md)
 * [2022-11-28 - AWS Deep Dive](log/2022-11-28-aws-deep-dive.md)
 * [2022-11-27 - Trying (and Failing) to Deploy a Smart Contract Using an iPad Pro](log/2022-11-27-trying-and-failing-to-deploy-a-smart-contract-using-an-ipad-pro.md)
