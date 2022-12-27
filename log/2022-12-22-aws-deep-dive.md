@@ -32,7 +32,7 @@ Throttling hierarchy: AWS > account and region > route and stage.
 # AWS Deep Dive
 
 author:: Nathan Acks  
-date:: 2022-12-24
+date:: 2022-12-27
 
 # Amazon API Gateway
 
@@ -40,23 +40,19 @@ Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## OpenAPI Extensions
-
-* [Working with API Gateway Extensions to OpenAPI](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html)
-
-### The `x-amazon-apigateway-cors` OpenAPI Extension in API Gateway
-
-==xxx==
-
-> https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-cors-configuration.html
-
-* [x-amazon-apigateway-cors object](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-cors-configur)ation.html
-
 ## Security
 
+* [Security in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/security.html)
+
+### Data Encryption in Amazon API Gateway
+
+Interesting - AWS maintains FIPS-specific endpoints for use by organizations that require FIPS compliance. (In other words, FIPS is less of an "option" in AWS and more of a "parallel infrastructure".)
+
+Tag and *all* free-form fields are basically considered non-confidential in AWS. This is a big contrast to something like GitHub (and many other services), which supplies a functionality specifically for storing sensitive/secret information.
+
 ==xxx==
 
-* [Security in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/security.html)
+* [Data encryption in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/data-protection-encryption.html)
 
 ## Tagging
 
