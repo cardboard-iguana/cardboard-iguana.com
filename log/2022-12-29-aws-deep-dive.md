@@ -91,7 +91,7 @@ The AWS Encryption SDK provides hooks for envelope encryption, where the "long t
 # AWS Deep Dive
 
 author:: Nathan Acks  
-date:: 2022-12-30
+date:: 2023-01-02
 
 # AWS KMS Cryptographic Details
 
