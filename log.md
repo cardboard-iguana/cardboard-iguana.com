@@ -1,5 +1,6 @@
 # A Hacker's Log
 
+* [2023-01-02 - AWS Deep Dive](log/2023-01-02-aws-deep-dive.md)
 * [2022-12-31 - AWS Deep Dive](log/2022-12-31-aws-deep-dive.md)
 * [2022-12-30 - Abandoning My Gemini Ambitions (For Now)](log/2022-12-30-abandoning-my-gemini-ambitions-for-now.md)
 * [2022-12-29 - AWS Deep Dive](log/2022-12-29-aws-deep-dive.md)
