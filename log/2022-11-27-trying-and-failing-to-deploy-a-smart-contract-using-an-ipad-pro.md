@@ -24,7 +24,7 @@ Finally, all of the services I've seen that allow you to mint your own NFT store
 * [Arweave](https://www.arweave.org/)
 * [EIP-721: Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721)
 
-That all sounds easy enough, but I *also* wanted to try to do this using only my iPad Pro, since I regard that as a more secure computing device than a regular desktop. (In fact, I've gradually come to prefer my iPad Pro over my laptop, so it's not *just* about system security.) As you can probably guess from the title of this post, I failed to accomplish this particular goal... Though I came *very* close to succeeding!
+That all sounds easy enough, but I *also* wanted to try to do this using only my iPad Pro, since I regard that as a more secure computing device than a regular desktop. (In fact, I've gradually come to prefer my iPad Pro over my laptop, so it's not *just* about system security.) As you can probably guess from the title of this post, I failed to accomplish this particular goal… Though I came *very* close to succeeding!
 
 While working on the iPad, I used Safari with the Light Wallet extension for interacting with the Ethereum blockchain.
 

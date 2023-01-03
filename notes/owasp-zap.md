@@ -3,17 +3,17 @@
 **author**:: Nathan Acks  
 **date**:: 2022-01-12
 
-ZAP (the "Zed Attack Proxy") is basically an open-source version of Burp Suite. Burp Suite <-> ZAP equivalencies:
+ZAP (the "Zed Attack Proxy") is basically an open-source version of Burp Suite. Burp Suite ←→ ZAP equivalencies:
 
-* Site Map <-> Site Tree
-* HTTP History <-> History
-* Scope <-> Context
-* Interceptor (Proxy) <-> Break
-* Repeater <-> Request Editor
-* Intruder <-> Fuzzer
-* Spider <-> Spider
-* Scanner <-> Active Scan
-* BApp Store <-> Add On Marketplace
+* Site Map ←→ Site Tree
+* HTTP History ←→ History
+* Scope ←→ Context
+* Interceptor (Proxy) ←→ Break
+* Repeater ←→ Request Editor
+* Intruder ←→ Fuzzer
+* Spider ←→ Spider
+* Scanner ←→ Active Scan
+* BApp Store ←→ Add On Marketplace
 
 While ZAP has a very different interface than Burp Suite, you should basically approach using it in the same fashion.
 

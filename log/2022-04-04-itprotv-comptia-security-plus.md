@@ -7,7 +7,7 @@
 
 Type I hypervisors (bare metal) are most common in business applications. And Qubes. Cloud systems are obviously all based around Type I hypervisors.
 
-Type II hypervisors are just specialized applications. VirtualBox, etc. Fine for individuals, but not as efficient... And certainly not scalable!
+Type II hypervisors are just specialized applications. VirtualBox, etc. Fine for individuals, but not as efficient… And certainly not scalable!
 
 Virtual (guest) networking is accomplished using a switch virtualized within the hypervisor. Virtual networking can be fully isolated, VM-to-host, or VM-to-LAN (which obviously also includes the host).
 

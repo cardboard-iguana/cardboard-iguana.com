@@ -15,7 +15,7 @@ NOTE: Wireshark is very picky about everything being *lower* case, but will also
 
 ### Packet Dissection
 
-Wireshark breaks down packets into 5 - 7 layers that kinda-sorta-not-exactly correspond to the OSI Model.
+Wireshark breaks down packets into 5 – 7 layers that kinda-sorta-not-exactly correspond to the OSI Model.
 
 * Frame (OSI physical layer)
 * Source (OSI data link layer)

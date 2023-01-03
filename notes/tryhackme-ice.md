@@ -141,7 +141,7 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Tue Dec  7 21:31:59 2021 -- 1 IP address (1 host up) scanned in 2174.84 seconds
 ```
 
-(An interesting effect of the -T4 flag, which uses a slightly more aggressive timing timing profile, is that port discovery seems to happen out-of-order...)
+(An interesting effect of the -T4 flag, which uses a slightly more aggressive timing timing profile, is that port discovery seems to happen out-of-order…)
 
 FLAG 1: What port is MSRDP open on? - 3389
 

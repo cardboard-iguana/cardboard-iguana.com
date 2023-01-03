@@ -17,7 +17,7 @@ Keep in mind that `-e` and `-c` are generally disabled in stock versions of netc
 
 ## Remote File Inclusion (RFI)
 
-RFI doesn't work on newer versions of PHP (at least out-of-the-box), as the configuration directives `allow_url_open` and `allow_url_include` need to be enabled. But sometimes people still turn these on...
+RFI doesn't work on newer versions of PHP (at least out-of-the-box), as the configuration directives `allow_url_open` and `allow_url_include` need to be enabled. But sometimes people still turn these on…
 
 If RFI is possible, it works basically like LFI (except that you're pulling your code from a remote server, rather than something you upload).
 

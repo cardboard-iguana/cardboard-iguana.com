@@ -9,7 +9,7 @@ Today I'll be covering Chapter 10 of the Security+ Exam Cram, "Virtualization an
 
 ### Virtualization
 
-Exam Cram refers to virtualization as a solution for rising energy costs and environmental concerns... Neither of which actually seem right? Exam Cram also seems very concerned with VM escapes, which are a real worry, but still... Not exactly easy?
+Exam Cram refers to virtualization as a solution for rising energy costs and environmental concerns… Neither of which actually seem right? Exam Cram also seems very concerned with VM escapes, which are a real worry, but still… Not exactly easy?
 
 ### Type I Hypervisors
 
@@ -25,7 +25,7 @@ Type II hypervisors are applications that run on a host operating system, e.g., 
 
 ### Type I vs. Type II Hypervisors
 
-Interesting... Hyper-V is actually a Type I hypervisor. I wonder if that means that Windows is actually virtualized in its entirety these days?
+Interesting… Hyper-V is actually a Type I hypervisor. I wonder if that means that Windows is actually virtualized in its entirety these days?
 
 ### Containers and Microservices
 
@@ -33,7 +33,7 @@ Containers are basically application + dependency bundles that are partitioned f
 
 Microservices are a software development strategy in which monolithic applications are broken into smaller, special-purpose parts that communicate via a defined API. This allows for component services to be scaled and upgraded in a more dynamic fashion. Microservices are often (but not always) implemented using containers.
 
-Uh, Exam Cram... I do not think that the JVM is the same idea as a hypervisor...
+Uh, Exam Cram… I do not think that the JVM is the same idea as a hypervisor…
 
 ### Virtual Desktop Infrastructure (VDI)
 
@@ -51,7 +51,7 @@ Preventing VM sprawl basically means applying the same standards to your VM flee
 
 > VM escape does not affect bare-metal platforms; it affects only hosted platforms.
 
-Tell that to the Qubes people...
+Tell that to the Qubes people…
 
 * [Qubes OS](https://www.qubes-os.org/)
 

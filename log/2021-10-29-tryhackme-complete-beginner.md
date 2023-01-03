@@ -40,7 +40,7 @@ Recall that leading a permission specified with `-` in `find` requires that *all
 
 ### Exploiting Writeable /etc/passwd
 
-Strangely, it turns out that the `x` in the password field for /etc/password isn't just anachronistic - it still *literally* means "look in /etc/shadow". If a password is present in that field instead... Well, the login process (at least on most Linux systems) will still use that!
+Strangely, it turns out that the `x` in the password field for /etc/password isn't just anachronistic - it still *literally* means "look in /etc/shadow". If a password is present in that field instead… Well, the login process (at least on most Linux systems) will still use that!
 
 Compliant password hashes can be created with the `openssl passwd` command. For example, to create an MD5 hashed password:
 

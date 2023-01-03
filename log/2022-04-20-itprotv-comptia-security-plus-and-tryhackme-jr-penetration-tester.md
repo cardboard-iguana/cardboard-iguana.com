@@ -17,7 +17,7 @@ Phases:
 * Identification (detection, analysis, and alerting of *events*)
 * Containment (network isolation, system shutdowns, etc.)
 * Eradication (malware removal, wipe-and-reload, etc. *and* verify that no additional systems are impacted)
-* Recovery (return to normal... *after* verification of eradication)
+* Recovery (return to normal… *after* verification of eradication)
 * Lessons Learned
 
 Part of recovery is ascertaining *how* the incident occurred and remediating the associated vulnerability/vulnerabilities.
@@ -27,7 +27,7 @@ A good distinction: A "runbook" is an *automated* playbook.
 Things to have in your after action report:
 
 * What went right?
-* What went... well?
+* What went… well?
 * What went wrong?
 * What was impacted?
 * How was the attack accomplished?

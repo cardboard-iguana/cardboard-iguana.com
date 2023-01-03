@@ -48,7 +48,7 @@ I'm mostly familiar with tokenization as "using references rather than data", bu
 
 Exam Cram situates masking as primarily a development strategy - no data reversing should be possible.
 
-Interesting: The first 4 - 6 digits of a credit card number identify the issuing bank, and are thus not particularly sensitive.
+Interesting: The first 4 – 6 digits of a credit card number identify the issuing bank, and are thus not particularly sensitive.
 
 * [Bank Identification Number (BIN)](https://www.investopedia.com/terms/b/bank-identification-number.asp)
 
@@ -64,7 +64,7 @@ Basically, SSL intercept/MitM solutions.
 
 Hashing, signing, etc.
 
-Oddly, the Exam Cram states that "[r]enaming the file ... will produce different [hash] output", which is not actually true (only the file contents, not its name on disk, will influence its hash).
+Oddly, the Exam Cram states that "[r]enaming the file … will produce different [hash] output", which is not actually true (only the file contents, not its name on disk, will influence its hash).
 
 ### Data Availability
 

@@ -9,7 +9,7 @@
 
 A hub is a Layer 1 device - it's just a multi-port repeater.
 
-VLAN logic is applied to Layer 2 - they're basically a way of dividing up the ports on a switch (this makes me feel better about how I've been using them at work...). Data is routed between VLANs by the router (i.e., at Layer 3).
+VLAN logic is applied to Layer 2 - they're basically a way of dividing up the ports on a switch (this makes me feel better about how I've been using them at work…). Data is routed between VLANs by the router (i.e., at Layer 3).
 
 While the canonical DMZ has a firewall on both the north and south side, in practice only a single firewall is generally used. Other terms for a DMZ:
 

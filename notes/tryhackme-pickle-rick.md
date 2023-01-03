@@ -29,9 +29,9 @@ The server is running Apache 2.4.18 on some version of Ubuntu. The provided web 
 
 > HELP MORTY!
 > 
-> Listen Morty... I need your help, I've turned myself into a pickle again and this time I can't change back!
+> Listen Morty… I need your help, I've turned myself into a pickle again and this time I can't change back!
 > 
-> I need you to *BURRRP*....Morty, logon to my computer and find the last three secret ingredients to finish my pickle-reverse potion. The only problem is, I have no idea what the *BURRRRRRRRP*, password was! Help Morty, Help!
+> I need you to *BURRRP*… Morty, logon to my computer and find the last three secret ingredients to finish my pickle-reverse potion. The only problem is, I have no idea what the *BURRRRRRRRP*, password was! Help Morty, Help!
 
 There is no obvious place to login, upload files, or otherwise interact with the web server. No hint event that this is anything beyond a relatively static site (both jQuery and Bootstrap libraries are included, but there's no hooks in the actual page.)
 
@@ -116,7 +116,7 @@ ssh -v -F /dev/null \
 
 Looks like password authentication is turned off - only the `publickey` method is available. So no brute forcing here - we need Rick's private SSH key.
 
-No obvious Apache or SSH RCEs for this version in Exploit DB...
+No obvious Apache or SSH RCEs for this version in Exploit DB…
 
 At this point I'm basically stuck, so I decide to see if I can get a hint by (partially!) reading someone else's walk-through. Most of the initial recon in that walk-through (I only scanned down that far) aligns with what I've already done, but it mentions two tools I've not yeat heard of - dirb (which looks like gobuster but possibly more straight-forward) and nikto (which I know *of* but not *about*). So let's try those!
 
@@ -124,7 +124,7 @@ At this point I'm basically stuck, so I decide to see if I can get a hint by (pa
 dirb http://10.10.158.139
 ```
 
-The dirb command finds everything that gobuster did, as well as a robots.txt file. This file contains a single "word": `Wubbalubbadubdub`. That doesn't mean anything to me really (maybe it's something that Rick would say), but maybe there will be a password field that I could try it out in...
+The dirb command finds everything that gobuster did, as well as a robots.txt file. This file contains a single "word": `Wubbalubbadubdub`. That doesn't mean anything to me really (maybe it's something that Rick would say), but maybe there will be a password field that I could try it out in…
 
 ```bash
 nikto -host 10.10.158.139
@@ -181,7 +181,7 @@ Let's see what we can do with the "Command Panel".
 * `cat Sup3rS3cretPickl3Ingred.txt` reveals that cat is disabled.
 * `ls /` reveals that we can list things outside of the webroot.
 * `ls /home` reveals two users: rick and ubuntu (so trying to SSH in as R1ckRul3s wouldn't have worked anyway).
-* `ls -la /home/rick` reveals a `second ingredients` file... But no .ssh directory! Damnit.
+* `ls -la /home/rick` reveals a `second ingredients` file… But no .ssh directory! Damnit.
 * `ls -la /home/ubuntu` does reveal an .ssh directory, but we can't actually descend into it.
 
 Alright, so `cat` is disabled. But can I get at it another way? `bash -c "cat Sup3rS3cretPickl3Ingred.txt"` also doesn't work. Neither does `more Sup3rS3cretPickl3Ingred.txt`. But `less Sup3rS3cretPickl3Ingred.txt` does work!
@@ -194,11 +194,11 @@ Let's get that second flag by executing `less "/home/rick/second ingredients"`.
 
 ## Flag 3
 
-Let's get us some filesystem access. On a lark, I tried the command `sudo whoami`... And the answer is `root`! Jackpot!
+Let's get us some filesystem access. On a lark, I tried the command `sudo whoami`… And the answer is `root`! Jackpot!
 
 Though `sudo less /etc/sudoers` reveals that www-data has full sudo access without a password, so it's really just as good.
 
-And... `sudo ls -la /home/ubuntu/.ssh` reveals no private SSH key.
+And… `sudo ls -la /home/ubuntu/.ssh` reveals no private SSH key.
 
 Doing `less portal.php` reveals that the mystery string is simply hard-coded, and nothing interesting is hidden in the other PHP files.
 
@@ -214,7 +214,7 @@ sudo chmod 600 /home/ubuntu/.ssh/authorized_keys
 sudo bash -c 'echo "ubuntu ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers'
 ```
 
-(NOTE: The "Command Panel" does a simple string match looking for "cat", "more", "tail", "nano", "vim", and "vi". The last one in particular can be a little problematic... You may have to run `ssh-keygen` a couple of times to get a key without "vi" as a substring.)
+(NOTE: The "Command Panel" does a simple string match looking for "cat", "more", "tail", "nano", "vim", and "vi". The last one in particular can be a little problematic… You may have to run `ssh-keygen` a couple of times to get a key without "vi" as a substring.)
 
 We can now access the box directly over SSH as the ubuntu user, and from there elevate to root using sudo.
 
@@ -223,7 +223,7 @@ ssh -i ~/id_rsa -F /dev/null \
     -o IdentityAgent=none ubuntu@10.10.158.139
 ```
 
-Though it turns out that I didn't have to go this far... The third flag is just in the .bash_history file of the ubuntu user.
+Though it turns out that I didn't have to go this far… The third flag is just in the .bash_history file of the ubuntu user.
 
 ```bash
 ll

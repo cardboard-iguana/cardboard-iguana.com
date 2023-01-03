@@ -347,7 +347,7 @@ hashcat -m 100 \
            ~/.local/share/red-team/wordlists/rockyou.txt
 ```
 
-And the hash is... `nyan`?
+And the hash is… `nyan`?
 
 Let's see if we can log in via SSH to nyan@10.10.87.144 using the password "nyan".
 
@@ -365,7 +365,7 @@ Can nyan do anything interesting?
 grep nyan /etc/group
 ```
 
-Oooh... We have some level of sudo access. Let's see how much
+Oooh… We have some level of sudo access. Let's see how much
 
 ```bash
 sudo -l

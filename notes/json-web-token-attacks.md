@@ -9,7 +9,7 @@ JSON web token format: `$HEADER.$PAYLOAD.$SIGNATURE`, where each substring is (U
 
 * `$HEADER` takes the form `{ "alg": "RS256", "typ": "JWT" }`, where `alg` is a signing algorithm supported by the server.
 * `$PAYLOAD` is a JSON blob containing various pieces of user information, which can include permissioning data. See jwt.io for a detailed breakdown.
-* `$SIGNATURE` is the signature (using `alg` from the `$HEADER`) of `$HEADER.$PAYLOAD` (both parts base64 encoded) using a server-side secret (often an SSL key... but sometimes just a string!).
+* `$SIGNATURE` is the signature (using `alg` from the `$HEADER`) of `$HEADER.$PAYLOAD` (both parts base64 encoded) using a server-side secret (often an SSL key… but sometimes just a string!).
 
 Use `basenc --base64url` and `basenc -d --base64url` to encode/decode URL-safe base64, rather than the `base64` binary. Be sure to strip the trailing `=` signs!
 

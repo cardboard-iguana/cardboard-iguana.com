@@ -17,7 +17,7 @@ Common data classification labels:
 * Confidential (typically internal-only and need-to-know)
 * Sensitive (highly damaging if disclosed; a step up in restrictions from confidential)
 
-Data often changes its sensitivity level depending on its stage of use (for example, quarterly financials move from sensitive -> public).
+Data often changes its sensitivity level depending on its stage of use (for example, quarterly financials move from sensitive → public).
 
 ### Privacy Laws and Regulatory Compliance
 
@@ -121,6 +121,6 @@ Information lifecycle:
 
 Note that "use" and "share" are optional steps, and one or both may actually not happen.
 
-A "privacy impact assessment" is just an assessment covering how PII is collected, used, shared, and maintained... And what the *impact* to the business would be should any of these processes have a CIA breakdown. The goal is to make sure that privacy protections are integrated into the entire SDLC.
+A "privacy impact assessment" is just an assessment covering how PII is collected, used, shared, and maintained… And what the *impact* to the business would be should any of these processes have a CIA breakdown. The goal is to make sure that privacy protections are integrated into the entire SDLC.
 
 A "privacy notice" is the externally-facing version/description of a "privacy policy".

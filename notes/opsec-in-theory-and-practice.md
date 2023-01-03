@@ -97,7 +97,7 @@ MEMBERSHIP IS A SECRET: People forget this all the time, because they're excited
 
 But keeping membership secret is key to basic compartmentalization and need-to-know.
 
-DON't DRAW ATTENTION TO YOURSELF: This can be operation-specific... But in general, you want to be as "normie" as possible. Basically, you need to be "actively" boring.
+DON't DRAW ATTENTION TO YOURSELF: This can be operation-specific… But in general, you want to be as "normie" as possible. Basically, you need to be "actively" boring.
 
 LOOSE LIPS SINK SHIPS: Keep your mouth shut.
 
@@ -124,7 +124,7 @@ NEED TO KNOW APPLIES BOTH WAYS: Basically, don't stick your nose into other comp
 
 Reminds me of my own maxim that "you can't lose control over information you don't have."
 
-BE CAREFUL WHAT YOU SAY: Phones, public space, private spaces... Everything can be bugged.
+BE CAREFUL WHAT YOU SAY: Phones, public space, private spaces… Everything can be bugged.
 
 Use simple ("open") codes, rather than cryptonyms, whenever possible. You don't want to be talking about "purple lambs going to Boston to learn about malaria research" - just say "some friends will be going to the usual place to be trained in my specialty". Think of this as "speaking around" the thing you want to communicate; you're leaving the meaning implicit upon shared knowledge. (This is almost the human equivalent of a one-time pad.)
 
@@ -142,7 +142,7 @@ This is particularly true with computers. Clear text < cipher text. Cipher text 
 
 Good spies have good memories. Professional thieves periodically dropped off parcels at drug stores, restaurants, etc. so that they could only be linked to what was on them.
 
-YOUR FAKE DOCUMENTATION SHOULD BE GOOD: ...If you have fake documentation at all...
+YOUR FAKE DOCUMENTATION SHOULD BE GOOD: …If you have fake documentation at all…
 
 KNOW YOUR CITY: This is part-and-parcel of memorizing things like addresses. It gives you operational latitude, and allows you to move quickly.
 
@@ -182,7 +182,7 @@ Remember, you can convincingly make someone taller, or heavier, or older, but it
 
 A key design goal of disguise is to be nondescript and unmemorable. You to be the person who "gets on the elevator and gets off the elevator, and nobody remembers that you were there."
 
-> Americans are oblivious to what reveals them to a foreign crowd... Or a foreign intelligence service.
+> Americans are oblivious to what reveals them to a foreign crowd… Or a foreign intelligence service.
 > 
 > - Jonna Mendez, Former Chief of Disguise, CIA #Quote 
 
@@ -238,7 +238,7 @@ B.2.2.g.ii. then re-iterates that the game we're playing is about *time* more th
 
 B.3.a. puts "open source intelligence" in context.
 
-> Adversary collection activities target actions and open source information to obtain and exploit indicators that will negatively impact the mission. OPSEC indicators are friendly detectable actions and open-source information that can be interpreted or pieced together by an adversary to derive critical information...
+> Adversary collection activities target actions and open source information to obtain and exploit indicators that will negatively impact the mission. OPSEC indicators are friendly detectable actions and open-source information that can be interpreted or pieced together by an adversary to derive critical information…
 
 Later (B.3.b.2.):
 
@@ -360,7 +360,7 @@ Similarly, the single-minded drive of a narcotics K-9 - which is really a form o
 
 Handlers can also false-trigger a K-9 if they *want* to conduct a deeper search, often by saying something associated with the dog's training (for example, "get it, get it, get it"). From an OPSEC perspective, the thing here is to remember that the K-9 is a capability that triggers a deeper search, but because police are often lying or manipulative, they can abuse that capability if they *want* to get you. This is not to say that defending against a K-9 is useless (particularly, if the narcotics odor hasn't had time to diffuse an interior search may still be unfruitful), but is to point out the advantage of not appearing suspicious (and even consenting to a search, which may not trigger the K-9 to be used at all).
 
-Remember that capabilities don't lie (though they can be mistaken) - but humans *do*. So another important thing to understand is when what rules your adversary must follow... And which of those rules they can break or otherwise subvert.
+Remember that capabilities don't lie (though they can be mistaken) - but humans *do*. So another important thing to understand is when what rules your adversary must follow… And which of those rules they can break or otherwise subvert.
 
 ### Conceal Your Stash
 
@@ -382,7 +382,7 @@ Another big overarching point here is to just minimize your "flags". This is a b
 
 > COVER: Make sure that what people see on the surface doesn't stand out. You don't want to be interesting, or worth taking notice of.
 
-Riffing of the topic of "cover" a bit more... You need to make sure that your *environment* is consistent with your cover. For example, shaving cream containers are sometimes used to smuggle marijuana; most men will only carry one, so having *two* can raise suspicion in a narcotics officer and might trigger a search (though generally only in conjunction with other flags).
+Riffing of the topic of "cover" a bit more… You need to make sure that your *environment* is consistent with your cover. For example, shaving cream containers are sometimes used to smuggle marijuana; most men will only carry one, so having *two* can raise suspicion in a narcotics officer and might trigger a search (though generally only in conjunction with other flags).
 
 A more general point here is the difference between something that *raises suspicion* in an adversary vs. something that actually *triggers* an action. You want to minimize the first where you can, and absolutely avoid the second.
 
@@ -408,7 +408,7 @@ One reason police go bad is that they tend to become adrenaline junkies. Eventua
 
 (A lot of discussion in this section on how dependent police departments have become on seizures of money and high-value cars to fill in their budgets. From the perspective of OPSEC, this is part of understanding the adversary's *motivations*.)
 
-More emphasis here on looking for drug use, or signs of drug use. Comes back around to *not looking like a fucking drug user* (and really, per Biggie Smalls, just not using when on the job). Also, returning to "cover" again... Just try to blend in. Don't have bumper stickers. Dress normie. Travel during high traffic times and pace the other cars (but don't be *too* careful). Etc.
+More emphasis here on looking for drug use, or signs of drug use. Comes back around to *not looking like a fucking drug user* (and really, per Biggie Smalls, just not using when on the job). Also, returning to "cover" again… Just try to blend in. Don't have bumper stickers. Dress normie. Travel during high traffic times and pace the other cars (but don't be *too* careful). Etc.
 
 ### Traffic Stops (Case Studies)
 
@@ -500,9 +500,9 @@ When signaling go/no-go via counter-surveillance, it's best to "fail closed" - t
 
 In general, the best thing to do when surveillance is detected is to abort and *not break cover* rather than trying to explicitly "loose" the adversary. In particular, not only does trying to escape surveillance antagonize the people trying to surveil you, but it also reveals that you *know* about the surveillance or have special training, which can then make you *more* of a target moving forward. A large part of the thrust of "The Moscow Rules" is to avoid doing exactly these things.
 
-A basic form of counter-surveillance is to go to a shopping mall or other location with a lot of stores before a meeting or operation, and then watch for people who keep showing up in (or outside of) the stores that you go to. If you keep seeing the same people, assume surveillance and abort... But don't break cover!
+A basic form of counter-surveillance is to go to a shopping mall or other location with a lot of stores before a meeting or operation, and then watch for people who keep showing up in (or outside of) the stores that you go to. If you keep seeing the same people, assume surveillance and abort… But don't break cover!
 
-Another reason not to loose a tail is that for a well-resourced team it may just be replaced with another tail... Which then you have to identify all over again.
+Another reason not to loose a tail is that for a well-resourced team it may just be replaced with another tail… Which then you have to identify all over again.
 
 ### Surveillance Detection Route
 
@@ -510,7 +510,7 @@ It's actually hard to follow people on foot through busy shopping areas because 
 
 When driving, one trick is to drive in a loop that gets you reversed against the previous traffic flow a couple of times and look for reoccurring cars; another trick is to pull into a gas station, look for who pulls off (probably in an adjacent area) in a position to monitor you, and then leave in a way that you can see if that car begins following you again.
 
-In general, surveillance detection routes need to be long and complex... But not *look* like you're trying to loose or identify your tail. The goal is to identify the adversary using TEDD:
+In general, surveillance detection routes need to be long and complex… But not *look* like you're trying to loose or identify your tail. The goal is to identify the adversary using TEDD:
 
 * TIME: Do you see the same people/car repeatedly?
 * ENVIRONMENT: Do you see the same people/car in multiple locations?
@@ -559,7 +559,7 @@ The big take-away here is (again) that the rules of OPSEC are the same for any o
 > 
 > - Allen Dulles, *Some Elements of Intelligence Work*
 
-The two rules after this one elaborate on it. Basically, attention to detail for the small stuff tends to lead to the same level of attention being applied to the big stuff. People who can do the small stuff thus have a higher chance of success when it comes to the big stuff. People who don't... Become liabilities.
+The two rules after this one elaborate on it. Basically, attention to detail for the small stuff tends to lead to the same level of attention being applied to the big stuff. People who can do the small stuff thus have a higher chance of success when it comes to the big stuff. People who don't… Become liabilities.
 
 > Security, of course, does not mean stagnation or being afraid to go after things. It means going after things, but reducing all the risks to a minimum by hard work.
 > 
@@ -571,7 +571,7 @@ I should include that quote in some of my trainings.
 > 
 > - Allen Dulles, *Some Elements of Intelligence Work*
 
-Alright, now I feel seriously vindicated... This is basically *exactly* the strategy I've been advocating at work. Minimize data. Minimize communications. Destroy both when you're done with them... But memorialize important details and decisions for later use. The sausage is useful; what went into making the sausage can be downright dangerous.
+Alright, now I feel seriously vindicated… This is basically *exactly* the strategy I've been advocating at work. Minimize data. Minimize communications. Destroy both when you're done with them… But memorialize important details and decisions for later use. The sausage is useful; what went into making the sausage can be downright dangerous.
 
 > The greatest material curse to the profession, despite all its advantages, is undoubtedly the telephone. It is a constant source of temptation to slackness. And even if you do not use it carelessly yourself, the other fellow, very often will, so in any case, warn him. Always act on the principle that every conversation is listened to, that a call may always give the enemy a line. Naturally, always unplug during confidential conversations. Even better is it to have no phone in your room, or else have it in a box or cupboard.
 > 
@@ -717,13 +717,13 @@ A lot of this section feels like a re-iteration of the syllabus for "cover". Per
 
 Lots of make up and dress tips here. Some seem a little dated, but most would make a good reference (though I shudder to think of myself wielding a make up pencil).
 
-Finally, as an interesting aside the British Navy (!) appears to have studied beard growth in some detail, coming to the conclusion that it requires 25 - 40 days to grow a full beard from a clean-shaven face. This actually aligns with my own experiences quite well.
+Finally, as an interesting aside the British Navy (!) appears to have studied beard growth in some detail, coming to the conclusion that it requires 25 – 40 days to grow a full beard from a clean-shaven face. This actually aligns with my own experiences quite well.
 
 ## Tradecraft IIa: Selected SOE Training Lectures
 
 SOE stands for the "Special Operations Executive", and was a World War 2 intelligence organization set up by Churchill after Dunkirk. It started out in a pretty amateurish way. *A lot* of people were caught, tortured, and killed. The SIS (the precursor to today's MI6) found SOE pretty annoying. But the SOE was also very good at learning from its mistakes.
 
-(Part of the SOE's mixed track record was that its espionage efforts often ran into the reality of the German's willingness to exact collective punishment. Blow up a train track? The Germans will roll in and decimate the village. The SOE was *much* more effective in its intelligence mission and in recruiting *local* resistance... Though local Nazi resistance movements tended to fight each other more than they actually fought Nazis.)
+(Part of the SOE's mixed track record was that its espionage efforts often ran into the reality of the German's willingness to exact collective punishment. Blow up a train track? The Germans will roll in and decimate the village. The SOE was *much* more effective in its intelligence mission and in recruiting *local* resistance… Though local Nazi resistance movements tended to fight each other more than they actually fought Nazis.)
 
 The SOE's tactics were actually purposefully modeled after the IRA's.
 
@@ -767,7 +767,7 @@ This reminds me of Kali Linux's (former?) motto, "the quieter you become the mor
 
 Something to keep in mind about side channels is that leaks can be gradual - a bit of information here, a bit of information there, and pretty soon you've got real intelligence.
 
-Also... *Shut the actual fuck up!*
+Also… *Shut the actual fuck up!*
 
 More points here about data minimization, in the form of "don't write down anything you don't absolutely, positively have to."
 
@@ -787,7 +787,7 @@ Always plan for the worst.
 
 For individuals, this boils down to establishing your exits as the first thing you do in any new situation/place.
 
-One effective way of using code words is to invert the meanings of sentences ("yes, come over" -> "run away").
+One effective way of using code words is to invert the meanings of sentences ("yes, come over" → "run away").
 
 ### Wireless Operators
 
@@ -813,7 +813,7 @@ Basically, wireless operators (the SOE lecture notes abbreviate them as "W/Os", 
 
 Allen Dulles wrote "73 Rules of Spycraft" over the course of the late 1950s and early 1960s, and is in many ways refine the older WW2-era "Selected SOE Training Lectures".
 
-The Grugq sees Allen Dulles' "73 Rules of Spycraft" as basically "everything you need to know about OPSEC"... Not so much because of the *literal* rules (some are now quite dated), but because they embody the type of thinking necessary for and principles underlying OPSEC so well.
+The Grugq sees Allen Dulles' "73 Rules of Spycraft" as basically "everything you need to know about OPSEC"… Not so much because of the *literal* rules (some are now quite dated), but because they embody the type of thinking necessary for and principles underlying OPSEC so well.
 
 ### Security is Important
 
@@ -833,7 +833,7 @@ Again, the importance of habit/ritual.
 > 
 > - The Grugq
 
-Moving on... Shut the actual fuck up. This applies not only to cops, but also civilians.
+Moving on… Shut the actual fuck up. This applies not only to cops, but also civilians.
 
 (Okay, a clarification from Tradecraft IIa: In the modern era, Western intelligence operations take a KGB-sequence attitude towards the number of operations vs. the laxity of the security environment. In other words, as the security environment becomes more lax, all intelligence agencies will attempt to complete additional operations these days. That said, Western agencies still tend to favor pre-determining their level of operations, while the KGB's successors remain more inclined to make scaling decisions while actually in the field.)
 
@@ -865,11 +865,11 @@ A call back to the need to be punctual (see notes from the previous lectures). I
 
 Another call back to taking indirect routes through crowded areas on foot. The better to identify potential tails.
 
-Walk and talk. Outside, or in large spaces (such as museums) that generally are not crowded. (It feels like everything is crowded these days...)
+Walk and talk. Outside, or in large spaces (such as museums) that generally are not crowded. (It feels like everything is crowded these days…)
 
-Also... Shut the *actual* fuck up.
+Also… Shut the *actual* fuck up.
 
-Never admit that you are a direct representative of anything... You're just a friendly guy passing things along. There should be someone more powerful (Allen Dulles calls this shadow "They") in the background who you communicate on behalf of, or is leaning on you, or otherwise directs things. This creates both apparent distance between yourself and the actual operation (you look more like a middle man) and allows you to sometimes bond with contacts and sources over what an asshole "They" are.
+Never admit that you are a direct representative of anything… You're just a friendly guy passing things along. There should be someone more powerful (Allen Dulles calls this shadow "They") in the background who you communicate on behalf of, or is leaning on you, or otherwise directs things. This creates both apparent distance between yourself and the actual operation (you look more like a middle man) and allows you to sometimes bond with contacts and sources over what an asshole "They" are.
 
 Compartmentalize! Compartmentalize! Compartmentalize!
 
@@ -947,7 +947,7 @@ If there's a take-away to this section, it seems to be that unmanned, computer-a
 
 This could have come straight from "73 Rules of Spycraft" or the "Selected SOE Training Lectures".
 
-A new concept here (or really, an formalization of concepts already discussed): A "check route" is a long travel path using multiple means of transit and across multiple different environments that is designed to force any surveillance operations to expose themselves or break off. So, get on a bus, travel by car, walk through a mall... It's not *impossible* to follow someone effectively through all of these environment and transportation changes, but it becomes progressively harder to do without slipping up the more changes are stacked on each other.
+A new concept here (or really, an formalization of concepts already discussed): A "check route" is a long travel path using multiple means of transit and across multiple different environments that is designed to force any surveillance operations to expose themselves or break off. So, get on a bus, travel by car, walk through a mall… It's not *impossible* to follow someone effectively through all of these environment and transportation changes, but it becomes progressively harder to do without slipping up the more changes are stacked on each other.
 
 ### Emergency Methods for Re-Connecting the Network
 
@@ -967,7 +967,7 @@ Reconnecting through third parties is easier to implement, but brings with it a 
 
 In general, it's best to have recruitment operations compartmentalized from leadership, so that if a recruitment goes bad the damage is contained.
 
-Interesting... Al-Qaeda used *marriage* as a way to forge alliances with and recruit from various central-Asian and Middle Eastern tribes.
+Interesting… Al-Qaeda used *marriage* as a way to forge alliances with and recruit from various central-Asian and Middle Eastern tribes.
 
 ### Safe Houses
 
@@ -981,7 +981,7 @@ This section breaks down the two-ring security model that The Grugq has mentione
 
 ### Clandestine Skills Training
 
-The internet makes "independent studies" easier, but also makes it much harder to hide training materials from the adversary. There's also limits to such studies... Eventually you need "field experience".
+The internet makes "independent studies" easier, but also makes it much harder to hide training materials from the adversary. There's also limits to such studies… Eventually you need "field experience".
 
 ### Considerations for Elements at the Edge of the Clandestine Organization
 
@@ -1041,7 +1041,7 @@ Compartmentalization both *from* and *within* the KGB remains an ongoing concern
 
 Despite all of these precautions, Hanssen doesn't make the next drop because the agent initially being used as a cut-out comes under FBI surveillance.
 
-(Apparently the CIA had a real problem in the 1980s with overseas agents skimming money that was earmarked to pay assets... And sometimes just completely making up assets and pocket the entire funding stream!)
+(Apparently the CIA had a real problem in the 1980s with overseas agents skimming money that was earmarked to pay assets… And sometimes just completely making up assets and pocket the entire funding stream!)
 
 * [Prisoner's dilemma (Wikipedia)](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
 
@@ -1063,4 +1063,4 @@ Real life is messy, and even spies often allow efficiency to trump security.
 
 That said, since 1945 no (US?) agents have been uncovered because of tradecraft errors. "The Moscow Rules" work.
 
-Counterintelligence is a long game. You're waiting for a mistake... And once a mistake is made, it's often possible to unravel the entire thing.
+Counterintelligence is a long game. You're waiting for a mistake… And once a mistake is made, it's often possible to unravel the entire thing.

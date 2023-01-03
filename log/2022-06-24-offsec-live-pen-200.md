@@ -12,7 +12,7 @@ While I don't think I'm quite ready yet to take a crack at the OSCP, Offensive S
 
 ## Terminal Best Practices
 
-(I hopped on a few minutes late, unfortunately...)
+(I hopped on a few minutes late, unfortunately…)
 
 ### File Descriptors
 

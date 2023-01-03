@@ -13,17 +13,17 @@ ZAP (the "Zed Attack Proxy") is basically an open-source version of Burp Suite. 
 * Automatically scan for vulnerabilities
 * Full speed Intruder-like functionality
 
-Burp Suite <-> ZAP equivalencies:
+Burp Suite ←→ ZAP equivalencies:
 
-* Site Map <-> Site Tree
-* HTTP History <-> History
-* Scope <-> Context
-* Interceptor (Proxy) <-> Break
-* Repeater <-> Request Editor
-* Intruder <-> Fuzzer
-* Spider <-> Spider
-* Scanner <-> Active Scan
-* BApp Store <-> Add On Marketplace
+* Site Map ←→ Site Tree
+* HTTP History ←→ History
+* Scope ←→ Context
+* Interceptor (Proxy) ←→ Break
+* Repeater ←→ Request Editor
+* Intruder ←→ Fuzzer
+* Spider ←→ Spider
+* Scanner ←→ Active Scan
+* BApp Store ←→ Add On Marketplace
 
 ZAP uses web automation to control an external browser, rather than a built-in version of Chrome.
 
@@ -37,7 +37,7 @@ The "traditional spider" option spiders the website as you would expect, while t
 
 ### Manual Scanning
 
-At least on Kali Linux, ZAP can launch a pre-configured Firefox session using web automation; thus, like Burp Suite, there's really no need to configure a local proxy (and probably every reason not to -- keep your profiles separate!).
+At least on Kali Linux, ZAP can launch a pre-configured Firefox session using web automation; thus, like Burp Suite, there's really no need to configure a local proxy (and probably every reason not to — keep your profiles separate!).
 
 One reason *not* to use ZAP's browser, however, is that the user-agent is less generic than Burp Suite's.
 

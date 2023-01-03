@@ -47,7 +47,7 @@ Note that when inputting SQL statements as GET variables, it will often be neces
 
 Boolean-based SQLi involves monitoring changes in responses to see if a query has executed or failed. The only reason you'd generally do this is if you're doing SQLi blind (where you don't get any output, or the output you do get isn't strongly coupled with the input query).
 
-Obviously, this requires that either the HTTP response code or payload changes depending on the results of the injection... (Some frameworks try to make blind SQLi difficult by using redirects, but it's possible -- though a pain -- to get around this with Burp Suite).
+Obviously, this requires that either the HTTP response code or payload changes depending on the results of the injection… (Some frameworks try to make blind SQLi difficult by using redirects, but it's possible — though a pain — to get around this with Burp Suite).
 
 One way this can be useful more generally is by using something like `AND (SELECT COUNT(*) FROM table_name) > 0` to probe for the existence/use of `table_name` (see this tutorial for a non-malicious use case of this construction).
 
@@ -65,18 +65,18 @@ This means that to determine the number of columns in a table, you'll need to us
 * `' UNION SELECT NULL -- `
 * `' UNION SELECT NULL, NULL -- `
 * `' UNION SELECT NULL, NULL, NULL -- `
-* ...and so on until there's an error...
+* …and so on until there's an error…
 
 A similar approach can be used to detect column types.
 
 * `' UNION SELECT 'a', NULL, NULL -- `
 * `' UNION SELECT NULL, 'a', NULL -- `
 * `' UNION SELECT NULL, NULL, 'a' -- `
-* ...and so on...
+* …and so on…
 
 The generalization to other data types is straight-forward.
 
-Note that sometimes a developer might get "clever" and try to error out on trailing comments. If you suspect that's happening, just add something after the trailing ` -- ` -- it's all a comment, after all!
+Note that sometimes a developer might get "clever" and try to error out on trailing comments. If you suspect that's happening, just add something after the trailing ` -- ` — it's all a comment, after all!
 
 Useful MySQL keywords:
 
@@ -85,14 +85,14 @@ Useful MySQL keywords:
 * `@@version`
 * `username` (if that column exists in some table)
 * `password` (if that column exists in some table)
-* Various table name...
-* Various column names...
+* Various table name…
+* Various column names…
 
-There's really just *a lot* of educated guessing that goes on in SQLi...
+There's really just *a lot* of educated guessing that goes on in SQLi…
 
 ### Automating Exploitation
 
-Apparently sqlmap isn't allowed on the OSCP...
+Apparently sqlmap isn't allowed on the OSCP…
 
 Useful commands:
 
@@ -104,7 +104,7 @@ Useful commands:
 * `--dbms`: Choose the back-end DBMS (MySQL, PostgreSQL, etc.), if known
 * `--passwords`: Attempt to obtain user password hashes
 * `--os-pwn`: Attempt to pop a meterpreter shell
-* `--risk`: Set maximum risk level of tests (1 - 3)
+* `--risk`: Set maximum risk level of tests (1 – 3)
 
 One handy way to seed a URL is using requests harvested with Burp Suite.
 

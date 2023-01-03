@@ -176,14 +176,14 @@ UDP is *stateless*. It shares a few headers with TCP:
 Since there are no handshakes in UDP, data transmission is fairly simple:
 
 * Client request
-* Server response (and response and response and...)
+* Server response (and response and response and…)
 
 The connection ends when the server stops sending data or the client stops listening. In practice this means that the application layer does need to layer on *some* kind of client/server messaging system, but UDP does not concern itself with these details.
 
 ### Ports 101
 
-Ports identify applications (or services provided by an application). There are 2¹⁶ possible ports numbered 0 - 65535.
+Ports identify applications (or services provided by an application). There are 2¹⁶ possible ports numbered 0 – 65535.
 
-Ports 0 - 1023 are "common ports" (I've typically heard this block called "reserved" or "system"; Wikipedia calls them "well-known").
+Ports 0 – 1023 are "common ports" (I've typically heard this block called "reserved" or "system"; Wikipedia calls them "well-known").
 
 * [List of TCP and UDP port numbers (Wikipedia)](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)

@@ -57,6 +57,6 @@ TLS certificates can either be provisioned on a bring-your-own-certificate basis
 
 API Gateway *does* support wildcard domains, and provides `$context.domainName` and `$context.domainPrefix` variables to allow per-subdomain API behavior. This means that a wildcard domain like `*.example.com` can have a default behavior defined, but then `a.example.com` and `d.example.com` can both have custom behavior bypassing these defaults.
 
-To be continued...
+To be continued…
 
 * [Setting up custom domain names for REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html)

@@ -61,4 +61,4 @@ A useful HTTP header to know about: `True-Client-IP` supplies an override for th
 
 The lesson of this section: Don't trust any user input, even HTTP headers!
 
-As a side-note, these examples really aren't showing me much of the value of XSS attacks. I can see where they would be useful for targeting *users* (malicious links, etc.), and from that I can see where they would be useful when targeting, say, admins... But there really isn't a way they can *directly* compromise the server or webapp (which makes sense, as JavaScript runs on the client, not the server).
+As a side-note, these examples really aren't showing me much of the value of XSS attacks. I can see where they would be useful for targeting *users* (malicious links, etc.), and from that I can see where they would be useful when targeting, say, admins… But there really isn't a way they can *directly* compromise the server or webapp (which makes sense, as JavaScript runs on the client, not the server).

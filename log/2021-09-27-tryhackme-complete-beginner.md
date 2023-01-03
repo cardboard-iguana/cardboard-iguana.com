@@ -63,7 +63,7 @@ UDP stands for "User Datagram Protocol". One of the key aspects of UDP is that t
 
 The TCP transmission unit is the *segment*, while the UDP transmission unit is the *datagram*.
 
-IMPORTANT NOTE: Sessions != connections! One session (a browser tab) may contain multiple connections (pipelined data).
+IMPORTANT NOTE: Sessions ≠ connections! One session (a browser tab) may contain multiple connections (pipelined data).
 
 The NETWORK layer (3) is where routers live at, and is where packets of data are assembled and disassembled.
 
@@ -146,7 +146,7 @@ A four-layer alternative to OSI!
 
 As with OSI, each layer adds its own headers, though obviously there are fewer of these with TCP/IP (i.e., in the real world).
 
-The TCP/IP model (which comes out of the DOD's work on ARPANET) actually pre-dates the OSI Model (an ISO standard, and it feels that way) by a few years. The TCP/IP application layer subsumes OSI layers 5 - 7, while the network interface layer includes OSI layers 1 and 2 (though some - unofficial! - versions of the TCP/IP model forgo the network interface layer in favor of OSI's data link and physical layers).
+The TCP/IP model (which comes out of the DOD's work on ARPANET) actually pre-dates the OSI Model (an ISO standard, and it feels that way) by a few years. The TCP/IP application layer subsumes OSI layers 5 – 7, while the network interface layer includes OSI layers 1 and 2 (though some - unofficial! - versions of the TCP/IP model forgo the network interface layer in favor of OSI's data link and physical layers).
 
 Key TCP headers:
 

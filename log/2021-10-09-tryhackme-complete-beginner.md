@@ -62,7 +62,7 @@ The `Server` and `X-Powered-By` HTTP headers, if present, can be handy for figur
 
 Since many servers turn off directory indexing and randomize file names, its helpful if we can figure out some place that displays or links to the file we just uploaded. If there's no option here, gobuster's -x switch allows a search for specific file extensions (but then the search is *within* a particular directory).
 
-There's probably server-side filtering, so bypass everything client-side and then look for an error message. Using curl to hit an endpoint directly is probably not as useful as Burp Suite here... Tricks:
+There's probably server-side filtering, so bypass everything client-side and then look for an error message. Using curl to hit an endpoint directly is probably not as useful as Burp Suite here… Tricks:
 
 * Use completely valid and invalid extensions to check for the presence of white/blacklists.
 * Try changing the magic number of a known good file to see if magic number filtering is in place.

@@ -19,7 +19,7 @@ Handy nmap flags:
 * `-sL` - Show the hosts that would be scanned, but don't actually do anything (except perhaps DNS resolution).
 * `-n` - Don't resolve host names using DNS (or do reverse DNS resolution).
 
-Note that you can put ranges in any octet of an IP address; for example, 10.10.0-255.1-255 will scan 10.10.0.1 - 10.10.255.255.
+Note that you can put ranges in any octet of an IP address; for example, 10.10.0-255.1-255 will scan 10.10.0.1 – 10.10.255.255.
 
 ### Nmap Host Discovery Using ARP
 
@@ -52,5 +52,5 @@ The `masscan` utility is basically a *very* aggressive TCP/UDP scanner. Probably
 
 ### Using Reverse-DNS Lookup
 
-* `-R` -- Perform reverse DNS resolution even for offline hosts.
+* `-R` — Perform reverse DNS resolution even for offline hosts.
 * `--dns-servers` - Specify DNS server(s) to use for hostname resolution and reverse lookups.

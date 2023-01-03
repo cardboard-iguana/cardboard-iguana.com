@@ -9,7 +9,7 @@ The flags are structured to basically walk us through this room.
 
 ## Forensics: Analyze the PCAP
 
-I've not actually used Wireshark outside of the TryHackMe: Wireshark 101 "room" (and a few short digressions in other rooms), so I'm honestly a little worried about my abilities here...
+I've not actually used Wireshark outside of the TryHackMe: Wireshark 101 "room" (and a few short digressions in other rooms), so I'm honestly a little worried about my abilities here…
 
 Filtering the PCAP file for HTTP requests reveals a single POST from 192.168.179.145 to http://192.168.170.159/development/upload.php. A subsequent request from 192.168.179.145 pulls the directory listing of /development/uploads/, and then GETs /development/uploads/payload.php. This suggests that 192.168.179.145 is the "attacker" and 192.168.179.145 is the target system.
 
@@ -27,7 +27,7 @@ This is popping a simple reverse shell through netcat that connects back to 192.
 
 This means that penetration occurs when this file is requested in packet 27.
 
-Looking at subsequent TCP packets, we can see what the attacker typed in the packets going from 192.168.170.145 -> 192.168.170.159, and the responses in the packets going from 192.168.170.159 -> 192.168.170.145. Requests/Responses coming through netcat use the TCP PSH flag, so we can filter by `tcp.port == 4242 and tcp.flags.push` to zoom in on this conversation.
+Looking at subsequent TCP packets, we can see what the attacker typed in the packets going from 192.168.170.145 → 192.168.170.159, and the responses in the packets going from 192.168.170.159 → 192.168.170.145. Requests/Responses coming through netcat use the TCP PSH flag, so we can filter by `tcp.port == 4242 and tcp.flags.push` to zoom in on this conversation.
 
 The attacker eventually issues `su james` to elevate privileges  (packet 71), and a few packets down we can see `james`'s password.
 
@@ -98,14 +98,14 @@ The last bit of this CTF uses a server, which for this run is at 10.10.114.161. 
 
 FLAG 10: What message did the attacker leave as a heading when they defaced the website? - H4ck3d by CooctusClan
 
-We'll get back in using the backdoor that the attacker set up. From the backdoor code we know that the SSH server is running on port 2222, and there don't seem to be any user checks. So...
+We'll get back in using the backdoor that the attacker set up. From the backdoor code we know that the SSH server is running on port 2222, and there don't seem to be any user checks. So…
 
 ```bash
 env -u SSH_AUTH_SOCK -u SSH_AGENT_PID \
 	ssh -p 2222 user@10.10.114.161
 ```
 
-...lets us in as expected (with the password of `november16`).
+…lets us in as expected (with the password of `november16`).
 
 The user flag is in /home/james/user.txt.
 
@@ -117,7 +117,7 @@ Unfortunately, none of the passwords we cracked earlier work anymore. After chec
 find / -type f -perm -u+s -exec ls -l "{}" \;
 ```
 
-This turned up an unusual file - /home/james/.suid_bash.  Could this be... an SUID copy of Bash? Indeed it is!
+This turned up an unusual file - /home/james/.suid_bash.  Could this be… an SUID copy of Bash? Indeed it is!
 
 ```bash
 /home/james/.suid_bash -p # Root shell!

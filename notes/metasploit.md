@@ -58,7 +58,7 @@ Module categories:
 Note that Metasploit 6 apparently calls these "framework plugins" now.
 
 * REMEMBER: Open up the port Metasploit's going to use in your firewall *before* running the exploit. Generally this is port 4444 by default (set with LPORT).
-* ALSO REMEMBER: Be sure to set LHOST (and, when applicable, SRVHOST) correctly, even if it's not indicated by the module. Metasploit's guesses about which interface to use aren't always correct... (I find using the explicit IP address works better than specifying the interface device or leaving SRVHOST at the default of 0.0.0.0.)
+* ALSO REMEMBER: Be sure to set LHOST (and, when applicable, SRVHOST) correctly, even if it's not indicated by the module. Metasploit's guesses about which interface to use aren't always correct… (I find using the explicit IP address works better than specifying the interface device or leaving SRVHOST at the default of 0.0.0.0.)
 * ALSO ALSO REMEMBER: Sometimes you might find yourself in the position of trying to exploit a service over an SSH tunnel (for example, if you're trying to exploit a service that's not exposed externally in order to elevate your privileges). When doing this, remember that LHOST is still your machine's external address, as the exploit won't be connecting back over the SSH tunnel (obviously)!
 
 ### Module Options
@@ -79,7 +79,7 @@ Some exploit modules have a `check` option which attempts to determine if a targ
 
 ### Scanners
 
-Use `search portscan` to display built-in Metasploit port scanners. Note that `msfconsole` needs to be run as root for many scans to work - just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don't work over a VPN... So maybe best to stick with Nmap.
+Use `search portscan` to display built-in Metasploit port scanners. Note that `msfconsole` needs to be run as root for many scans to work - just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don't work over a VPN… So maybe best to stick with Nmap.
 
 Targeted scanners can be more useful, however:
 
@@ -161,7 +161,7 @@ Potentially useful Metsploit modules to `run` from/besides Meterpreter:
 * `post/windows/manage/enable_rdp` - enable RDP access (requires admin privileges)
 * `post/multi/manage/autoroute` - manipulate target routing for pivoting
 * `auxiliary/server/socks_proxy` - start a SOCKS proxy
-* `exploit/windows/local/persistence` - sets up a persistent connection (you probably want to `set STARTUP SYSTEM`)... *without a password!*
+* `exploit/windows/local/persistence` - sets up a persistent connection (you probably want to `set STARTUP SYSTEM`)… *without a password!*
 
 NOTE: It is generally more useful to background Meterpreter and then run these commands through the Metasploit console, as within Meterpreter they need to have all options specified on the "run" command line (in the console you can access help, actually *see* what the options are, etc.).
 
@@ -208,7 +208,7 @@ list_tokens -u
 impersonate_token $DOMAIN\\$USER
 ```
 
-Not 100% sure where the "tokens" come from here... Mimikatz, maybe?
+Not 100% sure where the "tokens" come from here… Mimikatz, maybe?
 
 ### Process Migration
 

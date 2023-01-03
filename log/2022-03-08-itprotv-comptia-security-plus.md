@@ -62,18 +62,18 @@ In Active Directory, domain-level policies are always enforced, but OU-level pol
 
 Windows "Account Lockout Policy" notes:
 
-* The "Account lockout duration" setting determines how long an account is locked out after the the threshold number of incorrect attempts is reached. Can range from 1 - 99999 minutes; 0 means the account is locked until an administrator intervenes.
-* The "Account lockout threshold" setting determined the number of incorrect login attempts before lockout occurs. Can range from 1 - 999; 0 disables account lockouts. Typically set in the 3 - 5 range.
+* The "Account lockout duration" setting determines how long an account is locked out after the the threshold number of incorrect attempts is reached. Can range from 1 – 99999 minutes; 0 means the account is locked until an administrator intervenes.
+* The "Account lockout threshold" setting determined the number of incorrect login attempts before lockout occurs. Can range from 1 – 999; 0 disables account lockouts. Typically set in the 3 – 5 range.
 * The "Reset account lockout counter after" setting determines how long after the last unsuccessful login the counter is reset to 0. Can range from 1 to the value of "Account lockout duration". (IIRC, a successful login also resets the counter.)
 
 ### Password Age and History / Password Length and Rotation
 
 Windows "Password Policy" notes:
 
-* The "Maximum password age" setting determines when a password expires. Can be set in the range of 1 - 999 days, or 0 to disable expiration. Typically set in the 30 - 90 day range
+* The "Maximum password age" setting determines when a password expires. Can be set in the range of 1 – 999 days, or 0 to disable expiration. Typically set in the 30 – 90 day range
 * The "Minimum password age" setting determines how often a password can be changed. Can be set in the range 0 to one day less than the "Maximum password age" (unless "Maximum password age" is 0).
 * The "Enforce password history" setting controls how many previously used password hashes are stored. Passwords that match a stored hash cannot be used.
-* The "Minimum password length" setting does exactly what you'd think it does. Can be 1 - 14 characters (I'm pretty sure that it's 1 - 16 now, as Microsoft 365 supports 16 character passwords); setting this to 0 allows for empty passwords to be used (!!!).
+* The "Minimum password length" setting does exactly what you'd think it does. Can be 1 – 14 characters (I'm pretty sure that it's 1 – 16 now, as Microsoft 365 supports 16 character passwords); setting this to 0 allows for empty passwords to be used (!!!).
 
 Exam Cram states that the "Minimum password age" setting is used to limit the amount of time that a breached password can be used, but I'm pretty sure they mean "Maximum password age" here. Even Microsoft's own documentation states that the purpose of "Minimum password age" is to make password re-use impractical.
 

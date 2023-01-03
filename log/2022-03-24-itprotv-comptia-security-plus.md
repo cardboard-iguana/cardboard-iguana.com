@@ -101,36 +101,36 @@ Technically, a self-encrypting drive is a root of trust.
 
 ### Disabling Unnecessary Ports and Services
 
-* Well-known (reserved) ports: 0 - 1023
-* Registered ports: 1024 - 49151
-* Dynamic (private) ports: 49152 - 65535
+* Well-known (reserved) ports: 0 – 1023
+* Registered ports: 1024 – 49151
+* Dynamic (private) ports: 49152 – 65535
 
 
 Common ports:
 
-* Netstat - 15
-* Chargen - 19
-* FTP (data/control) - 20, 21
-* SSH - 22
-* Telnet - 23
-* SMTP - 25
-* DNS - 53
-* DHCP - 67, 68
-* TFTP - 69
-* Finger - 79
-* HTTP - 80
-* POP3 - 110
-* NTP - 123
-* NetBIOS - 137, 138, 139
-* IMAP - 143
-* SNMP - 161, 162
-* LDAP - 389
-* HTTPS - 443
-* SMB - 445
-* LDAPS - 636
-* FTPS (data/control) - 989, 990
-* RADIUS - 1812
-* RDP - 3389
+* Netstat — 15
+* Chargen — 19
+* FTP (data/control) — 20, 21
+* SSH — 22
+* Telnet — 23
+* SMTP — 25
+* DNS — 53
+* DHCP — 67, 68
+* TFTP — 69
+* Finger — 79
+* HTTP — 80
+* POP3 — 110
+* NTP — 123
+* NetBIOS — 137, 138, 139
+* IMAP — 143
+* SNMP — 161, 162
+* LDAP — 389
+* HTTPS — 443
+* SMB — 445
+* LDAPS — 636
+* FTPS (data/control) — 989, 990
+* RADIUS — 1812
+* RDP — 3389
 
 Chargen = Character Generator. Does exactly what you think it does, for totally unclear reasons.
 

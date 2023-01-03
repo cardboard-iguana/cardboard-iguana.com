@@ -52,7 +52,7 @@ Types:
 * Rainbow tables (files of precomputed hashes; trades speed for memory/storage)
 * Password spraying (trying a single password on multiple accounts simultaneously; slow but stealthy)
 
-If you *can* use rainbow tables, they are the fastest method... But they're also easily defeated (by salting).
+If you *can* use rainbow tables, they are the fastest method… But they're also easily defeated (by salting).
 
 ### Password Attacks - Tools
 

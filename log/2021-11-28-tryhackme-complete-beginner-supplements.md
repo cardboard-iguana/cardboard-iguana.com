@@ -26,7 +26,7 @@ It's worth noting that `<script/>` tags are automatically interpreted as JavaScr
 
 NOTE: I just looked up the flag for the third question here, as I wasn't able to change the title with either `document.getElementById("thm-title").innerHTML = "I am a hacker"` or `document.querySelector("#thm-title").textContent = "I am a hacker"` (both of which should work, both of which *do* work on the console, and both of which are used in different walk-throughs). While there might be something in particular about my browser setup, I've also tried multiple browsers and haven't been able to get this to work. I'm kind of stumped.
 
-I *also* can't get `fetch()` or `window.location` directives to query a local Python web server. Using the playground's built-in `/log/` facility (per the hint)  *does* work... But running `document.cookie` directly produces output like `connect.sid=...`, but the line that appears in `/logs` is `connect.sid ...` (note the presence of a space rather than a `=`). This makes me think that there's something funky and automated going on with this box, rather than me missing something.
+I *also* can't get `fetch()` or `window.location` directives to query a local Python web server. Using the playground's built-in `/log/` facility (per the hint)  *does* work… But running `document.cookie` directly produces output like `connect.sid=...`, but the line that appears in `/logs` is `connect.sid ...` (note the presence of a space rather than a `=`). This makes me think that there's something funky and automated going on with this box, rather than me missing something.
 
 In any event, you can change the value of the cookies associated with a site in Firefox using the "Storage" tab in the Web Developer Tools.
 
@@ -37,7 +37,7 @@ In any event, you can change the value of the cookies associated with a site in 
 
 This is the most common type of XSS attack.
 
-Note that CORS will generally prevent the use of online services for fetching data...
+Note that CORS will generally prevent the use of online services for fetching data…
 
 ### DOM-Based XSS
 
@@ -124,7 +124,7 @@ Netcat can connect over UDP instead of TCP by providing the `-u` flag. I suspect
 
 Gobuster can also attempt to brute-force subdomains (the `dns` command).
 
-Increasing threads (`-t`) in gobuster makes a *big* difference in performance. (Probably makes you noisier too...)
+Increasing threads (`-t`) in gobuster makes a *big* difference in performance. (Probably makes you noisier too…)
 
 ### Nikto
 

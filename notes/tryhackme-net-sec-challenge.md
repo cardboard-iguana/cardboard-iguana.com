@@ -5,7 +5,7 @@
 
 * [TryHackMe: Net Sec Challenge](https://tryhackme.com/room/netsecchallenge)
 
-This CTF is just a series of questions. All should be solvable using nmap, telnet, and Hydra... Though I'm going to substitute netcat for telnet. However, I'm sticking to the spirit of things, and will only use those three tools.
+This CTF is just a series of questions. All should be solvable using nmap, telnet, and Hydra… Though I'm going to substitute netcat for telnet. However, I'm sticking to the spirit of things, and will only use those three tools.
 
 The target machine is 10.10.152.115.
 
@@ -110,7 +110,7 @@ This enables us to answer a set of questions immediately.
 >
 > We have an FTP server listening on a nonstandard port. What is the version of the FTP server? - vsftpd 3.0.3
 
-That's all pretty easy. The next one is a bit harder with our limited toolset...
+That's all pretty easy. The next one is a bit harder with our limited toolset…
 
 We start off by attempting to brute force the password for `eddie` or `quinn` using Hydra. To do this, we're going to run two Hydra tasks in parallel.
 
@@ -200,7 +200,7 @@ What about a null scan? That might actually get me more information than an ACK 
 sudo nmap -v -Pn -n -T4 -sN -p- 10.10.34.244
 ```
 
-"Null scan" is apparently the right answer, as the challenge provided the flag almost immediately (which doesn't *actually* make any sense, but whatever...).
+"Null scan" is apparently the right answer, as the challenge provided the flag almost immediately (which doesn't *actually* make any sense, but whatever…).
 
 > Browsing to http://10.10.152.115:8080 displays a small challenge that will give you a flag once you solve it. What is the flag? - THM{f7443f99}
 

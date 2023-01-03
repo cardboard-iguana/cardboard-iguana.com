@@ -36,7 +36,7 @@ Blockchain exploration tool (search for hashes):
 
 * [BlockCypher](https://live.blockcypher.com/)
 
-(Not a lot of supported blockchains though...)
+(Not a lot of supported blockchains though…)
 
 Fun side-note: PowerShell can use Linux-style redirects (`>`)!
 

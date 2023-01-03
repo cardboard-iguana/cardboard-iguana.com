@@ -21,7 +21,7 @@ Kerberos: The default authentication method for Windows domains. Intended to be 
 
 Much acronym. Very Microsoft.
 
-I found TryHackMe's discussion of Kerberos authentication pretty confusing, but Wikipedia's walk-through of the authentication process is much clearer. The below steps are cut-and-pasted from Wikipedia's walk-through, but with language adapted to match the Windows-specific environment TryHackMe is concerned with...
+I found TryHackMe's discussion of Kerberos authentication pretty confusing, but Wikipedia's walk-through of the authentication process is much clearer. The below steps are cut-and-pasted from Wikipedia's walk-through, but with language adapted to match the Windows-specific environment TryHackMe is concerned with…
 
 \[α\] Client Authentication to the KDC (a.k.a. "Pre-Authentication"):
 
@@ -147,7 +147,7 @@ Both Rubeus and Impacket (via GetNPUsers.py) support AS-REP roasting; however, R
 Rubeus.exe asreproast
 ```
 
-To use Hashcat to crack the hashes obtained in this fashin, first insert `23$` after the leading `$kerb5asrep$` (so `$kerb5asrep$` -> `$kerb5asrep$23$`) and then use mode 18200.
+To use Hashcat to crack the hashes obtained in this fashin, first insert `23$` after the leading `$kerb5asrep$` (so `$kerb5asrep$` → `$kerb5asrep$23$`) and then use mode 18200.
 
 Basically the only mitigation for this attack is to keep pre-authentication enabled, though strong password policies can help.
 

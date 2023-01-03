@@ -35,7 +35,7 @@ Types of API endpoints:
 * Regional (per-region, though they can be routed to dynamically using Route 53; pass HTTP headers as-is with some exceptions)
 * Private (can only be accessed within a VPC; pass HTTP headers as-is)
 
-Edge-optimized endpoints are the default; the other options allow either less expensive / more responsive implementations when global coverage isn't necessary (regional) or when an API is purely internal (private). API endpoint types can be updated, but only within a (somewhat obvious) chain: Edge-Optimized <-> Regional <-> Private.
+Edge-optimized endpoints are the default; the other options allow either less expensive / more responsive implementations when global coverage isn't necessary (regional) or when an API is purely internal (private). API endpoint types can be updated, but only within a (somewhat obvious) chain: Edge-Optimized ←→ Regional ←→ Private.
 
 The distinction between "resources" and "entities" within API gateway is somewhat arbitrary - really what you're doing is building a tree of endpoints that map to various API paths. Dynamic path elements can be specified as {dynamicPathElementName}; these need to be references as requestParameters within the API as method.request.path.dynamicPathElementName (and must be explicitly marked as required).
 
@@ -47,6 +47,6 @@ A "catch all" response can be configured in the API Gateway for when the API bac
 
 The API Gateway also supports a special "proxy" resource that allows API paths to be built (and changed) dynamically. Proxy resources are specified using {proxy+} and function like `*`.
 
-(To be continued...)
+(To be continued…)
 
 * [Creating a REST API in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html)

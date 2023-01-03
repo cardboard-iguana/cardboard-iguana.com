@@ -71,7 +71,7 @@ Exam Cram recommends combining biometrics with a device PIN. But I've never seen
 
 ## Remote Wiping
 
-Interesting... There are local device wiping tools that can be triggered when a SIM card change is detected.
+Interesting… There are local device wiping tools that can be triggered when a SIM card change is detected.
 
 ## Geolocation, Geofencing, and Push Notifications
 
@@ -248,12 +248,12 @@ IMSI = International Mobile Subscriber Identifier. Identifies a particular *user
 
 Wi-Fi network standard names:
 
-* 802.11a (Wi-Fi 2) - 54 Mbps, 5 GHz
-* 802.11b (Wi-Fi 1) - 11 Mbps, 2.4 GHz
-* 802.11g (Wi-Fi 3) - 54 Mbps, 2.4 GHz
-* 802.11n (Wi-Fi 4) - 600 Mbps, 2.4 GHz + 5 GHz
-* 802.11ac (Wi-Fi 5) - 3.6 Gbps, 5 GHz
-* 802.11ax (Wi-Fi 6) - 14 Gbps, 2.4 GHz + 5 GHz + 6 GHz
+* 802.11a (Wi-Fi 2) — 54 Mbps, 5 GHz
+* 802.11b (Wi-Fi 1) — 11 Mbps, 2.4 GHz
+* 802.11g (Wi-Fi 3) — 54 Mbps, 2.4 GHz
+* 802.11n (Wi-Fi 4) — 600 Mbps, 2.4 GHz + 5 GHz
+* 802.11ac (Wi-Fi 5) — 3.6 Gbps, 5 GHz
+* 802.11ax (Wi-Fi 6) v 14 Gbps, 2.4 GHz + 5 GHz + 6 GHz
 
 NFC works over a distance of ~4". Operates at 13.56 MHz.
 
@@ -261,23 +261,23 @@ Infrared tops out at ~16 Mbps.
 
 Bluetooth standards:
 
-* 1.0 - 732 Kbps
-* 1.2 - 732 Kbps
-* 2.0 + EDR - 3 Mbps
-* 2.1 + EDR - 3 Mbps
-* 3.0 + HS - 24 Mbps
-* 4.0 + BLE - 3 Mbps
-* 4.1 + BLE - 3 Mbps
+* 1.0 — 732 Kbps
+* 1.2 — 732 Kbps
+* 2.0 + EDR — 3 Mbps
+* 2.1 + EDR — 3 Mbps
+* 3.0 + HS — 24 Mbps
+* 4.0 + BLE — 3 Mbps
+* 4.1 + BLE — 3 Mbps
 
 USB standards:
 
-* 1.0 (Low Speed) - 1.5 Mbps
-* 1.1 (Full Speed) - 12 Mbps
-* 2.0 (High Speed) - 480 Mbps
-* 3.2 Gen1x1 (SuperSpeed) - 5 Gbps
-* 3.2 Gen2x1 (SuperSpeed+) - 10 Gbps
-* 3.2 Gen2x2 (SuperSpeed 20 Gbps) - 20 Gbps
-* 4 (USB4 Gen 3x2 40 Gbps) - 40 Gbps
+* 1.0 (Low Speed) — 1.5 Mbps
+* 1.1 (Full Speed) — 12 Mbps
+* 2.0 (High Speed) — 480 Mbps
+* 3.2 Gen1x1 (SuperSpeed) — 5 Gbps
+* 3.2 Gen2x1 (SuperSpeed+) — 10 Gbps
+* 3.2 Gen2x2 (SuperSpeed 20 Gbps) — 20 Gbps
+* 4 (USB4 Gen 3x2 40 Gbps) — 40 Gbps
 
 This table isn't really 100% accurate (though it's better than the one that ITPro.TV displayed). Actual USB standards are a freakin' mess.
 

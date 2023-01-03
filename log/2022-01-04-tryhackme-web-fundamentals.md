@@ -7,7 +7,7 @@
 
 ### Introduction
 
-I've done quite a few rooms involving Burp Suite before, but this definitely looks like the most comprehensive sequence I've yet done. Maybe there'll be something similar for Metasploit later...
+I've done quite a few rooms involving Burp Suite before, but this definitely looks like the most comprehensive sequence I've yet done. Maybe there'll be something similar for Metasploit later…
 
 * [Using Metasploit](../notes/metasploit.md)
 

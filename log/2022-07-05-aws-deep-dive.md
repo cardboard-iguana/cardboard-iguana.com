@@ -9,7 +9,7 @@ Today I'll be starting the ~6 hour "AWS Cloud Practitioner Essentials" course as
 
 ## Introduction to Amazon Web Services
 
-Wait... AWS has per-minute satellite rental?!?
+Wait… AWS has per-minute satellite rental?!?
 
 ## Compute in the Cloud
 

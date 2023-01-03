@@ -10,7 +10,7 @@ This entry was actually written over the course of most of the day, as the next 
 
 ## OffSec Live: Basic Tools, Part 1
 
-(Missed the first few minutes again...)
+(Missed the first few minutes again…)
 
 ```bash
 # Use netcat to connect to any port (like Telnet).
@@ -57,7 +57,7 @@ The default EC2 SSH login is `ec2-user`; only private key logins are allowed.
 
 ### Demo Stack Setup Notes
 
-Note that the CloudFormation Designer does *not* work well in iOS browsers! (In particular, drag-and-drop is next-to-broken...)
+Note that the CloudFormation Designer does *not* work well in iOS browsers! (In particular, drag-and-drop is next-to-broken…)
 
 You *really* want to let CloudFormation control your bucket name, since names must be globally unique!
 

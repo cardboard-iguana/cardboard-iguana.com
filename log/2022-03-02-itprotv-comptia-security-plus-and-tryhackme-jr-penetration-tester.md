@@ -201,7 +201,7 @@ It's worth experimenting with forms to check how GET and POST variables interact
 
 ### Cookie Tampering
 
-Interesting; sometimes cookies are hashes, rather than plain strings. I'm guessing that the reason you'd do this is that you're concatenating some values together and then check to see if the hash matches before granting certain privileges? This seems potentially much less secure than password hashing (even with a salt) though, as the number of terms that could reasonably be included in a permission string is much smaller than the number of character combinations in even a modest password...
+Interesting; sometimes cookies are hashes, rather than plain strings. I'm guessing that the reason you'd do this is that you're concatenating some values together and then check to see if the hash matches before granting certain privileges? This seems potentially much less secure than password hashing (even with a salt) though, as the number of terms that could reasonably be included in a permission string is much smaller than the number of character combinations in even a modest password…
 
 [CrackStation is an online database of hashes (basically a rainbow table).](https://crackstation.net/)
 

@@ -181,13 +181,13 @@ usernames.close()
 * [Opening and Closing Files in Python](https://www.tutorialspoint.com/opening-and-closing-files-in-python)
 * [Python - Command Line Arguments](https://www.tutorialspoint.com/python/python_command_line_arguments.htm)
 * [Python File readlines() Method](https://www.tutorialspoint.com/python/file_readlines.htm)
-* [Quickstart -- Requests](https://docs.python-requests.org/en/latest/user/quickstart/)
+* [Quickstart — Requests](https://docs.python-requests.org/en/latest/user/quickstart/)
 * [Calculating Time Difference](https://stackoverflow.com/a/3426953)
 * [Python string \| strip()](https://www.geeksforgeeks.org/python-string-strip/)
 
 My general strategy here is to not get too fancy in Python, but rather just to output the time it takes to log in given a particular username and then do the subsequent analysis using normal shell tools.
 
-Saving the above script as `hackernote-user-enum.py` and using the `Names/names.txt` list (which is the shorter -- as suggested -- of the two lists mentioned by the exercise), we create an ordered lists where those usernames that took longest to respond with an error message are listed last:
+Saving the above script as `hackernote-user-enum.py` and using the `Names/names.txt` list (which is the shorter — as suggested — of the two lists mentioned by the exercise), we create an ordered lists where those usernames that took longest to respond with an error message are listed last:
 
 ```bash
 chmod +x hackernote-user-enum.py
@@ -199,7 +199,7 @@ cat hackernote-user-enum.out | sort -n
 
 The `unbuffer` command is used to force line-buffering of stdout in a pipeline.
 
-Note that this takes a looong time. And we really need to run this process twice -- once with the full list, and once with only those names that initially took longer than 1.7 seconds (this is necessary because the web server seems to periodically hang when rapidly hit by requests; 1.7 seconds is chosen based on the time it takes to run the script against a test list composed of my known-good user and a couple of other names).
+Note that this takes a looong time. And we really need to run this process twice — once with the full list, and once with only those names that initially took longer than 1.7 seconds (this is necessary because the web server seems to periodically hang when rapidly hit by requests; 1.7 seconds is chosen based on the time it takes to run the script against a test list composed of my known-good user and a couple of other names).
 
 The second run is, mercifully, much shorter, and makes it obvious that there is only a single valid user, `james`.
 

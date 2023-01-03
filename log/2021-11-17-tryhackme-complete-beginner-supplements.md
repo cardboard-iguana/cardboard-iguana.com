@@ -30,7 +30,7 @@ Malware is generally classed by how it *executes* (i.e., what it does).
 
 The difference here basically boils down to: Did you run it?
 
-Seems like it's probably best to do dynamic analysis in a cloud VM or something. Though a lot of malware tries to detect if it's running in a VM these days, so...
+Seems like it's probably best to do dynamic analysis in a cloud VM or something. Though a lot of malware tries to detect if it's running in a VM these days, so…
 
 ### Discussion of Provided Tools & Their Uses
 

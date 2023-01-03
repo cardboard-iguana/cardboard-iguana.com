@@ -17,7 +17,7 @@ Continued notes about the Amazon API Gateway.
 
 API Gateway custom domains are all managed through CloudFront.
 
-APIs are mapped to base paths (which might be just `/`) off of the custom domain; thus, multiple APIs can (potentially) use the same custom domain (just with different base paths). For *regional* custom domains (this is a weird restriction...), *subsets* of multiple APIs can be rooted in different base paths with multiple components. To determine which API to route a request to, API Gateway chooses the API with the longest full path (base path + API path). One consequence of this is that for regional custom domains, one API can be "mounted" inside of another.
+APIs are mapped to base paths (which might be just `/`) off of the custom domain; thus, multiple APIs can (potentially) use the same custom domain (just with different base paths). For *regional* custom domains (this is a weird restriction…), *subsets* of multiple APIs can be rooted in different base paths with multiple components. To determine which API to route a request to, API Gateway chooses the API with the longest full path (base path + API path). One consequence of this is that for regional custom domains, one API can be "mounted" inside of another.
 
 Once a custom domain is set up, the default API Gateway endpoint can be disabled. However, doing so disables it for *all* stages of that API.
 

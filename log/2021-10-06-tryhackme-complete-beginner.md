@@ -48,7 +48,7 @@ There are three basic important XML bits here:
 
 * `!DOCTYPE` defines the document type *and* the root element.
 * `!ELEMENT` defines additional elements (so if I understand this correctly, a !DOCTYPE declaration must contain at least one !ELEMENT with the same name).
-* `!ENTITY` defines entities like `&gt;` - basically shortcuts for other data. There seems to be a lot more to XML entities than just this though...
+* `!ENTITY` defines entities like `&gt;` - basically shortcuts for other data. There seems to be a lot more to XML entities than just this though…
 
 The SYSTEM keyword can be included in !ENTITY declarations (or in the XML document !DOCTYPE declaration), and means "read this from the current system".
 
@@ -133,6 +133,6 @@ print(base64.b64encode(pickle.dumps(rce())))
 
 What's getting encoded here is the `rce` class. Python will call `rce.__reduce__()` to determine how to initialize this class when pickle.loads() deserializes it, and `__reduce__()` wil return the tuple `(os.system, (command,))`, where `command` is basically our standard Metasploit reverse shell. Python then initializes the class by using os.system to call `command`, and there's our reverse shell!
 
-(SIDE NOTE: Isn't `nc` a more common name for `netcat`? Debian provides links to both in /etc/aleternatives, but it seems best not to assume we're on a Debian system...)
+(SIDE NOTE: Isn't `nc` a more common name for `netcat`? Debian provides links to both in /etc/aleternatives, but it seems best not to assume we're on a Debian system…)
 
 * [pickle - Python object serialization](https://docs.python.org/3/library/pickle.html)

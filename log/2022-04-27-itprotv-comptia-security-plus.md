@@ -16,7 +16,7 @@ Parts of a framework:
 * Guidelines (recommended methods of realizing the standards)
 * Procedures (specific, step-by-step instructions for implementing guidelines)
 
-The policy -> procedure flow above transforms *descriptive* statements into *prescriptive* ones.
+The policy → procedure flow above transforms *descriptive* statements into *prescriptive* ones.
 
 ### Human Resource Management Policies
 
@@ -144,14 +144,14 @@ A new term: Measurement Systems Analysis (MSA). This is the process of determini
 * Repeatability
 * Reproducibility
 
-(It's not clear here what the difference between "repeatability" and "reproducibility" is here...)
+(It's not clear here what the difference between "repeatability" and "reproducibility" is here…)
 
 Software/Hardware lifecycle components:
 
 * End of Life
 * End of Service
 
-Note that EOS (when security patches are no longer available) comes *after* EOL (when the system is no longer sold or actively supported). Note that increasingly EOL = EOS (for example, with Chrome OS devices), but this is not *always* true (Windows...).
+Note that EOS (when security patches are no longer available) comes *after* EOL (when the system is no longer sold or actively supported). Note that increasingly EOL = EOS (for example, with Chrome OS devices), but this is not *always* true (Windows…).
 
 PPRR risk management model for third-party & supply chain risk:
 

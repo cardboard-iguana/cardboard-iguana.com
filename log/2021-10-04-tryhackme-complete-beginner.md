@@ -52,7 +52,7 @@ Generally the intruder is used after a proof-of-concept has been established usi
 * SNIPER repeats requests, cycling through items in a supplied wordlist across a selected set of positions. Only one position changes per attempt, and an item in the wordlist is only substituted into one position (the remaining positions in an attempt are held at the specified default).
 * BATTERING RAM is similar to sniper, but tests all positions simultaneously. Each item from a wordlist is placed into *every* available position (such that all defined positions have an identical value for a given run).
 * PITCHFORK takes one wordlist per position and then just cycles each list in lock-step until it reaches the end of the shortest list.
-* CLUSTER BOMB is the test that perhaps makes the most intuitive sense -- it takes one wordlist per position and then tests every *possible* combination.
+* CLUSTER BOMB is the test that perhaps makes the most intuitive sense — it takes one wordlist per position and then tests every *possible* combination.
 
 ### As It Turns Out the Machines Are Better at Math Than Us
 

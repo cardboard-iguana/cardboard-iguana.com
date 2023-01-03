@@ -64,7 +64,7 @@ Windows "advanced permissions" are just bundles of the above.
 * Change permissions = Full Control
 * Take ownership = Full Control
 
-I suspect that there must be a bit more to advanced permissions than this, as otherwise there's a lot of duplication here (either that, or Windows is supporting a lot of legacy permission bundles, which also wouldn't surprise me). Also, all of these advanced permissions *include* the "full control" permission, which would seem to make them all equivalent to... "full control"?
+I suspect that there must be a bit more to advanced permissions than this, as otherwise there's a lot of duplication here (either that, or Windows is supporting a lot of legacy permission bundles, which also wouldn't surprise me). Also, all of these advanced permissions *include* the "full control" permission, which would seem to make them all equivalent to… "full control"?
 
 When a user is part of two groups with different permissions to an object, the allow permission will only override inherited deny permissions (explicitly set deny permissions cannot be overridden; remember that Windows access handling is default-deny).
 
@@ -208,7 +208,7 @@ Kerberos uses symmetric keys for protocol encryption. Kerberos uses TCP/UDP 88, 
 
 Kerberos differs from protocols previously discussed in that the client initially sends authentication information directly to the KDC ("key distribution center") server, rather than working through the actual resource server. A quick sketch of the Kerberos authentication process:
 
-* The client begins by contacting the "certificate authority" (CA... but *not* the same kind of CA as in PKI).
+* The client begins by contacting the "certificate authority" (CA… but *not* the same kind of CA as in PKI).
 * The CA provides a session key containing the issuing timestamp and expiration timestamp (typically 8 hours in the future) + information regarding user authorization. The first of these is encrypted with the client's key, but the second of these is encrypted with a long-term secret known only to the KDC. The encrypted bit that the client *can't* read is the "ticket granting ticket" (TGT).
 * The client submits the TGT to the "ticket granting server" (TGS), which decrypts it, verifies access, and then returns an actual service ticket (containing issued at and expires at timestamps) encrypted with the key of the *service* the client wishes to access. Again, the client cannot read the service ticket, but can read a separate message containing a key that will be used to communicate with the service (this key is contained within the service ticket as well).
 * The client sends the service the service ticket (which it can't read) and an additional message encrypted with the service key provided by the TGS (that the service *initially* can't read).

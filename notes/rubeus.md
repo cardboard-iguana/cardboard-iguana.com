@@ -50,7 +50,7 @@ The password hashes output here can then be cracked with Hashcat (use the 13100 
 Rubeus.exe asreproast
 ```
 
-To use Hashcat to crack the hashes obtained in this fashin, first insert `23$` after the leading `$kerb5asrep$` (so `$kerb5asrep$` -> `$kerb5asrep$23$`) and then use mode 18200.
+To use Hashcat to crack the hashes obtained in this fashin, first insert `23$` after the leading `$kerb5asrep$` (so `$kerb5asrep$` → `$kerb5asrep$23$`) and then use mode 18200.
 
 ## Using a Certificate to Request a Ticket
 

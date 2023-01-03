@@ -41,7 +41,7 @@ Types of firewalls:
 * Next-Generation Firewalls
 * Cloud Firewall (a.k.a., "Firewall as a Service"; obviously used the protect cloud-based applications/networks)
 
-Traditional firewalls cover OSI layers 2 - 4 (data link, network, and transport), while "next-gen" firewalls *additionally* cover layers 5 - 7 (session, presentation, and application).
+Traditional firewalls cover OSI layers 2 – 4 (data link, network, and transport), while "next-gen" firewalls *additionally* cover layers 5 – 7 (session, presentation, and application).
 
 * [OSI Model](../notes/osi-model.md)
 
@@ -85,6 +85,6 @@ nc -lvnp $INCOMING_PORT -c "nc $TARGET_IP $TARGET_PORT"
 
 ## Evasion Using Non-Standard Ports
 
-Sometimes the netcat binary is named `ncat` instead of `nc`...
+Sometimes the netcat binary is named `ncat` instead of `nc`…
 
 * [Using "netcat"](../notes/netcat.md)

@@ -45,7 +45,7 @@ for send, receive in ans:
 	print(receive.sprintf(r"%Ether.src% - %ARP.psrc%"))
 ```
 
-Note that the `r` here isn't a mistake -- rather it specifies a "raw string" (the use of which, incidentally, requires Python 3.6+).
+Note that the `r` here isn't a mistake — rather it specifies a "raw string" (the use of which, incidentally, requires Python 3.6+).
 
 * [TryHackMe: Python for Pentesters](tryhackme-python-for-pentesters.md)
 * [Scapy](https://scapy.net/)

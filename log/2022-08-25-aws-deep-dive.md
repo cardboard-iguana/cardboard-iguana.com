@@ -7,7 +7,7 @@
 
 [AWS re:Invent 2018: A Serverless Journey - AWS Lambda Under the Hood (YouTube)](https://youtu.be/3qln2u1Vr2E)
 
-Lambda is a containerized service on the backend - function code is run by workers, each of which manages multiple "sandboxes". Workers are managed by a "worker manager", and are recycled every 8 - 10 hours. Sandboxes are destroyed if they become idle for some period of time in order to free up resources.
+Lambda is a containerized service on the backend - function code is run by workers, each of which manages multiple "sandboxes". Workers are managed by a "worker manager", and are recycled every 8 – 10 hours. Sandboxes are destroyed if they become idle for some period of time in order to free up resources.
 
 A worker is an entire physical server.
 

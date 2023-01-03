@@ -180,7 +180,7 @@ I lost a good hour getting stuck because of these two minor complications.
 
 ### Privilege Escalation
 
-PowerUp is a script that scans for common Windows vulnerabilities. It looks like the version that's included with Kali Linux is different and/or not-up-to-date relative to the version of PowerUp linked to by the TryHackMe Steelmountain room. In particular, Kali version doesn't list *a lot* of information about potentially vulnerable services that is necessary for completing this section. (On the downside, the version of PowerUp we need to use produces *a lot* of duplicative output too...)
+PowerUp is a script that scans for common Windows vulnerabilities. It looks like the version that's included with Kali Linux is different and/or not-up-to-date relative to the version of PowerUp linked to by the TryHackMe Steelmountain room. In particular, Kali version doesn't list *a lot* of information about potentially vulnerable services that is necessary for completing this section. (On the downside, the version of PowerUp we need to use produces *a lot* of duplicative output too…)
 
 Anyways, first we have to download the more capable version of PowerUp:
 

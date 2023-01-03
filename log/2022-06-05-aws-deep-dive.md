@@ -56,7 +56,7 @@ These all have some kind of free version.
 
 [AWS Essentials: Create an AWS Account (YouTube)](https://youtu.be/_siSwgpVQNc)
 
-Wow, AWS is using *voice calls* for account authentication! (At least they're automated...)
+Wow, AWS is using *voice calls* for account authentication! (At least they're automated…)
 
 ### How to Navigate the AWS Console
 

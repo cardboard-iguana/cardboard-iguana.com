@@ -27,7 +27,7 @@ Unlike HBKs (which are retained after expiration to enable the decryption of old
 
 #### Deleting Keys
 
-KMS keys can be deleted; there's by default a 7-day "grace period" before deletion during which the key is disabled before deletion... It's not clear if key deletion can be canceled during this window, however.
+KMS keys can be deleted; there's by default a 7-day "grace period" before deletion during which the key is disabled before deletion… It's not clear if key deletion can be canceled during this window, however.
 
 * [Deleting keys](https://docs.aws.amazon.com/kms/latest/cryptographic-details/key-deletion.html)
 
@@ -53,7 +53,7 @@ Okay, so the 4 KB limit is only for "direct" calls to KMS - apparently the AWS E
 
 Apparently, services identify themselves to KMS when using a grant by providing some kind of token related to this grant. I'm going to guess that these tokens must include some kind of time-based signature in order to protect them against being used if leaked?
 
-The only "authentication" that the returned plaintext is authentic is that it includes a key ID that should match the key that was used to encrypt the original ciphertext. Seems... Like not a very strong way of authenticating the returned plaintext?
+The only "authentication" that the returned plaintext is authentic is that it includes a key ID that should match the key that was used to encrypt the original ciphertext. Seems… Like not a very strong way of authenticating the returned plaintext?
 
 * [Decrypt](https://docs.aws.amazon.com/kms/latest/cryptographic-details/decrypt-operation.html)
 

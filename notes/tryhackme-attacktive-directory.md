@@ -432,7 +432,7 @@ enum4linux complete on Thu Dec 30 21:05:30 2021
 
 There's honestly not much here, though we can see that the NETBIOS domain name for the target is THM-AD.
 
-The AD domain itself is using the standard (invalid) .local TLD, but that's not actually something that enum4linux tells us -- instead, we can see this in the earlier output from nmap.
+The AD domain itself is using the standard (invalid) .local TLD, but that's not actually something that enum4linux tells us — instead, we can see this in the earlier output from nmap.
 
 * [Using "nmap"](nmap.md)
 
@@ -585,7 +585,7 @@ python3 \
 spookysec.local/backup:backup2517860@THM-AD
 ```
 
-(I got a bit tripped up here, as I didn't read secretsdump.py's output carefully enough -- credentials are presented in the format `domain\uid:rid:lmhash:nthash`, so the relevant NTLM hash is the *last* hash for the `Administrator` account!)
+(I got a bit tripped up here, as I didn't read secretsdump.py's output carefully enough — credentials are presented in the format `domain\uid:rid:lmhash:nthash`, so the relevant NTLM hash is the *last* hash for the `Administrator` account!)
 
 We'll use the Evil-WinRM tool to retrieve the final flag by passing the hash.
 

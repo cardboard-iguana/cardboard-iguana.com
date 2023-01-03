@@ -330,7 +330,7 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Wed Feb  2 20:43:52 2022 -- 1 IP address (1 host up) scanned in 915.75 seconds
 ```
 
-SSH and Apache on port 80. Pretty standard. There is an enumerated `/robots.txt` file, which turns out to be invalid -- it contains only the phrase "Wubbalubbadubdub".
+SSH and Apache on port 80. Pretty standard. There is an enumerated `/robots.txt` file, which turns out to be invalid — it contains only the phrase "Wubbalubbadubdub".
 
 Let's also hit the target with gobuster:
 
@@ -362,11 +362,11 @@ Well, that didn't work.
 
 Meanwhile, futzing around by hand I find that `/item.php?id=0 union select null, null, null, null, null` works and displays a slightly *different* error page (so, whatever the `id` variable is being pushed into must be at the very end of the SQL statement). And, while "`'`" triggers the annoying error page, using a double quote ("`"`") does not.  Using a bit of trial-and error, we can determine that all but the first of these columns are usable, though the fourth place is easiest to read. This at least let's us figure out our first few flags.
 
-FLAG 1: What is the SQL database called which is serving the shop information? -- `park`
+FLAG 1: What is the SQL database called which is serving the shop information? — `park`
 
-FLAG 2: How many columns does the table have? -- `5`
+FLAG 2: How many columns does the table have? — `5`
 
-FLAG 3: Whats the system *version*? -- `Ubuntu 16.04`
+FLAG 3: Whats the system *version*? — `Ubuntu 16.04`
 
 The database also appears to be running as root. Ruh roh!
 
@@ -422,9 +422,9 @@ Unfortunately, trying to include the `username` column triggers the annoying err
 
 The second works for this purpose, and the first flag is right in `dennis`' home directory.
 
-FLAG 4: What is dennis' password? -- `ih8dinos`
+FLAG 4: What is dennis' password? — `ih8dinos`
 
-FLAG 5: Locate and get the first flag contents. -- `b89f2d69c56b9981ac92dd267f`
+FLAG 5: Locate and get the first flag contents. — `b89f2d69c56b9981ac92dd267f`
 
 Poking around a bit, `sudo -l` reveals that `dennis` can use `scp` via `sudo`, and the `test.sh` file implies that there's a `/root/flag5.txt` file. Since `scp` works like `cp` for local copies, we can grab this.
 
@@ -433,7 +433,7 @@ sudo scp /root/flag5.txt .
 cat flag5.txt
 ```
 
-FLAG 8: Whats the contents of the fifth flag? -- `2a7074e491fcacc7eeba97808dc5e2ec`
+FLAG 8: Whats the contents of the fifth flag? — `2a7074e491fcacc7eeba97808dc5e2ec`
 
 Continuing to poke around, `cat .bash_history` reveals the third flag (as well as a lot of `scp` attempts around `/root/flag5.txt`, which I just got).
 
@@ -441,7 +441,7 @@ FLAG 7: Whats the contents of the third flag?** `b4973bbc9053807856ec815db25fb3f
 
 The `~/.viminfo` file reveals two more potential flags: `/boot/grub/fonts/flagTwo.txt` and `/tmp/flagFour.txt`.
 
-FLAG 6: Whats the contents of the second flag? -- `96ccd6b429be8c9a4b501c7a0b117b0a`
+FLAG 6: Whats the contents of the second flag? — `96ccd6b429be8c9a4b501c7a0b117b0a`
 
 But, as the TryHackMe room notes, there is no fourth flag. So actually we're done.
 

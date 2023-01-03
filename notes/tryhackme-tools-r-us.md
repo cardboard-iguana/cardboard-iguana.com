@@ -17,7 +17,7 @@ It's been a little while since I had the chance to use some of these, so let's f
 
 ## Narrative
 
-The target is at 10.10.28.154. Visiting http://10.10.28.154 reveals a "down for maintenance" page with no other links, but with the cryptic promise that "[o]ther parts of ther website is [sic] still functional..."
+The target is at 10.10.28.154. Visiting http://10.10.28.154 reveals a "down for maintenance" page with no other links, but with the cryptic promise that "[o]ther parts of ther website is [sic] still functional…"
 
 We'll start off with an nmap scan.
 
@@ -325,7 +325,7 @@ This finds the following directories:
 
 This gives us another flag.
 
-> FLAG 1: What directory can you find, that begins with a "g"? -- `guidelines`
+> FLAG 1: What directory can you find, that begins with a "g"? — `guidelines`
 
 Going to this directory reveals a single message:
 
@@ -335,7 +335,7 @@ Hey <b>bob</b>, did you update that TomCat server?
 
 So, that kinda does imply that Tomcat or Coyote might be vulnerable, even though I couldn't find anything obvious on Exploit DB. I'll come back to that, since we have another flag.
 
-> FLAG 2: Whose name can you find from this directory? -- `bob`
+> FLAG 2: Whose name can you find from this directory? — `bob`
 
 We'll deploy Hydra against the http-basic authentication protecting `/protected/`. I've never done this before, but a quick internet search reveals a potentially useful guide, as well as an additional walk-through clarifying how to use Hydra to crack Apache conf-based http-basic authentication. With this information in hand, we should (hopefully) be able to crack Bob's password using the following:
 
@@ -347,7 +347,7 @@ hydra -l bob \
 
 This gets us another flag!
 
-> FLAG 4: What is bob's password to the protected part of the website? -- `bubbles`
+> FLAG 4: What is bob's password to the protected part of the website? — `bubbles`
 
 While it probably won't get us any more flags, I'm kinda curious what's in `/protected/`. Unfortunately, the experience is kinda anti-climatic.
 
@@ -367,7 +367,7 @@ nikto -Format txt \
 
 The next flag is just looking for the number of "Tomcat documentation" files Nikto finds. Unfortunately, these don't get spit out until near the end of Nikto's run, so expect to wait a *long* time!
 
-> FLAG 7: How many documentation files did Nikto identify? -- `5`
+> FLAG 7: How many documentation files did Nikto identify? — `5`
 
 Alright, let's switch over to our last two flags, which imply that we can get RCE on this version of Tomcat. It looks like Apache Tomcat 7.0.88 was released on May 16, 2018. There's no obvious *vulnerability* to exploit for this version, but after searching around a bit on the net I found a guide mentioning that RCE on Tomcat could be obtained via the "manager" application. And, indeed, looking at the info for the corresponding module in Metasploit (`exploit/multi/http/tomcat_mgr_upload`) reveals that we can obtain RCE if we have access to the `/manager/html/upload` component. Which we *do*, because `/manager/html` has the option to "Select WAR file to upload".
 
@@ -385,11 +385,11 @@ exploit
 
 And we have a meterpreter shell! Running `getuid` reveals that we're also running as `root`. Ouch.
 
-> FLAG 10: What user did you get a shell as? -- `root`
+> FLAG 10: What user did you get a shell as? — `root`
 
 We'll just drop to `shell` in meterpreter to get the contents of `/root/flag.txt`.
 
-> FLAG 11: What text is in the file /root/flag.txt? -- `ff1fc4a81affcc7688cf89ae7dc6e0e1`
+> FLAG 11: What text is in the file /root/flag.txt? — `ff1fc4a81affcc7688cf89ae7dc6e0e1`
 
 * [Using Hydra](hydra.md)
 * [Using "nmap"](nmap.md)

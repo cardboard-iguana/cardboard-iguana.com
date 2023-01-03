@@ -27,7 +27,7 @@ A "default" validator can be set at the level of the entire API, in which case i
 
 #### API Gateway: Setting Up Data Transformations for REST APIs
 
-Mapping templates (method request -> integration request and integration response -> method response) are Velocity Template Language (VTL) scripts; individual data elements from the input are specified using JSONPath. VTL itself looks fairly straightforward, and is reminiscent of both Handlebars and Liquid.
+Mapping templates (method request → integration request and integration response → method response) are Velocity Template Language (VTL) scripts; individual data elements from the input are specified using JSONPath. VTL itself looks fairly straightforward, and is reminiscent of both Handlebars and Liquid.
 
 VTL transformations can be applied to either the body payload or to non-body parameters (headers, query parameters, or response codes). It is a little unclear how the API Gateway determines whether a mapping template is operating over a request or response payload vs. other HTTP parameters, though it looks from the documentation that different parts of the HTTP request/response (headers, body, etc.) are set in different parts of the API Gateway console/API.
 
@@ -35,7 +35,7 @@ Mappings are defined in the final processing step ("integration request" for inc
 
 Parameter names (GET variables, header names, and JSON parameters) must match the `^[a-zA-Z0-9._$-]+$` regexp. While body mappings are defined explicitly, (JSON) body parameters can be referenced in non-body mappings using JSONPath expressions (in the `method.request.body` or `integration.response.body` namespace).
 
-Apparently the standard `$input.params(i)` variables are vulnerable to JSON path injection. For whatever reason Amazon *doesn't* fix this automatically, but rather recommends that returned values be processed by `$util.escapeJavaScript()` before use instead (I guess that fixing this proactively must break critical functionality for some *really* big customers...). (Except... Apparently `$util.escapeJavaScript()` produces invalid JSON when the input contains single quotes, so the construct `$util.escapeJavaScript('$').replaceAll("\\'","'")` needs to be used instead. WTF?)
+Apparently the standard `$input.params(i)` variables are vulnerable to JSON path injection. For whatever reason Amazon *doesn't* fix this automatically, but rather recommends that returned values be processed by `$util.escapeJavaScript()` before use instead (I guess that fixing this proactively must break critical functionality for some *really* big customers…). (Except… Apparently `$util.escapeJavaScript()` produces invalid JSON when the input contains single quotes, so the construct `$util.escapeJavaScript('$').replaceAll("\\'","'")` needs to be used instead. WTF?)
 
 For all `$input` functions, the `$` parameter represents the root of the request body JSON (though it looks like this can be safely dropped so long as you're not referring to the entire object itself).
 

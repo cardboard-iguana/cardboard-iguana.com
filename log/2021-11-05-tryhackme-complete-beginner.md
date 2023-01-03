@@ -394,7 +394,7 @@ Read data files from: /usr/bin/../share/nmap
 # Nmap done at Fri Nov  5 22:13:32 2021 -- 1 IP address (1 host up) scanned in 28.92 seconds
 ```
 
-I still don't think that smb-enum-users.nse is working for me...
+I still don't think that smb-enum-users.nse is working for me…
 
 NFS enumeration:
 

@@ -5,7 +5,7 @@
 
 (So, I didn't get to start this yesterday as I'd planned, because I needed to take The Yak Online Governance Primer live instead!)
 
-It's time to get down to business... Up until now, I've been trying to bring myself up to speed on the fundamentals. Now it's time to actually start earning some certifications! First up: The CompTIA Security+.
+It's time to get down to business… Up until now, I've been trying to bring myself up to speed on the fundamentals. Now it's time to actually start earning some certifications! First up: The CompTIA Security+.
 
 I'll be working on this by alternating episodes of ITPro.TV's Security+ course and TryHackMe's Jr. Penetration Tester path.
 
@@ -52,7 +52,7 @@ Types of phishing:
 
 There's also spam and "spim" (instant messaging spam), which *can* be phishing, but can also just be annoying.
 
-Phishing may not always involve credential harvesting; it can also be about installing malware, or even just getting someone to perform an action on behalf of the attacker (so, I guess gift card scams are actually a form of phishing...).
+Phishing may not always involve credential harvesting; it can also be about installing malware, or even just getting someone to perform an action on behalf of the attacker (so, I guess gift card scams are actually a form of phishing…).
 
 Techniques:
 
@@ -85,6 +85,6 @@ Security Operations Centers (SOCs) are typically divided into three tiers:
 
 ### Security Operations Center (SOC)
 
-Interesting shout-out to Feedly as a threat monitoring tool. I periodically return to Feedly, but can't help shake the feeling that I'm missing something that would help me use it more effectively...
+Interesting shout-out to Feedly as a threat monitoring tool. I periodically return to Feedly, but can't help shake the feeling that I'm missing something that would help me use it more effectively…
 
 * [Feedly](https://feedly.com/)

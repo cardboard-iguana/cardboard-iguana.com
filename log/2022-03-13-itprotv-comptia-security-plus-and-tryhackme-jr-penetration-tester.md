@@ -29,7 +29,7 @@ Types of authentication factors:
 * Something you are (biometrics)
 * Somewhere you are (geolocation)
 
-KBA can further be divided between "static" and "dynamic" varieties... But the only real difference here is whether the user and system have agreed ahead of time on the possible challenges ("static") or whether the server can request information that the user may not have expected ("dynamic"). The "dynamic" category is what I most frequently see people calling "knowledge-based authentication" (even though this category technically includes things like password).
+KBA can further be divided between "static" and "dynamic" varieties… But the only real difference here is whether the user and system have agreed ahead of time on the possible challenges ("static") or whether the server can request information that the user may not have expected ("dynamic"). The "dynamic" category is what I most frequently see people calling "knowledge-based authentication" (even though this category technically includes things like password).
 
 Multi-factor authentication combines factors from multiple *types*, *not* multiple factors from a *single* type.
 
@@ -48,7 +48,7 @@ DIRECTORY SERVICES: A centralized database that manages user accounts, groups, c
 * OU = organizationalUnitName
 * DC = domainComponent
 
-Order is important here! For example, we always lead with the commonName, and domainComponent elements must appear in the same order as they would be in a URI (so, example.com -> "DC=example,DC=com", which is different than "DC=com,DC=example"!).
+Order is important here! For example, we always lead with the commonName, and domainComponent elements must appear in the same order as they would be in a URI (so, example.com → "DC=example,DC=com", which is different than "DC=com,DC=example"!).
 
 LDAP (and derived systems like AD DS) is the canonical directory service implementation.
 
@@ -88,7 +88,7 @@ Accuracy/precision measures used in the infosec industry:
 
 * FALSE REJECTION RATE (FRR): Industry-specific terminology for the false negative rate.
 * FALSE ACCEPTANCE RATE (FAR): Industry-specific terminology for the false positive rate.
-* CROSSOVER ERROR RATE (CER): Sometimes also called the "equal error rate" (EER). The idea here is to map the error rate vs. device sensitivity curve for both the FRR (which generally increases with increasing device sensitivity) and the FAR (which generally decreases with increasing device sensitivity) and determine the point at which these two rates are equal. In general this point is considered to define the biometric authenticator's "accuracy" (so when you hear a vendor refer to a "99% accuracy rate", they're talking about a CER/EER of 1%). The fact that the FRR increases with increasing sensitivity and the FAR decreases with increasing sensitivity strikes me as first-pass reasonable, but by no means *guaranteed*... I wonder how many biometric authenticators get into trouble by making this assumption?
+* CROSSOVER ERROR RATE (CER): Sometimes also called the "equal error rate" (EER). The idea here is to map the error rate vs. device sensitivity curve for both the FRR (which generally increases with increasing device sensitivity) and the FAR (which generally decreases with increasing device sensitivity) and determine the point at which these two rates are equal. In general this point is considered to define the biometric authenticator's "accuracy" (so when you hear a vendor refer to a "99% accuracy rate", they're talking about a CER/EER of 1%). The fact that the FRR increases with increasing sensitivity and the FAR decreases with increasing sensitivity strikes me as first-pass reasonable, but by no means *guaranteed*… I wonder how many biometric authenticators get into trouble by making this assumption?
 
 ### Authentication Protocols - PAP And CHAP
 
@@ -171,7 +171,7 @@ Object IDs are also sometimes referenced using their hashes (often just MD5). It
 
 ### Finding IDORs in Unpredictable IDs
 
-Okay, this is a silly section... Unpredictable IDs can't, well, be predicted. You can still see if you have an IDOR by creating two accounts, performing some actions in parallel, and then seeing if you can view resources from one account while logged in as another. This process can help you determine *if* a system has an IDOR vulnerability, but unfortunately doesn't really help you get at any information using it.
+Okay, this is a silly section… Unpredictable IDs can't, well, be predicted. You can still see if you have an IDOR by creating two accounts, performing some actions in parallel, and then seeing if you can view resources from one account while logged in as another. This process can help you determine *if* a system has an IDOR vulnerability, but unfortunately doesn't really help you get at any information using it.
 
 ### Where Are IDORs Located?
 
@@ -206,7 +206,7 @@ Common files to check:
 * /root/.bash_history
 * /root/.ssh/id_rsa (jackpot!)
 * /var/log/apache2/access.log
-* /var/log/dmessage (lots of variants of this...)
+* /var/log/dmessage (lots of variants of this…)
 * /var/mail/root
 
 Windows systems are also vulnerable to LFI attacks via PHP. In fact, `file_get_contents()` will happily use UNIX slashes on Windows.

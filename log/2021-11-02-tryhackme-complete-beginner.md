@@ -7,13 +7,13 @@
 
 ### Cron Jobs
 
-Remember the `locate` tool! It's faster than `find` (assuming that it's installed, and the database is up-to-date, and the file you're looking for is accessible to `nobody`...).
+Remember the `locate` tool! It's faster than `find` (assuming that it's installed, and the database is up-to-date, and the file you're looking for is accessible to `nobody`…).
 
 Also, the Bash reverse shell makes an appearance here!
 
 Remember that SUID Bash will drop privileges by default; execute with the `-p` option to avoid this.
 
-Okay, this is wild... It looks like the wildcard expansion (`*`) in Bash scripts doesn't get pushed to the command, but is instead expanded in place. This means that files named like command-line switches *will be interpreted as command line switches*. This can be used, for example, to exploit sloppy tar-based backup scripts.
+Okay, this is wild… It looks like the wildcard expansion (`*`) in Bash scripts doesn't get pushed to the command, but is instead expanded in place. This means that files named like command-line switches *will be interpreted as command line switches*. This can be used, for example, to exploit sloppy tar-based backup scripts.
 
 * [Exploiting Bash](../notes/exploiting-bash.md)
 * [tar (GTFOBins)](https://gtfobins.github.io/gtfobins/tar/)

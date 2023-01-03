@@ -7,7 +7,7 @@
 
 ### Overwriting Existing Files
 
-One reason to randomize upload names is to prevent file overwrites. If a webapp isn't doing this (or using some other form of isolating upload files), then it's possible to inject arbitrary files into it via its upload mechanism (of course, whether or not those do anything is a separate question...).
+One reason to randomize upload names is to prevent file overwrites. If a webapp isn't doing this (or using some other form of isolating upload files), then it's possible to inject arbitrary files into it via its upload mechanism (of course, whether or not those do anything is a separate question…).
 
 ### Remote Code Execution
 
@@ -37,9 +37,9 @@ The Kali Linux webshells package provides a variety of webshells, some of which 
 
 ### Filtering
 
-Client-side filtering -- obviously easy to bypass!
+Client-side filtering — obviously easy to bypass!
 
-Server-side filtering -- take your best guess at a conforming upload.
+Server-side filtering — take your best guess at a conforming upload.
 
 Common types of filtering:
 

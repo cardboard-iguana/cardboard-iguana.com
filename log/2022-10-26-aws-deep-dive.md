@@ -25,12 +25,12 @@ OpenAPI definition files can also be exported from the API Gateway, but only if 
 
 #### Deploying a REST API in Amazon API Gateway
 
-It's possible to map multiple API stages to a single custom domain, but doing so requires mapping the stage names to different `basePath` properties (though in most cases I imagine that this mapping will be trivia -  `v1` -> `v1`, etc.).
+It's possible to map multiple API stages to a single custom domain, but doing so requires mapping the stage names to different `basePath` properties (though in most cases I imagine that this mapping will be trivia -  `v1` → `v1`, etc.).
 
 API Gateway makes a distinction however between "stages" (where/how an API is accessed) and "deployments" (essentially a snapshot of the API). APIs are always accessed through a stage, which in turn always route requests to a particular deployment. Stages also control environment variables available to API methods and a number of settings related to caching, logging, and throttling.
 
 Interestingly, metrics associated with individual API methods incur a charge, but aggregated metrics at the API or stage level do *not*.
 
-(To be continued...)
+(To be continued…)
 
 * [Deploying a REST API in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-deploy-api.html)

@@ -5,7 +5,7 @@
 
 (1) Zero out free disk space *on the guest*:
 
-WINDOWS: Disable the paging file (Settings > System > About > Advanced system settings > Advanced > Performance > Settings... > Advanced > Virtual memory > Change...), clean all temporary files (C: > Properties > Disk Cleanup), defrag (`defrag C: /FreespaceConsolidate /Verbose`), and then zero out free space with SDelete (`sdelete -z C:`).
+WINDOWS: Disable the paging file (Settings > System > About > Advanced system settings > Advanced > Performance > Settings… > Advanced > Virtual memory > Change…), clean all temporary files (C: > Properties > Disk Cleanup), defrag (`defrag C: /FreespaceConsolidate /Verbose`), and then zero out free space with SDelete (`sdelete -z C:`).
 
 LINUX:
 

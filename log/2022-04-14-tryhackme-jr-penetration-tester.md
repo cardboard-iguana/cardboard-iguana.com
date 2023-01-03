@@ -7,7 +7,7 @@
 
 ### Scanning
 
-Use `search portscan` to display built-in Metasploit port scanners. Note that `msfconsole` needs to be run as root for many scans to work - just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don't work over a VPN... So maybe best to stick with Nmap.
+Use `search portscan` to display built-in Metasploit port scanners. Note that `msfconsole` needs to be run as root for many scans to work - just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don't work over a VPN… So maybe best to stick with Nmap.
 
 Speaking of which, Nmap can also be called internally (like other shell commands).
 

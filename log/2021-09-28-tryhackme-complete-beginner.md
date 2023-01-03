@@ -5,7 +5,7 @@
 
 ## NMAP
 
-Interesting (but makes sense)... Each connection a web browser makes corresponds to a different local port (so, $RANDOM_PORT -> 443).
+Interesting (but makes sense)… Each connection a web browser makes corresponds to a different local port (so, $RANDOM_PORT → 443).
 
 Something I know but am always forgetting: There are 65,535 (2¹⁶ - 1) available ports (port 0 is a special system port). The first 1023 of these (1024 counting port 0) are reserved as "well known" ports, but the remainder are accessible without special privileges.
 
@@ -17,7 +17,7 @@ The -oA BASENAME flag will automatically save nmap's output in "normal", XML, an
 
 Higher timing templates are faster, but also more error-prone and more likely to get you noticed.
 
-The -p- switch will scan all ports. This is because the beginning/end of our port range can be left unspecified, so -p-80 will scan ports 1 - 80, while -p80- will scan ports 80 - 65535.
+The -p- switch will scan all ports. This is because the beginning/end of our port range can be left unspecified, so -p-80 will scan ports 1 – 80, while -p80- will scan ports 80 – 65535.
 
 ### TCP Connect Scans
 

@@ -11,14 +11,14 @@ Moving forward, I'm planning to read the appropriate chapter of "CompTIA Securit
 
 Social engineering attacks and associated countermeasures:
 
-* Impersonation/Pretexting -> User education
-* Tailgating -> Mantraps
-* Dumpster diving -> Shredding, disk wiping, etc.
-* Shoulder surfing -> User education, screen guards
-* Phishing, etc. -> User education, subject prepending, attachment blocking
-* Watering hole attacks -> EDR/Antivirus
-* Typo squatting -> Password managers (with autofill), MFA
-* Hoaxes/Influence campaigns -> Snopes.com, communication response planning
+* Impersonation/Pretexting → User education
+* Tailgating → Mantraps
+* Dumpster diving → Shredding, disk wiping, etc.
+* Shoulder surfing → User education, screen guards
+* Phishing, etc. → User education, subject prepending, attachment blocking
+* Watering hole attacks → EDR/Antivirus
+* Typo squatting → Password managers (with autofill), MFA
+* Hoaxes/Influence campaigns → Snopes.com, communication response planning
 
 Note that CompTIA appears to lump general direct observational reconnaissance (watching a building) and video surveillance (hidden cameras) under "shoulder surfing".
 
@@ -86,7 +86,7 @@ Note that fileless malware is distinct from memory-resident viruses in that it i
 
 Worm: Similar to a virus, but is self replicating, does not require a host file, and can infect a machine without user intevention.
 
-(The Exam Cram book is very specific that worms don't need to be attached to a file, but I'm pretty sure I've read about worms that persist across machine reboots and aren't doing anything as sophisticated as attacking the boot loader...)
+(The Exam Cram book is very specific that worms don't need to be attached to a file, but I'm pretty sure I've read about worms that persist across machine reboots and aren't doing anything as sophisticated as attacking the boot loader…)
 
 Trojan: Malware hidden inside of an otherwise non-malicious application.
 

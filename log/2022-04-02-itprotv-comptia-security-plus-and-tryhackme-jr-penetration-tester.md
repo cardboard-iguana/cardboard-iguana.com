@@ -9,7 +9,7 @@ Today I'll be covering Chapter 22 of the Security+ Exam Cram, "Cloud Cybersecuri
 
 ### Introduction
 
-Cloud platform security controls: A wall of toggle. So many toggles...
+Cloud platform security controls: A wall of toggle. So many toggles…
 
 ### Cloud Workloads
 
@@ -174,7 +174,7 @@ Note that `-sS` and `-sU` can be specified simultaneously, in which case nmap wi
 
 Use `--top-ports 10` to scan only the ten most common ports.
 
-Timing can be specified with the `-T` flag, which takes a template number 0 - 5.
+Timing can be specified with the `-T` flag, which takes a template number 0 – 5.
 
 `-T0` waits 5 minutes between port scans, and is thus *not* something you'd want to use when scanning a full port range (doing so would take over 7 months!). It is *very* unlikely to trigger IDS alerts.
 
@@ -245,7 +245,7 @@ Reference:
 ### Service Detection
 
 * `-sV` - Service detection scan. The same as `-sT` (because a full TCP connection is required to gather the necessary information), but probes listening services for additional information.
-* `--version-intensity` - Determine how much service information to collect (and thus how noisy the associated probes will be) with `-sV`. Ranges from 0 - 9; `--version-light` is equivalent to 2, `--version-all` is equivalent to 9.
+* `--version-intensity` - Determine how much service information to collect (and thus how noisy the associated probes will be) with `-sV`. Ranges from 0 – 9; `--version-light` is equivalent to 2, `--version-all` is equivalent to 9.
 
 ### OS Detection and Traceroute
 
@@ -365,9 +365,9 @@ Here `prefix` is a random prefix we provide to track server replies to various c
 
 The CIA triad has an attacker's counterpart:
 
-* Confidentiality <-> Disclosure
-* Integrity <-> Alteration
-* Availability <-> Destruction
+* Confidentiality ←→ Disclosure
+* Integrity ←→ Alteration
+* Availability ←→ Destruction
 
 ### Sniffing Attack
 

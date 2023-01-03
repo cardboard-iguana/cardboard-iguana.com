@@ -7,7 +7,7 @@
 
 ### Deploy the VM
 
-I think I've basically done a different version of this room...
+I think I've basically done a different version of this room…
 
 Anyways, two types of XML External Entity (XXE) attacks:
 
@@ -77,4 +77,4 @@ These last two features are what we will leverage to attack applications that ac
 <root>&read;</root>
 ```
 
-The SYSTEM directive allows us to include other files... Possibly quite sensitive ones, depending on the permissions of our webserver and how good the application's input sanitization is.
+The SYSTEM directive allows us to include other files… Possibly quite sensitive ones, depending on the permissions of our webserver and how good the application's input sanitization is.

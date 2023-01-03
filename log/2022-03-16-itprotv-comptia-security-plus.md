@@ -58,11 +58,11 @@ Interesting stat: Laptop theft is about as common as car theft.
 
 ### Cable Locks
 
-The most annoying anti-theft mechanism...
+The most annoying anti-theft mechanism…
 
 ### Locking Cabinets and Enclosures
 
-Apparently those built-in desk cabinets where computers are sometimes stored are called... "security computer cabinets".
+Apparently those built-in desk cabinets where computers are sometimes stored are called… "security computer cabinets".
 
 "Locking cabinets" refers specifically to filing cabinets and the like.
 

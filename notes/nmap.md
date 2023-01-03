@@ -3,7 +3,7 @@
 **author**:: Nathan Acks  
 **date**:: 2022-05-10
 
-Note that nmap accepts ranges in any octet of an IP address; for example, 10.10.0-255.1-255 will scan 10.10.0.1 - 10.10.255.255.
+Note that nmap accepts ranges in any octet of an IP address; for example, 10.10.0-255.1-255 will scan 10.10.0.1 – 10.10.255.255.
 
 When dealing with firewalls, be aware that the default nmap SYN scan packet is 44 bytes = 20 bytes IP header + 24 bytes TCP header + 0 bytes data. Note that packet fragmentation only effects the TCP header + data - the 20 byte IP header will always be sent!
 
@@ -30,7 +30,7 @@ Most nmap scans will generate ~2x the number of packets as scanned ports, as unr
 * `-sC` - Scan with "default" script set; equivalent to `--script default`. Mostly provides basic intelligence.
 * `-sV` - Service detection. The same as `-sT` (because a full TCP connection is required to gather the necessary information), but probes listening services for additional information.
 * `-S` - Use a spoofed IP address for the scan. Only useful if you can actually capture incoming packets at that IP address! Generally must be combined with the `-e` and `-Pn` flags.
-* `-T` - Specify timing from 0 - 5. `-T0` will wait *5 minutes* between ports. `-T1` is typical on engagements. `-T3` is the default. `-T4` is typical on CTFs. `-T5` is not recommended, as it is so fast that it may lead to packet loss.
+* `-T` - Specify timing from 0 – 5. `-T0` will wait *5 minutes* between ports. `-T1` is typical on engagements. `-T3` is the default. `-T4` is typical on CTFs. `-T5` is not recommended, as it is so fast that it may lead to packet loss.
 * `-v` - Increase nmap's verbosity. There are four verbosity levels for nmap: `-v` < `-vv` < `-d` < `-dd`. In practice, I've found anything above `-v` too noisy for general use.
 
 There's more, but these are the big ones.
@@ -60,7 +60,7 @@ There's more, but these are the big ones.
 * `--top-ports` - Scan only the X most common ports. Nmap's default is `--top-ports 1000`. Can be useful for detecting locked-down hosts (use `--top-ports 10 -Pn`). Overridden when using `-p`.
 * `--traceroute` - Perform a traceroute between the attacker and target systems. Note that nmap's traceroute works in the opposite fashion (high TTL to low TTL) than traceroute/tracert. Note that most routers will not send ICMP TTL exceeded packets, and will thus show up as `*`.
 * `--ttl` - Set a custom TTL. Does not always work as you'd expect in my experience!
-* `--version-intensity` - Determine how much service information to collect (and thus how noisy the associated probes will be) with `-sV`. Ranges from 0 - 9; `--version-light` is equivalent to 2, `--version-all` is equivalent to 9.
+* `--version-intensity` - Determine how much service information to collect (and thus how noisy the associated probes will be) with `-sV`. Ranges from 0 – 9; `--version-light` is equivalent to 2, `--version-all` is equivalent to 9.
 
 Nmap has a ton of flags. Be sure to check the man page and official documentation!
 

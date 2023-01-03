@@ -42,7 +42,7 @@ for sub in subdoms:
 		print("Valid domain: ", sub_domains)
 ```
 
-Note that the `f` above isn't a mistake -- rather it's the use of an "f-string", which allows the expansion of `{sys}` and `{sys.argv[1]}`. This requires Python 3.6+.
+Note that the `f` above isn't a mistake — rather it's the use of an "f-string", which allows the expansion of `{sys}` and `{sys.argv[1]}`. This requires Python 3.6+.
 
 * [Quick Answer: How Do You Write An F String In Python](https://whatisanything.com/how-do-you-write-an-f-string-in-python/)
 
@@ -98,7 +98,7 @@ for send, receive in ans:
 	print(receive.sprintf(r"%Ether.src% - %ARP.psrc%"))
 ```
 
-As above, the `r` here isn't a mistake -- rather it specifies a "raw string". This again requires Python 3.6+.
+As above, the `r` here isn't a mistake — rather it specifies a "raw string". This again requires Python 3.6+.
 
 * [Quick Answer: How Do You Write An F String In Python](https://whatisanything.com/how-do-you-write-an-f-string-in-python/)
 
@@ -268,4 +268,4 @@ with open(password_file, 'r') as file:
 password_file.close()
 ```
 
-Note that, like the port scanner earlier, this is slooooooow... (At least it provides us with some feedback that it's actually working though.)
+Note that, like the port scanner earlier, this is slooooooow… (At least it provides us with some feedback that it's actually working though.)

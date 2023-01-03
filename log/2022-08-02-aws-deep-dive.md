@@ -41,9 +41,9 @@ AWS compliance reports and agreements are consolidated into a single portal, cal
 
 DDoS attacks and associated AWS mitigations:
 
-* UDP Flood, Reflection Attacks -> Security Groups
-* Slowloris -> Elastic Load Balancer
-* Targeted Attacks -> AWS Shield / WAF
+* UDP Flood, Reflection Attacks → Security Groups
+* Slowloris → Elastic Load Balancer
+* Targeted Attacks → AWS Shield / WAF
 
 ## Additional Security Services
 

@@ -11,7 +11,7 @@ IAM policy statements can include an `Sid` value (different than the policy-leve
 
 (The reason there's both an `Sid` and an `Id` is that the policy `Statement` can point *either* to a single object *or* an array of objects. `Sid` is redundant in the first case, but uniquely identifies each policy statement object in the second case.)
 
-Many (most?) IAM policy properties accept wild-carding. An `Action` of `s3:Get*` is equivalent to writing `s3:GetObject`, `s3:GetBucket`, ...
+Many (most?) IAM policy properties accept wild-carding. An `Action` of `s3:Get*` is equivalent to writing `s3:GetObject`, `s3:GetBucket`, …
 
 (The "?" string can also be used as a single-character wildcard.)
 

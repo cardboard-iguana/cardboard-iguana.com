@@ -36,7 +36,7 @@ There are three basic important XML bits here:
 
 * `!DOCTYPE` defines the document type *and* the root element.
 * `!ELEMENT` defines additional elements (so if I understand this correctly, a !DOCTYPE declaration must contain at least one !ELEMENT with the same name).
-* `!ENTITY` defines entities like `&gt;` - basically shortcuts for other data. There seems to be a lot more to XML entities than just this though...
+* `!ENTITY` defines entities like `&gt;` - basically shortcuts for other data. There seems to be a lot more to XML entities than just this though…
 
 Basically, you can think of the bit between the brackets (`[]`) in the DTD as getting slotted into the URI specifying the DTD in the XML !DOCTYPE. In fact, we can insert additional document type definitions into the end of a !DOCTYPE statement in this way; combining this with the SYSTEM declaration can allow us to read any files the webserver has access to.
 

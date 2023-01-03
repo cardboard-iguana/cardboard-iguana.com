@@ -411,13 +411,13 @@ Common (alternate) PHP extensions:
 * .php5
 * .phtml
 
-I always forget about that last one...
+I always forget about that last one…
 
 Note that when matching a URL against a pattern in FoxyProxy, nonstandard ports *must* be included! (So, `example.com` will pick up traffic on ports 80 and 443, but not port 8080. To do that, use `example.com:8080`.)
 
 Recall that the "Intruder" module in Burp Suite is the one that is used to attack/fuzz web requests.
 
-One nice trick is that after fuzzing your way around file extension filters, you can just return to the Proxy tab and complete your upload...
+One nice trick is that after fuzzing your way around file extension filters, you can just return to the Proxy tab and complete your upload…
 
 ### Privilege Escalation
 

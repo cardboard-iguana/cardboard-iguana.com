@@ -29,7 +29,7 @@ Block cyphers are generally high diffusion algorithms, while stream ciphers are 
 
 Note that really, both the public and private keys in asymmetric encryption schemes and encrypt and decrypt messages - it's just that you don't use the public key to decrypt the actual message because *everyone* potentially has access to it. But the symmetry (heh) in asymmetric keys becomes apparent when you think about what a *signature* actually is - an encrypted hash of the plaintext.
 
-Finally, the public key in asymmetric cryptography is generally derived from the private key (but the reverse is not possible). This means that it's often (always?) possible to use the private half of an asymmetric keypair as a symmetric key (not that you'd actually *want* to do this...).
+Finally, the public key in asymmetric cryptography is generally derived from the private key (but the reverse is not possible). This means that it's often (always?) possible to use the private half of an asymmetric keypair as a symmetric key (not that you'd actually *want* to do this…).
 
 In a fully asymmetric cryptosystem, each user has a public/private keypair, and uses the recipients public key to encrypt messages to them. This is expensive though, so in general asymmetric cryptography is used in one of two ways:
 
@@ -88,7 +88,7 @@ Important cyphers for low-power devices (SCADA, etc.)
 
 Encryption is about ensuring confidentiality; steganography is about hiding information (which may - and probably should be! - itself cyphertext).
 
-Interesting... ITPro.TV is defining a streaming cipher as operating byte-by-byte, whereas Exam Cram defined them as operating bit-by-bit. So either one of these is wrong, or the difference between stream and block cyphers are more a matter of degree than kind (I kind of suspect it's the latter).
+Interesting… ITPro.TV is defining a streaming cipher as operating byte-by-byte, whereas Exam Cram defined them as operating bit-by-bit. So either one of these is wrong, or the difference between stream and block cyphers are more a matter of degree than kind (I kind of suspect it's the latter).
 
 Stream cipher bullet points:
 
@@ -114,38 +114,38 @@ Block cipher modes:
 
 Hashes are always fixed length (for a given hash type). Also, "message digest" == "fingerprint" == "hash"!
 
-* MD5 - 128-bit, prone to collisions (old, weak)
-* SHA1 - 160-bit, some collisions
-* SHA2 - 224, 256, 384, 512 bit variants (modern)
-* RIPEMD - 128, 160, 256, 320 bit variants (uncommon)
+* MD5 — 128-bit, prone to collisions (old, weak)
+* SHA1 — 160-bit, some collisions
+* SHA2 — 224, 256, 384, 512 bit variants (modern)
+* RIPEMD — 128, 160, 256, 320 bit variants (uncommon)
 
 HMACs are "hashed message authentication codes" used to verify message integrity and authenticity. HMACs are not hash functions themselves, but are rather encrypted hashes that are appended to messages (so, a signature).
 
 Checksums are not hashing algorithms, but serve a similar purpose.
 
-A note about salts: You *don't* want your salt(s) to become public, but it also doesn't completely negate their value if they are leaked. The reason for this is that, so long as you are using *unique* salts in every instance, you are still preventing the use of *mass* password/data cracking. So even a leaked salt buys you time... But that's the only thing it buys you at that point, so it's still important to re-encrypt / re-hash / invalidate passwords, etc. if this happens!
+A note about salts: You *don't* want your salt(s) to become public, but it also doesn't completely negate their value if they are leaked. The reason for this is that, so long as you are using *unique* salts in every instance, you are still preventing the use of *mass* password/data cracking. So even a leaked salt buys you time… But that's the only thing it buys you at that point, so it's still important to re-encrypt / re-hash / invalidate passwords, etc. if this happens!
 
 ### Symmetric vs. Asymmetric Encryption
 
 Symmetric cyphers:
 
-* AES - Block cypher, 128 - 256 bits
-* DES - Block cypher, 56-bits
-* 3DES - Three DES rounds, 168-bits (effective)
-* Blowfish - Block cipher, 64-bit
-* RC4 - Stream cypher, used in WEP and WPA
-* RC5 - Block cipher variant of RC4
-* RC6 - Block cipher variant of RC4
+* AES — Block cypher, 128 – 256 bits
+* DES — Block cypher, 56-bits
+* 3DES — Three DES rounds, 168-bits (effective)
+* Blowfish — Block cipher, 64-bit
+* RC4 — Stream cypher, used in WEP and WPA
+* RC5 — Block cipher variant of RC4
+* RC6 — Block cipher variant of RC4
 
 Of these, only AES is considered strong these days.
 
 Asymmetric cyphers:
 
-* RSA - Second oldest, common
-* Diffie-Hellman - Oldest standard, used for key exchange
-* DSA - NIST "digital security standard"
-* EIGamal - Used by PGP/GPG
-* ECC - New, fast, small keys
+* RSA — Second oldest, common
+* Diffie-Hellman — Oldest standard, used for key exchange
+* DSA — NIST "digital security standard"
+* EIGamal — Used by PGP/GPG
+* ECC — New, fast, small keys
 
 Two applications/machines that try to communicate cryptographically need to first agree on a "cipher suite" - a set of cryptographic algorithms - to use. These are represented in a standard(ish) fashion as "standard name + key exchange + asymmetric cipher (with) symmetric cipher + symmetric cipher mode + HMAC". For example:
 
@@ -155,9 +155,9 @@ TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
 
 Has the following parts:
 
-* TLS - standard
-* DHE - key exchange method
-* RSA - asymmetric cipher
-* AES-256 - symmetric cipher
-* GCM - symmetric cipher mode
-* SHA384 - HMAC
+* TLS — standard
+* DHE — key exchange method
+* RSA — asymmetric cipher
+* AES-256 — symmetric cipher
+* GCM — symmetric cipher mode
+* SHA384 — HMAC

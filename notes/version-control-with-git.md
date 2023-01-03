@@ -12,7 +12,7 @@ DevOps is considered to be an implementation of the continuous development philo
 
 A "branch" is a single line of development; there's always a `MASTER` branch. Branches are good for developing new features; in general, development should occur on branches and then be merged back into `MASTER` when complete.
 
-A "pull request" is a request to merge one branch into another (for example, a feature branch into `MASTER`). Pull requests can have required code reviews or tests attached to them (they're not automatic, and in fact not a native feature of Git... GitHub, Bitbucket, and Gitlab all implement this as an additional layer).
+A "pull request" is a request to merge one branch into another (for example, a feature branch into `MASTER`). Pull requests can have required code reviews or tests attached to them (they're not automatic, and in fact not a native feature of Git… GitHub, Bitbucket, and Gitlab all implement this as an additional layer).
 
 ## Git Overview
 
@@ -111,7 +111,7 @@ A Git ID is a SHA-1 hash that "names" a Git object. It is statistically *very* u
 
 Git uses `git hash-object $FILE` to generate a SHA-1 hash of a file. This is a low-level "plumbing command" that is generally *not* used directly.
 
-Most Git clients only shows only the first 4 - 10 characters of the SHA-1 hash, as 40 character pseudo-random strings are a bit rough on the human brain.
+Most Git clients only shows only the first 4 – 10 characters of the SHA-1 hash, as 40 character pseudo-random strings are a bit rough on the human brain.
 
 Full Git IDs are displayed by `git log`, but `git log --oneline` only shows the first 7 characters of the hash.
 
@@ -301,7 +301,7 @@ Some useful options:
 
 Git will abort the merge if there are local changes that would be over-written.
 
-We can think of the merge performed by a `pull` request as treating the current tracking branch as the topic branch. By default `pull` will fast-forward if possible (it's difficult to see why you *wouldn't* do this...).
+We can think of the merge performed by a `pull` request as treating the current tracking branch as the topic branch. By default `pull` will fast-forward if possible (it's difficult to see why you *wouldn't* do this…).
 
 Because a `pull` involves a merge, it's possible (if a fast forward is not possible) that the tracking branch will lag after the merge.
 
@@ -323,7 +323,7 @@ Small, frequent merges help to both avoid merge conflicts, and when such conflic
 
 ### Resolving a Merge Conflict
 
-Basically...
+Basically…
 
 * Checkout the base branch (let's say `MASTER`).
 * Attempt to merge in the feature branch. Git will inform you of the conflict and write out the conflicting file(s) in a manner that makes the two competing changes clear.
@@ -357,7 +357,7 @@ You can abort a merge conflict by resetting to the base branch, abandoning any c
 
 ## Rebasing
 
-Note that rebasing rewrites the commit history. It is generally considered *extremely* bad form to rewrite commit history that has been shared with others...
+Note that rebasing rewrites the commit history. It is generally considered *extremely* bad form to rewrite commit history that has been shared with others…
 
 A rebase changes the parent of a commit. Because the ancestor chain is different, the rebased commits IDs change.
 
@@ -403,9 +403,9 @@ You can change the commit message, or even the project files, of the most recent
 
 Because this changes history, you should *not* do this if you've already shared your commits!
 
-Changing a single file works similarly (for some reason, this seems more wild to me than changing the commit message, though I suspect that under the hood there's really no difference...).
+Changing a single file works similarly (for some reason, this seems more wild to me than changing the commit message, though I suspect that under the hood there's really no difference…).
 
-To update a file, just stage the changes and execute `git commit --amend`; append `--no-edit` to re-use the previous commit message. (I presume that leaving off the `-m` above would interactively prompt you for a new commit message...)
+To update a file, just stage the changes and execute `git commit --amend`; append `--no-edit` to re-use the previous commit message. (I presume that leaving off the `-m` above would interactively prompt you for a new commit message…)
 
 Interactive rebasing allows you to modify multiple commits.
 
@@ -430,7 +430,7 @@ When editing commits, you can move on to the next commit by running `git commit 
 
 During an interactive rebase, you'll be in a detached `HEAD` state while editing individual commits.
 
-(It's not entirely clear to me how an interactive rebase shares enough in common with a "regular" rebase to warrant such a similar name...)
+(It's not entirely clear to me how an interactive rebase shares enough in common with a "regular" rebase to warrant such a similar name…)
 
 "Squashing" a commit merges not only the changes in the current commit with its parent, but also (by default) combines their commit messages (though you can touch this up later).
 

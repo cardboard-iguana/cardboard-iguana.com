@@ -11,7 +11,7 @@ Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-#### Controlling and Managing Access to a REST API in API Gateway (Continued...)
+#### Controlling and Managing Access to a REST API in API Gateway (Continued…)
 
 Lambda authorization functions for the API Gateway can be called across accounts, though the setup process definitely shows that this is a bit of a hack / afterthought. Still, doing this allows authorization and API functions to be clearly separated, and also allows a single authorization method to be shared across multiple API Gateways (since the recommendation is only to deploy a single API Gateway per account). Cross-account Cognito user pools can be configured in a similar fashion.
 
@@ -31,10 +31,10 @@ In addition to integrating with Lambda functions, generic AWS services, and gene
 
 (It's worth noting that Lambda proxies aren't *true* proxies, in that the request isn't *literally* passed through to the backend (or back to the client). Rather, the request is translated to a standardized JSON format, and the response is expected in a standardized format, which is then automatically re-mapped/formatted into a more REST-like HTTP response by the API Gateway.)
 
-It sounds like using a Lambda proxy requires the use of both the greedy `{proxy+}` path element and the virtual `ANY` HTTP verb...? Which I suppose makes sense (as this allows you to think of the Lambda function as sitting at the "root" of a particular path).
+It sounds like using a Lambda proxy requires the use of both the greedy `{proxy+}` path element and the virtual `ANY` HTTP verb…? Which I suppose makes sense (as this allows you to think of the Lambda function as sitting at the "root" of a particular path).
 
 As one might suspect, regular expressions in the API Gateway are all Java-flavored.
 
-(To be continued...)
+(To be continued…)
 
 * [Amazon API Gateway: Setting up REST API Integrations](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-integration-settings.html)

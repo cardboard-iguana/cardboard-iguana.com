@@ -9,7 +9,7 @@ Today I'll be covering Chapter 14 of the Security+ Exam Cram, "Embedded and Spec
 
 ### Embedded Systems
 
-> "The best protections for maintaining embedded device security include requiring software and hardware vendors to provide evidence that the software has no security weaknesses..."
+> "The best protections for maintaining embedded device security include requiring software and hardware vendors to provide evidence that the software has no security weaknesses…"
 
 Bwah ha ha ha ha ha!
 

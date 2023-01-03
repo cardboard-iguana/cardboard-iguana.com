@@ -17,7 +17,7 @@ Useful flags:
 * `--os-pwn` - attempt to spawn a Meterpreter shell or VNC session
 * `--forms` - parse target URL for forms, and use these
 * `--batch` - don't prompt for user input, just use the defaults
-* `--risk` - set the maximum risk level of tests (1 - 3, lowest to highest risk)
+* `--risk` - set the maximum risk level of tests (1 – 3, lowest to highest risk)
 
 For example:
 

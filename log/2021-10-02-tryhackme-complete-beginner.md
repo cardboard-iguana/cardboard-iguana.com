@@ -63,7 +63,7 @@ Anonymous FTP logins, if allowed, use the username `anonymous` and a blank passw
 
 Hydra can directly try to brute force passwords on remote machines.
 
-Kali's rockyou.txt.gz is apparently a list of 14 million passwords dumped during the hack of some service called RockYou that I hadn't previously heard of. Apparently RockYou was a social network that allowed direct connection to other social networks (including Facebook and MySpace)... And stored all of the relevant passwords (including their own) in the clear!
+Kali's rockyou.txt.gz is apparently a list of 14 million passwords dumped during the hack of some service called RockYou that I hadn't previously heard of. Apparently RockYou was a social network that allowed direct connection to other social networks (including Facebook and MySpace)… And stored all of the relevant passwords (including their own) in the clear!
 
 * [rockyou.txt wordlist](https://github.com/zacheller/rockyou)
 * [RockYou Hack: From Bad To Worse](https://techcrunch.com/2009/12/14/rockyou-hack-security-myspace-facebook-passwords/)

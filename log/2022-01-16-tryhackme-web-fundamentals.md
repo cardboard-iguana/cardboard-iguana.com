@@ -45,7 +45,7 @@ JSON web token format: `$HEADER.$PAYLOAD.$SIGNATURE`, where each substring is ba
 
 * `$HEADER` takes the form `{ "alg": "SHA256", "typ": "JWT" }`, where `alg` is a signing algorithm supported by the server.
 * `$PAYLOAD` is a JSON blob containing various pieces of user information, which can include permissioning data.
-* `$SIGNATURE` is the signature (using `alg` from the `$HEADER`) of `$HEADER.$PAYLOAD` (both parts base64 encoded) using a server-side secret (often an SSL key... but sometimes just a string!).
+* `$SIGNATURE` is the signature (using `alg` from the `$HEADER`) of `$HEADER.$PAYLOAD` (both parts base64 encoded) using a server-side secret (often an SSL key… but sometimes just a string!).
 
 See jwt.io for a detailed breakdown. These are typically passed around as a user cookie, HTTP header, or queried from local storage.
 

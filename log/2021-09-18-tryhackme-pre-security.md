@@ -11,12 +11,12 @@ The Tools tab of msconfig.exe can be quite useful, as it provides full pats to v
 
 Want access to (almost) all of the Windows "snap-ins" in one hierarchical tree view? Then run compmgmt.msc!
 
-Some UNIX <-> Windows equivalents:
+Some UNIX ←→ Windows equivalents:
 
-* cron <-> Task Scheduler
-* journalctl <-> Event Viewer
-* htop <-> Resource Monitor
-* bash <-> Command Prompt
+* cron ←→ Task Scheduler
+* journalctl ←→ Event Viewer
+* htop ←→ Resource Monitor
+* bash ←→ Command Prompt
 
 Event types:
 
@@ -57,13 +57,13 @@ There's a hand search bar at the bottom of this utility.
 
 ## Command Prompt
 
-More UNIX <-> Windows equivalents (command line edition):
+More UNIX ←→ Windows equivalents (command line edition):
 
-* hostname <-> hostname
-* whoami <-> whoami
-* ifconfig <-> ipconfig
-* clear <-> cls
-* netstat <-> netstat
+* hostname ←→ hostname
+* whoami ←→ whoami
+* ifconfig ←→ ipconfig
+* clear ←→ cls
+* netstat ←→ netstat
 
 Where UNIX applications generally use -h or --help to display help information, Windows typically uses /?. (The "/" switches was pretty standard in early DOS and Windows applications, but in the Windows 10 era UNIX-style "-" and "--" are used instead.)
 

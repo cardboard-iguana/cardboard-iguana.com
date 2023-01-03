@@ -51,6 +51,6 @@ Same deal as with zip files for rar files, except use rar2john as the pre-proces
 
 ### Cracking SSH Keys with John
 
-Same deal again for cracking ssh key passwords... Except that the tool's in /usr/share/john/ssh2john.py this time (this script probably isn't installed in the PATH because it needs to be run using python2).
+Same deal again for cracking ssh key passwords… Except that the tool's in /usr/share/john/ssh2john.py this time (this script probably isn't installed in the PATH because it needs to be run using python2).
 
 NOTE: John is susceptible to false positives when cracking ssh keys, and will thus try the entire provided wordlist (just in case!).

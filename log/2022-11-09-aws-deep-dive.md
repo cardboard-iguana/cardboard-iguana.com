@@ -36,7 +36,7 @@ Documentation can be imported as well, but is expected to live in an `x-amazon-a
 
 #### Generating an SDK for a REST API in API Gateway
 
-SDKs must be regenerated whenever the API is redeployed (which makes sense, but also seems like kind of a drag...).
+SDKs must be regenerated whenever the API is redeployed (which makes sense, but also seems like kind of a drag…).
 
 API Gateway has (IMHO) a somewhat brain-dead naming convention for exposed SDK functions based on the corresponding method's path. Fortunately, API methods can be assigned an `operationName` (represented as `operationId` in Swagger - OpenAPI? - definition files) value that overrides this default.
 

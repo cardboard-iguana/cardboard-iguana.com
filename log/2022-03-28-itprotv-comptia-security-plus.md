@@ -119,7 +119,7 @@ Jump server = Bastion server
 
 ## Web Application Firewalls
 
-WAFs can be considered to be a special case of "next generation firewalls", which are simply application-aware firewalls. Generally next-gen firewalls incorporate some kind of IDS and/or IPS. They generally straddle OSI layers 3 - 7.
+WAFs can be considered to be a special case of "next generation firewalls", which are simply application-aware firewalls. Generally next-gen firewalls incorporate some kind of IDS and/or IPS. They generally straddle OSI layers 3 – 7.
 
 Certificates will need to be deployed to client systems if packet inspection of encrypted connections is desired (basically, having the next-gen firewall MitM all network traffic).
 

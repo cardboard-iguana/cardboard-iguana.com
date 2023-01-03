@@ -9,7 +9,7 @@
 
 More handy keyboard shortcuts:
 
-* `Ctrl + R` -- Send request to Repeater (from Proxy)
+* `Ctrl + R` — Send request to Repeater (from Proxy)
 
 ### Views
 
@@ -26,7 +26,7 @@ A handy MySQL function is `group_concat()`, which concatenates all values of a p
 
 More handy keyboard shortcuts:
 
-* `Ctrl + I` -- Send request to Repeater (from Proxy)
+* `Ctrl + I` — Send request to Repeater (from Proxy)
 
 Note that Intruder is configured tab-by-tab, rather than Repeater which is pane-based.
 

@@ -60,6 +60,6 @@ Annoyingly, API Gateway only inspects the first MIME type in the `Accept` header
 
 The `contentHandling` property in API Gateway determines how MIME types listed in `binaryMediaTypes` are handled, though it's probably best to refer to the tables in Amazon's documentation as `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT` don't always behave in an 100% consistent fashion. (Even leaving this undefined won't save you, however, as whether or not the API Gateway uses base64 encoding for *responses* can get wacky. Given the prevalence of AWS and the wackiness of API Gateway's handling of binary media types, the number of APIs I've seen that encode binary data as base64 blobs embedded in JSON responses suddenly makes sense - this is probably the only way to ensure 100% consistent handling of non-text data over an API that is managed with API Gateway.)
 
-(To be continued...)
+(To be continued…)
 
 * [API Gateway: Working with binary media types for REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings.html)

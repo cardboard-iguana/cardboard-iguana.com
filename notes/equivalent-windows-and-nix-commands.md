@@ -3,24 +3,24 @@
 **author**:: Nathan Acks  
 **date**:: 2022-08-17
 
-UNIX <-> Windows command equivalencies (more-or-less):
+UNIX ←→ Windows command equivalencies (more-or-less):
 
-* cat <-> type
-* dig <-> nslookup
-* grep <-> findstr / select
-* ifconfig <-> ipconfig
-* ls <-> dir
-* more <-> more
-* netstat <-> netstat
-* ping <-> ping
-* shutdown <-> shutdown
-* sleep <-> timeout
-* sudo <-> runas
-* tcpdump <-> windump
-* traceroute <-> tracert
-* wget <-> wget
-* hostname <-> hostname
-* whoami <-> whoami
+* cat ←→ type
+* dig ←→ nslookup
+* grep ←→ findstr / select
+* ifconfig ←→ ipconfig
+* ls ←→ dir
+* more ←→ more
+* netstat ←→ netstat
+* ping ←→ ping
+* shutdown ←→ shutdown
+* sleep ←→ timeout
+* sudo ←→ runas
+* tcpdump ←→ windump
+* traceroute ←→ tracert
+* wget ←→ wget
+* hostname ←→ hostname
+* whoami ←→ whoami
 
 ## cat
 

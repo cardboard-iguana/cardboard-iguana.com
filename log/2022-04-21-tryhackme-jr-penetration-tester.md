@@ -29,7 +29,7 @@ Here's a useful checklist:
 * `net user` - list all (local) users
 * `net user $USERNAME` - get details for user `$USERNAME`
 * `net localgroup` - list all (local) groups
-* `net localgroup $GROUP` -- list user in group `$GROUP`
+* `net localgroup $GROUP` — list user in group `$GROUP`
 * `query session` - list other users who are currently logged in
 * `systeminfo` - return system info
 * `hostname` - return system hostname

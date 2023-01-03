@@ -45,8 +45,8 @@ SSRF defenses are normally just a allowed/blocked lists.
 
 Typically localhost and 169.254.169.254 (TryHackMe indicates that this IP often contains configuration information in cloud systems, though I'm not familiar with it) are often on block lists. This can be bypassed by using non-standard representations of IP addresses, or by using a service such as nip.io to map an arbitrary subdomain to an IP address of your choosing.
 
-* 127.0.0.1 -> 0x7F000001 -> 0177000000000001 (octal) -> 2130706433 (decimal)
-* 169.254.169.254 -> 0xA9FEA9FE -> 0251037602510376 (octal) -> 2852039166 (decimal)
+* 127.0.0.1 → 0x7F000001 → 0177000000000001 (octal) → 2130706433 (decimal)
+* 169.254.169.254 → 0xA9FEA9FE → 0251037602510376 (octal) → 2852039166 (decimal)
 
 Allowed lists are harder to circumvent; often you'll need to be able to create your own subdomains somewhere. The ngrok service can help tunnel these subdomains back to your local system, though the SSL certificate won't match for non-ngrok subdomains (i.e., domains you entirely control).
 
@@ -158,7 +158,7 @@ How one comes up with one of these is a bit beyond me.
 
 You can also use `nc -nvlp $PORT` as a quick-n-dirty HTTP listener (netcat, it's not just for catching shells anymore!).
 
-I have some doubts about how well this works in real, modern life... Every time I tried to test this locally I pulled a CORS error...
+I have some doubts about how well this works in real, modern life… Every time I tried to test this locally I pulled a CORS error…
 
 * [Using "netcat"](../notes/netcat.md)
 

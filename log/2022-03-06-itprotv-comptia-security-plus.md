@@ -50,7 +50,7 @@ Two modes:
 IPsec in tunneling mode uses two headers:
 
 * The Authentication Header (AH, protocol field 51) authenticates the packet's sender and provides integrity and nonrepudiation. Note that integrity guarantees do *not* cover all the other header fields, as it is possible for some of these to be (legitimately) changed by intermediate servers.
-* The Encapsulating Security Payload (ESP, protocol field 50) *also* provides authentication services, and encrypts the data being transferred. ESP is designed to provide confidentiality, authentication, integrity, and anti-replay services, but these can be configured in a piecemeal fashion. In particular, enabling confidentiality *without* integrity protection and either ESP authentication *or* a separate AH leaves the ESP data vulnerable to substitution attacks (not sure why you'd do this...).
+* The Encapsulating Security Payload (ESP, protocol field 50) *also* provides authentication services, and encrypts the data being transferred. ESP is designed to provide confidentiality, authentication, integrity, and anti-replay services, but these can be configured in a piecemeal fashion. In particular, enabling confidentiality *without* integrity protection and either ESP authentication *or* a separate AH leaves the ESP data vulnerable to substitution attacks (not sure why you'd do this…).
 
 IPsec headers immediately follow the header fields in an IP datagram. ESP can be nested in AH, which simplifies firewall filtering if you only require confidentiality for *some* connections.
 
@@ -91,7 +91,7 @@ By default SSH tunnels are actually encrypted using IDEA (the International Data
 
 ### Lightweight Directory Access Protocol (LDAP)
 
-There's also LDAP-over-SSL (LDAPS), which again riffs off of HTTPS. As a total set of asides...
+There's also LDAP-over-SSL (LDAPS), which again riffs off of HTTPS. As a total set of asides…
 
 * LDAP servers are generally called "Directory System Agents" (DSAs), and are typically accessed on port 636. There is also a "Global Catalog" that's generally on port 3269.
 * Information in LDAP is encoded using a scheme called the "Basic Encoding Rules" (BER) and X.500 directories; while LDAP is defined in RFC 4522, BER and X.500 are both ISO standards.
@@ -139,15 +139,15 @@ The most basic security aspect of network design is the use of subnetting.
 
 IP address classes:
 
-* Class A (0.0.0.0 - 126.255.255.255, netmask 255.0.0.0)
-* Class B (128.0.0.0 - 191.255.255.255, netmask 255.255.0.0)
-* Class C (192.0.0.0 - 223.255.255.255, netmask 255.255.255.0)
+* Class A (0.0.0.0 – 126.255.255.255, netmask 255.0.0.0)
+* Class B (128.0.0.0 – 191.255.255.255, netmask 255.255.0.0)
+* Class C (192.0.0.0 – 223.255.255.255, netmask 255.255.255.0)
 
 Common reserved network blocks:
 
 * 10.0.0.0/8 (Class A)
 * 127.0.0.0/8 (Class A, reserved for localhost)
-* 172.16.0.0/12 (Class B, 172.16.0.0 - 172.31.255.255)
+* 172.16.0.0/12 (Class B, 172.16.0.0 – 172.31.255.255)
 * 192.168.0.0/16 (Class C)
 
 Note that, except for the Class A reservations, all of these use larger subnet masks than you would typically suspect. There are actually far more reserved blocks than just these four; Wikipedia has a good list.
@@ -156,7 +156,7 @@ CIDR (as in "CIDR subnet notation") is "Classless InterDomain Routing". This is 
 
 IPv6 is a 128-bit address space (as opposed to the 32-bit address space of IPv4). IPv6 addresses are represented as eight groups of four hexadecimal digits (so each block represents 16 bits, exactly twice the size of an IPv4 block). The *largest* block consisting only of zeros can be replaced with `::` (i.e., you can only use this trick *once*), and leading zeros in a block can also be dropped.
 
-IPv6 also introduces the concept of "variable length subnet masking" (VLSM), which specifies subnets as needed rather than for the entire network. However, CIDR notation continues to work as you'd expect, so 2001:db8::/32 represents the subnet 2001:0db8:0000:0000:0000:0000:0000:0000 - 2001:0db8:ffff:ffff:ffff:ffff:ffff:ffff.
+IPv6 also introduces the concept of "variable length subnet masking" (VLSM), which specifies subnets as needed rather than for the entire network. However, CIDR notation continues to work as you'd expect, so 2001:db8::/32 represents the subnet 2001:0db8:0000:0000:0000:0000:0000:0000 – 2001:0db8:ffff:ffff:ffff:ffff:ffff:ffff.
 
 The IPv6 equivalent of 127.0.0.1 is ::1; the rest of the 127.0.0.0/8 block is replaced with the concept of "link-local" addresses, which are self-assigned per network interface addresses in the reserved fe80::/10 subnet (RFCs 7217 and 8064 defines how link-local addresses are assigned).
 
@@ -343,7 +343,7 @@ The TLS handshake:
 
 This encrypted shared secret then becomes the basis of the shared session key(s). (There are really two keys - an HMAC key which verifies the validity of the session key, and the session key itself.)
 
-(When using ephemeral Diffie-Hellman to derive a rotating session key, we don't actually encrypt anything with the server's public key in the last step, nor do we use the two exchange random numbers. Instead, the server picks Diffie-Hellman parameters `p` and `g`, and sends those along with its own derived public key. Importantly, the server also *signs* this message, preventing it from being tampered with. The client then uses `p`, `g`, and its own secret to produce a public key, which it sends to the server. The encrypted connection established, the first thing that the client and server send are hashes of the initial handshake messages to verify the integrity of the initial negotiation... Though I think as of TLSv1.3 this hash exchange may be largely vestigial?)
+(When using ephemeral Diffie-Hellman to derive a rotating session key, we don't actually encrypt anything with the server's public key in the last step, nor do we use the two exchange random numbers. Instead, the server picks Diffie-Hellman parameters `p` and `g`, and sends those along with its own derived public key. Importantly, the server also *signs* this message, preventing it from being tampered with. The client then uses `p`, `g`, and its own secret to produce a public key, which it sends to the server. The encrypted connection established, the first thing that the client and server send are hashes of the initial handshake messages to verify the integrity of the initial negotiation… Though I think as of TLSv1.3 this hash exchange may be largely vestigial?)
 
 Important ports:
 
@@ -360,7 +360,7 @@ Important ports:
 * 465 - SMTP+SSL
 * 587 - SMTP+STARTTLS
 
-(Dan Lowrie states that scp is considered deprecated now... Which surprisingly turns out to be true! Though there's apparently a version of scp that's actually sftp under the hood in development, so the end impact of this deprecation will probably be close to zero.)
+(Dan Lowrie states that scp is considered deprecated now… Which surprisingly turns out to be true! Though there's apparently a version of scp that's actually sftp under the hood in development, so the end impact of this deprecation will probably be close to zero.)
 
 SRTP: Secure Realtime Transport Protocol.
 

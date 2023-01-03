@@ -58,9 +58,9 @@ PCI-DSS:
 
 CIS Top 20 Controls:
 
-* Basic controls (1 - 6)
-* Foundational controls (7 - 16; build on the basic controls)
-* Organizational controls (17 - 20)
+* Basic controls (1 – 6)
+* Foundational controls (7 – 16; build on the basic controls)
+* Organizational controls (17 – 20)
 
 NIST CSF (Cyber Security Framework):
 

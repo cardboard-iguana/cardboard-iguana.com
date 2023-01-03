@@ -147,9 +147,9 @@ DRP = Disaster Recovery Planning
 * Disaster Recovery Policies (who does what during recovery)
 * Service Level Agreements
 
-(One of these things is not like the others...)
+(One of these things is not like the others…)
 
-One thing to keep in mind here is how to handle *active* sabotage or additional losses during the recovery efforts...
+One thing to keep in mind here is how to handle *active* sabotage or additional losses during the recovery efforts…
 
 ### Continuity of Operations Planning
 

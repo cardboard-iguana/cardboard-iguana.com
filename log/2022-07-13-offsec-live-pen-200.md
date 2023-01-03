@@ -20,7 +20,7 @@ nc -nvv -w 1 -z $IP_ADDRESS $PORT
 
 ## SNMP
 
-*Always pay attention to SNMP.* (Which is an unfortunate directive, as I haven't been paying attention...)
+*Always pay attention to SNMP.* (Which is an unfortunate directive, as I haven't been paying attention…)
 
 If SNMP v1 or v2 are being used, then the protocol is unencrypted; even if a custom community name has been set, it can be easily sniffed. Once the community name is known, devices can be queried with "MIB" strings.
 

@@ -45,7 +45,7 @@ A Windows-centric list of log types:
 
 Anomaly detection generally works better on network logs than device logs.
 
-Heh... `journald` *still* doesn't have remote logging, instead relying on forwarding to a syslog-compatible daemon.
+Heh… `journald` *still* doesn't have remote logging, instead relying on forwarding to a syslog-compatible daemon.
 
 * [An SEOs Guide To W3C Log Files](https://www.screamingfrog.co.uk/an-seos-guide-to-w3c-log-files/)
 

@@ -24,7 +24,7 @@ The AD data store lives in %SystemRoot%/NTDS. The key file is the NTDS.dit datab
 
 ### The Forest
 
-Computers + users in an Active Directory environment are arranged into domains, which are grouped into hierarchical trees, which are then contained within a forest. Note that it's possible for users and computers to not live in a domain, and domains to not live in a tree... But *everything* lives in the forest.
+Computers + users in an Active Directory environment are arranged into domains, which are grouped into hierarchical trees, which are then contained within a forest. Note that it's possible for users and computers to not live in a domain, and domains to not live in a tree… But *everything* lives in the forest.
 
 * TREE: A hierarchical collection of domains.
 * DOMAIN: A grouping of AD objects and OUs.
@@ -104,14 +104,14 @@ Azure AD is typically designed to sit *between* users/computers and an on prem-A
 * It allows AD trust relationships to be extended to website and web applications.
 * Because Azure AD is more locked down than a typical directory and is centrally controlled by Microsoft, it makes attacking the on-prem AD much harder.
 
-Equivalencies between On-Prem AD <-> Azure AD:
+Equivalencies between On-Prem AD ←→ Azure AD:
 
-* LDAP <-> Rest APIs (?)
-* NTLM / Kerberos <-> Oauth / SAML / OpenID
-* Domains / Forests <-> Tenants
-* Trusts <-> Guests
+* LDAP ←→ Rest APIs (?)
+* NTLM / Kerberos ←→ Oauth / SAML / OpenID
+* Domains / Forests ←→ Tenants
+* Trusts ←→ Guests
 
-Azure AD does *not* use an OU structure, instead adopting a flat set of users. (I assume that permissioning must then be handled entirely through groups...)
+Azure AD does *not* use an OU structure, instead adopting a flat set of users. (I assume that permissioning must then be handled entirely through groups…)
 
 ### Hands-On Lab
 

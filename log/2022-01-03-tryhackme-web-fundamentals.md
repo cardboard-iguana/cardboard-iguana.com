@@ -9,7 +9,7 @@
 
 > "Additionally, Django is arguably one of the most secure developing frameworks, which in the right configuration, can strongly resist against SQL injections and XSS."
 > 
-> -- Swafox in the "Introduction to Django" room
+> — Swafox in the "Introduction to Django" room
 
 That's a hell of a statement. We shall see.
 

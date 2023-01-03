@@ -24,7 +24,7 @@ Unfortunately, this command doesn't help us identify which Volatility 2 profile 
 
 Wikipedia's Comparison of Microsoft Windows versions tells us that Windows 5.1.2600 is some version of XP, and googling the NTBuildLab pulls up a number of results that strongly suggest that this is Service Pack 3. However, The WinXPSP3x86 profile is *not* the right answer - this section seems to want WinXPSP2x86 instead.
 
-Another problem! Volatility 3 doesn't include a psxview equivalent. I'm not sure how to replicate what the section wants me to do... I tried using the `windows.malfind.Malfind` plugin, and guessed that the process we want to look at is csrss.exe because its line is pretty different than the others (Tag, CommitCharge, and PrivateMemory all stand out). This turns out to be correct, but I'm unfortunately less sure about whether I'm picking up on real flag, or just made a lucky guess...
+Another problem! Volatility 3 doesn't include a psxview equivalent. I'm not sure how to replicate what the section wants me to do… I tried using the `windows.malfind.Malfind` plugin, and guessed that the process we want to look at is csrss.exe because its line is pretty different than the others (Tag, CommitCharge, and PrivateMemory all stand out). This turns out to be correct, but I'm unfortunately less sure about whether I'm picking up on real flag, or just made a lucky guess…
 
 We also seem to be missing the ldrmodules and apihooks plugins, and googling around doesn't turn up any obvious alternatives.
 

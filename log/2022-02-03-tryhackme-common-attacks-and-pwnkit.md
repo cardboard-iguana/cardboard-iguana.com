@@ -7,7 +7,7 @@
 
 ### Public Network Safety
 
-I really do wish that guides like this would stop highlighting VPNs -- their utility is just really unclear for most people anymore!
+I really do wish that guides like this would stop highlighting VPNs — their utility is just really unclear for most people anymore!
 
 ### Backups
 
@@ -17,7 +17,7 @@ I really do wish that guides like this would stop highlighting VPNs -- their uti
 * TWO or more different storage devices
 * ONE or more offsite backups
 
-Though honestly, this is kind of a "minimum viable backup" strategy, since simply using a cloud service to mirror data between two devices would qualify! (Why? Working data counts as a copy...)
+Though honestly, this is kind of a "minimum viable backup" strategy, since simply using a cloud service to mirror data between two devices would qualify! (Why? Working data counts as a copy…)
 
 ## Pwnkit (CVE-2021-4034)
 
@@ -75,10 +75,10 @@ Here's what basically happens on execution:
 
 * The exploit creates the path `GCONV_PATH=.` in the current directory and adds an invalid executable file to it.
 * The exploit creates a second directory called `pwnkit` and sets up a malicious shared library designed to be loaded by GLib to translate system messages to the made-up character set "PWNKIT".
-* The exploit calls `pkexec` with a NULL argument list (this bit is important, since we need the length of the argument list to be 0 -- so, not even to contain the name of `pkexec` itself) *but* with a correctly set up (albeit malicious) environment via `execve()`. Importantly, the first "variable" in the environment is actually the name of the (invalid) executable in the `GCONV_PATH=.` directory.
+* The exploit calls `pkexec` with a NULL argument list (this bit is important, since we need the length of the argument list to be 0 — so, not even to contain the name of `pkexec` itself) *but* with a correctly set up (albeit malicious) environment via `execve()`. Importantly, the first "variable" in the environment is actually the name of the (invalid) executable in the `GCONV_PATH=.` directory.
 * Polkit just falls through the loop that it would normally use to walk through the passed-in arguments. This causes what would be pointing to an executable name to instead point to the first environment variable that's passed into `execve()`, which happens to be string `pwnkit`.
 * Polkit looks up the malicious executable, finds it in `GCONV_PATH=./pwnkit` (because we set the PATH to that directory), and then tries to replace the executable name with this full path. *Except* that it's still writing to the first element of the environment, which causes `pwnkit` to be replaced by `GCONV_PATH=./pwnkit`.
-* Polkit the proceeds to sanitize its environment. When it comes to the invalid SHELL variable this sanitization fails and Polkit throws an error and dies. *But!* Before dying, Polkit tries to *print* the error using a GLib function that dutifully attempts to translate the message into the "PWNKIT" character set. To figure out how to do this, modules are loaded from GCONV_PATH... And we've defined a malicious module to do this that cleans up the exploit files and spawns a root shell (since `pkexec` is SUID root).
+* Polkit the proceeds to sanitize its environment. When it comes to the invalid SHELL variable this sanitization fails and Polkit throws an error and dies. *But!* Before dying, Polkit tries to *print* the error using a GLib function that dutifully attempts to translate the message into the "PWNKIT" character set. To figure out how to do this, modules are loaded from GCONV_PATH… And we've defined a malicious module to do this that cleans up the exploit files and spawns a root shell (since `pkexec` is SUID root).
 
 This version of the exploit cleans up after itself, but does depend on generating a log message. The Qualsys advisory describing Pwnkit notes that "this vulnerability is also exploitable without leaving any traces in the logs, but this is left as an exercise for the interested reader." My guess is that to do this you'd need to reintroduce a different environment variable that `ld.so` normally strips when calling SUID binaries. (At least, I don't immediately see any place where Polkit is printing something that *isn't* a warning before it nukes its own environment, but then I'm not super-familiar with C and am only quickly skimming the `pkexec` source code.) *Or* perhaps you can do something with the permissions of the `GCONV_PATH=./pwnkit` file to trigger an error that would not be logged. (The trick here would be to do something so that `g_find_program_in_path()` resolves `GCONV_PATH=./pwnkit` but `access()` returns an error; it's not obvious to me how to do this though, or even if it *can* be done!)
 

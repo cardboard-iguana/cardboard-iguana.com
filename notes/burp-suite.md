@@ -25,7 +25,7 @@ The Burp Suite browser is compiled as an x86_64 binary, and thus *doesn't* work 
 
 First, make the following changes to Firefox's settings:
 
-* Settings > General > Network Settings > Settings... > Manual proxy configuration > [set the "HTTP Proxy" to 127.0.0.1:8080 and check "Also use this proxy for HTTPS"]
+* Settings > General > Network Settings > Settings… > Manual proxy configuration > [set the "HTTP Proxy" to 127.0.0.1:8080 and check "Also use this proxy for HTTPS"]
 * Settings > Privacy & Security > Browser Privacy > Logins and Passwords > Ask to save logins and passwords for websites > Off
 * Settings > Privacy & Security > Browser Privacy > History > Use custom settings for history > Always use private browsing mode > On
 
@@ -34,7 +34,7 @@ Then install the Burp Suite CA certificate:
 * Start Burp Suite.
 * Go to http://127.0.0.1:8080.
 * Click on the "CA Certificate" link in the upper right to download Burp Suite's certificate.
-* Go to Settings > Privacy & Security > Security > Certificates > View Certificates...
+* Go to Settings > Privacy & Security > Security > Certificates > View Certificates…
 * Import the Burp Suite CA certificate and check "Trust this CA to identify websites."
 
 It's also possible to use FoxyProxy - set up Burp Suite as a togglable proxy and then import the Burp Suite CA certificate as above. I don't like this option because I think that hacking and normal browsing activities should be kept as separate as possible.

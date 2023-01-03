@@ -52,7 +52,7 @@ As usual, PayloadsAllTheThings is a great resource.
 
 ### Exercise
 
-The target accepts `0x7f000001` as a valid (and unfiltered) representation for localhost, so we're going to use this and the ZAP Fuzzer (which is annoyingly slow, but the free version of the Intruder is even slower...) to enumerate all of the ports from 1 - 65535. Successful vs. unsuccessful requests are pretty obvious in from their differing response body sizes (successful requests have a body size of 1041 bytes, or in one case 1035 bytes, while unsuccessful requests have a body size of 1045 bytes).
+The target accepts `0x7f000001` as a valid (and unfiltered) representation for localhost, so we're going to use this and the ZAP Fuzzer (which is annoyingly slow, but the free version of the Intruder is even slower…) to enumerate all of the ports from 1 – 65535. Successful vs. unsuccessful requests are pretty obvious in from their differing response body sizes (successful requests have a body size of 1041 bytes, or in one case 1035 bytes, while unsuccessful requests have a body size of 1045 bytes).
 
 The target is also vulnerable to local file inclusion, so `file:///etc/passwd` will get us a full user list.
 

@@ -65,7 +65,7 @@ FLAG 1: How many ports are open on the target? - 2
 
 Looks like IIS running on port 80. Let's go take a peek.
 
-...And, it's just the default IIS "hello world" page. Looks a damn sight prettier than Apache's.
+…And, it's just the default IIS "hello world" page. Looks a damn sight prettier than Apache's.
 
 FLAG 2: What is the title of the webserver's index page? - IIS Windows Server
 
@@ -115,7 +115,7 @@ Since I know we're looking for a CVE name, at this point I just used the Windows
 
 FLAG 7: What CVE was the initially compromised user researching? - CVE-2019-1388
 
-(I feel like the approach I just used - making an educated guess about what the CTF was looking for and then just searching for it - is kind of a cop-out. *But*, the hint for this question states that I should check IE's history, which I did... So perhaps the room's broken?)
+(I feel like the approach I just used - making an educated guess about what the CTF was looking for and then just searching for it - is kind of a cop-out. *But*, the hint for this question states that I should check IE's history, which I did… So perhaps the room's broken?)
 
 Anyways, I'm guessing that the hhupd.exe file on the desktop is the one that will exploit this vulnerability, since it's badged as needing administrative privileges and CVE-2019-1388 is a vulnerability in the UAC screen.
 
@@ -164,7 +164,7 @@ run -j
 
 This particular exploit outputs and encoded PowerShell script and then starts a local listener to deliver the actual Meterpreter shell. All we need to do is cut-and-paste into our elevated shell.
 
-(For whatever reason, I could *only* get this exploit working with the 32-bit version of Meterpreter *and* the `run -j` command. I'm not sure why...)
+(For whatever reason, I could *only* get this exploit working with the 32-bit version of Meterpreter *and* the `run -j` command. I'm not sure why…)
 
 FLAG 12: What command can be used in Meterpreter to establish on-boot persistence on this machine? - `run persistence -X`
 

@@ -21,6 +21,6 @@ Private APIs can only be interacted with from inside of an AWS VPC, via a specia
 
 #### Setting up CloudWatch Logging for a REST API in API Gateway
 
-API execution logs are set up and managed automatically by API Gateway, but *access* logging must be manually configured. Access logs can log any `$context` variables, but cannot log any other API variables. Note that `$context.requestId` can be overridden on the client side by setting the `x-amz-RequestId` header, but `$context.extendedRequestId` is set by API Gateway itself and only revealed to the client in the `x-amz-apigw-id` response header). (Given these limitations, it's unclear why anyone would ever bother with `$context.requestId`, though I suppose it might be useful for debugging...)
+API execution logs are set up and managed automatically by API Gateway, but *access* logging must be manually configured. Access logs can log any `$context` variables, but cannot log any other API variables. Note that `$context.requestId` can be overridden on the client side by setting the `x-amz-RequestId` header, but `$context.extendedRequestId` is set by API Gateway itself and only revealed to the client in the `x-amz-apigw-id` response header). (Given these limitations, it's unclear why anyone would ever bother with `$context.requestId`, though I suppose it might be useful for debugging…)
 
 * [Setting up CloudWatch logging for a REST API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html)
