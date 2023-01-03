@@ -1,11 +1,11 @@
 # TryHackMe: Pre Security (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-09-26
+**author**:: Nathan Acks  
+**date**:: 2021-09-26
 
-# Windows Event Logs
+## Windows Event Logs
 
-## Putting Theory Into Practice
+### Putting Theory Into Practice
 
 Use XPaths with Get-WinEvent via the -FilterXPath switch. Unlike -FilterHashtable, -FilterXPath can be applied to files specified on the command line using -Path.
 
@@ -19,9 +19,9 @@ From Windows Net command executed to enumerate administrators:
 
 * [Windows Net command executed to enumerate administrators](https://docs.datadoghq.com/security_platform/default_rules/windows-event-net-cmd-local-admin-enumeration/)
 
-# MITRE
+## MITRE
 
-## Basic Terminology
+### Basic Terminology
 
 TTP stands for "Tactics, Techniques, and Procedures", where:
 
@@ -33,13 +33,13 @@ So, something like "obtain access to a domain controller, using exploit X, deliv
 
 (I mostly say all of this to remind myself that these terms are being used in a slightly different fashion than my current workplace, which would probably use "goals, tactics, techniques" to represent the same steps.)
 
-## ATT&CK Framework
+### ATT&CK Framework
 
 "ATT&CK" stands for "Adversarial Tactics, Techniques, and Common Knowledge".
 
 * [MITRE ATT&CK](https://attack.mitre.org)
 
-## CAR Knowledge Base
+### CAR Knowledge Base
 
 "CAR" stands for "Cyber Analytics Repository".
 
@@ -47,7 +47,7 @@ The ATT&CK Navigator tool highlights analytics currently available in CAR using 
 
 * [MITRE Cyber Analytics Repository](https://car.mitre.org/)
 
-## ATT&CK Emulation Plans
+### ATT&CK Emulation Plans
 
 Also known as "AEP".
 

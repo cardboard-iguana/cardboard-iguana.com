@@ -1,9 +1,9 @@
 # Using PowerShell
 
-author:: Nathan Acks  
-date:: 2022-08-31
+**author**:: Nathan Acks  
+**date**:: 2022-08-31
 
-# Access the Registry Through PowerShell
+## Access the Registry Through PowerShell
 
 You can actually access the registry from PowerShell using the `cd` command: `cd HKLM:\` will take you to the HKEY_LOCAL_MACHINE hive, for instance.
 
@@ -15,15 +15,15 @@ Major hives:
 * `HKEY_USERS`
 * `HKEY_CURRENT_CONFIG`
 
-# Commands
+## Commands
 
-## Accessing Windows Logs
+### Accessing Windows Logs
 
 Use the `Get-WinEvent` cmdlet.
 
 * [Get-WinEvent](get-winevent.md)
 
-## Download a File
+### Download a File
 
 ```powershell
 # Download to disk
@@ -40,7 +40,7 @@ $SCRIPT_DATA = `
 IEX (New-Object System.Net.Webclient).DownloadString("$SCRIPT_URL")
 ```
 
-## Using Base64 Encoding
+### Using Base64 Encoding
 
 Encode a command to base64 in PowerShell:
 
@@ -56,13 +56,13 @@ Run this using:
 powershell.exe -enc $EncodedText
 ```
 
-## Manipulating Services
+### Manipulating Services
 
 * `Get-Service` - list all services, or drill down on a particular service.
 * `Start-Service -Name $SERVICE`/`sc.exe start $SERVICE` - start $SERVICE.
 * `Stop-Service -Name $SERVICE`/`sc.exe stop $SERVICE` - stop $SERVICE.
 
-## Calculating File Hashes
+### Calculating File Hashes
 
 ```powershell
 Get-FileHash -Algorithm $ALGORITHM $FILE_PATH
@@ -70,7 +70,7 @@ Get-FileHash -Algorithm $ALGORITHM $FILE_PATH
 
 The algorithm can be excluded (in which case SHA-256 is used). *Lots* of different hashing algorithms are supported - run `help Get-FileHash` to see a list.
 
-## PowerShell Remoting
+### PowerShell Remoting
 
 Many large companies will enable PowerShell Remoting on all machines in order to ease IT support burdens (by default, remoting is only enabled on domain controllers).
 
@@ -88,7 +88,7 @@ Enter-PSSession -Session $SESSION_NAME
 
 * [2022-09-02 - OffSec Live: PEN-200](../log/2022-09-02-offsec-live-pen-200.md)
 
-# Run PowerShell from cmd.exe
+## Run PowerShell from cmd.exe
 
 ```powershell
 powershell -c "$COMMAND"

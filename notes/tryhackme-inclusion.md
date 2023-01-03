@@ -1,7 +1,7 @@
 # Inclusion
 
-author:: Nathan Acks  
-date:: 2022-02-01
+**author**:: Nathan Acks  
+**date**:: 2022-02-01
 
 * [TryHackMe: Inclusion](https://tryhackme.com/room/inclusion)
 

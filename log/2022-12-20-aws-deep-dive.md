@@ -1,31 +1,31 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-12-20
+**author**:: Nathan Acks  
+**date**:: 2022-12-20
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Working With WebSocket APIs
+### Working With WebSocket APIs
 
 * [Amazon API Gateway: Working with WebSocket APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html)
 
-### Setting Up Data Transformations for WebSocket APIs in API Gateway
+#### Setting Up Data Transformations for WebSocket APIs in API Gateway
 
 WebSocket API proxy integrations cannot use integration response templates - the backend response is always passed back as-is to the caller. When response templates *are* used, they are limited to switching on Lambda error messages or HTTP status codes (depending on the integration type).
 
 * [Setting up data transformations for WebSocket APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-data-transformations.html)
 
-### Working With Binary Media Types for WebSocket APIs in API Gateway
+#### Working With Binary Media Types for WebSocket APIs in API Gateway
 
 Basically, WebSocket APIs in API Gateway can't handle raw binary. Any such files need to be converted to/from base64, as appropriate, as the first step in processing.
 
 * [Working with binary media types for WebSocket APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-develop-binary-media-types.html)
 
-### Invoking a WebSocket API in API Gateway
+#### Invoking a WebSocket API in API Gateway
 
 Sending callback messages from the backend *to* the client require that those messages be SigV4 signed. Surprisingly, this can be done by calling the corresponding `@connections` URL in API Gateway directly - connections don't have to be established through API Gateway first!
 
@@ -39,13 +39,13 @@ Messages can be sent to the client at `connection_id` using POST requests, while
 
 * [Invoking a WebSocket API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api.html)
 
-### Working With Stages for WebSocket APIs in API Gateway
+#### Working With Stages for WebSocket APIs in API Gateway
 
 As with other API types, you cannot specify a Lambda function for use with the WebSockets API using stage variables if that function is in another account.
 
 * [Working with stages for WebSocket APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-stages.html)
 
-### Deploy a WebSocket API in API Gateway
+#### Deploy a WebSocket API in API Gateway
 
 Each API in API Gateway is limited to ten stages.
 

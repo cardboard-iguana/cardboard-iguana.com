@@ -1,7 +1,7 @@
 # OPSEC in Theory and Practice
 
-author:: Nathan Acks  
-date:: 2021-04-04
+**author**:: Nathan Acks  
+**date**:: 2021-04-04
 
 An overview of OPSEC history and practice produced by The Grugq.
 
@@ -10,17 +10,17 @@ The course is presented as self-paced, but seems to be just recordings of a set 
 * [OPSEC in Theory and Practice](https://learn.opsec.institute/courses/opsec-in-theory-and-practice)
 * [The Grugq (Twitter)](https://twitter.com/thegrugq)
 
-# How to Use This Course
+## How to Use This Course
 
 This is just a quick introduction to the online course software. If you've ever taken an online course (or, I dunno, used the web?), this is all 100% obvious.
 
 (Though it turns out that lessons *autoplay*, but start in a *muted* state!)
 
-# OPSEC Theory
+## OPSEC Theory
 
 This seems to be a recording of an actual course.
 
-## OPSEC Ideas
+### OPSEC Ideas
 
 Oftentimes, military and intelligence agencies use "OPSEC" and "security" interchangeably. Basically, it's about protecting secrets.
 
@@ -51,7 +51,7 @@ There's also the simpler "denial and deception" conception.
 
 * [Operations security (Wikipedia)](https://en.wikipedia.org/wiki/Operations_security)
 
-## The Three Cs
+### The Three Cs
 
 COVER: Make sure that what people see on the surface doesn't stand out. You don't want to be interesting, or worth taking notice of.
 
@@ -65,7 +65,7 @@ This is like Corey Doctorow's "chaff" (from "Little Brother") or canarytokens. I
 
 * [Canarytokens](https://canary.tools/help/canarytokens)
 
-## Operational Security
+### Operational Security
 
 * Identification of critical information.
 * Analysis of threats.
@@ -75,7 +75,7 @@ This is like Corey Doctorow's "chaff" (from "Little Brother") or canarytokens. I
 
 A big part of risk assessment is appropriately ranking those risks, and addressing them in the appropriate order.
 
-## Counterintelligence
+### Counterintelligence
 
 Counterintelligence is very broad, which has the effect of causing everyone to bikeshed their own approach.
 
@@ -85,7 +85,7 @@ A classic advanced counterintelligence example dates from the time of the Provis
 
 Counterintelligence is sometimes divided between defensive (protect secrets) and offensive (detecting leaks/losses, learning about adversarial capabilities).
 
-## Security Rules
+### Security Rules
 
 The combines the Moscow Rules, the ANC's rulebook, and a few other sources.
 
@@ -154,7 +154,7 @@ Again, this reminds me a bit of the corollary to the Quinn Norton maxim that I'm
 
 TREAT PERSONNEL COMPROMISE AS CATASTROPHIC: Assume that the information that anyone who has been arrested or compromised has is now known to your adversary, and act appropriately.
 
-## Disguise on the Run
+### Disguise on the Run
 
 [Former CIA Operative Explains How Spies Use Disguises (YouTube)](https://youtu.be/JASUsVY5YJ8)
 
@@ -198,11 +198,11 @@ Non-prosthetic disguises - ones that use only clothing and accessories - can be 
 
 THE GRUGQ NOTES: Basically, make changes hard to see from the front/rear. The example here was to use a backpack to hide the removal of a business suit. This needs to be done in multiple stages, and each stage needs to look natural and legitimate.
 
-## Finishing Up
+### Finishing Up
 
 Again, security *principles* are generic - it's the implementation of these principles that become a specific ruleset.
 
-# Purple Dragon (Excerpts)
+## Purple Dragon (Excerpts)
 
 Simpler Army OPSEC directives:
 
@@ -252,7 +252,7 @@ Section B.7.2.c. Provides another note about what would be called "side channels
 
 The rest of this document is a discussion about documentation and continuous evaluation which feels like pretty standard fare these days.
 
-# The Ten Crack Commandments
+## The Ten Crack Commandments
 
 [YouTube video.](https://youtu.be/ZYb_8MM1tGQ)
 
@@ -270,7 +270,7 @@ To summarize (maybe a little more in the IT sense):
 
 "Need to know" is basically social compartmentalization, so really this list boils down to maintaining compartmentalization combined with balancing risk avoidance with maximizing one's latitude for action.
 
-# My CIA (Excerpts)
+## My CIA (Excerpts)
 
 DEFINITION: Operational security "is the discipline that protects the secrecy of clandestine operations."
 
@@ -292,7 +292,7 @@ Reminds me a bit of:
 > 
 > - David Mamet #Quote 
 
-# The Moscow Rules
+## The Moscow Rules
 
 The emphasis here is on maintaining cover and compartmentalization, maximizing freedom of action, and minimizing risk.
 
@@ -315,7 +315,7 @@ A lot of this feels like admonishes to take your time, even under pressure. "Met
 
 * [Kali Linux](https://www.kali.org)
 
-# Never Get Busted Again
+## Never Get Busted Again
 
 The Grugq outlines what they see as the "core OPSEC principles" in the preface to this section:
 
@@ -328,7 +328,7 @@ The Grugq outlines what they see as the "core OPSEC principles" in the preface t
 * Unlinking / uncoupling
 * Preventing contamination
 
-## Intro
+### Intro
 
 This is a film put together by an ex-police office that helps instruct marijuana users how *not* to get busted.
 
@@ -344,7 +344,7 @@ If you know the answer to these questions then you can "side-step" your adversar
 
 Additionally, knowing the why/how a capability, trigger, or limit exists can be useful when formulating a dodge or counter.
 
-## K-9
+### K-9
 
 Not every dog can be a narcotics K-9 unit. When picking a dog, police look for an animal with a high "ball drive" - someone who's got a single-minded insistence to do a particular thing (like chasing a ball), and is generally somewhat demanding and obnoxious about it. Typically, when a suitable puppy is identified its toys will be scented with the narcotics they are will be tasked with finding, so that they come to associate that smell with their own fixation.
 
@@ -362,7 +362,7 @@ Handlers can also false-trigger a K-9 if they *want* to conduct a deeper search,
 
 Remember that capabilities don't lie (though they can be mistaken) - but humans *do*. So another important thing to understand is when what rules your adversary must follow... And which of those rules they can break or otherwise subvert.
 
-## Conceal Your Stash
+### Conceal Your Stash
 
 > If it takes 15 minutes to hide your stash it will take an officer an hour to find it.
 > 
@@ -374,7 +374,7 @@ Remember that capabilities don't lie (though they can be mistaken) - but humans 
 
 This section was skipped in the actual video, however.
 
-## Search & Seizure
+### Search & Seizure
 
 The big point of this section is to *not look like a fucking drug user*. Don't carry paraphernalia, etc. This aligns pretty well with my "minimum footprint" approach to cyber security.
 
@@ -390,7 +390,7 @@ Interestingly (but perhaps not surprisingly), refusing a search arouses suspicio
 
 In general, you're trying to use both knowledge of the adversary's rules and human psychology to keep yourself on the path of least suspicion (and if possible, away from interactions with the adversary at all).
 
-## Narcotics Profiling
+### Narcotics Profiling
 
 Some interesting points here:
 
@@ -410,11 +410,11 @@ One reason police go bad is that they tend to become adrenaline junkies. Eventua
 
 More emphasis here on looking for drug use, or signs of drug use. Comes back around to *not looking like a fucking drug user* (and really, per Biggie Smalls, just not using when on the job). Also, returning to "cover" again... Just try to blend in. Don't have bumper stickers. Dress normie. Travel during high traffic times and pace the other cars (but don't be *too* careful). Etc.
 
-## Traffic Stops (Case Studies)
+### Traffic Stops (Case Studies)
 
 We skipped this part of the DVD.
 
-## Busted (What to do When It All Goes Wrong)
+### Busted (What to do When It All Goes Wrong)
 
 This is just a section of good OPSEC.
 
@@ -424,7 +424,7 @@ This is just a section of good OPSEC.
 
 That said, it was also skipped.
 
-# Tradecraft I
+## Tradecraft I
 
 This tradecraft section focuses on the OPSEC aspects of the creation, setup, and operations of a clandestine cell network (not as in *cellular*, but as in cell-structured).
 
@@ -434,7 +434,7 @@ Compartmentalization makes it harder to engage in institutional learning, becaus
 
 Communication between cells is generally indirect (hang a sign in the window that the right people will know how to interpret, etc.). When face-to-face meetings are necessary, insurgent OPSEC tends to focus on cover and counter-surveillance. One strategy both intelligence and insurgent organizations use is to arrange multiple meeting times, which allows for some flexibility in the face of adversarial activities. This isn't infinite though - after some number of missed meetings one has to assume that something bad has happened to either the agent being contacted or, for cell-based organizations, the entire cell. To help compensate for this hard cut-off there's generally some kind of pre-arranged emergency signal that a cell or agent can use to indicate a problem to other cells.
 
-## Impersonal Communications
+### Impersonal Communications
 
 This is what is known as a "cut-out" - a way of communicating between cells or agents that doesn't require direct face-to-face interaction. (Since the point of this is to prevent individuals from becoming linked with each other, this presumably extends to direct online interactions such as Twitter, direct messages in chat rooms, or email.) Examples:
 
@@ -450,13 +450,13 @@ Passive impersonal communications thus tend to be preferred in higher risk envir
 
 * [The Troubles (Wikipedia)](https://en.wikipedia.org/wiki/The_Troubles)
 
-## Couriers
+### Couriers
 
 Couriers are often used as cut-outs. The key with a courier is that they can move some distance, don't arouse suspicion, and generally don't know people in either cell (so you generally don't want the same person meeting a courier all the time, nor do you want to re-use couriers frequently). If at all possible, couriers shouldn't even meet *people*, instead being used in conjunction with things like dead drops.
 
 That said, couriers that are detected can be traced. This is the way that the US discovered the locations for most of the leadership of Al Qaeda.
 
-## Dead Drops
+### Dead Drops
 
 Generally dead drops are not just "a hidden place you put things", but are also combined with some signal understood by the sender and receiver to indicate both the presence of a message and that the message has been received. The reason for the signal is not just to allow for (high-latency) two-way communication, but so that if the sender doesn't see a receipt signal within a certain timeframe they can clean out the dead drop (on the assumption that something has happened to the receiver). Turn-around is surprisingly quick; The Grugq quotes dead drop pick-up times measured in hours, whereas I would have though that typical turn-around would be more like *days*.
 
@@ -464,7 +464,7 @@ Dead drops are typically in public or semi-public spaces - parks, public restroo
 
 Things go wrong a surprising number of times with dead drops. People using a slightly different item to signal than was previously agreed on. Squirrels. Etc.
 
-## Live Drops
+### Live Drops
 
 Basically, this is like a dead drop, except that you're using a person to hold the item/message. Typically, small shops with a good amount of traffic (but not too much - only one or two people at a time) are used.
 
@@ -472,7 +472,7 @@ Live drops are also frequently used by professional thieves.
 
 The obvious problem here is that the person may eventually link the sender(s) and the recipient(s). The upside is that using a person instead of a box or hollow log somewhere can provide more security (they may detect if their cover's been blown, they're resistant to squirrels, etc.).
 
-## Clandestine Codes
+### Clandestine Codes
 
 This is the ads/signs/forum posts/etc. thing.
 
@@ -482,13 +482,13 @@ Code words in phone conversations work best when the entire conversation is mapp
 
 Unfortunately spies are just as likely to screw things up as other people. Nobody's going to remember a complex or subtle set of code words/phrases.
 
-## Loose Command & Control
+### Loose Command & Control
 
 It's fairly common to run a resistance group with a loose coupling between central command and individual cells. This often necessitates the use of more passive communications.
 
 An extreme version of this is "lone wolf" or "leaderless" terrorism, where "leadership" and actual actors are completely decoupled to the point of not knowing each other or even formally existing in an "organization". This is generally an organizational method of last resort, as it's impossible to push for coordinated action (or even make guarantees during negotiations) with this model.
 
-## Personal Communications
+### Personal Communications
 
 Obviously, meetings in a cell network are pretty high risk. These are generally only used when leadership needs to make a major decision or when it's imperative that a message be understood.
 
@@ -496,7 +496,7 @@ The high risk profile of meetings means that they're basically an operation in a
 
 When signaling go/no-go via counter-surveillance, it's best to "fail closed" - there should be an "all clear" signal, with the default assumption being that the meeting will be aborted. (Again, a strong parallel here with computer security.)
 
-## Counter Surveillance
+### Counter Surveillance
 
 In general, the best thing to do when surveillance is detected is to abort and *not break cover* rather than trying to explicitly "loose" the adversary. In particular, not only does trying to escape surveillance antagonize the people trying to surveil you, but it also reveals that you *know* about the surveillance or have special training, which can then make you *more* of a target moving forward. A large part of the thrust of "The Moscow Rules" is to avoid doing exactly these things.
 
@@ -504,7 +504,7 @@ A basic form of counter-surveillance is to go to a shopping mall or other locati
 
 Another reason not to loose a tail is that for a well-resourced team it may just be replaced with another tail... Which then you have to identify all over again.
 
-## Surveillance Detection Route
+### Surveillance Detection Route
 
 It's actually hard to follow people on foot through busy shopping areas because of the crowds and multiple entrances.
 
@@ -525,7 +525,7 @@ When doing static surveillance, someone sitting at a single location for an enti
 
 Of course, these days people just use phone location data.
 
-## Emergency Reconnection
+### Emergency Reconnection
 
 Emergency signals are important in cell-based organizations, as it's easy to sever the already tenuous connection between cells. So there needs to be a pre-arranged way of signaling "we need to reconnect".
 
@@ -539,7 +539,7 @@ When doing any meeting, and in particular an emergency meeting, it's best to use
 
 Just as in cyber security, clandestine meeting security needs to rely on defense in depth - multiple levels of look-outs who can warn you if something's going wrong to minimize the risk if one level fails. Again, it's better to abort and leave when things look like they may be going south than to try to deal with adversary directly.
 
-## Clandestine Recruitment
+### Clandestine Recruitment
 
 "Friends and family" recruitment is generally a bad idea - it's hard to discipline people, it's hard to maintain compartmentalization, and it's generally a smaller group to draw from than you'll eventually need.
 
@@ -549,11 +549,11 @@ So a general take-away from this is that human small-world social networks stron
 
 Vetting is just as much a problem for terrorist organizations as it is for any other organizations. US motorcycle gangs not only use multiple levels of recruitment to gradually level people up, but actually hire private investigators to look into the background of potential members before they're fully initiated. One trick hacker crews use is to test for passion/belief rather than technical knowledge (since passion is a lot harder to "fake").
 
-## Conclusion
+### Conclusion
 
 The big take-away here is (again) that the rules of OPSEC are the same for any organization/activity - it's the *implementation* that changes depending on context.
 
-# 73 Rules of Spycraft
+## 73 Rules of Spycraft
 
 > Security consists not only in avoiding big risks. It consists in carrying out daily tasks with painstaking remembrance of the tiny things that security demands. The little things are in many ways more important than the big ones. It is they which oftenest give the game away. it is consistent care in them, which form the habit and characteristic of security mindedness.
 > 
@@ -625,9 +625,9 @@ I've personally found this a much harder balancing act than one would think.
 
 * [Johnny Mnemonic (film) (Wikipedia)](https://en.m.wikipedia.org/wiki/Johnny_Mnemonic_%28film%29)
 
-# Selected SOE Training Lectures
+## Selected SOE Training Lectures
 
-## Individual and Collective Security
+### Individual and Collective Security
 
 > INCULCATION
 > 
@@ -651,11 +651,11 @@ This is very similar to a point The Grugq has made repeatedly about preferring v
 
 The importance of habits, but this time in of your physical space.
 
-## Security for W/T Operations
+### Security for W/T Operations
 
 A good courier should not themselves engage in subversive activity. Which doesn't necessarily mean that they can't be engaged in *illegal* activity - Allen Dulles, for example, recommends using commercial smuggling as cover with couriers for clandestine communications.
 
-## Informant Service
+### Informant Service
 
 Basically, talk to a lot of different kinds of people and be observant of your surroundings. Prefer people who mix with folks from many different strata, such as wait staff, servants, inn-keepers, bar staff, and "[a]ll grumbles and malcontents".
 
@@ -675,7 +675,7 @@ Under methods:
 
 This reminds me both of the recent push of ransomware gangs to attempt to recruit disgruntled insiders, as well as the old saw on Twitter about how the best way to find out a solution to a problem is to suggest an obviously incorrect approach.
 
-## Cover
+### Cover
 
 > In some cases agents have to assume different identities in different places. This should be avoided as far as possible because it leads to contradictions.
 > 
@@ -697,7 +697,7 @@ Another piece of advice that calls back (forward?) to "The Moscow Rules".
 
 The construction of alibis is very similar to that of cover in general - just more specific for a particular event.
 
-## Make Up and Disguise
+### Make Up and Disguise
 
 > It must have as its basis the art of being and living mentally as well as physically this new role. The important thing to remember is to be the person you are portraying mentally first and the afterwards physically. Therefore - EXTERNAL IMITATION BY ITSELF IS NOT SUFFICIENT.
 > 
@@ -719,7 +719,7 @@ Lots of make up and dress tips here. Some seem a little dated, but most would ma
 
 Finally, as an interesting aside the British Navy (!) appears to have studied beard growth in some detail, coming to the conclusion that it requires 25 - 40 days to grow a full beard from a clean-shaven face. This actually aligns with my own experiences quite well.
 
-# Tradecraft IIa: Selected SOE Training Lectures
+## Tradecraft IIa: Selected SOE Training Lectures
 
 SOE stands for the "Special Operations Executive", and was a World War 2 intelligence organization set up by Churchill after Dunkirk. It started out in a pretty amateurish way. *A lot* of people were caught, tortured, and killed. The SIS (the precursor to today's MI6) found SOE pretty annoying. But the SOE was also very good at learning from its mistakes.
 
@@ -733,7 +733,7 @@ The SOE's tactics were actually purposefully modeled after the IRA's.
 
 Good security is what enables effective cooperation in dangerous situations. ("A chain is only as strong as its weakest link", blah blah blah.)
 
-## Applied Security
+### Applied Security
 
 > Absence of evidence of counter espionage surveillance does not mean evidence of absence.
 > 
@@ -755,7 +755,7 @@ Security is a process, and good security habits make it easier to follow that pr
 > 
 > - The Grugq
 
-## Covert Interactions
+### Covert Interactions
 
 There are *a lot* of side-channels when trying to act covertly, and almost all of them stem from carelessness In personal interactions.
 
@@ -789,7 +789,7 @@ For individuals, this boils down to establishing your exits as the first thing y
 
 One effective way of using code words is to invert the meanings of sentences ("yes, come over" -> "run away").
 
-## Wireless Operators
+### Wireless Operators
 
 Avoid establishing patterns.
 
@@ -797,25 +797,25 @@ A side-channel attack the Germans used to discover clandestine radio operators i
 
 The lesson here: You need to understand what the needs and side effects are of what you are trying to do, and how can these be turned against you?
 
-## Safe Houses
+### Safe Houses
 
 The Grugq, commenting on using fire to destroy documents: "It doesn't actually work that well, because fire is not as fast as it should be."
 
-## Cut-Outs
+### Cut-Outs
 
 Using people as cut-outs has a somewhat dark secondary purpose: To throw suspicion off from the people doing the actual espionage.
 
-## Wireless Operator Security Rules
+### Wireless Operator Security Rules
 
 Basically, wireless operators (the SOE lecture notes abbreviate them as "W/Os", which I wish I had known when reading them) are completely compartmentalized - they *only* operate the radios and encode/decode the messages. No operations. No risks. No knowledge outside of the narrow confines of their job. (To a certain extent, wireless operators can be thought of as a kind of cut-out themselves.)
 
-# Tradecraft IIb: 73 Rules of Spycraft
+## Tradecraft IIb: 73 Rules of Spycraft
 
 Allen Dulles wrote "73 Rules of Spycraft" over the course of the late 1950s and early 1960s, and is in many ways refine the older WW2-era "Selected SOE Training Lectures".
 
 The Grugq sees Allen Dulles' "73 Rules of Spycraft" as basically "everything you need to know about OPSEC"... Not so much because of the *literal* rules (some are now quite dated), but because they embody the type of thinking necessary for and principles underlying OPSEC so well.
 
-## Security is Important
+### Security is Important
 
 The Grugq sees "security" as a better term than "OPSEC", especially since over time the latter has come to have a more and more specific meaning. Again, it's a process, not any one rule/action! To paraphrase: "The OPSEC process is what creates security."
 
@@ -845,15 +845,15 @@ One trick for writing without risk of creating an underlying impression is to do
 
 Being under cover is a bit like developing a split personality - there's the you who knows things, and the you who doesn't. This is incredibly stressful, and generally leads to diminished performance when operating under *either* persona.
 
-## Post
+### Post
 
 Because investigation is about correlating events, spreading out your operations over both space and time significantly impedes the adversary's efforts to uncover an operation. Travel away from your home base to conduct your operations. Spread out communications as much in time as possible.
 
-## Safe Houses
+### Safe Houses
 
 One key to finding a safe house is to make sure that the people who run it are both trustworthy *and* not involved in any operations. Compartmentalize!
 
-## Inconspicuous
+### Inconspicuous
 
 Be average. Don't leave an impression. But don't *look* like you're trying to avoid leaving an impression.
 
@@ -873,11 +873,11 @@ Never admit that you are a direct representative of anything... You're just a fr
 
 Compartmentalize! Compartmentalize! Compartmentalize!
 
-## Handling Couriers
+### Handling Couriers
 
 The best couriers are people whose profession is to move around. Mailmen. Stewardesses. Etc.
 
-## Elements of an Espionage Network
+### Elements of an Espionage Network
 
 How to set up a spy network (a break-down of rule 55):
 
@@ -903,7 +903,7 @@ The point about personal friendships is that it's important to treat the operati
 
 An important element of choosing where you live is to have a space that allows *freedom of movement*. This means not only having a place that is well situated, but also making sure that any people you share it with are trustworthy while being relatively incurious about your affairs.
 
-# Function of Clandestine Cellular Networks
+## Function of Clandestine Cellular Networks
 
 Leading off with a distinction here between the *form* of compartmentalization (how a group is organized) vs. the *function* of compartmentalization (the tradecraft that minimizes the signature of individual cells and facilitates inter-cell communication).
 
@@ -929,7 +929,7 @@ The list of *functions* of a compartmentalized organization is essentially the s
 > 
 > - Allen Dulles, "73 Rules of Spycraft"
 
-## Impersonal Communications
+### Impersonal Communications
 
 a.k.a. "Cut-outs".
 
@@ -937,7 +937,7 @@ The discussion of the new abilities vs. new risks opened up by the internet remi
 
 * [Twitter and Tear Gas](https://www.twitterandteargas.org)
 
-## Counter Surveillance
+### Counter Surveillance
 
 If there's a take-away to this section, it seems to be that unmanned, computer-assisted aerial surveillance has been more of a counterintelligence game-changer than the signals intelligence work of the NSA, *et al.* A lot of older counter surveillance techniques (such as switching vehicles) are much less effective against modern aerial surveillance (which, if it is previously tracking someone, can often identify the switch).
 
@@ -949,7 +949,7 @@ This could have come straight from "73 Rules of Spycraft" or the "Selected SOE T
 
 A new concept here (or really, an formalization of concepts already discussed): A "check route" is a long travel path using multiple means of transit and across multiple different environments that is designed to force any surveillance operations to expose themselves or break off. So, get on a bus, travel by car, walk through a mall... It's not *impossible* to follow someone effectively through all of these environment and transportation changes, but it becomes progressively harder to do without slipping up the more changes are stacked on each other.
 
-## Emergency Methods for Re-Connecting the Network
+### Emergency Methods for Re-Connecting the Network
 
 Good, albeit obvious, point: Reconnection methods must be established *before* the network is severed, and need to be highly secure/clandestine (since the network is almost certainly operating under additional adversarial attention).
 
@@ -963,33 +963,33 @@ Reconnecting through third parties is easier to implement, but brings with it a 
 > 
 > - "Function of Clandestine Cellular Networks"
 
-## Clandestine Recruiting
+### Clandestine Recruiting
 
 In general, it's best to have recruitment operations compartmentalized from leadership, so that if a recruitment goes bad the damage is contained.
 
 Interesting... Al-Qaeda used *marriage* as a way to forge alliances with and recruit from various central-Asian and Middle Eastern tribes.
 
-## Safe Houses
+### Safe Houses
 
 The reason insurgent leadership frequently moves between safe houses is to thwart surveillance and counterintelligence operations; generally a location will only be used for as long as the person feels it would take for an effective attack to be planned and organized. (It would seem to me that in addition to visiting multiple safe houses, those visits must have some randomness to them *and* new safe houses must always be being brought on-line while old safe-houses are decommissioned. Without doing this, the problem of `n` safe houses would seem to be functionally equivalent to `n = 1`.)
 
 Safe house operators must not be involved in other organizational activities, in order to minimize their interest to the adversary. That said, they must have some way of indicating whether the house is safe to use (this can be as simple as "where are the clothes hanging?").
 
-## Security at a Location
+### Security at a Location
 
 This section breaks down the two-ring security model that The Grugq has mentioned a couple of times in more detail. In particular, the inner ring exists to *actively* disrupt adversarial operations, while the outer ring is about *passive* surveillance of the adversary. Outer ring surveillance may include infiltration in enemy operations, and potentially entire cells with their own cut-outs.
 
-## Clandestine Skills Training
+### Clandestine Skills Training
 
 The internet makes "independent studies" easier, but also makes it much harder to hide training materials from the adversary. There's also limits to such studies... Eventually you need "field experience".
 
-## Considerations for Elements at the Edge of the Clandestine Organization
+### Considerations for Elements at the Edge of the Clandestine Organization
 
 There's generally a real skills / training gradient between the core of a cell network and its periphery. Edge nodes are generally not trained very well, and are often only constituted for a particular purpose. Typically only the leader of an edge cell has any communication into the main network, and then only through a cut-out.
 
 Since edge cells generally are the ones that are actually conducting operations, they tend to come under particular scrutiny by the adversary. As a side-effect, the adversary's attention is generally drawn away from the larger organization and towards the more immediate threat at hand. Cheap edge cells allow clandestine organizations to force the adversary to play whack-a-mole, clearing out space for the core network to work towards its larger strategic objectives.
 
-# Tradecraft III
+## Tradecraft III
 
 This section will talk about something more contemporary: Robert Hanssen, an FBI double agent who spied first for the KGB and later the SVR (the KGB's direct successor). In particular, The Grugq wants to concentrate on how Hanssen and the KGB initially made contact, established lines of communication, etc. (Hanssen was eventually identified through a KGB defector.)
 
@@ -1001,11 +1001,11 @@ Hanssen worked for the FBI's counterintelligence unit, and leaked *CIA* secrets 
 * [KGB (Wikipedia)](https://en.wikipedia.org/wiki/KGB)
 * [Foreign Intelligence Service (Russia) (Wikipedia)](https://en.wikipedia.org/wiki/Foreign_Intelligence_Service_%28Russia%29)
 
-## Hanssen's Tradecraft
+### Hanssen's Tradecraft
 
 Hanssen knew that the KGB had been compromised previously, and so aimed to use extreme compartmentalization to provide information without ever revealing themself to them.
 
-## First Contact
+### First Contact
 
 Hanssen made first contact by sending a letter to a known *KGB agent*. Inside that letter was a second sealed envelope with directives *not* to be opened and instead to be delivered to the agent's superior (Cherkashin).
 
@@ -1019,7 +1019,7 @@ Hanssen's refusal to directly disclose their identity to the KGB is good for Han
 
 Hansen also insisted on using a common method for masking dates/times: They would add 6 to all months, days, and times of all communications with the KGB, and the KGB would in turn *subtract* 6 in all communications to Hanssen (the "coefficient", 6, was just the number Hanssen used; any other small integer also works). This technique works to obscure meeting times, but if enough communications are intercepted its use becomes somewhat obvious, as they tend not to fit the cover text very well. Still, without a particular target already in mind it can be very difficult to reverse engineer the coefficient, even with a lot of intercepted communications. (If the coefficient is only applied to hours and days it tends to be more effective at blending in with the cover text, but also doesn't provide as much counter-counter-intelligence value.)
 
-## Transfer
+### Transfer
 
 Hanssen sets up a dead drop in a park to receive payment. This can be a little difficult to do with written words, so Hanssen provides both a description and a map reference from a common map book. The drop itself is disguised as a full trash bag (complete with actual trash). The actual package should be enclosed in a waterproof container.
 
@@ -1029,7 +1029,7 @@ Vertical (for Hanssen) and horizontal (KGB) pieces of white adhesive tape on a n
 
 (One of the things that comes out again and again here is that Hanssen opts for simplicity of tradecraft whenever possible. This reminds me of one of my particular hobby horses - which I'm sure I picked up from someone on Twitter - "complexity is the enemy of security".)
 
-## Exchange
+### Exchange
 
 The KGB ultimately gave Hanssen $50,000. Interestingly, Hanssen never used this money - so their motivation remains slightly unclear even today (best guess is that it was an ego thing). That said, Hanssen played up the money aspect in subsequent communications (perhaps as a method of misdirection?).
 
@@ -1045,19 +1045,19 @@ Despite all of these precautions, Hanssen doesn't make the next drop because the
 
 * [Prisoner's dilemma (Wikipedia)](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
 
-## For Sale Ad
+### For Sale Ad
 
 Eventually, Hanssen became confident that the surveillance of the agent being used as a cut-out was not related to them and arranged another meeting. This time, Hanssen set up a new communications method: the use of a for sale ad. The ad would specify a number and time to call, Hanssen would call and after a brief authentication exchange leave a second number were the KGB could deposit a *recorded* message. So again, we're trying to minimize all real time interactions, even over the phone.
 
 (Using an exchange to provide authentication - a *parole* in KGB-speak - can be tricky. Too specific or odd and the exchange will obviously be a "password", but too generic and you can get tripped up by random people actually saying the "right" thing. This latter concern isn't academic - there have been actual cases where innocent bystanders accidentally got an asset to follow them because they said something that matched an overly generic parole!)
 
-## The Fated Phone Call
+### The Fated Phone Call
 
 The phone call is what ultimately undoes Hanssen, as the KGB recorded it and subsequent phone calls (and then the better part of 15 years later those recordings were provided by a KGB defector). This is a good example of how mistakes in OPSEC are cumulative.
 
 Also, people are *bad* at phone cover, which is something that *really* comes out in some of these phone transcripts. People screw up their cover on the phone all the time, which is one reason that phones are *bad*.
 
-## Conclusions
+### Conclusions
 
 Real life is messy, and even spies often allow efficiency to trump security.
 

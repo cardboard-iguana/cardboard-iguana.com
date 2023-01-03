@@ -1,15 +1,15 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-12-27
+**author**:: Nathan Acks  
+**date**:: 2022-12-27
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Security
+### Security
 
 Interesting - AWS maintains FIPS-specific endpoints for use by organizations that require FIPS compliance. (In other words, FIPS is less of an "option" in AWS and more of a "parallel infrastructure".)
 
@@ -17,7 +17,7 @@ Tag and *all* free-form fields are basically considered non-confidential in AWS.
 
 * [Security in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/security.html)
 
-### How Amazon API Gateway Works With IAM
+#### How Amazon API Gateway Works With IAM
 
 Interesting: Federated identities in Amazon work by assuming roles rather than being a special kind of IAM user. The API Gateway guide, at least, explicitly *discourages* the use of IAM users in favor of roles (since role credentials are short-lived). This would seem to be an indirect endorsement of using federated identities with AWS rather than IAM users (whenever possible).
 
@@ -40,7 +40,7 @@ REST APIs (but not HTTP or WebSocket APIs) can have resource policies attached t
 
 * [How Amazon API Gateway works with IAM](https://docs.aws.amazon.com/apigateway/latest/developerguide/security_iam_service-with-iam.html)
 
-### Using Service-Linked Roles for API Gateway
+#### Using Service-Linked Roles for API Gateway
 
 Service-linked roles cannot be deleted in the IAM console until all related resource have been deleted.
 

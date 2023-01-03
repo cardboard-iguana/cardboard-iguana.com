@@ -1,9 +1,9 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-08-25
+**author**:: Nathan Acks  
+**date**:: 2022-08-25
 
-# A Serverless Journey: AWS Lambda Under the Hood
+## A Serverless Journey: AWS Lambda Under the Hood
 
 [AWS re:Invent 2018: A Serverless Journey - AWS Lambda Under the Hood (YouTube)](https://youtu.be/3qln2u1Vr2E)
 
@@ -31,7 +31,7 @@ The AWS API gateway can call into Lambda functions for actual execution.
 
 In order to optimize Lambda worker placement, one subnet should be dedicated to Lambda *per availability zone*.
 
-# Introduction to the AWS CLI
+## Introduction to the AWS CLI
 
 [AWS re:Invent 2017: Introduction to the AWS CLI (YouTube)](https://youtu.be/QdzV04T_kec)
 

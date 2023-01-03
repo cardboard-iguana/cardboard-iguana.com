@@ -1,9 +1,9 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-author:: Nathan Acks  
-date:: 2022-04-08
+**author**:: Nathan Acks  
+**date**:: 2022-04-08
 
-# Non-Persistence Concepts
+## Non-Persistence Concepts
 
 Ways of restoring OS failures:
 
@@ -15,7 +15,7 @@ Note that Windows writes the "last known good" state during the first login afte
 
 Interesting idea here: Using PXE boot to pull recovery/live images over the network for forensics/troubleshooting.
 
-# Backup And Recovery
+## Backup And Recovery
 
 Archive bits are only used on Windows, OS/2, and Amiga.
 

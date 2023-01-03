@@ -1,17 +1,17 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
-author:: Nathan Acks  
-date:: 2022-04-18
+**author**:: Nathan Acks  
+**date**:: 2022-04-18
 
-# CompTIA Security+ Exam Cram
+## CompTIA Security+ Exam Cram
 
 Today's reading is Chapter 28 from the Security+ Exam Cram, "Incident Investigation".
 
-## SIEM Dashboards
+### SIEM Dashboards
 
 The key to SIEM alerting is the correlation engine - looking for user connections *after* that user has left the office, etc.
 
-## Logging
+### Logging
 
 Log files = documentation (of system/application/user activity)
 
@@ -49,25 +49,25 @@ Heh... `journald` *still* doesn't have remote logging, instead relying on forwar
 
 * [An SEOs Guide To W3C Log Files](https://www.screamingfrog.co.uk/an-seos-guide-to-w3c-log-files/)
 
-## Network Activity
+### Network Activity
 
 Most network activity monitoring tools don't store actual packets, but rather just log metadata about those packets (minimally: source, destination, protocol).
 
-## Protocol Analyzers
+### Protocol Analyzers
 
 Protocol Analyzer = Packet Sniffer
 
 Now we're talking about actual packet capture!
 
-## Network Flow
+### Network Flow
 
 A.k.a. "NetFlow" (originally a Cisco thing, but since genericized). Basically, this is packet capture and analysis on router interfaces. NetFlow (and related tools like sFlow) are oriented towards understanding network usage rather than the behavior of individual machines/connections.
 
 NetFlow data is exported using the IPFIX (Internet Protocol Flow Information Export) format.
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
+## ITPro.TV: CompTIA Security+ (SY0-601)
 
-## Investigational Data Sources
+### Investigational Data Sources
 
 SIEM = You 10,000 ft view
 
@@ -81,15 +81,15 @@ General log analysis flow: Filtered down to warnings/errors, locate an event of 
 
 Call out to WinDbg Preview, which is a free Windows dump file analyzer in the Microsoft Store. Windows typically stores dump files in `C:\Windows`, so you'll need to copy it out to view it.
 
-# TryHackMe: Jr. Penetration Tester
+## TryHackMe: Jr. Penetration Tester
 
-## Introduction to Meterpreter
+### Introduction to Meterpreter
 
 Meterpreter is fileless, and attempts to mask itself using other process names. It only communicates back to Metasploit on an encrypted channel.
 
 However, most modern antivirus *will* still recognize it.
 
-## Meterpreter Flavors
+### Meterpreter Flavors
 
 Meterpreter supports a wide range of operating systems; there are even variants designed to live inside of common server-side interpreters (Java, Python, and PHP). Most payload versions are singletons, though there are a few staged variants.
 
@@ -97,7 +97,7 @@ Most variants support communication over HTTP (unencrypted), HTTPS, or raw TCP (
 
 As always, be aware that some exploits may limit the available Meterpreter payloads.
 
-## Meterpreter Commands
+### Meterpreter Commands
 
 Meterpreter's commands vary depending on host OS. Some notable commands:
 
@@ -125,7 +125,7 @@ Meterpreter's commands vary depending on host OS. Some notable commands:
 * `sysinfo` - Pull remote system information
 * `upload` - Transfer a file from the attacker to the target
 
-## Post-Exploitation with Meterpreter
+### Post-Exploitation with Meterpreter
 
 Migrating Meterpreter to another process sometimes makes new commands become available; for example, migrating to a text editor will allow you to capture keystrokes.
 
@@ -133,7 +133,7 @@ Note that Meterpreter will happily let you migrate from a privileged to an unpri
 
 You can background system shells launched from Meterpreter with `Ctrl + Z` to return to the parent (Meterpreter) process.
 
-## Post-Exploitation Challenge
+### Post-Exploitation Challenge
 
 It's always good to look at `help` in Meterpreter after loading a new module.
 

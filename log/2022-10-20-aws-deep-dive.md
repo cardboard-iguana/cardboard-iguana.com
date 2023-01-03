@@ -1,19 +1,19 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-10-20
+**author**:: Nathan Acks  
+**date**:: 2022-10-20
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Invoking a REST API in Amazon API Gateway
+#### Invoking a REST API in Amazon API Gateway
 
 While testing an API from the API Gateway console actually invokes the API (as would be expected), it does *not* generate CloudWatch logs (though the API Gateway will helpfully/unhelpfully show you the logs that *would* have been sent if the request had been invoked normally).
 

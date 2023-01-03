@@ -1,19 +1,19 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-11-22
+**author**:: Nathan Acks  
+**date**:: 2022-11-22
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Working With HTTP APIs
+### Working With HTTP APIs
 
 * [Amazon API Gateway: Working with HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html)
 
-### Transforming API Requests and Responses in API Gateway
+#### Transforming API Requests and Responses in API Gateway
 
 HTTP APIs *can* modify inbound requests and outbound responses, but in much more limited ways than REST APIs.
 
@@ -23,19 +23,19 @@ Outbound responses can have their headers and status codes modified. As with inb
 
 * [Transforming API requests and responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
 
-### Working with OpenAPI Definitions for HTTP APIs in API Gateway
+#### Working with OpenAPI Definitions for HTTP APIs in API Gateway
 
 As with REST APIs, HTTP APIs can be exported and imported to OpenAPI 3.0 definition files. The import/export process can even be used to "convert" a REST API into an HTTP API, though not all REST API attributes (for example, request validation) will be imported (since HTTP APIs don't have all of the same features).
 
 * [Working with OpenAPI definitions for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-open-api.html)
 
-### Working with Stages for HTTP APIs in API Gateway
+#### Working with Stages for HTTP APIs in API Gateway
 
 Stage variables work more-or-less the same for HTTP APIs as they do for REST APIs.
 
 * [Working with stages for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-stages.html)
 
-### Setting Up Custom Domain Names for HTTP APIs in API Gateway
+#### Setting Up Custom Domain Names for HTTP APIs in API Gateway
 
 Custom domains work more-or-less the same for HTTP APIs as they do for REST APIs (modulo the absence of `$context` variables).
 

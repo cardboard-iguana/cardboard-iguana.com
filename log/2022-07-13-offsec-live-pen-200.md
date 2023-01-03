@@ -1,12 +1,12 @@
 # OffSec Live: PEN-200
 
-author:: Nathan Acks  
-date:: 2022-07-13
+**author**:: Nathan Acks  
+**date**:: 2022-07-13
 
 * [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
 * [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
 
-# Netcat Port Scanning
+## Netcat Port Scanning
 
 Quick-n-dirty netcat port scan:
 
@@ -18,7 +18,7 @@ nc -nvv -w 1 -z $IP_ADDRESS $PORT
 
 * [Using "netcat"](../notes/netcat.md)
 
-# SNMP
+## SNMP
 
 *Always pay attention to SNMP.* (Which is an unfortunate directive, as I haven't been paying attention...)
 

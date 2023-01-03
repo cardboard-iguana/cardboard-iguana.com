@@ -1,14 +1,14 @@
 # Using PowerView
 
-author:: Nathan Acks  
-date:: 2022-08-26
+**author**:: Nathan Acks  
+**date**:: 2022-08-26
 
 PowerView is a PowerShell reconnaissance tool. Note that AMSI will need to be disabled in the current session before it can be used.
 
  * [PowerShellMafia / PowerSploit / Recon / PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 * [Using PowerShell](powershell.md)
 
-# Domain Enumeration
+## Domain Enumeration
 
 ```powershell
 # Get domain users and associated groups

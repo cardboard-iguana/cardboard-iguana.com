@@ -1,7 +1,7 @@
 # Post Office Protocol 3 (POP3)
 
-author:: Nathan Acks  
-date:: 2022-04-03
+**author**:: Nathan Acks  
+**date**:: 2022-04-03
 
 POP3 commands:
 

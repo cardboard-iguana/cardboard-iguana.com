@@ -1,10 +1,10 @@
 # Using "gdb"
 
-date:: 2022-07-10
+**date**:: 2022-07-10
 
 * [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
 
-# Startup
+## Startup
 
 ```bash
 gdb                   # Run; use file command to load $OBJECT
@@ -13,7 +13,7 @@ gdb $OBJECT $COREDUMP # Analyze $COREDUMP
 gdb $OBJECT $PID      # Attach to running process $PID
 ```
 
-# General Commands
+## General Commands
 
 ```gdb
 set args                     # Set program arguments
@@ -42,7 +42,7 @@ define hooopost-[cmd]        # Actions to execute after command
 define hook-stop             # Actions to execute when execution stops
 ```
 
-# Breakpoints
+## Breakpoints
 
 ```gdb
 info breakpoints              # List all breakpoints
@@ -55,7 +55,7 @@ condition [bnum] $eax == 0x22 # Add condition for breakpoint 1
 condition [bnum]              # Delete condition for breakpoint 1
 ```
 
-# Watchpoints
+## Watchpoints
 
 ```gdb
 info watchpoints         # List all the watchpoint

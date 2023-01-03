@@ -1,7 +1,7 @@
 # Cardboard Iguana Security is Live!
 
-author:: Nathan Acks  
-date:: 2022-02-20
+**author**:: Nathan Acks  
+**date**:: 2022-02-20
 
 Up until now there actually hasn't *been* a Cardboard Iguana Security website. All of those posts before this one? Just me, writing to myself.
 
@@ -11,7 +11,7 @@ To commemorate the occasion, I thought I'd talk a little bit about what's going 
 
 * [Cardboard Iguana Security](https://cardboard-iguana.com)
 
-# Design Philosophy
+## Design Philosophy
 
 I had a number of goals when I set out on this journey.
 
@@ -41,7 +41,7 @@ While some of these constraints (particularly around linking) remain a bit vexin
 * [Static-site generators (IPFS Docs)](https://docs.ipfs.io/how-to/websites-on-ipfs/static-site-generators/)
 * [tdemin / gmnhg](https://github.com/tdemin/gmnhg)
 
-# How the Build Process Works
+## How the Build Process Works
 
 I keep all of my notes and writings in Obsidian. I've set Obsidian up to insert relative Markdown links and take care to keep my markup limited to what constitutes "Gemini compatible Markdown". (As I mentioned previously, this isn't actually that hard to do - the most difficult part is remembering to keep a list of links at the end of each section, rather than embedding links directly in the document text.)
 
@@ -212,7 +212,7 @@ Once the site's built, Fleek pushes files out to IPFS and its own CDN (cardboard
 * [IPFS](https://ipfs.io/)
 * [InterPlanetary Name System (IPNS)](https://docs.ipfs.io/concepts/ipns/)
 
-# Where Next?
+## Where Next?
 
 As I mentioned previously, the above process doesn't build anything for Gemini. I'd like to add this in at some point, but I've yet to find a Gemini host geared toward multiple websites (even sourcehut seems to focus on single, personal websites). I really don't want to spend the time running my own server, though I'm starting to suspect it may come to that.
 

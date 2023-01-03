@@ -1,7 +1,7 @@
 # Net Sec Challenge
 
-author:: Nathan Acks  
-date:: 2022-04-03
+**author**:: Nathan Acks  
+**date**:: 2022-04-03
 
 * [TryHackMe: Net Sec Challenge](https://tryhackme.com/room/netsecchallenge)
 

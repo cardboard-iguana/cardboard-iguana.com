@@ -1,13 +1,13 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-09-29
+**author**:: Nathan Acks  
+**date**:: 2022-09-29
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Beginning some notes about the Amazon API Gateway.
 
-## What is Amazon API Gateway?
+### What is Amazon API Gateway?
 
 API Gateway is basically a tool for building the *infrastructure* associated with *managing* REST and WebSocket APIs - traffic management, authorization and access control, monitoring, request routing, etc. CloudFormation can be used with the API Gateway to spin up new APIs.
 

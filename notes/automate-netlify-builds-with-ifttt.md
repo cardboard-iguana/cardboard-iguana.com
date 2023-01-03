@@ -1,12 +1,12 @@
 # Automate Netlify Builds with IFTTT
 
-author:: Nathan Acks
+**author**:: Nathan Acks
 
 * [Trigger a Netlify Build Every Day With IFTTT](https://www.11ty.dev/docs/quicktips/netlify-ifttt/).
 * [Netlify](https://www.netlify.com)
 * [IFTTT](https://ifttt.com)
 
-# In Netlify
+## In Netlify
 
 * Go into your Netlify site's "Build & Deploy" settings.
 * Select "Continuous Deployment".
@@ -14,7 +14,7 @@ author:: Nathan Acks
 * Name it whatever you'd like and select the appropriate branch.
 * Save this and Netlify will provide you with a long URL like `https://api.netlify.com/build_hooks/SOME_ID_HERE`. This is the URL you want.
 
-# In IFTTT
+## In IFTTT
 
 * Go to "New Applet" on IFTTT.
 * Click "+this".

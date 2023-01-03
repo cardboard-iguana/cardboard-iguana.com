@@ -1,7 +1,7 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Security Analyst Intro
 
-author:: Nathan Acks  
-date:: 2022-02-22
+**author**:: Nathan Acks  
+**date**:: 2022-02-22
 
 (So, I didn't get to start this yesterday as I'd planned, because I needed to take The Yak Online Governance Primer live instead!)
 
@@ -14,9 +14,9 @@ I'll be working on this by alternating episodes of ITPro.TV's Security+ course a
 * [ITPro.TV: CompTIA Security+ (SY0-601)](https://www.itpro.tv/courses/security/security-sy0601/)
 * [TryHackMe: Jr. Penetration Tester](https://tryhackme.com/path/outline/jrpenetrationtester)
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
+## ITPro.TV: CompTIA Security+ (SY0-601)
 
-## Threats, Attacks, and Vulnerabilities: Overview
+### Threats, Attacks, and Vulnerabilities: Overview
 
 Recommended materials:
 
@@ -31,7 +31,7 @@ The test itself is (up to) 90 question that are a mix of multiple-choice, drag-a
 
 * [CompTIA Security+](https://www.comptia.org/certifications/security)
 
-## Social Engineering Techniques
+### Social Engineering Techniques
 
 Basic terminology:
 
@@ -69,9 +69,9 @@ Techniques:
 * Hoaxes
 * Prepending (modifying the *start* of a URL to change its behavior)
 
-# TryHackMe: Jr. Security Analyst Intro
+## TryHackMe: Jr. Security Analyst Intro
 
-## A Career as a Junior (Associate) Security Analyst
+### A Career as a Junior (Associate) Security Analyst
 
 Basically, this role is all about monitoring and triage. Maybe some application configuration.
 
@@ -83,7 +83,7 @@ Security Operations Centers (SOCs) are typically divided into three tiers:
 * Tier 2 is about incident response and remediate, and is generally mid-level.
 * Tier 3 is about threat hunting and advanced investigations/research. Generally senior level.
 
-## Security Operations Center (SOC)
+### Security Operations Center (SOC)
 
 Interesting shout-out to Feedly as a threat monitoring tool. I periodically return to Feedly, but can't help shake the feeling that I'm missing something that would help me use it more effectively...
 

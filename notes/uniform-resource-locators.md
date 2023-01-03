@@ -1,7 +1,7 @@
 # Uniform Resource Locators (URLs)
 
-author:: Nathan Acks  
-date:: 2021-09-14
+**author**:: Nathan Acks  
+**date**:: 2021-09-14
 
 scheme://user:password@domain:port/some/path?a=query#fragment
 

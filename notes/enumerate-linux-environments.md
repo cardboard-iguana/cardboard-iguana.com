@@ -1,7 +1,7 @@
 # Enumerate Linux Environments
 
-author:: Nathan Acks  
-date:: 2022-04-22
+**author**:: Nathan Acks  
+**date**:: 2022-04-22
 
 * [2022-04-20 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-20-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
 * [How to Find Executables with SUID Capabilities](how-to-find-executables-with-suid-capabilities.md)
@@ -10,7 +10,7 @@ date:: 2022-04-22
 * [Using "ps"](ps.md)
 * [Enumerate "sudo" Access](enumerate-sudo-access.md)
 
-# Useful Commands
+## Useful Commands
 
 * `cat /etc/issue`
 * `cat /etc/passwd`
@@ -34,7 +34,7 @@ date:: 2022-04-22
 * `sudo -l`
 * `uname -a`
 
-# Useful Scripts
+## Useful Scripts
 
 * [LinPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 * [LinEnum](https://github.com/rebootuser/LinEnum)

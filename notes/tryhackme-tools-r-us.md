@@ -1,7 +1,7 @@
 # Tools'R'us
 
-author:: Nathan Acks  
-date:: 2022-01-30
+**author**:: Nathan Acks  
+**date**:: 2022-01-30
 
 * [TryHackMe: Tools'R'us](https://tryhackme.com/room/toolsrus)
 
@@ -15,7 +15,7 @@ We're supposed to restrict ourselves to the following tools in this CTF:
 
 It's been a little while since I had the chance to use some of these, so let's find out how rusty I am!
 
-# Narrative
+## Narrative
 
 The target is at 10.10.28.154. Visiting http://10.10.28.154 reveals a "down for maintenance" page with no other links, but with the cryptic promise that "[o]ther parts of ther website is [sic] still functional..."
 

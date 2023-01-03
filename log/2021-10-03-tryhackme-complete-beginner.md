@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-10-03
+**author**:: Nathan Acks  
+**date**:: 2021-10-03
 
-# Network Services
+## Network Services
 
-## Understanding NFS
+### Understanding NFS
 
 NFS is part of the large family of local and network protocols that can be classified as "remote procedure calls" (RPCs).
 
@@ -22,7 +22,7 @@ Windows actually does support NFS.
 
 * [Remote procedure call (Wikipedia)](https://en.wikipedia.org/wiki/Remote_procedure_call)
 
-## Enumerating NFS
+### Enumerating NFS
 
 ```bash
 # List NFS shares.
@@ -39,7 +39,7 @@ All versions of NFS use port 2049 to transfer data; NFSv1 - NFSv3 also depended 
 
 * [What is NFS port number in Linux?](https://racinpaper.com/auto-racing/what-is-nfs-port-number-in-linux.html)
 
-## Exploiting NFS
+### Exploiting NFS
 
 By default NFS shares have "root squashing" turned on - attempts to connect as root are assigned to the least-privileged user nfsnobody. But if this is turned off, then it's possible to set the SUID bit on a file.
 
@@ -63,7 +63,7 @@ Sometimes you need to unmount an unresponsive NFS share (for example, if you let
 
 * [OverTheWire: Bandit](../notes/overthewire-bandit.md)
 
-## Enumerating SMTP
+### Enumerating SMTP
 
 SMTP user enumeration uses a combination of the VRFY (verify user/list), EXPN (expand user/list aliases), and RCPT TO (receipt destination).
 
@@ -75,7 +75,7 @@ Basic Metasploit flow:
 * `set $OPTIONS`
 * `run`
 
-## Exploiting SMTP
+### Exploiting SMTP
 
 Now we're going to use Hydra to try to brute-force an SSH password. This looks a lot like using Hydra to brute-force an FTP password.
 
@@ -88,15 +88,15 @@ The -t flag specifies the number of threads (parallel connection attempts) that 
 
 * [2021-10-02 - TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
 
-## Understanding MySQL
+### Understanding MySQL
 
 Interesting. According to TryHackMe (and a quick search seems to confirm), Facebook uses MySQL as its backend.
 
-## Enumerating MySQL
+### Enumerating MySQL
 
 The Metasploit package for "enumerating" MySQL data is mysql_sql, but this looks like it's just a thin wrapper around the mysql client.
 
-## Exploiting MySQL
+### Exploiting MySQL
 
 In PL/SQL, "schema" represents only those parts of a database that are owned (writable?) by a particular user.
 
@@ -115,13 +115,13 @@ FROM mysql.user\G
 
 NOTE: John the Ripper records cracked hash:password tuples in ~/.john/john.pot, and then references this file to avoid cracking known hashes. It *doesn't* output these passwords again (instead simply declaring "[n]o password hashes left to crack"), so if you get no output then you'll want to just grep for your hash in john.pot.
 
-# Web Fundamentals
+## Web Fundamentals
 
-## How Do We Load Websites?
+### How Do We Load Websites?
 
 Different request types in HTTP are called "verbs".
 
-## More HTTP: Verbs and Request Formats
+### More HTTP: Verbs and Request Formats
 
 HTTP "verbs" are also called "methods", which is a term I'm more familiar with. There are 9 total methods, but the most common are GET (retrieve data) and POST (send data).
 
@@ -141,7 +141,7 @@ Note that the server-defined message cannot include any line breaks.
 
 * [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
-## Mini CTF
+### Mini CTF
 
 Useful cURL flags:
 

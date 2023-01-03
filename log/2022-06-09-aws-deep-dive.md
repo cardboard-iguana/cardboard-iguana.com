@@ -1,15 +1,15 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-06-09
+**author**:: Nathan Acks  
+**date**:: 2022-06-09
 
-# AWS Essentials
+## AWS Essentials
 
 Today I'll be finishing up the "AWS Essentials" YouTube playlist put together by the Linux Academy.
 
 * [AWS Essentials (YouTube)](https://youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)
 
-## Elastic Block Store (EBS)
+### Elastic Block Store (EBS)
 
 [AWS Essentials: Elastic Block Store (EBS) (YouTube)](https://youtu.be/S0gzrxsVQHo)
 
@@ -23,7 +23,7 @@ EC2 instances can't be booted from EBS snapshots directly. However, a snapshot c
 
 Data stored as a snapshot is *a lot* less expensive than the same data stored on an EBS volume.
 
-## Security Groups
+### Security Groups
 
 [AWS Essentials: Security Groups (YouTube)](https://youtu.be/-9j7BvAyb2w)
 
@@ -33,7 +33,7 @@ By default, all inbound traffic is denied and all outbound traffic is allowed in
 
 There are no DENY rules for security groups, only ALLOW rules. Any traffic not matched by a rule will be dropped.
 
-## IP Addressing
+### IP Addressing
 
 [AWS Essentials: IP Addressing (YouTube)](https://youtu.be/U32bPhQyQ6I)
 
@@ -41,13 +41,13 @@ EC2 instances can be launched with public IP addresses so long as the subnet its
 
 EC2 instances in the default VPC will launch with public IP addresses out-of-the-box.
 
-## Launching and Using an EC2 Instance
+### Launching and Using an EC2 Instance
 
 [AWS Essentials: Launching and Using an EC2 Instance (YouTube)](https://youtu.be/BCM9aaaWvR0)
 
 When setting up an EC2 instance, you have the ability to specify a script that will be run on first boot. This is generally used to install and configure software.
 
-## RDS and DynamoDB Basics
+### RDS and DynamoDB Basics
 
 [AWS Essentials: RDS and DynamoDB Basics (YouTube)](https://youtu.be/KcJ8-I7kD_w)
 
@@ -57,7 +57,7 @@ DynamoDB is Amazon's NoSQL option; there's no choice of backends here, though Dy
 
 Pricing for RDS parallels that for EC2 (which makes sense), while DynamoDB pricing is looks more like S3 (if you squint).
 
-## Provisioning and RDS MySQL Database
+### Provisioning and RDS MySQL Database
 
 [AWS Essentials: Provisioning and RDS MySQL Database (YouTube)](https://youtu.be/OE25Sni15vo)
 
@@ -65,7 +65,7 @@ Not only can't RDS use Aurora on the free tier, but it's limited to running MySQ
 
 RDS instances aren't provisioned directly into subnets like EC2 instances. Instead, you define a "subnet group" (which might contain only a single subnet). This determines which EC2 instances the RDS instance can communicate with. Note that the RDS instance will be automatically deployed to an availability zone matching one of the subnets in its subnet group, though you can override this (though you are similarly restricted) if you wish.
 
-## SNS Basics
+### SNS Basics
 
 [AWS Essentials: SNS Basics (YouTube)](https://youtu.be/M4gQ8MLlgiY)
 

@@ -1,11 +1,11 @@
 # Attacktive Directory
 
-author:: Nathan Acks  
-date:: 2021-12-30
+**author**:: Nathan Acks  
+**date**:: 2021-12-30
 
 * [TryHackMe: Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
 
-# Welcome to Attacktive Directory
+## Welcome to Attacktive Directory
 
 As ususual, we start off with an nmap scan. Our target IP address is 10.10.177.198.
 
@@ -436,7 +436,7 @@ The AD domain itself is using the standard (invalid) .local TLD, but that's not 
 
 * [Using "nmap"](nmap.md)
 
-# Enumerating Users via Kerberos
+## Enumerating Users via Kerberos
 
 We'll now try to enumerate users using Kerbrute and the provided user list.
 
@@ -485,7 +485,7 @@ We'll be targeting the `svc-admin` and `backup` accounts. (These are supposed to
 * [attacktive-directory-tools / userlist.txt](https://github.com/Sq00ky/attacktive-directory-tools/blob/master/userlist.txt)
 * [Using Kerbrute](kerbrute.md)
 
-# Abusing Kerberos
+## Abusing Kerberos
 
 We're going to try AS-REP Roasting using Impacket's GetNPUsers.py script. We first create an `attacktive-directory.targets` file containing the following:
 
@@ -533,7 +533,7 @@ This flag is in a file called `user.txt` on `svc-admin`'s desktop.
 * [hashcat: Example hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
 * [Using XFreeRDP](xfreerdp.md)
 
-# Back to the Basics
+## Back to the Basics
 
 We're going to drop down and use smbclient to enumerate potential shares on the target. This is where the NetBIOS domain name we discovered above comes in handy (we need to supply it with the `-L` switch).
 
@@ -573,7 +573,7 @@ This flag is in a file called `PrivEsc` on `backup`'s desktop.
 
 * [Enumerate Samba Users and Shares](enumerate-samba-users-and-shares.md)
 
-# Elevating Privileges Within the Domain
+## Elevating Privileges Within the Domain
 
 The CTF now reveals that the `backup` account has all AD changes synced to it, including NT hashes, and that we can use Impacket's secretsdump.py file to obtain these from NTDS.DIT.
 

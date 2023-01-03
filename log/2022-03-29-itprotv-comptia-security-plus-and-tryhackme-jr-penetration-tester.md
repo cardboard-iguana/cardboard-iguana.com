@@ -1,11 +1,11 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
-author:: Nathan Acks  
-date:: 2022-03-29
+**author**:: Nathan Acks  
+**date**:: 2022-03-29
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
+## ITPro.TV: CompTIA Security+ (SY0-601)
 
-## Network Security - Segmentation
+### Network Security - Segmentation
 
 A hub is a Layer 1 device - it's just a multi-port repeater.
 
@@ -23,7 +23,7 @@ North/South traffic can be thought of as traffic that crosses a security boundar
 
 * [OSI Model](../notes/osi-model.md)
 
-## Network Security - VPNs
+### Network Security - VPNs
 
 Broad types of VPNs:
 
@@ -42,7 +42,7 @@ VPN concentrators are falling by the wayside, as this functionality is typically
 * [Point-to-Point Tunneling Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Point-to-Point_Tunneling_Protocol)
 * [What Is SSTP?](https://www.proofpoint.com/us/threat-reference/sstp)
 
-## Network Security - Proxies And Load Balancing
+### Network Security - Proxies And Load Balancing
 
 These days, proxies are mostly about controlling *access* to resources. They are particularly important for logging purposes.
 
@@ -62,7 +62,7 @@ Servers behind a load balancer can also be set up in active/active or active/pas
 
 Both of these access methods can be weighted in various ways.
 
-## Network Security - Port Security
+### Network Security - Port Security
 
 This is about the security of *physical* switch ports.
 
@@ -78,7 +78,7 @@ Some switches can also mirror ports (sometimes also called "port spanning") for 
 
 * [OSI Model](../notes/osi-model.md)
 
-## Network Security - Firewalls
+### Network Security - Firewalls
 
 Stateless firewall = Packet filtering firewall (source, destination, port)
 
@@ -90,7 +90,7 @@ Next-gen firewalls can deal with more OSI layers than just 3 - all the way up to
 
 * [OSI Model](../notes/osi-model.md)
 
-## Network Security - NIDS And NIPS
+### Network Security - NIDS And NIPS
 
 NIDS (Network Intrusion Detection Systems) and NIPS (Network Intrusion Prevention Systems) are generally built into next-gen firewalls.
 
@@ -101,19 +101,19 @@ Detection methods:
 * Behavioral - Looks for known malicious behaviors (basically plussed-up heuristics)
 * Anomalies - Detects changes relative to an observed baseline
 
-# TryHackMe: Jr. Penetration Tester
+## TryHackMe: Jr. Penetration Tester
 
-## Passive vs. Active Recon
+### Passive vs. Active Recon
 
 Passive recon concerns information we can gather *without* interacting with our target. This is generally publicly available information, such as DNS records, social media posts, etc.
 
 Active recon involved interacting with the target in some way. Connecting to systems, browsing their website, physical penetration of their facilities, etc.
 
-## Whois
+### Whois
 
 WHOIS responses include name server information (in the aptly-named "Name Server" field(s)).
 
-## nslookup and dig
+### nslookup and dig
 
 `nslookup` = Name Server Look Up
 
@@ -143,7 +143,7 @@ dig @1.1.1.1 tryhackme.com
 dig          google.com    MX
 ```
 
-## DNSdumpster
+### DNSdumpster
 
 DNSdumpster is basically a search engine for domain data - type in a root domain, and get back (many of) its subdomains and other information. (In my testing DNSdumpster doesn't always enumerate *every* subdomain, though it certainly does a better job than guessing.)
 

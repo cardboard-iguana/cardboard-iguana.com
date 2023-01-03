@@ -1,7 +1,7 @@
 # Jurassic Park
 
-author:: Nathan Acks  
-date:: 2022-02-02
+**author**:: Nathan Acks  
+**date**:: 2022-02-02
 
 * [TryHackMe: Jurassic Park](https://tryhackme.com/room/jurassicpark)
 

@@ -1,23 +1,23 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-10-11
+**author**:: Nathan Acks  
+**date**:: 2021-10-11
 
-# Hashing
+## Hashing
 
-## What is a Hash Function?
+### What is a Hash Function?
 
 Apparently hashes are sometimes represented in base64. I've never seen this myself.
 
 The MD5 algorithm outputs a 128 bit (16 byte) hash.
 
-## Uses for Hashing
+### Uses for Hashing
 
 REMINDER: For salting to be effective, the salt needs to be *different* for each user!
 
 * [MD5 hash cracker](https://www.cellphonetrackers.org/tool/md5-coder.php)
 
-## Recognizing Password Hashes
+### Recognizing Password Hashes
 
 Recognizing hash types from first principles is generally unreliable (which makes sense - for a hash to maximally cover the space allocated by its size, it can't have any "patterns" to it). Some general notes:
 
@@ -37,7 +37,7 @@ LM hashes are constructed in an absolutely batshit crazy fashion, but NT hashes 
 
 NOTE: 1 hex digit = 4 bits
 
-## Password Cracking
+### Password Cracking
 
 Bcrypt is designed to take approximately the same amount of time when hashed on a CPU vs. a GPU, which is one reason it's considered more resistant to cracking.
 

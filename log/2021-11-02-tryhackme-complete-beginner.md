@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-11-02
+**author**:: Nathan Acks  
+**date**:: 2021-11-02
 
-# Linux PrivEsc
+## Linux PrivEsc
 
-## Cron Jobs
+### Cron Jobs
 
 Remember the `locate` tool! It's faster than `find` (assuming that it's installed, and the database is up-to-date, and the file you're looking for is accessible to `nobody`...).
 
@@ -18,7 +18,7 @@ Okay, this is wild... It looks like the wildcard expansion (`*`) in Bash scripts
 * [Exploiting Bash](../notes/exploiting-bash.md)
 * [tar (GTFOBins)](https://gtfobins.github.io/gtfobins/tar/)
 
-## SUID / SGID Executables
+### SUID / SGID Executables
 
 Quick-n-dirty command to find all SUID/SGID executables.
 
@@ -42,7 +42,7 @@ Running `strings` on a binary can also give us a sense of what helper applicatio
 
 * [Exploiting LD_PRELOAD](../notes/exploiting-ld-preload.md)
 
-## NFS
+### NFS
 
 Files created on NFS shares inherit the *remote* UID. By default, NFS enables "root squashing", which maps UID 0 to the `nobody` user.
 
@@ -53,11 +53,11 @@ Unrelatedly, msfvenom can be used to generate executables that immediately shell
 * [Using Metasploit](../notes/metasploit.md)
 * [Exploiting LD_PRELOAD](../notes/exploiting-ld-preload.md)
 
-## Kernel Exploits
+### Kernel Exploits
 
 * [Linux Exploit Suggester 2](https://github.com/jondonas/linux-exploit-suggester-2)
 
-## Privilege Escalation Scripts
+### Privilege Escalation Scripts
 
 * [LinEnum](https://github.com/diego-treitos/linux-smart-enumeration)
 * [Linux Smart Enumeration (LSE)](https://github.com/diego-treitos/linux-smart-enumeration)

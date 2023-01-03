@@ -1,7 +1,7 @@
 # The Poison Null Byte
 
-author:: Nathan Acks  
-date:: 2022-03-13
+**author**:: Nathan Acks  
+**date**:: 2022-03-13
 
 Some languages use null bytes (`0x00`) to know when a string terminates, rather than tracking the actual string length (PHP < 5.3.4 is one of these). If a null byte (generally? always? encoded as %00) is included in a string, then everything after that byte is dropped by the interpreter.
 

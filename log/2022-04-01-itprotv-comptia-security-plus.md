@@ -1,19 +1,19 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-author:: Nathan Acks  
-date:: 2022-04-01
+**author**:: Nathan Acks  
+**date**:: 2022-04-01
 
-# CompTIA Security+ Exam Cram
+## CompTIA Security+ Exam Cram
 
 Today I'll be covering Chapter 14 of the Security+ Exam Cram, "Embedded and Specialized Systems". I should really have read this before [March 27th](2022-03-27-itprotv-comptia-security-plus.md).
 
-## Embedded Systems
+### Embedded Systems
 
 > "The best protections for maintaining embedded device security include requiring software and hardware vendors to provide evidence that the software has no security weaknesses..."
 
 Bwah ha ha ha ha ha!
 
-## SoC and RTOS
+### SoC and RTOS
 
 Interesting term here: "Intellectual Property (IP) block", a SoC "module" that is acquired from a third-party vendor. Kind of like a software library, but for circuits. The implication (which Exam Cram doesn't state but seems to imply) is that IP blocks have defined interfaces but otherwise operate as "black boxes" on a SoC. This reminds me a bit of how cellular modems often have their own processors and run their own operating systems (perhaps because these are "IP blocks"?).
 
@@ -23,7 +23,7 @@ If I gather correctly, the difference between a CPU and an FPGA is that a CPU ha
 
 * [FPGA vs. CPU - What is the difference](https://hardwarebee.com/fpga-vs-cpu-difference/)
 
-## SCADA and ICS
+### SCADA and ICS
 
 SCADA = Supervisory Control and Data Acquisition
 
@@ -33,7 +33,7 @@ ICS systems are generally touchy, and as such standard "hands-on" security pract
 
 * [SCADA (Wikipedia)](https://en.wikipedia.org/wiki/SCADA)
 
-## Smart Devices and IoT
+### Smart Devices and IoT
 
 The Exam Cram apparently considers the Roomba the first widely-used home automation system!
 
@@ -44,23 +44,23 @@ Another mention of "Zigbee" as a home automation tool. Apparently this actually 
 * [Shodan](https://www.shodan.io/)
 * [Zigbee (Wikipedia)](https://en.wikipedia.org/wiki/Zigbee)
 
-## Multifunction Devices
+### Multifunction Devices
 
 "Multifunction devices" are somewhat confusingly abbreviated as MFDs. Basically, this is a fancy name for printer/copier/scanner/fax units.
 
-## Special-Purpose Devices
+### Special-Purpose Devices
 
 The Exam Cram defines "special-purpose devices" as single-processor, industry-specific devices that are designed for only a single function (which often means running a single, embedded, program).
 
-## Medical Devices
+### Medical Devices
 
 While the potential for medical device hacks generate a lot of (very real and justified!) concern, the statistics provided by the Exam Cram indicate that < 0.5% of medical devices are actually publicly discoverable on the internet.
 
-## Vehicles
+### Vehicles
 
 Apparently, internal device communications within automobiles is all plaintext, which is a problem when systems connected to the vehicle CAN (controller area network) are then connected to the internet as a whole.
 
-## Resource Constraints
+### Resource Constraints
 
 This section reminds me of a trilemma I coined during a discussion with other members of the Yak Collective:
 

@@ -1,7 +1,7 @@
 # OneDrive Quirks
 
-author:: Nathan Acks  
-date:: 2021-06-19
+**author**:: Nathan Acks  
+**date**:: 2021-06-19
 
 On iOS, OneDrive files cannot be accessed through the Files app if a passcode is enabled.
 

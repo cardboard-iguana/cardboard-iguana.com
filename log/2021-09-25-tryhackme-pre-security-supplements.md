@@ -1,11 +1,11 @@
 # TryHackMe: Pre Security (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-09-25
+**author**:: Nathan Acks  
+**date**:: 2021-09-25
 
-# Windows Event Logs
+## Windows Event Logs
 
-## Event Viewer
+### Event Viewer
 
 Windows Event logs are stored in a proprietary binary format with extension .evt or .evtx. Most reside in C:/Windows/System32/Winevt/Logs.
 
@@ -40,7 +40,7 @@ Filtering for events can be achieved using the "Create Custom View" (across all 
 
 NOTE: PowerShell produces a couple of different logs which, by default, log almost everything it does.
 
-## Get-WinEvent
+### Get-WinEvent
 
 ```powershell
 # Get help on Get-WinEvent (calls out to Microsoft).
@@ -92,7 +92,7 @@ Keys for -FilterHashtable:
 
 Wildcards can be used with LogName and ProviderName, but not with other keys.
 
-## XPath Queries
+### XPath Queries
 
 XPath is a W3C spec for identifying elements in an XML document. Microsoft supports a subset of this spec for querying event logs. Consider:
 
@@ -116,6 +116,6 @@ XPath is a W3C spec for identifying elements in an XML document. Microsoft suppo
 
 To find events with an Event ID of 100, we could use `Event/System/EventID=100`. To find events from the WLMS provide, we could use `Event/System/Provider[@Name="WLMS"]`. We could combine these to over-specify the first path as `Event/System/EventID[@Qualifiers="0"]=100`. Path elements can be replaced with wildcards (`*`), and pathspecs can be joined using `and` and `or`. Quoting is (obviously) required for strings containing spaces, but is otherwise optional.
 
-## Putting Theory Into Practice
+### Putting Theory Into Practice
 
 Event IDs refer to specific *types* of events, while Event Record IDs provide a unique ID for a particular event. Neither is unique *between* logs, however: Different applications may use the same Event ID to indicate different events, while Event Record IDs are only unique *within* a particular log.

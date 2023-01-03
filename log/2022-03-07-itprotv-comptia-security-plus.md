@@ -1,17 +1,17 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-author:: Nathan Acks  
-date:: 2022-03-07
+**author**:: Nathan Acks  
+**date**:: 2022-03-07
 
 Because the next block of units on ITPro.TV cover three chapters in the Exam Cram (at least as best I can map them without having first read the chapters), I'm going to try something a bit different: For the next three days I'm only going to be doing the readings, and then I'll set Exam Cram aside to work on the lectures.
 
 I'm going to continue to title these posts after ITPro.TV though, since I'm thinking of the Exam Cram as just an adjunct to that.
 
-# CompTIA Security+ Exam Cram
+## CompTIA Security+ Exam Cram
 
 Today I'll be covering chapter 12 of the Exam Cram, "Authentication and Authorization Design".
 
-## Identification and Authentication, Authorization, and Accounting (AAA)
+### Identification and Authentication, Authorization, and Accounting (AAA)
 
 IDENTIFICATION: The presentation of a claim to a unique identity (username, key hash, etc.).
 
@@ -31,7 +31,7 @@ Key components of AAA:
 
 Note that these are *logical* divisions, and may be combined within the same device or application.
 
-## Multifactor Authentication
+### Multifactor Authentication
 
 Possible authentication factors:
 
@@ -44,7 +44,7 @@ Possible authentication factors:
 
 What makes something *multifactor* is the use of multiple factors from this list, *not* multiple instances of the *same* factor.
 
-## Single Sign-On
+### Single Sign-On
 
 Types of shared sign-ons:
 
@@ -56,13 +56,13 @@ SOA: Service-oriented architecture. Basically, the use of proxies to sequester s
 
 Exam Cram defines SSO as basically password caching + automation, but its typical usage is closer to that of "federation".
 
-## Federation
+### Federation
 
 Federation is a system that allows multiple devices/service to share a single identity. Typically, systems accept attestations of authentication from the original authenticating entity.
 
 Federation and SSO are typically used together, which probably accounts for the linguistic confusion. The key difference is that federated systems do *not* exchange passwords, only tokens that attest to successful authentication. (I guess this makes SAML a protocol used for *federation*.)
 
-## Transitive Trust
+### Transitive Trust
 
 Transitive trust is more of an Active Directory thing, and is about establishing trust relationships between domains. These relationships can either be one-way (domain A trusts domain B, which means that users on domain B can access resources on domain A) or two-way.
 
@@ -70,14 +70,14 @@ Presumably, transitive trust requires some level of federation, so really this i
 
 Connections between domains are called "trusts", and trusts *can* be transitive across domains (essentially, one domain can delegate its trust relationships to another).
 
-## Authentication Technologies
+### Authentication Technologies
 
 Vocabulary that's obvious when you think about it for a moment:
 
 * Proximity card (for physical security)
 * Security token (for all kinds of security).
 
-## Tokens
+### Tokens
 
 Exam Cram defines a "key fob" basically as a physical login device like an RSA token, which is *not* how I've ever head the word used before.
 
@@ -92,7 +92,7 @@ Token types likely to show up on the Security+ exam:
 * Static codes - A list of single use codes; often used as a fail-safe backup
 * Phone callback - A phone call that provides a OTP or push notification
 
-## Biometrics
+### Biometrics
 
 An alternative to storing biometric information server-side is to store it in an encrypted fashion on a smart card or other hardware token. This has the advantage of also providing a second factor.
 
@@ -113,11 +113,11 @@ Vocabulary:
 
 Yes, CER is a percentage of time that a system is in a particular percentage-based state.
 
-## Card Authentication
+### Card Authentication
 
 Proximity cards for physical access control again! But proximity cards just contain a serial number, unlike smart cards (which are capable of storing additional data and/or performing cryptographic attestation).
 
-## Certificate-Based Authentication
+### Certificate-Based Authentication
 
 Certificate-based authentication is two-factor so long as the private key is protected with a password.
 

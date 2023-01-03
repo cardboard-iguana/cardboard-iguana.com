@@ -1,11 +1,11 @@
 # OffSec Live: PEN-200 & AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-08-24
+**author**:: Nathan Acks  
+**date**:: 2022-08-24
 
 Notes from OffSec Live in the morning (as usual), and then a few more YouTube videos about AWS this evening.
 
-# OffSec Live: PEN-200 - Active Directory Enumeration & Exploitation, Part 1
+## OffSec Live: PEN-200 - Active Directory Enumeration & Exploitation, Part 1
 
 The Windows `whoami` supports a lot of flags. For example, `whoami /privs` returns privilege information, while `whoami /all` returns *tons* of information about the current user.
 
@@ -54,7 +54,7 @@ Be aware that AMSI bypasses are *per session*, not global!
 * [PowerShellMafia / PowerSploit / Recon / PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 * [Bypass AMSI by manual modification](https://s3cur3th1ssh1t.github.io/Bypass_AMSI_by_manual_modification/)
 
-# Another Day, Another Billion Packets
+## Another Day, Another Billion Packets
 
 [AWS re:Invent 2015: Another Day, Another Billion Packets (YouTube)](https://youtu.be/R-n4dDGfQd4)
 

@@ -1,11 +1,11 @@
 # TryHackMe: Pre Security
 
-author:: Nathan Acks  
-date:: 2021-09-12
+**author**:: Nathan Acks  
+**date**:: 2021-09-12
 
-# What is Networking?
+## What is Networking?
 
-## Identifying Devices on a Network
+### Identifying Devices on a Network
 
 The IPv4 address space has a size of 2³² (~4.29 billion), and addresses are typically represented as four octets (4 × 8 = 32).
 
@@ -18,7 +18,7 @@ MAC ("Media Access Control") are unique 48-bit identifying numbers burned into n
 * NIC ID - 85:ac:2d
 * Windows version of the same MAC address - A4-C3-F0-85-AC-2D
 
-## Ping (ICMP)
+### Ping (ICMP)
 
 ICMP stands for "Internet Control Message Protocol".
 

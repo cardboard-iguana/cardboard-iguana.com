@@ -1,9 +1,9 @@
 # SAMBA (a.k.a. CIFS) Protocol
 
-author:: Nathan Acks  
-date:: 2022-04-25
+**author**:: Nathan Acks  
+**date**:: 2022-04-25
 
-# Default Shares
+## Default Shares
 
 Default SMB shares (which you generally can't connect to):
 
@@ -11,7 +11,7 @@ Default SMB shares (which you generally can't connect to):
 * ADMIN$
 * C$
 
-# Associated Protocols
+## Associated Protocols
 
 DCERPC is Windows Server's RPC connection protocol.
 
@@ -20,6 +20,6 @@ DRSUAPI is Windows' implementation of the "Directory Replication Service" protoc
 * [DCE/RPC (Wikipedia)](https://en.wikipedia.org/wiki/DCE/RPC)
 * [DRSUAPI](https://wiki.samba.org/index.php/DRSUAPI)
 
-## Related Video
+### Related Video
 
 [Alice with Siddicky (Student Mentor) (YouTube)](https://www.youtube.com/watch?v=Zma6Mk5bEI8)

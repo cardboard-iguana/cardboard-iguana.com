@@ -1,7 +1,7 @@
 # Symbolic Permissions
 
-author:: Nathan Acks  
-date:: 2021-09-19
+**author**:: Nathan Acks  
+**date**:: 2021-09-19
 
 Numeric permissions are sometimes called *absolute* permissions, because they exactly specify an object's permissions. Symbolic permissions are a bit more flexible.
 
@@ -26,20 +26,20 @@ Symbolically, the SUID/SGID bits can be represented as either "s" or "S". The di
 * [Linux permissions: SUID, SGID, and sticky bit](https://www.redhat.com/sysadmin/suid-sgid-sticky-bit)
 * [How to Use "find" With File Metadata](how-to-use-find-with-file-metadata.md)
 
-# SUID
+## SUID
 
 Execute as the file owner, rather than the user passing the command.
 
-# SGID
+## SGID
 
 If set on a file, this operates similarly to SUID: The file is executed as if the user passing the command was in the *group* with the SGID bit set. (I honestly have rarely seen this used.)
 
 If set on a directory, files created in the directory will have their group ownership set to the same group as the directory itself. (In my experience this is the more common use case.)
 
-# Sticky Bit
+## Sticky Bit
 
 *Only* applied to directories. A file in a directory with the sticky bit set can only be deleted by its owner (and root). For example, /tmp always has the sticky bit set.
 
-# Write Permissions and Directories
+## Write Permissions and Directories
 
 If a user has *write* access to a directory, then they can write to any file they have at least *read* access to (!!!).

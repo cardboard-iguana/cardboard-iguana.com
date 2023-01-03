@@ -1,9 +1,9 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-author:: Nathan Acks  
-date:: 2022-04-04
+**author**:: Nathan Acks  
+**date**:: 2022-04-04
 
-# Virtualization
+## Virtualization
 
 Type I hypervisors (bare metal) are most common in business applications. And Qubes. Cloud systems are obviously all based around Type I hypervisors.
 
@@ -18,7 +18,7 @@ Major cloud container providers:
 * Canonical LXD
 * Amazon Elastic Container Service
 
-# Cloud Concepts
+## Cloud Concepts
 
 Cloud Computing: Delivery of computing services over the internet.
 
@@ -34,7 +34,7 @@ Scaling Up: Adding more resources (compute, RAM, etc.) to an instance.
 
 (Confusingly, the opposite of both "scaling out" and "scaling up" tends to be called "scaling down".)
 
-# Cloud Services
+## Cloud Services
 
 "Traditional" cloud services:
 
@@ -51,7 +51,7 @@ Scaling Up: Adding more resources (compute, RAM, etc.) to an instance.
 * Security as a Service (SECaaS)
 * Database as a Service (DBaaS)
 
-# Cloud Models
+## Cloud Models
 
 * Public: Azure, AWS, GCP, et al.
 * Private: Cloud infrastructure that is used, managed, operated, and owned by a single organization. Basically on-prem++. Some times used to refer to (physical + logical) portions of public cloud infrastructure that are dedicated to a single customer.
@@ -60,7 +60,7 @@ Scaling Up: Adding more resources (compute, RAM, etc.) to an instance.
 
 "Transit gateways" provide inter-cloud and cloud-to-on-prem connections in hybrid situations.
 
-# Computing Types
+## Computing Types
 
 Cloud vs. Edge vs. "Fog" computing.
 
@@ -82,7 +82,7 @@ Application/Controller communication is called the "northbound API"; this is les
 
 Controller/Infrastructure communication is called the "southbound API", and is generally implemented using OpenFlow.
 
-# Cloud Security Controls
+## Cloud Security Controls
 
 Networking controls:
 

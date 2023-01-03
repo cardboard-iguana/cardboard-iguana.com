@@ -1,9 +1,9 @@
 # Using Impacket
 
-author:: Nathan Acks  
-date:: 2021-12-06
+**author**:: Nathan Acks  
+**date**:: 2021-12-06
 
-# Kerberoasting
+## Kerberoasting
 
 Impacket can identify kerberoastable accounts and dump packets remotely. It comes standard with Kali Linux.
 
@@ -19,7 +19,7 @@ The password hashes output here can then be cracked with Hashcat (use the 13100 
 * [Kerberos](kerberos.md)
 * [Using Hashcat](hashcat.md)
 
-# AS-REP Roasting
+## AS-REP Roasting
 
 Impacket (via GetNPUsers.py) support AS-REP roasting. However, GetNPUsers.py requires that user accounts already be enumerated and roastable accounts identified.
 

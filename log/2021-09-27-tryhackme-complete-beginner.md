@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-09-27
+**author**:: Nathan Acks  
+**date**:: 2021-09-27
 
-# Introductory Researching
+## Introductory Researching
 
-## Vulnerability Searching
+### Vulnerability Searching
 
 TryHackMe highlights three places to check for vulnerabilities:
 
@@ -15,7 +15,7 @@ TryHackMe highlights three places to check for vulnerabilities:
 
 Kali Linux contains a `searchsploit` tool that works over an offline copy of ExploitDB. So, probably not as up-to-date, but should work anywhere.
 
-## Manual Pages
+### Manual Pages
 
 Apparently `man` will recognize when it's being piped, so you can do things like this:
 
@@ -23,9 +23,9 @@ Apparently `man` will recognize when it's being piped, so you can do things like
 man ssh | grep -e "version number"
 ```
 
-# Introductory Networking
+## Introductory Networking
 
-## The OSI Model
+### The OSI Model
 
 OSI stands for "Open Systems Interconnection"; it is a seven-layer model that describes all parts of the network stack (though sometimes I've heard the user referred to as "layer 8"). The idea is that segmenting responsibilities by layer allows for more uniform network and device behavior.
 
@@ -86,7 +86,7 @@ The PHYSICAL layer (1) is where actual physical cabling lives - the layer of ato
 
 I suppose that a hub would be a layer 1 device, since it's just shuffling actual (electrical) packets.
 
-## Encapsulation
+### Encapsulation
 
 ```
                                                                                         +-----------+-------------+
@@ -120,7 +120,7 @@ Layer 1 "X-Ray View"        | L2 Header | L3 Header | L4 Header | L5 Header | L6
 
 While most layers simply add a header, be aware that the data link layer *also* adds a trailer (more integrity checking).
 
-## The TCP/IP Model
+### The TCP/IP Model
 
 A four-layer alternative to OSI!
 
@@ -182,17 +182,17 @@ Closing the connection uses a "four way handshake": Client FIN > Server ACK > Se
 
 * [Transmission Control Protocol (Wikipedia)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)
 
-## Ping
+### Ping
 
 ICMP is actually a TCP/IP protocol that works on the internet layer.
 
-## Traceroute
+### Traceroute
 
 Windows uses `tracert.exe` (over ICMP) instead of `traceroute` (over UDP) on UNIX; the default protocol on both operating systems can be switched on the command line, however.
 
 It's also possible to have traceroute use TCP SYN flags for probing (-T).
 
-## Dig
+### Dig
 
 13 root domain server (IP addresses) to rule them all.
 

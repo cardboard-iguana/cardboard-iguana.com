@@ -1,11 +1,11 @@
 # TryHackMe: Pre Security (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-09-20
+**author**:: Nathan Acks  
+**date**:: 2021-09-20
 
-# Bash Scripting
+## Bash Scripting
 
-## Variables
+### Variables
 
 Using the -x flag will force bash to output each line of the shell script you're running before that line is executed. This can be useful for debugging.
 
@@ -39,7 +39,7 @@ set +x
 
 Frequently `set -x` is used at the start of a script without a closing `set + x`, which will just cause all lines of the script to be echoed back before execution.
 
-## Parameters
+### Parameters
 
 The `read` command in bash will set the variable name supplied to whatever is provided on STDIN (presumably up to IFS). For example:
 
@@ -55,7 +55,7 @@ echo "You typed: $INPUT"
 
 Will echo back whatever is typed in, prefixed by "You typed: ".
 
-## Arrays
+### Arrays
 
 Bash actually does support arrays.
 

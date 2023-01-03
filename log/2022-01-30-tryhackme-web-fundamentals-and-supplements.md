@@ -1,35 +1,35 @@
 # TryHackMe: Web Fundamentals & Supplements
 
-author:: Nathan Acks  
-date:: 2022-01-30
+**author**:: Nathan Acks  
+**date**:: 2022-01-30
 
-# Tools'R'us
+## Tools'R'us
 
 [See my Tools'R'us CTF write-up.](../notes/tryhackme-tools-r-us.md)
 
-# Python Basics
+## Python Basics
 
-## Mathematical Operators
+### Mathematical Operators
 
 I always forget that `**` is exponentiation in Python (so weird!).
 
-## Loops
+### Loops
 
 Remember that in Python, `for` loops are used to iterate over arrays. Use `range()` to create an array of sequential integers (note, however, that Python is zero-indexed, so `range(10)` wil produce the array `[0, 1, ..., 8, 9]`).
 
-## Introduction to Functions
+### Introduction to Functions
 
 Use the `str()` function to coerce variables to strings (Python doesn't do this for you automatically).
 
-## Files
+### Files
 
 Note that `read()`, `write()`, and `close()` are methods of the file object class, and *not* globally accessible functions! (So, `file_handle.read()`, *not* `read(file_handle)`!)
 
 The `readlines()` *method* takes a previously opened file handle and converts it to an array (where each element is a newline-separated string from the file).
 
-# SQL Injection
+## SQL Injection
 
-## How to Detect SQLi?
+### How to Detect SQLi?
 
 SQLi is most common in PHP-based apps.
 
@@ -37,13 +37,13 @@ If inputting a single quote (though remember that there are *three* kinds you ne
 
 * [TryHackMe: Web Fundamentals](../notes/tryhackme-web-fundamentals.md)
 
-## Error Based SQLi
+### Error Based SQLi
 
 Error-based SQLi retrieves data from the backend by abusing error messages. This obviously requires that error messages are shown to the end user, and is limited to information gathering.
 
 Note that when inputting SQL statements as GET variables, it will often be necessary to end them with "` --+`" rather than "` -- `", as browsers tend to eat the trailing space rather than encoding it as `%20`.
 
-## Boolean Based SQLi
+### Boolean Based SQLi
 
 Boolean-based SQLi involves monitoring changes in responses to see if a query has executed or failed. The only reason you'd generally do this is if you're doing SQLi blind (where you don't get any output, or the output you do get isn't strongly coupled with the input query).
 
@@ -54,7 +54,7 @@ One way this can be useful more generally is by using something like `AND (SELEC
 * [Using Burp Suite](../notes/burp-suite.md)
 * [MySQL Subquery](https://www.mysqltutorial.org/mysql-subquery/)
 
-## Union Based SQLi
+### Union Based SQLi
 
 Union-based SQLi is basically just abusing the SQL UNION keyword. This is made slightly easier by the fact that (at least in MySQL) you can SELECT based on a column's name *or* position.
 
@@ -90,7 +90,7 @@ Useful MySQL keywords:
 
 There's really just *a lot* of educated guessing that goes on in SQLi...
 
-## Automating Exploitation
+### Automating Exploitation
 
 Apparently sqlmap isn't allowed on the OSCP...
 

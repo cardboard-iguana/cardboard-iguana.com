@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2023-01-02
+**author**:: Nathan Acks  
+**date**:: 2023-01-02
 
 ## AWS Well-Architected Framework
 
@@ -78,8 +78,8 @@ Key question:
 
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2023-01-07
+**author**:: Nathan Acks  
+**date**:: 2023-01-07
 
 ## AWS Well-Architected Framework
 

@@ -1,7 +1,7 @@
 # OffSec Live: PEN-200
 
-author:: Nathan Acks  
-date:: 2022-06-24
+**author**:: Nathan Acks  
+**date**:: 2022-06-24
 
 While I don't think I'm quite ready yet to take a crack at the OSCP, Offensive Security's free streaming classes ("OffSec Live") seem like too good of a deal to pass up. I wasn't able to catch the first because I was traveling, but I'll be watching (and taking notes on) as many other sections as I can moving forward.
 
@@ -10,11 +10,11 @@ While I don't think I'm quite ready yet to take a crack at the OSCP, Offensive S
 * [OffSec Live FAQ](https://help.offensive-security.com/hc/en-us/articles/6702904332564-OffSec-Live-FAQ)
 * [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
 
-# Terminal Best Practices
+## Terminal Best Practices
 
 (I hopped on a few minutes late, unfortunately...)
 
-## File Descriptors
+### File Descriptors
 
 * STDIN = 0
 * STDOUT = 1

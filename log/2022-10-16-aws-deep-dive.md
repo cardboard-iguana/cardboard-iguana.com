@@ -1,19 +1,19 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-10-16
+**author**:: Nathan Acks  
+**date**:: 2022-10-16
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Gateway Responses in API Gateway
+#### Gateway Responses in API Gateway
 
 Responses generated directly by the API Gateway (MOCK responses, some error messages, etc.) are generically called "gateway responses". They can use a mapping template, but this template is *not* a VTL script (an internal template supporting only variable substitution is used instead). `$context`, `$stageVariables`, and `method.request` objects are all accessible within gateway responses.
 
@@ -21,7 +21,7 @@ Note that only pre-defined error types can be remapped using gateway responses; 
 
 * [Gateway responses in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-gatewayResponse-definition.html)
 
-### Enabling CORS for a REST API Resource
+#### Enabling CORS for a REST API Resource
 
 Basic requirements of a "simple" cross-origin request:
 
@@ -52,7 +52,7 @@ When CORS needs to be configured, this must be done for all defined APIs - unlik
 
 * [API Gateway: Enabling CORS for a REST API resource](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html)
 
-### Working With Binary Media Types for REST APIs
+#### Working With Binary Media Types for REST APIs
 
 Interestingly, all proxy integrations in the API Gateway require binary data to be base64 encoded, but non-proxy integrations are more flexible. (The API Gateway can even encode/decode base64 data as part of the request/response handling pipeline, which makes the strict requirements for proxy integrations all the more puzzling.) That said, APIs that handle binary data need to be explicitly configured, *in the proper direction* (request/response)! Binary data can only be passed through if the client provides a `Content-Type` that has been marked as carrying binary data in the API Gateway configuration for the API.
 

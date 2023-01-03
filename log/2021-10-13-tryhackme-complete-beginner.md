@@ -1,25 +1,25 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-10-13
+**author**:: Nathan Acks  
+**date**:: 2021-10-13
 
-# Encryption
+## Encryption
 
-## Key Terms
+### Key Terms
 
 This room draws the distinction between a *password* (which is used as part of an authentication process) and a *passphrase* (which is used to encrypt key material).
 
-## Crucial Crypto Maths
+### Crucial Crypto Maths
 
 Interesting side note: Spotlight (at least on iOS/iPadOS) understands `%` as the modulo operator.
 
-## RSA (Rivest Shamir Adleman)
+### RSA (Rivest Shamir Adleman)
 
 * [RsaCtfTool](https://github.com/Ganapati/RsaCtfTool)
 * [rsatool](https://github.com/ius/rsatool)
 * [RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_%28cryptosystem%29)
 
-## Explaining Diffie Hellman Key Exchange
+### Explaining Diffie Hellman Key Exchange
 
 Simpler Diffie-Hellman key exchange:
 
@@ -30,9 +30,9 @@ Simpler Diffie-Hellman key exchange:
 
 The magic here is in the operator ⊗ - it must be both commutative and very *very* hard to reverse even with knowledge of C. So "normal" multiplication *doesn't* work here (since if ⊗ were multiplication, then it would be easy to extract A from A ⊗ C by observing C).
 
-# Introduction to Windows
+## Introduction to Windows
 
-## Windows File System and Permissions Explained
+### Windows File System and Permissions Explained
 
 C:/PerfLogs = performance and troubleshooting logs.
 

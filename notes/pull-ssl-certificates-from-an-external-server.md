@@ -1,6 +1,6 @@
 # Pull SSL Certificates from an External Server
 
-author:: Nathan Acks
+**author**:: Nathan Acks
 
 ```bash
 # Pull a server's certificate:

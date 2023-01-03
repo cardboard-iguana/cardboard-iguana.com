@@ -1,9 +1,9 @@
 # Using Burp Suite
 
-author:: Nathan Acks  
-date:: 2022-05-20
+**author**:: Nathan Acks  
+**date**:: 2022-05-20
 
-# Keyboard Shortcuts
+## Keyboard Shortcuts
 
 * `Ctrl + Shift + D` - Switch to Dashboard
 * `Ctrl + Shift + T` - Switch to Target
@@ -15,11 +15,11 @@ date:: 2022-05-20
 * `Ctrl + R` - Send request from Proxy to Repeater
 * `Ctrl + R` - Send request from Proxy to Intruder
 
-# The Burp Suite Browser
+## The Burp Suite Browser
 
 I *strongly* recommend using the Burp Suite Browser, since it already has proxy and SSL interception set up. Also, it's always best to keep your "hacker" and "normie" tools/identities as separate as possible!
 
-## Using Firefox with Burp Suite
+### Using Firefox with Burp Suite
 
 The Burp Suite browser is compiled as an x86_64 binary, and thus *doesn't* work on a Raspberry Pi. As a work-around, Firefox can be used to interact with Burp Suite.
 
@@ -44,7 +44,7 @@ Using Chromium on the Raspberry Pi as the Burp Suite browser might be the best o
 * [Use a Raspberry Pi 4B as an iPad Pro Hacking Accessory](use-a-raspberry-pi-4b-as-an-ipad-pro-hacking-accessory.md)
 * [FoxyProxy Basic](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-basic/)
 
-## Mobile App Testing
+### Mobile App Testing
 
 You can proxy mobile API requests through Burp Suite too.
 
@@ -57,7 +57,7 @@ Be aware that this proxies *all* device traffic through Burp Suite.
 * [Configuring an iOS Device to Work With Burp](https://portswigger.net/support/configuring-an-ios-device-to-work-with-burp)
 * [Installing Burp's CA Certificate in an iOS Device](https://portswigger.net/support/installing-burp-suites-ca-certificate-in-an-ios-device)
 
-# Scoping
+## Scoping
 
 Sites can be added to the project scope under Target > Scope.
 
@@ -65,15 +65,15 @@ You can also add them by right-clicking on a site in Target > Site map. When you
 
 You can further restrict the Proxy to only intercept in-scope requests under Proxy > Options > Intercept Client Requests by turning on "And URL Is in target scope".
 
-# Issue Definitions
+## Issue Definitions
 
 Target > Issue definitions provides a list of the issues used by the vulnerability scanner built into the paid version of Burp Suite. For the Community Edition (i.e., what comes with Kali Linux), it's basically just a massive (and very useful!) reference.
 
-# Intruder Attacks
+## Intruder Attacks
 
 Note that Burp Suite seems to have trouble running attacks with a large list. For example, trying to use the `rockyou.txt` data set on my machine silently fails.
 
-## Sniper
+### Sniper
 
 Sniper takes a *single* word list and inserts each element into each defined position, one element and one position at a time.
 
@@ -88,7 +88,7 @@ For example, assume a three-element word list containing `one`, `two`, and `thre
 
 Sniper is most useful when attacking a *single* position, however.
 
-## Battering Ram
+### Battering Ram
 
 Battering Ram again takes a *single* word list, but then inserts the *same* payload into *every* position on each run.
 
@@ -100,7 +100,7 @@ For example, assume a three-element word list containing `one`, `two`, and `thre
 
 It's a little mysterious to me why this attack is useful.
 
-## Pitchfork
+### Pitchfork
 
 Pitchfork takes *one word list per position*, and then iterates through them in sequence (thus all word lists need to be the same length; if the lists are of different lengths, then Pitchfork will stop upon reaching the end of the *shortest* list).
 
@@ -112,7 +112,7 @@ For example, assume one three-element word list containing `one`, `two`, and `th
 
 This is generally the approach that would be used in order to test against a potential list of username/password tuples.
 
-## Cluster Bomb
+### Cluster Bomb
 
 Cluster Bomb takes *one word list per position*, and then tests every possible combination in sequence.
 
@@ -132,12 +132,12 @@ This is a good approach for attacking login forms if you *don't* already know th
 
 Obviously this is the most expensive attack in terms of connections/time, and thus also the one most likely to get you noticed!
 
-# Macros
+## Macros
 
 When dealing with forms that include session cookies or anti-CSRF tokens, we can either grab these tokens directly in Intruder using the Recursive Grep function (within the Intruder module), or construct a macro in Project options > Sessions > Macros (necessary if there's, for example, a random redirect to make our life harder).
 
 Basically, macros just define repeated requests that we can make. Once a request is defined here, we can add an entry in Session Handling Rules and define the Scope of the macro (the tools it's active in and the URL  it applies to). Then in details we can trigger the macro. Generally you'll want to restrict the URLs the macro applies to and what parameters/cookies get updated by the macro as much as possible.
 
-# Hashing in Decoder
+## Hashing in Decoder
 
 Burp Suite displays hashes in the "Hex" view by default; to convert them into the (hex) ASCII string you're used to, encode this output as "ASCII Hex".

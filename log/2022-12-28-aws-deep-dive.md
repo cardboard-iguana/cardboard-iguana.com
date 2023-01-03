@@ -1,31 +1,31 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-12-28
+**author**:: Nathan Acks  
+**date**:: 2022-12-28
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Security
+### Security
 
 * [Security in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/security.html)
 
-### Monitoring API Gateway API configuration with AWS Config
+#### Monitoring API Gateway API configuration with AWS Config
 
 The AWS Config service allows changes to API Gateway configuration (both API- and stage-related) to be tracked and optionally alerted on. It's worth noting that AWS Config seems to pick up on configuration changes when they're *made*, but in API Gateway some changes only take effect *after* the API has been redeployed. In these cases, AWS Config can show a change as having been made (which it was), but the API may still be operating under the previous settings (if the change required a redeployment to become active).
 
 * [Monitoring API Gateway API configuration with AWS Config](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-config.html)
 
-### Infrastructure Security in Amazon API Gateway
+#### Infrastructure Security in Amazon API Gateway
 
 STS (an acronym that shows up frequently when talking about assumable roles) stands for "Security Token Service".
 
 * [Infrastructure security in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/infrastructure-security.html)
 
-## Tagging
+### Tagging
 
 Tags in AWS are key/value pairs - kind of an intermediate step between the simple string-only tagging found in many apps and full hierarchical tagging (key/value tagging is isomorphic to hierarchical tagging that's been restricted to only two levels).
 
@@ -33,7 +33,7 @@ Tags without assigned values are interpreted as having a value of the empty stri
 
 * [Tagging your API Gateway Resources](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-tagging.html)
 
-### API Gateway resources that can be tagged
+#### API Gateway resources that can be tagged
 
 Tags are basically at the level of an "API" (or stage) in API Gateway - they cannot be applied to individual *methods* (or other components) within that API, though queries on sub-API components will return the tag of the parent API or stage in some cases.
 
@@ -43,7 +43,7 @@ As you might expect from this, only one tag with a given key can be applied to a
 
 * [API Gateway resources that can be tagged](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-tagging-supported-resources.html)
 
-### Using Tags to Control Access to API Gateway Resources
+#### Using Tags to Control Access to API Gateway Resources
 
 Tags can limit access to both resources that currently exist (resource tags) and resources that a user tries to create (request tags).
 
@@ -51,7 +51,7 @@ Tags can limit access to both resources that currently exist (resource tags) and
 
 * [Using tags to control access to API Gateway resources](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-tagging-iam-policy.html)
 
-## Quotas and Important Notes
+### Quotas and Important Notes
 
 In practice, ARNs are limited to a total of 1600 bytes (ASCII characters), as IAM policies and quotas (and other things?) will take errors when attempting to operate on longer values.
 
@@ -59,7 +59,7 @@ API Gateway quotas are surprisingly low, generally just a few hundred requests p
 
 * [Amazon API Gateway Quotas and Important Notes](https://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html)
 
-### Amazon API Gateway important notes
+#### Amazon API Gateway important notes
 
 APIs cannot use `/ping` and `/sping` method endpoints, as these are reserved for internal health checks. Or, rather, apparently you *can* use these method endpoints, but they won't work because the internal mapping will take precedence.
 

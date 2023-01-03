@@ -1,19 +1,19 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-10-26
+**author**:: Nathan Acks  
+**date**:: 2022-10-26
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Configuring a REST API using OpenAPI with Amazon API Gateway
+#### Configuring a REST API using OpenAPI with Amazon API Gateway
 
 Merging or overwriting an API with a new Open API definition file is an "idempotent" operation, in that a failure part-way through will result in only those API definitions that have been successfully processed being merged or overwritten, with the remaining APIs in their original state.
 
@@ -23,7 +23,7 @@ OpenAPI definition files can also be exported from the API Gateway, but only if 
 
 * [Configuring a REST API using OpenAPI](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-import-api.html)
 
-### Deploying a REST API in Amazon API Gateway
+#### Deploying a REST API in Amazon API Gateway
 
 It's possible to map multiple API stages to a single custom domain, but doing so requires mapping the stage names to different `basePath` properties (though in most cases I imagine that this mapping will be trivia -  `v1` -> `v1`, etc.).
 

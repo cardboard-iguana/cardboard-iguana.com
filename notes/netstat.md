@@ -1,9 +1,9 @@
 # Using "netstat"
 
-author:: Nathan Acks
-date:: 2022-04-21
+**author**:: Nathan Acks
+**date**:: 2022-04-21
 
-# Flags
+## Flags
 
 * `-a` - all listening parts and established connections
 * `-i` - per interface statistics

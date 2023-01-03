@@ -1,17 +1,17 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-10-04
+**author**:: Nathan Acks  
+**date**:: 2022-10-04
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Notes about the Amazon API Gateway continue.
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Creating a REST API in Amazon API Gateway (Continued...)
+#### Creating a REST API in Amazon API Gateway (Continued...)
 
 In the API Gateway documentation, "request parameters" always means URL parameters (either GET variables or dynamic portions of the URL) or HTTP headers, while "request body" refers to JSON blobs that compose the, well, request body.
 
@@ -60,7 +60,7 @@ Method responses can either be pre-configured mappings from the backend to the c
 * [JSON Schema](https://datatracker.ietf.org/doc/html/draft-zyp-json-schema-04)
 * [Creating a REST API in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html)
 
-### Controlling and Managing Access to a REST API in API Gateway
+#### Controlling and Managing Access to a REST API in API Gateway
 
 Resource policies can be attached to APIs defined in the API Gateway in a similar fashion to S3.
 

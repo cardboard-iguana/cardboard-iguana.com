@@ -1,13 +1,13 @@
 # Kerberos
 
-author:: Nathan Acks  
-date:: 2022-03-13
+**author**:: Nathan Acks  
+**date**:: 2022-03-13
 
 Kerberos: The default authentication method for Windows domains. Intended to be the successor to NTLM.
 
 The built-in Windows command `klist` will show you the current Kerberos tickets in memory.
 
-# Definitions
+## Definitions
 
 * TICKET GRANTING TICKET (TGT): An authentication ticket that can be used to request service tickets for specific domain services from the ticket granting service.
 * KEY DISTRIBUTION CENTER (KDC): A domain service that issues tickets; typically composed of the ticket granting service and the authentication service.
@@ -21,13 +21,13 @@ The built-in Windows command `klist` will show you the current Kerberos tickets 
 
 Note that Active Directory bundles the authentication service, ticket granting service, and KDC into a single "domain controller" role. Non-Windows Kerberos implementations are more likely to separate these roles between different servers.
 
-# Authentication Process
+## Authentication Process
 
 The below steps are cut-and-pasted from Wikipedia's walk-through, but with language adapted to match the Windows-specific environment Kerberos is most commonly deployed in. (A close reading of these steps will also explain why it's sometimes said that "a hash is as good as a password" for a Window's domain.)
 
 * [Wikipedia: Kerberos (protocol)](https://en.wikipedia.org/wiki/Kerberos_%28protocol%29)
 
-## Client Authentication to the KDC (a.k.a. "Pre-Authentication")
+### Client Authentication to the KDC (a.k.a. "Pre-Authentication")
 
 (1) AS-REQ: The client sends the client/user ID + the current timestamp (the timestamp is used to prevent replay attacks) encrypted with the NT hash of the user's password + a cleartext message of the user ID to the authentication server to request services on behalf of the user.
 
@@ -38,7 +38,7 @@ The below steps are cut-and-pasted from Wikipedia's walk-through, but with langu
 
 (3) Once the client receives messages A and B, it attempts to decrypt message A with the NT hash generated from the password entered by the user. If the user entered password does not match the password in the authentication service database then decryption of message A will fail. Once message A is decrypted, the client obtains the *Client/TGS Session Key*. This session key is used for further communications with the ticket granting service. (Note: The client cannot decrypt Message B, as it is encrypted using the KDC long term secret key.)
 
-## Client Service Authorization
+### Client Service Authorization
 
 (1) TGS-REQ: When requesting services, the client sends the following messages to the ticket granting service:
 
@@ -50,7 +50,7 @@ The below steps are cut-and-pasted from Wikipedia's walk-through, but with langu
 * Message E: *Service ticket* (which includes the privilege attribute certificate, client network address, validity period, and *Client/Server Session Key*) encrypted using the service's long term secret key.
 * Message F: *Client/Server Session Key* encrypted with the *Client/TGS Session Key*.
 
-## Client Service Access
+### Client Service Access
 
 (1) AP-REQ: Upon receiving messages E and F from ticket granting service, the client has enough information to authenticate itself to the service server. The client connects to the service server and sends the following two messages:
 
@@ -65,7 +65,7 @@ The below steps are cut-and-pasted from Wikipedia's walk-through, but with langu
 
 (4) The server provides the requested services to the client.
 
-# .kirbi Files
+## .kirbi Files
 
 There's a bit of terminology creep when discussing Kerberos tickets. Mimikatz and Rubeus are actually dumping Kerberos data structures (as .kirbi files), which contain *both* a ticket *and* the corresponding session key. People tend to call these .kirbi files "tickets", but it's worth keeping in mind that they contain *both* pieces of data (as a "ticket" in the Kerberos sense, not the hacker's sense, isn't useful without the corresponding session key).
 
@@ -73,9 +73,9 @@ There's a bit of terminology creep when discussing Kerberos tickets. Mimikatz an
 * [Using Mimikatz](mimikatz.md)
 * [Using Rubeus](rubeus.md)
 
-# Atacking Kerberos
+## Atacking Kerberos
 
-## Kerberoasting
+### Kerberoasting
 
 Kerberoasting is where a service ticket is used to brute force a service password. This password can then be used to either move laterally or (if the service runs with elevated privileges) to elevate your privileges.
 
@@ -95,7 +95,7 @@ The main defenses against kerberoasting are (1) strong passwords and (2) making 
 * [Using Hashcat](hashcat.md)
 * [Using John the Ripper](john-the-ripper.md)
 
-## AS-REP Roasting
+### AS-REP Roasting
 
 AES-REP roasting is basically kerberoasting for regular user accounts. The only requirement to roast a user account is that Kerberos pre-authentication is disable.
 
@@ -105,11 +105,11 @@ Basically the only mitigation for this attack is to keep pre-authentication enab
 
 * [Windows Password Hashes](windows-password-hashes.md)
 
-## Pass the Ticket Attacks
+### Pass the Ticket Attacks
 
 The only real way to defend against this attack is to *only* allow domain admins to log into domain controllers, *not* lower privileged machines!
 
-# Golden/Silver Ticket Attacks
+## Golden/Silver Ticket Attacks
 
 The idea with gold and silver tickets is that, since the KDC and service long term secret keys are just the NT hashes of the corresponding service account's passwords, then if you can dump the password (or even its hash), you can *forge* a kerberos ticket without ever needing to contact the KDC.
 

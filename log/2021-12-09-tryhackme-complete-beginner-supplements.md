@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-12-09
+**author**:: Nathan Acks  
+**date**:: 2021-12-09
 
-# XXE
+## XXE
 
-## Deploy the VM
+### Deploy the VM
 
 I think I've basically done a different version of this room...
 
@@ -14,7 +14,7 @@ Anyways, two types of XML External Entity (XXE) attacks:
 * IN-BAND attacks are where the attacker receives an immediate response.
 * OUT-OF-BAND ("blind") attacks are when there is no immediate response and instead the attacker must receive the data indirectly (such as through a request to a second server under the attacker's control).
 
-## eXtensible Markup Language
+### eXtensible Markup Language
 
 Some things to remember about XML documents:
 
@@ -22,7 +22,7 @@ Some things to remember about XML documents:
 * Every XML document has one and *only* one root element.
 * XML is case sensitive.
 
-## DTD
+### DTD
 
 The Document Type Definition defines/validates an XML document. For example, the DTD defined as
 
@@ -67,7 +67,7 @@ Conveniently, DTD can be defined *in line*, and not just by included files.
 
 These last two features are what we will leverage to attack applications that accept XML inputs.
 
-## XXE Payload
+### XXE Payload
 
 ```xml
 <?xml version="1.0"?>

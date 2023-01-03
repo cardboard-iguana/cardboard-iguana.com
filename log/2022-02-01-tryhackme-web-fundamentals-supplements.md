@@ -1,19 +1,19 @@
 # TryHackMe: Web Fundamentals (Supplements)
 
-author:: Nathan Acks  
-date:: 2022-02-01
+**author**:: Nathan Acks  
+**date**:: 2022-02-01
 
-# Inclusion
+## Inclusion
 
 [See my Inclusion CTF write-up.](../notes/tryhackme-inclusion.md)
 
-# Python for Pentesters
+## Python for Pentesters
 
-## Introduction
+### Introduction
 
 Two Python packages to bundle up a script as a Windows EXE: `pyinstaller` (which is the one everyone uses) and `Py2exe`.
 
-## Subdomain Enumeration
+### Subdomain Enumeration
 
 ```python
 #!/usr/bin/env python3
@@ -46,7 +46,7 @@ Note that the `f` above isn't a mistake -- rather it's the use of an "f-string",
 
 * [Quick Answer: How Do You Write An F String In Python](https://whatisanything.com/how-do-you-write-an-f-string-in-python/)
 
-## Directory Enumeration
+### Directory Enumeration
 
 ```python
 #!/usr/bin/env python3
@@ -76,7 +76,7 @@ for dir in directories:
 
 This requires Python 3.6+.
 
-## Network Scanner
+### Network Scanner
 
 ```python
 #!/usr/bin/env python3
@@ -102,7 +102,7 @@ As above, the `r` here isn't a mistake -- rather it specifies a "raw string". Th
 
 * [Quick Answer: How Do You Write An F String In Python](https://whatisanything.com/how-do-you-write-an-f-string-in-python/)
 
-## Port Scanner
+### Port Scanner
 
 ```python
 #!/usr/bin/env python3
@@ -161,7 +161,7 @@ Note that this is making a full TCP handshake, so it's going to be slooooooow. T
 netstat | grep $IP
 ```
 
-## File Downloader
+### File Downloader
 
 ```python
 #!/usr/bin/env python3
@@ -177,7 +177,7 @@ r = requests.get(url, allow_redirects = True)
 open(outfile, 'wb').write(r.content)
 ```
 
-## Hash Cracker
+### Hash Cracker
 
 ```python
 #!/usr/bin/env python3
@@ -203,7 +203,7 @@ with open(wordlist_location, 'r') as file:
 			exit(0)
 ```
 
-## Keyloggers
+### Keyloggers
 
 ```python
 #!/usr/bin/env python3
@@ -220,7 +220,7 @@ keys = keyboard.record(until = 'ENTER')
 keyboard.play(keys)
 ```
 
-## SSH Brute Forcing
+### SSH Brute Forcing
 
 ```python
 #!/usr/bin/env python3

@@ -1,62 +1,62 @@
 # TryHackMe: Pre Security
 
-author:: Nathan Acks  
-date:: 2021-09-12  
-tags:: #MOC
+**author**:: Nathan Acks  
+**date**:: 2021-09-12  
+**tags**:: #MOC
 
 * [TryHackMe: Pre Security](https://tryhackme.com/path/outline/presecurity)
 
-# Cyber Security Introduction
+## Cyber Security Introduction
 
-## Learning Cyber Security
-
-* [2021-09-12 - TryHackMe: Pre Security](../log/2021-09-12-tryhackme-pre-security.md)
-
-# Network Fundamentals
-
-## What is Networking?
+### Learning Cyber Security
 
 * [2021-09-12 - TryHackMe: Pre Security](../log/2021-09-12-tryhackme-pre-security.md)
 
-## Intro to LAN
+## Network Fundamentals
+
+### What is Networking?
+
+* [2021-09-12 - TryHackMe: Pre Security](../log/2021-09-12-tryhackme-pre-security.md)
+
+### Intro to LAN
 
 * [2021-09-13 - TryHackMe: Pre Security](../log/2021-09-13-tryhackme-pre-security.md)
 
-## OSI Model
+### OSI Model
 
 * [2021-09-13 - TryHackMe: Pre Security](../log/2021-09-13-tryhackme-pre-security.md)
 
-## Packets & Frames
+### Packets & Frames
 
 * [2021-09-13 - TryHackMe: Pre Security](../log/2021-09-13-tryhackme-pre-security.md)
 
-## Extending Your Network
+### Extending Your Network
 
 * [2021-09-14 - Pre Security](../log/2021-09-14-tryhackme-pre-security.md)
 
-# How The Web Works
+## How The Web Works
 
-## DNS in Detail
-
-* [2021-09-14 - Pre Security](../log/2021-09-14-tryhackme-pre-security.md)
-
-## HTTP in Detail
+### DNS in Detail
 
 * [2021-09-14 - Pre Security](../log/2021-09-14-tryhackme-pre-security.md)
 
-## How Websites Work
+### HTTP in Detail
+
+* [2021-09-14 - Pre Security](../log/2021-09-14-tryhackme-pre-security.md)
+
+### How Websites Work
 
 * [2021-09-15 - TryHackMe: Pre Security](../log/2021-09-15-tryhackme-pre-security.md)
 
-## Putting It All Together
+### Putting It All Together
 
 * [2021-09-15 - TryHackMe: Pre Security](../log/2021-09-15-tryhackme-pre-security.md)
 
-# Linux Fundamentals
+## Linux Fundamentals
 
 * [2021-09-16 - TryHackMe: Pre Security](../log/2021-09-16-tryhackme-pre-security.md)
 
-# Windows Fundamentals
+## Windows Fundamentals
 
 * [2021-09-17 - TryHackMe: Pre Security](../log/2021-09-17-tryhackme-pre-security.md)
 * [2021-09-18 - TryHackMe: Pre Security](../log/2021-09-18-tryhackme-pre-security.md)

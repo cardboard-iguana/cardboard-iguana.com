@@ -1,9 +1,9 @@
 # OffSec Live: PEN-200
 
-author:: Nathan Acks  
-date:: 2022-08-26
+**author**:: Nathan Acks  
+**date**:: 2022-08-26
 
-# Active Directory Enumeration & Exploitation, Part 2
+## Active Directory Enumeration & Exploitation, Part 2
 
 `Get-DomainUsers -SPN` will list AD service accounts using `PowerView.ps1`.
 

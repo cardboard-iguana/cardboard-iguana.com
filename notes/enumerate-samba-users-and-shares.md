@@ -1,9 +1,9 @@
 # Enumerate Samba Users and Shares
 
-author:: Nathan Acks  
-date:: 2022-07-11
+**author**:: Nathan Acks  
+**date**:: 2022-07-11
 
-# NMAP
+## NMAP
 
 CIFS users and shares can be enumerated by nmap during scanning:
 
@@ -18,7 +18,7 @@ NOTE: While smb-enum-shares.nse returns results for UNIX-like systems, I've foun
 * [Nmap SMB Scripts and SMB Enumeration Step-By-Step Pentesting Guide](https://www.infosecademy.com/nmap-smb-scripts-enumeration/)
 * [Using "nmap"](nmap.md)
 
-# Metasploit
+## Metasploit
 
 Metasploit can also enumerate CIFS users using the `auxiliary/smb/smb_lookupsid` module.
 
@@ -26,7 +26,7 @@ Like NMAP, I've found this to be a bit unreliable on UNIX-like systems.
 
 * [Using Metasploit](metasploit.md)
 
-# nbtscan
+## nbtscan
 
 You can scan a target machine or network using nbtscan to see what hosts are running Samba.
 
@@ -36,7 +36,7 @@ nbtscan -r $NETWORK_IP/$CIDR_NETMASK
 
 This won't give you detailed user and share information, but it will at least let you know what machines to target.
 
-# enum4linux
+## enum4linux
 
 For UNIX-like systems running Samba, enum4linux works well.
 
@@ -49,7 +49,7 @@ As of the time of this writing (November 5, 2021) however, it looks like enum4li
 * [Enumerate SMB with Enum4linux & Smbclient](https://null-byte.wonderhowto.com/how-to/enumerate-smb-with-enum4linux-smbclient-0198049/)
 * [Use of uninitialized value $user, what does this mean?](https://github.com/CiscoCXSecurity/enum4linux/issues/4)
 
-# smbclient
+## smbclient
 
 Samba services can be enumerated by smbclient using:
 
@@ -61,7 +61,7 @@ Here `$SERVER_NAME` is the machine's NetBIOS domain name, which can be found wit
 
 * [Working With Samba](working-with-samba.md)
 
-# smbmap
+## smbmap
 
 Get Windows version information:
 

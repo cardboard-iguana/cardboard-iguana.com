@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-11-27
+**author**:: Nathan Acks  
+**date**:: 2021-11-27
 
-# Wireshark 101
+## Wireshark 101
 
-## ICMP Traffic
+### ICMP Traffic
 
 ICMP traffic "types" correspond to the kind of packet being sent (though different ICMP services can have multiple types):
 
@@ -18,7 +18,7 @@ Ping packets typically just include either random data or all zeros.
 
 * [RFC 792: Internet Control Message Protocol](https://datatracker.ietf.org/doc/html/rfc792)
 
-## TCP Traffic
+### TCP Traffic
 
 The TCP "acknowledgment number" contains the *next* sequence number that the sender is expecting to receive (so basically senders determine the next sequence number). This is 0 in the case of RST packets (and other errors?).
 
@@ -26,11 +26,11 @@ See RFC 793 for more.
 
 * [RFC 793: Transmission Control Protocol](https://datatracker.ietf.org/doc/html/rfc793)
 
-## DNS Traffic
+### DNS Traffic
 
 Apparently DNS over TCP is sufficiently rare in the wild as to always warrant further investigation.
 
-## HTTP Traffic
+### HTTP Traffic
 
 HTTP does not use handshakes (beyond the standard initial TCP handshake); it's all request/response (a bit like ICMP that way).
 
@@ -38,7 +38,7 @@ Wireshark can actually save off webpages and other files transmitted over HTTP u
 
 Also worth checking out some of the tools in the Statistics menu; TryHackMe specifically calls out Protocol Hierarchy and Endpoints, but I think I need to see some practical examples of these in action to really grasp their utility.
 
-## HTTPS Traffic
+### HTTPS Traffic
 
 HTTPS traffic starts out with an SSL handshake. All application data after the handshake is completed will be encrypted, but if you *happen* to have the server's private key then Wireshark can display the decrypted contents.
 
@@ -47,7 +47,7 @@ HTTPS traffic starts out with an SSL handshake. All application data after the h
 
 Note that HTTPS is much more likely to break up data between packets than HTTP, so the ability to export files from the packet stream is much more useful here!
 
-## Analyzing Exploit PCAPs
+### Analyzing Exploit PCAPs
 
 DCERPC is Windows Server's RPC connection protocol.
 
@@ -56,9 +56,9 @@ DRSUAPI is Windows' implementation of the "Directory Replication Service" protoc
 * [DCE/RPC (Wikipedia)](https://en.wikipedia.org/wiki/DCE/RPC)
 * [DRSUAPI](https://wiki.samba.org/index.php/DRSUAPI)
 
-# Wifi Hacking 101
+## Wifi Hacking 101
 
-## The Basics: An Intro to WPA
+### The Basics: An Intro to WPA
 
 Because I always get these confused:
 
@@ -68,7 +68,7 @@ ESSID - A collection of BSSIDs representing a single network. More-or-less analo
 
 From what I can tell, SSID and BSSID apply to single access points, while ESSID applies to an entire network of access points.
 
-## Aircrack-NG: Let's Get Cracking
+### Aircrack-NG: Let's Get Cracking
 
 ```bash
 aircrack-ng -b $BSSID -w $WORLDLIST_FILE $CAP_FILE

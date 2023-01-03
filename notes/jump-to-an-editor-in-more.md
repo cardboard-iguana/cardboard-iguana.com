@@ -1,6 +1,6 @@
 # Jump to an Editor in "more"
 
-author:: Nathan Acks
+**author**:: Nathan Acks
 
 An editor can be invoked from `more` using `v`; by default this tries to invoke $VISUAL, and then $EDITOR, and then just vi before giving up.
 

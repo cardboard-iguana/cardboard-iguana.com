@@ -1,9 +1,9 @@
 # Packet Headers
 
-author:: Nathan Acks  
-date:: 2021-08-11
+**author**:: Nathan Acks  
+**date**:: 2021-08-11
 
-# Important/Common TCP Packet Headers
+## Important/Common TCP Packet Headers
 
 * Time to Live (TTL) - How long a packet should live on the network before being discarded.
 * Source port - A random (unused) port chosen by the sender.
@@ -20,7 +20,7 @@ There's potentially *a lot* more detail then this in a TCP packet header, howeve
 
 * [2022-08-11 - DEF CON 30](../log/2022-08-11-def-con-30.md)
 
-# Important/Common UDP Packet Headers
+## Important/Common UDP Packet Headers
 
 * Time to Live (TTL) - How long a packet should live on the network before being discarded.
 * Source port - A random (unused) port chosen by the sender.

@@ -1,19 +1,19 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-10-17
+**author**:: Nathan Acks  
+**date**:: 2022-10-17
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Working With Binary Media Types for REST APIs (Continued)
+#### Working With Binary Media Types for REST APIs (Continued)
 
 While binary media types need to be specified individually, API Gateway does support wildcarding. In particular, `*/*` will match all files, though given the sometimes strange behavior of API Gateway that seems potentially inadvisable; I suspect something like `image/*` may work better (though even here there are potential problems - for example, handling SVGs).
 

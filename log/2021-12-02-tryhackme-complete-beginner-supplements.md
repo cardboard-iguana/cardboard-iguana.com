@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-12-02
+**author**:: Nathan Acks  
+**date**:: 2021-12-02
 
-# CC: Pen Testing
+## CC: Pen Testing
 
-## smbmap
+### smbmap
 
 `-h` - IP address or host to enumerate
 
@@ -23,7 +23,7 @@ date:: 2021-12-02
 
 * [Windows Password Hashes](../notes/windows-password-hashes.md)
 
-## smbclient
+### smbclient
 
 `-I` - IP address to connect to
 
@@ -39,7 +39,7 @@ date:: 2021-12-02
 
 Once connected, `smbclient` provides an `ftp`-like interface.
 
-## Final Exam
+### Final Exam
 
 Not much context. The machine for this test is at 10.10.87.144 and we know that there are two flags in the files `user.txt` and `root.txt`.
 

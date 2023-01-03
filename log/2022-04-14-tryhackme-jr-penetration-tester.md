@@ -1,11 +1,11 @@
 # TryHackMe: Jr. Penetration Tester
 
-author:: Nathan Acks  
-date:: 2022-04-14
+**author**:: Nathan Acks  
+**date**:: 2022-04-14
 
-# Exploitation with Metasploit
+## Exploitation with Metasploit
 
-## Scanning
+### Scanning
 
 Use `search portscan` to display built-in Metasploit port scanners. Note that `msfconsole` needs to be run as root for many scans to work - just like Nmap. That said, in my experience the fancier TCP scans (for example, SYN) don't work over a VPN... So maybe best to stick with Nmap.
 
@@ -29,7 +29,7 @@ The `auxiliary/scanner/smb/smb_login` module will allow you to bruteforce Samba 
 * [SAMBA (a.k.a. CIFS) Protocol](../notes/samba.md)
 * [TCP SYN Port Scanner - Metasploit](https://www.infosecmatter.com/metasploit-module-library/?mm=auxiliary/scanner/portscan/syn)
 
-## The Metasploit Database
+### The Metasploit Database
 
 Get basic database status using `db_status`.
 
@@ -39,7 +39,7 @@ Use `db_nmap` to run Nmap (all of the regular options work) and dump the results
 
 The `hosts` and `services` commands can then be used to display the, well, hosts and services logged by Metasploit during an engagement. Both commands support an `-S` search parameter, the results of which can then be added to `RHOSTS` using the `-R` parameter.
 
-## Exploitation
+### Exploitation
 
 Show the payloads available for a particular exploit using `show payloads`. Use `set payload` to set the payload for the exploit; re-run `show options` after this to check if the payload has added any additional options that will need to be set before exploitation.
 
@@ -55,7 +55,7 @@ Use `sessions` to, well, manage your sessions (most useful when you've backgroun
 * [Dumping Windows Password Hashes Using Metasploit](https://www.utc.edu/sites/default/files/2021-04/4660-lab6.pdf)
 * [Windows Password Hashes](../notes/windows-password-hashes.md)
 
-## Msfvenom
+### Msfvenom
 
 Msfvenom is a tool to create custom versions of Metasploit payloads, encoded into a variety of different binary formats and scripts.
 

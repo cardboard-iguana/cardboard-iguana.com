@@ -1,15 +1,15 @@
 # TryHackMe: Common Attacks & Pwnkit
 
-author:: Nathan Acks  
-date:: 2022-02-03
+**author**:: Nathan Acks  
+**date**:: 2022-02-03
 
-# Common Attacks
+## Common Attacks
 
-## Public Network Safety
+### Public Network Safety
 
 I really do wish that guides like this would stop highlighting VPNs -- their utility is just really unclear for most people anymore!
 
-## Backups
+### Backups
 
 "3, 2, 1" is a good mnemonic for backups:
 
@@ -19,9 +19,9 @@ I really do wish that guides like this would stop highlighting VPNs -- their uti
 
 Though honestly, this is kind of a "minimum viable backup" strategy, since simply using a cloud service to mirror data between two devices would qualify! (Why? Working data counts as a copy...)
 
-# Pwnkit (CVE-2021-4034)
+## Pwnkit (CVE-2021-4034)
 
-## Exploitation
+### Exploitation
 
 Quick-n-dirty Pwnkit exploit:
 

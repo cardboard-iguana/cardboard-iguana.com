@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-11-05
+**author**:: Nathan Acks  
+**date**:: 2021-11-05
 
-# Kenobi
+## Kenobi
 
-## Deploy the Vulnerable Machine
+### Deploy the Vulnerable Machine
 
 The machine's IP address is 10.10.179.107. Let's run  an initial scan.
 
@@ -340,7 +340,7 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Fri Nov  5 22:07:27 2021 -- 1 IP address (1 host up) scanned in 1058.49 seconds
 ```
 
-## Enumerating Samba for Shares
+### Enumerating Samba for Shares
 
 Apparently port 139 is left over from Window's NetBIOS days.
 

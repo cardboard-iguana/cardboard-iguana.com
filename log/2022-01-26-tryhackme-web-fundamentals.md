@@ -1,11 +1,11 @@
 # TryHackMe: Web Fundamentals
 
-author:: Nathan Acks  
-date:: 2022-01-26
+**author**:: Nathan Acks  
+**date**:: 2022-01-26
 
-# Avengers Blog
+## Avengers Blog
 
-## SQL Injection
+### SQL Injection
 
 When injecting code, you'll *often* want to end with a trailing "` --`" (space-dash-dash) in order to *comment out* the remainder or the line you're injecting into.
 

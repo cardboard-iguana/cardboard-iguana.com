@@ -1,19 +1,19 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-12-29
+**author**:: Nathan Acks  
+**date**:: 2022-12-29
 
 I'm *finally* done reading about Amazon's API Gateway. Now on to reading about the AWS Key Management Service (KMS)!
 
-# AWS KMS Cryptographic Details
+## AWS KMS Cryptographic Details
 
-## Introduction
+### Introduction
 
 The KMS HSMs are all FIPS 140-2 validated
 
 * [Introduction to the Cryptographic Details of AWS KMS](https://docs.aws.amazon.com/kms/latest/cryptographic-details/intro.html)
 
-### Basic Concepts
+#### Basic Concepts
 
 There are three types of KMS keys:
 
@@ -31,17 +31,17 @@ When used with asymmetric encryption, only the private part of the key pair is m
 
 * [Basic concepts](https://docs.aws.amazon.com/kms/latest/cryptographic-details/basic-concepts.html)
 
-### AWS KMS Design Goals
+#### AWS KMS Design Goals
 
 Internal administrative actions on HSMs (all?) use quorum-based access control mechanisms.
 
 * [AWS KMS design goals](https://docs.aws.amazon.com/kms/latest/cryptographic-details/design-goals.html)
 
-## AWS Key Management Service Foundations
+### AWS Key Management Service Foundations
 
 * [AWS Key Management Service foundations](https://docs.aws.amazon.com/kms/latest/cryptographic-details/foundation.html)
 
-### Cryptographic Primitives
+#### Cryptographic Primitives
 
 Symmetric encryption is currently handled using AES-GCM with 256-bit keys. The initial symmetric encryption key is never directly used (if I understand this section correctly); rather a new key is derived from this master key for each encryption call.
 
@@ -53,7 +53,7 @@ All intra-KMS communications are verified using ECDSA signatures.
 
 * [Cryptographic primitives](https://docs.aws.amazon.com/kms/latest/cryptographic-details/crypto-primitives.html)
 
-### AWS KMS Key Hierarchy
+#### AWS KMS Key Hierarchy
 
 AWS KMS basically work a bit like a hierarchical deterministic wallet - there's some central "domain key" that's stored on the HSM, and then an (encrypted) "HSM backing key" (HBK) is derived and exported from it. Key "rotation" consists of deriving a new HBK. While KMS ARNs point to the domain key, they functionally reference the current HBK for new encryption operations and whichever HBK was used to encrypt a given ciphertext for decryption operations.
 
@@ -68,11 +68,11 @@ Apparently domain keys are rotated daily-to-weekly. I assume this means that all
 * [BIP 39: Mnemonic Code for Generating Deterministic Keys](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
 * [BIP 44: Multi-Account Hierarchy for Deterministic Wallets](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki)
 
-## AWS KMS Use Cases
+### AWS KMS Use Cases
 
 * [Use cases](https://docs.aws.amazon.com/kms/latest/cryptographic-details/use-cases.html)
 
-### Amazon EBS Volume Encryption
+#### Amazon EBS Volume Encryption
 
 EBS volumes work via a KMS grant that allows for the generation and on-demand decryption of volume keys. (I assume that these are a species of CDK?) Volume keys are stored in encrypted for along with the EBS volume, and then passed back to KMS for decryption at mount time.
 
@@ -80,7 +80,7 @@ EBS seems to work similarly to LUKS and similar systems, in that the decrypted v
 
 * [Amazon EBS volume encryption](https://docs.aws.amazon.com/kms/latest/cryptographic-details/ebs-volume-encryption.html)
 
-### Client-Side Encryption
+#### Client-Side Encryption
 
 The AWS Encryption SDK provides hooks for envelope encryption, where the "long term" key for decrypting the message key is held in KMS.
 

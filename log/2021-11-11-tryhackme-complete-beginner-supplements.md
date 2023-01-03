@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-11-11
+**author**:: Nathan Acks  
+**date**:: 2021-11-11
 
-# Splunk
+## Splunk
 
-## Ransomware
+### Ransomware
 
 There are three different event source fields in Splunk:
 
@@ -35,9 +35,9 @@ Also recall that `EventCode=1` corresponds to process execution.
 
 * [Kevin Beaumont (Twitter)](https://twitter.com/GossiTheDog)
 
-# Volatility
+## Volatility
 
-## Obtaining Memory Samples
+### Obtaining Memory Samples
 
 Tools for obtaining memory dumps from running systems:
 

@@ -1,16 +1,16 @@
 # Windows Event Logs
 
-author:: Nathan Acks  
-date:: 2022-04-18
+**author**:: Nathan Acks  
+**date**:: 2022-04-18
 
-# Windows Logs
+## Windows Logs
 
 * Application - Contains events logged by applications. For example, a database application might record a file error. The application developer decides which events to record.
 * Security - Contains events such as valid and invalid logon attempts, as well as events related to resource use such as creating, opening, or deleting files or other objects. An administrator can start auditing to record events in the security log.
 * System - Contains events logged by system components, such as the failure of a driver or other system component to load during startup.
 * \[CustomLog\] - Contains events logged by applications that create a custom log. Using a custom log enables an application to control the size of the log or attach ACLs for security purposes without affecting other applications.
 
-# Log Fields
+## Log Fields
 
 * Type - Warning, error, information, etc.
 * Time - Date/time for the computer *sending* the log
@@ -25,7 +25,7 @@ Microsoft has more detailed documentation.
 
 * [Eventlog Key](https://docs.microsoft.com/en-us/windows/win32/eventlog/eventlog-key)
 
-# Event Types
+## Event Types
 
 * Error - An event that indicates a significant problem such as loss of data or loss of functionality. For example, if a service fails to load during startup, an Error event is logged.
 * Warning - An event that is not necessarily significant, but may indicate a possible future problem. For example, when disk space is low, a Warning event is logged. If an application can recover from an event without loss of functionality or data, it can generally classify the event as a Warning event.
@@ -37,7 +37,7 @@ Microsoft has more detailed documentation.
 
 * [Event Types](https://docs.microsoft.com/en-us/windows/win32/eventlog/event-types)
 
-# Event IDs
+## Event IDs
 
 * 104 - Event log was cleared
 * 1102 - Audit log was cleared (517 on Windows 2003 and earlier)

@@ -1,17 +1,17 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-10-08
+**author**:: Nathan Acks  
+**date**:: 2022-10-08
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Controlling and Managing Access to a REST API in API Gateway (Continued...)
+#### Controlling and Managing Access to a REST API in API Gateway (Continued...)
 
 API Gateway policies are just another kind of resource policy. Which means that they look like S3 policies, which in turn just look like plain old IAM policies. As you would expect, API Gateway permissions can also be specified directly for IAM users.
 

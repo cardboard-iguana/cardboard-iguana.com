@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-10-09
+**author**:: Nathan Acks  
+**date**:: 2021-10-09
 
-# Upload Vulnerabilities
+## Upload Vulnerabilities
 
-## Bypassing Client-Side Filtering
+### Bypassing Client-Side Filtering
 
 How to bypass:
 
@@ -27,7 +27,7 @@ curl -X POST -F "submit=$SUBMIT_VALUE" \
              -F "${FILE_INPUT NAME}=@$PATH_TO_FILE" $URL
 ```
 
-## Bypassing Server-Side Filtering: File Extensions
+### Bypassing Server-Side Filtering: File Extensions
 
 Basically, bypassing server-side filters is going to involve a lot of trial and error until we figure out what the filter is (and how to work around it).
 
@@ -46,7 +46,7 @@ The trick, of course, is not only that you need to upload your file, but that yo
 
 * [PHP (Wikipedia)](https://en.wikipedia.org/wiki/PHP)
 
-## Bypassing Server-Side Filtering: Magic Numbers
+### Bypassing Server-Side Filtering: Magic Numbers
 
 To recap: This is (generally) the first 4 bytes of a file. Apparently, text files don't have magic number, so one trick you can do is just insert four ASCII characters in the front of your file and then use a hex editor to change them to an appropriate magic number.
 
@@ -56,7 +56,7 @@ The `hexeditor` app is a quick-and-easy hex editor, and `file` can give you a se
 
 Note that this can be a lot trickier if you're not dealing with PHP, since many languages don't have PHP's concept of interpreted vs. non-interpreted bits.
 
-## Example Methodology
+### Example Methodology
 
 The `Server` and `X-Powered-By` HTTP headers, if present, can be handy for figuring out what language we're dealing with.
 
@@ -67,7 +67,7 @@ There's probably server-side filtering, so bypass everything client-side and the
 * Use completely valid and invalid extensions to check for the presence of white/blacklists.
 * Try changing the magic number of a known good file to see if magic number filtering is in place.
 
-## Challenge
+### Challenge
 
 Potentially interesting directories in /content, /assets, /modules, /admin.
 

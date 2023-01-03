@@ -1,13 +1,13 @@
 # LFI (Local File Inclusion) Attacks
 
-author:: Nathan Acks  
-date:: 2022-03-13
+**author**:: Nathan Acks  
+**date**:: 2022-03-13
 
 LFI vulnerabilities are *most* common in PHP, but are sometimes found in other languages/frameworks.
 
 Since web servers are typically serving content from `/var/www`, `/var/www/srv`, or an immediate subdirectory for virtual hosts, you generally need to use `../../`, `../../../`, or `../../../../` to reach `/`.
 
-# PHP Tricks
+## PHP Tricks
 
 For PHP < 5.3.4, you can use the poison null byte to defeat simple path filters or situations where the developer is appending some suffix to user input.
 

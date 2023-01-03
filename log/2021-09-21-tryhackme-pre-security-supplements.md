@@ -1,11 +1,11 @@
 # TryHackMe: Pre Security (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-09-21
+**author**:: Nathan Acks  
+**date**:: 2021-09-21
 
-# Regular Expressions
+## Regular Expressions
 
-## Metacharacters and Repetitions
+### Metacharacters and Repetitions
 
 `\d` - `[0-9]`
 `\D` - `[^0-9]`

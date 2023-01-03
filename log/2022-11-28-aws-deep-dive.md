@@ -1,19 +1,19 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-11-28
+**author**:: Nathan Acks  
+**date**:: 2022-11-28
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Working With WebSocket APIs
+### Working With WebSocket APIs
 
 * [Amazon API Gateway: Working with WebSocket APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html)
 
-### Create a WebSocket API in API Gateway
+#### Create a WebSocket API in API Gateway
 
 WebSocket APIs require the use of TLS 1.2 (API Gateway doesn't seem to support TLS 1.3).
 
@@ -21,7 +21,7 @@ WebSocket APIs *cannot* be converted into REST APIs, nor can REST APIs be turned
 
 * [Create a WebSocket API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-create-empty-api.html)
 
-### Working With Routes for WebSocket APIs in API Gateway
+#### Working With Routes for WebSocket APIs in API Gateway
 
 Route selection expressions are based around the form `$request.body.<JSON_PATH_TO_PROPERTY>`. Objects can be matched by the JSONPath, but the results will be stringified before evaluation. Multiple selection expressions can be combined into the final expression; static values can be included to make it easier to read/parse the evaluated route key's value.
 
@@ -35,7 +35,7 @@ The `$connect` route allows a Lambda authorizer to reject connections for unsupp
 
 * [Working with routes for WebSocket APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-develop-routes.html)
 
-### Controlling and Managing Access to a WebSocket API in API Gateway
+#### Controlling and Managing Access to a WebSocket API in API Gateway
 
 IAM policies work basically the same for WebSocket APIs as REST APIs, except that (1) WebSockets support a `ManageConnections` action that controls access to the `@connections` API, and (2) non-`@connections` routes use a different ARN format (the `@connections` API is represented as `arn:aws:execute-api:*:*:*/*/POST/@connections`).
 
@@ -45,7 +45,7 @@ The biggest difference when using a Lambda authorizer between WebSockets and RES
 
 * [Controlling and managing access to a WebSocket API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-control-access.html)
 
-### Setting up WebSocket API Integrations in API Gateway
+#### Setting up WebSocket API Integrations in API Gateway
 
 The "Lambda Function" integration type is only for *existing* Lambda functions that don't/won't require special resource permissions. All other Lambda function requests (including the automatic creation of new Lambda functions) are handled with the "AWS Service" integration type. (This strikes me as a weird and *really* specific distinction.)
 
@@ -57,7 +57,7 @@ Note that there is no response setup for proxy integrations; API Gateway simply 
 
 * [Setting up WebSocket API integrations](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-integrations.html)
 
-### Request Validation for WebSocket APIs in API Gateway
+#### Request Validation for WebSocket APIs in API Gateway
 
 Incoming WebSocket requests can be validated by API Gateway before being passed to backend integrations, just like with REST APIs. As you might expect by this point, different JSON schema request models can be used for validation, each keyed off of a model selection expression (which works just like a route selection expression). A catch-all `$default` model can also be defined.
 

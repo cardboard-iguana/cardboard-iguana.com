@@ -1,15 +1,15 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
-author:: Nathan Acks  
-date:: 2022-04-11
+**author**:: Nathan Acks  
+**date**:: 2022-04-11
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
+## ITPro.TV: CompTIA Security+ (SY0-601)
 
-## Vulnerability Scans
+### Vulnerability Scans
 
 Nothing new here if you've ever been in charge of Nessus/Tenable.io
 
-## SIEM And SOAR Systems
+### SIEM And SOAR Systems
 
 SIEM: Security Information and Event Management
 
@@ -23,7 +23,7 @@ ITPro.TV ends out this episode by demoing Security Onion, which appears to be an
 
 * [Security Onion Solutions](https://securityonionsolutions.com/)
 
-## Pentesting Techniques
+### Pentesting Techniques
 
 The difference between a vulnerability assessment and a penetration test ultimately lies in whether you attempt to *exploit* the discovered vulnerabilities.
 
@@ -39,15 +39,15 @@ Phases:
 * Reporting (this is what people are *actually* paying for)
 * Cleanup
 
-## Pentesting Exercise Types
+### Pentesting Exercise Types
 
 Red teams *within* organizations typically are less restricted than external pentesters. They have specific *goals* (not just "identify exploitable vulnerabilities", but something more like "obtain access to X") and *a lot* more latitude.
 
 Purple teams are most common in smaller organizations with constrained resources.
 
-# TryHackMe: Jr. Penetration Tester
+## TryHackMe: Jr. Penetration Tester
 
-## Introduction to Vulnerabilties
+### Introduction to Vulnerabilties
 
 * OS/Software
 * Misconfigurations
@@ -57,15 +57,15 @@ Purple teams are most common in smaller organizations with constrained resources
 
 OS/Software vulnerabilities are the most likely to result in privesc.
 
-## Scoring Vulnerabilities (CVSS & VPR)
+### Scoring Vulnerabilities (CVSS & VPR)
 
 That said, only ~20% of vulnerabilities have an actual exploit, and only ~2% are actually exploited in the wild.
 
-## Vulnerability Databases
+### Vulnerability Databases
 
 * [National Vulnerability Database (NVD)](https://nvd.nist.gov/vuln/full-listing)
 * [Exploit Database](http://exploit-db.com/)
 
-## Finding Manual Exploits
+### Finding Manual Exploits
 
 * [Rapid7 Vulnerability & Exploit Database](https://www.rapid7.com/db/)

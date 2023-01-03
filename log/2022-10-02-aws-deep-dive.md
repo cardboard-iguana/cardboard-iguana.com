@@ -1,13 +1,13 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-10-02
+**author**:: Nathan Acks  
+**date**:: 2022-10-02
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 More notes about the Amazon API Gateway. (In the interest of time I'm skipping the "Tutorials and Workshops" section of Amazon's documentation, however.)
 
-## Getting Started
+### Getting Started
 
 API Gateway automatically integrates with Lambda, showing available functions when creating new APIs. Handy!
 
@@ -17,11 +17,11 @@ Creating a Lambda function automatically creates an associated CloudWatch log gr
 
 * [Getting started with API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/getting-started.html)
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Creating a REST API in Amazon API Gateway
+#### Creating a REST API in Amazon API Gateway
 
 Backend replies are expected to happen synchronously relative to the corresponding frontend requests with the API Gateway's REST API feature.
 

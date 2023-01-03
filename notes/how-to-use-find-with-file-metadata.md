@@ -1,15 +1,15 @@
 # How to Use "find" With File Metadata
 
-author:: Nathan Acks  
-date:: 2022-08-05
+**author**:: Nathan Acks  
+**date**:: 2022-08-05
 
 Some useful find flags related to file metadata.
 
-# -user and -group
+## -user and -group
 
 Matches files owned by a particular user or group (both numeric and symbolic-readable names are allowed).
 
-# -size
+## -size
 
 Matches files of size n.
 
@@ -22,7 +22,7 @@ Prefix n with + or - to match files *strictly* greater than or less than n in si
 
 For example, use `-size +4G` to find files over 4 GB (i.e., those that can't be written to a FAT32 file system).
 
-# -perm
+## -perm
 
 Matches files with a given permission. Both numeric and symbolic permissions are allowed.
 
@@ -30,7 +30,7 @@ Use the / or - prefix to match files with *any* of the specified permissions or 
 
 * [Symbolic Permissions](symbolic-permissions.md)
 
-## Find SUID Files
+### Find SUID Files
 
 ```bash
 find / -type f -perm -04000 -ls 2>/dev/null
@@ -42,7 +42,7 @@ Or:
 find / -type f -perm -u=s -ls 2>/dev/null
 ```
 
-## Find SUID and SGID Executables
+### Find SUID and SGID Executables
 
 ```bash
 find / -type f \
@@ -50,13 +50,13 @@ find / -type f \
        -exec ls -l {} \; 2> /dev/null
 ```
 
-## Find World Writable/Executable Folders
+### Find World Writable/Executable Folders
 
 ```bash
 find / -type d -a \( -perm -o+w -perm -o+x \) 2>/dev/null
 ```
 
-# -Xmin and -Xtime
+## -Xmin and -Xtime
 
 Matches files accessed (a), had their *contents* modified (m), or had their *inode* changed (c) n minutes (-Xmin) or days (-Xtime) ago.
 

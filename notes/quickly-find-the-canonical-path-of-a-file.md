@@ -1,6 +1,6 @@
 # Quickly Find the Canonical Path of a File
 
-author:: Nathan Acks
+**author**:: Nathan Acks
 
 On Debian-based systems and derivatives, use `readlink`.
 

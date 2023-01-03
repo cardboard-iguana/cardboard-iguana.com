@@ -1,7 +1,7 @@
 # Different Representations of IPv4 Addresses
 
-author:: Nathan Acks  
-date:: 2022-03-19
+**author**:: Nathan Acks  
+**date**:: 2022-03-19
 
 Localhost can be represented in a lot of different ways.
 
@@ -30,7 +30,7 @@ Converting to hexadecimal is trivial using the excellent Qalculate tool.
 * [TryHackMe: Web Fundamentals](tryhackme-web-fundamentals.md)
 * [Qalculate!](https://qalculate.github.io/)
 
-# Common IP Addresses
+## Common IP Addresses
 
 * localhost -> 127.0.0.1 -> 0x7F000001 -> 2130706433 (decimal)
 

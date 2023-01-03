@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-11-16
+**author**:: Nathan Acks  
+**date**:: 2021-11-16
 
-# Volatility
+## Volatility
 
-## Examining Our Patient
+### Examining Our Patient
 
 Volatility has been removed from Kali, but Volatility 3 is installable via pip. Unfortunately, the commands seem a bit different than what's used in the TryHackMe: Volatility room.
 
@@ -34,7 +34,7 @@ We also seem to be missing the ldrmodules and apihooks plugins, and googling aro
 * [Comparison of Microsoft Windows versions (Wikipedia)](https://en.wikipedia.org/wiki/Comparison_of_Microsoft_Windows_versions)
 * [Volatility 3 Cheatsheet](https://blog.onfvp.com/post/volatility-cheatsheet/)
 
-## Post Actions
+### Post Actions
 
 Striking out again.
 

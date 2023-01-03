@@ -1,7 +1,7 @@
 # Regex Metacharacters
 
-author:: Nathan Acks  
-date:: 2021-09-21
+**author**:: Nathan Acks  
+**date**:: 2021-09-21
 
 * `\d` - `[0-9]`
 * `\D` - `[^0-9]`

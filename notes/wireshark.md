@@ -1,9 +1,9 @@
 # Using Wireshark
 
-author:: Nathan Acks  
-date:: 2022-08-13
+**author**:: Nathan Acks  
+**date**:: 2022-08-13
 
-# User Interface
+## User Interface
 
 TCP "conversations" (related packets) can be automatically filtered by right-clicking on a packet and selecting "Conversation Filter > TCP" (this matches all packets with the same source/destination IP/port). This really just automatically applies a filter.
 
@@ -11,7 +11,7 @@ Use "Statistics > Conversations" to get a quick overview of the conversations in
 
 Use "Statistics > Capture File Properties" to see information about capture files (you can also include/save comments here!).
 
-## Packet List
+### Packet List
 
 By default, the "Time" column is in seconds and starts at zero (0) for the first packet captured. PCAP files actually include the full packet timestamp, so the format of the "Time" column can be changed using "View > Time Display Format".
 
@@ -29,7 +29,7 @@ If you can find an encryption key in a packet dump, you can try applying them to
 
 Wireshark can easily extract files from HTTP conversations. To extract them from raw TCP streams, (1) locate the beginning of the stream, (2) right-click on the packet and select "Follow > TCP Stream, (3) change "Show data as" to "Raw", and (4) save it off using "Save As".
 
-# Filtering
+## Filtering
 
 * Filter on a negation using `!` (for example, `!arp` filters out ARP packets).
 * To see SYN/ACK packets, filter with `tcp.flags.syn == 1 && tcp.flags.ack == 1`.
@@ -39,7 +39,7 @@ If you click on a field for a packet, the filter name is displayed in the lower 
 
 To see (suspected) retransmissions in Wireshark, filter for the `tcp.analysis.retransmission` flag. Some retransmissions may be "fast", in that the packet is transmitted before the TCP timer would have expired. This happens when SACK is used, typically after a packet isn't acknowledged in after three consecutive SACK blocks.
 
-# Customization
+## Customization
 
 Wireshark supports "profiles" (accessible in the lower right in the status bar) that are just collections of settings, filters, layouts, etc.
 
@@ -47,6 +47,6 @@ Wireshark allows filters to be saved for quick access; use the "+" button to the
 
 Protocol names can be resolved in the Wireshark preferences by checking the "Name Resolution > Resolve transport names" option. IP address resolution is controlled using "Name Resolution > Resolve network (IP) addresses". Wireshark can pull from either DNS querier in the packet capture itself, or from the resolver itself. Using an external resolver can get pretty noisy though.
 
-## Color Rules
+### Color Rules
 
 Color rules are just filters; they're matched in order (from top down), with the first matched coloring rule applying. Note that Wireshark is not really consistent about applying new coloring rules - it's best to reload the file after creating/modifying rules.

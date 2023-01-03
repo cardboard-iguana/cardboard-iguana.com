@@ -1,7 +1,7 @@
 # Linux (and BSD) Password Hashes
 
-author:: Nathan Acks  
-date:: 2021-10-12
+**author**:: Nathan Acks  
+**date**:: 2021-10-12
 
 UNIX-style passwords are of the form `$format$rounds$salt$hash`. Common `format` parameters:
 

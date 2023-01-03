@@ -1,15 +1,15 @@
 # TryHackMe: Pre Security
 
-author:: Nathan Acks  
-date:: 2021-09-16
+**author**:: Nathan Acks  
+**date**:: 2021-09-16
 
-# A Bit of Background on Linux
+## A Bit of Background on Linux
 
 The first release of Linux was on September 17, 1991.
 
 * [Linux (Wikipedia)](https://en.wikipedia.org/wiki/Linux)
 
-# General/Useful Utilities
+## General/Useful Utilities
 
 Quick-n-dirty Python 3 web server:
 
@@ -17,7 +17,7 @@ Quick-n-dirty Python 3 web server:
 python3 -m http.server
 ```
 
-# Processes 101
+## Processes 101
 
 Selected Linux process signals:
 

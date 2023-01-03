@@ -1,15 +1,15 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-09-29
+**author**:: Nathan Acks  
+**date**:: 2021-09-29
 
-# Network Services
+## Network Services
 
-## Understanding SMB
+### Understanding SMB
 
 Huh. Apparently you can share serial ports using SMB?!?
 
-## Enumerating SMB
+### Enumerating SMB
 
 Typical NMAP portscan output for SMB:
 
@@ -19,7 +19,7 @@ PORT    STATE SERVICE      REASON
 445/tcp open  microsoft-ds syn-ack
 ```
 
-## Exploiting SMB
+### Exploiting SMB
 
 ```bash
 smbclient //$IP/$SHARE -U $USER -p $PORT

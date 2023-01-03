@@ -1,17 +1,17 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-10-15
+**author**:: Nathan Acks  
+**date**:: 2022-10-15
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Enable Request Validation in API Gateway
+#### Enable Request Validation in API Gateway
 
 Incoming requests that fail API Gateway validation (if configured) result in the following:
 
@@ -25,7 +25,7 @@ A "default" validator can be set at the level of the entire API, in which case i
 
 * [Enable request validation in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html)
 
-### API Gateway: Setting Up Data Transformations for REST APIs
+#### API Gateway: Setting Up Data Transformations for REST APIs
 
 Mapping templates (method request -> integration request and integration response -> method response) are Velocity Template Language (VTL) scripts; individual data elements from the input are specified using JSONPath. VTL itself looks fairly straightforward, and is reminiscent of both Handlebars and Liquid.
 

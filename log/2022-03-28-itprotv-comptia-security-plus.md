@@ -1,13 +1,13 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-author:: Nathan Acks  
-date:: 2022-03-28
+**author**:: Nathan Acks  
+**date**:: 2022-03-28
 
-# CompTIA Security+ Exam Cram
+## CompTIA Security+ Exam Cram
 
 Today I'll be reading chapter 19 of the Security+ Exam Cram, "Secure Network Design".
 
-# Routers
+## Routers
 
 Layer 3 device. Key protocols for manipulating routing tables:
 
@@ -26,13 +26,13 @@ Something that isn't done enough (and I'm as guilty as anyone) is default deny f
 
 * [OSI Model](../notes/osi-model.md)
 
-# Network Address Translation (NAT)
+## Network Address Translation (NAT)
 
 I've always though of NAT'ing as a router/firewall function, but apparently independent "network address translation gateways" are a thing.
 
 Also, it seems that NAT breaks not only IPSec, but also DNSSEC. No TCP segment reassembly.
 
-# Switches
+## Switches
 
 Layer 2 devices; switching decisions are determined by MAC address rather than IP address (as with routers). That said, some "layer 3 switches" (basically fast, stripped-down routers) exist.
 
@@ -40,7 +40,7 @@ An interesting way to think about VLANs here: As separate broadcast domains.
 
 * [OSI Model](../notes/osi-model.md)
 
-# Port Security
+## Port Security
 
 "Port security" isn't about IP ports, but rather about switch ports. Basically per-port MAC address filtering. There are three modes that a port can enter when port security is violated:
 
@@ -60,7 +60,7 @@ Exam Cram indicates that port security questions are likely to be on the Securit
 * [What is BPDU Guard and How to Configure BPDU Guard?](https://www.geeksforgeeks.org/what-is-bpdu-guard-and-how-to-configure-bpdu-guard/)
 * [DHCP Snooping](https://www.geeksforgeeks.org/dhcp-snooping/)
 
-# Virtual Local Area Network (VLAN)
+## Virtual Local Area Network (VLAN)
 
 Inter-VLAN routing is handled by layer 3 devices (both routers and "layer 3 switches").
 
@@ -70,7 +70,7 @@ There's actually a "VLAN trunking protocol", which I'm going to guess is what wo
 
 Remember that VLANs are logical, so an attacker can forge packets for a VLAN they have access to.
 
-# Bridges
+## Bridges
 
 Bridges forward packets from one network to another. Types:
 
@@ -83,7 +83,7 @@ Spanning Tree Protocol (STP) is the main method for detecting loops and coordina
 
 Loop guard is the primary method used to protect STP.
 
-# Security Devices and Boundaries
+## Security Devices and Boundaries
 
 Stateless firewalls permit or deny packets based solely on their ACLs.
 
@@ -99,7 +99,7 @@ Networks can - and should - be segmented and restricted across multiple OSI laye
 
 * [OSI Model](../notes/osi-model.md)
 
-# Screened Subnet
+## Screened Subnet
 
 Apparently "screened subnets" is what we're calling DMZs these days. Systems in a DMZ are accessible by both internal and external users, but only in a controlled fashion for both.
 
@@ -117,7 +117,7 @@ Exam Cram recommends the use of *both* built-in network-level encryption *and* e
 
 Jump server = Bastion server
 
-# Web Application Firewalls
+## Web Application Firewalls
 
 WAFs can be considered to be a special case of "next generation firewalls", which are simply application-aware firewalls. Generally next-gen firewalls incorporate some kind of IDS and/or IPS. They generally straddle OSI layers 3 - 7.
 
@@ -125,7 +125,7 @@ Certificates will need to be deployed to client systems if packet inspection of 
 
 * [OSI Model](../notes/osi-model.md)
 
-# Proxies
+## Proxies
 
 A proxy server is just a go-between from a network to the internet. Uses:
 
@@ -143,11 +143,11 @@ Forward proxies control data originating on internal networks destined for the i
 
 Sometimes proxies are placed in parallel with routers for load balancing purposes (HTTP/FTP through the proxy, all other traffic through the router).
 
-# Unified Threat Management (UTM)
+## Unified Threat Management (UTM)
 
 UTMs are basically next-gen firewalls with filters specifically geared towards spam, viruses, and malware. DLP and content filtering may also be provided by a UTM solution.
 
-# VPN Concentrators
+## VPN Concentrators
 
 Apparently, "VPN concentrator" is just a fancy way of saying "VPN server tuned to handle a large number of simultaneous tunnels".
 
@@ -156,7 +156,7 @@ Two VPN tunneling modes:
 * Full: Everything is routed over the VPN.
 * Split: Only some traffic is routed over the VPN.
 
-# NIDS and NIPS
+## NIDS and NIPS
 
 NIDS = Network Intrusion Detection System
 
@@ -172,7 +172,7 @@ NIPS are typically deployed at the network perimeter, or at bottlenecks between 
 
 * [OSI Model](../notes/osi-model.md)
 
-# Detection Methods
+## Detection Methods
 
 Signature/Knowledge-based detection look for pre-defined patterns of network behavior.
 
@@ -180,7 +180,7 @@ Behavior-based detections require a profile of "normal" activity to work, and th
 
 Heuristic-based detections extend anomaly-based detection methods to all network traffic. Heuristic methods also work to generate their own rule sets, whereas anomaly-based methods are looking for any deviation from baseline.
 
-# Network Access Control (NAC)
+## Network Access Control (NAC)
 
 The idea behind a NAC is to profile computers joining a network and then provide (or deny) access to resources based on these results. Parts of a NAC:
 

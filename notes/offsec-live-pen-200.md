@@ -1,14 +1,14 @@
 # OffSec Live: PEN-200
 
-author:: Nathan Acks  
-date:: 2022-08-31  
-tags:: #MOC
+**author**:: Nathan Acks  
+**date**:: 2022-08-31  
+**tags**:: #MOC
 
 * [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
 * [Join OffSec Live](https://learn.offensive-security.com/offsec-live-webinars)
 * [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
 
-# Course Notes
+## Course Notes
 
 * [2022-06-24 - OffSec Live: PEN-200](../log/2022-06-24-offsec-live-pen-200.md)
 * [2022-06-29 - OffSec Live: PEN-200 & AWS Deeps Dive](../log/2022-06-29-offsec-live-pen-200-and-aws-deep-dive.md)

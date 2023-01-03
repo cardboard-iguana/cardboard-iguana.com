@@ -1,19 +1,19 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-10-31
+**author**:: Nathan Acks  
+**date**:: 2022-10-31
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Deploying a REST API in Amazon API Gateway (Continued)
+#### Deploying a REST API in Amazon API Gateway (Continued)
 
 Stage variables can be referenced directly as `stageVariables.VARIABLE_NAME` in request and response header parameter mappings, but must be referenced as `${stageVariables.VARIABLE_NAME}` everywhere else (including mapping *templates*). Interestingly, stage variables cannot be used to construct ARNs referencing Lambda functions in other accounts.
 
@@ -49,7 +49,7 @@ And that's about it for REST API deployments.
 * [2022-10-26 - AWS Deep Dive (Deploying a REST API in Amazon API Gateway, Part 1)](2022-10-26-aws-deep-dive.md)
 * [Deploying a REST API in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-deploy-api.html)
 
-### Setting Up Custom Domain Names for REST APIs in API Gateway
+#### Setting Up Custom Domain Names for REST APIs in API Gateway
 
 Custom domains can only be used by public APIs. Surprisingly, it seems that API Gateway's TLS support caps out at v1.2.
 

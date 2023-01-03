@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-06-05
+**author**:: Nathan Acks  
+**date**:: 2022-06-05
 
 It's been a while, hasn't it?
 
@@ -24,19 +24,19 @@ Once I'm done with both of these I'll turn back to the remaining TryHackMe "supp
 * [PortSwigger: Burp Suite](https://portswigger.net/burp)
 * [PortSwigger: Web Security Academy](https://portswigger.net/web-security/learning-path)
 
-# AWS Essentials
+## AWS Essentials
 
 I'll be starting off by watching through the "AWS Essentials" YouTube playlist put together by the Linux Academy.
 
 * [AWS Essentials (YouTube)](https://youtube.com/playlist?list=PLv2a_5pNAko0Mijc6mnv04xeOut443Wnk)
 
-## Project Omega!
+### Project Omega!
 
 [AWS Essentials: Project Omega! (YouTube)](https://youtu.be/CGFrYNDpzUM)
 
 This is apparently the framing device for the entire series. Pretty skippable.
 
-## AWS Free Tier
+### AWS Free Tier
 
 [AWS Essentials: AWS Free Tier (YouTube)](https://youtu.be/8p1bTTV6ATE)
 
@@ -52,19 +52,19 @@ Core AWS services:
 
 These all have some kind of free version.
 
-## Create an AWS Account
+### Create an AWS Account
 
 [AWS Essentials: Create an AWS Account (YouTube)](https://youtu.be/_siSwgpVQNc)
 
 Wow, AWS is using *voice calls* for account authentication! (At least they're automated...)
 
-## How to Navigate the AWS Console
+### How to Navigate the AWS Console
 
 [AWS Essentials: How to Navigate the AWS Console (YouTube)](https://youtu.be/A43m4TDFCUM)
 
 You can switch between regions in AWS using a simple drop-down in the AWS Console's header.
 
-## What is IAM?
+### What is IAM?
 
 [AWS Essentials: What is IAM? (YouTube)](https://youtu.be/4ngYrnJb7F8)
 
@@ -72,7 +72,7 @@ The first user in an AWS account is the "root" user, and has the sort of privile
 
 While the root user gets permission to *everything*, subsequent users receive no permissions beyond what's required to log in - any additional capabilities must be added in the IAM interface.
 
-## IAM Initial Setup and Configuration
+### IAM Initial Setup and Configuration
 
 [AWS Essentials: IAM Initial Setup and Configuration (YouTube)](https://youtu.be/W_eu0rJN0yU)
 
@@ -82,7 +82,7 @@ Amazon MFA is *always* TOTP-based (when AWS refers to a "hardware key fob", it m
 
 For obvious reasons, the first thing you should probably do is create an additional (admin) user, and then generally *avoid* using the root user. Admin users are defined by having the `AdministratorAccess` policy attached.
 
-## IAM Roles
+### IAM Roles
 
 [AWS Essentials: IAM Roles (YouTube)](https://youtu.be/7sYE6J1_CsQ)
 
@@ -92,7 +92,7 @@ In general, roles are used to package policies for *service objects*, while grou
 
 * [Assume the Worst: Enumerating AWS Roles through 'AssumeRole'](https://rhinosecuritylabs.com/aws/assume-worst-aws-assume-role-enumeration/)
 
-## AWS Global Infrastructure
+### AWS Global Infrastructure
 
 [AWS Essentials: AWS Global Infrastructure (YouTube)](https://youtu.be/J_Kh1gZaMd4)
 
@@ -104,7 +104,7 @@ VPC (Virtual Private Cloud)  is the backbone of AWS's offerings.
 
 Every data center is assigned to *only* one availability zone; the purpose of availability zones is to provide redundancy within a region.
 
-## What is a VPC?
+### What is a VPC?
 
 [AWS Essentials: What is a VPC? (YouTube)](https://youtu.be/7XnpdZF_COA)
 
@@ -116,7 +116,7 @@ Note that a "default" VPC is created along with a new AWS account, but *addition
 
 The VPC "internet gateway" is roughly equivalent to a modem in a home or SMB, while VPC "route tables" function like an actual router. VPC NACLs roughly fill the role of a (very simple, stateless) firewall.
 
-## Internet Gateways (IGWs)
+### Internet Gateways (IGWs)
 
 [AWS Essentials: Internet Gateways (IGWs) (YouTube)](https://youtu.be/pAOrBxZ7584)
 
@@ -124,7 +124,7 @@ Basically: The part of a VPC that provides the actual connection to the internet
 
 Really, all a IGW is providing is a *route* from the attached VPC to the internet. There can only be *one* IGW attached to a VPC at any given time. (Amazon also won't allow a IGW to be detached if there are any live resources like EC2 or RDS instances in the VPC.)
 
-## Route Tables (RTs)
+### Route Tables (RTs)
 
 [AWS Essentials: Route Tables (RTs) (YouTube)](https://youtu.be/GrfOsWUVCfg)
 
@@ -132,7 +132,7 @@ The Route Table is presented (almost) as a literal route table (think of the Lin
 
 There can be *multiple* RTs per VPC. Similar to IGWs, however, RTs can only be deleted if they have no dependencies (active routes).
 
-## Network Access Control Lists (NACLs)
+### Network Access Control Lists (NACLs)
 
 [AWS Essentials: Network Access Control Lists (NACLs) (YouTube)](https://youtu.be/vJzHn24TNQE)
 
@@ -146,7 +146,7 @@ NACL rules are evaluated from lowest-to-highest rule number. Fortunately, the AW
 
 Note that additional network security controls ("security groups") can be applied to AWS resources like EC2 instances, etc. But NACLs are the only *subnet* level protection that's available.
 
-## Subnets
+### Subnets
 
 [AWS Essentials: Subnets (YouTube)](https://youtu.be/KNT463WSjjY)
 
@@ -156,13 +156,13 @@ Resources *must* be provisioned within a subnet. Since subnets cannot span avail
 
 Subnets can be "public" (internet routable) or "private" (*not* internet routable), which is determined by the associated route table. Note that every subnets *must* be associated with a route table.
 
-## Availability Zones (VPC Specific)
+### Availability Zones (VPC Specific)
 
 [AWS Essentials: Availability Zones (VPC Specific) (YouTube)](https://youtu.be/ET_CSqdGsYg)
 
 The point of availability zones within a VPC is to allow redundancy to be engineered via mirrored subnets + resources.
 
-## S3 Basics
+### S3 Basics
 
 [AWS Essentials: S3 Basics (YouTube)](https://youtu.be/f9hXcxHnQuE)
 
@@ -170,13 +170,13 @@ Objects = Files
 
 Buckets are limited to particular regions; data is automatically replicated across availability zones within that region.
 
-## Buckets & Objects
+### Buckets & Objects
 
 [AWS Essentials: Buckets & Objects (YouTube)](https://youtu.be/skJosIhDNF0)
 
 Bucket names are *globally* unique.
 
-## Storage Classes
+### Storage Classes
 
 [AWS Essentials: Storage Classes (YouTube)](https://youtu.be/DFfgYapmu9s)
 

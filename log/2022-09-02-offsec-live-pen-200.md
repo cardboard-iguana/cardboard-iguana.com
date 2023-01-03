@@ -1,9 +1,9 @@
 # OffSec Live: PEN-200
 
-author:: Nathan Acks  
-date:: 2022-09-02
+**author**:: Nathan Acks  
+**date**:: 2022-09-02
 
-# Active Directory Enumeration & Exploitation, Part 4
+## Active Directory Enumeration & Exploitation, Part 4
 
 LM hashes aren't used in WIndows anymore, and often empty or garbage values will work fine when passing a full NTLM hash (only the NT hash is important).
 

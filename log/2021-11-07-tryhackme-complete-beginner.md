@@ -1,17 +1,17 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-11-07
+**author**:: Nathan Acks  
+**date**:: 2021-11-07
 
-# Steel Mountain
+## Steel Mountain
 
-## Introduction
+### Introduction
 
 Apparently this machine is running a web server. (Though I never would have guest that without first searching for a walkthrough of this TryHackMe room, as my initial response was, "how the hell do I know who the employee of the month is based on the IP of a Windows machine I can't yet log into?")
 
 The machine IP address for this exercise is 10.10.241.108.
 
-## Initial Access
+### Initial Access
 
 NMAP command line (note that we skip the ping test, since Windows machines don't respond to ping by default, and because the introduction told us that this machine wouldn't respond to ping):
 
@@ -178,7 +178,7 @@ I lost a good hour getting stuck because of these two minor complications.
 
 * [Using "nmap"](../notes/nmap.md)
 
-## Privilege Escalation
+### Privilege Escalation
 
 PowerUp is a script that scans for common Windows vulnerabilities. It looks like the version that's included with Kali Linux is different and/or not-up-to-date relative to the version of PowerUp linked to by the TryHackMe Steelmountain room. In particular, Kali version doesn't list *a lot* of information about potentially vulnerable services that is necessary for completing this section. (On the downside, the version of PowerUp we need to use produces *a lot* of duplicative output too...)
 

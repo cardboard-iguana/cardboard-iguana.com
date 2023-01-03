@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-12-05
+**author**:: Nathan Acks  
+**date**:: 2021-12-05
 
-# Attacking Kerberos
+## Attacking Kerberos
 
-## Introduction
+### Introduction
 
 Kerberos: The default authentication method for Windows domains. Intended to be the successor to NTLM.
 
@@ -70,13 +70,13 @@ The above process explains why it's sometimes said that "a hash is as good as a 
 * [TryHackMe: Attacking Kerberos](https://tryhackme.com/room/attackingkerberos)
 * [Kerberos (protocol) (Wikipedia)](https://en.wikipedia.org/wiki/Kerberos_%28protocol%29#Description)
 
-## Enumerating with Kerbrute
+### Enumerating with Kerbrute
 
 Kerbrute works by sending a single UDP packet to the authentication service to begin the authentication process, but then doesn't complete the transaction as to avoid an actual login failure (and the associated logging). While this doesn't grant access to anything, it does allow domain users to be enumerated using a wordlist.
 
 NOTE: To use kerbrute you need to already be on the domain you are attacking, or alternately need to have mapped the domain controller (which normally hosts the KDC) IP address properly in your /etc/hosts file.
 
-## Harvesting & Brute-Forcing Tickets with Rubeus
+### Harvesting & Brute-Forcing Tickets with Rubeus
 
 Rubeus is a Windows-only post-exploitation tool for attacking Kerberos. No compiled binaries are available (either through the GitHub repo or Kali Linux's `windows-binaries` package).
 
@@ -97,7 +97,7 @@ Rubeus.exe brute /password:ThePasswordToSpray /noticket
 
 * [Rubeus](https://github.com/GhostPack/Rubeus)
 
-## Kerberoasting
+### Kerberoasting
 
 Kerberoasting is where a service ticket is used to brute force a service password. This password can then be used to either move laterally or (if the service runs with elevated privileges) to elevate your privileges.
 
@@ -105,7 +105,7 @@ Note that not every account is kerberoastable, though it's not 100% obvious from
 
 The main defenses against kerberoasting are (1) strong passwords and (2) making sure you're not running any services as domain admin (which you shouldn't need to do in this day and age anyway).
 
-## Rubeus
+### Rubeus
 
 ```powershell
 # Extract password hashes for all known kerberoastable accounts using
@@ -118,7 +118,7 @@ The password hashes output here can then be cracked with Hashcat (use the 13100 
 
 * [Using Hashcat](../notes/hashcat.md)
 
-## Impacket
+### Impacket
 
 Impacket can identify kerberoastable accounts and dump packets remotely. It comes standard with Kali Linux.
 
@@ -133,7 +133,7 @@ The password hashes output here can then be cracked with Hashcat (use the 13100 
 
 * [Using Hashcat](../notes/hashcat.md)
 
-## AS-REP Roasting with Rubeus
+### AS-REP Roasting with Rubeus
 
 AS-REP roasting is basically kerberoasting for regular user accounts. The only requirement to roast a user account is that Kerberos pre-authentication is disable.
 
@@ -154,7 +154,7 @@ Basically the only mitigation for this attack is to keep pre-authentication enab
 * [Windows Password Hashes](../notes/windows-password-hashes.md)
 * [Using Hashcat](../notes/hashcat.md)
 
-## Pass the Ticket with Mimikatz
+### Pass the Ticket with Mimikatz
 
 Mimikatz can dump ticket granting tickets (and session keys?) from the memory of Windows' Local Security Authority Subsystem Service (LSASS); these can then be used to for privilege elevation or lateral movement (depending on which users are active on that machine).
 
@@ -172,7 +172,7 @@ The only real way to defend against this attack is to *only* allow domain admins
 
 * [Rubeus - Now With More Kekeo](http://www.harmj0y.net/blog/redteaming/rubeus-now-with-more-kekeo/)
 
-## Golden/Silver Ticket Attacks with Mimikatz
+### Golden/Silver Ticket Attacks with Mimikatz
 
 The idea with gold and silver tickets is that, since the KDC and service long term secret keys are just the NT hashes of the corresponding service account's passwords, then if you can dump the password (or even its hash), you can *forge* a kerberos ticket without ever needing to contact the KDC. (See "Silver & Golden Tickets".)
 
@@ -199,7 +199,7 @@ Once the ticket has been created, use `misc::cmd` to open a command prompt using
 * [Windows Password Hashes](../notes/windows-password-hashes.md)
 * [Silver & Golden Tickets](https://en.hackndo.com/kerberos-silver-golden-tickets/)
 
-## Kerberos Backdoors with Mimikatz
+### Kerberos Backdoors with Mimikatz
 
 If Mimikatz is run on a domain controller, it can modify the authentication service's memory using the `misc::skeleton` command to cause it to attempt to decrypt the AS-REQ using *both* the user's NT hash *and* an NT hash of your choosing (by default `60BA4FCADC466C7A033C178194C03DF6`, which is just `mimikatz`).  This means that you can send an AS-REQ as any user using the "skeleton key" hash to gain access as that user, similar to a golden ticket attack.
 

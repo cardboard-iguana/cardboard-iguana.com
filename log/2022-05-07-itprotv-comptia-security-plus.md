@@ -1,13 +1,13 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-author:: Nathan Acks  
-date:: 2022-05-07
+**author**:: Nathan Acks  
+**date**:: 2022-05-07
 
-# CompTIA Security+ Exam Cram
+## CompTIA Security+ Exam Cram
 
 Today I'll be working through my *last* reading from the Security+ Exam Cram (chapter 35), "Sensitive Data and Privacy".
 
-## Data Sensitivity Labeling and Handling
+### Data Sensitivity Labeling and Handling
 
 Common data classification labels:
 
@@ -19,13 +19,13 @@ Common data classification labels:
 
 Data often changes its sensitivity level depending on its stage of use (for example, quarterly financials move from sensitive -> public).
 
-## Privacy Laws and Regulatory Compliance
+### Privacy Laws and Regulatory Compliance
 
 Keep in mind that PII, like any kind of data classification, is contextual. A set of data points which is not PII by itself can become PII when combined with other data (deanonymization, etc.).
 
 PHI needs to be protected for 50 years after the individuals death (!!!).
 
-## Data Roles and Responsibilities
+### Data Roles and Responsibilities
 
 Key roles:
 
@@ -37,9 +37,9 @@ Key roles:
 
 Note that it's not uncommon for a single person to have multiple roles w.r.t. a given piece/type of data.
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
+## ITPro.TV: CompTIA Security+ (SY0-601)
 
-## Privacy and Data Sensitivity - Breaches & Data Types
+### Privacy and Data Sensitivity - Breaches & Data Types
 
 Initial steps when containing a data breach:
 
@@ -76,7 +76,7 @@ Equivalent common business data classifications:
 
 The idea here is to combine *both* categories and classifications to determine who should have access to a given piece of data.
 
-## Privacy and Data Sensitivity - Privacy Enhancing Tech
+### Privacy and Data Sensitivity - Privacy Enhancing Tech
 
 * Data minimization (in both collection *and* processing)
 * Masking (use "fake" data, normally for testing)
@@ -96,7 +96,7 @@ Data masking techniques:
 
 The key difference between pseudonymization and anonymization is that the former is theoretically reversible (and may be *functionally* reversible with access to the original mapping / lookup table), while the latter is not. Anonymization is actually quite difficult for real-world data without purposefully destroying the patterns/relationships within the data set.
 
-## Privacy and Data Sensitivity - Roles & Responsibilities
+### Privacy and Data Sensitivity - Roles & Responsibilities
 
 "Roles" correspond to a particular *job*, while "responsibilities" correspond to that job's *functions*.
 
@@ -108,7 +108,7 @@ The key difference between pseudonymization and anonymization is that the former
 * Controller (determines the why and how data will be processed, subject to the owner's classification/direction)
 * Processor (whoever's actually processing the data)
 
-## Privacy and Data Sensitivity - Other Areas
+### Privacy and Data Sensitivity - Other Areas
 
 Information lifecycle:
 

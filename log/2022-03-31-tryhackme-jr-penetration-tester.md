@@ -1,17 +1,17 @@
 # TryHackMe: Jr. Penetration Tester
 
-author:: Nathan Acks  
-date:: 2022-03-31
+**author**:: Nathan Acks  
+**date**:: 2022-03-31
 
-# Nmap Live Host Discovery
+## Nmap Live Host Discovery
 
-## Subnetworks
+### Subnetworks
 
 NETWORK SEGMENT: A group of devices connected using a shared medium, such as a switch or wireless access port. A router controls one or more network segments.
 
 ARP packets are bound to a subnet.
 
-## Enumerating Targets
+### Enumerating Targets
 
 Handy nmap flags:
 
@@ -21,7 +21,7 @@ Handy nmap flags:
 
 Note that you can put ranges in any octet of an IP address; for example, 10.10.0-255.1-255 will scan 10.10.0.1 - 10.10.255.255.
 
-## Nmap Host Discovery Using ARP
+### Nmap Host Discovery Using ARP
 
 When called as the superuser, Nmap uses ARP for local host discovery and a combination of ICMP Echo, TCP SYN to 443, TCP ACK to 80, and ICMP Timestamp requests for remote host discovery.
 
@@ -36,13 +36,13 @@ A specialized tool for doing ARP scans is (appropriately enough) `arp-scan`. Use
 
 * [Host Discovery (Official Nmap Project Guide)](https://nmap.org/book/man-host-discovery.html)
 
-## Nmap Host Discovery Using ICMP
+### Nmap Host Discovery Using ICMP
 
 * `-PE` - Use ICMP Echo for host discovery. (Note that Nmap will still not send the echo request if host existence can be verified using the initial ARP request.)
 * `-PP` - Use ICMP Timestamp for host discovery. (Less likely to be blocked by firewalls than `-PE`, but also a more unusual request that may stand out. Like `-PE`, Nmap will still not send the timestamp request if host existence can be verified using the initial ARP request.)
 * `-PM` - Use ICMP Address Mask for host discovery. (More-or-less the same as `-PP`, just a different ICMP request type.)
 
-## Nmap Host Discovery Using TCP and UDP
+### Nmap Host Discovery Using TCP and UDP
 
 * `-PS` - Use TCP SYN packets for host discovery. Uses port 80 by default, or you can specify a port list (e.g., `-PS80,8080,8888`) or range (e.g. `-PS20-30`). (Note that unprivileged users *must* complete a full TCP handshake.)
 * `-PA` - Use TCP ACK packets for host discovery; otherwise the same as `-PS`.
@@ -50,7 +50,7 @@ A specialized tool for doing ARP scans is (appropriately enough) `arp-scan`. Use
 
 The `masscan` utility is basically a *very* aggressive TCP/UDP scanner. Probably too noisy to use in practice.
 
-## Using Reverse-DNS Lookup
+### Using Reverse-DNS Lookup
 
 * `-R` -- Perform reverse DNS resolution even for offline hosts.
 * `--dns-servers` - Specify DNS server(s) to use for hostname resolution and reverse lookups.

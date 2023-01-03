@@ -1,7 +1,7 @@
 # TCP Model
 
-author:: Nathan Acks  
-date:: 2021-09-14
+**author**:: Nathan Acks  
+**date**:: 2021-09-14
 
 * Layer 4: Application (highest)
 * Layer 3: Transport

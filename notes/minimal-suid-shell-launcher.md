@@ -1,7 +1,7 @@
 # Minimal SUID Shell Launcher
 
-author:: Nathan Acks  
-date:: 2022-08-05
+**author**:: Nathan Acks  
+**date**:: 2022-08-05
 
 ```c
 #include <stdio.h>

@@ -1,15 +1,15 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-author:: Nathan Acks  
-date:: 2022-02-27
+**author**:: Nathan Acks  
+**date**:: 2022-02-27
 
-# CompTIA Security+ Exam Cram
+## CompTIA Security+ Exam Cram
 
-## Introduction to Application Attacks
+### Introduction to Application Attacks
 
 It looks like this section will cover attacks on both local and web-based applications.
 
-## Race Conditions
+### Race Conditions
 
 Example: Time-of-check to time-of-use (TOCTOU).
 
@@ -17,20 +17,20 @@ Null pointer errors (when an application dereferences a pointer that it later ex
 
 * [Exploiting Polkit](../notes/exploiting-polkit.md)
 
-## Improper Software Handling
+### Improper Software Handling
 
 This section lumps together oversights in input and error handling. These (sometimes in combination) are a *big* part of what I've studied so far w.r.t. penetration testing (SQL injection comes to mind here as an immediate example that can have aspects of both improper input *and* error handling).
 
 * [SQL Injection](../notes/sql-injection.md)
 * [TryHackMe: Jurassic Park](../notes/tryhackme-jurassic-park.md)
 
-## Resource Exhaustion
+### Resource Exhaustion
 
 Mostly about denial of service.
 
 Example: Memory leaks.
 
-## Overflows
+### Overflows
 
 Buffer overflows: When an application attempts to write more data into a space (normally a variable in memory) than has been allocated to it. For example, CVE 2021-4034.
 
@@ -38,7 +38,7 @@ Integer overflow: Writing a larger integer into a variable than there are alloca
 
 * [Exploiting Polkit](../notes/exploiting-polkit.md)
 
-## Code Injections
+### Code Injections
 
 RCE via buffer overflow typically results in code that's executed *outside* of the context of the target application. Code injection, by contrast, is about running code *within* the context of the target application.
 
@@ -58,7 +58,7 @@ Code signing is a guard against malicious dynamic libraries. As is compiling eve
 
 Cram Exam implies that the Security+ exam will generally ask about code injection attacks in the context of a particular system, which should clue you in to which kind of attack is being used.
 
-## Driver Manipulation
+### Driver Manipulation
 
 Examples:
 
@@ -67,7 +67,7 @@ Examples:
 
 As with dynamic library attacks, code signing is really the only way to guard against these attack. (Well, maybe also monolithic kernels, but then you can't support devices you didn't plan for from the get-go!)
 
-## Request Forgeries
+### Request Forgeries
 
 Cross-site request forgeries (CSRF/XSRF) is about using a malicious URL to cause an action to be taken on behalf of legitimately signed-in users. This URL might point to the target site directly, or might reflect through another (potentially attacker-controlled) site, exploiting improperly scoped authentication cookies.
 
@@ -77,7 +77,7 @@ While CSRF is about exploiting the trust between a server and one of its users, 
 
 * [Local File Inclusion Attacks](../notes/local-file-inclusion-attacks.md)
 
-## Directory Traversal
+### Directory Traversal
 
 Local file inclusion (and friends), again.
 
@@ -85,7 +85,7 @@ Note that Exam Cram seems to imply that the Security+ test will make a distincti
 
 * [Local File Inclusion Attacks](../notes/local-file-inclusion-attacks.md)
 
-## Replay Attack
+### Replay Attack
 
 This is about *replaying* previous requests, possibly with altered data. Think Burp Suite's "repeater" module.
 
@@ -97,11 +97,11 @@ Apparently, some web apps accept session ID GET parameters *before* a user is ev
 
 * [Burp Suite](../notes/burp-suite.md)
 
-## Secure Sockets Layer (SSL) Stripping
+### Secure Sockets Layer (SSL) Stripping
 
 A species of man-in-the-middle attack where the attacker terminates the SSL connection on a server they control and then presents an unencrypted connection to the target user. Less common these days, what with HSTS and browsers making initial connections over HTTPS instead of HTTP.
 
-## Application Programming Interface (API) Attacks
+### Application Programming Interface (API) Attacks
 
 * Broken object-level authorization (ACLs are often a mess, part 1)
 * Broken user authentication
@@ -119,7 +119,7 @@ There isn't really anything new here - this is all the same set of vulnerabiliti
 * [OWASP API Top 10](https://owasp.org/www-project-api-security/)
 * [SQL Injection](../notes/sql-injection.md)
 
-## Pass-the-Hash Attack
+### Pass-the-Hash Attack
 
 Kerberos! (I'm still floored that Active Directory uses hashes for actual authentication, rather than as a check that valid authentication credentials have been supplied.)
 
@@ -128,7 +128,7 @@ Of course, other things can use hashes in this way. TL;DR is to just *not* compu
 * [Kerberos](../notes/kerberos.md)
 * [Windows Password Hashes](../notes/windows-password-hashes.md)
 
-## Wireless
+### Wireless
 
 Initialization Vector (IV) Attack: Gather encrypted packets, and then use statistical techniques to derive the initial encryption key (thus breaking the security of the connection being analyzed). Only works if the network's cryptography is vulnerable to it (WEP).
 
@@ -136,7 +136,7 @@ Initialization Vector (IV) Attack: Gather encrypted packets, and then use statis
 
 NFC is a species of RFID, but RFID is not NFC (much older, more broadly used, protocol). (NFC chips combine both the "reader" and "tag" functionality of RFIDs.) RFIDs come in "active" and "passive" varieties, distinguished by whether they contain their own power source (or are powered by the reader).
 
-## On-Path Attack
+### On-Path Attack
 
 A.k.a. the good old man-in-the-middle (MITM) attack. Best prevented with encryption, tight session and device management, and strict (physical) access controls.
 
@@ -144,7 +144,7 @@ Proxies are legitimate man-in-the-middle boxes.
 
 A more common variation is "man-in-the-browser" (MITB), which involves compromising the target's browser to act as the attacker's proxy. Typically MITB attacks are delivered via trojans.
 
-## Layer 2 Attacks
+### Layer 2 Attacks
 
 As in, attacks that operate on the link layer. Examples:
 
@@ -158,7 +158,7 @@ Defenses against ARP poisoning include pre-associating known MAC addresses with 
 * [OSI Model](../notes/osi-model.md)
 * [ARP Protocol](../notes/arp.md)
 
-## Domain Name System (DNS) Attacks
+### Domain Name System (DNS) Attacks
 
 A URL Redirection Attack involves an attacker using legitimate (but poorly locked-down) redirect functionality to redirect a user from a (seemingly) legitimate URL to an attacker-controller URL. Basically another species of improper input handling.
 
@@ -168,7 +168,7 @@ The main defenses against DNS cache poisoning are DNSSEC and limiting which doma
 
 * [What is DNS cache poisoning?](https://www.cloudflare.com/learning/dns/dns-cache-poisoning/)
 
-## Denial of Service
+### Denial of Service
 
 * Smurf attacks (the attacker forges an ICMP ping to a network broadcast address but with the source address changed to that of the target)
 * Fraggle attacks (same as a smurf attack, but uses UDP packets directed at ports 7 and 19)
@@ -193,13 +193,13 @@ Filtering and DoS mitigation services are your best defense here.
 * [LAND (Wikipedia)](https://en.wikipedia.org/wiki/LAND)
 * [OSI Model](../notes/osi-model.md)
 
-## Malicious Code and Script Execution
+### Malicious Code and Script Execution
 
 Macro viruses and file-less malware, again.
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
+## ITPro.TV: CompTIA Security+ (SY0-601)
 
-## Application Attacks - Injections
+### Application Attacks - Injections
 
 Injection: Supplying some type of untrusted input.
 
@@ -216,7 +216,7 @@ Injection: Supplying some type of untrusted input.
 * [SQL Injection](../notes/sql-injection.md)
 * [XML External Entity Attacks](../notes/xml-external-entity-attacks.md)
 
-## Application Attacks - System Resources
+### Application Attacks - System Resources
 
 System resources:
 
@@ -236,7 +236,7 @@ Terms likely to appear on the Security+ test:
 * Buffer overflow
 * Integer overflow
 
-## Application Attacks - XSS And XSRF
+### Application Attacks - XSS And XSRF
 
 Types of cross-site scripting (XSS):
 
@@ -252,7 +252,7 @@ Basically, cross-site request forgery abuses the trust relationship between the 
 
 * [XSS Attacks](../notes/xss-attacks.md)
 
-## Application Attacks - Replay Attacks
+### Application Attacks - Replay Attacks
 
 Replay Attack: The retransmission (and potential modification) of a transmission of data.
 
@@ -262,7 +262,7 @@ Sequence numbers, nonces, and timestamps can help guard against replay attacks b
 
 * [Kerberos](../notes/kerberos.md)
 
-## Network Attacks - DNS Attacks
+### Network Attacks - DNS Attacks
 
 Keep in mind that DNS cache poisoning can be applied to a machine's local DNS cache by malware, in addition to intercepting/spoofing the conversation between the recursive and authoritative DNS servers.
 
@@ -284,7 +284,7 @@ Flush local DNS cache on Windows:
 ipconfig /flushdns
 ```
 
-## Network Attacks - Layer 2 Attacks
+### Network Attacks - Layer 2 Attacks
 
 * ARP poisoning (very similar to DNS cache poisoning, but at the MAC-to-IP translation layer)
 * MAC cloning
@@ -304,7 +304,7 @@ You can examine the ARP cache in Windows using `arp -a`.
 * [OSI Model](../notes/osi-model.md)
 * [ARP Protocol](../notes/arp.md)
 
-## Network Attacks - DoS And DDoS
+### Network Attacks - DoS And DDoS
 
 Physical denial of service attack: Block the heat exchangers in a data center.
 
@@ -316,13 +316,13 @@ Types of D/DoS attacks:
 
 Hybrid attacks are also possible (technically an amplified attack is *already* a hybrid attack).
 
-## Network Attacks - MiTM And MiTB
+### Network Attacks - MiTM And MiTB
 
 The key to preventing MITM attacks is really just to use encrypted protocols. (The key to preventing MITB attacks is to... well... avoid getting infected.)
 
 SIDE NOTE: The "Follow" option in Wireshark's right-click menu displays all of the packets related to a particular connection/session. This is particularly powerful when used against plain text protocols, as it allows the entire conversation to be easily reverse engineered.
 
-## Network Attacks - Wireless
+### Network Attacks - Wireless
 
 The "initialization vector" (IV) is basically a "salt" (sometimes also called a nonce) that's added to data on a wireless network to help prevent cryptanalysis. IVs were easy to attack on WEP, but WPA lengthened the IV and added some other controls that make these attacks much less feasible.
 

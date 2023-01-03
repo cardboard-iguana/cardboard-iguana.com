@@ -1,7 +1,7 @@
 # Enumerate Users with "finger"
 
-author:: Nathan Acks  
-date:: 2022-07-10
+**author**:: Nathan Acks  
+**date**:: 2022-07-10
 
 ```bash
 finger $USER@$IP_ADDRESS

@@ -1,7 +1,7 @@
 # Using John the Ripper
 
-author:: Nathan Acks  
-date:: 2021-10-13
+**author**:: Nathan Acks  
+**date**:: 2021-10-13
 
 ```bash
 john --format=$HASH_FORMAT \
@@ -17,19 +17,19 @@ NOTE: John the Ripper records cracked hash:password tuples in `~/.john/john.pot`
 * [Kali Hashcat and John the Ripper Crack Windows Password hashdump](https://pentesthacker.com/2020/12/27/kali-hashcat-and-john-the-ripper-crack-windows-password-hashdump/)
 * [Using Metasploit](metasploit.md)
 
-# Single Crack Mode
+## Single Crack Mode
 
 John's "single crack mode" (`--single`) is just about exploiting bad password practice - basing passwords off of the username, or details of the operating system. It can be used over "unshadowed" UNIX-style passwords (in which case it will exploit not only the username, but data from other GECOS fields), or on single hashes (in which case the hash must be written as USERNAME:HASH so that john has something to go off of).
 
 Obviously, a wordlist is not required in single crack mode.
 
-# Custom Rules
+## Custom Rules
 
 People typically add "complexity" to a password by appending or prepending the required numbers and symbols (capital letters generally live on either the beginning or end of the password).
 
 John's rules can be used to construct additional permutations of a wordlist to cover these cases. The rule syntax isn't really covered in the TryHackMe room, but seems to be just close enough to regexes to be annoying. Examples can be found in /etc/john/john.conf; the comments make for interesting reading.
 
-# Helper Applications
+## Helper Applications
 
 `hash-identifier` will indicate what hash types match the data in `$PASSWORD_HASH_FILE`. Use this + information about the province of the hashes to choose a likely format. Also useful in conjunction with Hashcat. (Note that the hash names used by `hash-identifier` do *not* correspond to those used by John the Ripper.)
 

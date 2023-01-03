@@ -1,13 +1,13 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
-author:: Nathan Acks  
-date:: 2022-03-13
+**author**:: Nathan Acks  
+**date**:: 2022-03-13
 
 Now that I've made it through the next three chapters of the Security+ Exam Cram (that correspond to the ITPro.TV course), I'm ready to do some lectures. And some more rooms on TryHackMe, because I've been missing it.
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
+## ITPro.TV: CompTIA Security+ (SY0-601)
 
-## Authentication and Authorization
+### Authentication and Authorization
 
 New acronym - IAAA: Identity, authentication, authorization, and auditing.
 
@@ -40,7 +40,7 @@ Account management (and encryption management!) tools:
 * TPMs
 * HSMs
 
-## Authentication Methods
+### Authentication Methods
 
 DIRECTORY SERVICES: A centralized database that manages user accounts, groups, computers, services, etc. The concept and content of directory services is standardized under the X.500 standard, which defines objects using "distinguished names" (DNs). A typical example of a DN might be "CN=sshd,OU=SecPlusUsers,DC=secplus,DC=local".
 
@@ -58,7 +58,7 @@ SINGLE SIGN-ON (SSO): A variation of a federated system that only requires a use
 
 ATTESTATION: The process by which the state of the client that is acting on behalf of the user is verified by an "attestation server" as part of establishing trust during authentication. Trust that the attestation hasn't been tampered with is handled by specialized hardware components like TPMs.
 
-## Additional Authentication Methods
+### Additional Authentication Methods
 
 TOKENS: A special-purpose hardware device that store or present identity information (sometimes this is biometrics stored on a smartcard, but more often this is just the cryptographic key stored on a Yubikey or a code displayed on a smartphone). Tokens can be connected (security keys, etc.), disconnected (Google Authenticator, RSA SecureID, etc.), or contactless (NFC, RFID, etc.).
 
@@ -71,7 +71,7 @@ ONE-TIME PASSWORDS (OTP): Single-use passwords, typically delivered via SMS or a
 
 The TOTP generation process is actually the same as the HOTP process, except that  it uses a timestamp as the counter and the code is automatically refreshed after a short interval.
 
-## Biometrics
+### Biometrics
 
 Example biometric methods:
 
@@ -90,7 +90,7 @@ Accuracy/precision measures used in the infosec industry:
 * FALSE ACCEPTANCE RATE (FAR): Industry-specific terminology for the false positive rate.
 * CROSSOVER ERROR RATE (CER): Sometimes also called the "equal error rate" (EER). The idea here is to map the error rate vs. device sensitivity curve for both the FRR (which generally increases with increasing device sensitivity) and the FAR (which generally decreases with increasing device sensitivity) and determine the point at which these two rates are equal. In general this point is considered to define the biometric authenticator's "accuracy" (so when you hear a vendor refer to a "99% accuracy rate", they're talking about a CER/EER of 1%). The fact that the FRR increases with increasing sensitivity and the FAR decreases with increasing sensitivity strikes me as first-pass reasonable, but by no means *guaranteed*... I wonder how many biometric authenticators get into trouble by making this assumption?
 
-## Authentication Protocols - PAP And CHAP
+### Authentication Protocols - PAP And CHAP
 
 PAP is the "password authentication protocol". It is a plaintext protocol where the user presents the authenticating server with a username/password combination, and the server replies with either an Authentication-ACK or Authentication-NACK message depending on whether authentication succeeded or failed. So, don't use.
 
@@ -100,7 +100,7 @@ While an improvement over PAP (since the password is never actually transmitted)
 
 Microsoft created their own CHAP variant, MS-CHAP, but this suffered from the same problems. A later variant, MS-CHAPv2, wraps MS-CHAP in an encrypted channel and layers on *mutual* authentication between the client and server, though it still at it's base uses the user's password as a PSK. MS-CHAPv2 remains a supported authentication protocol in the Windows world.
 
-## Authentication Protocols - EAP and 802.1X
+### Authentication Protocols - EAP and 802.1X
 
 EAP is the "extensible authentication protocol" used in wireless networks. EAP doesn't actually handle authentication itself, but rather encapsulates other authentication protocols using a modified version of PPP. EAP is typically used with RADIUS. Typical authentication methods:
 
@@ -112,7 +112,7 @@ PEAP is the "*protected* extensible authentication protocol". It's basically the
 
 802.1X is a port-based authentication protocol used on wired and wireless networks. ("Port-based" in this case means the *physical* port/channel the client is connecting on. 802.1X is *not* authenticating connections to individual ports on services within the network it's protecting!) There are three components to 802.1X - the supplicant (client system), the authenticator (the *network* device the supplicant is connecting to), and an authentication server (typically a RADIUS server). The idea here is that the authenticator traffic cops *network* access before the supplicant ever has an opportunity to request access from a service on that network. In particular, this means that the supplicant *never* directly talks to the authentication server - all requests are mediated by the authenticator.
 
-## Authentication Protocols - RADIUS and TACACS
+### Authentication Protocols - RADIUS and TACACS
 
 RADIUS is the "remote authentication dial-in user service", typically implemented over UDP.
 
@@ -139,7 +139,7 @@ Summary bullet points for TACACS+:
 * Entire connection is encrypted
 * Semi-open/Semi-proprietary (depending on the implementation)
 
-## Authentication Protocols - Kerberos
+### Authentication Protocols - Kerberos
 
 Kerberos was originally developed by MIT, but is most commonly seen in Windows Active Directory environments. It is a time-sensitive authentication mechanism, which helps prevent replay attacks but means that clock skew is *really* important.
 
@@ -153,37 +153,37 @@ The default Kerberos port is TCP 88.
 * [2022-03-12 - ITPro.TV: CompTIA Security+ (SY0-601)](2022-03-12-itprotv-comptia-security-plus.md)
 * [Kerberos](../notes/kerberos.md)
 
-# TryHackMe: Jr. Penetration Tester
+## TryHackMe: Jr. Penetration Tester
 
-## What Is an IDOR?
+### What Is an IDOR?
 
 IDOR stands for "insecure direct object reference". This is basically when the (typically web) application doesn't check that the user has access to the object being requested. The end result is that a user can gain unauthorized access to data held by the application.
 
-## Finding IDORs in Encoded IDs
+### Finding IDORs in Encoded IDs
 
 Object IDs are frequently encoded using base64.  Decode all the things!
 
-## Finding IDORs in Hashed IDs
+### Finding IDORs in Hashed IDs
 
 Object IDs are also sometimes referenced using their hashes (often just MD5). It's thus useful to check if the hash of the ID of an object you do have access corresponds at all to how that object is being referenced. Since the most common IDs are numeric, online hash databases can also be useful.
 
 * [CrackStation](https://crackstation.net/)
 
-## Finding IDORs in Unpredictable IDs
+### Finding IDORs in Unpredictable IDs
 
 Okay, this is a silly section... Unpredictable IDs can't, well, be predicted. You can still see if you have an IDOR by creating two accounts, performing some actions in parallel, and then seeing if you can view resources from one account while logged in as another. This process can help you determine *if* a system has an IDOR vulnerability, but unfortunately doesn't really help you get at any information using it.
 
-## Where Are IDORs Located?
+### Where Are IDORs Located?
 
 Also check API endpoints, and see if those endpoints accept additional (undocumented) parameters that allow you to access information beyond your normal scope.
 
-## A Practical IDOR Example
+### A Practical IDOR Example
 
 Burp Suite is, as usual, pretty useful for uncovering API endpoint activity. I honestly find it more intuitive to work with for this purpose than the actual browser developer tools.
 
 * [Using Burp Suite](../notes/burp-suite.md)
 
-## Introduction to File Inclusion
+### Introduction to File Inclusion
 
 Basically, if an application is including a file based on some user-defined input, then there may be an opportunity to trick it into including a malicious file, or a system file we shouldn't have access to.
 
@@ -191,7 +191,7 @@ The trick here is that you *can't* be including your file in a fashion that woul
 
 File inclusion vulnerabilities are a species of input validation errors.
 
-## Path Traversal
+### Path Traversal
 
 "Path traversal" and "directory traversal" are the same thing. This is about using LFI to access system files; this often occurs when improperly sanitized user input is passed to PHP's `file_get_contents()` function.
 
@@ -213,7 +213,7 @@ Windows systems are also vulnerable to LFI attacks via PHP. In fact, `file_get_c
 
 * [file_get_contents() (PHP Documentation)](https://www.php.net/manual/function.file-get-contents.php)
 
-## Local File Inclusion (LFI)
+### Local File Inclusion (LFI)
 
 More potentially hazardous PHP functions:
 
@@ -234,7 +234,7 @@ Representing `../` as `....//` can bypass filters that replace `../`, as PHP sea
 
 * [The Poison Null Byte](../notes/poison-null-byte.md)
 
-## Remote File Inclusion (RFI)
+### Remote File Inclusion (RFI)
 
 Remote file inclusion only works when PHP's `allow_url_fopen` option to be turned on. If `allow_url_include` is also on, then `include()` and `require()` functions (and friends) can be leveraged. This creates a vulnerability similar to the recent log4j vulnerability in Java, where arbitrary code can be passed into the application. RCE!
 
@@ -242,7 +242,7 @@ Remote file inclusion only works when PHP's `allow_url_fopen` option to be turne
 * [Difference between require() and include() in PHP](https://www.geeksforgeeks.org/difference-between-require-and-include-in-php/)
 * [Runtime Configuration (PHP Documentation)](https://www.php.net/manual/filesystem.configuration.php)
 
-## File Inclusion Remediation
+### File Inclusion Remediation
 
 * Updates, updates, updates!
 * Turn off PHP errors (to deprive attackers of feedback)
@@ -251,7 +251,7 @@ Remote file inclusion only works when PHP's `allow_url_fopen` option to be turne
 * User input validation!
 * Aggressively whitelist and blacklist potential file locations.
 
-## File Inclusion Challenge
+### File Inclusion Challenge
 
 Remember that form requests sent via POST need to have `Content-Type: application/x-www-form-urlencoded`!
 

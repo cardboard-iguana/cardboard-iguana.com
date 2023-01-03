@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-10-29
+**author**:: Nathan Acks  
+**date**:: 2021-10-29
 
-# Common Linux Privsec
+## Common Linux Privsec
 
-## Direction of Privilege Escalation
+### Direction of Privilege Escalation
 
 Definitions:
 
@@ -14,7 +14,7 @@ Definitions:
 
 In general, vertical escalation involves obtaining root/SYSTEM access.
 
-## Enumeration
+### Enumeration
 
 TryHackMe is going to focus on the use of the LinEnum script. Direct download via:
 
@@ -24,7 +24,7 @@ curl -O https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 
 * [LinEnum.sh](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh)
 
-## Abusing SUID/GUID Files
+### Abusing SUID/GUID Files
 
 ```bash
 # Find SUID/SGID binaries
@@ -38,7 +38,7 @@ find / -type f -perm -4000
 
 Recall that leading a permission specified with `-` in `find` requires that *all* of the specified permission bits be set (but is agnostic as to the presence/absence of additional permissions); for numeric permissions 0 effectively acts as a wildcard.
 
-## Exploiting Writeable /etc/passwd
+### Exploiting Writeable /etc/passwd
 
 Strangely, it turns out that the `x` in the password field for /etc/password isn't just anachronistic - it still *literally* means "look in /etc/shadow". If a password is present in that field instead... Well, the login process (at least on most Linux systems) will still use that!
 
@@ -50,13 +50,13 @@ openssl passwd -1 -salt $SALT $PASSWORD
 
 It's also possible to have *multiple* users with the same UID and GID in /etc/passwd (wut?). So this is a way of "cloning" the root account.
 
-## Escaping the Vi Editor
+### Escaping the Vi Editor
 
 The `sudo -l` command will helpfully tell us what we can run as the superuser without a password.
 
 [A compendium of binary escapes: GTFOBins.](https://gtfobins.github.io/)
 
-## Expanding Your Knowledge
+### Expanding Your Knowledge
 
 Linux privilege escalation checklists:
 

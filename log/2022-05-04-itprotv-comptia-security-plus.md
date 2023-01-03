@@ -1,13 +1,13 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-author:: Nathan Acks  
-date:: 2022-05-04
+**author**:: Nathan Acks  
+**date**:: 2022-05-04
 
-# CompTIA Security+ Exam Cram
+## CompTIA Security+ Exam Cram
 
 Today I'll be reading chapter 34 from the Security+ Exam Cram, "Risk Management".
 
-## Risk Analysis
+### Risk Analysis
 
 Good definition!
 
@@ -15,7 +15,7 @@ Good definition!
 
 Normally we talk about "risk" as if it were synonymous with "the probability that bad thing X happens", but the Exam Cram breaks it down more formally as "Threat × Vulnerability × Impact". (Here "Threat × Vulnerability" is more-or-less the colloquial meaning of "risk", which means that we can also think of this as impact weighted by probability of occurrence.)
 
-## Risk Register
+### Risk Register
 
 A "risk register" is a document/database documenting various risks. Typical elements:
 
@@ -28,7 +28,7 @@ A "risk register" is a document/database documenting various risks. Typical elem
 * Residual (the risk induced by the mitigations)
 * Contingency plans
 
-## Risk Response Techniques
+### Risk Response Techniques
 
 * Avoid (eliminate the risk entirely)
 * Transfer (dump the risk on someone else; includes insurance)
@@ -39,7 +39,7 @@ Most risk management is really about mitigation.
 
 The Exam Cram has a good example for residual risk, likening it to how barred windows mitigates break-in risk but increases the risk of being trapped by a fire.
 
-## Threat Assessment
+### Threat Assessment
 
 Threat: The potential that a vulnerability will be exploited.
 
@@ -53,7 +53,7 @@ Threat source types:
 
 The Exam Cram breaks the last of these down into "structural" (i.e., infrastructure failures) and "environmental".
 
-## Risk Assessment
+### Risk Assessment
 
 "Risk assessment" formalizes the "Risk = Threat × Vulnerability × Impact" relationship defined above.
 
@@ -67,31 +67,31 @@ Most risk assessments bound risk by fiscal year.
 
 There are, frankly, a lot of arbitrary numbers being thrown around in this section. I suppose that the important thing here is that risks are ultimately *ranked* by an organization in the correct order, and that risk *tiers* are clearly defined. But this is all very hand-wavy.
 
-## Single Loss Expectancy
+### Single Loss Expectancy
 
 "Single loss expectancy" (SLE) is the expected *monetary* loss should a given risk be realized.
 
-## Annual Rate of Occurrence
+### Annual Rate of Occurrence
 
 The "annual rate of occurrence" (ARO) is just the probability that the risk is realized within the given timeframe (typically a fiscal year, as mentioned above).
 
-## Annual Loss Expectancy
+### Annual Loss Expectancy
 
 The "annual loss expectancy" (ALE) is the actual *expected monetary impact* of the risk (Annual Loss Expectancy = Single Loss Expectancy × Annual Rate of Occurrence).
 
 This is used in exactly the way you'd normally use expected values.
 
-## Business Impact Analysis
+### Business Impact Analysis
 
 What "risk assessment" is to risk, "business impact analysis" is to impacts.
 
-## Recovery Objectives
+### Recovery Objectives
 
 Recovery Point Objective: References data storage/processing/generation capabilities; the time that can elapse before the quantity of data lost due to a risk being realized exceeds the maximum allowable threshold as established in a business continuity plan. (Basically, acceptable data loss.)
 
 Recovery Time Objective: The time within which a process must be restored as established in a business continuity plan. (Basically, how long a given application can be down.)
 
-## MTTF, MTBF, and MTTR
+### MTTF, MTBF, and MTTR
 
 MTTF: Mean time to failure. (Used for monolithic, non-repairable systems.)
 
@@ -99,9 +99,9 @@ MTBF: Mean time between failures. (Used for *components* in modular, repairable 
 
 MTTR: Mean time to recovery.
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
+## ITPro.TV: CompTIA Security+ (SY0-601)
 
-## Risk Management Concepts - Vocabulary
+### Risk Management Concepts - Vocabulary
 
 Via NIST Special Publication 800-31r1:
 
@@ -115,7 +115,7 @@ Via NIST Special Publication 800-31r1:
 
 Note that these definitions are much closer to the colloquial definition of "risk" than what is presented in the Exam Cram.
 
-## Risk Management Concepts - Types & Strategies
+### Risk Management Concepts - Types & Strategies
 
 Steps in the risk assessment process:
 
@@ -154,7 +154,7 @@ Risk management strategies:
 
 Adam Gordon breaks cyberinsurance out as its own category, though it's typically considered a type of risk transference. Cloud migration is also a type of (partial) risk transference.
 
-## Risk Management Concepts - Risk Analysis
+### Risk Management Concepts - Risk Analysis
 
 * Risk Register: The formal tracking system for all risks within an organization.
 * Risk Matrix: A plot of risk in terms of probability of occurrence vs. impact.
@@ -172,7 +172,7 @@ Formally, the "single loss expectancy" (SLE) is defined as the asset value (whic
 
 In general, risk controls are implemented even when they cost as much as the ALE of the risk, since such controls still guard against less tangible qualitative losses. It's only when the cost of the control begins to *exceed* the risk's ALE that an organization will accept the risk.
 
-## Risk Management Concepts - Business Impact Analysis
+### Risk Management Concepts - Business Impact Analysis
 
 "Business Continuity and Disaster Recovery" (BCDR) is the combination of two different types of plans:
 

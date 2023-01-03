@@ -1,7 +1,7 @@
 # SQL Injection
 
-author:: Nathan Acks  
-date:: 2022-07-29
+**author**:: Nathan Acks  
+**date**:: 2022-07-29
 
 SQL injection is *most* common in PHP-based apps (though other languages are also vulnerable).
 
@@ -15,13 +15,13 @@ Similarly, sometimes a developer might get "clever" and try to error out on trai
 
 It's common to also test that login queries only return a single result. So sometimes you need to tack on `LIMIT 1` to achieve a login bypass.
 
-# Types of SQLi
+## Types of SQLi
 
-## Error-Based
+### Error-Based
 
 Error-based SQLi retrieves data from the backend by abusing error messages. This obviously requires that error messages are shown to the end user, and is limited to information gathering.
 
-## Boolean-Based
+### Boolean-Based
 
 Boolean-based SQLi involves monitoring changes in responses to see if a query has executed or failed. The only reason you'd generally do this is if you're doing SQLi blind (where you don't get any output, or the output you do get isn't strongly coupled with the input query).
 
@@ -31,11 +31,11 @@ One way this can be useful more generally is by using something like `AND (SELEC
 
 * [Using Burp Suite](burp-suite.md)
 
-## Time-Based
+### Time-Based
 
 This is basically boolean-based SQLi, except that we're not even getting back true/false information anymore. However, we can introduce a timing attack by replacing a column with `sleep()` (which sleeps the connection for the specified number of seconds). If the query fails we'll get a return immediately, but if it succeeds then we'll experience the programmed pause.
 
-## Union-Based
+### Union-Based
 
 Union-based SQLi is basically just abusing the SQL UNION keyword.
 
@@ -65,17 +65,17 @@ The `GROUP_CONCAT()` function can be useful here: It concatenates fields (and ar
 
 It's worth checking out the Jurassic Park CTF for an example of how to use union-based SQLi (it's a little hard to summarize).
 
-## Authentication Bypasses
+### Authentication Bypasses
 
 The trick here is that most login forms use the backing database for authentication, so all we need to do is return a "true" result - we don't really need to guess anyone's password. Sometimes we don't even need to know a username (though I suspect that in practice this may lead to weird authorization problems).
 
-## Out-of-Band
+### Out-of-Band
 
 Out-of-band SQLi only works if the application or database makes external calls (preferably to a system we control!) based on the results of a database query (that we can inject into). Thus, there are always two channels - an attack channel and a data channel.
 
 DNS is a popular data channel for out-of-band SQLi attacks.
 
-# Defense
+## Defense
 
 There are two main strategies for defending against SQLi:
 

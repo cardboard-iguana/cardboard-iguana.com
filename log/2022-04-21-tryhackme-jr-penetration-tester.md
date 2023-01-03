@@ -1,11 +1,11 @@
 # TryHackMe: Jr. Penetration Tester
 
-author:: Nathan Acks  
-date:: 2022-04-21
+**author**:: Nathan Acks  
+**date**:: 2022-04-21
 
-# Windows PrivEsc
+## Windows PrivEsc
 
-## Introduction
+### Introduction
 
 Common Windows user levels:
 
@@ -23,7 +23,7 @@ Here's a useful checklist:
 
 * [Windows - Privilege Escalation (PayloadsAllTheThings)](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md)
 
-## Information Gathering
+### Information Gathering
 
 * `whoami /priv` - current user + privileges
 * `net user` - list all (local) users
@@ -46,7 +46,7 @@ Microsoft Defender uses the service name `windefend`.
 
 * [Using "netstat"](../notes/netstat.md)
 
-## Tools of the Trade
+### Tools of the Trade
 
 * [WinPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)
 * [PowerUp](https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc)
@@ -60,12 +60,12 @@ Notes:
 * Windows Exploit Suggester analyzes the output of `systeminfo`, and can be run on the attacker's machine.
 * The `multi/recon/local_exploit_suggester` module works through Meterpreter to analyze a Windows system for potential vulnerabilities.
 
-## Vulnerable Software
+### Vulnerable Software
 
 * `wmic product` - list all installed software (but misses 32-bit applications installed on a 64-bit OS)
 * `wimc service list brief` - another way of listing services
 
-## DLL Hijacking
+### DLL Hijacking
 
 Basically, this is the Windows equivalent of exploiting `LD_PRELOAD` or `LD_LIBRARY_PATH`.
 
@@ -125,7 +125,7 @@ net user foo bar
 * [Exploiting LD_PRELOAD](../notes/exploiting-ld-preload.md)
 * [Exploiting LD_LIBRARY_PATH](../notes/exploiting-ld-library-path.md)
 
-## Unquoted Service Path
+### Unquoted Service Path
 
 Formally, when Windows encounters an unquoted service path it tries *all* possible paths, from shortest to longest. Thus `C:\Program Files\service path\service.exe` will cause Windows to look for the following executables, in order:
 
@@ -153,13 +153,13 @@ dir $FILE_NAME /S
 
 * [How to find a file or folder in MS-DOS or Windows command line](https://www.computerhope.com/issues/ch000309.htm)
 
-## Token Impersonation
+### Token Impersonation
 
 Prior to Windows 10 1809 / Server 2019, services could be forced to authenticate to a local port controlled by a low-privilege attacker, which would then allow the attacker to proxy and capture the NTLM handshake and thus (typically) a SYSTEM token. (This vulnerability *technically* still exists, its just that unprivileged accounts can no longer use this token; check to see if the output of `whoami /priv` contains the `SeImpersonatePrivilege` privilege to see if you've gotten lucky.)
 
 Exploits in this family are typically named "X Potato" after the first exploit, "Hot Potato".
 
-## Quick Wins
+### Quick Wins
 
 (1) Look for defunct (but still running) scheduled tasks with running as a more highly privileged account that point to a path you can control.
 

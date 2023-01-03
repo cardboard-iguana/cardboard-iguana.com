@@ -1,9 +1,9 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-08-20
+**author**:: Nathan Acks  
+**date**:: 2022-08-20
 
-# Amazon VPC: Security at the Speed of Light
+## Amazon VPC: Security at the Speed of Light
 
 [AWS re:Invent 2018: Amazon VPC - Security at the Speed of Light (YouTube)](https://youtu.be/uhXalpNzPU4)
 
@@ -41,7 +41,7 @@ While HyperPlane nodes are shared, every customer gets a *unique* set of nodes. 
 
 HyperPlane nodes are actually based on the S3 load balancer.
 
-# Deep Dive on New Amazon EC2 Instances and Virtualization Technologies
+## Deep Dive on New Amazon EC2 Instances and Virtualization Technologies
 
 [Deep Dive on New Amazon EC2 Instances and Virtualization Technologies (YouTube)](https://youtu.be/AAq-DDbFiIE)
 

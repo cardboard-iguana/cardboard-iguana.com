@@ -1,13 +1,13 @@
 # TryHackMe: Pre Security
 
-author:: Nathan Acks  
-date:: 2021-09-18
+**author**:: Nathan Acks  
+**date**:: 2021-09-18
 
-# System Configuration
+## System Configuration
 
 The Tools tab of msconfig.exe can be quite useful, as it provides full pats to various Windows system utilities (in the "Selected command" line).
 
-# Computer Management
+## Computer Management
 
 Want access to (almost) all of the Windows "snap-ins" in one hierarchical tree view? Then run compmgmt.msc!
 
@@ -47,7 +47,7 @@ WMI is an interface for allowing the scripting of computer management, now super
 
 * [lusrmgr.msc](2021-09-17-tryhackme-pre-security.md)
 
-# System Information
+## System Information
 
 Lots of great stuff in msinfo32.exe (System Information).
 
@@ -55,7 +55,7 @@ All current user and system environment variables are listed here (though to acr
 
 There's a hand search bar at the bottom of this utility.
 
-# Command Prompt
+## Command Prompt
 
 More UNIX <-> Windows equivalents (command line edition):
 
@@ -71,6 +71,6 @@ The "net" command is a Windows-specific command line tool that is a kind of Swis
 
 * [An A-Z Index of Windows CMD commands](https://ss64.com/nt/)
 
-# Registry Editor
+## Registry Editor
 
 Apparently the Registry Editor goes by regedt32.exe in addition to the more familiar regedit.exe.

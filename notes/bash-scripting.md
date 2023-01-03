@@ -1,6 +1,6 @@
 # Bash Scripting Tricks
 
-author:: Nathan Acks
+**author**:: Nathan Acks
 
 ```bash
 # Brace expansion

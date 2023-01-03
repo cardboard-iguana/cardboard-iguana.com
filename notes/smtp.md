@@ -1,7 +1,7 @@
 # Simple Mail Transfer Protocol (SMTP)
 
-author:: Nathan Acks  
-date:: 2022-04-03
+**author**:: Nathan Acks  
+**date**:: 2022-04-03
 
 A set of commands to send an email:
 

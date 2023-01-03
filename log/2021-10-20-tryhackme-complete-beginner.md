@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-10-20
+**author**:: Nathan Acks  
+**date**:: 2021-10-20
 
-# Metasploit
+## Metasploit
 
-## Move That Shell!
+### Move That Shell!
 
 Use `db_nmap $FLAGS $IP` to run nmap directly from Metasploit and dump the results into the Metasploit DB. All nmap $FLAGS are supported. If you choose a scan type where root access is required, Metasploit will automatically prompt you to elevate privileges. Dumping nmap output directly into the database removes (?) the need to save output files using -oA.
 
@@ -31,7 +31,7 @@ REMEMBER: Open up the port Metasploit's going to use in your firewall *before* r
 
 * [Using "nmap"](../notes/nmap.md)
 
-## We're In, Now What?
+### We're In, Now What?
 
 Meterpreter (Metasploit remote shell) commands:
 
@@ -64,7 +64,7 @@ Potentially useful Metsploit modules to run from Meterpreter:
 * `post/multi/manage/autoroute` - manipulate target routing for pivoting
 * `auxiliary/server/socks_proxy` - start a SOCKS proxy
 
-## Makin' Cisco Proud
+### Makin' Cisco Proud
 
 There seem to be a lot of options for the `post/multi/manage/autoroute` and `auxiliary/server/socks_proxy` modules, but I don't see a way to access them from Meterpreter (it looks like to get help you need to background Meterpreter and use the console).
 

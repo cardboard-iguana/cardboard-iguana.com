@@ -1,23 +1,23 @@
 # TryHackMe: Web Fundamentals
 
-author:: Nathan Acks  
-date:: 2022-01-25
+**author**:: Nathan Acks  
+**date**:: 2022-01-25
 
-# ZTH: Obscure Web Vulnerabilities (Part 2)
+## ZTH: Obscure Web Vulnerabilities (Part 2)
 
-## IDOR Introduction
+### IDOR Introduction
 
 IDOR = Insecure Direct Object Reference
 
 Basically, this is when a user's access isn't properly checked before displaying a resource. Think of all of those examples where (once authenticated) simply changing a URL parameter is enough to expose sensitive data
 
-## Forced Browsing Introduction
+### Forced Browsing Introduction
 
 Forced browsing is basically a species of IDOR (except that often you don't even need to be authenticated). But in this case we're just guessing (or brute forcing) URL paths to access server resources.
 
 (The reason I'm maintaining that forced browsing and IDOR are basically equivalent is that URL paths are kinda arbitrary, and are often actually parameterized commands rather than literal paths these days. The difference between a URL parameter and the URL path is mostly just semantics in practice.)
 
-## Forced Browsing Automatic Exploitation
+### Forced Browsing Automatic Exploitation
 
 wfuzz is a URL fuzzer -- basically the command-line version of the Burp Suite Intruder (but it's *much* faster, which is what one would generally expect from a command-line tool).
 
@@ -34,6 +34,6 @@ Use `wfuzz --help` for a full list of options. The `--hc 404` option is particul
 
 * [Using Burp Suite](../notes/burp-suite.md)
 
-## API Bypass Exploitation
+### API Bypass Exploitation
 
 Basically, the idea here is that sometimes APIs (especially non-public ones!) are sloppy about checking user authentication or permissions. This is generally harder to work with than fuzzing a website directly (since you're often "flying blind" when experimenting with the API), but can be even more powerful.

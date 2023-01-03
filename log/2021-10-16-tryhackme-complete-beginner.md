@@ -1,17 +1,17 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-10-16
+**author**:: Nathan Acks  
+**date**:: 2021-10-16
 
-# Active Directory Basics
+## Active Directory Basics
 
-## Introduction
+### Introduction
 
 Active Directory proper encompasses not only user and machine management (which are handled by the domain controller), but also all of the other services that are necessary to allow an organization's computers to act in unison from the users' perspective. This includes file servers, etc.
 
 Domains are arranged into forests.
 
-## Physical Active Directory
+### Physical Active Directory
 
 What makes a domain controller? The presence of Active Directory Domain Services (AD DS) + promotion to a domain controller in the forest. Functions:
 
@@ -22,7 +22,7 @@ What makes a domain controller? The presence of Active Directory Domain Services
 
 The AD data store lives in %SystemRoot%/NTDS. The key file is the NTDS.dit database, which actually holds all of the AD domain data + user password hashes (NThashes and, if it's an older domain, LMhashes).
 
-## The Forest
+### The Forest
 
 Computers + users in an Active Directory environment are arranged into domains, which are grouped into hierarchical trees, which are then contained within a forest. Note that it's possible for users and computers to not live in a domain, and domains to not live in a tree... But *everything* lives in the forest.
 
@@ -34,7 +34,7 @@ Computers + users in an Active Directory environment are arranged into domains, 
 * DOMAIN SERVICES: DNS, DHCP, etc.
 * DOMAIN SCHEMA: Rules for object creation.
 
-## Users & Groups
+### Users & Groups
 
 AD DS defines two default users: Administrator and Guest.
 
@@ -79,13 +79,13 @@ A little.
 
 * [Active Directory Security Groups](https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/active-directory-security-groups)
 
-## Trusts & Policies
+### Trusts & Policies
 
 Trusts define the *permissions* an object in a domain has w.r.t. other objects in the domain, across domains, and between forests. Trusts can be "directional" (objects in domain A can access some set of objects in domain B) or "transitive" (objects in domain A can access a set of objects *as if* they were in domain B).
 
 Essentially GPOs applied to an entire domain.
 
-## Active Directory Domain Services & Authentication
+### Active Directory Domain Services & Authentication
 
 AD DS controls domain management, security certificates, LDAP, etc. Default services:
 
@@ -97,7 +97,7 @@ LLMNT and NBT-NS are apparently services that provide a similar function to DNS.
 
 AD uses Kerberos (uses "tickets" to authenticate users and provide authorization to access domain resources) and NTLM (user authentication only challenge/response protocol) for authentication. Kerberos is used for granting access across the domain, while NTLM is the default protocol used by individual Windows machines.
 
-## Active Directory in the Cloud
+### Active Directory in the Cloud
 
 Azure AD is typically designed to sit *between* users/computers and an on prem-Active Directory. To a certain extent this is a case of "there's an extra step here somewhere", but using that extra step has a couple of advantages:
 
@@ -113,7 +113,7 @@ Equivalencies between On-Prem AD <-> Azure AD:
 
 Azure AD does *not* use an OU structure, instead adopting a flat set of users. (I assume that permissioning must then be handled entirely through groups...)
 
-## Hands-On Lab
+### Hands-On Lab
 
 TryHackMe is using a set of PowerShell extensions called PowerView here. It doesn't look like PowerView is maintained anymore though, and I'm curious how applicable all of this is anymore - I remember reading somewhere that PowerShellMafia's work was largely protected against these days.
 
@@ -126,15 +126,15 @@ powershell -ep bypass
 Example PowerView commands:
 
 ```powershell
-# Get all OS versions on the domain
+## Get all OS versions on the domain
 #
 Get-NetComputer -fulldata | select operatingsystem
 
-# Get all users on the domain
+## Get all users on the domain
 #
 Get-NetUser | select cn
 
-# Get all groups on the domain
+## Get all groups on the domain
 #
 Get-NetGroup
 ```

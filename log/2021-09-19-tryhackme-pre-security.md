@@ -1,11 +1,11 @@
 # TryHackMe: Pre Security
 
-author:: Nathan Acks  
-date:: 2021-09-19
+**author**:: Nathan Acks  
+**date**:: 2021-09-19
 
-# Windows Fundamentals
+## Windows Fundamentals
 
-## Windows Updates
+### Windows Updates
 
 Quick access to Windows Update:
 
@@ -13,7 +13,7 @@ Quick access to Windows Update:
 control /name Microsoft.WindowsUpdate
 ```
 
-## Firewall & Network Protection
+### Firewall & Network Protection
 
 Windows Firewall network classifications:
 
@@ -23,13 +23,13 @@ Windows Firewall network classifications:
 
 The Windows Firewall snap-in is WF.msc.
 
-## Volume Shadow Copy Service
+### Volume Shadow Copy Service
 
 Shadow copies are stored in the System Volume Information folder, and managed by the Volume Shadow Copy Service (VSS).
 
-# The find Command
+## The find Command
 
-## Start finding
+### Start finding
 
 You can use wildcards as an alternative to find's path spec. For example:
 
@@ -40,7 +40,7 @@ find *.txt
 
 This implicitly only searches the current working directory, however.
 
-## Know Exactly What You're Looking For
+### Know Exactly What You're Looking For
 
 The -user and -group flags match files owned by a particular user or group (both numeric and symbolic-readable names are allowed).
 

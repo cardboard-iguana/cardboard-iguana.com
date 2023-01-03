@@ -1,7 +1,7 @@
 # Gemini Compatible Markdown
 
-author:: Nathan Acks  
-date:: 2022-02-16
+**author**:: Nathan Acks  
+**date**:: 2022-02-16
 
 Gemini uses a syntax that is *almost* a subset of CommonMark.
 
@@ -10,11 +10,11 @@ Be aware that Gemini treats all line breaks literally and clients are expected t
 * [Project Gemini Speculative Specification](gemini://gemini.circumlunar.space/docs/specification.gmi)
 * [CommonMark Spec](https://spec.commonmark.org/current/)
 
-# Allowed Formatting Elements
+## Allowed Formatting Elements
 
 The trick with Gemini formatting is to remember that the protocol is *line* oriented, so all formatting (including linking) is applied to the entire block. Inline formatting isn't supported, but can be used to the extent that raw markdown is easily readable.
 
-## Headings
+### Headings
 
 Gemini allows H1 - H3 (`#` - `###`) headings.
 
@@ -22,7 +22,7 @@ Unlike HTML, Gemini *specifically allows* multiple H1 tags, as headings are trea
 
 In some cases, the first H1 tag in Gemini is treated as the page header (if it is not preceded by any other text with the exception of empty lines) and the following H2 is treated as a sub header (again, if there is no other intervening text except for blank lines).
 
-## Strong/Emphasis & Inline Code
+### Strong/Emphasis & Inline Code
 
 Gemini doesn't explicitly support any formatting tags *within* a line. However, the convention of using single stars (`*`) to denote emphasis and back-ticks (\`) to quote code is well established and can be used even in a "plain text" line without looking weird.
 
@@ -32,25 +32,25 @@ Since Markdown requires that these characters be escaped, so text destined for G
 
 That said, when writing with Gemini in mind it's probably best to take a minimalist approach to inline formatting. Use when required to clarify, but otherwise let your words speak for themselves!
 
-## Lists
+### Lists
 
 Only *unordered* lists are permitted in Gemini, and no indentation is allowed. Lists *must* use star characters (`*`) as their leaders.
 
-## Quotes
+### Quotes
 
 Quote blocks cannot be nested in Gemini, and all interior formatting is preserved as-is. This means that in practice, quote blocks also can't contain lists, code blocks, etc.
 
-## "Code" Blocks
+### "Code" Blocks
 
 Gemini allows code blocks. In Gemini the code block type (normally something like `bash` or `html` in Markdown) is used by clients as "alt text". Unfortunately, many Markdown processors (including Jekyll) don't handle arbitrary strings in the code block type gracefully, so we need to stick with Markdown's conventions here.
 
 * [Jekyll](https://jekyllrb.com/)
 
-## Tables
+### Tables
 
 The md2gmn utility handles tables by converting them into code blocks, which works for my purposes.
 
-# Links & Images
+## Links & Images
 
 Gemini doesn't support Markdown links or images, though tools like md2gmn can handle the conversion into Gemini's format.
 

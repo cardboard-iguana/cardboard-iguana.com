@@ -1,17 +1,17 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-10-10
+**author**:: Nathan Acks  
+**date**:: 2022-10-10
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Controlling and Managing Access to a REST API in API Gateway (Continued...)
+#### Controlling and Managing Access to a REST API in API Gateway (Continued...)
 
 Lambda authorization functions for the API Gateway can be called across accounts, though the setup process definitely shows that this is a bit of a hack / afterthought. Still, doing this allows authorization and API functions to be clearly separated, and also allows a single authorization method to be shared across multiple API Gateways (since the recommendation is only to deploy a single API Gateway per account). Cross-account Cognito user pools can be configured in a similar fashion.
 
@@ -21,7 +21,7 @@ Updating authorization methods seems to always require the apigateway:POST (crea
 * [2022-10-08 - AWS Deep Dive (Controlling and Managing Access to a REST API in API Gateway, Part 2)](2022-10-08-aws-deep-dive.md)
 * [Controlling and managing access to a REST API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html)
 
-### Setting up REST API Integrations
+#### Setting up REST API Integrations
 
 Integration request URIs can either be URLs or ARNs. Using ARNs allows selected API requests to be mapped directly to Amazon services (such as S3), though IMHO I've found this approach inadvisable (because it's *really* easy to expose too much functionality/data this way!).
 

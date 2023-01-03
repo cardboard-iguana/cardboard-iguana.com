@@ -1,7 +1,7 @@
 # ARP Protocol
 
-author:: Nathan Acks  
-date:: 2022-03-31
+**author**:: Nathan Acks  
+**date**:: 2022-03-31
 
 The ARP protocol links OSI layers 2 and 3 by mapping IP addresses to MAC addresses. ARP packet message headers contain two operation codes: REQUEST (1) and REPLY (2).
 
@@ -11,7 +11,7 @@ Because ARP requests are about binding a MAC address to an IP address, they are 
 
 * [OSI Model](osi-model.md)
 
-# ARP Cache
+## ARP Cache
 
 Examine the ARP cache on Windows:
 
@@ -19,7 +19,7 @@ Examine the ARP cache on Windows:
 arp -a
 ```
 
-# ARP Scanning
+## ARP Scanning
 
 Scanning a network with ARP rather than ICMP is one method of keeping a lower profile, as ARP requests are less likely to be monitored.
 

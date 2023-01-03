@@ -1,9 +1,9 @@
 # Using NFS
 
-author:: Nathan Acks  
-date:: 2022-04-21
+**author**:: Nathan Acks  
+**date**:: 2022-04-21
 
-# NFS Basics
+## NFS Basics
 
 All versions of NFS use port 2049 to transfer data; NFSv1 - NFSv3 also depended on the "portmapper" service running on port 111, but this requirement was removed in NFSv4.
 
@@ -26,7 +26,7 @@ Note that the mount directory must be owned by root.
 
 * [What is NFS port number in Linux?](https://racinpaper.com/auto-racing/what-is-nfs-port-number-in-linux.html)
 
-# Root Squashing
+## Root Squashing
 
 Files created on NFS shares inherit the *remote* UID. By default, NFS enables "root squashing", which maps UID 0 to the `nobody` user.
 

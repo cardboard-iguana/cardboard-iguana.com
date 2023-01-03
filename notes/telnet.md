@@ -1,7 +1,7 @@
 # Telnet Protocol
 
-author:: Nathan Acks  
-date:: 2022-04-03
+**author**:: Nathan Acks  
+**date**:: 2022-04-03
 
 The default port for `telnetd` is TCP 23.
 

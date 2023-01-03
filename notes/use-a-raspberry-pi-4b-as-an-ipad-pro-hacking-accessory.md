@@ -1,7 +1,7 @@
 # Use a Raspberry Pi 4B as an iPad Pro Hacking Accessory
 
-author:: Nathan Acks  
-date:: 2022-03-05
+**author**:: Nathan Acks  
+**date**:: 2022-03-05
 
 This guide will cover setting up Kali Linux on a Raspberry Pi 4B so that:
 
@@ -19,7 +19,7 @@ It should be possible to adapt the steps here for other Debian-based operating s
 * [Kali Linux Raspberry Pi 4 documentation](https://www.kali.org/docs/arm/raspberry-pi-4/)
 * [iPad Pro](https://www.apple.com/ipad-pro/)
 
-# Hardware and Software
+## Hardware and Software
 
 Things you'll want/need to follow along:
 
@@ -37,7 +37,7 @@ With that out of the way, let's go!
 * [DockCase USB C to USB C Cable (0.72ft), 3.1 Gen 2 (Amazon)](https://www.amazon.com/dp/B07THFJ1J5)
 * [Kingston Canvass Go! Plus](https://www.kingston.com/en/memory-cards/canvas-go-plus-microsd-card)
 
-# Create the Bootstrap microSD
+## Create the Bootstrap microSD
 
 If you're setting the Pi up for the first time, you'll need to burn a Kali Linux microSD card to bootstrap off of. (If you already have a working Pi, fire it up and skip to the next section.)
 
@@ -78,7 +78,7 @@ You're now ready to bootstrap your *actual* system!
 * [expand file system kali linux on SD card of 16GB](https://raspberrypi.stackexchange.com/a/127378)
 * [How to mount a multi-partition disk image in Linux?](https://superuser.com/a/1263401)
 
-# Set Up the Encrypted microSD Card
+## Set Up the Encrypted microSD Card
 
 ```bash
 # Download the latest version of Kali Linux from
@@ -211,7 +211,7 @@ Now comes the moment of truth: Shut down and unplug the Pi, remove the bootstrap
 
 * [Raspberry Pi - Full Disk Encryption](https://gitlab.com/kalilinux/documentation/kali-docs/-/tree/master/arm/raspberry-pi-with-luks-full-disk-encryption-2)
 
-## First Run
+### First Run
 
 After the first successful boot there's some basic housekeeping that we should do.
 
@@ -339,7 +339,7 @@ You should reboot after doing all of this.
 * [Linux Performance: Why You Should Almost Always Add Swap Space](https://haydenjames.io/linux-performance-almost-always-add-swap-space/)
 * [Linux Performance: Almost Always Add Swap. Part 2: ZRAM](https://haydenjames.io/linux-performance-almost-always-add-swap-part2-zram/)
 
-# Network Access and USB Gadget Mode
+## Network Access and USB Gadget Mode
 
 ```bash
 # Become root.
@@ -513,7 +513,7 @@ Second moment of truth: Shut down the system, remove the power, and connect the 
 * [initramfs-tools: network isn't deconfigured which breaks networking initscript](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=720987)
 * [USB Guest configuration](https://openwrt.org/docs/guide-user/hardware/usb_gadget)
 
-# ROOTFS Unlock Over SSH
+## ROOTFS Unlock Over SSH
 
 ```bash
 # Become root.
@@ -749,7 +749,7 @@ Note an annoying feature of this setup - you have to SSH in as *root* to do the 
 * [Enable Wireless networks in Debian Initramfs](https://www.marcfargas.com/posts/enable-wireless-debian-initramfs/index.html)
 * [Encryption unlock not showing](https://gitlab.com/kalilinux/documentation/kali-docs/-/issues/49)
 
-# Network Hardening
+## Network Hardening
 
 Now that we've got the Pi working with our iPad, we're going to lock down networking a bit
 
@@ -783,7 +783,7 @@ exit
 
 If you're going to be using this device covertly, you almost certainly also want to run `sudo systemctl disable NetworkManager.service` so that the Pi doesn't attempt to immediately connect to whatever network you plug it into.
 
-# Remote Desktop
+## Remote Desktop
 
 ```bash
 # Become root.

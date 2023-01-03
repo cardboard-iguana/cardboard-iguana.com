@@ -1,11 +1,11 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-09-19
+**author**:: Nathan Acks  
+**date**:: 2022-09-19
 
 The AWS deep dive reading notes return!
 
-# AWS IAM Policies in a Nutshell
+## AWS IAM Policies in a Nutshell
 
 IAM policy statements can include an `Sid` value (different than the policy-level `Id`). This is only required by a few services (SQS and SNS). It seems like it's probably safe to just set both the `Id` and the `Sid` to some UUIDv4 value (though the two should *probably* use different UUIDs).
 

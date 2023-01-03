@@ -1,7 +1,7 @@
 # Using "net"
 
-author:: Nathan Acks  
-date:: 2022-08-24
+**author**:: Nathan Acks  
+**date**:: 2022-08-24
 
 The Windows `net` command is an older (but still useful) CLI multitool.
 

@@ -1,11 +1,11 @@
 # Ice
 
-author:: Nathan Acks  
-date:: 2021-12-07
+**author**:: Nathan Acks  
+**date**:: 2021-12-07
 
 * [TryHackMe: Ice](https://tryhackme.com/room/ice)
 
-# Recon
+## Recon
 
 The machine we'll be attacking is at 10.10.55.173. Since it's a Windows box, we know that it won't respond to `ping` by default.
 
@@ -151,7 +151,7 @@ FLAG 3: What is the hostname of the machine? - DARK-PC
 
 * [Using "nmap"](nmap.md)
 
-# Gain Access
+## Gain Access
 
 The next few flags are about finding a particular vulnerability for Icecast on https://cvedetails.com. There's actually a couple of different vulnerabilities that match the flag descriptions, but after a little trial-and-error we can find the right ones.
 
@@ -168,7 +168,7 @@ There's not too much to this module - set RHOSTS and LHOST, run, get shell.
 * [CVE-2004-1561](https://www.cvedetails.com/cve/CVE-2004-1561/)
 * [Using Metasploit](metasploit.md)
 
-# Escalate
+## Escalate
 
 FLAG 8: What shell does Metasploit provide us with? - meterpreter
 
@@ -198,7 +198,7 @@ Using `run` quickly pops a new shell.
 
 FLAG 14: What permission allows taking ownership of files? - SeTakeOwnershipPrivilege
 
-# Looting
+## Looting
 
 In order to harvest credentials from LSASS we'll need to migrate meterpreter to a process with the same permissions (NT AUTHORITY/SYSTEM) and architecture as LSASS. The print spooler service is a good choice, as it runs with elevated permissions, has the same architecture as the system itself, and will restart itself automatically.
 
@@ -226,7 +226,7 @@ FLAG 18: What is Dark's password? - `Password01!`
 * [Using Hydra](hydra.md)
 * [Using John the Ripper](john-the-ripper.md)
 
-# Past-Exploitation
+## Past-Exploitation
 
 FLAG 19: What meterpreter command allows us to dump all of the password hashes stored on the system? - `hashdump`
 

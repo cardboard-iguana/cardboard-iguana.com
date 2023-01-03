@@ -1,9 +1,9 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-author:: Nathan Acks  
-date:: 2022-04-26
+**author**:: Nathan Acks  
+**date**:: 2022-04-26
 
-# Security Controls
+## Security Controls
 
 "Countermeasures" are another commonly used term for "controls".
 
@@ -35,7 +35,7 @@ Preventative, detective, corrective, and recovery controls are *reactive*, while
 
 Most administrative controls are directives.
 
-# Regulations, Standards And Frameworks
+## Regulations, Standards And Frameworks
 
 "Frameworks" are sets of guidelines and best practices covering a constellation of security controls.
 
@@ -108,7 +108,7 @@ The CSA CCM (Cloud Security Alliance Cloud Controls Matrix)  provides a list of 
 
 There's also lots of vendor guides.
 
-# Spotlight On General Data Protection Regulation
+## Spotlight On General Data Protection Regulation
 
 Location data becomes "personal data" under the GDPR if it can be linked to a session, and thus a user.
 

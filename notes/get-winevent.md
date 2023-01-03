@@ -1,7 +1,7 @@
 # Get-WinEvent
 
-author:: Nathan Acks  
-date:: 2021-09-25
+**author**:: Nathan Acks  
+**date**:: 2021-09-25
 
 Get-WinEvent is a PowerShell command for working with Windows event logs.
 
@@ -45,7 +45,7 @@ Get-WinEvent -FilterHashtable @{
 * [Using PowerShell](powershell.md)
 * [Windows Event Logs](windows-event-logs.md).
 
-# FilterHashtable Keys
+## FilterHashtable Keys
 
 * LogName (String)
 * ProviderName (String)
@@ -65,7 +65,7 @@ Event Viewer displays *most* of these values in the "General" when viewing an in
 
 * [Creating Get-WinEvent queries with FilterHashtable](https://docs.microsoft.com/powershell/scripting/samples/Creating-Get-WinEvent-queries-with-FilterHashtable)
 
-## Keywords
+### Keywords
 
 * AuditFailure (4503599627370496)
 * AuditSuccess (9007199254740992)
@@ -77,7 +77,7 @@ Event Viewer displays *most* of these values in the "General" when viewing an in
 * ResponseTime (281474976710656)
 * None (0)
 
-## Levels
+### Levels
 
 * Verbose (5)
 * Informational (4)

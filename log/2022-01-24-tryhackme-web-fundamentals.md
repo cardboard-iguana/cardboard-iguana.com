@@ -1,23 +1,23 @@
 # TryHackMe: Web Fundamentals
 
-author:: Nathan Acks  
-date:: 2022-01-24
+**author**:: Nathan Acks  
+**date**:: 2022-01-24
 
-# SSRF
+## SSRF
 
-## What is SSRF?
+### What is SSRF?
 
 SSRF = Server-side request forgery
 
 Basically, this is a vulnerability in an externally-facing server (typically a web server) that allows the attacker (that's me!) to query additional servers "behind" the vulnerable server that they wouldn't normally be able to see.
 
-## Cause of the Vulnerability
+### Cause of the Vulnerability
 
 SSRF can also involve using the a vulnerable server as a relay to attack other servers on the internet.
 
 Typically an SSRF attack requires that the application be passed a URL by the attacker and then acts on that URL without sufficient validation.
 
-## SSRF Payload
+### SSRF Payload
 
 Example SSRF test: Will the application allow you to open a connection to an arbitrary port, such as a local MySQL server? For example, does https://127.0.0.1:3306 return a response?
 
@@ -50,7 +50,7 @@ As usual, PayloadsAllTheThings is a great resource.
 * [Qalculate!](https://qalculate.github.io/)
 * [PayloadsAllTheThings: Server-Side Request Forgery](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery)
 
-## Exercise
+### Exercise
 
 The target accepts `0x7f000001` as a valid (and unfiltered) representation for localhost, so we're going to use this and the ZAP Fuzzer (which is annoyingly slow, but the free version of the Intruder is even slower...) to enumerate all of the ports from 1 - 65535. Successful vs. unsuccessful requests are pretty obvious in from their differing response body sizes (successful requests have a body size of 1041 bytes, or in one case 1035 bytes, while unsuccessful requests have a body size of 1045 bytes).
 
@@ -59,7 +59,7 @@ The target is also vulnerable to local file inclusion, so `file:///etc/passwd` w
 * [Using OWASP ZAP](../notes/owasp-zap.md)
 * [Using Burp Suite](../notes/burp-suite.md)
 
-## Solution
+### Solution
 
 TryHackMe uses a small shell script with a tight cURL loop instead of ZAP. Which would probably have been faster, but I didn't feel like hunting through the cURL man page to figure out what flags I needed.
 

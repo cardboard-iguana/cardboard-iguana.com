@@ -1,19 +1,19 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-11-03
+**author**:: Nathan Acks  
+**date**:: 2022-11-03
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Setting Up Custom Domain Names for REST APIs in Amazon API Gateway (Continued)
+#### Setting Up Custom Domain Names for REST APIs in Amazon API Gateway (Continued)
 
 API Gateway custom domains are all managed through CloudFront.
 
@@ -24,7 +24,7 @@ Once a custom domain is set up, the default API Gateway endpoint can be disabled
 * [2022-10-31 - AWS Deep Dive (Setting Up Custom Domain Names for REST APIs in Amazon API Gateway, Part 1)](2022-10-31-aws-deep-dive.md)
 * [Setting up custom domain names for REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html)
 
-### Enabling API Caching to Enhance Responsiveness  of API Gateway
+#### Enabling API Caching to Enhance Responsiveness  of API Gateway
 
 By default, only GET API methods are cached. This can be tuned on a per-method basis, however. Custom headers and URL paths / query string can also be used as cache keys to further ensure that API responses are not inappropriately cached together.
 
@@ -32,13 +32,13 @@ Clients can force a cache reload by sending the `Cache-Control: max-age=0` HTTP 
 
 * [Enabling API caching to enhance responsiveness](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html)
 
-### Enabling Payload Compression for an API in API Gateway
+#### Enabling Payload Compression for an API in API Gateway
 
 Compression is *not* enabled in API Gateway by default, but like many things can be enabled by setting a single property - in this case, `minimumCompressionsSize`. Any value between 0 and 10 MB (note that the variable is in bytes) will enable compression for responses with a size *greater* than that value (if the client has indicated that compression is supported). Compression is disabled by removing the parameter or setting it to null.
 
 * [Enabling payload compression for an API](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-gzip-compression-decompression.html)
 
-### Creating and Using Usage Plans with API Keys in API Gateway
+#### Creating and Using Usage Plans with API Keys in API Gateway
 
 API Gateway can also generate API keys and tie these to per-stage usage plans in order to enable third-party developer access to a finished API. Individual API methods *cannot* be restricted per API key, though methods can be restricted to require *an* API key (it's just that all such restricted methods are available to anyone with an API key for that API). API keys must be either be transmitted by the client using the `x-api-key` header or provided by a Lambda authorizer (via the returned `usageIdentifierKey` property).
 

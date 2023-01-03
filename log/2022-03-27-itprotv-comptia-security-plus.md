@@ -1,13 +1,13 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-author:: Nathan Acks  
-date:: 2022-03-27
+**author**:: Nathan Acks  
+**date**:: 2022-03-27
 
-# CompTIA Security+ Exam Cram
+## CompTIA Security+ Exam Cram
 
 Today I'll be reading chapters 21 and 26 of the Security+ Exam Cram, "Secure Mobile Solutions" and "Organizational Security".
 
-# Communication Methods
+## Communication Methods
 
 CDMA = Code-Division Multiple Access
 
@@ -35,11 +35,11 @@ There are three NFC modes:
 
 * [General Packet Radio Service (Wikipedia)](https://en.wikipedia.org/wiki/General_Packet_Radio_Service)
 
-# Device, Application, and Content Management
+## Device, Application, and Content Management
 
 Android's implementation of SELinux is called SEAndroid.
 
-# Mobile Device Management
+## Mobile Device Management
 
 Three levels:
 
@@ -49,19 +49,19 @@ Three levels:
 
 I guess that Google's MDM solution is somewhere north of an MDM but far short of a UEM then.
 
-# Mobile Content Management
+## Mobile Content Management
 
 MCM = Mobile Content Management
 
 This seems to be just the (controlled!) method/application through which the mobile device accesses corporate data. The key point is that this is a step up from just viewing content via a browser, and thus requires leveraging some level of on-device security.
 
-# Mobile Application Management
+## Mobile Application Management
 
 Some MDM solutions use their own encrypted document store and wrap application system calls for accessing this data.
 
 Exam Cram recommends deriving encryption keys from a user password rather than storing them on device in order to guard against device rooting.
 
-# Biometrics and Context-Aware Authentication
+## Biometrics and Context-Aware Authentication
 
 Exam Cram recommends combining biometrics with a device PIN. But I've never seen an iOS or Android device offer this option.
 
@@ -69,45 +69,45 @@ Exam Cram recommends combining biometrics with a device PIN. But I've never seen
 
 * [Context-Aware Access overview](https://support.google.com/a/answer/9275380)
 
-# Remote Wiping
+## Remote Wiping
 
 Interesting... There are local device wiping tools that can be triggered when a SIM card change is detected.
 
-# Geolocation, Geofencing, and Push Notifications
+## Geolocation, Geofencing, and Push Notifications
 
 Exam Cram notes that geofencing is a tactic that can be used to prevent time theft. Sufficiently fine-grained geofencing can actually be used to clock people in and out.
 
-# Storage Segmentation and Containerization
+## Storage Segmentation and Containerization
 
 Android's "work environment", etc. Typically device containers are encrypted using AES, and generally contain work *applications* as well as data. Some solutions wrap system calls to ensure that data is encrypted in transit to/from the device as well.
 
 Device containerization is limited by application compatability.
 
-# Full Device Encryption (FDE)
+## Full Device Encryption (FDE)
 
 MicroSD HSMs exist. Typically used for key management.
 
-# Enforcement and Monitoring
+## Enforcement and Monitoring
 
 EMM = Enterprise Mobility Management
 
 Typically this is a combination of MDM, MAM, and IAM.
 
-# Custom Firmware, Carrier Unlocking, and OTA Updates
+## Custom Firmware, Carrier Unlocking, and OTA Updates
 
 Android supports the deployment of "Device Policy Controller" (DPC) applications that can control the OTA update process. (It sounds like this is similar to the control available on Chrome OS devices.)
 
-# Storage and USB OTG
+## Storage and USB OTG
 
 USB OTG = USB On-the-Go = USB Host Mode
 
 Exam Cram emphasizes the importance of encrypting micoSD cards.
 
-# Enforcement for Normal Device Functions
+## Enforcement for Normal Device Functions
 
 Exam Cram emphasizes the importance of including policy guidance w.r.t. camera and microphone usage.
 
-# Wi-Fi Methods, Tethering, and Payments
+## Wi-Fi Methods, Tethering, and Payments
 
 Wi-Fi Direct is a combination of setting up a mobile device as a hotspot with the use of Wi-Fi Protected Setup (WPS) to exchange password information. Given that WPS is a known broken standard, this is problematic. Wi-Fi Direct using WPA3 does *not* use WPS, however.
 
@@ -117,7 +117,7 @@ Ad hoc networking is formally the creation of a "Mobile Ad hoc Network" "(MANET)
 
 Exam Cram defines "tethering" broadly to include *any* use of a mobile device by another system to reach the internet. So this includes both physical tethering and the use of a mobile phone as a hotspot.
 
-# BYOD, CYOD, COPE, and Corporate-Owned Devices
+## BYOD, CYOD, COPE, and Corporate-Owned Devices
 
 BYOD = Bring Your Own Device
 
@@ -127,7 +127,7 @@ COBO = Corporate-Owned, Business Only.  Corporate-owned devices, generally pre-d
 
 COPE = Corporate-Owned, Personally Enabled. Like COBO but allows for personal use.
 
-# Virtual Desktop Infrastructure
+## Virtual Desktop Infrastructure
 
 VDI = Virtual Desktop Infrastructure
 
@@ -135,11 +135,11 @@ A variant called VMI ("Virtual Mobile Infrastructure") actually hosts a copy of 
 
 VDI access is either client-based (specialized application) or browser-based.
 
-# Forensics
+## Forensics
 
 Make sure that corporate policy includes the understanding that devices - including personal data! - may be imaged as part of an investigation.
 
-# Shell and Script Environments
+## Shell and Script Environments
 
 I just realized this, but \*NIX numeric permissions are listed in "descending" order of their significance - execution (1, arguably the most powerful since you may be able to make changes to the system with it), write (2, lets you make changes to the file/directory), and read (4, only allows reading the contents of the file/directory).
 
@@ -159,7 +159,7 @@ Some \*NIX commands that I'm less familiar with:
 * tcpreplay - Replay previously captured TCP/IP traffic
 * memdump - Dumps the contents of system memory
 
-# Network Reconnaissance and Discovery
+## Network Reconnaissance and Discovery
 
 A "port sweep" is a port scan across multiple hosts.
 
@@ -178,14 +178,14 @@ Remember that TTL is actually the hop count in ICMP, not an actual (human) time!
 * [scanless](https://github.com/vesche/scanless)
 * [Cuckoo](https://cuckoosandbox.org/)
 
-# Exploitation Frameworks
+## Exploitation Frameworks
 
 * Metasploit (the one everyone talks about)
 * Canvass
 * Core Impact
 * BeEF ("Browser Exploitation Framework", used to attack browsers using client-side scripts)
 
-# Packet Capture and Replay
+## Packet Capture and Replay
 
 The "Microsoft Message Analyzer" is a protocol analyzer built into Windows Server.
 
@@ -193,11 +193,11 @@ Technically a protocol sniffer just gathers packets while a protocol analyzer ac
 
 * [WinDump](https://www.winpcap.org/windump/)
 
-# Password Crackers
+## Password Crackers
 
 Interesting legal complication (though it makes sense): In a corporate environment, it's important to only provide/view password strength information when cracking user passwords, as displaying the full password can make it unclear who is actually using a particular account in the logs.
 
-# Forensics and Data Sanitization
+## Forensics and Data Sanitization
 
 Data Sanitization: The removal of data from a device in a fashion designed to make recovery as difficult as possible.
 
@@ -213,9 +213,9 @@ Some other tools that Exam Cram mentions explicitly:
 * FTK Imager (disk imaging tool)
 * Autopsy (storage media forensics tool)
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
+## ITPro.TV: CompTIA Security+ (SY0-601)
 
-# Mobile Device Deployment
+## Mobile Device Deployment
 
 "Unified Endpoint Management" (UEM) is a single "pane of glass" that combines MDM, EMM, and MAM that covers all sorts of devices - everything from laptops to smartphones (and often desktops too, despite them not actually being mobile).
 
@@ -234,13 +234,13 @@ Things a microSD HSM can do:
 
 ITPro.TV defines COPE (Corporate-Owned, Personally Enabled) broadly as the traditional corporate-owned device model.
 
-# Mobile Device Management And Enforcement
+## Mobile Device Management And Enforcement
 
 This episode is a walk-through of the Microsoft Endpoint Security Manager.
 
 Heh. Dan Lowrie gives a shout-out to Signal as an example of end-to-end encrypted messaging.
 
-# Mobile Device Connections
+## Mobile Device Connections
 
 IMEI = International Mobile Equipment Identifier. A bit like a MAC address for mobile devices on GSM and UTMS networks.
 
@@ -288,7 +288,7 @@ RFID tags come in two varieties: Passive (powered by the reader) and active (sel
 * [Bluetooth (Wikipedia)](https://en.wikipedia.org/wiki/Bluetooth)
 * [USB (Wikipedia)](https://en.wikipedia.org/wiki/USB)
 
-# Specialized Systems
+## Specialized Systems
 
 SCADA = Supervisory Control and Data Acquisition
 

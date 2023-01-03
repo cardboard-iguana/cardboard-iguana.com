@@ -1,7 +1,7 @@
 # UNIX File Descriptors
 
-author:: Nathan Acks  
-date:: 2021-10-02
+**author**:: Nathan Acks  
+**date**:: 2021-10-02
 
 * STDIN - 0
 * STDOUT - 1

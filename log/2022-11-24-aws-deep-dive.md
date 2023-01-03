@@ -1,19 +1,19 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-11-24
+**author**:: Nathan Acks  
+**date**:: 2022-11-24
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Working With WebSocket APIs
+### Working With WebSocket APIs
 
 * [Amazon API Gateway: Working with WebSocket APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html)
 
-### Invoking WebSockets Backend Integrations in API Gateway
+#### Invoking WebSockets Backend Integrations in API Gateway
 
 WebSocket APIs in API Gateway support messages up to 128 KB is size, chunked into blocks of at most 32 KB. Raw binary data is not supported.
 
@@ -25,7 +25,7 @@ Routes are defined by looking at the value of a specific JSON property; messages
 
 * [Invoking your backend integration: `$default` Route and custom routes](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-routes-integrations.html)
 
-### WebSocket Selection Expressions in API Gateway
+#### WebSocket Selection Expressions in API Gateway
 
 Route keys can actually include variables that refer to authentication headers, or the outcome of Lambda authorizers; however, everything else still needs to come from the incoming JSON body.
 

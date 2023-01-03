@@ -1,9 +1,9 @@
 # Working With Samba
 
-author:: Nathan Acks  
-date:: 2022-04-25
+**author**:: Nathan Acks  
+**date**:: 2022-04-25
 
-# smbmap
+## smbmap
 
 * `-h` - IP address or host to enumerate
 * `-u` - username to use during enumeration (attempts to use the NULL session if not supplied)
@@ -13,7 +13,7 @@ date:: 2022-04-25
 * `-x` - attempt to execute the supplied command (!!!) on the server (if the user you're connecting as has permission to do so)
 * `--download`/`--upload` - download or upload a file to specified share
 
-# smbclient
+## smbclient
 
 ```bash
 smbclient //$IP/$SHARE -U $USER -p $PORT
@@ -33,7 +33,7 @@ If -U is not included, smbclient will use your current (local) username, so prob
 
 The interface is reminiscent of old-school FTP clients.
 
-# smbget
+## smbget
 
 ```bash
 smbget smb://$IP/$SHARE/$FILE -U $USER
@@ -45,6 +45,6 @@ Note that the semantics are annoyingly slightly different from smbclient - no po
 
 Use -R (and omit `$FILE`) to recursively download an entire directory.
 
-# net share
+## net share
 
 Use `net share` on Windows to list *all* current shares (including some that are just control processes).

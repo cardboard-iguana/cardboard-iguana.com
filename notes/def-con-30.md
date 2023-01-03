@@ -1,12 +1,12 @@
 # A New HOPE
 
-author:: Nathan Acks  
-date:: 2022-08-14  
-tags:: #MOC
+**author**:: Nathan Acks  
+**date**:: 2022-08-14  
+**tags**:: #MOC
 
 * [DEF CON 30](https://defcon.org/html/defcon-30/dc-30-index.html)
 
-# Conference Notes
+## Conference Notes
 
 * [2022-08-11 - DEF CON 30](../log/2022-08-11-def-con-30.md)
 * [2022-08-12 - DEF CON 30](../log/2022-08-12-def-con-30.md)

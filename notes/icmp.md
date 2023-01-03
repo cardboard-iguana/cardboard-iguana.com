@@ -1,7 +1,7 @@
 # ICMP Protocol
 
-author:: Nathan Acks  
-date:: 2022-03-30
+**author**:: Nathan Acks  
+**date**:: 2022-03-30
 
 ICMP headers are 8 bytes; the first 4 bytes have a fixed meaning, while the meaning of the last 4 bytes varies depending on the type of request specified in the first 4 bytes.
 

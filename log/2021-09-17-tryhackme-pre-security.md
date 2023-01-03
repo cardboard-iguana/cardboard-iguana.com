@@ -1,9 +1,9 @@
 # TryHackMe: Pre Security
 
-author:: Nathan Acks  
-date:: 2021-09-17
+**author**:: Nathan Acks  
+**date**:: 2021-09-17
 
-# The File System
+## The File System
 
 NTFS stands for the "New Technology File System". *Very* old versions of Windows NT (*before* FAT32) used HPFS (the "High Performance File System").
 
@@ -31,20 +31,20 @@ Windows permissions for files:
 
 Windows access is default-deny.
 
-# The Windows/System32 Folder
+## The Windows/System32 Folder
 
 Variable that stores the path to the ("central") Windows installation directory: %WINDIR%.
 
-# User Accounts, Profiles, and Permissions
+## User Accounts, Profiles, and Permissions
 
 "Profiles" are the Windows equivalent of UNIX home directories. Profile directories aren't created on Windows until a user's first login.
 
 Windows users and groups can be more directly manipulated through the "Local User and Group Management" snap-in, lusrmgr.msc.
 
-# User Account Control
+## User Account Control
 
 a.k.a "UAC"
 
-# Task Manager
+## Task Manager
 
 Task Manager shortcut: Ctrl+Shift+Esc

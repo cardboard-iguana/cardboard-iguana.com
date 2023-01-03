@@ -1,7 +1,7 @@
 # How to Load a Shell with a Simple Executable
 
-author:: Nathan Acks  
-date:: 2021-11-02
+**author**:: Nathan Acks  
+**date**:: 2021-11-02
 
 It's actually trivial to write a C program that loads up a shell.
 
@@ -31,7 +31,7 @@ A simple binary like this is useful for exploiting SUID/SGID applications that c
 
 * [Exploiting LD_PRELOAD](exploiting-ld-preload.md)
 
-# Metasploit
+## Metasploit
 
 The msfvenom tool can generate binaries with essentially the same functionality as above.
 

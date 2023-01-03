@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-11-28
+**author**:: Nathan Acks  
+**date**:: 2021-11-28
 
-# Cross-Site Scripting
+## Cross-Site Scripting
 
-## Introduction
+### Introduction
 
 Two basic types:
 
@@ -18,7 +18,7 @@ Mostly noting this down because it's been a while since I last looks at XSS.
 
 * [XSS (Cross Site Scripting) Attacks](../notes/xss-attacks.md)
 
-## Stored XSS
+### Stored XSS
 
 Cookies can be accessed in JavaScript via document.cookie.
 
@@ -33,23 +33,23 @@ In any event, you can change the value of the cookies associated with a site in 
 * [Document.cookie (MDN Web Docs)](https://developer.mozilla.org/docs/Web/API/Document/cookie)
 * [Quick-n-Dirty Python Web Server](../notes/quick-n-dirty-python-web-server.md)
 
-## Reflected XSS
+### Reflected XSS
 
 This is the most common type of XSS attack.
 
 Note that CORS will generally prevent the use of online services for fetching data...
 
-## DOM-Based XSS
+### DOM-Based XSS
 
 So, this is basically SQL injection, but with HTML. The main trick here is that I'm finding that browsers (or at least all of *my* browsers) don't seem to reliably execute JavaScript in `<script/>` tags that's been inserted after the page load anymore. Using the `onmouseover` or `onclick` attribute seems to work reliably (the `onload` attribute does not, however).
 
 This may explain all of the trouble I had above.
 
-## Using XSS for IP and Port Scanning
+### Using XSS for IP and Port Scanning
 
 [An example JavaScript port scanner (possibly broken).](https://github.com/aabeling/portscan)
 
-## XSS Keylogger
+### XSS Keylogger
 
 A simple JavaScript keylogger:
 
@@ -65,11 +65,11 @@ A simple JavaScript keylogger:
 
 This only logs to the browser console though; a real keylogger would send this information to an external server or some-such.
 
-## Filter Evasion: Bypass `<script/>` Tag Removal
+### Filter Evasion: Bypass `<script/>` Tag Removal
 
 Use `onmouseover`, `onclick`, etc.
 
-## Filter Evasion: Bypass Simple Word Filtering
+### Filter Evasion: Bypass Simple Word Filtering
 
 In general, you can break up strings to get around this.
 
@@ -104,7 +104,7 @@ Remember that JavaScript recognizes single quote, double quotes, *and* back tick
 * [JSFuck](http://www.jsfuck.com/)
 * [JavaScript Obfuscator Tool](https://obfuscator.io/)
 
-## Filter Evasion: Bypass Attribute AND Tag AND Word Filtering
+### Filter Evasion: Bypass Attribute AND Tag AND Word Filtering
 
 Remember that it's possible to embed JavaScript in an iframe, at least so long as you don't mind losing access to the parent page's DOM.
 
@@ -112,21 +112,21 @@ Also remember that browsers treat URI schemes, HTML tag names, and HTML tag attr
 
 * [XSS (Cross Site Scripting) Attacks](../notes/xss-attacks.md)
 
-# CC: Pen Testing
+## CC: Pen Testing
 
-## Netcat
+### Netcat
 
 Netcat can connect over UDP instead of TCP by providing the `-u` flag. I suspect that this may be less than reliable though for anything other than connections on the local network.
 
 * [Using "netcat"](../notes/netcat.md)
 
-## GoBuster
+### GoBuster
 
 Gobuster can also attempt to brute-force subdomains (the `dns` command).
 
 Increasing threads (`-t`) in gobuster makes a *big* difference in performance. (Probably makes you noisier too...)
 
-## Nikto
+### Nikto
 
 Nikto is a web application vulnerability scanner.
 

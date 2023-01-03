@@ -1,11 +1,11 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-author:: Nathan Acks  
-date:: 2022-03-03
+**author**:: Nathan Acks  
+**date**:: 2022-03-03
 
-# CompTIA Security+ Exam Cram
+## CompTIA Security+ Exam Cram
 
-## Cryptosystems
+### Cryptosystems
 
 Cryptosystems are concerned with data confidentiality (encrypting) and integrity (hashing/signing).
 
@@ -46,15 +46,15 @@ Asymmetric key algorithms are also called public key algorithms.
 * [Forward secrecy (Wikipedia)](https://en.wikipedia.org/wiki/Forward_secrecy)
 * [Diffie-Hellman key exchange (Wikipedia)](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)
 
-## Use of Proven Technologies and Implementations
+### Use of Proven Technologies and Implementations
 
 Exam Cram emphasizes several times the efficiency of elliptic curve cryptography (ECC) and its application for mobile devices with more constrained computational or energetic profiles. Which I suspect means that a question like this is likely to be on the Security+ exam.
 
-## Steganography
+### Steganography
 
 Exam Cram indicates that the Security+ test is likely to have some kind of question about the difference between steganography and cryptography.
 
-## Cryptography Use Cases
+### Cryptography Use Cases
 
 To reiterate, a list of the roles of cryptography in security:
 
@@ -63,11 +63,11 @@ To reiterate, a list of the roles of cryptography in security:
 * Nonrepudiation (signing)
 * Authentication (can be accomplished via a public/private key cryptography during the initial handshake)
 
-# ITPro.TV: CompTIA Security+ (SY0-601)
+## ITPro.TV: CompTIA Security+ (SY0-601)
 
-# Cryptography
+## Cryptography
 
-## Cryptography Concepts
+### Cryptography Concepts
 
 > [Cryptography] is trying to make us live in a world that's "need to know".
 > 
@@ -84,7 +84,7 @@ Important cyphers for low-power devices (SCADA, etc.)
 * PRESENT
 * TWINE
 
-## Encryption And Steganography
+### Encryption And Steganography
 
 Encryption is about ensuring confidentiality; steganography is about hiding information (which may - and probably should be! - itself cyphertext).
 
@@ -110,7 +110,7 @@ Block cipher modes:
 * Output Feedback (OFB) - Allows a block cipher to function more like a stream cipher
 * Counter Mode (CTR) - Strongest, used by AES
 
-## Hashing
+### Hashing
 
 Hashes are always fixed length (for a given hash type). Also, "message digest" == "fingerprint" == "hash"!
 
@@ -125,7 +125,7 @@ Checksums are not hashing algorithms, but serve a similar purpose.
 
 A note about salts: You *don't* want your salt(s) to become public, but it also doesn't completely negate their value if they are leaked. The reason for this is that, so long as you are using *unique* salts in every instance, you are still preventing the use of *mass* password/data cracking. So even a leaked salt buys you time... But that's the only thing it buys you at that point, so it's still important to re-encrypt / re-hash / invalidate passwords, etc. if this happens!
 
-## Symmetric vs. Asymmetric Encryption
+### Symmetric vs. Asymmetric Encryption
 
 Symmetric cyphers:
 

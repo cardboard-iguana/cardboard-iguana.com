@@ -1,11 +1,11 @@
 # Pickle Rick
 
-author:: Nathan Acks  
-date:: 2021-10-10
+**author**:: Nathan Acks  
+**date**:: 2021-10-10
 
 * [TryHackMe: Pickle Rick](https://tryhackme.com/room/picklerick)
 
-# Background
+## Background
 
 This is a Rick & Morty themed web server / CTF. The fact that I've never watched the show may put me at a disadvantage.
 
@@ -23,7 +23,7 @@ Because this is web server exploitation, it's going to make sense to use Burp Su
 
 * [Rick and Morty (Wikipedia)](https://en.wikipedia.org/wiki/Rick_and_Morty)
 
-# Recon
+## Recon
 
 The server is running Apache 2.4.18 on some version of Ubuntu. The provided web page is very simple:
 
@@ -137,7 +137,7 @@ Nikto is a scanner for common web vulnerabilities. A couple of interesting thing
 
 * [TryHackMe Pickle Rick CTF Walkthrough](https://razrexe.medium.com/tryhackme-pickle-rick-ctf-walkthrough-9ed36eff17fe)
 
-# Flag 1
+## Flag 1
 
 Let's check out /login.php. This looks like a pretty straight-forward login page. No special headers show up when intercepting the response in Burp Suite, and again no JavaScript outside of the standard jQuery and Bootstrap libraries is loaded.
 
@@ -166,7 +166,7 @@ Viewing /Sup3rS3cretPickl3Ingred.txt revels the first flag:
 mr. meeseek hair
 ```
 
-# Flag 2
+## Flag 2
 
 Let's continue poking around. Before we go back to /portal.php, let's take a look at /clue.txt
 
@@ -192,7 +192,7 @@ Let's get that second flag by executing `less "/home/rick/second ingredients"`.
 1 jerry tear
 ```
 
-# Flag 3
+## Flag 3
 
 Let's get us some filesystem access. On a lark, I tried the command `sudo whoami`... And the answer is `root`! Jackpot!
 

@@ -1,17 +1,17 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-10-11
+**author**:: Nathan Acks  
+**date**:: 2022-10-11
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
-## Working with REST APIs
+### Working with REST APIs
 
 * [Amazon API Gateway: Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)
 
-### Setting up REST API Integrations (Continued...)
+#### Setting up REST API Integrations (Continued...)
 
 Like Lambda proxying, HTTP endpoint proxying requires the use of *both* a greedy `{proxy+}` path parameter and the virtual `ANY` method. Proxying then works exactly as you'd expect, such that
 

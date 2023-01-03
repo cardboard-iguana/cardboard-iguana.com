@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner
 
-author:: Nathan Acks  
-date:: 2021-10-05
+**author**:: Nathan Acks  
+**date**:: 2021-10-05
 
-# OWASP Top 10
+## OWASP Top 10
 
-## (Severity 01) Injection
+### (Severity 01) Injection
 
 Some versions of netcat support a -e flag that hooks STDIN and STDOUT of an executable to the established network connection. So something like:
 
@@ -25,7 +25,7 @@ ACTIVE attacks are those where the command output *is* returned to the attacker 
 
 * [2021-10-02 - TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
 
-## (Severity 02) Broken Authentication
+### (Severity 02) Broken Authentication
 
 Sometimes you don't need to steal a session cookie... If the webserver isn't setting session cookies in a sufficiently random fashion, *forging* one can become an option!
 
@@ -33,6 +33,6 @@ The TryHackMe tutorial implies that a common mistake is to allow the registratio
 
 Honestly, I'm trying to imagine how this would happen in most realistic contexts. Yes, it's easy to construct an example in Bash (etc.), but most languages I've seen web apps written it take string quoting a lot more seriously.
 
-## (Severity 03) Sensitive Data Exposure
+### (Severity 03) Sensitive Data Exposure
 
 So, the trick this section is talking about is that some small web applications use SQLite databases, and a sloppy webdev might store the database file in the application webroot where it can be downloaded and then read at our leisure.

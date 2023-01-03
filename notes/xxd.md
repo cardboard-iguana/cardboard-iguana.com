@@ -1,6 +1,6 @@
 # Using "xxd"
 
-author:: Nathan Acks
+**author**:: Nathan Acks
 
 The xxd command is actually pretty standard on Linux systems.
 

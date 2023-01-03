@@ -1,7 +1,7 @@
 # Quick-n-Dirty Python Web Server
 
-author:: Nathan Acks  
-date:: 2021-09-16
+**author**:: Nathan Acks  
+**date**:: 2021-09-16
 
 Serve files out of the current directory over HTTP using Python 3:
 

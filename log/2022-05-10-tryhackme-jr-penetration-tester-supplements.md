@@ -1,7 +1,7 @@
 # TryHackMe: Jr. Penetration Tester (Supplements)
 
-author:: Nathan Acks  
-date:: 2022-05-10
+**author**:: Nathan Acks  
+**date**:: 2022-05-10
 
 Today's TryHackMe Jr. Penetration Tester "supplements":
 

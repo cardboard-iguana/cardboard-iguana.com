@@ -1,11 +1,11 @@
 # TryHackMe: Complete Beginner (Supplements)
 
-author:: Nathan Acks  
-date:: 2021-11-09
+**author**:: Nathan Acks  
+**date**:: 2021-11-09
 
-# Splunk
+## Splunk
 
-## Can You Dig It?
+### Can You Dig It?
 
 Mostly this section is just looking things up in the Splunk Quick Reference Guide.
 
@@ -24,7 +24,7 @@ Various Splunk apps (extensions, really) can be found at https://splunkbase.splu
 
 * [Splunk Quick Reference Guide](https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf)
 
-## Halp, I'm Drowning in Logs!
+### Halp, I'm Drowning in Logs!
 
 The cyber killchain:
 
@@ -36,7 +36,7 @@ The cyber killchain:
 * Command & Control
 * Actions on Objectives
 
-## Advanced Persistent Threat
+### Advanced Persistent Threat
 
 In Splunk, searching for `*` matches any *non-null* string. This is particularly useful when combining data sources, doing lookups, etc., as adding a subsearch like `| search field_name=*` will ensure that only rows that actually matched are returned.
 

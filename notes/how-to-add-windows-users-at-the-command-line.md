@@ -1,7 +1,7 @@
 # How to Add Windows Users (at the Command Line)
 
-author:: Nathan Acks  
-date:: 2021-10-29
+**author**:: Nathan Acks  
+**date**:: 2021-10-29
 
 ```powershell
 net user $USERNAME $PASSWORD /add

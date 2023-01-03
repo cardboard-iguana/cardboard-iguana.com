@@ -1,15 +1,15 @@
 # AWS Deep Dive
 
-author:: Nathan Acks  
-date:: 2022-11-21
+**author**:: Nathan Acks  
+**date**:: 2022-11-21
 
-# Amazon API Gateway
+## Amazon API Gateway
 
 Continued notes about the Amazon API Gateway.
 
 * [Amazon API Gateway: Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-## Working With HTTP APIs
+### Working With HTTP APIs
 
 HTTP APIs are also REST APIs - they just have fewer features, but cost less per call. HTTP APIs can also be used with Lambda functions; their main distinguishing feature is that client calls are passed in full to the backend, and backend responses are passed in full to the requesting client.
 
@@ -17,7 +17,7 @@ Lambda authorizers are *not* supported for HTTP APIs, though OpenID Connect and 
 
 * [Amazon API Gateway: Working with HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html)
 
-### Working With Routes for HTTP APIs in API Gateway
+#### Working With Routes for HTTP APIs in API Gateway
 
 HTTP APIs support the ANY pseudo-method, path variables, and query string parameters, just like API Gateway REST APIs (though unlike REST APIs, by default HTTP APIs pass query parameters through unchanged to the backend).
 
@@ -25,7 +25,7 @@ They also support the creation of a `$default` route, which is used for any unha
 
 * [Working with routes for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html)
 
-### Controlling and Managing Access to an HTTP API in API Gateway
+#### Controlling and Managing Access to an HTTP API in API Gateway
 
 HTTP APIs support using Lambda functions, JWT tokens, and IAM roles/policies for access control.
 
@@ -37,7 +37,7 @@ IAM authorization requires that requests be Sigv4 signed.
 
 * [Controlling and managing access to an HTTP API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-access-control.html)
 
-### Configuring Integrations for HTTP APIs in API Gateway
+#### Configuring Integrations for HTTP APIs in API Gateway
 
 HTTP API supports using Lambda functions, other web servers, other Amazon services, and VPC resources as backends.
 
@@ -53,7 +53,7 @@ VPC resources are exposed to API gateway using "private integrations". Any VPC r
 
 * [Configuring integrations for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations.html)
 
-### Configuring CORS for an HTTP API in API Gateway
+#### Configuring CORS for an HTTP API in API Gateway
 
 When CORS is turned on for an API, API Gateway will automatically respond to preflight OPTIONS requests (no special routes need to be configured).
 
