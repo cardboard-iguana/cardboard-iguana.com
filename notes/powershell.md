@@ -86,7 +86,7 @@ $SESSION_NAME = New-PSSession -ComputerName "$MACHINE"
 Enter-PSSession -Session $SESSION_NAME
 ```
 
-* [2022-09-02 - OffSec Live: PEN-200](../log/2022-09-02-offsec-live-pen-200.md)
+* [2022-09-02 — OffSec Live: PEN-200](../log/2022-09-02-offsec-live-pen-200.md)
 
 ## Run PowerShell from cmd.exe
 

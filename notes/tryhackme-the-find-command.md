@@ -8,4 +8,4 @@
 
 ## Course Notes
 
-* [2021-09-19 - TryHackMe: Pre Security](../log/2021-09-19-tryhackme-pre-security.md)
+* [2021-09-19 — TryHackMe: Pre Security](../log/2021-09-19-tryhackme-pre-security.md)

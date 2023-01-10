@@ -8,4 +8,4 @@
 
 ## Course Notes
 
-* [2022-05-10 - TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
+* [2022-05-10 — TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-05-10-tryhackme-jr-penetration-tester-supplements.md)

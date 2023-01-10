@@ -150,7 +150,7 @@ I've written out several variations of the Kerberos authentication process (my f
 
 The default Kerberos port is TCP 88.
 
-* [2022-03-12 - ITPro.TV: CompTIA Security+ (SY0-601)](2022-03-12-itprotv-comptia-security-plus.md)
+* [2022-03-12 — ITPro.TV: CompTIA Security+ (SY0-601)](2022-03-12-itprotv-comptia-security-plus.md)
 * [Kerberos](../notes/kerberos.md)
 
 ## TryHackMe: Jr. Penetration Tester

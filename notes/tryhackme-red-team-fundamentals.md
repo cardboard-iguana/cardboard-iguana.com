@@ -8,4 +8,4 @@
 
 ## Course Notes
 
-* [2022-04-28 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-04-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester-supplements.md)
+* [2022-04-28 — ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester (Supplements)](../log/2022-04-28-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester-supplements.md)

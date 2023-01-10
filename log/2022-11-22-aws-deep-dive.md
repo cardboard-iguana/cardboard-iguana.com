@@ -40,5 +40,5 @@ Stage variables work more-or-less the same for HTTP APIs as they do for REST API
 Custom domains work more-or-less the same for HTTP APIs as they do for REST APIs (modulo the absence of `$context` variables).
 
 * [Setting up custom domain names for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-custom-domain-names.html)
-* [2022-10-31 - AWS Deep Dive (Setting Up Custom Domain Names for REST APIs in API Gateway, Part 1)](2022-10-31-aws-deep-dive.md)
-* [2022-11-03 - AWS Deep Dive (Setting Up Custom Domain Names for REST APIs in API Gateway, Part 2)](2022-11-03-aws-deep-dive.md)
+* [2022-10-31 — AWS Deep Dive (Setting Up Custom Domain Names for REST APIs in API Gateway, Part 1)](2022-10-31-aws-deep-dive.md)
+* [2022-11-03 — AWS Deep Dive (Setting Up Custom Domain Names for REST APIs in API Gateway, Part 2)](2022-11-03-aws-deep-dive.md)

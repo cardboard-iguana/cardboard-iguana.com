@@ -17,8 +17,8 @@ Lambda authorization functions for the API Gateway can be called across accounts
 
 Updating authorization methods seems to always require the apigateway:POST (create) and apigateway:PATCH (update) IAM permissions, though the target resources differ depending on which authorization method is being used.
 
-* [2022-10-04 - AWS Deep Dive (Controlling and Managing Access to a REST API in API Gateway, Part 1)](2022-10-04-aws-deep-dive.md)
-* [2022-10-08 - AWS Deep Dive (Controlling and Managing Access to a REST API in API Gateway, Part 2)](2022-10-08-aws-deep-dive.md)
+* [2022-10-04 — AWS Deep Dive (Controlling and Managing Access to a REST API in API Gateway, Part 1)](2022-10-04-aws-deep-dive.md)
+* [2022-10-08 — AWS Deep Dive (Controlling and Managing Access to a REST API in API Gateway, Part 2)](2022-10-08-aws-deep-dive.md)
 * [Controlling and managing access to a REST API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html)
 
 #### Setting up REST API Integrations

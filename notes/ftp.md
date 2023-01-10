@@ -40,4 +40,4 @@ Which is a lot of work, but sometimes you just don't have an FTP client.
 
 FTPS (FTP over SSL) uses port 990 by default. Mostly supplanted by SFTP.
 
-* [2022-04-02 - ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)
+* [2022-04-02 — ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester](../log/2022-04-02-itprotv-comptia-security-plus-and-tryhackme-jr-penetration-tester.md)

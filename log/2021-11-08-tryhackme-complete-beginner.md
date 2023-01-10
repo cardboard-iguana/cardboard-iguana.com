@@ -66,4 +66,4 @@ Where ASCService.exe is the same compromise as last time, and we again catch the
 nc -lvnp 4443
 ```
 
-* [2021-11-07 - TryHackMe: Complete Beginner](2021-11-07-tryhackme-complete-beginner.md)
+* [2021-11-07 — TryHackMe: Complete Beginner](2021-11-07-tryhackme-complete-beginner.md)

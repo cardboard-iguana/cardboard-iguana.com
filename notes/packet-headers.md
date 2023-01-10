@@ -18,7 +18,7 @@
 
 There's potentially *a lot* more detail then this in a TCP packet header, however.
 
-* [2022-08-11 - DEF CON 30](../log/2022-08-11-def-con-30.md)
+* [2022-08-11 — DEF CON 30](../log/2022-08-11-def-con-30.md)
 
 ## Important/Common UDP Packet Headers
 

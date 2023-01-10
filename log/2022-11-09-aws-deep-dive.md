@@ -17,7 +17,7 @@ Continued notes about the Amazon API Gateway.
 
 API keys can belong to multiple usage plans, and usage plans can be associated with multiple stages. But each API key can only be associated with *one* usage plan per stage.
 
-* [2022-11-03 - AWS Deep Dive (Creating and Using Usage Plans with API Keys in API Gateway, Part 1)](2022-11-03-aws-deep-dive.md)
+* [2022-11-03 — AWS Deep Dive (Creating and Using Usage Plans with API Keys in API Gateway, Part 1)](2022-11-03-aws-deep-dive.md)
 * [Creating and using usage plans with API keys](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html)
 
 #### Documenting REST APIs in API Gateway

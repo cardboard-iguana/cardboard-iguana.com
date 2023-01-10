@@ -23,7 +23,7 @@ BLIND attacks are ones where command output is not returned to the attacker in a
 
 ACTIVE attacks are those where the command output *is* returned to the attacker in a server response.
 
-* [2021-10-02 - TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
+* [2021-10-02 — TryHackMe: Complete Beginner](2021-10-02-tryhackme-complete-beginner.md)
 
 ### (Severity 02) Broken Authentication
 

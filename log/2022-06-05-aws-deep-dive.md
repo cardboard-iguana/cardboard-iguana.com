@@ -17,9 +17,9 @@ Once I'm finished working through the AWS-related materials, I'm going to turn m
 
 Once I'm done with both of these I'll turn back to the remaining TryHackMe "supplements", move on to a few odds-and-ends rooms focusing more on *defensive* security (it feels like I should have at least a passing knowledge of some of that), and then begin the process of working towards my Pentest+ certification!
 
-* [2022-05-10 - TryHackMe: Jr. Penetration Tester (Supplements)](2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
+* [2022-05-10 — TryHackMe: Jr. Penetration Tester (Supplements)](2022-05-10-tryhackme-jr-penetration-tester-supplements.md)
 * [CompTIA Security+ ce Certification for Nathan Acks](https://www.credly.com/badges/0d86c824-a853-4d77-9c5a-7f510f63fe78/)
-* [2021-09-11 - Context Setting](2021-09-11-context-setting.md)
+* [2021-09-11 — Context Setting](2021-09-11-context-setting.md)
 * [Amazon Web Services](https://aws.amazon.com/)
 * [PortSwigger: Burp Suite](https://portswigger.net/burp)
 * [PortSwigger: Web Security Academy](https://portswigger.net/web-security/learning-path)

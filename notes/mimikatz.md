@@ -51,6 +51,6 @@ Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "sekurlsa::logonpa
 
 Note that Microsoft Defender will still detect the execution of Invoke-Mimikatz and kill the hosting PowerShell process. This is why we need to redirect the output to a file.
 
-* [2022-08-31 - OffSec Live: PEN-200](../log/2022-08-31-offsec-live-pen-200.md)
+* [2022-08-31 — OffSec Live: PEN-200](../log/2022-08-31-offsec-live-pen-200.md)
 * [EmpireProject / Empire / data / module_source / credentials / Invoke-Mimikatz.ps1](https://github.com/EmpireProject/Empire/blob/master/data/module_source/credentials/Invoke-Mimikatz.ps1)
 * [Using PowerShell](powershell.md)

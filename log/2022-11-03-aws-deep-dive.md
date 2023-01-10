@@ -21,7 +21,7 @@ APIs are mapped to base paths (which might be just `/`) off of the custom domain
 
 Once a custom domain is set up, the default API Gateway endpoint can be disabled. However, doing so disables it for *all* stages of that API.
 
-* [2022-10-31 - AWS Deep Dive (Setting Up Custom Domain Names for REST APIs in Amazon API Gateway, Part 1)](2022-10-31-aws-deep-dive.md)
+* [2022-10-31 — AWS Deep Dive (Setting Up Custom Domain Names for REST APIs in Amazon API Gateway, Part 1)](2022-10-31-aws-deep-dive.md)
 * [Setting up custom domain names for REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html)
 
 #### Enabling API Caching to Enhance Responsiveness  of API Gateway

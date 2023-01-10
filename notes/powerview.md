@@ -35,5 +35,5 @@ Get-NetLoggedon | select UserName
 Get-NetSession
 ```
  
-* [2022-08-24 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-24-offsec-live-pen-200-and-aws-deep-dive.md)
-* [2022-08-26 - OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)
+* [2022-08-24 — OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-24-offsec-live-pen-200-and-aws-deep-dive.md)
+* [2022-08-26 — OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)

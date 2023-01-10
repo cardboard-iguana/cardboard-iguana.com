@@ -46,7 +46,7 @@ Things that *don't* require an API redployment when updated:
 
 And that's about it for REST API deployments.
 
-* [2022-10-26 - AWS Deep Dive (Deploying a REST API in Amazon API Gateway, Part 1)](2022-10-26-aws-deep-dive.md)
+* [2022-10-26 — AWS Deep Dive (Deploying a REST API in Amazon API Gateway, Part 1)](2022-10-26-aws-deep-dive.md)
 * [Deploying a REST API in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-deploy-api.html)
 
 #### Setting Up Custom Domain Names for REST APIs in API Gateway

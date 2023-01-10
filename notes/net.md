@@ -18,6 +18,6 @@ Note that Windows allows for duplicate domain and local users; this is why users
 
 Remember that `net group $GROUP /domain` doesn't show which *domain* groups are members of `$GROUP`, and thus will miss domain admins whose membership is controlled by a nested group. The only way to retrieve a full list of users in a domain group is to use PowerShell.
 
-* [2022-08-24 - OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-24-offsec-live-pen-200-and-aws-deep-dive.md)
+* [2022-08-24 — OffSec Live: PEN-200 & AWS Deep Dive](../log/2022-08-24-offsec-live-pen-200-and-aws-deep-dive.md)
 * [Using PowerShell](powershell.md)
 * [Equivalent Windows and \*NIX Commands](equivalent-windows-and-nix-commands.md)

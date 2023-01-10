@@ -7,4 +7,4 @@
 theHarvester -d $EMAIL_DOMAIN -b $SERVICE_TO_SEARCH
 ```
 
-* [2022-07-15 - OffSec Live: PEN-200](../log/2022-07-15-offsec-live-pen-200.md)
+* [2022-07-15 — OffSec Live: PEN-200](../log/2022-07-15-offsec-live-pen-200.md)

@@ -8,4 +8,4 @@
 
 ## Course Notes
 
-* [2021-12-05 - TryHackMe: Complete Beginner (Supplements)](../log/2021-12-05-tryhackme-complete-beginner-supplements.md)
+* [2021-12-05 — TryHackMe: Complete Beginner (Supplements)](../log/2021-12-05-tryhackme-complete-beginner-supplements.md)

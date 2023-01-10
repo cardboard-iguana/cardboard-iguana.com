@@ -37,5 +37,5 @@ For the API Gateway to be able to call a backend AWS service, it needs to both b
 
 (To be continued…)
 
-* [2022-10-04 - AWS Deep Dive (Controlling and Managing Access to a REST API in API Gateway, Part 1)](2022-10-04-aws-deep-dive.md)
+* [2022-10-04 — AWS Deep Dive (Controlling and Managing Access to a REST API in API Gateway, Part 1)](2022-10-04-aws-deep-dive.md)
 * [Controlling and managing access to a REST API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html)

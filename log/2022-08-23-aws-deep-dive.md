@@ -19,4 +19,4 @@ Route 53 can also be used to set up internal DNS for VPCs. Internal DNS has all 
 
 Route 53 features a graphical interface for designing DNS routing rules (should a user get routed based on geographic proximity, fastest connection, and so on? how should server failover be handled? etc.), called "Traffic Flow".
 
-* [2022-08-20 - AWS Deep Dive](2022-08-20-aws-deep-dive.md)
+* [2022-08-20 — AWS Deep Dive](2022-08-20-aws-deep-dive.md)

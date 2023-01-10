@@ -31,5 +31,5 @@ Unlike the case with authorization services, when attaching an API Gateway to a 
 
 One interesting strategy is to use "stage variables" defined in the API Gateway to determine which VPCLink is being connected to (a similar strategy can presumably be used for other API settings). These variables are referred to using the `${stageVariables.VARIABLE_NAME}` notation; their use let's APIs defined in a given gateway be redefined (in a limited sense) by simply updating these variables. One use case: Swapping a production API to a new backend without having to rebuild the entire API stack defined in the API Gateway.
 
-* [2022-10-10 - AWS Deep Dive (Setting up REST API Integrations, Part 1)](2022-10-10-aws-deep-dive.md)
+* [2022-10-10 — AWS Deep Dive (Setting up REST API Integrations, Part 1)](2022-10-10-aws-deep-dive.md)
 * [Amazon API Gateway: Setting up REST API Integrations](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-integration-settings.html)

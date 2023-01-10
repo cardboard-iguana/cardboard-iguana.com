@@ -8,5 +8,5 @@
 
 ## Course Notes
 
-* [2021-09-25 - TryHackMe: Pre Security (Supplements)](../log/2021-09-25-tryhackme-pre-security-supplements.md)
-* [2021-09-26 - TryHackMe: Pre Security (Supplements)](../log/2021-09-26-tryhackme-pre-security-supplements.md)
+* [2021-09-25 — TryHackMe: Pre Security (Supplements)](../log/2021-09-25-tryhackme-pre-security-supplements.md)
+* [2021-09-26 — TryHackMe: Pre Security (Supplements)](../log/2021-09-26-tryhackme-pre-security-supplements.md)

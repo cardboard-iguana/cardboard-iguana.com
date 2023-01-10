@@ -18,7 +18,7 @@ Continued notes about the Amazon API Gateway.
 Throttling for HTTP APIs is handled in more-or-less the same as with REST APIs.
 
 * [Throttling requests to your HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-throttling.html)
-* [2022-11-17 - AWS Deep Dive (Throttle API Requests for Better API Gateway Throughput)](2022-11-17-aws-deep-dive.md)
+* [2022-11-17 — AWS Deep Dive (Throttle API Requests for Better API Gateway Throughput)](2022-11-17-aws-deep-dive.md)
 
 #### Configuring Mutual TLS Authentication for an HTTP API in API Gateway
 
@@ -27,14 +27,14 @@ Mutual TLS authentication is handled in more-or-less the same as with REST APIs.
 (Note that trust stores *are* `pem` files containing the *complete* chain of trust for the certificate authority *issuing* client certificates - it's not about the client certs at all. I somehow missed this during the earlier discussion.)
 
 * [Configuring mutual TLS authentication for an HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-mutual-tls.html)
-* [2022-11-17 - AWS Deep Dive (Configuring Mutual TLS Authentication for a REST API in API Gateway)](2022-11-17-aws-deep-dive.md)
+* [2022-11-17 — AWS Deep Dive (Configuring Mutual TLS Authentication for a REST API in API Gateway)](2022-11-17-aws-deep-dive.md)
 
 #### Configuring Logging for an HTTP API in API Gateway
 
 CloudWatch logging for HTTP APIs is similar to REST APIs. Note that `$context.requestId` and `$context.extendedRequestId` are identical for HTTP APIs.
 
 * [Configuring logging for an HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-logging.html)
-* [2022-11-19 - AWS Deep Dive (Setting up CloudWatch Logging for a REST API in API Gateway)](2022-11-19-aws-deep-dive.md)
+* [2022-11-19 — AWS Deep Dive (Setting up CloudWatch Logging for a REST API in API Gateway)](2022-11-19-aws-deep-dive.md)
 
 #### Troubleshooting Issues With HTTP API Lambda Integrations in API Gateway
 

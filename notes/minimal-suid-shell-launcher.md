@@ -39,4 +39,4 @@ Note that this is very similar to the `LD_PRELOAD` trick, except that we're usin
 * [unistd's execl() without passing any arguments](https://stackoverflow.com/a/34400649)
 * [Exploiting Bash](exploiting-bash.md)
 * [Exploiting LD_PRELOAD](exploiting-ld-preload.md)
-* [2022-08-05 - OffSec Live: PEN-200](../log/2022-08-05-offsec-live-pen-200.md)
+* [2022-08-05 — OffSec Live: PEN-200](../log/2022-08-05-offsec-live-pen-200.md)

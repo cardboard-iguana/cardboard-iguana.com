@@ -21,5 +21,5 @@ When converting incoming binary data to a base64 encoded string, a mapping templ
 
 (The API examples AWS provides in the documentation for uploading base64 encoded binary data use `Content-Type: application/json` with a body that's a raw - unwrapped! - base64 string. While this makes sense within the context of API Gateway, abusing `Content-Type` in this fashion just seems really bad to me.)
 
-* [2022-10-16 - AWS Deep Dive (API Gateway: Working With Binary Media Types for REST APIs, Part 1](2022-10-16-aws-deep-dive.md)
+* [2022-10-16 — AWS Deep Dive (API Gateway: Working With Binary Media Types for REST APIs, Part 1](2022-10-16-aws-deep-dive.md)
 * [API Gateway: Working with binary media types for REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings.html)

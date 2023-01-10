@@ -19,4 +19,4 @@ This disables AMSI, downloads Powercat into memory and invokes the module and th
 
 It's probably advisable to use your own server to host Powercat in order to make tripping network alarms less likely.
 
-* [2022-08-26 - OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)
+* [2022-08-26 — OffSec Live: PEN-200](../log/2022-08-26-offsec-live-pen-200.md)

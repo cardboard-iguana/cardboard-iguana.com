@@ -56,7 +56,7 @@ IAM authentication uses Sigv4; cross-account access to call APIs can only be gra
 
 Method responses can either be pre-configured mappings from the backend to the client (HTTP status code, response parameters, and a response model), or just directly proxy the backend response to the client. Defined method responses are chosen by matching the HTTP status code returned by the backend, with 500 returned for any unmapped backend responses. Note that response parameters are only necessary if the API Gateway is to map the backend responses - if not defined, then the backend response will simply be proxied. Response models are only necessary for automatic SDK generation.
 
-* [2022-10-02 - AWS Deep Dive (Creating a REST API in Amazon API Gateway, Part 1)](2022-10-02-aws-deep-dive.md)
+* [2022-10-02 — AWS Deep Dive (Creating a REST API in Amazon API Gateway, Part 1)](2022-10-02-aws-deep-dive.md)
 * [JSON Schema](https://datatracker.ietf.org/doc/html/draft-zyp-json-schema-04)
 * [Creating a REST API in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-create-api.html)
 

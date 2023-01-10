@@ -34,4 +34,4 @@ netsh advfirewall firewall add action=allow name=tunnel_out `
 
 In general you don't want to turn off the Windows Firewall, as doing so will generate a popup for any users currently logged into the machine.
 
-* [2022-08-31 - OffSec Live: PEN-200](../log/2022-08-31-offsec-live-pen-200.md)
+* [2022-08-31 — OffSec Live: PEN-200](../log/2022-08-31-offsec-live-pen-200.md)
