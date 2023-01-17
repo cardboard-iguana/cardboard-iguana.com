@@ -1,5 +1,6 @@
 # A Hacker's Log
 
+* [2023-01-16 — AWS Deep Dive](log/2023-01-16-aws-deep-dive.md)
 * [2023-01-09 — AWS Deep Dive](log/2023-01-09-aws-deep-dive.md)
 * [2023-01-02 — AWS Deep Dive](log/2023-01-02-aws-deep-dive.md)
 * [2022-12-31 — AWS Deep Dive](log/2022-12-31-aws-deep-dive.md)
