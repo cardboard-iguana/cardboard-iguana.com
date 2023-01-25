@@ -1,7 +1,7 @@
 # Using "unbuffer"
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-31
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-31
 
 Normally application output is printed to STDOUT whenever a newline is encountered ("line buffering"). However, line buffering is disabled when piping to another application. This is particularly annoying, for example, when piping the output of an application to `tee` in order to both observe *and* save it to a log.
 

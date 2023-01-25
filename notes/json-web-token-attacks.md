@@ -1,7 +1,7 @@
 # JWT (JSON Web Tokens) Attacks
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-17
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-17
 
 JSON web token format: `$HEADER.$PAYLOAD.$SIGNATURE`, where each substring is (URL-safe) base64 encoded. These can be passed around as a user cookie, HTTP header, or queried from local storage.
 

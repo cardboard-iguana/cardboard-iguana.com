@@ -1,7 +1,7 @@
 # Enumerate Samba Users and Shares
 
-**author**:: Nathan Acks  
-**date**:: 2022-07-11
+* **author**:: Nathan Acks  
+* **date**:: 2022-07-11
 
 ## NMAP
 

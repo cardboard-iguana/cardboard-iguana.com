@@ -1,7 +1,7 @@
 # Enumerate Oracle SQL Server
 
-**author**:: Nathan Acks  
-**date**:: 2022-07-10
+* **author**:: Nathan Acks  
+* **date**:: 2022-07-10
 
 ```bash
 # Ping an Oracle server, get version information, etc.

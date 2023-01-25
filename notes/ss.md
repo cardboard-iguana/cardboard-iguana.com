@@ -1,7 +1,7 @@
 # Using "ss"
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-21
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-21
 
 "Socket statistics" (`ss`) is a `netstat`-like tool with slightly nicer formatting. Options:
 

@@ -1,9 +1,7 @@
 # Retro
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-02
-
-* [TryHackMe: Retro](https://tryhackme.com/room/retro)
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-02
 
 ## Initial Reconnaissance 
 
@@ -130,3 +128,7 @@ oot.txt.txt` (note the extra `.txt`) to obtain the final flag.
 [CVE-2019-1388: Windows Privilege Escalation Through UAC (YouTube)](https://www.youtube.com/watch?v=3BQKpPNlTSo)
 
 ELAPSED TIME: 1 h 16 min
+
+## References
+
+* [TryHackMe: Retro](https://tryhackme.com/room/retro)

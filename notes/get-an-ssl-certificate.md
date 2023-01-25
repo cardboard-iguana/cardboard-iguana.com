@@ -1,7 +1,7 @@
 # Get an SSL Certificate
 
-**author**:: Nathan Acks  
-**date**:: 2022-07-10
+* **author**:: Nathan Acks  
+* **date**:: 2022-07-10
 
 ## Self-Signed
 

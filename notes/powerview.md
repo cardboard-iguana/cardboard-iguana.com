@@ -1,7 +1,7 @@
 # Using PowerView
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-26
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-26
 
 PowerView is a PowerShell reconnaissance tool. Note that AMSI will need to be disabled in the current session before it can be used.
 

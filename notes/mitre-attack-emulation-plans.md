@@ -1,7 +1,7 @@
 # MITRE ATT&CK Emulation Plans
 
-**author**:: Nathan Acks  
-**date**:: 2021-09-26
+* **author**:: Nathan Acks  
+* **date**:: 2021-09-26
 
 These are a little hard to find.
 

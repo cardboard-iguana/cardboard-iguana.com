@@ -1,7 +1,7 @@
 # Using Kerbrute
 
-**author**:: Nathan Acks  
-**date**:: 2021-12-06
+* **author**:: Nathan Acks  
+* **date**:: 2021-12-06
 
 Kerbrute works by sending a single UDP packet to the authentication service to begin the authentication process, but then doesn't complete the transaction as to avoid an actual login failure (and the associated logging). While this doesn't grant access to anything, it does allow domain users to be enumerated using a wordlist.
 

@@ -1,7 +1,7 @@
 # File Transfer Protocol (FTP)
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-03
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-03
 
 ## Commands
 

@@ -1,7 +1,7 @@
 # TryHackMe: Web Fundamentals
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-04
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-04
 
 ## Burp Suite: The Basics
 

@@ -1,7 +1,9 @@
 # WiFi Terminology
 
-**author**:: Nathan Acks  
-**date**:: 2021-11-28
+* **author**:: Nathan Acks  
+* **date**:: 2021-11-28
+
+## \*SIDs
 
 * SSID - The wireless network "display" name.
 * BSSID - The MAC address of the access point currently being used.

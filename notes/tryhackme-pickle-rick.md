@@ -1,9 +1,7 @@
 # Pickle Rick
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-10
-
-* [TryHackMe: Pickle Rick](https://tryhackme.com/room/picklerick)
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-10
 
 ## Background
 
@@ -251,3 +249,7 @@ fleeb juice
 Oh well, I still got a root shell (albeit in a totally noisy fashion).
 
 ELAPSED TIME: 3 h 11 min
+
+## References
+
+* [TryHackMe: Pickle Rick](https://tryhackme.com/room/picklerick)

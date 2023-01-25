@@ -1,7 +1,7 @@
 # How to Use "find" With File Metadata
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-05
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-05
 
 Some useful find flags related to file metadata.
 

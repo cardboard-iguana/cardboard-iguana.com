@@ -1,9 +1,7 @@
 # Attacktive Directory
 
-**author**:: Nathan Acks  
-**date**:: 2021-12-30
-
-* [TryHackMe: Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
+* **author**:: Nathan Acks  
+* **date**:: 2021-12-30
 
 ## Welcome to Attacktive Directory
 
@@ -599,3 +597,7 @@ The final flag is in a file called `root.txt` on the `Administrator` account's d
 * [Pass the hash (Wikipedia)](https://en.wikipedia.org/wiki/Pass_the_hash)
 
 ELAPSED TIME: 2 h 38 min
+
+## References
+
+* [TryHackMe: Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)

@@ -1,7 +1,7 @@
 # Using OWASP ZAP
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-12
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-12
 
 ZAP (the "Zed Attack Proxy") is basically an open-source version of Burp Suite. Burp Suite ←→ ZAP equivalencies:
 

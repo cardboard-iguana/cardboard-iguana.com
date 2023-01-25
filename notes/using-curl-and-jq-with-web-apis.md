@@ -1,7 +1,7 @@
 # Using "curl" and "jq" with Web APIs
 
-**author**:: Nathan Acks  
-**date**:: 2021-06-12
+* **author**:: Nathan Acks  
+* **date**:: 2021-06-12
 
 You can query web APIs easily with cURL. If the API endpoint accepts GET requests, then this is as simple as:
 

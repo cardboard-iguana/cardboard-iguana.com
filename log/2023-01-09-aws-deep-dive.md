@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2023-01-09
+* **author**:: Nathan Acks  
+* **date**:: 2023-01-09
 
 ## AWS Well-Architected Framework
 

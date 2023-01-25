@@ -1,7 +1,7 @@
 # Windows Event Logs
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-18
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-18
 
 ## Windows Logs
 

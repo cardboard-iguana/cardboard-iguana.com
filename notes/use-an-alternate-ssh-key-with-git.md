@@ -1,6 +1,6 @@
 # Use an Alternate SSH Key with Git
 
-**author**:: Nathan Acks
+* **author**:: Nathan Acks
 
 By default, Git only uses you primary SSH key when cloning. While there's no way to get git to try alternate keys if the first key fails, there are a few ways you can force it to use a particular key on a per-repository basis.
 

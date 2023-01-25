@@ -1,7 +1,7 @@
 # OffSec Live: PEN-200
 
-**author**:: Nathan Acks  
-**date**:: 2022-07-15
+* **author**:: Nathan Acks  
+* **date**:: 2022-07-15
 
 Today we'll be focusing on *passive* information gathering (which should really be the *first* thing you do).
 

@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2022-06-28
+* **author**:: Nathan Acks  
+* **date**:: 2022-06-28
 
 ## Amazon S3: Bucket Policies and User Policies
 

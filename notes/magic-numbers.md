@@ -1,7 +1,7 @@
 # Magic Numbers
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-09
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-09
 
 Magic numbers comprise the first few bytes of a file (often, but not always, the first 4 bytes). Text files don't have magic number, so one trick you can do is just insert four ASCII characters in the front of your file and then use a hex editor to change them to an appropriate magic number.
 

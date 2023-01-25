@@ -1,6 +1,6 @@
 # Force "more" Into Interactive Mode
 
-**author**:: Nathan Acks
+* **author**:: Nathan Acks
 
 The `more` command acts like cat whenever it can. The only way to force `more` into interactive mode is to make your terminal smaller than the number of lines in the file being displayed.
 

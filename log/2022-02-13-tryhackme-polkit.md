@@ -1,7 +1,7 @@
 # TryHackMe: Polkit
 
-**author**:: Nathan Acks  
-**date**:: 2022-02-13
+* **author**:: Nathan Acks  
+* **date**:: 2022-02-13
 
 ## Polkit (CVE-2021-3560)
 

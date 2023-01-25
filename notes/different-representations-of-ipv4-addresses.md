@@ -1,7 +1,7 @@
 # Different Representations of IPv4 Addresses
 
-**author**:: Nathan Acks  
-**date**:: 2022-03-19
+* **author**:: Nathan Acks  
+* **date**:: 2022-03-19
 
 Localhost can be represented in a lot of different ways.
 

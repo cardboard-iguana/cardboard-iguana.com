@@ -1,10 +1,7 @@
 # OffSec Live: PEN-200
 
-**author**:: Nathan Acks  
-**date**:: 2022-07-08
-
-* [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
-* [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
+* **author**:: Nathan Acks  
+* **date**:: 2022-07-08
 
 ## Common Failure Modes
 
@@ -33,3 +30,8 @@ Use nmap's `--script-help` flag to pull a given script's documentation header.
 Use nmap's `-iL` flag to pull a list of IPs to scan from a file.
 
 * [Using "nmap"](../notes/nmap.md)
+
+## References
+
+* [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
+* [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)

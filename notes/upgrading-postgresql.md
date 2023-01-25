@@ -1,7 +1,7 @@
 # Upgrading PostgreSQL
 
-**author**:: Nathan Acks  
-**date**:: 2021-11-25
+* **author**:: Nathan Acks  
+* **date**:: 2021-11-25
 
 ```bash
 sudo -u postgres pg_dropcluster --stop $NEW_VER main

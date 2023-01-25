@@ -1,9 +1,7 @@
 # Overpass 2: Hacked
 
-**author**:: Nathan Acks  
-**date**:: 2021-12-14
-
-* [TryHackMe: Overpass 2: Hacked](https://tryhackme.com/room/overpass2hacked)
+* **author**:: Nathan Acks  
+* **date**:: 2021-12-14
 
 The flags are structured to basically walk us through this room.
 
@@ -131,3 +129,7 @@ FLAG 12: What's the root flag? - `thm{d53b2684f169360bb9606c333873144d}`
 * [GTFOBins](https://gtfobins.github.io/)
 
 ELAPSED TIME: 1 h 43 min
+
+## References
+
+* [TryHackMe: Overpass 2: Hacked](https://tryhackme.com/room/overpass2hacked)

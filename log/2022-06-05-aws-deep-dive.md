@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2022-06-05
+* **author**:: Nathan Acks  
+* **date**:: 2022-06-05
 
 It's been a while, hasn't it?
 

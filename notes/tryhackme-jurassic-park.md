@@ -1,9 +1,7 @@
 # Jurassic Park
 
-**author**:: Nathan Acks  
-**date**:: 2022-02-02
-
-* [TryHackMe: Jurassic Park](https://tryhackme.com/room/jurassicpark)
+* **author**:: Nathan Acks  
+* **date**:: 2022-02-02
 
 Our target is 10.10.105.134.
 
@@ -451,3 +449,7 @@ But, as the TryHackMe room notes, there is no fourth flag. So actually we're don
 * [Using "gobuster"](gobuster.md)
 
 ELAPSED TIME: 2 h 53 min
+
+## References
+
+* [TryHackMe: Jurassic Park](https://tryhackme.com/room/jurassicpark)

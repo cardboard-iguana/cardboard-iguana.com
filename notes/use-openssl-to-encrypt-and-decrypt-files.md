@@ -1,6 +1,6 @@
 # Use OpenSSL to Encrypt and Decrypt Files
 
-**author**:: Nathan Acks
+* **author**:: Nathan Acks
 
 To encrypt a file:
 

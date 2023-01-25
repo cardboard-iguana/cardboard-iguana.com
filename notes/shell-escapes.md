@@ -1,7 +1,7 @@
 # Shell Escapes
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-31
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-31
 
 Many common UNIX applications allow you to escape to a shell. This is particularly useful if they can be run with NOPASSWD via sudo.
 

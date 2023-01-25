@@ -1,7 +1,7 @@
 # Using "netcat"
 
-**author**:: Nathan Acks
-**date**:: 2022-06-29
+* **author**:: Nathan Acks
+* **date**:: 2022-06-29
 
 The netcat binary is *usually* `nc`, but some systems have it at `ncat` or `netcat` instead.
 

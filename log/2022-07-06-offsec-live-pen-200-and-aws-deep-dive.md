@@ -1,7 +1,7 @@
 # OffSec Live: PEN-200 & AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2022-07-06
+* **author**:: Nathan Acks  
+* **date**:: 2022-07-06
 
 Another entry written in two parts. As before, the OffSec Live class notes were in the morning and the "AWS Cloud Practitioner Essentials" notes are from the evening.
 

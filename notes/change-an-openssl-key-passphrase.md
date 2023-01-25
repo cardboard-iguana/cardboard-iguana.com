@@ -1,6 +1,6 @@
 # Change an OpenSSL Key Passphrase
 
-**author**:: Nathan Acks
+* **author**:: Nathan Acks
 
 To change a passphrase:
 

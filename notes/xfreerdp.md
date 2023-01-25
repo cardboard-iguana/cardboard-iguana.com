@@ -1,7 +1,7 @@
 # Using XFreeRDP
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-29
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-29
 
 ```bash
 xfreerdp /dynamic-resolution \

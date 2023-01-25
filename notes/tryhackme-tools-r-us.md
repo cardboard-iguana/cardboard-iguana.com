@@ -1,9 +1,7 @@
 # Tools'R'us
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-30
-
-* [TryHackMe: Tools'R'us](https://tryhackme.com/room/toolsrus)
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-30
 
 We're supposed to restrict ourselves to the following tools in this CTF:
 
@@ -403,3 +401,7 @@ We'll just drop to `shell` in meterpreter to get the contents of `/root/flag.txt
 * [Multiple Ways to Exploit Tomcat Manager](https://www.hackingarticles.in/multiple-ways-to-exploit-tomcat-manager/)
 
 ELAPSED TIME: 3 h 7 min
+
+## References
+
+* [TryHackMe: Tools'R'us](https://tryhackme.com/room/toolsrus)

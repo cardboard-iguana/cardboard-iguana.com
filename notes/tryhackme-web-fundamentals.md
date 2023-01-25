@@ -1,10 +1,8 @@
 # TryHackMe: Web Fundamentals
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-03  
-**tags**:: #MOC
-
-* [TryHackMe: Web Fundamentals](https://tryhackme.com/path/outline/web)
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-03  
+* **tags**:: #MOC
 
 ## Web Fundamentals
 
@@ -99,3 +97,7 @@
 ### OWASP Juice Shop
 
 * [2021-10-07 — TryHackMe: Complete Beginner](../log/2021-10-07-tryhackme-complete-beginner.md)
+
+## References
+
+* [TryHackMe: Web Fundamentals](https://tryhackme.com/path/outline/web)

@@ -1,7 +1,7 @@
 # How to Set PATH in a Session
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-25
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-25
 
 Update the current PATH in Windows:
 

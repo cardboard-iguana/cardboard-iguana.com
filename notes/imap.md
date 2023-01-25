@@ -1,7 +1,7 @@
 # Internet Message Access Protocol (IMAP)
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-03
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-03
 
 IMAP commands are much more complicated than POP3. Some examples:
 

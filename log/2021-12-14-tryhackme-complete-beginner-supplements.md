@@ -1,7 +1,7 @@
 # TryHackMe: Complete Beginner (Supplements)
 
-**author**:: Nathan Acks  
-**date**:: 2021-12-14
+* **author**:: Nathan Acks  
+* **date**:: 2021-12-14
 
 ## Overpass 2: Hacked
 

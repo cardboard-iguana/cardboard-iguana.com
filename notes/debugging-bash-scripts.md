@@ -1,7 +1,7 @@
 # Debugging Bash Scripts
 
-**author**:: Nathan Acks  
-**date**:: 2021-09-20
+* **author**:: Nathan Acks  
+* **date**:: 2021-09-20
 
 Using the -x flag will force bash to output each line of the shell script you're running before that line is executed. This can be useful for debugging.
 

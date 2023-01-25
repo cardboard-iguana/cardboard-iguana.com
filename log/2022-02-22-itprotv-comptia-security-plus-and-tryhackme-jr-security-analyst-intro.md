@@ -1,7 +1,7 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Security Analyst Intro
 
-**author**:: Nathan Acks  
-**date**:: 2022-02-22
+* **author**:: Nathan Acks  
+* **date**:: 2022-02-22
 
 (So, I didn't get to start this yesterday as I'd planned, because I needed to take The Yak Online Governance Primer live instead!)
 

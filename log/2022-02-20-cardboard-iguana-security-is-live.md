@@ -1,7 +1,7 @@
 # Cardboard Iguana Security is Live!
 
-**author**:: Nathan Acks  
-**date**:: 2022-02-20
+* **author**:: Nathan Acks  
+* **date**:: 2022-02-20
 
 Up until now there actually hasn't *been* a Cardboard Iguana Security website. All of those posts before this one? Just me, writing to myself.
 

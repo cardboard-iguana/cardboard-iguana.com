@@ -1,7 +1,7 @@
 # Working With Samba
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-25
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-25
 
 ## smbmap
 

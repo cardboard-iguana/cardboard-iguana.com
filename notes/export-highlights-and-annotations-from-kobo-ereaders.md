@@ -1,6 +1,6 @@
 # Export Highlights and Annotations from Kobo eReaders
 
-**author**:: Nathan Acks
+* **author**:: Nathan Acks
 
 Open up D:/.kobo/Kobo/Kobo eReader.conf (where D: is the Kobo's mount point) and add (or modify) the following block:
 

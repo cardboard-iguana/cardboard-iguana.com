@@ -1,7 +1,7 @@
 # OffSec Live: PEN-200
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-05
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-05
 
 Today on OffSec Live we'll be covering Linux privilege escalation.
 

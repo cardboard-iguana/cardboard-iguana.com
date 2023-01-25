@@ -1,7 +1,9 @@
 # Enumerate Windows Environments
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-17
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-17
+
+## Important Commands
 
 * `cmdkey /list` - show saved credentials
 * `driverquery` - list installed drivers

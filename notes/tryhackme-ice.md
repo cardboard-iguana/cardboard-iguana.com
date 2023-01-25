@@ -1,9 +1,7 @@
 # Ice
 
-**author**:: Nathan Acks  
-**date**:: 2021-12-07
-
-* [TryHackMe: Ice](https://tryhackme.com/room/ice)
+* **author**:: Nathan Acks  
+* **date**:: 2021-12-07
 
 ## Recon
 
@@ -243,3 +241,7 @@ FLAG 23: What meterpreter/kiwi command allows for the creation of a golden ticke
 * [Kerberos](kerberos.md)
 
 ELAPSED TIME: 2 h 39 min
+
+## References
+
+* [TryHackMe: Ice](https://tryhackme.com/room/ice)

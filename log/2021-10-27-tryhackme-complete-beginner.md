@@ -1,7 +1,7 @@
 # TryHackMe: Complete Beginner
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-27
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-27
 
 ## What the Shell?
 

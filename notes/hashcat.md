@@ -1,7 +1,7 @@
 # Using Hashcat
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-12
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-12
 
 ```bash
 hashcat -m $TYPE -O $HASHFILE $WORDLIST

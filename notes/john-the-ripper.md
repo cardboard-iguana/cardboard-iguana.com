@@ -1,7 +1,7 @@
 # Using John the Ripper
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-13
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-13
 
 ```bash
 john --format=$HASH_FORMAT \

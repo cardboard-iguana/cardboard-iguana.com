@@ -1,7 +1,7 @@
 # Windows Password Hashes
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-12
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-12
 
 The Windows NT family uses NTLM for (network) logins, and stores hashes in the NT hash format, which is really just the md4 hash of the UTF-16-LE encoding of the user password (UTF-16-LE is the little endian version of UTF-16). While NTLM is the login protocol, people commonly call NT hashes "NTLM" hashes.
 

@@ -1,7 +1,7 @@
 # TryHackMe: Web Fundamentals
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-16
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-16
 
 ## LFI
 

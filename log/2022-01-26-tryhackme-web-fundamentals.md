@@ -1,7 +1,7 @@
 # TryHackMe: Web Fundamentals
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-26
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-26
 
 ## Avengers Blog
 

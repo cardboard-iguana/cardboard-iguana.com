@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2022-06-06
+* **author**:: Nathan Acks  
+* **date**:: 2022-06-06
 
 ## AWS Essentials
 

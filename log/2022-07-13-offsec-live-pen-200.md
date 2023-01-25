@@ -1,10 +1,7 @@
 # OffSec Live: PEN-200
 
-**author**:: Nathan Acks  
-**date**:: 2022-07-13
-
-* [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
-* [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)
+* **author**:: Nathan Acks  
+* **date**:: 2022-07-13
 
 ## Netcat Port Scanning
 
@@ -27,3 +24,8 @@ If SNMP v1 or v2 are being used, then the protocol is unencrypted; even if a cus
 Apparently Windows will report things like local users and installed antivirus information over SNMP!
 
 The `onesixtyone` and `snmpwalk` tools can be used to probe SNMP. NMAP also has a set of useful SNMP-related scripts.
+
+## References
+
+* [OffSec Live](https://www.offensive-security.com/offsec/offsec-live/)
+* [OffSecOfficial Twitch Channel](https://www.twitch.tv/offsecofficial)

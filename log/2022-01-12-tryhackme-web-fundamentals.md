@@ -1,7 +1,7 @@
 # TryHackMe: Web Fundamentals
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-12
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-12
 
 ## Introduction to OWASP ZAP
 

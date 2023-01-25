@@ -1,10 +1,9 @@
 # TryHackMe: Pre Security
 
-**author**:: Nathan Acks  
-**date**:: 2021-09-12  
-**tags**:: #MOC
+* **author**:: Nathan Acks  
+* **date**:: 2021-09-12  
+* **tags**:: #MOC
 
-* [TryHackMe: Pre Security](https://tryhackme.com/path/outline/presecurity)
 
 ## Cyber Security Introduction
 
@@ -61,3 +60,6 @@
 * [2021-09-17 — TryHackMe: Pre Security](../log/2021-09-17-tryhackme-pre-security.md)
 * [2021-09-18 — TryHackMe: Pre Security](../log/2021-09-18-tryhackme-pre-security.md)
 * [2021-09-19 — TryHackMe: Pre Security](../log/2021-09-19-tryhackme-pre-security.md)
+## References
+
+* [TryHackMe: Pre Security](https://tryhackme.com/path/outline/presecurity)

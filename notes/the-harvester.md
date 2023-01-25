@@ -1,7 +1,7 @@
 # Using The Harvester
 
-**author**:: Nathan Acks  
-**date**:: 2022-07-15
+* **author**:: Nathan Acks  
+* **date**:: 2022-07-15
 
 ```bash
 theHarvester -d $EMAIL_DOMAIN -b $SERVICE_TO_SEARCH

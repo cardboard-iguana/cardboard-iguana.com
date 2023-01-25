@@ -1,7 +1,7 @@
 # TryHackMe: Jr. Penetration Tester
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-14
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-14
 
 ## Exploitation with Metasploit
 

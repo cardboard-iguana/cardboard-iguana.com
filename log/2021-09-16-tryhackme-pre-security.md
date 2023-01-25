@@ -1,7 +1,7 @@
 # TryHackMe: Pre Security
 
-**author**:: Nathan Acks  
-**date**:: 2021-09-16
+* **author**:: Nathan Acks  
+* **date**:: 2021-09-16
 
 ## A Bit of Background on Linux
 

@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-20
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-20
 
 ## Amazon VPC: Security at the Speed of Light
 

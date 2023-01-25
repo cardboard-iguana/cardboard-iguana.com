@@ -1,6 +1,6 @@
 # Send a Command Using OpenSSL
 
-**author**:: Nathan Acks
+* **author**:: Nathan Acks
 
 ```bash
 echo "$TEXT" | openssl s_client $HOST:$PORT -ign_eof

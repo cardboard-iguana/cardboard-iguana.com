@@ -1,7 +1,7 @@
 # XXE (XML External Entity) Attacks
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-08
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-08
 
 The trick with XXE attacks is that the URIs defined in an XML !DOCTYPE directive are basically just includes. This means that when an application is expecting XML input (mostly this is a thing you find over APIs), you can extend the provided DTDs in an ad hoc fashion.
 

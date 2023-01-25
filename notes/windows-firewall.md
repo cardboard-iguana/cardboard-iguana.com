@@ -1,7 +1,7 @@
 # Windows Firewall
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-31
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-31
 
 Check Windows Firewall state:
 

@@ -1,7 +1,7 @@
 # TryHackMe: Web Fundamentals
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-10
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-10
 
 ## Burp Suite: Other Modules
 

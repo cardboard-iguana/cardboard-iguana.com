@@ -1,6 +1,6 @@
 # Find and Replace a Single Line in a Large Text File
 
-**author**:: Nathan Acks
+* **author**:: Nathan Acks
 
 To display a single line from a large text file:
 

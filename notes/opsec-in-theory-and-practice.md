@@ -1,7 +1,7 @@
 # OPSEC in Theory and Practice
 
-**author**:: Nathan Acks  
-**date**:: 2021-04-04
+* **author**:: Nathan Acks  
+* **date**:: 2021-04-04
 
 An overview of OPSEC history and practice produced by The Grugq.
 

@@ -1,7 +1,7 @@
 # TryHackMe: Web Fundamentals (Supplements)
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-31
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-31
 
 ## hackernote
 

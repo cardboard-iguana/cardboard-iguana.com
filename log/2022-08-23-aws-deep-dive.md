@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-23
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-23
 
 ## DNS Demystified: Amazon Route 53
 

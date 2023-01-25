@@ -1,10 +1,6 @@
 # Automate Netlify Builds with IFTTT
 
-**author**:: Nathan Acks
-
-* [Trigger a Netlify Build Every Day With IFTTT](https://www.11ty.dev/docs/quicktips/netlify-ifttt/).
-* [Netlify](https://www.netlify.com)
-* [IFTTT](https://ifttt.com)
+* **author**:: Nathan Acks
 
 ## In Netlify
 
@@ -29,3 +25,9 @@
 * For the "Body" field, type `{}`.
 * Click the "Create action" button.
 * Rename the new applet and click "Finish".
+
+## References
+
+* [Trigger a Netlify Build Every Day With IFTTT](https://www.11ty.dev/docs/quicktips/netlify-ifttt/).
+* [Netlify](https://www.netlify.com)
+* [IFTTT](https://ifttt.com)

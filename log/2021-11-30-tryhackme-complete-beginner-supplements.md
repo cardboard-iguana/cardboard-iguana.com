@@ -1,7 +1,7 @@
 # TryHackMe: Complete Beginner (Supplements)
 
-**author**:: Nathan Acks  
-**date**:: 2021-11-30
+* **author**:: Nathan Acks  
+* **date**:: 2021-11-30
 
 ## CC: Pen Testing
 

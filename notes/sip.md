@@ -1,8 +1,6 @@
 # SIP Protocol
 
-**date**:: 2022-07-11
-
-* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)
+* **date**:: 2022-07-11
 
 SIP usually uses ports 5060 TCP or UDP for unencrypted signaling or 5061 for encrypted transportation using TLS.
 
@@ -65,3 +63,7 @@ Content-Length: 310
 * Conversation begins via RTP.
 * When the caller hangs up the phone a BYE request is sent.
 * The calling phone responds with 200 (OK).
+
+## References
+
+* [slyth11907 / Cheatsheets](https://github.com/slyth11907/Cheatsheets)

@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2022-12-29
+* **author**:: Nathan Acks  
+* **date**:: 2022-12-29
 
 I'm *finally* done reading about Amazon's API Gateway. Now on to reading about the AWS Key Management Service (KMS)!
 

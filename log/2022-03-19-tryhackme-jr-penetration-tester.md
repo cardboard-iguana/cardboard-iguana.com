@@ -1,7 +1,7 @@
 # TryHackMe: Jr. Penetration Tester
 
-**author**:: Nathan Acks  
-**date**:: 2022-03-19
+* **author**:: Nathan Acks  
+* **date**:: 2022-03-19
 
 As part of a job interview, I've been asked to run through an online CTF - the CMD+CTRL Cyber Range "LetSee Marketplace". After reviewing the available information, I'm pretty sure I'm outclassed by this at my current skill level, but I plan to give it a shot anyway. It should be good learning/practice experience, and the worst that can happen is that I don't get a second interview.
 

@@ -1,7 +1,7 @@
 # Using PowerShell
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-31
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-31
 
 ## Access the Registry Through PowerShell
 

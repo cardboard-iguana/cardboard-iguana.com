@@ -1,7 +1,7 @@
 # TryHackMe: Complete Beginner
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-09
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-09
 
 ## Upload Vulnerabilities
 

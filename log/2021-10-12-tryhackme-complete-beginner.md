@@ -1,7 +1,7 @@
 # TryHackMe: Complete Beginner
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-12
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-12
 
 ## John the Ripper
 

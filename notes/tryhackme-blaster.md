@@ -1,9 +1,7 @@
 # Blaster
 
-**author**:: Nathan Acks  
-**date**:: 2021-12-06
-
-* [TryHackMe: Blaster](https://tryhackme.com/room/blaster)
+* **author**:: Nathan Acks  
+* **date**:: 2021-12-06
 
 ## Mission Start!
 
@@ -174,3 +172,7 @@ FLAG 12: What command can be used in Meterpreter to establish on-boot persistenc
 * [Using PowerShell](powershell.md)
 
 ELAPSED TIME: 2 h 15 min
+
+## References
+
+* [TryHackMe: Blaster](https://tryhackme.com/room/blaster)

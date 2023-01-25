@@ -1,11 +1,6 @@
 # Create a GPG Key (With SSH Support!)
 
-**author**:: Nathan Acks
-
-* [Creating newer ECC keys for GnuPG](https://www.gniibe.org/memo/software/gpg/keygen-25519.html)
-* [OpenPGP Best Practices](https://riseup.net/en/security/message-security/openpgp/best-practices)
-* [How to enable SSH access using a GPG key for authentication](https://opensource.com/article/19/4/gpg-subkeys-ssh)
-* [Force the use of a gpg-key as an ssh-key for a given server](https://serverfault.com/a/964317)
+* **author**:: Nathan Acks
 
 ## Create the Initial Key
 
@@ -96,3 +91,10 @@ Once this is done, `$KEYID.asc` can be stored "offline" on a secure (encrypted!)
 * Run `gpg --list-secret-keys --with-keygrip`.
 * Copy keygrips of the authentication subkeys (`[A]`) you want to use in SSH to `~/.gnupg/sshcontrol`.
 * Generate the SSH public key using `gpg --export-ssh-key $KEYID > ~/.ssh/id_${KEYID}.pub`. This key can then be referenced using the `IdentityFile` directive in `~/.ssh/config` or inserted into a host's `~/.ssh/authorized_keys` file.
+
+## References
+
+* [Creating newer ECC keys for GnuPG](https://www.gniibe.org/memo/software/gpg/keygen-25519.html)
+* [OpenPGP Best Practices](https://riseup.net/en/security/message-security/openpgp/best-practices)
+* [How to enable SSH access using a GPG key for authentication](https://opensource.com/article/19/4/gpg-subkeys-ssh)
+* [Force the use of a gpg-key as an ssh-key for a given server](https://serverfault.com/a/964317)

@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2022-10-04
+* **author**:: Nathan Acks  
+* **date**:: 2022-10-04
 
 ## Amazon API Gateway
 

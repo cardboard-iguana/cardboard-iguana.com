@@ -1,10 +1,8 @@
 # TryHackMe: Jr. Penetration Tester
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-21  
-**tags**:: #MOC
-
-* [TryHackMe: Jr. Penetration Tester](https://tryhackme.com/path/outline/jrpenetrationtester)
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-21  
+* **tags**:: #MOC
 
 ## Introduction to Pentesting
 
@@ -157,3 +155,7 @@
 ### Windows PrivEsc
 
 * [2022-04-21 — TryHackMe: Jr. Penetration Tester](../log/2022-04-21-tryhackme-jr-penetration-tester.md)
+
+## References
+
+* [TryHackMe: Jr. Penetration Tester](https://tryhackme.com/path/outline/jrpenetrationtester)

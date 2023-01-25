@@ -1,7 +1,7 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-13
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-13
 
 ## ITPro.TV: CompTIA Security+ (SY0-601)
 

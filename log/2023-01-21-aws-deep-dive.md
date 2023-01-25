@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2023-01-21
+* **author**:: Nathan Acks  
+* **date**:: 2023-01-21
 
 ## AWS Well-Architected Framework
 
@@ -47,8 +47,8 @@ This section is basically an extended argument for institutionalizing something 
 
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2023-01-28
+* **author**:: Nathan Acks  
+* **date**:: 2023-01-28
 
 ## AWS Well-Architected Framework
 

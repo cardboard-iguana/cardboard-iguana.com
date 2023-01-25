@@ -1,7 +1,7 @@
 # LFI (Local File Inclusion) Attacks
 
-**author**:: Nathan Acks  
-**date**:: 2022-03-13
+* **author**:: Nathan Acks  
+* **date**:: 2022-03-13
 
 LFI vulnerabilities are *most* common in PHP, but are sometimes found in other languages/frameworks.
 

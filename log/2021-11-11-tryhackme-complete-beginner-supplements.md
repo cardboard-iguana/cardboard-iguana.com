@@ -1,7 +1,7 @@
 # TryHackMe: Complete Beginner (Supplements)
 
-**author**:: Nathan Acks  
-**date**:: 2021-11-11
+* **author**:: Nathan Acks  
+* **date**:: 2021-11-11
 
 ## Splunk
 

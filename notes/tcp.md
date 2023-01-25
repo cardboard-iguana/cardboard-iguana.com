@@ -1,7 +1,7 @@
 # TCP Protocol
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-11
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-11
 
 The "Transmission Control Protocol". TCP was formalized in September 1981 in RFC793.
 

@@ -1,7 +1,7 @@
 # Gemini Compatible Markdown
 
-**author**:: Nathan Acks  
-**date**:: 2022-02-16
+* **author**:: Nathan Acks  
+* **date**:: 2022-02-16
 
 Gemini uses a syntax that is *almost* a subset of CommonMark.
 

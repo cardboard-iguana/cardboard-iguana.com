@@ -1,7 +1,7 @@
 # Get-WinEvent
 
-**author**:: Nathan Acks  
-**date**:: 2021-09-25
+* **author**:: Nathan Acks  
+* **date**:: 2021-09-25
 
 Get-WinEvent is a PowerShell command for working with Windows event logs.
 

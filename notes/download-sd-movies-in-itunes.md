@@ -1,7 +1,7 @@
 # Download SD Movies in iTunes
 
-**author**:: Nathan Acks  
-**date**:: 2021-06-09
+* **author**:: Nathan Acks  
+* **date**:: 2021-06-09
 
 Sometimes you don't want to download the 1080p, or even 720p, version of a movie or TV show in iTunes. Maybe your connection is slow, or your computer is old, or you just want to get that old DVD feeling.
 

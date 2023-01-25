@@ -1,7 +1,7 @@
 # TryHackMe: Pre Security
 
-**author**:: Nathan Acks  
-**date**:: 2021-09-17
+* **author**:: Nathan Acks  
+* **date**:: 2021-09-17
 
 ## The File System
 

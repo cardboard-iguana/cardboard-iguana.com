@@ -1,7 +1,9 @@
 # Look Up Unicode and Emoji Symbols
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-02
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-02
+
+## General References
 
 * [Emojipedia](https://emojipedia.org)
 * [Unicode Character Table](https://unicode-table.com)

@@ -1,7 +1,7 @@
 # Using "basenc"
 
-**author**:: Nathan Acks  
-**date**:: 2022-03-02
+* **author**:: Nathan Acks  
+* **date**:: 2022-03-02
 
 ```bash
 # Encode $STRING to base64.

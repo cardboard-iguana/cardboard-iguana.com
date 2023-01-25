@@ -1,9 +1,7 @@
 # Net Sec Challenge
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-03
-
-* [TryHackMe: Net Sec Challenge](https://tryhackme.com/room/netsecchallenge)
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-03
 
 This CTF is just a series of questions. All should be solvable using nmap, telnet, and Hydra… Though I'm going to substitute netcat for telnet. However, I'm sticking to the spirit of things, and will only use those three tools.
 
@@ -213,3 +211,7 @@ sudo nmap -v -Pn -n -T4 -sN -p- 10.10.34.244
 * [FTP Commands: APPE, MLSD, MLST, LIST, RETR, STOR, STOU](https://www.serv-u.com/resource/tutorial/appe-stor-stou-retr-list-mlsd-mlst-ftp-command)
 
 ELAPSED TIME: 2 h 31 min
+
+## References
+
+* [TryHackMe: Net Sec Challenge](https://tryhackme.com/room/netsecchallenge)

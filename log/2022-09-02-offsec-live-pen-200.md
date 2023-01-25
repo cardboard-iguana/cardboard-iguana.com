@@ -1,7 +1,7 @@
 # OffSec Live: PEN-200
 
-**author**:: Nathan Acks  
-**date**:: 2022-09-02
+* **author**:: Nathan Acks  
+* **date**:: 2022-09-02
 
 ## Active Directory Enumeration & Exploitation, Part 4
 

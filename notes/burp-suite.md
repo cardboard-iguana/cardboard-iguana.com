@@ -1,7 +1,7 @@
 # Using Burp Suite
 
-**author**:: Nathan Acks  
-**date**:: 2022-05-20
+* **author**:: Nathan Acks  
+* **date**:: 2022-05-20
 
 ## Keyboard Shortcuts
 

@@ -1,7 +1,7 @@
 # OffSec Live: PEN-200
 
-**author**:: Nathan Acks  
-**date**:: 2022-07-01
+* **author**:: Nathan Acks  
+* **date**:: 2022-07-01
 
 Today's session is more interactive/follow-along, which I'm not able to do because I'm not actually a PEN-200 student. But they're having *a lot* of technical problems, so many fewer notes than normal.
 

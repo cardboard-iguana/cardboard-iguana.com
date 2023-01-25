@@ -1,7 +1,7 @@
 # Using Metasploit
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-22
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-22
 
 ## Console ("msfconsole")
 

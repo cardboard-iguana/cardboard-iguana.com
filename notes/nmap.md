@@ -1,7 +1,7 @@
 # Using "nmap"
 
-**author**:: Nathan Acks  
-**date**:: 2022-05-10
+* **author**:: Nathan Acks  
+* **date**:: 2022-05-10
 
 Note that nmap accepts ranges in any octet of an IP address; for example, 10.10.0-255.1-255 will scan 10.10.0.1 – 10.10.255.255.
 

@@ -1,6 +1,6 @@
 # Using "youtube-dl"
 
-**author**:: Nathan Acks
+* **author**:: Nathan Acks
 
 You can download video and audio files for offline viewing from a variety of websites using youtube-dl. Be sure to install ffmpeg as well for tagging.
 

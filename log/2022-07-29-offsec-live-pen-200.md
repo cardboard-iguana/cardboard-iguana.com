@@ -1,7 +1,7 @@
 # OffSec Live: PEN-200
 
-**author**:: Nathan Acks  
-**date**:: 2022-07-29
+* **author**:: Nathan Acks  
+* **date**:: 2022-07-29
 
 Joining late, because of OS updates. It looks like we're talking about SQL Injection today.
 

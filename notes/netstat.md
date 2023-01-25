@@ -1,7 +1,7 @@
 # Using "netstat"
 
-**author**:: Nathan Acks
-**date**:: 2022-04-21
+* **author**:: Nathan Acks
+* **date**:: 2022-04-21
 
 ## Flags
 

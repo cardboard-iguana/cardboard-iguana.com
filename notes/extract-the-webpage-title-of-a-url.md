@@ -1,6 +1,6 @@
 # Extract the Webpage Title of a URL
 
-**author**:: Nathan Acks
+* **author**:: Nathan Acks
 
 ```bash
 python3 -c "import bs4, requests; print(bs4.BeautifulSoup(requests.get('$URL').text).title.text)"

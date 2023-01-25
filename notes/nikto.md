@@ -1,7 +1,7 @@
 # Using Nikto
 
-**author**:: Nathan Acks  
-**date**:: 2022-03-19
+* **author**:: Nathan Acks  
+* **date**:: 2022-03-19
 
 Nikto is a web application vulnerability scanner.
 

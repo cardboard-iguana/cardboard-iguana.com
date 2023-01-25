@@ -1,7 +1,7 @@
 # Using "ffmpeg"
 
-**author**:: Nathan Acks  
-**date**:: 2021-09-10
+* **author**:: Nathan Acks  
+* **date**:: 2021-09-10
 
 ## M4A to MP3
 

@@ -1,7 +1,7 @@
 # Abandoning My Gemini Ambitions (For Now)
 
-**author**:: Nathan Acks  
-**date**:: 2022-12-30
+* **author**:: Nathan Acks  
+* **date**:: 2022-12-30
 
 I've been pretty stressed these past few months, and in an effort to get my commitments back under control have just completed an absolute massacre of my todo list. One of the victims of this purge is my ambition to create a live mirror of this site on the Gemini Protocol.
 

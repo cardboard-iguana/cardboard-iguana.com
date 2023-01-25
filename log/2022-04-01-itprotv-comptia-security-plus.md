@@ -1,7 +1,7 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-01
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-01
 
 ## CompTIA Security+ Exam Cram
 

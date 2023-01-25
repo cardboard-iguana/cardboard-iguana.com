@@ -1,7 +1,7 @@
 # TryHackMe: Complete Beginner
 
-**author**:: Nathan Acks  
-**date**:: 2021-09-27
+* **author**:: Nathan Acks  
+* **date**:: 2021-09-27
 
 ## Introductory Researching
 

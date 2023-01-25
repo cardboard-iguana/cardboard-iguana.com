@@ -1,10 +1,7 @@
 # Version Control with Git
 
-**author**:: Nathan Acks  
-**date**:: 2018-08-01
-
-* [Coursera: Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
-* [git: Reference](https://git-scm.com/docs/)
+* **author**:: Nathan Acks  
+* **date**:: 2018-08-01
 
 ## DevOps and Git in a Nutshell
 
@@ -479,3 +476,8 @@ Some common rules:
 * Only use merge commits on "master".
 * Commits to "master" only come from release or hotfix branches (this helps with quality control).
 * If you commit to "master", also merge into "develop" (this prevents bugs from re-appearing in later releases).
+
+## References
+
+* [Coursera: Version Control with Git](https://www.coursera.org/learn/version-control-with-git/)
+* [git: Reference](https://git-scm.com/docs/)

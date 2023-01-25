@@ -1,7 +1,7 @@
 # Symbolic Permissions
 
-**author**:: Nathan Acks  
-**date**:: 2021-09-19
+* **author**:: Nathan Acks  
+* **date**:: 2021-09-19
 
 Numeric permissions are sometimes called *absolute* permissions, because they exactly specify an object's permissions. Symbolic permissions are a bit more flexible.
 

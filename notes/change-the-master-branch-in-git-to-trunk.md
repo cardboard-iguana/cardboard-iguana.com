@@ -1,6 +1,6 @@
 # Change the "master" Branch in Git to "trunk"
 
-**author**:: Nathan Acks
+* **author**:: Nathan Acks
 
 ```bash
 git checkout -b trunk master # Create and switch to the

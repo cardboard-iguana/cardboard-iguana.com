@@ -1,7 +1,7 @@
 # TryHackMe: Web Fundamentals
 
-**author**:: Nathan Acks  
-**date**:: 2022-01-25
+* **author**:: Nathan Acks  
+* **date**:: 2022-01-25
 
 ## ZTH: Obscure Web Vulnerabilities (Part 2)
 

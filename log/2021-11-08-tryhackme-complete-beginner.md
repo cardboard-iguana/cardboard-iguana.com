@@ -1,7 +1,7 @@
 # TryHackMe: Complete Beginner
 
-**author**:: Nathan Acks  
-**date**:: 2021-11-08
+* **author**:: Nathan Acks  
+* **date**:: 2021-11-08
 
 ## Steel Mountain
 

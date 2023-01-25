@@ -1,7 +1,7 @@
 # Windows Port Relay
 
-**author**:: Nathan Acks  
-**date**:: 2022-07-11
+* **author**:: Nathan Acks  
+* **date**:: 2022-07-11
 
 ```powershell
 netsh interface portproxy add v4tov4 `

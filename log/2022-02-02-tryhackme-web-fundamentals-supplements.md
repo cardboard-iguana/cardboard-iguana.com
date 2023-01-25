@@ -1,7 +1,7 @@
 # TryHackMe: Web Fundamentals (Supplements)
 
-**author**:: Nathan Acks  
-**date**:: 2022-02-02
+* **author**:: Nathan Acks  
+* **date**:: 2022-02-02
 
 ## Game Zone
 

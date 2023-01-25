@@ -1,7 +1,7 @@
 # TryHackMe: Complete Beginner
 
-**author**:: Nathan Acks  
-**date**:: 2021-10-29
+* **author**:: Nathan Acks  
+* **date**:: 2021-10-29
 
 ## Common Linux Privsec
 

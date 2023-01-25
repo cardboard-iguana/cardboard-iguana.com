@@ -1,7 +1,7 @@
 # Using Rubeus
 
-**author**:: Nathan Acks  
-**date**:: 2022-05-11
+* **author**:: Nathan Acks  
+* **date**:: 2022-05-11
 
 Rubeus is a Windows-only post-exploitation tool for attacking Kerberos. No compiled binaries are available (either through the GitHub repo or Kali Linux's `windows-binaries` package).
 

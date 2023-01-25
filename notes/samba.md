@@ -1,7 +1,7 @@
 # SAMBA (a.k.a. CIFS) Protocol
 
-**author**:: Nathan Acks  
-**date**:: 2022-04-25
+* **author**:: Nathan Acks  
+* **date**:: 2022-04-25
 
 ## Default Shares
 

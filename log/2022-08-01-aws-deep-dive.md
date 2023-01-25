@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-01
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-01
 
 Finally getting back to the "AWS Cloud Practitioner Essentials" course! Today I'll be covering the "Storage and Databases" module.
 

@@ -1,7 +1,7 @@
 # Using Wireshark
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-13
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-13
 
 ## User Interface
 

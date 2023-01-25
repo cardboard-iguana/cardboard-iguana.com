@@ -1,7 +1,7 @@
 # OffSec Live: PEN-200
 
-**author**:: Nathan Acks  
-**date**:: 2022-08-17
+* **author**:: Nathan Acks  
+* **date**:: 2022-08-17
 
 OffSec Live returns today after taking a week off for DEF CON.
 

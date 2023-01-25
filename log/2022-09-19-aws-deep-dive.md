@@ -1,7 +1,7 @@
 # AWS Deep Dive
 
-**author**:: Nathan Acks  
-**date**:: 2022-09-19
+* **author**:: Nathan Acks  
+* **date**:: 2022-09-19
 
 The AWS deep dive reading notes return!
 
