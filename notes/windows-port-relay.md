@@ -1,6 +1,6 @@
 # Windows Port Relay
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-07-11
 
 ```powershell

@@ -1,7 +1,7 @@
 # TryHackMe: Pre Security
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-09-12  
+* **author**:: Nathan Acks
+* **date**:: 2021-09-12
 * **tags**:: #MOC
 
 

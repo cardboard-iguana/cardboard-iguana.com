@@ -1,6 +1,6 @@
 # Using Aircrack-NG
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-11-28
 
 ```bash

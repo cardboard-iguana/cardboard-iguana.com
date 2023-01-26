@@ -1,6 +1,6 @@
 # AWS Deep Dive
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-08-02
 
 Today I'll be covering the "Security" module of the "AWS Cloud Practitioner Essentials" course.

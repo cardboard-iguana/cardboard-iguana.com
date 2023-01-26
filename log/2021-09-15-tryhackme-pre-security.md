@@ -1,6 +1,6 @@
 # TryHackMe: Pre Security
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-09-15
 
 ## How Websites Work

@@ -1,6 +1,6 @@
 # XSS (Cross Site Scripting) Attacks
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-07-11
 
 Types of XSS attacks:

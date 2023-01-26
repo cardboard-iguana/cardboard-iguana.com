@@ -1,7 +1,7 @@
 # TryHackMe: AD Certificate Templates
 
-* **author**:: Nathan Acks  
-* **date**:: 2022-05-10  
+* **author**:: Nathan Acks
+* **date**:: 2022-05-10
 * **tags**:: #MOC
 
 ## Course Notes

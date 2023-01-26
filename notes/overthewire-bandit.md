@@ -1,6 +1,6 @@
 # Bandit
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **tags**:: #MOC
 
 ## Bandit 2

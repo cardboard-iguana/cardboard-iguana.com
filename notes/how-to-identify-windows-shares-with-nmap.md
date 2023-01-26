@@ -1,6 +1,6 @@
 # How to Identify Windows Shares With Nmap
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-10-02
 
 Typical NMAP portscan output for SMB:

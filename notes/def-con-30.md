@@ -1,7 +1,7 @@
 # A New HOPE
 
-* **author**:: Nathan Acks  
-* **date**:: 2022-08-14  
+* **author**:: Nathan Acks
+* **date**:: 2022-08-14
 * **tags**:: #MOC
 
 ## Conference Notes

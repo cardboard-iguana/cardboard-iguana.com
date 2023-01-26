@@ -1,6 +1,6 @@
 # Hypertext Transfer Protocol (HTTP)
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-03-13
 
 ## A Minimal HTTP Request

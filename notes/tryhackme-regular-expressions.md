@@ -1,7 +1,7 @@
 # TryHackMe: Regular Expressions
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-09-21  
+* **author**:: Nathan Acks
+* **date**:: 2021-09-21
 * **tags**:: #MOC
 
 ## Course Notes

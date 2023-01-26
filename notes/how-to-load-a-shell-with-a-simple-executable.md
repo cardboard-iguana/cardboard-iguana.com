@@ -1,6 +1,6 @@
 # How to Load a Shell with a Simple Executable
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-11-02
 
 It's actually trivial to write a C program that loads up a shell.

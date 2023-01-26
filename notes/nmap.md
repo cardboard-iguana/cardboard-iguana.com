@@ -1,6 +1,6 @@
 # Using "nmap"
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-05-10
 
 Note that nmap accepts ranges in any octet of an IP address; for example, 10.10.0-255.1-255 will scan 10.10.0.1 – 10.10.255.255.
@@ -119,7 +119,7 @@ Most of the time the default discovery options (or -Pn) is fine. The above optio
 * `-sn` - Host discovery only (see the previous section for details). Note that the Windows Firewall blocks ICMP by default.
 * `-sN` - Null scan; no TCP flags are set. Used to circumvent *stateless* firewalls. Can distinguish between `closed` and `open|filtered`.
 * `-sS` - SYN scan. Most common scan, and nmap's default. Starts a TCP handshake but then sends a RST after receiving the SYN/ACK packet. Requires root, should not be used on OT. Also called a "stealth scan", but most IDS solutions detect it these days.
-* `-sT`  - TCP connect scan. This makes a full TCP handshake when connecting to each port, then sends a RST/ACK after the handshake is finished. Slow but accurate. This is the only scan available for unprivileged users.
+* `-sT`- TCP connect scan. This makes a full TCP handshake when connecting to each port, then sends a RST/ACK after the handshake is finished. Slow but accurate. This is the only scan available for unprivileged users.
 * `-sU` - UDP scan. Sends empty UDP packets (or more realistic packets for known ports) and listens for a response back ("open") or a ICMP "port unreachable" packet ("closed"). Since UDP doesn't require a response, most ports will get marked `open|filtered`. Can be specified with one of the TCP scans to scan TCP and UDP ports simultaneously. *Very* slow, so you probably want to use with `-sU --top-ports 20`.
 * `-sW` - TCP windows scan; the same as an ACK scan except that it examines the TCP window field of returned RST packets and uses it to discern if a port responded *differently*. Note that ports may be reported as closed (and open!) erroneously (as not all systems respond in the same way), but unfiltered ports will be identified. Look for patterns of open/closed ports to try to discern how the target system is responding.
 * `-sX` - Xmas scan; the FIN, URG, and PSH TCP flags are set. Use and output is similar to a null scan.

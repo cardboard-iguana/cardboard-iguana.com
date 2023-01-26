@@ -1,6 +1,6 @@
 # Upgrading PostgreSQL
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-11-25
 
 ```bash

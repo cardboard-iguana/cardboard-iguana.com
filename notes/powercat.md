@@ -1,6 +1,6 @@
 # Using Powercat
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-08-26
 
 Powercat is a PowerShell-native reimplementation of netcat. Powercat can be installed on Kali Linux using `sudo apt install powercat`.

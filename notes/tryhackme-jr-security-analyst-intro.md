@@ -1,7 +1,7 @@
 # TryHackMe: Jr. Security Analyst Intro
 
-* **author**:: Nathan Acks  
-* **date**:: 2022-02-22  
+* **author**:: Nathan Acks
+* **date**:: 2022-02-22
 * **tags**:: #MOC
 
 ## Course Notes

@@ -1,6 +1,6 @@
 # Using Hashcat
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-10-12
 
 ```bash

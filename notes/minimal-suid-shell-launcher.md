@@ -1,6 +1,6 @@
 # Minimal SUID Shell Launcher
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-08-05
 
 ```c

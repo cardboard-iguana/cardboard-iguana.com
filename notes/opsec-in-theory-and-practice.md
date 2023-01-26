@@ -1,6 +1,6 @@
 # OPSEC in Theory and Practice
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-04-04
 
 An overview of OPSEC history and practice produced by The Grugq.
@@ -394,7 +394,7 @@ In general, you're trying to use both knowledge of the adversary's rules and hum
 
 Some interesting points here:
 
-* Patrol cars that are looking for potential narcotics targets will generally park perpendicular  to an intersection; both the position and the need for cars to slow down in this environment allows the officer to more easily watch a particular car for longer. Obviously you can't do this on an interstate (a tactic there is to "slow roll", slowing down to 40 or 50 mph and letting cars pass in order to get a good look at the occupants).
+* Patrol cars that are looking for potential narcotics targets will generally park perpendicularto an intersection; both the position and the need for cars to slow down in this environment allows the officer to more easily watch a particular car for longer. Obviously you can't do this on an interstate (a tactic there is to "slow roll", slowing down to 40 or 50 mph and letting cars pass in order to get a good look at the occupants).
 * The use of a new or rental car (if it can be identified as such) can cause suspicion. The reason for this is people trying to limit their financial exposure should the car they're smuggling in be seized.
 * Interestingly, the presence of DARE or other anti-drug bumper stickers can arouse suspicion. The same goes for stickers supporting law enforcement. I guess some people are trying too hard.
 

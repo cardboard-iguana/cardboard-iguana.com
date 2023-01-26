@@ -1,6 +1,6 @@
 # Jurassic Park
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-02-02
 
 Our target is 10.10.105.134.

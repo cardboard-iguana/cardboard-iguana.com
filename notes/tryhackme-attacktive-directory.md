@@ -1,6 +1,6 @@
 # Attacktive Directory
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-12-30
 
 ## Welcome to Attacktive Directory

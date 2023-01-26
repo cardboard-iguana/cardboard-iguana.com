@@ -1,6 +1,6 @@
 # Look Up Unicode and Emoji Symbols
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-10-02
 
 ## General References

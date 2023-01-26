@@ -1,6 +1,6 @@
 # TryHackMe: Pre Security (Supplements)
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-09-24
 
 ## Core Windows Processes

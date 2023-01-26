@@ -1,6 +1,6 @@
 # TryHackMe: Common Attacks & Pwnkit
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-02-03
 
 ## Common Attacks

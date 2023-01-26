@@ -1,7 +1,7 @@
 # TryHackMe: Complete Beginner
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-09-26  
+* **author**:: Nathan Acks
+* **date**:: 2021-09-26
 * **tags**:: #MOC
 
 ## Introduction

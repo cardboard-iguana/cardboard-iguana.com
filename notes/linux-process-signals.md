@@ -1,6 +1,6 @@
 # Linux Process Signals
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-09-16
 
 ## Important Signals

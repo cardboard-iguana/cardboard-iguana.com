@@ -1,6 +1,6 @@
 # SQL Injection
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-07-29
 
 SQL injection is *most* common in PHP-based apps (though other languages are also vulnerable).

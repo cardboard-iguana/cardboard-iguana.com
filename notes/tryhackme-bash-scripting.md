@@ -1,7 +1,7 @@
 # TryHackMe: Bash Scripting
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-09-29  
+* **author**:: Nathan Acks
+* **date**:: 2021-09-29
 * **tags**:: #MOC
 
 ## Course Notes

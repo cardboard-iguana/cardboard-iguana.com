@@ -1,6 +1,6 @@
 # DLL Hijacking
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-04-22
 
 ## Windows DLL Search Order

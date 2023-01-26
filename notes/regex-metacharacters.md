@@ -1,6 +1,6 @@
 # Regex Metacharacters
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-09-21
 
 ## Important “Metacharacters”

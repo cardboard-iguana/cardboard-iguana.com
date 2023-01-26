@@ -1,7 +1,7 @@
 # TryHackMe: MAL: Researching
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-11-17  
+* **author**:: Nathan Acks
+* **date**:: 2021-11-17
 * **tags**:: #MOC
 
 ## Course Notes

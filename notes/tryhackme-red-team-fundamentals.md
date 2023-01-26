@@ -1,7 +1,7 @@
 # TryHackMe: Red Team Fundamentals
 
-* **author**:: Nathan Acks  
-* **date**:: 2022-04-28  
+* **author**:: Nathan Acks
+* **date**:: 2022-04-28
 * **tags**:: #MOC
 
 ## Course Notes

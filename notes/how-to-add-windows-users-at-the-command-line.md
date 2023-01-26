@@ -1,6 +1,6 @@
 # How to Add Windows Users (at the Command Line)
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-10-29
 
 ```powershell

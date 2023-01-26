@@ -1,6 +1,6 @@
 # Kerberos
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-03-13
 
 Kerberos: The default authentication method for Windows domains. Intended to be the successor to NTLM.

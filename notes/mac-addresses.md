@@ -1,6 +1,6 @@
 # MAC Addresses
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-09-14
 
 MAC ("Media Access Control") are unique 48-bit identifying numbers burned into network cards. They are typically represented as six octets each composed of two hexadecimal numbers (0 - f). The first three octets designate the network interface vendor while the last three constitute device serial number. On most operating systems octets are separated using colons, but Windows uses dashes instead.

@@ -1,7 +1,7 @@
 # TryHackMe: Core Windows Processes
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-09-23  
+* **author**:: Nathan Acks
+* **date**:: 2021-09-23
 * **tags**:: #MOC
 
 ## Course Notes

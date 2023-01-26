@@ -1,6 +1,6 @@
 # AWS Deep Dive
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-08-25
 
 ## A Serverless Journey: AWS Lambda Under the Hood

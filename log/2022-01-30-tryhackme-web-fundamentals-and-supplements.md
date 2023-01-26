@@ -1,6 +1,6 @@
 # TryHackMe: Web Fundamentals & Supplements
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-01-30
 
 ## Tools'R'us

@@ -1,6 +1,6 @@
 # Using "sqlmap"
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-01-30
 
 Used to automate SQLi attacks (and apparently banned on the OSCP because it makes things too easy).

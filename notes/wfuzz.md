@@ -1,6 +1,6 @@
 # Using "wfuzz"
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-01-25
 
 wfuzz is a URL fuzzer — basically the command-line version of the Burp Suite Intruder (but it's *much* faster, which is what one would generally expect from a command-line tool).

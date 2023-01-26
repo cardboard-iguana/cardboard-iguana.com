@@ -1,6 +1,6 @@
 # Equivalent Windows and UNIX Commands
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-08-17
 
 UNIX ←→ Windows command equivalencies (more-or-less):

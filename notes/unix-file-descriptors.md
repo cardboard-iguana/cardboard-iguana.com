@@ -1,6 +1,6 @@
 # UNIX File Descriptors
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-10-02
 
 ## Standard File Discriptors

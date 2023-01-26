@@ -1,6 +1,6 @@
 # Using Mimikatz
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-08-31
 
 Mimikatz needs to be run with administrative privileges (on the local machine), and provides its own command prompt. Use the `privilege::debug` command to check if you're running with the right privileges.

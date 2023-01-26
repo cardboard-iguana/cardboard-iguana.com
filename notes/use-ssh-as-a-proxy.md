@@ -1,6 +1,6 @@
 # Use SSH as a Proxy
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-08-31
 
 You can use SSH as a SOCKS5 proxy (with a tool like proxychains) using remote port forwarding.

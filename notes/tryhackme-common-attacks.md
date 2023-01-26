@@ -1,7 +1,7 @@
 # TryHackMe: Common Attacks
 
-* **author**:: Nathan Acks  
-* **date**:: 2022-02-03  
+* **author**:: Nathan Acks
+* **date**:: 2022-02-03
 * **tags**:: #MOC
 
 ## Course Notes

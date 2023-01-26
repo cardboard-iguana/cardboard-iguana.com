@@ -1,6 +1,6 @@
 # Using "basenc"
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-03-02
 
 ```bash

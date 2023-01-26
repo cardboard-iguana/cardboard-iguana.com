@@ -1,6 +1,6 @@
 # Tools'R'us
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-01-30
 
 We're supposed to restrict ourselves to the following tools in this CTF:

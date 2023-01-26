@@ -1,6 +1,6 @@
 # Net Sec Challenge
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-04-03
 
 This CTF is just a series of questions. All should be solvable using nmap, telnet, and Hydra… Though I'm going to substitute netcat for telnet. However, I'm sticking to the spirit of things, and will only use those three tools.

@@ -1,6 +1,6 @@
 # Ice
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-12-07
 
 ## Recon

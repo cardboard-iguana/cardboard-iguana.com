@@ -1,6 +1,6 @@
 # OSI Model
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-09-14
 
 Layer 7: Application (highest)  

@@ -1,6 +1,6 @@
 # TryHackMe: Jr. Penetration Tester
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-03-31
 
 ## Nmap Live Host Discovery

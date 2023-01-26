@@ -1,7 +1,7 @@
 # TryHackMe: Windows Event Logs
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-09-24  
+* **author**:: Nathan Acks
+* **date**:: 2021-09-24
 * **tags**:: #MOC
 
 ## Course Notes

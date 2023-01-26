@@ -1,7 +1,7 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-* **author**:: Nathan Acks  
-* **date**:: 2022-05-07  
+* **author**:: Nathan Acks
+* **date**:: 2022-05-07
 * **tags**:: #MOC
 
 ## Threats, Attacks, and Vulnerabilities

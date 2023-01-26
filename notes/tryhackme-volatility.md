@@ -1,7 +1,7 @@
 # TryHackMe: Volatility
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-11-11  
+* **author**:: Nathan Acks
+* **date**:: 2021-11-11
 * **tags**:: #MOC
 
 ## Course Notes

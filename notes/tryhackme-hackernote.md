@@ -1,7 +1,7 @@
 # TryHackMe: hackernote
 
-* **author**:: Nathan Acks  
-* **date**:: 2022-01-31  
+* **author**:: Nathan Acks
+* **date**:: 2022-01-31
 * **tags**:: #MOC
 
 ## Course Notes

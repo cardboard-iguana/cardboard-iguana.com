@@ -1,6 +1,6 @@
 # Enumerate "sudo" Access
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-10-30
 
 The `sudo -l` command will helpfully tell us what we can run as the superuser without a password (NOPASSWD), as well as what environment variables may be preserved (useful if you're going to try to exploit LD_PRELOAD or LD_LIBRARY_PATH).

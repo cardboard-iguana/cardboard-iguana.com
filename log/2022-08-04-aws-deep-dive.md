@@ -1,6 +1,6 @@
 # AWS Deep Dive
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-08-04
 
 Today I'll be covering the "Pricing and Support" module from the "AWS Cloud Practitioner Essentials" course.

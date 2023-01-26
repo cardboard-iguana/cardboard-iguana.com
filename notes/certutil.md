@@ -1,6 +1,6 @@
 # Using "certutil"
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-05-11
 
 ## Calculating File Hashes

@@ -1,6 +1,6 @@
 # Retro
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-01-02
 
 ## Initial Reconnaissance 

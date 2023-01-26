@@ -1,6 +1,6 @@
 # Use a Raspberry Pi 4B as an iPad Pro Hacking Accessory
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-03-05
 
 This guide will cover setting up Kali Linux on a Raspberry Pi 4B so that:

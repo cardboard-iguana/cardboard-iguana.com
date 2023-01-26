@@ -1,6 +1,6 @@
 # Using "fuff"
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-02-28
 
 A general web fuzzing tool. Use `FUZZ` as your placeholder.

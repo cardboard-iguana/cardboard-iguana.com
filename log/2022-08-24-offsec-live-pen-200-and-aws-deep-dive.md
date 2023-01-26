@@ -1,6 +1,6 @@
 # OffSec Live: PEN-200 & AWS Deep Dive
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-08-24
 
 Notes from OffSec Live in the morning (as usual), and then a few more YouTube videos about AWS this evening.

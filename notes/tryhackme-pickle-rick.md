@@ -1,6 +1,6 @@
 # Pickle Rick
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-10-10
 
 ## Background

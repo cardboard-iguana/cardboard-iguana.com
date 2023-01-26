@@ -1,6 +1,6 @@
 # Using Hydra
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-04-03
 
 Hydra can actually brute-force remote services, though I have some skepticism about how useful this is in practice.

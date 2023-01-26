@@ -1,7 +1,7 @@
 # TryHackMe: Web Fundamentals
 
-* **author**:: Nathan Acks  
-* **date**:: 2022-01-03  
+* **author**:: Nathan Acks
+* **date**:: 2022-01-03
 * **tags**:: #MOC
 
 ## Web Fundamentals

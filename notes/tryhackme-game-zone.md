@@ -1,7 +1,7 @@
 # TryHackMe: Game Zone
 
-* **author**:: Nathan Acks  
-* **date**:: 2022-02-02  
+* **author**:: Nathan Acks
+* **date**:: 2022-02-02
 * **tags**:: #MOC
 
 ## Course Notes

@@ -1,6 +1,6 @@
 # TryHackMe: Pre Security
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-09-19
 
 ## Windows Fundamentals
@@ -48,7 +48,7 @@ The -size flag matches files of size `n`.
 
 Prefix `n` with + or - to match files *strictly* greater than or less than `n` in size. To specify useful sizes, use a suffix.
 
-* `c` -  Bytes
+* `c` - Bytes
 * `k` - Kilobytes
 * `M` - Megabytes
 * `G` - Gigabytes

@@ -1,6 +1,6 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-03-12
 
 ## CompTIA Security+ Exam Cram
@@ -78,7 +78,7 @@ Okay, learned something new about Linux permissions I wasn't expecting: If a use
 
 The Windows "Microsoft Operations Manager" (MOM) includes an "Audit Collection Service" (ACS) that collects various audit events into a single database. There are two preconfigured reports:
 
-* The "Access Violation Account  Locked" report
+* The "Access Violation AccountLocked" report
 * The "Access Violation Unsuccessful Login Attempts" report
 
 ### Authentication Protocols
@@ -237,7 +237,7 @@ Types of access controls:
 * DISCRETIONARY ACCESS CONTROL (DAC): Has object owners assign access rights on an ad hoc basis based (but only for their objects). This is the model used in, for example, Google Drive.
 * RULE-BASED ACCESS CONTROL (RBAC): Entities are dynamically assigned access based upon rules defined by either the object owner or systems administrator. Typically these rules specify things like time of day, user location, etc. Think of Google Workspace's "Context-Aware Access".
 * ROLE-BASED ACCESS CONTROL (RBAC): *Also* known as RBAC, this involves assigning access based upon entity membership in a group/role. Google Workspace admins are managed in this way, and groups can be used to provide similar functionality at the user level. Role-based access control is easier to manage than rule-based or discretionary access control, but doesn't offer the flexibility of rule-based controls.
-* ATTRIBUTE-BASED ACCESS CONTROL (ABAC): This is a specific access control definition used within the US federal government. It  is similar to rule-based access control in that it defines a set of attributes that an entity must match in order to access an object in an XML-derived format (the "Extensible Access Control Markup Language", or XACML). However, the list of attributes can be quite detailed, which allows ABAC to also enforce DAC and MAC models.
+* ATTRIBUTE-BASED ACCESS CONTROL (ABAC): This is a specific access control definition used within the US federal government. Itis similar to rule-based access control in that it defines a set of attributes that an entity must match in order to access an object in an XML-derived format (the "Extensible Access Control Markup Language", or XACML). However, the list of attributes can be quite detailed, which allows ABAC to also enforce DAC and MAC models.
 
 If I read all of this right, ABAC is a *way* of implementing access control, rather than a *type* of access control.
 

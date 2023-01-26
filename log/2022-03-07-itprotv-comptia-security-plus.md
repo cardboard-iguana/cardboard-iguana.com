@@ -1,6 +1,6 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-03-07
 
 Because the next block of units on ITPro.TV cover three chapters in the Exam Cram (at least as best I can map them without having first read the chapters), I'm going to try something a bit different: For the next three days I'm only going to be doing the readings, and then I'll set Exam Cram aside to work on the lectures.

@@ -1,6 +1,6 @@
 # Inclusion
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-02-01
 
 This room is intended to focus on local file inclusion attacks, so my guess is that hitting the machine with nmap and gobuster is probably unnecessary. But, I'm going to do it anyway, just in case.

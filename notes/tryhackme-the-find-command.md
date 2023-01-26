@@ -1,7 +1,7 @@
 # TryHackMe: The find Command
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-09-19  
+* **author**:: Nathan Acks
+* **date**:: 2021-09-19
 * **tags**:: #MOC
 
 ## Course Notes

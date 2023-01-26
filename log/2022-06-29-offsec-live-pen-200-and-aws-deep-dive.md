@@ -1,6 +1,6 @@
 # OffSec Live: PEN-200 & AWS Deep Dive
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-06-29
 
 This entry was actually written over the course of most of the day, as the next session of Offensive Security's free streaming "OffSec Live" class was in the morning and I worked on the "AWS Deep Drive" learning path in the evening.

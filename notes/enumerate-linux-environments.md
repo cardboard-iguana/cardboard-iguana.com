@@ -1,6 +1,6 @@
 # Enumerate Linux Environments
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-04-22
 
 ## Useful Commands

@@ -1,6 +1,6 @@
 # Enumerate Users with "finger"
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-07-10
 
 ```bash

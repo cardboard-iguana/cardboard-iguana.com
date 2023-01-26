@@ -1,6 +1,6 @@
 # TryHackMe: Complete Beginner
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-10-16
 
 ## Active Directory Basics
@@ -69,7 +69,7 @@ Default security groups:
 * READ-ONLY DOMAIN CONTROLLERS: Domain-joined AD DS servers that are not domain controllers.
 * ENTERPRISE READ-ONLY DOMAIN CONTROLLERS: AD DS servers that are not domain controllers and not joined to a domain.
 * KEY ADMINS: Admins able to manage protected objects within a domain.
-* ENTERPRISE KEY ADMINS:  Admins able to manage protected objects across the entire forest.
+* ENTERPRISE KEY ADMINS:Admins able to manage protected objects across the entire forest.
 * CLONEABLE DOMAIN CONTROLLERS: Domain controllers that may be cloned.
 * RAS AND IAS SERVERS: Servers allowed to access remote properties of users.
 

@@ -1,7 +1,7 @@
 # TryHackMe: SQL Injection
 
-* **author**:: Nathan Acks  
-* **date**:: 2022-01-30  
+* **author**:: Nathan Acks
+* **date**:: 2022-01-30
 * **tags**:: #MOC
 
 ## Course Notes

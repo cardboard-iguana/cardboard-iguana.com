@@ -1,6 +1,6 @@
 # AWS Deep Dive
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-07-05
 
 Today I'll be starting the ~6 hour "AWS Cloud Practitioner Essentials" course as I continue to dive deeper into AWS.

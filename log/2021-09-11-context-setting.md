@@ -1,6 +1,6 @@
 # Context Setting
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-09-11
 
 Welcome to Cardboard Iguana Security and the inaugural entry of "A Hacker's Journal". Which you're probably reading retrospectively, because I'm starting this journal before I've actually finished putting together the Cardboard Iguana Security website.

@@ -1,7 +1,7 @@
 # TryHackMe: Attacking Kerberos
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-12-05  
+* **author**:: Nathan Acks
+* **date**:: 2021-12-05
 * **tags**:: #MOC
 
 ## Course Notes

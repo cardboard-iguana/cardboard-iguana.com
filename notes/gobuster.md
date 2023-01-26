@@ -1,6 +1,6 @@
 # Using "gobuster"
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-11-29
 
 Gobuster is pretty straight-forward. Use `gobuster --help` to get general help, and `gobuster $CMD --help` to get detailed help specific to a particular command.

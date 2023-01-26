@@ -1,6 +1,6 @@
 # AWS Deep Dive
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-09-27
 
 ## AWS IAM Privilege Escalation: Methods and Mitigation

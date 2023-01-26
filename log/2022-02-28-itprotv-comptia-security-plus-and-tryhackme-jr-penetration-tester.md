@@ -1,6 +1,6 @@
 # ITPro.TV: CompTIA Security+ (SY0-601) & TryHackMe: Jr. Penetration Tester
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-02-28
 
 ## CompTIA Security+ Exam Cram
@@ -103,7 +103,7 @@ The look it up:
 
 Useful Google search modifiers:
 
-* site: -  Search only within the specified domain
+* site: -Search only within the specified domain
 * inurl: - Require term to be present in the URL
 * filetype: - Only return results with the specified extension
 * intitle: - Require term to be present in the page title

@@ -1,6 +1,6 @@
 # AWS Deep Dive
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-08-08
 
 Today I'll be covering the "Migration and Innovation" module from the "AWS Cloud Practitioner Essentials" course.

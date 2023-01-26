@@ -1,7 +1,7 @@
 # TryHackMe: Cross-Site Scripting
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-11-28  
+* **author**:: Nathan Acks
+* **date**:: 2021-11-28
 * **tags**:: #MOC
 
 ## Course Notes

@@ -1,6 +1,6 @@
 # ITPro.TV: CompTIA Security+ (SY0-601)
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-04-10
 
 ## CompTIA Security+ Exam Cram
@@ -79,7 +79,7 @@ Interesting tools:
 
 * `pathping` - Combines `ping` + `traceroute`.
 * `route` - Display (local) routing table.
-* `arp`  - Display (local) arp cache.
+* `arp`- Display (local) arp cache.
 * `netstat` - Current (local) network connections.
 * `hping` - Packet construction tool.
 * `scanless` - Port scanning via third-party services.

@@ -1,6 +1,6 @@
 # TryHackMe: Complete Beginner
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-09-29
 
 ## Network Services

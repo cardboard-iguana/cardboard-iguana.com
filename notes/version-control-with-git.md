@@ -1,6 +1,6 @@
 # Version Control with Git
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2018-08-01
 
 ## DevOps and Git in a Nutshell

@@ -1,6 +1,6 @@
 # Using "socat"
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-10-28
 
 Socat: An anything-to-anything connector!

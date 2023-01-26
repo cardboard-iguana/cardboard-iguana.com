@@ -1,6 +1,6 @@
 # Overpass 2: Hacked
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2021-12-14
 
 The flags are structured to basically walk us through this room.

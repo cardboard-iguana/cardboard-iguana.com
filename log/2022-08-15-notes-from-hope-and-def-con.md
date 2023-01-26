@@ -1,6 +1,6 @@
 # Notes from HOPE and DEF CON
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-08-15
 
 Now that both HOPE and DEF CON are behind me, I want to summarize some of my initial thoughts. This is not a "what did I learn about hacking" post, but rather musings about *attending* these events.

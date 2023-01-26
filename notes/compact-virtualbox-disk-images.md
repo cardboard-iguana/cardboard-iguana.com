@@ -1,6 +1,6 @@
 # Compact VirtualBox Disk Images
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-01-28
 
 (1) Zero out free disk space *on the guest*:

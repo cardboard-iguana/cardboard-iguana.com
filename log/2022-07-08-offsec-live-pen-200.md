@@ -1,6 +1,6 @@
 # OffSec Live: PEN-200
 
-* **author**:: Nathan Acks  
+* **author**:: Nathan Acks
 * **date**:: 2022-07-08
 
 ## Common Failure Modes

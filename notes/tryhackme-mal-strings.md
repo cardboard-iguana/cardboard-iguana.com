@@ -1,7 +1,7 @@
 # TryHackMe: MAL: Strings
 
-* **author**:: Nathan Acks  
-* **date**:: 2021-11-21  
+* **author**:: Nathan Acks
+* **date**:: 2021-11-21
 * **tags**:: #MOC
 
 ## Course Notes
