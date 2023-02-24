@@ -23,7 +23,7 @@ This seems like an ill-posed sentence… I’m sure the argument here is that ma
 
 ###### [Use Multiple Environments](https://docs.aws.amazon.com/wellarchitected/latest/framework/ops_dev_integ_multi_env.html)
 
-![I don’t always test my code. But when I do, I test in production.](assets/most-interesting-man-testing-in-production.jpg)
+![I don’t always test my code. But when I do, I test in production.](assets/most-interesting-man-testing-in-production.webp)
 
 ###### [Make Frequent, Small, Reversible Changes](https://docs.aws.amazon.com/wellarchitected/latest/framework/ops_dev_integ_freq_sm_rev_chg.html)
 
