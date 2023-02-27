@@ -171,6 +171,7 @@
 * [How to Identify Windows Shares With Nmap](notes/how-to-identify-windows-shares-with-nmap.md)
 * [How to Load a Shell with a Simple Executable](notes/how-to-load-a-shell-with-a-simple-executable.md)
 * [How to Set PATH in a Session](notes/how-to-set-path-in-a-session.md)
+* [JavaScript Deobfuscator and Unpacker](https://lelinhtinh.github.io/de4js/)
 * [JavaScript Obfuscator Tool](https://obfuscator.io/)
 * [JSFuck](http://www.jsfuck.com/)
 * [JWT (JSON Web Tokens) Attacks](notes/json-web-token-attacks.md)
