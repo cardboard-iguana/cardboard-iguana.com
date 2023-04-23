@@ -4,26 +4,3 @@
 ._*
 *~
 *.swp
-
-# Ignore merged _theme files
-_build/
-_theme/
-_layouts/
-_includes/
-css/
-fonts/
-atom.xml
-Gemfile
-metadata.txt
-package.json
-
-# Ignore build files
-.bundle/
-vendor/
-Gemfile.lock
-.jekyll-cache/
-.jekyll-metadata
-_site/
-.sass-cache/
-node_modules/
-package-lock.json
