@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://www.cardboard-iguana.com/zibaldone/*"
+  to = "https://publish.obsidian.md/serve?url=www.cardboard-iguana.com/zibaldone/:splat"
+  status = 200
+  force = true
