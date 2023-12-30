@@ -8,12 +8,47 @@ body, input, select, textarea {
 	font-size: 3.5rem;
 }
 #header .logo .icon.solid:before {
-	font-weight: 300;
+	font-weight: 400; /* Safari work-around; revert to 300 when other font weights are supported */
 }
 
+.icon.solid:before {
+	font-weight: 400; /* Safari work-around; remove when other font weights are supported */
+}
+
+.noto-seedling:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "🌱";
+}
+.noto-box:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "📦";
+}
 .noto-lizard:before {
 	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
 	content: "🦎";
+}
+.noto-shield:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "🛡️";
+}
+.noto-brain:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "🧠";
+}
+.noto-camera:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "📷";
+}
+.noto-love:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "💑";
 }
 .noto-at:before {
 	font-family: 'Noto Sans';
@@ -21,31 +56,53 @@ body, input, select, textarea {
 }
 .noto-home:before {
 	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
 	content: "🏡";
-}
-.noto-github:before {
-	font-family: 'Noto Emoji';
-	content: "🐙";
-}
-.noto-linkedin:before {
-	font-family: 'Noto Emoji';
-	content: "🧑‍💻";
-}
-.noto-keybase:before {
-	font-family: 'Noto Emoji';
-	content: "🔑";
 }
 .noto-farcaster:before {
 	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
 	content: "⛩️";
 }
 .noto-bluesky:before {
 	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
 	content: "🦋";
 }
 .noto-twitter:before {
 	font-family: 'Noto Emoji';
-	content: "🐦‍⬛";
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "🐦";
+}
+.noto-linkedin:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "💼"; /* Safari work-around; revert to 🧑‍💻 once joined emoji are properly supported */
+}
+.noto-flickr:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "📸";
+}
+.noto-github:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "🐙";
+}
+.noto-keybase:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "🔑";
+}
+.noto-email:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "📧";
+}
+.noto-briefcase:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "💼";
 }
 
 .icon.inline {
