@@ -62,7 +62,7 @@ body, input, select, textarea {
 .noto-farcaster:before {
 	font-family: 'Noto Emoji';
 	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
-	content: "⛩️";
+	content: "✨"; /* Firefox work-around; revert to ⛩️ when Noto Emoji is fixed */
 }
 .noto-bluesky:before {
 	font-family: 'Noto Emoji';
