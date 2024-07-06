@@ -43,7 +43,7 @@ body, input, select, textarea {
 .noto-camera:before {
 	font-family: 'Noto Emoji';
 	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
-	content: "📸";
+	content: "📷";
 }
 .noto-love:before {
 	font-family: 'Noto Emoji';
@@ -80,6 +80,11 @@ body, input, select, textarea {
 	content: "💼"; /* Safari work-around; revert to 🧑‍💻 once joined emoji are properly supported */
 }
 .noto-flickr:before {
+	font-family: 'Noto Emoji';
+	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
+	content: "🎞️";
+}
+.noto-vsco:before {
 	font-family: 'Noto Emoji';
 	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
 	content: "📸";
