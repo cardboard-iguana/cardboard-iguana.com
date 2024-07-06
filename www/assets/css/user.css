@@ -43,7 +43,7 @@ body, input, select, textarea {
 .noto-camera:before {
 	font-family: 'Noto Emoji';
 	font-variant-emoji: text; /* Firefox work-around; remove when Noto Emoji is fixed */
-	content: "📷";
+	content: "📸";
 }
 .noto-love:before {
 	font-family: 'Noto Emoji';
