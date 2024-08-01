@@ -1,0 +1,352 @@
+@use "./base.scss";
+
+// put your custom CSS here!
+
+::selection {
+	background: var(--textHighlight);
+	color: inherit;
+}
+
+.content-meta span:first-child {
+	display: none;
+}
+
+body[data-slug$="index"] .content-meta {
+	display: none;
+}
+
+body[data-slug^="commentaries/"] .content-meta span:first-child,
+body[data-slug^="essays/"] .content-meta span:first-child,
+body[data-slug^="newsletters/"] .content-meta span:first-child,
+body[data-slug^="tales/"] .content-meta span:first-child {
+	display: inline;
+}
+
+a.internal:not(.transclude-src) {
+	background: none;
+}
+
+a.transclude-src {
+	display: none;
+}
+
+article > h1 > a[role=anchor] > svg {
+	width: 22px;
+	height: 22px;
+}
+
+article > h2 > a[role=anchor] > svg,
+article > blockquote.transclude h1 > a[role=anchor] > svg {
+	width: 18px;
+	height: 18px;
+}
+
+article > h3 > a[role=anchor] > svg,
+article > blockquote.transclude h2 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude h1 > a[role=anchor] > svg {
+	width: 14px;
+	height: 14px;
+}
+
+article > h4 > a[role=anchor] > svg,
+article > h5 > a[role=anchor] > svg,
+article > h6 > a[role=anchor] > svg,
+article > blockquote.transclude h3 > a[role=anchor] > svg,
+article > blockquote.transclude h4 > a[role=anchor] > svg,
+article > blockquote.transclude h5 > a[role=anchor] > svg,
+article > blockquote.transclude h6 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude h2 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude h3 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude h4 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude h5 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude h6 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude blockquote.transclude h1 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude blockquote.transclude h2 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude blockquote.transclude h3 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude blockquote.transclude h4 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude blockquote.transclude h5 > a[role=anchor] > svg,
+article > blockquote.transclude blockquote.transclude blockquote.transclude h6 > a[role=anchor] > svg {
+	width: 12px;
+	height: 12px;
+}
+
+blockquote.transclude {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+blockquote.transclude h1:first-child {
+	display: none;
+}
+
+blockquote.transclude ol,
+blockquote.transclude ul {
+	padding-left: revert;
+}
+
+blockquote.transclude h1 { /* h2 */
+	margin-top: 1.9rem;
+	font-size: 1.4rem;
+}
+
+blockquote.transclude h2,
+blockquote.transclude blockquote.transclude h1 { /* h3 */
+	margin-top: 1.62rem;
+	font-size: 1.12rem;
+}
+
+blockquote.transclude h3,
+blockquote.transclude h4,
+blockquote.transclude h5,
+blockquote.transclude h6,
+blockquote.transclude blockquote.transclude h2,
+blockquote.transclude blockquote.transclude h3,
+blockquote.transclude blockquote.transclude h4,
+blockquote.transclude blockquote.transclude h5,
+blockquote.transclude blockquote.transclude h6,
+blockquote.transclude blockquote.transclude blockquote.transclude h1,
+blockquote.transclude blockquote.transclude blockquote.transclude h2,
+blockquote.transclude blockquote.transclude blockquote.transclude h3,
+blockquote.transclude blockquote.transclude blockquote.transclude h4,
+blockquote.transclude blockquote.transclude blockquote.transclude h5,
+blockquote.transclude blockquote.transclude blockquote.transclude h6 { /* h4, h5, h6 */
+	margin-top: 1.5rem;
+	font-size: 1rem;
+}
+
+body[data-slug="index"] .page-header h1.article-title {
+	display: none;
+}
+
+.breadcrumb-element a[href^="../"][href$="/"]::first-letter,
+.breadcrumb-element a[href^="/"][href$="/"]::first-letter,
+.folder-title::first-letter {
+	text-transform: uppercase;
+}
+
+.content-meta[show-comma=true] > span:not(:last-child):after {
+	content: " |";
+}
+
+h1.page-title {
+	font-size: 1rem;
+}
+
+h1.page-title a {
+	color: var(--dark);
+}
+
+pre, code {
+	background-color: var(--highlight);
+}
+
+pre > code {
+	overflow-x: auto;
+}
+
+.search > #search-icon {
+	background-color: var(--highlight);
+}
+
+.search > #search-container > #search-space > #search-layout .highlight {
+	background-color: var(--textHighlight);
+}
+
+.page .page-header,
+.page > #quartz-body .sidebar {
+	margin-top: 4rem;
+}
+
+ul.overflow:after,
+ol.overflow:after {
+	background: transparent;
+}
+
+.backlinks > .overflow:first-of-type,
+#explorer-content .overflow:first-of-type,
+#toc-content .overflow:first-of-type {
+	scrollbar-width: thin;
+	scrollbar-color: var(--highlight) transparent;
+	border-right: 1px solid var(--highlight);
+	margin-bottom: 0;
+}
+.backlinks > .overflow:first-of-type::-webkit-scrollbar,
+#explorer-content .overflow:first-of-type::-webkit-scrollbar,
+#toc-content .overflow:first-of-type::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+.backlinks > .overflow:first-of-type::-webkit-scrollbar-thumb,
+#explorer-content .overflow:first-of-type::-webkit-scrollbar-thumb,
+#toc-content .overflow:first-of-type::-webkit-scrollbar-thumb {
+	background-color: var(--highlight);
+}
+.backlinks > .overflow:first-of-type::-webkit-scrollbar-track,
+#explorer-content .overflow:first-of-type::-webkit-scrollbar-track,
+#toc-content .overflow:first-of-type::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+#explorer-content .overflow:first-of-type {
+	max-height: 512px;
+}
+#toc-content .overflow:first-of-type {
+	max-height: 360px;
+}
+.backlinks > .overflow:first-of-type {
+	max-height: 307px;
+}
+
+.backlinks ul.overflow li,
+#explorer-content ul.overflow ul.content ul.content li,
+#toc-content ul.overflow li {
+	border-bottom: 1px solid var(--highlight);
+	padding: 0 0.16rem;
+}
+#explorer-content ul.overflow ul.content ul.content li:first-child {
+	border-top: 1px solid var(--highlight);
+}
+#toc-content ul.overflow li:last-child,
+.backlinks ul.overflow li:last-child {
+	border-bottom: none;
+}
+
+#toc-content ul.overflow li.depth-0 {
+	/*padding-left: 0;*/
+	margin-left: 0;
+}
+#toc-content ul.overflow li.depth-1 {
+	/*padding-left: 0;*/
+	margin-left: 1rem;
+}
+#toc-content ul.overflow li.depth-2 {
+	/*padding-left: 0;*/
+	margin-left: 2rem;
+}
+#toc-content ul.overflow li.depth-3 {
+	/*padding-left: 0;*/
+	margin-left: 3rem;
+}
+#toc-content ul.overflow li.depth-4 {
+	/*padding-left: 0;*/
+	margin-left: 4rem;
+}
+#toc-content ul.overflow li.depth-5 {
+	/*padding-left: 0;*/
+	margin-left: 5rem;
+}
+
+footer {
+	opacity: 1;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+}
+footer p {
+	opacity: 0.5;
+	text-align: center;
+}
+footer ul {
+	gap: 2rem;
+	justify-content: center;
+}
+
+@media (max-width: 1510px) {
+	.backlinks > .overflow:first-of-type {
+		max-height: 258px;
+	}
+	footer {
+		margin-bottom: 2rem;
+	}
+	footer ul {
+		margin: 1rem 0 0;
+	}
+	h1.page-title {
+		font-size: 1.45rem;
+		padding-right: 10px;
+	}
+	.page {
+		padding: 0 2rem;
+	}
+	.page > #quartz-body .sidebar.right {
+		margin-top: 0;
+	}
+	.search {
+		flex-grow: inherit;
+	}
+}
+
+@media (max-width: 430px) {
+	h1.page-title {
+		font-size: 1.16rem;
+	}
+}
+
+@media (max-width: 375px) {
+	.backlinks > .overflow:first-of-type {
+		max-height: fit-content;
+	}
+	footer {
+		font-size: smaller;
+	}
+	h1.page-title {
+		font-size: 0.95rem;
+	}
+}
+
+.callout{
+	&[data-callout],
+	&[data-callout="abstract"] {
+		--color: #7fbbb3;
+		--border: #7fbbb344;
+		--bg: #7fbbb310;
+	}
+
+	&[data-callout="info"],
+	&[data-callout="tip"] {
+		--color: #83c092;
+		--border: #83c09244;
+		--bg: #83c09210;
+	}
+
+	&[data-callout="success"] {
+		--color: #a7c080;
+		--border: #a7c08044;
+		--bg: #a7c08010;
+	}
+
+
+	&[data-callout="question"],
+	&[data-callout="todo"] {
+		--color: #dbbc7f;
+		--border: #dbbc7f44;
+		--bg: #dbbc7f10;
+	}
+
+	&[data-callout="danger"],
+	&[data-callout="warning"] {
+		--color: #e69875;
+		--border: #e6987544;
+		--bg: #e6987510;
+	}
+
+	&[data-callout="bug"],
+	&[data-callout="failure"] {
+		--color: #e67e80;
+		--border: #e67e8044;
+		--bg: #e67e8010;
+	}
+
+	&[data-callout="example"] {
+		--color: #d699b6;
+		--border: #d699b644;
+		--bg: #d699b610;
+	}
+
+	&[data-callout="quote"] {
+		--color: var(--gray);
+		--border: var(--lightgray);
+		--bg: var(--highlight);
+	}
+}

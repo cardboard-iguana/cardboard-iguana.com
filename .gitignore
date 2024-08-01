@@ -4,3 +4,9 @@
 ._*
 *~
 *.swp
+
+# Ignore build directory
+tmp.*
+
+# Ignore potentially problematic attachments
+www/grimoire/keep/*/**
