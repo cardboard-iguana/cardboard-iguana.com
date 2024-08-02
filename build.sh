@@ -70,5 +70,11 @@ else
 		yarn run quartz build \
 			--directory "$DATA_DIR" \
 			--output "$SCRIPT_DIR/www/$OBSIDIAN_VAULT"
+		
+		cd "$SCRIPT_DIR/www/$OBSIDIAN_VAULT"
+		while IFS= read -d '' -r DIR; do
+			DIR_NAME="$(basename "$DIR")"
+			sed -i'' "s#href=\"\./$DIR_NAME/\.\./\.\./$DIR_NAME/#href=\"./$DIR_NAME/#g" index.html
+		done < <(find . -mindepth 1 -maxdepth 1 -type d -print0)
 	)
 fi
