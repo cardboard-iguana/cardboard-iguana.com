@@ -24,8 +24,8 @@ fi
 #
 if [[ -d "$HOME/Documents/Obsidian/$OBSIDIAN_VAULT/.obsidian" ]]; then
 	DATA_DIR="$HOME/Documents/Obsidian/$OBSIDIAN_VAULT"
-elif [[ -d "$HOME/storgage/shared/Documents/Obsidian/$OBSIDIAN_VAULT/.obsidian" ]]; then
-	DATA_DIR="$HOME/storgage/shared/Documents/Obsidian/$OBSIDIAN_VAULT"
+elif [[ -d "$HOME/storage/shared/Documents/Obsidian/$OBSIDIAN_VAULT/.obsidian" ]]; then
+	DATA_DIR="$HOME/storage/shared/Documents/Obsidian/$OBSIDIAN_VAULT"
 elif [[ -d "$HOME/Obsidian/$OBSIDIAN_VAULT/.obsidian" ]]; then
 	DATA_DIR="$HOME/Obsidian/$OBSIDIAN_VAULT"
 elif [[ -d "$HOME/obsidian/$OBSIDIAN_VAULT/.obsidian" ]]; then
