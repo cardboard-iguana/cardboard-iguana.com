@@ -28,8 +28,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
-    Component.Darkmode(),
+    //Component.Darkmode(),
     Component.DesktopOnly(Component.Explorer({
+      folderDefaultState: "open",
       sortFn: (a, b) => {
         if ((!a.file && !b.file) || (a.file && b.file)) {
           if ((typeof a.file?.frontmatter?.quartzSortString === "string") && (typeof b.file?.frontmatter?.quartzSortString === "string")) {
@@ -68,7 +69,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
-    Component.Darkmode(),
+    //Component.Darkmode(),
     Component.DesktopOnly(Component.Explorer())
   ],
   right: []

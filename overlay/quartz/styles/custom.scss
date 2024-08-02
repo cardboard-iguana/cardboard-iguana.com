@@ -188,14 +188,17 @@ ol.overflow:after {
 	background-color: transparent;
 }
 
+/* Optimize for 1366x784 */
+/* Probably should be 1349x667, but I can't make that work... */
+/* https://css-tricks.com/screen-resolution-notequalto-browser-window/ */
 #explorer-content .overflow:first-of-type {
-	max-height: 512px;
+	max-height: 572px;
 }
 #toc-content .overflow:first-of-type {
-	max-height: 360px;
+	max-height: 368px;
 }
 .backlinks > .overflow:first-of-type {
-	max-height: 307px;
+	max-height: 315px;
 }
 
 .backlinks ul.overflow li,
@@ -213,27 +216,21 @@ ol.overflow:after {
 }
 
 #toc-content ul.overflow li.depth-0 {
-	/*padding-left: 0;*/
 	margin-left: 0;
 }
 #toc-content ul.overflow li.depth-1 {
-	/*padding-left: 0;*/
 	margin-left: 1rem;
 }
 #toc-content ul.overflow li.depth-2 {
-	/*padding-left: 0;*/
 	margin-left: 2rem;
 }
 #toc-content ul.overflow li.depth-3 {
-	/*padding-left: 0;*/
 	margin-left: 3rem;
 }
 #toc-content ul.overflow li.depth-4 {
-	/*padding-left: 0;*/
 	margin-left: 4rem;
 }
 #toc-content ul.overflow li.depth-5 {
-	/*padding-left: 0;*/
 	margin-left: 5rem;
 }
 
@@ -280,6 +277,9 @@ footer ul {
 @media (max-width: 430px) {
 	h1.page-title {
 		font-size: 1.16rem;
+	}
+	a[role="anchor"] {
+		display: none;
 	}
 }
 

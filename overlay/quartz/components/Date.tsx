@@ -45,7 +45,6 @@ export function formatDate(d: Date, locale: ValidLocale = "en-US"): string {
     year: "numeric",
     month: "long",
     day: "numeric",
-    weekday: "long",
     timeZone: "UTC"
   })
 }

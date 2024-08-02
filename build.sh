@@ -15,22 +15,8 @@ fi
 #
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-if [[ -d "$SCRIPT_DIR/.git" ]] && [[ -d "$SCRIPT_DIR/quartz" ]] && [[ -d "$SCRIPT_DIR/quartz.overlay" ]] && [[ -d "$SCRIPT_DIR/www/$OBSIDIAN_VAULT" ]]; then
-	QUARTZ_DIR="$SCRIPT_DIR/quartz"
-	OVERLAY_DIR="$SCRIPT_DIR/quartz.overlay"
-	OUTPUT_DIR="$SCRIPT_DIR/www/$OBSIDIAN_VAULT"
-else
-	echo "Could not locate git repo!"
-	echo ""
-	echo "---"
-	echo ""
-	echo "git clone git@github.com:cardboard-iguana/cardboard-iguana.com.git"
-	echo "cd cardboard-iguana.com"
-	echo "./build.sh"
-	echo "git add -A -v"
-	echo "git commit -m \"Some commit message\""
-	echo "git push"
-	echo ""
+if [[ ! -d "$SCRIPT_DIR/.git" ]] || [[ ! -d "$SCRIPT_DIR/overlay" ]] || [[ ! -d "$SCRIPT_DIR/www/$OBSIDIAN_VAULT" ]]; then
+	echo "Could not locate website git repo!"
 	exit 1
 fi
 
@@ -51,18 +37,20 @@ fi
 
 # Set up the build directory.
 #
-BUILD_DIR="$(mktemp --directory --tmpdir="$SCRIPT_DIR")"
-
-cp -af "$QUARTZ_DIR"/* "$BUILD_DIR"/
-cp -af "$OVERLAY_DIR"/* "$BUILD_DIR"/
-
 (
-	cd "$BUILD_DIR"
+	cd "$SCRIPT_DIR"
 
-	rm -rf "$OUTPUT_DIR"
-	mkdir -p "$OUTPUT_DIR"
+	[[ -e build ]] && rm -rf build
+	git clone https://github.com/jackyzha0/quartz.git build
+	rm -rf build/.git
+	rm -f build/package-lock.json
 
-	rm -f package-lock.json
+	cp -af overlay/* build/
+
+	[[ -e "www/$OBSIDIAN_VAULT" ]] && rm -rf "www/$OBSIDIAN_VAULT"
+	mkdir -p "www/$OBSIDIAN_VAULT"
+
+	cd build
 	yarn install
 )
 
@@ -70,20 +58,17 @@ cp -af "$OVERLAY_DIR"/* "$BUILD_DIR"/
 #
 if [[ "$1" == "serve" ]]; then
 	(
-		cd "$BUILD_DIR"
-		yarn run quartz build --directory "$DATA_DIR" --output "$OUTPUT_DIR" --serve
+		cd "$SCRIPT_DIR/build"
+		yarn run quartz build \
+			--directory "$DATA_DIR" \
+			--output "$SCRIPT_DIR/www/$OBSIDIAN_VAULT" \
+			--serve
 	)
 else
 	(
-		cd "$BUILD_DIR"
-		yarn run quartz build --directory "$DATA_DIR" --output "$OUTPUT_DIR"
+		cd "$SCRIPT_DIR/build"
+		yarn run quartz build \
+			--directory "$DATA_DIR" \
+			--output "$SCRIPT_DIR/www/$OBSIDIAN_VAULT"
 	)
 fi
-
-# Directory clean-up.
-#
-while IFS= read -d '' -r EXTRA_DIR; do
-	rm -rvf "$EXTRA_DIR"
-done < <(find "$OUTPUT_DIR" -mindepth 2 -maxdepth 2 -type d -print0)
-
-rm -rf "$BUILD_DIR"
