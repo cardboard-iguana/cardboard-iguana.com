@@ -20,7 +20,9 @@ const config: QuartzConfig = {
       ".obsidian",
       ".nomedia",
       ".trash",
-      "codex"
+      "assets/private",
+      "metadata",
+      "templates"
     ],
     defaultDateType: "created",
     generateSocialImages: true,
@@ -34,35 +36,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#fffbef",                         // --bg1
-          lightgray: "#e8e5d5",                     // --ui1
-          gray: "#829181",                          // --tx2
-          darkgray: "#5c6a72",                      // --tx1
-          dark: "#5c6a72",                          // --tx1
-          secondary: "hsl(83, 36%, 53%)",           // --accent
-          tertiary: "hsl(80, 37%, 45%)",            // --accent(h - 3, s * 1.02, l * 0.85)
-          highlight: "rgba(224, 220, 199, 0.3)",    // --bg3(r, g, b, a * 0.6)
-          textHighlight: "rgba(252, 221, 152, 0.3)" // --hl2
+          light: "hsla(0, 0%, 100%, 100%)",         // --bg1
+          lightgray: "hsla(0, 0%, 90%, 100%)",      // --ui1
+          gray: "hsla(0, 0%, 46%, 100%)",           // --tx2
+          darkgray: "hsla(0, 0%, 6%, 100%)",        // --tx1
+          dark: "hsla(0, 0%, 6%, 100%)",            // --tx1
+          secondary: "hsla(80, 40%, 61%, 100%)",    // --ax1
+          tertiary: "hsla(80, 50%, 76%, 30%)",      // --hl1
+          highlight: "hsla(0, 0%, 46%, 12%)",       // --bg3
+          textHighlight: "hsla(53, 100%, 50%, 50%)" // --hl2
         },
         darkMode: {
-          light: "#fffbef",                          // --bg1
-          lightgray: "#e8e5d5",                      // --ui1
-          gray: "#829181",                           // --tx2
-          darkgray: "#5c6a72",                       // --tx1
-          dark: "#5c6a72",                           // --tx1
-          secondary: "hsl(83, 36%, 53%)",            // --accent
-          tertiary: "hsl(80, 37%, 45%)",             // --accent(h - 3, s * 1.02, l * 0.85)
-          highlight: "rgba(224, 220, 199, 0.3)",     // --bg3(r, g, b, a * 0.6)
-          textHighlight: "rgba(252, 221, 152, 0.3)"  // --hl2
-          //light: "#272e33",                        // --bg1
-          //lightgray: "#495156",                    // --ui1
-          //gray: "#9da9a0",                         // --tx2
-          //darkgray: "#d3c6aa",                     // --tx1
-          //dark: "#d3c6aa",                         // --tx1
-          //secondary: "hsl(81, 34%, 63%)",          // --accent
-          //tertiary: "hsl(78, 35%, 54%)",           // --accent(h - 3, s * 1.02, l * 0.85)
-          //highlight: "rgba(79, 88, 94, 0.3)",      // --bg3(r, g, b, a * 0.6)
-          //textHighlight: "rgba(139, 119, 81, 0.3)" // --hl2
+          light: "hsla(0, 0%, 15%, 100%)",          // --bg1
+          lightgray: "hsla(0, 0%, 21%, 100%)",      // --ui1
+          gray: "hsla(0, 0%, 60%, 100%)",           // --tx2
+          darkgray: "hsla(0, 0%, 82%, 100%)",       // --tx1
+          dark: "hsla(0, 0%, 82%, 100%)",           // --tx1
+          secondary: "hsla(80, 40%, 73%, 100%)",    // --ax1 :: calc(var(--accent-l) * 60 / 50)
+          tertiary: "hsla(80, 50%, 40%, 30%)",      // --hl1
+          highlight: "hsla(0, 0%, 55%, 12%)",       // --bg3
+          textHighlight: "hsla(33, 100%, 66%, 30%)" // --hl2
         }
       }
     }
@@ -78,9 +71,10 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "vitesse-light",
-          dark: "vitesse-light" // vitesse-dark
-        }
+          light: "material-theme-lighter",
+          dark: "material-theme-darker"
+        },
+        keepBackground: true
       }),
       Plugin.ObsidianFlavoredMarkdown({
         enableInHtmlEmbed: true
@@ -96,9 +90,7 @@ const config: QuartzConfig = {
         openLinksInNewTab: true,
         lazyLoad: true
       }),
-      Plugin.Description({
-        descriptionLength: 256
-      }),
+      Plugin.Description(),
       Plugin.Latex({
         renderEngine: "mathjax"
       })
@@ -109,13 +101,34 @@ const config: QuartzConfig = {
     emitters: [
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
+      Plugin.TagPage(/*{
+        sort: (a, b) => {
+          if ((!a.file && !b.file) || (a.file && b.file)) {
+            if ((typeof a.file?.frontmatter?.quartzSortString === "string") && (typeof b.file?.frontmatter?.quartzSortString === "string")) {
+                return a.file.frontmatter.quartzSortString.localeCompare(b.file.frontmatter.quartzSortString, undefined, {
+                  numeric: true,
+                  sensitivity: "base",
+                  ignorePunctuation: true
+                })
+            } else {
+              return a.displayName.localeCompare(b.displayName, undefined, {
+                numeric: true,
+                sensitivity: "base",
+                ignorePunctuation: true
+              })
+            }
+          }
+          if (a.file && !b.file) {
+            return 1
+          } else {
+            return -1
+          }
+        }
+      }*/),
       Plugin.ContentIndex({
         rssLimit: 1024,
         rssFullHtml: true,
         includeEmptyFiles: false
-      }),
-      Plugin.AliasRedirects({
-        frontmatterKeys: "quartzAliases"
       }),
       Plugin.Assets(),
       Plugin.Static(),

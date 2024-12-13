@@ -5,10 +5,5 @@
 *~
 *.swp
 
-# Ignore build directories and files
+# Ignore build directory
 build
-.nomedia
-www/grimoire/keep/dungeon
-www/grimoire/.obsidian
-www/grimoire/.trash
-www/grimoire/codex
