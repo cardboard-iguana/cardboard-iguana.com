@@ -9,19 +9,6 @@ import { write } from "./helpers"
 import { i18n } from "../../i18n"
 import DepGraph from "../../depgraph"
 
-// Modified on 2024-07-31
-// Based on commit e1a9661be7d2b4834b1e70535170a36a6ff39560
-// Complete hack job to add the following features:
-//
-// 1. Added filtering to only include RSS entries for paged where the
-//    quartzRssFeed frontmatter property is truthy.
-// 2. Change the RSS feed description.
-// 3. Replace all instances of `href=&quot;../` (where `../` might
-//    occur multiple times) with `href=&quot;https://${cfg.baseUrl}/`
-//    so that internal links work in people's feed readers.
-//
-// TODO - Make (1) and (2) into proper plugin options.
-
 export type ContentIndex = Map<FullSlug, ContentDetails>
 export type ContentDetails = {
   title: string
@@ -98,7 +85,7 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndex, limit?: nu
       <description>Commentary and tales from ${escapeHTML(
         cfg.pageTitle,
       )}</description>
-      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <generator>Quartz - quartz.jzhao.xyz</generator>
       ${items}
     </channel>
   </rss>`
@@ -146,7 +133,7 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
               : undefined,
             date: date,
             description: file.data.description ?? "",
-            rssInclude: file.data.frontmatter?.quartzRssFeed
+            rssInclude: file.data.frontmatter?.feed
           })
         }
       }

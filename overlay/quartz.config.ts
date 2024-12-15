@@ -101,6 +101,30 @@ const config: QuartzConfig = {
     emitters: [
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
+      Plugin.FolderPage(/*{
+        sort: (a, b) => {
+          if ((!a.file && !b.file) || (a.file && b.file)) {
+            if ((typeof a.file?.frontmatter?.quartzSortString === "string") && (typeof b.file?.frontmatter?.quartzSortString === "string")) {
+                return a.file.frontmatter.quartzSortString.localeCompare(b.file.frontmatter.quartzSortString, undefined, {
+                  numeric: true,
+                  sensitivity: "base",
+                  ignorePunctuation: true
+                })
+            } else {
+              return a.displayName.localeCompare(b.displayName, undefined, {
+                numeric: true,
+                sensitivity: "base",
+                ignorePunctuation: true
+              })
+            }
+          }
+          if (a.file && !b.file) {
+            return 1
+          } else {
+            return -1
+          }
+        }
+      }*/),
       Plugin.TagPage(/*{
         sort: (a, b) => {
           if ((!a.file && !b.file) || (a.file && b.file)) {
