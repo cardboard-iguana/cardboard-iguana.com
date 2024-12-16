@@ -1,6 +1,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://cardboard-iguana.com/grimoire/</loc>
-    <lastmod>2024-12-12T05:03:58.951Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.652Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/journals/2020-07-27</loc>
     <lastmod>2020-07-27T00:00:00.000Z</lastmod>
@@ -47,798 +47,792 @@
     <loc>https://cardboard-iguana.com/grimoire/journals/2023-04-27</loc>
     <lastmod>2023-04-27T00:00:00.000Z</lastmod>
   </url><url>
-    <loc>https://cardboard-iguana.com/grimoire/journals/</loc>
-    <lastmod>2024-12-12T05:03:58.813Z</lastmod>
-  </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/ARP-scanning</loc>
-    <lastmod>2024-12-12T05:04:02.274Z</lastmod>
+    <lastmod>2024-12-16T02:48:42.317Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/ARP</loc>
-    <lastmod>2024-12-12T05:03:59.021Z</lastmod>
+    <lastmod>2024-12-16T02:48:42.397Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/AS-REP-roasting-With-Rubeus</loc>
-    <lastmod>2024-12-12T05:03:59.084Z</lastmod>
+    <lastmod>2024-12-16T02:48:42.424Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/AS-REP-roasting-with-Impacket</loc>
-    <lastmod>2024-12-12T05:04:01.275Z</lastmod>
+    <lastmod>2024-12-16T02:48:42.460Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/AS-REP-roasting</loc>
-    <lastmod>2024-12-12T05:04:02.922Z</lastmod>
+    <lastmod>2024-12-16T02:48:42.486Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Abusing-wildcard-expansion-in-Bash</loc>
-    <lastmod>2024-12-12T05:04:02.057Z</lastmod>
+    <lastmod>2024-12-16T02:48:42.519Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Access-the-Windows-Registry-using-PowerShell</loc>
-    <lastmod>2024-12-12T05:03:59.295Z</lastmod>
+    <lastmod>2024-12-16T02:48:42.584Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Add-Windows-users-at-the-command-line</loc>
-    <lastmod>2024-12-12T05:04:01.295Z</lastmod>
+    <lastmod>2024-12-16T02:48:42.804Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Aircrack-NG</loc>
-    <lastmod>2024-12-12T05:04:02.992Z</lastmod>
+    <lastmod>2024-12-16T02:48:42.837Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Automate-Netlify-builds-with-IFTTT</loc>
-    <lastmod>2024-12-12T05:03:59.529Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.012Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Automatically-stabilize-a-reverse-shell-with-socat</loc>
-    <lastmod>2024-12-12T05:04:00.420Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.046Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Avoid-dropping-privileges-with-SUID-Bash</loc>
-    <lastmod>2024-12-12T05:03:59.550Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.089Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Backdoor-Visual-Basic-Scripts</loc>
-    <lastmod>2024-12-12T05:04:01.568Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.119Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Bash-reverse-shell</loc>
-    <lastmod>2024-12-12T05:04:02.853Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.161Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Bash-scripting</loc>
-    <lastmod>2024-12-12T05:04:00.360Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.201Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Bulk-edit-Windows-permissions</loc>
-    <lastmod>2024-12-12T05:04:00.192Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.313Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Burp-Suite</loc>
-    <lastmod>2024-12-12T05:04:00.324Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.377Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Bypass-Windows-antivirus-with-C-Sharp</loc>
-    <lastmod>2024-12-12T05:04:02.353Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.426Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Bypass-the-PowerShell-execution-policy</loc>
-    <lastmod>2024-12-12T05:03:59.860Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.541Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/CUPP</loc>
-    <lastmod>2024-12-12T05:04:01.733Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.578Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Calculate-a-file-hash-on-Windows-with-CertUtil</loc>
-    <lastmod>2024-12-12T05:04:02.325Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.628Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Call-Mimikatz-from-a-meterpreter-shell</loc>
-    <lastmod>2024-12-12T05:03:59.560Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.652Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Change-a-branch-name-in-Git</loc>
-    <lastmod>2024-12-12T05:03:58.960Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.780Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Change-an-RSA-key-passphrase-with-OpenSSL</loc>
-    <lastmod>2024-12-12T05:04:00.341Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.820Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Cisco-IOS</loc>
-    <lastmod>2024-12-12T05:04:03.668Z</lastmod>
+    <lastmod>2024-12-16T02:48:43.857Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Common-Windows-user-types</loc>
-    <lastmod>2024-12-12T05:04:00.819Z</lastmod>
+    <lastmod>2024-12-16T02:48:44.002Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Compact-VM-disk-images</loc>
-    <lastmod>2024-12-12T05:04:02.232Z</lastmod>
+    <lastmod>2024-12-16T02:48:44.057Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Confirm-the-existence-of-a-Gmail-address</loc>
-    <lastmod>2024-12-12T05:04:00.313Z</lastmod>
+    <lastmod>2024-12-16T02:48:44.215Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Create-a-GPG-key-with-SSH-support</loc>
-    <lastmod>2024-12-12T05:04:02.634Z</lastmod>
+    <lastmod>2024-12-16T02:48:44.358Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/DCERPC</loc>
-    <lastmod>2024-12-12T05:04:00.957Z</lastmod>
+    <lastmod>2024-12-16T02:48:44.492Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/DRSUAPI</loc>
-    <lastmod>2024-12-12T05:04:02.254Z</lastmod>
+    <lastmod>2024-12-16T02:48:44.503Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Day-One-to-Obsidian-conversion-script</loc>
-    <lastmod>2024-12-12T05:03:59.154Z</lastmod>
+    <lastmod>2024-12-16T02:48:44.530Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Debugging-Bash-scripts</loc>
-    <lastmod>2024-12-12T05:04:02.718Z</lastmod>
+    <lastmod>2024-12-16T02:48:44.789Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Default-CIFS-shares</loc>
-    <lastmod>2024-12-12T05:04:01.452Z</lastmod>
+    <lastmod>2024-12-16T02:48:44.848Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Disable-AMSI</loc>
-    <lastmod>2024-12-12T05:04:00.240Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.015Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Easy-reverse-DNS-lookups</loc>
-    <lastmod>2024-12-12T05:04:01.382Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.147Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Enumerate-AD-CS-templates-with-CertUtil</loc>
-    <lastmod>2024-12-12T05:04:01.677Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.196Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Equivalent-Windows-and-UNIX-commands</loc>
-    <lastmod>2024-12-12T05:04:01.263Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.388Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Evil-WinRM</loc>
-    <lastmod>2024-12-12T05:04:01.040Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.413Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-LD_LIBRARY_PATH</loc>
-    <lastmod>2024-12-12T05:04:01.537Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.602Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-LD_PRELOAD</loc>
-    <lastmod>2024-12-12T05:04:02.655Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.627Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-VBA-scripts-with-msfvenom</loc>
-    <lastmod>2024-12-12T05:04:02.423Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.728Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-Windows-HTML-applications-with-msfvenom</loc>
-    <lastmod>2024-12-12T05:04:03.657Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.759Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-Windows-file-associations</loc>
-    <lastmod>2024-12-12T05:04:02.707Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.792Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-Windows-services</loc>
-    <lastmod>2024-12-12T05:03:59.906Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.868Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-Windows-shortcut-files</loc>
-    <lastmod>2024-12-12T05:04:00.779Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.891Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-Windows-tasks</loc>
-    <lastmod>2024-12-12T05:04:02.374Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.916Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-local-Windows-services</loc>
-    <lastmod>2024-12-12T05:04:03.274Z</lastmod>
+    <lastmod>2024-12-16T02:48:45.963Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-local-Windows-tasks</loc>
-    <lastmod>2024-12-12T05:03:59.357Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.005Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-remote-Windows-services</loc>
-    <lastmod>2024-12-12T05:04:02.304Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.043Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-remote-Windows-tasks</loc>
-    <lastmod>2024-12-12T05:03:59.429Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.072Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-the-Bash-PS4-prompt</loc>
-    <lastmod>2024-12-12T05:04:00.566Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.107Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-the-WinLogon-initialization-sequence</loc>
-    <lastmod>2024-12-12T05:04:03.149Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.127Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-the-Windows-DLL-search-order</loc>
-    <lastmod>2024-12-12T05:04:02.364Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.160Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-the-Windows-FoDHelper</loc>
-    <lastmod>2024-12-12T05:04:03.372Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.204Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-weak-etc-passwd-permissions</loc>
-    <lastmod>2024-12-12T05:04:03.021Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.299Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Exploit-weak-etc-shadow-permissions</loc>
-    <lastmod>2024-12-12T05:04:01.093Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.318Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Export-highlights-and-annotations-from-Kobo-eReaders</loc>
-    <lastmod>2024-12-12T05:04:00.130Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.348Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Extract-the-webpage-title-from-a-URL</loc>
-    <lastmod>2024-12-12T05:03:59.966Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.398Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/FTP</loc>
-    <lastmod>2024-12-12T05:04:00.624Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.426Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/FTPS</loc>
-    <lastmod>2024-12-12T05:04:00.221Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.450Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Find-and-replace-a-single-line-in-a-large-text-file</loc>
-    <lastmod>2024-12-12T05:04:00.946Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.471Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Find-executables-with-SUID-capabilities</loc>
-    <lastmod>2024-12-12T05:04:02.403Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.511Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Fix-EXIF-data-on-Google-Photos-exports</loc>
-    <lastmod>2024-12-12T05:04:03.458Z</lastmod>
+    <lastmod>2024-12-16T02:48:46.622Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Gemini-compatible-markdown</loc>
-    <lastmod>2024-12-12T05:04:00.097Z</lastmod>
+    <lastmod>2024-12-16T02:48:35.719Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Get-a-shell-from-ViM</loc>
-    <lastmod>2024-12-12T05:04:02.453Z</lastmod>
+    <lastmod>2024-12-16T02:48:35.880Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Get-an-SSL-certificate</loc>
-    <lastmod>2024-12-12T05:04:00.769Z</lastmod>
+    <lastmod>2024-12-16T02:48:35.931Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Get-FileHash</loc>
-    <lastmod>2024-12-12T05:04:01.305Z</lastmod>
+    <lastmod>2024-12-16T02:48:35.990Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Get-WinEvent</loc>
-    <lastmod>2024-12-12T05:04:01.689Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.121Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Git-on-Windows</loc>
-    <lastmod>2024-12-12T05:04:02.159Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.192Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Golden-and-silver-ticket-attacks</loc>
-    <lastmod>2024-12-12T05:04:01.968Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.246Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/HTML-applications</loc>
-    <lastmod>2024-12-12T05:04:02.535Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.286Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/HTTP</loc>
-    <lastmod>2024-12-12T05:03:59.074Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.461Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Hashcat</loc>
-    <lastmod>2024-12-12T05:04:02.147Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.632Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Hydra</loc>
-    <lastmod>2024-12-12T05:04:02.674Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.703Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/ICMP</loc>
-    <lastmod>2024-12-12T05:04:01.442Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.756Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/IIS-configuration-data</loc>
-    <lastmod>2024-12-12T05:04:01.923Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.773Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/IMAP</loc>
-    <lastmod>2024-12-12T05:04:00.738Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.799Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/IPSec</loc>
-    <lastmod>2024-12-12T05:04:03.011Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.833Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/IPv4</loc>
-    <lastmod>2024-12-12T05:04:02.181Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.910Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Impacket</loc>
-    <lastmod>2024-12-12T05:04:03.039Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.981Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Invoke-Mimikatz</loc>
-    <lastmod>2024-12-12T05:03:59.034Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.053Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Invoke-WebRequest</loc>
-    <lastmod>2024-12-12T05:04:00.172Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.068Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/JSON-Web-Tokens</loc>
-    <lastmod>2024-12-12T05:04:03.541Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.134Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Java</loc>
-    <lastmod>2024-12-12T05:04:02.170Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.209Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/John-the-Ripper</loc>
-    <lastmod>2024-12-12T05:04:02.483Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.265Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Kerberoasting-with-Impacket</loc>
-    <lastmod>2024-12-12T05:04:01.462Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.338Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Kerberoasting-with-Rubeus</loc>
-    <lastmod>2024-12-12T05:04:02.047Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.371Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Kerberoasting</loc>
-    <lastmod>2024-12-12T05:04:01.497Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.389Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Kerberos</loc>
-    <lastmod>2024-12-12T05:03:59.615Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.474Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Kerbrute</loc>
-    <lastmod>2024-12-12T05:03:59.890Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.554Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Load-a-shell-with-a-simple-executable</loc>
-    <lastmod>2024-12-12T05:04:01.223Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.569Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Local-file-inclusion-attacks</loc>
-    <lastmod>2024-12-12T05:04:02.646Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.721Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Look-up-unicode-symbols-and-emojis</loc>
-    <lastmod>2024-12-12T05:04:02.778Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.769Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/MAC-address</loc>
-    <lastmod>2024-12-12T05:04:01.069Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.797Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/MITRE-ATTaCK-emulation-plans</loc>
-    <lastmod>2024-12-12T05:04:02.037Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.822Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/MS-SQL</loc>
-    <lastmod>2024-12-12T05:03:59.929Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.844Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Magic-numbers</loc>
-    <lastmod>2024-12-12T05:04:02.116Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.897Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Match-files-to-packages-in-Debian-based-operating-systems</loc>
-    <lastmod>2024-12-12T05:04:00.839Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.032Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Match-files-to-packages-in-Red-Hat-based-operating-systems</loc>
-    <lastmod>2024-12-12T05:04:00.230Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.055Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Metasploit-MS-SQL-modules</loc>
-    <lastmod>2024-12-12T05:03:59.830Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.091Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Mimikatz</loc>
-    <lastmod>2024-12-12T05:04:00.007Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.112Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/MySQL</loc>
-    <lastmod>2024-12-12T05:04:00.829Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.179Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/NFS</loc>
-    <lastmod>2024-12-12T05:03:59.408Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.195Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/NTLM-hashes</loc>
-    <lastmod>2024-12-12T05:04:01.338Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.262Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Nikto</loc>
-    <lastmod>2024-12-12T05:04:01.667Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.288Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Nmap</loc>
-    <lastmod>2024-12-12T05:03:59.767Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.365Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Node.js</loc>
-    <lastmod>2024-12-12T05:04:02.334Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.482Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/OSI-model</loc>
-    <lastmod>2024-12-12T05:04:00.027Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.582Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/OWASP-ZAP</loc>
-    <lastmod>2024-12-12T05:04:00.719Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.616Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Oracle-SQL-Server</loc>
-    <lastmod>2024-12-12T05:04:03.031Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.722Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/PHP-local-file-inclusion-attacks</loc>
-    <lastmod>2024-12-12T05:04:00.380Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.767Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/PHP</loc>
-    <lastmod>2024-12-12T05:04:01.136Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.917Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/POP3</loc>
-    <lastmod>2024-12-12T05:03:59.730Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.952Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/POSIX-process-signals</loc>
-    <lastmod>2024-12-12T05:04:03.598Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.962Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Perl</loc>
-    <lastmod>2024-12-12T05:04:03.078Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.068Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Poison-null-byte-attack</loc>
-    <lastmod>2024-12-12T05:04:02.127Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.271Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Poison-null-byte-in-PHP</loc>
-    <lastmod>2024-12-12T05:04:02.315Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.284Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Polkit</loc>
-    <lastmod>2024-12-12T05:04:01.103Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.370Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Pop-a-SYSTEM-shell-on-the-Windows-login-screen-using-Utilman</loc>
-    <lastmod>2024-12-12T05:03:59.283Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.510Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Pop-a-SYSTEM-shell-on-the-Windows-login-screen-using-sticky-keys</loc>
-    <lastmod>2024-12-12T05:04:00.046Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.550Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Port-scanning-with-Bash</loc>
-    <lastmod>2024-12-12T05:04:00.908Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.658Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/PowerShell-reverse-shell</loc>
-    <lastmod>2024-12-12T05:04:03.201Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.770Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/PowerView</loc>
-    <lastmod>2024-12-12T05:03:59.636Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.860Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Powercat</loc>
-    <lastmod>2024-12-12T05:04:01.945Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.885Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Pull-SSL-certificates-from-an-external-server</loc>
-    <lastmod>2024-12-12T05:04:00.749Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.016Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Python</loc>
-    <lastmod>2024-12-12T05:03:59.687Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.060Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Quick-n-dirty-Python-web-server</loc>
-    <lastmod>2024-12-12T05:04:03.637Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.138Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Quickly-bypass-ssh-agent</loc>
-    <lastmod>2024-12-12T05:04:01.488Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.167Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Quickly-find-the-canonical-path-of-a-file</loc>
-    <lastmod>2024-12-12T05:04:02.687Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.207Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/RCE-via-XXE-in-PHP</loc>
-    <lastmod>2024-12-12T05:04:03.139Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.243Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Read-a-file-beginning-with-a-dash</loc>
-    <lastmod>2024-12-12T05:04:00.858Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.334Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/RegEx-metacharacters</loc>
-    <lastmod>2024-12-12T05:03:59.711Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.346Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Remotely-install-a-Windows-package-with-PowerShell</loc>
-    <lastmod>2024-12-12T05:04:01.749Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.380Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Remove-duplicate-lines-in-Bash</loc>
-    <lastmod>2024-12-12T05:03:58.996Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.410Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Retrieve-AIX-fileset-information</loc>
-    <lastmod>2024-12-12T05:04:02.463Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.494Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Retrieve-AIX-system-information</loc>
-    <lastmod>2024-12-12T05:04:02.554Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.528Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Rubeus</loc>
-    <lastmod>2024-12-12T05:03:59.980Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.551Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Ruby</loc>
-    <lastmod>2024-12-12T05:04:02.697Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.608Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Run-a-remote-Windows-command-using-PowerShell</loc>
-    <lastmod>2024-12-12T05:04:00.788Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.715Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Run-commands-directly-with-PowerShell</loc>
-    <lastmod>2024-12-12T05:04:00.695Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.744Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/RunAs</loc>
-    <lastmod>2024-12-12T05:04:00.149Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.755Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/SIP</loc>
-    <lastmod>2024-12-12T05:04:02.014Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.796Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/SMTP</loc>
-    <lastmod>2024-12-12T05:03:59.509Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.835Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/SQL-injection-attacks</loc>
-    <lastmod>2024-12-12T05:04:01.119Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.885Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/SQLMap</loc>
-    <lastmod>2024-12-12T05:04:03.190Z</lastmod>
+    <lastmod>2024-12-16T02:48:40.926Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/SSH</loc>
-    <lastmod>2024-12-12T05:04:01.079Z</lastmod>
+    <lastmod>2024-12-16T02:48:41.030Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Send-a-command-using-OpenSSL</loc>
-    <lastmod>2024-12-12T05:04:00.927Z</lastmod>
+    <lastmod>2024-12-16T02:48:41.074Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Set-the-PATH-in-a-session-on-UNIX-like-operating-systems</loc>
-    <lastmod>2024-12-12T05:04:03.214Z</lastmod>
+    <lastmod>2024-12-16T02:48:41.104Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Set-the-PATH-in-a-session-on-Windows</loc>
-    <lastmod>2024-12-12T05:04:03.159Z</lastmod>
+    <lastmod>2024-12-16T02:48:41.136Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Set-up-WMI-in-PowerShell-1</loc>
-    <lastmod>2024-12-12T05:03:59.123Z</lastmod>
+    <lastmod>2024-12-16T02:48:41.157Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Shell-stabilization</loc>
-    <lastmod>2024-12-12T05:03:59.141Z</lastmod>
+    <lastmod>2024-12-16T02:48:41.299Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/TCP-header-flags</loc>
-    <lastmod>2024-12-12T05:04:03.555Z</lastmod>
+    <lastmod>2024-12-16T02:48:41.321Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/TCP-headers</loc>
-    <lastmod>2024-12-12T05:04:00.488Z</lastmod>
+    <lastmod>2024-12-16T02:48:41.367Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/TCP-window-size</loc>
-    <lastmod>2024-12-12T05:04:02.506Z</lastmod>
+    <lastmod>2024-12-16T02:48:41.400Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/TCP</loc>
-    <lastmod>2024-12-12T05:03:59.951Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.027Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Telnet</loc>
-    <lastmod>2024-12-12T05:04:02.223Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.268Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/The-Harvester</loc>
-    <lastmod>2024-12-12T05:04:02.526Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.361Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Transfer-files-over-FTP-using-netcat</loc>
-    <lastmod>2024-12-12T05:04:00.160Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.470Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/UDP</loc>
-    <lastmod>2024-12-12T05:04:00.211Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.634Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/UNIX-file-descriptors</loc>
-    <lastmod>2024-12-12T05:03:59.452Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.659Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/UNIX-password-hashes</loc>
-    <lastmod>2024-12-12T05:04:00.086Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.681Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/UNIX-permissions</loc>
-    <lastmod>2024-12-12T05:04:03.439Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.730Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Uniform-resource-locators</loc>
-    <lastmod>2024-12-12T05:04:01.853Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.769Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Unquoted-path-handling-in-Windows</loc>
-    <lastmod>2024-12-12T05:04:01.558Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.812Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Upgrade-PostgreSQL</loc>
-    <lastmod>2024-12-12T05:04:03.678Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.838Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Use-Bash-functions-to-backdoor-executables</loc>
-    <lastmod>2024-12-12T05:04:00.202Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.873Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Use-Burp-Suite-with-Firefox</loc>
-    <lastmod>2024-12-12T05:04:02.819Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.917Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Use-Burp-Suite-with-mobile-apps</loc>
-    <lastmod>2024-12-12T05:03:59.601Z</lastmod>
+    <lastmod>2024-12-16T02:48:34.938Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Use-OpenSSL-to-encrypt-and-decrypt-files</loc>
-    <lastmod>2024-12-12T05:04:03.578Z</lastmod>
+    <lastmod>2024-12-16T02:48:35.054Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Use-WinRM-with-PowerShell</loc>
-    <lastmod>2024-12-12T05:03:58.978Z</lastmod>
+    <lastmod>2024-12-16T02:48:35.076Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Use-a-Raspberry-Pi-4B-as-hacking-accessory</loc>
-    <lastmod>2024-12-12T05:03:59.370Z</lastmod>
+    <lastmod>2024-12-16T02:48:35.183Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Use-an-alternate-SSH-key-with-Git</loc>
-    <lastmod>2024-12-12T05:04:02.900Z</lastmod>
+    <lastmod>2024-12-16T02:48:35.813Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Use-curl-and-jq-with-web-APIs</loc>
-    <lastmod>2024-12-12T05:04:01.996Z</lastmod>
+    <lastmod>2024-12-16T02:48:35.879Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Use-the-Windows-Firewall-to-relay-ports</loc>
-    <lastmod>2024-12-12T05:03:59.004Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.105Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Use-unsupported-display-resolutions-with-Samsung-DeX</loc>
-    <lastmod>2024-12-12T05:04:00.975Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.141Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Useful-Linux-reconnaissance-scripts</loc>
-    <lastmod>2024-12-12T05:04:00.533Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.238Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Useful-built-in-commands-for-Linux-reconnaissance</loc>
-    <lastmod>2024-12-12T05:04:01.184Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.269Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Useful-built-in-commands-for-Windows-reconnaissance</loc>
-    <lastmod>2024-12-12T05:03:59.489Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.324Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Useful-scripts-for-Windows-reconnaissance</loc>
-    <lastmod>2024-12-12T05:04:01.874Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.396Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/ViM</loc>
-    <lastmod>2024-12-12T05:03:59.520Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.438Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Visual-Basic-for-Applications</loc>
-    <lastmod>2024-12-12T05:04:02.242Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.499Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Wi-Fi</loc>
-    <lastmod>2024-12-12T05:04:01.030Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.553Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-DLL-search-order</loc>
-    <lastmod>2024-12-12T05:04:02.942Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.582Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-Remote-Management</loc>
-    <lastmod>2024-12-12T05:04:03.223Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.613Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-Run-and-RunOnce-Registry-keys</loc>
-    <lastmod>2024-12-12T05:04:00.669Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.643Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-Scripting-Host</loc>
-    <lastmod>2024-12-12T05:04:03.480Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.663Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-SeBackup-and-SeRestore-permissions</loc>
-    <lastmod>2024-12-12T05:04:03.428Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.694Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-SeImpersonate-and-SeAssignPrimaryToken-permissions</loc>
-    <lastmod>2024-12-12T05:03:59.740Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.721Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-SeTakeOwnership-permission</loc>
-    <lastmod>2024-12-12T05:04:01.010Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.752Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-Startup-folder</loc>
-    <lastmod>2024-12-12T05:04:01.863Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.774Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-event-IDs</loc>
-    <lastmod>2024-12-12T05:04:00.411Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.786Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-event-logs</loc>
-    <lastmod>2024-12-12T05:04:00.886Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.845Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-local-service-accounts</loc>
-    <lastmod>2024-12-12T05:04:01.841Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.892Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-logon-scripts</loc>
-    <lastmod>2024-12-12T05:04:00.391Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.903Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-permissions</loc>
-    <lastmod>2024-12-12T05:04:00.798Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.920Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-reconnaissance-with-PowerShell</loc>
-    <lastmod>2024-12-12T05:03:59.539Z</lastmod>
+    <lastmod>2024-12-16T02:48:36.969Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-service-ACLs</loc>
-    <lastmod>2024-12-12T05:04:02.212Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.051Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-services</loc>
-    <lastmod>2024-12-12T05:04:02.191Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.068Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Windows-unattended-installation-data</loc>
-    <lastmod>2024-12-12T05:03:59.661Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.085Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Wireshark</loc>
-    <lastmod>2024-12-12T05:04:03.688Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.130Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Work-with-base64-encoding-using-PowerShell</loc>
-    <lastmod>2024-12-12T05:04:00.877Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.180Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Work-with-remote-services-using-WMI-and-PowerShell</loc>
-    <lastmod>2024-12-12T05:04:01.403Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.221Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Work-with-remote-tasks-using-WMI-and-PowerShell</loc>
-    <lastmod>2024-12-12T05:04:03.618Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.262Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Working-with-services-in-PowerShell</loc>
-    <lastmod>2024-12-12T05:04:01.528Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.321Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/XFreeRDP</loc>
-    <lastmod>2024-12-12T05:04:01.244Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.337Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/XSS-attacks</loc>
-    <lastmod>2024-12-12T05:04:01.471Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.373Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/XXE-attacks</loc>
-    <lastmod>2024-12-12T05:04:01.325Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.561Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/Xterm</loc>
-    <lastmod>2024-12-12T05:04:02.394Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.629Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/awk</loc>
-    <lastmod>2024-12-12T05:04:02.971Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.643Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/basenc</loc>
-    <lastmod>2024-12-12T05:04:01.174Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.661Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/cat</loc>
-    <lastmod>2024-12-12T05:04:03.120Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.704Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/cewl</loc>
-    <lastmod>2024-12-12T05:03:59.499Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.724Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/crackmapexec</loc>
-    <lastmod>2024-12-12T05:04:00.056Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.819Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/dig</loc>
-    <lastmod>2024-12-12T05:04:00.441Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.843Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/dir</loc>
-    <lastmod>2024-12-12T05:04:01.590Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.864Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/enum4linux</loc>
-    <lastmod>2024-12-12T05:04:02.888Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.892Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/ffmpeg</loc>
-    <lastmod>2024-12-12T05:04:02.760Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.926Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/find</loc>
-    <lastmod>2024-12-12T05:03:59.266Z</lastmod>
+    <lastmod>2024-12-16T02:48:37.987Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/findstr</loc>
-    <lastmod>2024-12-12T05:03:59.113Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.041Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/finger</loc>
-    <lastmod>2024-12-12T05:04:00.706Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.052Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/fuff</loc>
-    <lastmod>2024-12-12T05:04:02.433Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.066Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/gdb</loc>
-    <lastmod>2024-12-12T05:03:59.340Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.100Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/gobuster</loc>
-    <lastmod>2024-12-12T05:03:59.592Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.182Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/grep</loc>
-    <lastmod>2024-12-12T05:04:02.615Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.195Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/iOS-quirks</loc>
-    <lastmod>2024-12-12T05:04:02.564Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.248Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/icacls</loc>
-    <lastmod>2024-12-12T05:04:01.193Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.270Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/iftop</loc>
-    <lastmod>2024-12-12T05:04:02.413Z</lastmod>
-  </url><url>
-    <loc>https://cardboard-iguana.com/grimoire/spells/</loc>
-    <lastmod>2024-12-12T05:04:02.104Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.283Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/ipconfig</loc>
-    <lastmod>2024-12-12T05:04:03.628Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.312Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/less</loc>
-    <lastmod>2024-12-12T05:04:00.990Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.325Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/man</loc>
-    <lastmod>2024-12-12T05:04:03.098Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.413Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/meterpreter</loc>
-    <lastmod>2024-12-12T05:03:59.753Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.448Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/more</loc>
-    <lastmod>2024-12-12T05:03:59.799Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.496Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/msfconsole</loc>
-    <lastmod>2024-12-12T05:04:02.081Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.530Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/msfvenom</loc>
-    <lastmod>2024-12-12T05:04:03.107Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.611Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/nano</loc>
-    <lastmod>2024-12-12T05:04:00.036Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.693Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/nbtscan</loc>
-    <lastmod>2024-12-12T05:04:02.497Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.721Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/net</loc>
-    <lastmod>2024-12-12T05:04:03.504Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.739Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/netcat</loc>
-    <lastmod>2024-12-12T05:04:00.499Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.770Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/netsh</loc>
-    <lastmod>2024-12-12T05:04:03.180Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.821Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/netstat</loc>
-    <lastmod>2024-12-12T05:04:00.182Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.846Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/nslookup</loc>
-    <lastmod>2024-12-12T05:04:00.809Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.878Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/ping</loc>
-    <lastmod>2024-12-12T05:04:00.868Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.917Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/ps</loc>
-    <lastmod>2024-12-12T05:03:59.056Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.959Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/reg</loc>
-    <lastmod>2024-12-12T05:04:00.121Z</lastmod>
+    <lastmod>2024-12-16T02:48:38.976Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/smbclient</loc>
-    <lastmod>2024-12-12T05:04:02.545Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.007Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/smbget</loc>
-    <lastmod>2024-12-12T05:03:59.064Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.026Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/smbmap</loc>
-    <lastmod>2024-12-12T05:04:01.165Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.069Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/socat</loc>
-    <lastmod>2024-12-12T05:03:59.869Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.091Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/ss</loc>
-    <lastmod>2024-12-12T05:03:59.419Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.152Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/sudo</loc>
-    <lastmod>2024-12-12T05:04:03.169Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.181Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/systemctl</loc>
-    <lastmod>2024-12-12T05:03:58.969Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.196Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/systeminfo</loc>
-    <lastmod>2024-12-12T05:04:02.624Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.225Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/tar</loc>
-    <lastmod>2024-12-12T05:04:03.129Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.281Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/tcpdump</loc>
-    <lastmod>2024-12-12T05:04:00.371Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.310Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/tmux</loc>
-    <lastmod>2024-12-12T05:04:03.415Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.351Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/unbuffer</loc>
-    <lastmod>2024-12-12T05:04:03.567Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.373Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/wfuzz</loc>
-    <lastmod>2024-12-12T05:04:01.518Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.415Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/whoami</loc>
-    <lastmod>2024-12-12T05:03:59.721Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.463Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/winrs</loc>
-    <lastmod>2024-12-12T05:04:01.772Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.494Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/wmic</loc>
-    <lastmod>2024-12-12T05:04:01.711Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.691Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/xxd</loc>
-    <lastmod>2024-12-12T05:04:00.479Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.746Z</lastmod>
   </url><url>
     <loc>https://cardboard-iguana.com/grimoire/spells/youtube-dl</loc>
-    <lastmod>2024-12-12T05:04:02.981Z</lastmod>
+    <lastmod>2024-12-16T02:48:39.774Z</lastmod>
   </url></urlset>

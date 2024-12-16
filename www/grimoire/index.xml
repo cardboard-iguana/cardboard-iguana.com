@@ -4,7 +4,7 @@
       <title>Cardboard Iguana Security</title>
       <link>https://cardboard-iguana.com/grimoire</link>
       <description>Commentary and tales from Cardboard Iguana Security</description>
-      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <generator>Quartz - quartz.jzhao.xyz</generator>
       <item>
     <title>Union</title>
     <link>https://cardboard-iguana.com/grimoire/journals/2023-04-27</link>
@@ -12,17 +12,17 @@
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://app.hackthebox.com/machines/418&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Union” on HackTheBox&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout tip&quot; data-callout=&quot;tip&quot;&gt;
+&lt;blockquote class=&quot;callout important&quot; data-callout=&quot;important&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;IMPORTANT&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Important&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -422,7 +422,7 @@ Nmap done: 1 IP address (1 host up) scanned in 56.07 seconds
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -579,7 +579,7 @@ OS and Service detection performed. Please report any incorrect results at https
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -964,7 +964,7 @@ OS and Service detection performed. Please report any incorrect results at https
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -1232,7 +1232,7 @@ OS and Service detection performed. Please report any incorrect results at https
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -1565,7 +1565,7 @@ OS and Service detection performed. Please report any incorrect results at https
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -1656,7 +1656,7 @@ OS and Service detection performed. Please report any incorrect results at https
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -2177,7 +2177,7 @@ Unable to connect with SMB1 -- no workgroup available
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -2236,7 +2236,7 @@ muirland:1qaz2wsx
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -2333,7 +2333,7 @@ OS and Service detection performed. Please report any incorrect results at https
 &lt;blockquote class=&quot;callout tip&quot; data-callout=&quot;tip&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;TIP&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Tip&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -2342,10 +2342,10 @@ OS and Service detection performed. Please report any incorrect results at https
 &lt;/blockquote&gt;
 &lt;p&gt;This particular exploit outputs and encoded PowerShell script and then starts a local listener to deliver the actual &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/meterpreter&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/meterpreter&quot;&gt;meterpreter&lt;/a&gt; shell. All we need to do is cut-and-paste into our elevated shell.&lt;/p&gt;
 &lt;p&gt;(For whatever reason, I could &lt;em&gt;only&lt;/em&gt; get this exploit working with the 32-bit version of &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/meterpreter&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/meterpreter&quot;&gt;meterpreter&lt;/a&gt; &lt;em&gt;and&lt;/em&gt; the &lt;code&gt;run -j&lt;/code&gt; command. I’m not sure why…)&lt;/p&gt;
-&lt;blockquote class=&quot;callout warning&quot; data-callout=&quot;warning&quot;&gt;
+&lt;blockquote class=&quot;callout caution&quot; data-callout=&quot;caution&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;CAUTION&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Caution&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -2361,7 +2361,7 @@ OS and Service detection performed. Please report any incorrect results at https
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -2523,7 +2523,7 @@ OS and Service detection performed. Please report any incorrect results at https
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -3012,7 +3012,7 @@ it? Change that password ASAP.
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -3156,7 +3156,7 @@ OS and Service detection performed. Please report any incorrect results at https
 &lt;blockquote class=&quot;callout tip&quot; data-callout=&quot;tip&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;TIP&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Tip&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
@@ -3177,7 +3177,7 @@ OS and Service detection performed. Please report any incorrect results at https
     <description>&lt;blockquote class=&quot;callout note&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;NOTE&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;

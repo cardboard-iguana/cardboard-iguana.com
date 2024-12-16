@@ -40,36 +40,53 @@ else
 	exit 1
 fi
 
+# Clean build directory and exit if instructed  to do so
+#
+if [[ "$1" == "clean" ]]; then
+	(
+		cd "$SCRIPT_DIR"
+
+		[[ -e build ]] && rm -rf build
+	)
+	exit
+fi
+
 # Set up the build directory.
 #
 (
 	cd "$SCRIPT_DIR"
 
-	[[ -e build ]] && rm -rf build
-	mkdir build
+	mkdir --parents build
 	cd build
 
-	cp -af "$DATA_DIR" obsidian
-	cd obsidian
-	rm -rf .obsidian \
-	       .trash \
-	       assets/private \
-	       metadata \
-	       templates
-	find . -type f \( -name '.DS_Store' -o -name '.nomedia' \) -delete
-	find . -type f -iname '*.md' -exec gawk -i inplace '{ _ = 0 }; \
-	     match($0, /(.*)!\[([^\]]+)\]\(([^:\)]+)\)(.*)/, u) { \
-	         _ = 1; \
-	         gsub("%20", " ", u[3]); \
-	         printf("%s![[%s|%s]]%s\n", u[1], u[3], u[2], u[4]) \
-	     }; !_ { print $0 }' "{}" \;
+	[[ ! -d obsidian ]] && rm -f obsidian
+	if [[ ! -e obsidian ]]; then
+		cp -af "$DATA_DIR" obsidian
+		cd obsidian
+		rm -rf .obsidian \
+		       .trash \
+		       assets/private \
+		       metadata \
+		       templates
+		find . -type f \( -name '.DS_Store' -o -name '.nomedia' \) -delete
+		find . -type f -iname '*.md' -exec gawk -i inplace '{ _ = 0 }; \
+		     match($0, /(.*)!\[([^\]]+)\]\(([^:\)]+)\)(.*)/, u) { \
+		         _ = 1; \
+		         gsub("%20", " ", u[3]); \
+		         printf("%s![[%s|%s]]%s\n", u[1], u[3], u[2], u[4]) \
+		     }; !_ { print $0 }' "{}" \;
+		cd ..
+	fi
 
-	cd ..
-	cp -af ../quartz quartz
+	[[ ! -d quartz ]] && rm -f quartz
+	if [[ ! -e quartz ]]; then
+		cp -af ../quartz quartz
+	fi
+
 	cp -af ../overlay/* quartz/
 	cd quartz
-	rm -rf .git \
-	       package-lock.json
+	[[ -e .git ]] && rm -rf .git
+	[[ -e package-lock.json ]] && rm -f package-lock.json
 	yarn install
 )
 

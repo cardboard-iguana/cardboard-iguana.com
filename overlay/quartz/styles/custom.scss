@@ -294,63 +294,96 @@
 // 		font-size: 0.95rem;
 // 	}
 // }
-// 
-// /* Callout colors to match theme */
-// .callout{
-// 	&[data-callout],
-// 	&[data-callout="abstract"],
-// 	&[data-callout="note"] {
-// 		--color: #6c99bb;
-// 		--border: #6c99bb44;
-// 		--bg: #6c99bb10;
-// 	}
-// 
-// 	&[data-callout="info"] {
-// 		--color: #73bbb2;
-// 		--border: #73bbb244;
-// 		--bg: #73bbb210;
-// 	}
-// 
-// 	&[data-callout="success"],
-// 	&[data-callout="tip"] {
-// 		--color: #a8c373;
-// 		--border: #a8c37344;
-// 		--bg: #a8c37310;
-// 	}
-// 
-// 
-// 	&[data-callout="question"],
-// 	&[data-callout="todo"],
-// 	&[data-callout="warning"] {
-// 		--color: #e5b567;
-// 		--border: #e5b56744;
-// 		--bg: #e5b56710;
-// 	}
-// 
-// 	&[data-callout="danger"] {
-// 		--color: #d5763f;
-// 		--border: #d5763f44;
-// 		--bg: #d5763f10;
-// 	}
-// 
-// 	&[data-callout="bug"],
-// 	&[data-callout="caution"],
-// 	&[data-callout="failure"] {
-// 		--color: #d04255;
-// 		--border: #d0425544;
-// 		--bg: #d0425510;
-// 	}
-// 
-// 	&[data-callout="example"],
-// 	&[data-callout="important"] {
-// 		--color: #9e86c8;
-// 		--border: #9e86c844;
-// 		--bg: #9e86c810;
-// 	}
-// 
-// 	&[data-callout="quote"] {
-// 		--color: #9e9e9e;
-// 		--border: #9e9e9e44;
-// 		--bg: #9e9e9e10;
-// 	}
-// }
+
+/*
+ * Match callout colors to Obsidian Minimal theme
+ */
+.callout{
+	&[data-callout],
+	&[data-callout="info"],
+	&[data-callout="note"],
+	&[data-callout="todo"] {
+		--color: #6c99bb;
+		--border: #6c99bb44;
+		--bg: #6c99bb10;
+	}
+
+	&[data-callout="note"] {
+		--callout-icon: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>');
+	}
+
+	&[data-callout="abstract"],
+	&[data-callout="hint"],
+	&[data-callout="summary"],
+	&[data-callout="tldr"] {
+		--color: #73bbb2;
+		--border: #73bbb244;
+		--bg: #73bbb210;
+	}
+
+	&[data-callout="check"],
+	&[data-callout="done"],
+	&[data-callout="success"],
+	&[data-callout="tip"] {
+		--color: #a8c373;
+		--border: #a8c37344;
+		--bg: #a8c37310;
+	}
+
+	&[data-callout="tip"] {
+		--callout-icon: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>');
+	}
+
+	&[data-callout="warning"] {
+		--color: #e5b567;
+		--border: #e5b56744;
+		--bg: #e5b56710;
+	}
+
+	&[data-callout="warning"] {
+		--callout-icon: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>');
+	}
+
+	&[data-callout="attention"],
+	&[data-callout="faq"],
+	&[data-callout="help"],
+	&[data-callout="question"] {
+		--color: #d5763f;
+		--border: #d5763f44;
+		--bg: #d5763f10;
+	}
+
+	&[data-callout="bug"],
+	&[data-callout="caution"],
+	&[data-callout="danger"],
+	&[data-callout="error"],
+	&[data-callout="fail"],
+	&[data-callout="failure"],
+	&[data-callout="missing"] {
+		--color: #d04255;
+		--border: #d0425544;
+		--bg: #d0425510;
+	}
+
+	&[data-callout="caution"] {
+		--callout-icon: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-octagon-alert"><path d="M12 16h.01"/><path d="M12 8v4"/><path d="M15.312 2a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586l-4.688-4.688A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2z"/></svg>');
+	}
+
+	&[data-callout="example"],
+	&[data-callout="important"] {
+		--color: #9e86c8;
+		--border: #9e86c844;
+		--bg: #9e86c810;
+	}
+
+	&[data-callout="important"] {
+		--callout-icon: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square-warning"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M12 7v2"/><path d="M12 13h.01"/></svg>');
+	}
+
+	&[data-callout="cite"],
+	&[data-callout="quote"] {
+		--color: #9e9e9e;
+		--border: #9e9e9e44;
+		--bg: #9e9e9e10;
+	}
+}
