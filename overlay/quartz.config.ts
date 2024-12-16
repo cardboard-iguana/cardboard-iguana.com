@@ -8,54 +8,46 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Cardboard Iguana Security",
-    pageTitleSuffix: "",
-    enableSPA: true,
-    enablePopovers: true,
-    analytics: null,
-    locale: "en-US",
-    baseUrl: "cardboard-iguana.com/grimoire",
-    ignorePatterns: [
-      ".DS_Store",
-      ".obsidian",
-      ".nomedia",
-      ".trash",
-      "assets/private",
-      "metadata",
-      "templates"
-    ],
-    defaultDateType: "created",
+    pageTitle:            "Cardboard Iguana Security",
+    pageTitleSuffix:      "",
+    enableSPA:            true,
+    enablePopovers:       true,
+    analytics:            null,
+    locale:               "en-US",
+    baseUrl:              "cardboard-iguana.com/grimoire",
+    ignorePatterns:       [],
+    defaultDateType:      "created",
     generateSocialImages: true,
     theme: {
       fontOrigin: "googleFonts",
-      cdnCaching: true,
+      cdnCaching: false,
       typography: {
         header: "Noto Sans",
-        body: "Noto Sans",
-        code: "Noto Sans Mono"
+        body:   "Noto Sans",
+        code:   "Noto Sans Mono"
       },
       colors: {
         lightMode: {
-          light: "hsla(0, 0%, 100%, 100%)",         // --bg1
-          lightgray: "hsla(0, 0%, 90%, 100%)",      // --ui1
-          gray: "hsla(0, 0%, 46%, 100%)",           // --tx2
-          darkgray: "hsla(0, 0%, 6%, 100%)",        // --tx1
-          dark: "hsla(0, 0%, 6%, 100%)",            // --tx1
-          secondary: "hsla(80, 40%, 61%, 100%)",    // --ax1
-          tertiary: "hsla(80, 50%, 76%, 30%)",      // --hl1
-          highlight: "hsla(0, 0%, 46%, 12%)",       // --bg3
-          textHighlight: "hsla(53, 100%, 50%, 50%)" // --hl2
+          light:         "hsla( 0,   0%, 100%, 100%)", // --bg1
+          lightgray:     "hsla( 0,   0%,  90%, 100%)", // --ui1
+          gray:          "hsla( 0,   0%,  76%, 100%)", // --ui3
+          darkgray:      "hsla( 0,   0%,   6%, 100%)", // --tx1
+          dark:          "hsla( 0,   0%,  46%, 100%)", // --tx2
+          secondary:     "hsla(80,  40%,  61%, 100%)", // --ax1
+          tertiary:      "hsla(80,  40%,  51%, 100%)", // --ax2
+          highlight:     "hsla(80,  50%,  76%,  30%)", // --hl1
+          textHighlight: "hsla(60, 100%,  50%,  50%)"  // --hl2
         },
         darkMode: {
-          light: "hsla(0, 0%, 15%, 100%)",          // --bg1
-          lightgray: "hsla(0, 0%, 21%, 100%)",      // --ui1
-          gray: "hsla(0, 0%, 60%, 100%)",           // --tx2
-          darkgray: "hsla(0, 0%, 82%, 100%)",       // --tx1
-          dark: "hsla(0, 0%, 82%, 100%)",           // --tx1
-          secondary: "hsla(80, 40%, 73%, 100%)",    // --ax1 :: calc(var(--accent-l) * 60 / 50)
-          tertiary: "hsla(80, 50%, 40%, 30%)",      // --hl1
-          highlight: "hsla(0, 0%, 55%, 12%)",       // --bg3
-          textHighlight: "hsla(33, 100%, 66%, 30%)" // --hl2
+          light:         "hsla( 0,   0%,  15%, 100%)", // --bg1
+          lightgray:     "hsla( 0,   0%,  21%, 100%)", // --ui1
+          gray:          "hsla( 0,   0%,  35%, 100%)", // --ui3
+          darkgray:      "hsla( 0,   0%,  82%, 100%)", // --tx1
+          dark:          "hsla( 0,   0%,  60%, 100%)", // --tx2
+          secondary:     "hsla(80,  40%,  73%, 100%)", // --ax1 :: calc(var(--accent-l) * 60 / 50)
+          tertiary:      "hsla(80,  40%,  79%, 100%)", // --ax2
+          highlight:     "hsla(80,  50%,  40%,  30%)", // --hl1
+          textHighlight: "hsla(33, 100%,  66%,  30%)"  // --hl2
         }
       }
     }
@@ -72,7 +64,7 @@ const config: QuartzConfig = {
       Plugin.SyntaxHighlighting({
         theme: {
           light: "material-theme-lighter",
-          dark: "material-theme-darker"
+          dark:  "material-theme-darker"
         },
         keepBackground: true
       }),
@@ -86,9 +78,9 @@ const config: QuartzConfig = {
       }),
       Plugin.CrawlLinks({
         markdownLinkResolution: "shortest",
-        prettyLinks: false,
-        openLinksInNewTab: true,
-        lazyLoad: true
+        prettyLinks:            false,
+        openLinksInNewTab:      true,
+        lazyLoad:               true
       }),
       Plugin.Description(),
       Plugin.Latex({
@@ -150,8 +142,8 @@ const config: QuartzConfig = {
         }
       }*/),
       Plugin.ContentIndex({
-        rssLimit: 1024,
-        rssFullHtml: true,
+        rssLimit:          1024,
+        rssFullHtml:       true,
         includeEmptyFiles: false
       }),
       Plugin.Assets(),
