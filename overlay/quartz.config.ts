@@ -29,25 +29,25 @@ const config: QuartzConfig = {
       colors: {
         lightMode: {
           light:         "hsla( 0,   0%, 100%, 100%)", // --bg1
-          lightgray:     "hsla( 0,   0%,  90%, 100%)", // --ui1
-          gray:          "hsla( 0,   0%,  76%, 100%)", // --ui3
+          lightgray:     "hsla( 0,   0%,  96%, 100%)", // --bg2
+          gray:          "hsla( 0,   0%,  84%, 100%)", // --ui2
           darkgray:      "hsla( 0,   0%,   6%, 100%)", // --tx1
           dark:          "hsla( 0,   0%,  46%, 100%)", // --tx2
           secondary:     "hsla(80,  40%,  61%, 100%)", // --ax1
           tertiary:      "hsla(80,  40%,  51%, 100%)", // --ax2
-          highlight:     "hsla(80,  50%,  76%,  15%)", // --hl1 :: calc(var(--alpha) * 0.5)
-          textHighlight: "hsla(60, 100%,  50%,  25%)"  // --hl2 :: calc(var(--alpha) * 0.5)
+          highlight:     "hsla(80,  50%,  76%,  30%)", // --hl1
+          textHighlight: "hsla(60, 100%,  50%,  50%)"  // --hl2
         },
         darkMode: {
           light:         "hsla( 0,   0%,  15%, 100%)", // --bg1
-          lightgray:     "hsla( 0,   0%,  21%, 100%)", // --ui1
-          gray:          "hsla( 0,   0%,  35%, 100%)", // --ui3
+          lightgray:     "hsla( 0,   0%,  13%, 100%)", // --bg2
+          gray:          "hsla( 0,   0%,  27%, 100%)", // --ui2
           darkgray:      "hsla( 0,   0%,  82%, 100%)", // --tx1
           dark:          "hsla( 0,   0%,  60%, 100%)", // --tx2
           secondary:     "hsla(80,  40%,  73%, 100%)", // --ax1 :: calc(var(--accent-l) * 60 / 50)
           tertiary:      "hsla(80,  40%,  79%, 100%)", // --ax2
-          highlight:     "hsla(80,  50%,  40%,  15%)", // --hl1 :: calc(var(--alpha) * 0.5)
-          textHighlight: "hsla(33, 100%,  66%,  15%)"  // --hl2 :: calc(var(--alpha) * 0.5)
+          highlight:     "hsla(80,  50%,  40%,  30%)", // --hl1
+          textHighlight: "hsla(33, 100%,  66%,  30%)"  // --hl2
         }
       }
     }

@@ -80,7 +80,7 @@ export default ((opts?: Partial<TagContentOptions>) => {
                   {content && <p>{content}</p>}
                   <div class="page-listing">
                     <p>
-                      {i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length })}
+                      {i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length - 1 })}
                     </p>
                     <PageList {...listProps} />
                   </div>
@@ -102,7 +102,7 @@ export default ((opts?: Partial<TagContentOptions>) => {
         <div class={classes}>
           <article>{content}</article>
           <div class="page-listing">
-            <p>{i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length })}</p>
+            <p>{i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length - 1 })}</p>
             <div>
               <PageList {...listProps} />
             </div>
