@@ -61,7 +61,7 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndex, limit?: nu
   </item>`
 
   const items = Array.from(idx)
-  .filter(([_, content]) => content.rssInclude )
+  .filter(([_, content]) => content.rssInclude)
   .sort(([_, f1], [__, f2]) => {
       if (f1.date && f2.date) {
         return f2.date.getTime() - f1.date.getTime()

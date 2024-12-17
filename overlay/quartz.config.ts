@@ -9,9 +9,9 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle:            "Cardboard Iguana Security",
-    pageTitleSuffix:      "",
+    pageTitleSuffix:      " :: Cardboard Iguana Security",
     enableSPA:            true,
-    enablePopovers:       true,
+    enablePopovers:       false,
     analytics:            null,
     locale:               "en-US",
     baseUrl:              "cardboard-iguana.com/grimoire",
@@ -20,7 +20,7 @@ const config: QuartzConfig = {
     generateSocialImages: true,
     theme: {
       fontOrigin: "googleFonts",
-      cdnCaching: false,
+      cdnCaching: true,
       typography: {
         header: "Noto Sans",
         body:   "Noto Sans",
@@ -35,8 +35,8 @@ const config: QuartzConfig = {
           dark:          "hsla( 0,   0%,  46%, 100%)", // --tx2
           secondary:     "hsla(80,  40%,  61%, 100%)", // --ax1
           tertiary:      "hsla(80,  40%,  51%, 100%)", // --ax2
-          highlight:     "hsla(80,  50%,  76%,  30%)", // --hl1
-          textHighlight: "hsla(60, 100%,  50%,  50%)"  // --hl2
+          highlight:     "hsla(80,  50%,  76%,  15%)", // --hl1 :: calc(var(--alpha) * 0.5)
+          textHighlight: "hsla(60, 100%,  50%,  25%)"  // --hl2 :: calc(var(--alpha) * 0.5)
         },
         darkMode: {
           light:         "hsla( 0,   0%,  15%, 100%)", // --bg1
@@ -46,8 +46,8 @@ const config: QuartzConfig = {
           dark:          "hsla( 0,   0%,  60%, 100%)", // --tx2
           secondary:     "hsla(80,  40%,  73%, 100%)", // --ax1 :: calc(var(--accent-l) * 60 / 50)
           tertiary:      "hsla(80,  40%,  79%, 100%)", // --ax2
-          highlight:     "hsla(80,  50%,  40%,  30%)", // --hl1
-          textHighlight: "hsla(33, 100%,  66%,  30%)"  // --hl2
+          highlight:     "hsla(80,  50%,  40%,  15%)", // --hl1 :: calc(var(--alpha) * 0.5)
+          textHighlight: "hsla(33, 100%,  66%,  15%)"  // --hl2 :: calc(var(--alpha) * 0.5)
         }
       }
     }
@@ -93,54 +93,50 @@ const config: QuartzConfig = {
     emitters: [
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
-      Plugin.FolderPage(/*{
+      Plugin.FolderPage({
         sort: (a, b) => {
-          if ((!a.file && !b.file) || (a.file && b.file)) {
-            if ((typeof a.file?.frontmatter?.quartzSortString === "string") && (typeof b.file?.frontmatter?.quartzSortString === "string")) {
-                return a.file.frontmatter.quartzSortString.localeCompare(b.file.frontmatter.quartzSortString, undefined, {
-                  numeric: true,
-                  sensitivity: "base",
-                  ignorePunctuation: true
-                })
-            } else {
-              return a.displayName.localeCompare(b.displayName, undefined, {
-                numeric: true,
-                sensitivity: "base",
-                ignorePunctuation: true
-              })
-            }
+          let isJournalTag = /^Journal(\/.+)?$/
+
+          let aComparisonString = a.frontmatter?.title ?? ""
+          let bComparisonString = b.frontmatter?.title ?? ""
+
+          if ((a.frontmatter?.tags?.some(tag => isJournalTag.test(tag))) && (b.frontmatter?.tags?.some(tag => isJournalTag.test(tag)))) {
+            aComparisonString = a.frontmatter.date ?? aComparisonString
+            bComparisonString = b.frontmatter.date ?? bComparisonString
           }
-          if (a.file && !b.file) {
-            return 1
-          } else {
-            return -1
-          }
+
+          aComparisonString = aComparisonString.toLowerCase().replace(/(^| )(a|an|the)( |$)/g, " ").replace(/\([^\)]*\)/g, " ").replace(/ +/g, " ").trim()
+          bComparisonString = bComparisonString.toLowerCase().replace(/(^| )(a|an|the)( |$)/g, " ").replace(/\([^\)]*\)/g, " ").replace(/ +/g, " ").trim()  
+
+          return aComparisonString.localeCompare(bComparisonString, undefined, {
+            numeric: true,
+            sensitivity: "base",
+            ignorePunctuation: true
+          })
         }
-      }*/),
-      Plugin.TagPage(/*{
+      }),
+      Plugin.TagPage({
         sort: (a, b) => {
-          if ((!a.file && !b.file) || (a.file && b.file)) {
-            if ((typeof a.file?.frontmatter?.quartzSortString === "string") && (typeof b.file?.frontmatter?.quartzSortString === "string")) {
-                return a.file.frontmatter.quartzSortString.localeCompare(b.file.frontmatter.quartzSortString, undefined, {
-                  numeric: true,
-                  sensitivity: "base",
-                  ignorePunctuation: true
-                })
-            } else {
-              return a.displayName.localeCompare(b.displayName, undefined, {
-                numeric: true,
-                sensitivity: "base",
-                ignorePunctuation: true
-              })
-            }
+          let isJournalTag = /^Journal(\/.+)?$/
+
+          let aComparisonString = a.frontmatter?.title ?? ""
+          let bComparisonString = b.frontmatter?.title ?? ""
+
+          if ((a.frontmatter?.tags?.some(tag => isJournalTag.test(tag))) && (b.frontmatter?.tags?.some(tag => isJournalTag.test(tag)))) {
+            aComparisonString = a.frontmatter.date ?? aComparisonString
+            bComparisonString = b.frontmatter.date ?? bComparisonString
           }
-          if (a.file && !b.file) {
-            return 1
-          } else {
-            return -1
-          }
+
+          aComparisonString = aComparisonString.toLowerCase().replace(/(^| )(a|an|the)( |$)/g, " ").replace(/\([^\)]*\)/g, " ").replace(/ +/g, " ").trim()
+          bComparisonString = bComparisonString.toLowerCase().replace(/(^| )(a|an|the)( |$)/g, " ").replace(/\([^\)]*\)/g, " ").replace(/ +/g, " ").trim()
+
+          return aComparisonString.localeCompare(bComparisonString, undefined, {
+            numeric: true,
+            sensitivity: "base",
+            ignorePunctuation: true
+          })
         }
-      }*/),
+      }),
       Plugin.ContentIndex({
         rssLimit:          1024,
         rssFullHtml:       true,

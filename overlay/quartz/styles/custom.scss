@@ -296,7 +296,81 @@
 // }
 
 /*
- * Match callout colors to Obsidian Minimal theme
+ * General tweaks
+ */
+a {
+	font-weight: inherit; // TODO: Nake internal background even lighter + also make code background lighter
+}
+
+/*
+ * Page header
+ */
+header {
+	margin: 1rem 0;
+}
+header > .breadcrumb-container { // TODO: Make bold
+	margin: 0;
+}
+header > .search {
+	min-width: 14rem;
+}
+
+/*
+ * Page metadata
+ */
+body[data-slug$="index"] > .content-meta,
+body[data-slug$="index"] > .page-header > .tags { // TODO: Not working
+	display: none;
+}
+.content-meta > time {
+	display: none;
+}
+body[data-slug^="journals/"] > .content-meta > time,
+body[data-slug^="writings/"] > .content-meta > time { // TODO: Not working
+	display: inline;
+}
+.page-header > .tags { // TODO: Not working
+	margin: 1rem 0 1.5rem;
+}
+
+/*
+ * Graph view widget
+ */
+.graph > h3 {
+	display: none;
+}
+.graph > .graph-outer {
+	margin: 0;
+}
+
+/*
+ * Folder and tag page
+ */
+ul.section-ul { // TODO: Use a normal margin?
+	padding-left: revert;
+	list-style: revert;
+}
+li.section-li {
+	margin-bottom: revert;
+}
+li.section-li > .section,
+li.section-li > .section > .desc {
+		display: inline;
+}
+li.section-li > .section > .meta,
+li.section-li > .section > .tags {
+	display: none;
+}
+li.section-li > .section > .desc > h3 {
+	font-family: var(--bodyFont);
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1.6rem;
+	display: inline;
+}
+
+/*
+ * Match callout colors to Obsidian Minimal theme + GitHub alerts
  */
 .callout{
 	&[data-callout],
