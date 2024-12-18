@@ -66,7 +66,7 @@ const config: QuartzConfig = {
           light: "material-theme-lighter",
           dark:  "material-theme-darker"
         },
-        keepBackground: true
+        keepBackground: false
       }),
       Plugin.ObsidianFlavoredMarkdown({
         enableInHtmlEmbed: true

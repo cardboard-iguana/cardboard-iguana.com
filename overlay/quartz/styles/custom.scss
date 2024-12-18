@@ -2,294 +2,6 @@
 
 // put your custom CSS here!
 
-// .content-meta span:first-child {
-// 	display: none;
-// }
-// 
-// body[data-slug$="index"] .content-meta {
-// 	display: none;
-// }
-// 
-// body[data-slug^="commentaries/"] .content-meta span:first-child,
-// body[data-slug^="essays/"] .content-meta span:first-child,
-// body[data-slug^="newsletters/"] .content-meta span:first-child,
-// body[data-slug^="tales/"] .content-meta span:first-child {
-// 	display: inline;
-// }
-// 
-// a.internal:not(.transclude-src) {
-// 	background: none;
-// }
-// 
-// a.transclude-src {
-// 	display: none;
-// }
-// 
-// article > h1 > a[role=anchor] > svg {
-// 	width: 22px;
-// 	height: 22px;
-// }
-// 
-// article > h2 > a[role=anchor] > svg,
-// article > blockquote.transclude h1 > a[role=anchor] > svg {
-// 	width: 18px;
-// 	height: 18px;
-// }
-// 
-// article > h3 > a[role=anchor] > svg,
-// article > blockquote.transclude h2 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude h1 > a[role=anchor] > svg {
-// 	width: 14px;
-// 	height: 14px;
-// }
-// 
-// article > h4 > a[role=anchor] > svg,
-// article > h5 > a[role=anchor] > svg,
-// article > h6 > a[role=anchor] > svg,
-// article > blockquote.transclude h3 > a[role=anchor] > svg,
-// article > blockquote.transclude h4 > a[role=anchor] > svg,
-// article > blockquote.transclude h5 > a[role=anchor] > svg,
-// article > blockquote.transclude h6 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude h2 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude h3 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude h4 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude h5 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude h6 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude blockquote.transclude h1 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude blockquote.transclude h2 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude blockquote.transclude h3 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude blockquote.transclude h4 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude blockquote.transclude h5 > a[role=anchor] > svg,
-// article > blockquote.transclude blockquote.transclude blockquote.transclude h6 > a[role=anchor] > svg {
-// 	width: 12px;
-// 	height: 12px;
-// }
-// 
-// blockquote.transclude {
-// 	border: none;
-// 	margin: 0;
-// 	padding: 0;
-// }
-// 
-// blockquote.transclude h1:first-child {
-// 	display: none;
-// }
-// 
-// blockquote.transclude ol,
-// blockquote.transclude ul {
-// 	padding-left: revert;
-// }
-// 
-// blockquote.transclude h1 { /* h2 */
-// 	margin-top: 1.9rem;
-// 	font-size: 1.4rem;
-// }
-// 
-// blockquote.transclude h2,
-// blockquote.transclude blockquote.transclude h1 { /* h3 */
-// 	margin-top: 1.62rem;
-// 	font-size: 1.12rem;
-// }
-// 
-// blockquote.transclude h3,
-// blockquote.transclude h4,
-// blockquote.transclude h5,
-// blockquote.transclude h6,
-// blockquote.transclude blockquote.transclude h2,
-// blockquote.transclude blockquote.transclude h3,
-// blockquote.transclude blockquote.transclude h4,
-// blockquote.transclude blockquote.transclude h5,
-// blockquote.transclude blockquote.transclude h6,
-// blockquote.transclude blockquote.transclude blockquote.transclude h1,
-// blockquote.transclude blockquote.transclude blockquote.transclude h2,
-// blockquote.transclude blockquote.transclude blockquote.transclude h3,
-// blockquote.transclude blockquote.transclude blockquote.transclude h4,
-// blockquote.transclude blockquote.transclude blockquote.transclude h5,
-// blockquote.transclude blockquote.transclude blockquote.transclude h6 { /* h4, h5, h6 */
-// 	margin-top: 1.5rem;
-// 	font-size: 1rem;
-// }
-// 
-// body[data-slug="index"] .page-header h1.article-title {
-// 	display: none;
-// }
-// 
-// .breadcrumb-element a[href^="../"][href$="/"]::first-letter,
-// .breadcrumb-element a[href^="/"][href$="/"]::first-letter,
-// .folder-title::first-letter {
-// 	text-transform: uppercase;
-// }
-// 
-// .content-meta[show-comma=true] > span:not(:last-child):after {
-// 	content: " |";
-// }
-// 
-// h1.page-title {
-// 	font-size: 1rem;
-// }
-// 
-// h1.page-title a {
-// 	color: var(--dark);
-// }
-// 
-// pre, code {
-// 	background-color: var(--highlight);
-// }
-// 
-// pre > code {
-// 	overflow-x: auto;
-// }
-// 
-// .search > #search-icon {
-// 	background-color: var(--highlight);
-// }
-// 
-// .search > #search-container > #search-space > #search-layout .highlight {
-// 	background-color: var(--textHighlight);
-// }
-// 
-// .page .page-header,
-// .page > #quartz-body .sidebar {
-// 	margin-top: 4rem;
-// }
-// 
-// ul.overflow:after,
-// ol.overflow:after {
-// 	background: transparent;
-// }
-// 
-// .backlinks > .overflow:first-of-type,
-// #explorer-content .overflow:first-of-type,
-// #toc-content .overflow:first-of-type {
-// 	scrollbar-width: thin;
-// 	scrollbar-color: var(--highlight) transparent;
-// 	border-right: 1px solid var(--highlight);
-// 	margin-bottom: 0;
-// }
-// .backlinks > .overflow:first-of-type::-webkit-scrollbar,
-// #explorer-content .overflow:first-of-type::-webkit-scrollbar,
-// #toc-content .overflow:first-of-type::-webkit-scrollbar {
-// 	width: 4px;
-// 	height: 4px;
-// }
-// .backlinks > .overflow:first-of-type::-webkit-scrollbar-thumb,
-// #explorer-content .overflow:first-of-type::-webkit-scrollbar-thumb,
-// #toc-content .overflow:first-of-type::-webkit-scrollbar-thumb {
-// 	background-color: var(--highlight);
-// }
-// .backlinks > .overflow:first-of-type::-webkit-scrollbar-track,
-// #explorer-content .overflow:first-of-type::-webkit-scrollbar-track,
-// #toc-content .overflow:first-of-type::-webkit-scrollbar-track {
-// 	background-color: transparent;
-// }
-// 
-// /* Optimize for 1366x784 */
-// /* Probably should be 1349x667, but I can't make that work... */
-// /* https://css-tricks.com/screen-resolution-notequalto-browser-window/ */
-// #explorer-content .overflow:first-of-type {
-// 	max-height: 572px;
-// }
-// #toc-content .overflow:first-of-type {
-// 	max-height: 368px;
-// }
-// .backlinks > .overflow:first-of-type {
-// 	max-height: 315px;
-// }
-// 
-// .backlinks ul.overflow li,
-// #explorer-content ul.overflow ul.content ul.content li,
-// #toc-content ul.overflow li {
-// 	border-bottom: 1px solid var(--highlight);
-// 	padding: 0 0.16rem;
-// }
-// #explorer-content ul.overflow ul.content ul.content li:first-child {
-// 	border-top: 1px solid var(--highlight);
-// }
-// #toc-content ul.overflow li:last-child,
-// .backlinks ul.overflow li:last-child {
-// 	border-bottom: none;
-// }
-// 
-// #toc-content ul.overflow li.depth-0 {
-// 	margin-left: 0;
-// }
-// #toc-content ul.overflow li.depth-1 {
-// 	margin-left: 1rem;
-// }
-// #toc-content ul.overflow li.depth-2 {
-// 	margin-left: 2rem;
-// }
-// #toc-content ul.overflow li.depth-3 {
-// 	margin-left: 3rem;
-// }
-// #toc-content ul.overflow li.depth-4 {
-// 	margin-left: 4rem;
-// }
-// #toc-content ul.overflow li.depth-5 {
-// 	margin-left: 5rem;
-// }
-// 
-// footer {
-// 	opacity: 1;
-// 	display: flex;
-// 	flex-direction: column-reverse;
-// 	justify-content: center;
-// }
-// footer p {
-// 	opacity: 0.5;
-// 	text-align: center;
-// }
-// footer ul {
-// 	gap: 2rem;
-// 	justify-content: center;
-// }
-// 
-// @media (max-width: 1510px) {
-// 	.backlinks > .overflow:first-of-type {
-// 		max-height: 258px;
-// 	}
-// 	footer {
-// 		margin-bottom: 2rem;
-// 	}
-// 	footer ul {
-// 		margin: 1rem 0 0;
-// 	}
-// 	h1.page-title {
-// 		font-size: 1.45rem;
-// 		padding-right: 10px;
-// 	}
-// 	.page {
-// 		padding: 0 2rem;
-// 	}
-// 	.page > #quartz-body .sidebar.right {
-// 		margin-top: 0;
-// 	}
-// 	.search {
-// 		flex-grow: inherit;
-// 	}
-// }
-// 
-// @media (max-width: 430px) {
-// 	h1.page-title {
-// 		font-size: 1.16rem;
-// 	}
-// 	a[role="anchor"] {
-// 		display: none;
-// 	}
-// }
-// 
-// @media (max-width: 375px) {
-// 	.backlinks > .overflow:first-of-type {
-// 		max-height: fit-content;
-// 	}
-// 	footer {
-// 		font-size: smaller;
-// 	}
-// 	h1.page-title {
-// 		font-size: 0.95rem;
-// 	}
-// }
-
 /*
  * General tweaks
  */
@@ -317,26 +29,63 @@ article a.internal.transclude-src {
 	font-weight: bold;
 	text-decoration: none;
 }
-article h1 a[role=anchor] svg {
-	width: 22px;
-	height: 22px;
-}
-article h2 a[role=anchor] svg {
-	width: 18px;
-	height: 18px;
-}
-article h3 a[role=anchor] svg {
-	width: 14px;
-	height: 14px;
-}
+article h1 a[role=anchor] svg,
+article h2 a[role=anchor] svg,
+article h3 a[role=anchor] svg,
 article h4 a[role=anchor] svg,
 article h5 a[role=anchor] svg,
 article h6 a[role=anchor] svg {
-	width: 12px;
-	height: 12px;
+	width: 0.75em;
+	height: 0.75em;
+}
+pre {
+	background-color: var(--lightgray);
+	border-color: var(--gray);
 }
 hr {
 	background-color: var(--gray);
+}
+
+/*
+ * Layout
+ */
+.page {
+	max-width: calc(1500px - 320px)
+}
+.page #quartz-body {
+	grid-template: "grid-header grid-sidebar-right""grid-center grid-sidebar-right""grid-footer grid-sidebar-right"/auto 320px;
+}
+@media (min-width:800px) and (max-width:1200px) {
+	.page #quartz-body {
+		//grid-template: "grid-header grid-sidebar-right""grid-center grid-sidebar-right""grid-footer grid-sidebar-right"/auto 320px;
+		grid-template: "grid-header""grid-center""grid-sidebar-right""grid-footer"/auto;
+	}
+}
+@media (max-width:800px) {
+	.page #quartz-body {
+		grid-template:"grid-header""grid-center""grid-sidebar-right""grid-footer"/auto;
+	}
+}
+.page #quartz-body .page-header {
+	margin-top: 2rem;
+}
+@media (max-width:800px) {
+	.page #quartz-body .page-header {
+		margin-top: 0;
+	}
+}
+.page #quartz-body .sidebar {
+	padding-top: 2rem;
+}
+.page #quartz-body .sidebar.left {
+	display: none;
+}
+
+/*
+ * Search overlay
+ */
+ .search #search-container #search-space #search-layout .highlight {
+	background-color: var(--textHighlight);
 }
 
 /*
@@ -344,6 +93,8 @@ hr {
  */
 .page-header header {
 	margin: 1rem 0;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 }
 .page-header header .breadcrumb-container {
 	margin: 0;
@@ -356,6 +107,9 @@ hr {
 /*
  * Page metadata
  */
+.page-header {
+	margin-top: 2rem;
+}
 .page-header .content-meta {
 	color: var(--dark);
 }
@@ -372,25 +126,18 @@ hr {
 blockquote.transclude h1 {
 	display: none;
 }
-blockquote.transclude h2 { /* h3 */
+h2 ~ blockquote.transclude h2 { /* h3 */
 	margin-top: 1.62rem;
 	margin-bottom: 1rem;
 	font-size: 1.12rem;
 }
-blockquote.transclude h3,
-blockquote.transclude blockquote.transclude h2 { /* h4, h5, h6 */
+h2 ~ blockquote.transclude h3,
+h3 ~ blockquote.transclude h2,
+h3 ~ blockquote.transclude h3,
+h2 ~ blockquote.transclude h2 ~ blockquote.transclude h2 { /* h4, h5, h6 */
 	margin-top: 1.5rem;
 	margin-bottom: 1rem;
 	font-size: 1rem;
-}
-blockquote.transclude h2 a[role=anchor] svg { /* h3 */
-	width: 14px;
-	height: 14px;
-}
-blockquote.transclude h3 a[role=anchor] svg,
-blockquote.transclude blockquote.transclude h2 a[role=anchor] svg { /* h4, h5, h6 */
-	width: 12px;
-	height: 12px;
 }
 
 /*
@@ -399,6 +146,11 @@ blockquote.transclude blockquote.transclude h2 a[role=anchor] svg { /* h4, h5, h
 footer a:hover,
 .page-footer .backlinks a:hover {
 	text-decoration: underline;
+}
+@media not (min-width: 1200px) {
+	.backlinks > .overflow {
+		height: auto;
+	}
 }
 
 /*
@@ -410,6 +162,12 @@ footer a:hover,
 .graph .graph-outer {
 	border: 1px solid var(--gray);
 	margin: 0;
+	height: calc(320px - 2rem - 2rem);
+}
+@media not (min-width: 1200px) {
+	.graph .graph-outer {
+		height: calc(min(100vw, 100vh, 800px) - 1rem - 1rem);
+	}
 }
 
 /*
