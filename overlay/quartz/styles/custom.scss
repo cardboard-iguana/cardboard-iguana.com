@@ -290,22 +290,22 @@ li.section-li .section .desc h3 {
 /*
  * Page-specific tweaks
  */
- body[data-slug$="index"] .page-header .content-meta,
- body[data-slug$="index"] .page-header ul.tags {
-	 display: none;
- }
- body[data-slug^="journals/"] .page-header .content-meta time,
- body[data-slug^="writings/"] .page-header .content-meta time {
-	 display: inline;
- }
- body[data-slug$="index"] article a.internal.tag-link {
-	 font-weight: inherit;
-	 background-color: transparent;
- }
- body[data-slug$="index"] article a.internal.tag-link::before {
-	 content: "";
- }
- body[data-slug$="index"] .page-footer .backlinks {
-	 display: none;
- }
+body[data-slug$="index"] .page-header .content-meta,
+body[data-slug$="index"] .page-header ul.tags {
+	display: none;
+}
+body[data-slug^="journals/"] .page-header .content-meta time,
+body[data-slug^="writings/"] .page-header .content-meta time {
+	display: inline;
+}
+body[data-slug$="index"] article a.internal.tag-link {
+	font-weight: inherit;
+	background-color: transparent;
+}
+body[data-slug$="index"] article a.internal.tag-link::before {
+	content: "";
+}
+body[data-slug$="index"] .page-footer .backlinks {
+	display: none;
+}
   
