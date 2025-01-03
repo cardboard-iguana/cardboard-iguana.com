@@ -60,7 +60,6 @@ export default ((opts?: Partial<TagContentOptions>) => {
               const pages = tagItemMap.get(tag)!
               const listProps = {
                 ...props,
-                sort: options.sort,
                 allFiles: pages,
               }
 
@@ -82,7 +81,7 @@ export default ((opts?: Partial<TagContentOptions>) => {
                     <p>
                       {i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length - 1 })}
                     </p>
-                    <PageList {...listProps} />
+                    <PageList {...listProps} sort={options?.sort} />
                   </div>
                 </div>
               )
@@ -94,7 +93,6 @@ export default ((opts?: Partial<TagContentOptions>) => {
       const pages = allPagesWithTag(tag)
       const listProps = {
         ...props,
-        sort: options.sort,
         allFiles: pages,
       }
 
@@ -104,7 +102,7 @@ export default ((opts?: Partial<TagContentOptions>) => {
           <div class="page-listing">
             <p>{i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length - 1 })}</p>
             <div>
-              <PageList {...listProps} />
+              <PageList {...listProps} sort={options?.sort} />
             </div>
           </div>
         </div>
