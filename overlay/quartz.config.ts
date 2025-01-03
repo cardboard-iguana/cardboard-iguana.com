@@ -29,25 +29,25 @@ const config: QuartzConfig = {
       colors: {
         lightMode: {
           light:         "hsla( 0,   0%, 100%, 100%)", // --bg1
-          lightgray:     "hsla( 0,   0%,  96%, 100%)", // --bg2
+          lightgray:     "hsla( 0,   0%,  90%, 100%)", // --ui1
           gray:          "hsla( 0,   0%,  84%, 100%)", // --ui2
           darkgray:      "hsla( 0,   0%,   6%, 100%)", // --tx1
-          dark:          "hsla( 0,   0%,  46%, 100%)", // --tx2
+          dark:          "hsla( 0,   0%,   4%, 100%)", // --tx1 :: calc(var(--base-l) - 92%)
           secondary:     "hsla(80,  40%,  61%, 100%)", // --ax1
           tertiary:      "hsla(80,  40%,  51%, 100%)", // --ax2
           highlight:     "hsla(80,  50%,  76%,  30%)", // --hl1
-          textHighlight: "hsla(60, 100%,  50%,  50%)"  // --hl2
+          textHighlight: "hsla(80, 100%,  50%,  50%)"  // --hl2 :: use --accent-h, not 60
         },
         darkMode: {
           light:         "hsla( 0,   0%,  15%, 100%)", // --bg1
-          lightgray:     "hsla( 0,   0%,  13%, 100%)", // --bg2
+          lightgray:     "hsla( 0,   0%,  21%, 100%)", // --ui1
           gray:          "hsla( 0,   0%,  27%, 100%)", // --ui2
           darkgray:      "hsla( 0,   0%,  82%, 100%)", // --tx1
-          dark:          "hsla( 0,   0%,  60%, 100%)", // --tx2
+          dark:          "hsla( 0,   0%,  86%, 100%)", // --tx1 :: calc(var(--base-l) + 71%)
           secondary:     "hsla(80,  40%,  73%, 100%)", // --ax1 :: calc(var(--accent-l) * 60 / 50)
           tertiary:      "hsla(80,  40%,  79%, 100%)", // --ax2
           highlight:     "hsla(80,  50%,  40%,  30%)", // --hl1
-          textHighlight: "hsla(33, 100%,  66%,  30%)"  // --hl2
+          textHighlight: "hsla(80, 100%,  66%,  30%)"  // --hl2 :: use --accent-h, not 33
         }
       }
     }

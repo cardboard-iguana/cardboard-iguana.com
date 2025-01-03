@@ -5,6 +5,12 @@
 /*
  * General tweaks
  */
+:root[saved-theme="light"] {
+	--minimalBg2: hsla( 0,   0%,  96%, 100%); // --bg2
+}
+:root[saved-theme="dark"] {
+	--minimalBg2: hsla( 0,   0%,  13%, 100%); // --bg2
+}
 ::selection {
 	background: var(--highlight);
 	color: inherit;
@@ -38,8 +44,11 @@ article h6 a[role=anchor] svg {
 	width: 0.75em;
 	height: 0.75em;
 }
+code {
+	background-color: var(--minimalBg2);
+}
 pre {
-	background-color: var(--lightgray);
+	background-color: var(--minimalBg2);
 	border-color: var(--gray);
 }
 hr {
@@ -84,7 +93,10 @@ hr {
 /*
  * Search overlay
  */
- .search #search-container #search-space #search-layout .highlight {
+.search > .search-button {
+	background-color: var(--minimalBg2);
+}
+.search #search-container #search-space #search-layout .highlight {
 	background-color: var(--textHighlight);
 }
 
@@ -308,4 +320,3 @@ body[data-slug$="index"] article a.internal.tag-link::before {
 body[data-slug$="index"] .page-footer .backlinks {
 	display: none;
 }
-  
