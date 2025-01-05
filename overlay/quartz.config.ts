@@ -10,7 +10,7 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle:            "Cardboard Iguana Security",
     pageTitleSuffix:      " :: Cardboard Iguana Security",
-    enableSPA:            true,
+    enableSPA:            false,
     enablePopovers:       false,
     analytics:            null,
     locale:               "en-US",
