@@ -90,7 +90,7 @@ export const FolderPage: QuartzEmitterPlugin<Partial<FolderPageOptions>> = (user
           defaultProcessedContent({
             slug: joinSegments(folder, "index") as FullSlug,
             frontmatter: {
-              title: `${folder[0].toUpperCase() + folder.substr(1)}`,
+              title: `${folder[0].toUpperCase() + folder.substring(1)}`,
               tags: [],
             },
           }),
