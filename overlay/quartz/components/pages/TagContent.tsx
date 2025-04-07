@@ -1,12 +1,13 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
 import style from "../styles/listPage.scss"
 import { PageList, SortFn } from "../PageList"
-import { FullSlug, getAllSegmentPrefixes, simplifySlug } from "../../util/path"
+import { FullSlug, getAllSegmentPrefixes, resolveRelative, simplifySlug } from "../../util/path"
 import { QuartzPluginData } from "../../plugins/vfile"
 import { Root } from "hast"
 import { htmlToJsx } from "../../util/jsx"
 import { i18n } from "../../i18n"
 import { ComponentChildren } from "preact"
+import { concatenateResources } from "../../util/resources"
 
 interface TagContentOptions {
   sort?: SortFn
@@ -14,7 +15,7 @@ interface TagContentOptions {
 }
 
 const defaultOptions: TagContentOptions = {
-  numPages: 10,
+  numPages: 1000,
 }
 
 export default ((opts?: Partial<TagContentOptions>) => {
@@ -73,7 +74,10 @@ export default ((opts?: Partial<TagContentOptions>) => {
                   ? contentPage?.description
                   : htmlToJsx(contentPage.filePath!, root)
 
-              return (
+                  const tagListingPage = `/tags/${tag}` as FullSlug
+                  const href = resolveRelative(fileData.slug!, tagListingPage)
+    
+                  return (
                 <div>
                   <h2>
                       {tag}
@@ -83,7 +87,7 @@ export default ((opts?: Partial<TagContentOptions>) => {
                     <p>
                       {i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length - 1 })}
                     </p>
-                    <PageList {...listProps} sort={options?.sort} />
+                    <PageList limit={options.numPages} {...listProps} sort={options?.sort} />
                   </div>
                 </div>
               )
@@ -112,6 +116,6 @@ export default ((opts?: Partial<TagContentOptions>) => {
     }
   }
 
-  TagContent.css = style + PageList.css
+  TagContent.css = concatenateResources(style, PageList.css)
   return TagContent
 }) satisfies QuartzComponentConstructor
