@@ -16,7 +16,9 @@
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://app.hackthebox.com/machines/418&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Union” on HackTheBox&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;blockquote class=&quot;callout important&quot; data-callout=&quot;important&quot;&gt;
@@ -26,8 +28,10 @@
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;I joined the Discord server for the team I worked on this with ~35 minutes late, as I was having trouble setting up the HackTheBox VPN (the solution was to change my VPN region to EU, then back to US, and &lt;em&gt;then&lt;/em&gt; re-download the .ovpn file), and then didn’t have the right invite link!&lt;/p&gt;
 &lt;p&gt;Anyways, this was my first box in a &lt;em&gt;long&lt;/em&gt; time, and boy am I rusty!&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The target IP is 10.129.202.139 (at least initially). The index.php page seems to accept any input (&lt;code&gt;player=foo&lt;/code&gt;), and directs the “player” to the challenge.php page. There’s a single-element form here, but it doesn’t seem to do anything on submission (&lt;code&gt;flag=bar&lt;/code&gt;)?&lt;/p&gt;
@@ -426,7 +430,9 @@ Nmap done: 1 IP address (1 host up) scanned in 56.07 seconds
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/netsecchallenge&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Net Sec Challenge” on TryHackMe&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This CTF is just a series of questions. All should be solvable using &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/Nmap&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/Nmap&quot;&gt;Nmap&lt;/a&gt;, telnet, and &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/Hydra&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/Hydra&quot;&gt;Hydra&lt;/a&gt;… Though I’m going to substitute &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/netcat&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/netcat&quot;&gt;netcat&lt;/a&gt; for telnet. However, I’m sticking to the spirit of things, and will only use those three tools.&lt;/p&gt;
@@ -583,7 +589,9 @@ OS and Service detection performed. Please report any incorrect results at https
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/jurassicpark&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Jurassic Park” on TryHackMe&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Our target is 10.10.105.134.&lt;/p&gt;
@@ -968,7 +976,9 @@ OS and Service detection performed. Please report any incorrect results at https
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/inclusion&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Inclusion” on TryHackMe&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This room is intended to focus on &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/Local-file-inclusion-attacks&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/Local-file-inclusion-attacks&quot;&gt;Local file inclusion attacks&lt;/a&gt;, so my guess is that hitting the machine with &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/Nmap&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/Nmap&quot;&gt;Nmap&lt;/a&gt; and &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/gobuster&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/gobuster&quot;&gt;gobuster&lt;/a&gt; is probably unnecessary. But, I’m going to do it anyway, just in case.&lt;/p&gt;
@@ -1236,7 +1246,9 @@ OS and Service detection performed. Please report any incorrect results at https
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/toolsrus&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Tools‘R’Us” on TryHackMe&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;We’re supposed to restrict ourselves to the following tools in this CTF:&lt;/p&gt;
@@ -1569,7 +1581,9 @@ OS and Service detection performed. Please report any incorrect results at https
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/retro&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Retro” on TryHackMe&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;initial-reconnaissance&quot;&gt;Initial reconnaissance&lt;a role=&quot;anchor&quot; aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#initial-reconnaissance&quot; class=&quot;internal&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -1660,7 +1674,9 @@ OS and Service detection performed. Please report any incorrect results at https
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/attacktivedirectory&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Attacktive Directory” on TryHackMe&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;welcome-to-attacktive-directory&quot;&gt;Welcome to Attacktive Directory&lt;a role=&quot;anchor&quot; aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#welcome-to-attacktive-directory&quot; class=&quot;internal&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -2176,7 +2192,9 @@ Unable to connect with SMB1 -- no workgroup available
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/overpass2hacked&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Overpass 2: Hacked” on TryHackMe&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The flags are structured to basically walk us through this room.&lt;/p&gt;
@@ -2235,7 +2253,9 @@ muirland:1qaz2wsx
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/blaster&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Blaster” on TryHackMe&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;mission-start&quot;&gt;Mission start!&lt;a role=&quot;anchor&quot; aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#mission-start&quot; class=&quot;internal&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -2332,7 +2352,9 @@ OS and Service detection performed. Please report any incorrect results at https
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;I found that I needed to set the SRVHOST option to get Metasploit to deliver the exploit on the right interface.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This particular exploit outputs and encoded PowerShell script and then starts a local listener to deliver the actual &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/meterpreter&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/meterpreter&quot;&gt;meterpreter&lt;/a&gt; shell. All we need to do is cut-and-paste into our elevated shell.&lt;/p&gt;
@@ -2344,7 +2366,9 @@ OS and Service detection performed. Please report any incorrect results at https
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/meterpreter&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/meterpreter&quot;&gt;meterpreter&lt;/a&gt; flags this as being deprecated now; the modern pattern seems to be to background &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/meterpreter&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/meterpreter&quot;&gt;meterpreter&lt;/a&gt; and then switch to and exploit the &lt;code&gt;exploit/windows/local/persistence&lt;/code&gt; module, probably with &lt;code&gt;set STARTUP SYSTEM&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Elapsed Time:&lt;/strong&gt; 2 h 15 min&lt;/p&gt;</description>
@@ -2360,7 +2384,9 @@ OS and Service detection performed. Please report any incorrect results at https
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/ice&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Ice” on TryHackMe&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;recon&quot;&gt;Recon&lt;a role=&quot;anchor&quot; aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#recon&quot; class=&quot;internal&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -2522,7 +2548,9 @@ OS and Service detection performed. Please report any incorrect results at https
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/basicpentestingjt&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Basic Pentesting” on TryHackMe&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;background&quot;&gt;Background&lt;a role=&quot;anchor&quot; aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#background&quot; class=&quot;internal&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -3011,7 +3039,9 @@ it? Change that password ASAP.
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://tryhackme.com/room/picklerick&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Pickle Rick” on TryHackMe&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;background&quot;&gt;Background&lt;a role=&quot;anchor&quot; aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#background&quot; class=&quot;internal&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -3155,7 +3185,9 @@ OS and Service detection performed. Please report any incorrect results at https
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;The “Command Panel” does a simple string match looking for “cat”, “more”, “tail”, “nano”, “vim”, and “vi”. The last one in particular can be a little problematic… You may have to run ssh-keygen a couple of times to get a key without “vi” as a substring.)&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;We can now access the box directly over &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/SSH&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/SSH&quot;&gt;SSH&lt;/a&gt; as the ubuntu user, and from there elevate to root using &lt;a href=&quot;https://cardboard-iguana.com/grimoire/./spells/sudo&quot; class=&quot;internal alias&quot; data-slug=&quot;spells/sudo&quot;&gt;sudo&lt;/a&gt;.&lt;/p&gt;
@@ -3176,7 +3208,9 @@ OS and Service detection performed. Please report any incorrect results at https
                   
                 &lt;/div&gt;
 &lt;div class=&quot;callout-content&quot;&gt;
+&lt;div class=&quot;callout-content-inner&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://overthewire.org/wargames/bandit/&quot; class=&quot;external&quot; target=&quot;_blank&quot;&gt;“Bandit” on OverTheWire&lt;svg aria-hidden=&quot;true&quot; class=&quot;external-icon&quot; style=&quot;max-width:0.8em;max-height:0.8em&quot; viewBox=&quot;0 0 512 512&quot;&gt;&lt;path d=&quot;M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;bandit-2&quot;&gt;Bandit 2&lt;a role=&quot;anchor&quot; aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#bandit-2&quot; class=&quot;internal&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
