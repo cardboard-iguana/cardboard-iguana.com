@@ -91,9 +91,18 @@ hr {
 	display: none;
 }
 
+@media (not (min-width: 1200px)) {
+	.page #quartz-body .sidebar.right {
+		flex-direction: column;
+	}
+}
+
 /*
- * Search overlay
+ * Search
  */
+.search {
+	max-width: none;
+}
 .search > .search-button {
 	background-color: var(--background-alt);
 }
@@ -107,7 +116,7 @@ hr {
 .page-header header {
 	margin: 1rem 0;
 	flex-wrap: wrap;
-	justify-content: flex-end;
+	justify-content: flex-start;
 }
 .page-header header .breadcrumb-container {
 	margin: 0;
@@ -172,12 +181,6 @@ footer a:hover,
 .graph .graph-outer {
 	border: 1px solid var(--gray);
 	margin: 0;
-	height: calc(320px - 2rem - 2rem);
-}
-@media not (min-width: 1200px) {
-	.graph .graph-outer {
-		height: calc(min(100vw, 100vh, 800px) - 1rem - 1rem);
-	}
 }
 
 /*

@@ -57,10 +57,7 @@ export const defaultListPageLayout: PageLayout = {
       spacerSymbol: "/",
       rootName:     "Cardboard Iguana Security",
       hideOnRoot:   false
-    }),
-    Component.Spacer(),
-    Component.Darkmode(),
-    Component.Search()
+    })
   ],
   beforeBody: [],
   afterBody: [],

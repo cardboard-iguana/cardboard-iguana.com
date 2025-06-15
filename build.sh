@@ -51,7 +51,7 @@ fi
 (
 	cd "$SCRIPT_DIR"
 
-	mkdir --parents build
+	mkdir -p build
 	cd build
 
 	[[ ! -d obsidian ]] && rm -f obsidian
