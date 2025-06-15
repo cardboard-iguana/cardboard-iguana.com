@@ -4,15 +4,10 @@ OBSIDIAN_VAULT="grimoire"
 
 set -e
 
-# Make sure yarn and gawk are available.
+# Make sure yarn is available.
 #
 if [[ -z "$(which yarn 2> /dev/null)" ]]; then
 	echo "Could not find yarn in your system's PATH!"
-	exit 1
-fi
-
-if [[ -z "$(which gawk 2> /dev/null)" ]]; then
-	echo "Could not find gawk in your system's PATH!"
 	exit 1
 fi
 
@@ -69,12 +64,6 @@ fi
 		       metadata \
 		       templates
 		find . -type f \( -name '.DS_Store' -o -name '.nomedia' \) -delete
-		find . -type f -iname '*.md' -exec gawk -i inplace '{ _ = 0 }; \
-		     match($0, /(.*)!\[([^\]]+)\]\(([^:\)]+)\)(.*)/, u) { \
-		         _ = 1; \
-		         gsub("%20", " ", u[3]); \
-		         printf("%s![[%s|%s]]%s\n", u[1], u[3], u[2], u[4]) \
-		     }; !_ { print $0 }' "{}" \;
 		cd ..
 	fi
 

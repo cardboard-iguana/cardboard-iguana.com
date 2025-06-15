@@ -28,34 +28,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light:         "hsla(  0,   0%, 100%, 100%)", // --bg1
-          lightgray:     "hsla(  0,   0%,  90%, 100%)", // --ui1
-          gray:          "hsla(  0,   0%,  84%, 100%)", // --ui2
-          darkgray:      "hsla(  0,   0%,   6%, 100%)", // --tx1
-          dark:          "hsla(  0,   0%,   4%, 100%)", // --tx1 :: calc(var(--base-l) - 92%)
-          secondary:     "hsla(154,  39%,  49%, 100%)", // --ax1
-          tertiary:      "hsla(154,  39%,  41%, 100%)", // --ax2
-          /*
-          highlight:     "hsla(154,  50%,  29%,  30%)", // --hl1
-          textHighlight: "hsla(154, 100%,  50%,  50%)"  // --hl2 :: use --accent-h, not 60
-          */
-          highlight:     "hsla(154,  50%,  29%,  10%)",
-          textHighlight: "hsla(154,  50%,  50%,  30%)"
+          light:         "hsla(  0,   0%, 100%, 100%)", // --color-base-00     = #ffffff
+          lightgray:     "hsla(  0,   0%,  88%, 100%)", // --color-base-30     = #e0e0e0
+          gray:          "hsla(  0,   0%,  83%, 100%)", // --color-base-35     = #d4d4d4
+          darkgray:      "hsla(  0,   0%,  13%, 100%)", // --color-base-100    = #222222
+          dark:          "hsla(  0,   0%,  13%, 100%)", // --color-base-100    = #222222
+          secondary:     "hsla(144,  92%,  38%, 100%)", // --color-accent      = hsl(var(--accent-h), var(--accent-s), var(--accent-l))
+          tertiary:      "hsla(141,  94%,  44%, 100%)", // --color-accent-2    = hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 1.15))
+          highlight:     "hsla(144,  92%,  38%,  10%)", // --tag-background    = hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.1)
+          textHighlight: "hsla( 49, 100%,  50%,  40%)"  // --text-highlight-bg = rgba(255, 208, 0, 0.4)
         },
         darkMode: {
-          light:         "hsla(  0,   0%,  15%, 100%)", // --bg1
-          lightgray:     "hsla(  0,   0%,  21%, 100%)", // --ui1
-          gray:          "hsla(  0,   0%,  27%, 100%)", // --ui2
-          darkgray:      "hsla(  0,   0%,  82%, 100%)", // --tx1
-          dark:          "hsla(  0,   0%,  86%, 100%)", // --tx1 :: calc(var(--base-l) + 71%)
-          secondary:     "hsla(154,  31%,  54%, 100%)", // --ax1
-          tertiary:      "hsla(154,  31%,  62%, 100%)", // --ax2
-          /*
-          highlight:     "hsla(154,  50%,  40%,  30%)", // --hl1
-          textHighlight: "hsla(154, 100%,  66%,  30%)"  // --hl2 :: use --accent-h, not 33
-          */
-          highlight:     "hsla(154,  50%,  40%,  10%)",
-          textHighlight: "hsla(154,  50%,  66%,  10%)"
+          light:         "hsla(  0,   0%,  12%, 100%)", // --color-base-00     = #1e1e1e
+          lightgray:     "hsla(  0,   0%,  21%, 100%)", // --color-base-35     = #363636
+          gray:          "hsla(  0,   0%,  25%, 100%)", // --color-base-50     = #3f3f3f
+          darkgray:      "hsla(  0,   0%,  85%, 100%)", // --color-base-100    = #dadada
+          dark:          "hsla(  0,   0%,  85%, 100%)", // --color-base-100    = #dadada
+          secondary:     "hsla(138,  59%,  51%, 100%)", // --color-accent      = hsl(var(--accent-h), var(--accent-s), var(--accent-l))
+          tertiary:      "hsla(133,  62%,  66%, 100%)", // --color-accent-2    = hsl(calc(var(--accent-h) - 5), calc(var(--accent-s) * 1.05), calc(var(--accent-l) * 1.29))
+          highlight:     "hsla(138,  59%,  51%,  10%)", // --tag-background    = hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.1)
+          textHighlight: "hsla( 49, 100%,  50%,  40%)"  // --text-highlight-bg = rgba(255, 208, 0, 0.4)
         }
       }
     }

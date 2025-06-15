@@ -6,10 +6,10 @@
  * General tweaks
  */
 :root[saved-theme="light"] {
-	--minimalBg2: hsla( 0,   0%,  96%, 100%); // --bg2
+	--background-alt: hsla( 0,   0%,  98%, 100%); // --color-base-10
 }
 :root[saved-theme="dark"] {
-	--minimalBg2: hsla( 0,   0%,  13%, 100%); // --bg2
+	--background-alt: hsla( 0,   0%,  14%, 100%); // --color-base-10
 }
 ::selection {
 	background: var(--highlight);
@@ -46,10 +46,10 @@ article h6 a[role=anchor] svg {
 	height: 0.75em;
 }
 code {
-	background-color: var(--minimalBg2);
+	background-color: var(--background-alt);
 }
 pre {
-	background-color: var(--minimalBg2);
+	background-color: var(--background-alt);
 	border-color: var(--gray);
 }
 hr {
@@ -95,7 +95,7 @@ hr {
  * Search overlay
  */
 .search > .search-button {
-	background-color: var(--minimalBg2);
+	background-color: var(--background-alt);
 }
 .search #search-container #search-space #search-layout .highlight {
 	background-color: var(--textHighlight);
@@ -237,42 +237,42 @@ li.section-li .section .desc h3 {
 		&[data-callout="info"],
 		&[data-callout="note"],
 		&[data-callout="todo"] {
-			--color: #296aa3;
-			--border: #296aa344;
-			--bg: #296aa310;
+			--color: #086ddd;
+			--border: #086ddd44;
+			--bg: #086ddd10;
 		}
 
 		&[data-callout="abstract"],
 		&[data-callout="hint"],
 		&[data-callout="summary"],
 		&[data-callout="tldr"] {
-			--color: #2993a3;
-			--border: #2993a344;
-			--bg: #2993a310;
+			--color: #00bfbc;
+			--border: #00bfbc44;
+			--bg: #00bfbc10;
 		}
 
 		&[data-callout="check"],
 		&[data-callout="done"],
 		&[data-callout="success"],
 		&[data-callout="tip"] {
-			--color: #1e754f;
-			--border: #1e754f44;
-			--bg: #1e754f10;
+			--color: #08b94e;
+			--border: #08b94e44;
+			--bg: #08b94e10;
 		}
 
 		&[data-callout="warning"] {
-			--color: #bda437;
-			--border: #bda43744;
-			--bg: #bda43710;
+			--color: #e0ac00;
+			--border: #e0ac0044;
+			--bg: #e0ac0010;
 		}
 
 		&[data-callout="attention"],
 		&[data-callout="faq"],
 		&[data-callout="help"],
 		&[data-callout="question"] {
-			--color: #b87447;
-			--border: #b8744744;
-			--bg: #b8744710;
+			--color: #ec7500;
+			--border: #ec750044;
+			--bg: #ec750010;
 		}
 
 		&[data-callout="bug"],
@@ -282,16 +282,16 @@ li.section-li .section .desc h3 {
 		&[data-callout="fail"],
 		&[data-callout="failure"],
 		&[data-callout="missing"] {
-			--color: #ab5959;
-			--border: #ab595944;
-			--bg: #ab595910;
+			--color: #e93147;
+			--border: #e9314744;
+			--bg: #e9314710;
 		}
 
 		&[data-callout="example"],
 		&[data-callout="important"] {
-			--color: #a13865;
-			--border: #a1386544;
-			--bg: #a1386510;
+			--color: #7852ee;
+			--border: #7852ee44;
+			--bg: #7852ee10;
 		}
 
 		&[data-callout="cite"],
@@ -308,42 +308,42 @@ li.section-li .section .desc h3 {
 		&[data-callout="info"],
 		&[data-callout="note"],
 		&[data-callout="todo"] {
-			--color: #6394bf;
-			--border: #6394bf44;
-			--bg: #6394bf10;
+			--color: #027aff;
+			--border: #027aff44;
+			--bg: #027aff10;
 		}
 
 		&[data-callout="abstract"],
 		&[data-callout="hint"],
 		&[data-callout="summary"],
 		&[data-callout="tldr"] {
-			--color: #5eaab5;
-			--border: #5eaab544;
-			--bg: #5eaab510;
+			--color: #53dfdd;
+			--border: #53dfdd44;
+			--bg: #53dfdd10;
 		}
 
 		&[data-callout="check"],
 		&[data-callout="done"],
 		&[data-callout="success"],
 		&[data-callout="tip"] {
-			--color: #4d9375;
-			--border: #4d937544;
-			--bg: #4d937510;
+			--color: #44cf6e;
+			--border: #44cf6e44;
+			--bg: #44cf6e10;
 		}
 
 		&[data-callout="warning"] {
-			--color: #e6cc77;
-			--border: #e6cc7744;
-			--bg: #e6cc7710;
+			--color: #e0de71;
+			--border: #e0de7144;
+			--bg: #e0de7110;
 		}
 
 		&[data-callout="attention"],
 		&[data-callout="faq"],
 		&[data-callout="help"],
 		&[data-callout="question"] {
-			--color: #da9d77;
-			--border: #da9d7744;
-			--bg: #da9d7710;
+			--color: #e9973f;
+			--border: #e9973f44;
+			--bg: #e9973f10;
 		}
 
 		&[data-callout="bug"],
@@ -353,16 +353,16 @@ li.section-li .section .desc h3 {
 		&[data-callout="fail"],
 		&[data-callout="failure"],
 		&[data-callout="missing"] {
-			--color: #cb7676;
-			--border: #cb767644;
-			--bg: #cb767610;
+			--color: #fb464c;
+			--border: #fb464c44;
+			--bg: #fb464c10;
 		}
 
 		&[data-callout="example"],
 		&[data-callout="important"] {
-			--color: #d9739f;
-			--border: #d9739f44;
-			--bg: #d9739f10;
+			--color: #a882ff;
+			--border: #a882ff44;
+			--bg: #a882ff10;
 		}
 
 		&[data-callout="cite"],
