@@ -17,7 +17,6 @@ const config: QuartzConfig = {
     baseUrl:              "cardboard-iguana.com/grimoire",
     ignorePatterns:       [],
     defaultDateType:      "created",
-    generateSocialImages: true,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
