@@ -27,26 +27,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light:         "hsla(  0,   0%, 100%, 100%)", // --color-base-00     = #ffffff
-          lightgray:     "hsla(  0,   0%,  88%, 100%)", // --color-base-30     = #e0e0e0
-          gray:          "hsla(  0,   0%,  83%, 100%)", // --color-base-35     = #d4d4d4
-          darkgray:      "hsla(  0,   0%,  13%, 100%)", // --color-base-100    = #222222
-          dark:          "hsla(  0,   0%,  13%, 100%)", // --color-base-100    = #222222
-          secondary:     "hsla(144,  92%,  38%, 100%)", // --color-accent      = hsl(var(--accent-h), var(--accent-s), var(--accent-l))
-          tertiary:      "hsla(141,  94%,  44%, 100%)", // --color-accent-2    = hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 1.15))
-          highlight:     "hsla(144,  92%,  38%,  10%)", // --tag-background    = hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.1)
-          textHighlight: "hsla( 49, 100%,  50%,  40%)"  // --text-highlight-bg = rgba(255, 208, 0, 0.4)
+          light:         "#f9f5d7", // --bg1
+          lightgray:     "#f2e5bc", // --ui1
+          gray:          "#ebdbb2", // --ui3
+          darkgray:      "#4f3829", // --tx1
+          dark:          "#654735", // --tx2
+          secondary:     "hsl(70, 45%, 33%)", // --ax1
+          tertiary:      "hsl(70, 45%, 25%)", // --ax2 (l - 8%)
+          highlight:     "hsla(70, 45%, 33%, 20%)", // --hl1, but 20% opacity instead of 30%
+          textHighlight: "rgba(180, 113, 9, 0.2)"  // --hl2
         },
         darkMode: {
-          light:         "hsla(  0,   0%,  12%, 100%)", // --color-base-00     = #1e1e1e
-          lightgray:     "hsla(  0,   0%,  21%, 100%)", // --color-base-35     = #363636
-          gray:          "hsla(  0,   0%,  25%, 100%)", // --color-base-50     = #3f3f3f
-          darkgray:      "hsla(  0,   0%,  85%, 100%)", // --color-base-100    = #dadada
-          dark:          "hsla(  0,   0%,  85%, 100%)", // --color-base-100    = #dadada
-          secondary:     "hsla(138,  59%,  51%, 100%)", // --color-accent      = hsl(var(--accent-h), var(--accent-s), var(--accent-l))
-          tertiary:      "hsla(133,  62%,  66%, 100%)", // --color-accent-2    = hsl(calc(var(--accent-h) - 5), calc(var(--accent-s) * 1.05), calc(var(--accent-l) * 1.29))
-          highlight:     "hsla(138,  59%,  51%,  10%)", // --tag-background    = hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.1)
-          textHighlight: "hsla( 49, 100%,  50%,  40%)"  // --text-highlight-bg = rgba(255, 208, 0, 0.4)
+          light:         "#1d2021", // --bg1
+          lightgray:     "#3c3836", // --ui1
+          gray:          "#504945", // --ui3
+          darkgray:      "#ddc7a1", // --tx1
+          dark:          "#d4be98", // --tx2
+          secondary:     "hsl(70, 36%, 47%)", // --ax1
+          tertiary:      "hsl(70, 36%, 55%)", // --ax2 (l + 8%)
+          highlight:     "hsla(70, 36%, 47%, 30%)", // --hl1
+          textHighlight: "rgba(216, 166, 87, 0.2)"  // --hl2
         }
       }
     }
@@ -62,8 +62,8 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "light-plus",
-          dark:  "dark-plus"
+          light: "github-light",
+          dark:  "github-dark"
         },
         keepBackground: false
       }),
@@ -144,7 +144,7 @@ const config: QuartzConfig = {
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.NotFoundPage(),
-      Plugin.CustomOgImages()
+      // Plugin.CustomOgImages() // Broken as of 2025-08-02
     ]
   }
 }

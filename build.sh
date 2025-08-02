@@ -1,15 +1,9 @@
 #!/usr/bin/env bash
 
 OBSIDIAN_VAULT="grimoire"
+WEB_PATH="https://cardboard-iguana.com/grimoire"
 
 set -e
-
-# Make sure yarn is available.
-#
-if [[ -z "$(which yarn 2> /dev/null)" ]]; then
-	echo "Could not find yarn in your system's PATH!"
-	exit 1
-fi
 
 # Try to locate the git directory based on the path of this script.
 #
@@ -20,16 +14,29 @@ if [[ ! -d "$SCRIPT_DIR/.git" ]] || [[ ! -d "$SCRIPT_DIR/overlay" ]] || [[ ! -d 
 	exit 1
 fi
 
+cd "$SCRIPT_DIR"
+
+# Determine which yarn to use
+#
+if [[ -n "$(which yarn 2> /dev/null)" ]]; then
+	YARN="$(which yarn)"
+	INSTALL_YARN="no"
+elif [[ -n "$(corepack 2> /dev/null)" ]]; then
+	YARN="$SCRIPT_DIR/build/quartz/yarn"
+	INSTALL_YARN="yes"
+else
+	echo "Yarn is not installed and Node Corepack is not available!"
+	exit 1
+fi
+
 # Try to locate Obsidian vault directory.
 #
-if [[ -d "$HOME/Documents/Obsidian/$OBSIDIAN_VAULT/.obsidian" ]]; then
-	DATA_DIR="$HOME/Documents/Obsidian/$OBSIDIAN_VAULT"
+if [[ -d "$HOME/notes/$OBSIDIAN_VAULT/.obsidian" ]]; then
+	DATA_DIR="$HOME/notes/$OBSIDIAN_VAULT"
 elif [[ -d "$HOME/storage/shared/Documents/Obsidian/$OBSIDIAN_VAULT/.obsidian" ]]; then
 	DATA_DIR="$HOME/storage/shared/Documents/Obsidian/$OBSIDIAN_VAULT"
-elif [[ -d "$HOME/Obsidian/$OBSIDIAN_VAULT/.obsidian" ]]; then
-	DATA_DIR="$HOME/Obsidian/$OBSIDIAN_VAULT"
-elif [[ -d "$HOME/obsidian/$OBSIDIAN_VAULT/.obsidian" ]]; then
-	DATA_DIR="$HOME/obsidian/$OBSIDIAN_VAULT"
+elif [[ -d "$HOME/Documents/Obsidian/$OBSIDIAN_VAULT/.obsidian" ]]; then
+	DATA_DIR="$HOME/Documents/Obsidian/$OBSIDIAN_VAULT"
 else
 	echo "Could not locate Obsidian vault $OBSIDIAN_VAULT in the usual locations!"
 	exit 1
@@ -38,23 +45,21 @@ fi
 # Clean build directory and exit if instructed  to do so
 #
 if [[ "$1" == "clean" ]]; then
-	(
-		cd "$SCRIPT_DIR"
-
-		[[ -e build ]] && rm -rf build
-	)
+	if [[ -e build ]]; then
+		rm -rf build
+	fi
 	exit
 fi
 
 # Set up the build directory.
 #
 (
-	cd "$SCRIPT_DIR"
-
 	mkdir -p build
 	cd build
 
-	[[ ! -d obsidian ]] && rm -f obsidian
+	if [[ ! -d obsidian ]]; then
+		rm -f obsidian
+	fi
 	if [[ ! -e obsidian ]]; then
 		cp -af "$DATA_DIR" obsidian
 		cd obsidian
@@ -67,36 +72,49 @@ fi
 		cd ..
 	fi
 
-	[[ ! -d quartz ]] && rm -f quartz
+	if [[ ! -d quartz ]]; then
+		rm -f quartz
+	fi
 	if [[ ! -e quartz ]]; then
 		cp -af ../quartz quartz
 	fi
 
 	cp -af ../overlay/* quartz/
 	cd quartz
-	[[ -e .git ]] && rm -rf .git
-	[[ -e package-lock.json ]] && rm -f package-lock.json
-	yarn install
+	if [[ -e .git ]]; then
+		rm -rf .git
+	fi
+	if [[ -e package-lock.json ]]; then
+		rm -f package-lock.json
+	fi
+	if [[ ! -f quartz/styles/custom-fonts.scss ]]; then
+		curl -fsSL -o quartz/styles/custom-fonts.scss "https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap"
+	fi
+	if [[ "$INSTALL_YARN" == "yes" ]]; then
+		corepack enable --install-directory .
+	fi
+	$YARN install
 )
 
 # Build the site!
 #
 (
-	cd "$SCRIPT_DIR"
-
-	[[ -e "www/$OBSIDIAN_VAULT" ]] && rm -rf "www/$OBSIDIAN_VAULT"
+	if [[ -e "www/$OBSIDIAN_VAULT" ]]; then
+		rm -rf "www/$OBSIDIAN_VAULT"
+	fi
 	mkdir -p "www/$OBSIDIAN_VAULT"
 
 	cd build/quartz
 	if [[ "$1" == "serve" ]]; then
-		yarn run quartz build \
-			--directory ../obsidian \
-			--output ../../www/"$OBSIDIAN_VAULT" \
-			--serve
+		$YARN run quartz build \
+		    --directory ../obsidian \
+		    --output ../../www/"$OBSIDIAN_VAULT" \
+		    --serve
 	else
-		yarn run quartz build \
-			--directory ../obsidian \
-			--output ../../www/"$OBSIDIAN_VAULT"
+		$YARN run quartz build \
+		    --directory ../obsidian \
+		    --output ../../www/"$OBSIDIAN_VAULT"
 	fi
-	sed -i'' -e 's#href=\&quot;[\./]\+/#href=\&quot;https://cardboard-iguana.com/grimoire/#g;s#src=\&quot;[\./]\+/#src=\&quot;https://cardboard-iguana.com/grimoire/#g;' ../../www/"$OBSIDIAN_VAULT"/index.xml
+	sed -i.bak -e "s#href=\&quot;[\./]*/#href=\&quot;$WEB_PATH/#g;s#src=\&quot;[\./]*/#src=\&quot;$WEB_PATH/#g;s#$WEB_PATH/[\./]*/#$WEB_PATH/#g" ../../www/"$OBSIDIAN_VAULT"/index.xml
+	rm ../../www/"$OBSIDIAN_VAULT"/index.xml.bak
 )

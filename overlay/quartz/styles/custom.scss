@@ -3,13 +3,34 @@
 // put your custom CSS here!
 
 /*
+ * Use monochrome Google Noto Emoji
+ */
+@use "./custom-fonts.scss";
+:root {
+	--bodyFont: "Noto Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Noto Emoji", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+	--codeFont: "Noto Sans Mono", ui-monospace, SFMono-Regular, SF Mono, Menlo, monospace, "Noto Emoji", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+
+	--headerFont: var(--bodyFont) !important;
+	--titleFont: var(--bodyFont) !important;
+}
+
+/*
+ * Logo
+ */
+#svg-logo {
+	svg path {
+		fill: var(--darkgray) !important;
+	}
+}
+
+/*
  * General tweaks
  */
 :root[saved-theme="light"] {
-	--background-alt: hsla( 0,   0%,  98%, 100%); // --color-base-10
+	--background-alt: #f3eac7; // --bg3
 }
 :root[saved-theme="dark"] {
-	--background-alt: hsla( 0,   0%,  14%, 100%); // --color-base-10
+	--background-alt: #282828; // --bg2
 }
 ::selection {
 	background: var(--highlight);
@@ -50,7 +71,7 @@ code {
 }
 pre {
 	background-color: var(--background-alt);
-	border-color: var(--gray);
+	border-color: transparent;
 }
 hr {
 	background-color: var(--gray);
@@ -106,7 +127,7 @@ hr {
 .search > .search-button {
 	background-color: var(--background-alt);
 }
-.search #search-container #search-space #search-layout .highlight {
+.search .search-container .search-space .search-layout .highlight {
 	background-color: var(--textHighlight);
 }
 
@@ -240,42 +261,42 @@ li.section-li .section .desc h3 {
 		&[data-callout="info"],
 		&[data-callout="note"],
 		&[data-callout="todo"] {
-			--color: #086ddd;
-			--border: #086ddd44;
-			--bg: #086ddd10;
+			--color: #45707a; // --color-blue
+			--border: transparent;
+			--bg: #45707a22;
 		}
 
 		&[data-callout="abstract"],
 		&[data-callout="hint"],
 		&[data-callout="summary"],
 		&[data-callout="tldr"] {
-			--color: #00bfbc;
-			--border: #00bfbc44;
-			--bg: #00bfbc10;
+			--color: #4c7a5d; // --color-cyan
+			--border: transparent;
+			--bg: #4c7a5d22;
 		}
 
 		&[data-callout="check"],
 		&[data-callout="done"],
 		&[data-callout="success"],
 		&[data-callout="tip"] {
-			--color: #08b94e;
-			--border: #08b94e44;
-			--bg: #08b94e10;
+			--color: #6c782e; // --color-green
+			--border: transparent;
+			--bg: #6c782e22;
 		}
 
 		&[data-callout="warning"] {
-			--color: #e0ac00;
-			--border: #e0ac0044;
-			--bg: #e0ac0010;
+			--color: #b47109; // --color-yellow
+			--border: transparent;
+			--bg: #b4710922;
 		}
 
 		&[data-callout="attention"],
 		&[data-callout="faq"],
 		&[data-callout="help"],
 		&[data-callout="question"] {
-			--color: #ec7500;
-			--border: #ec750044;
-			--bg: #ec750010;
+			--color: #c35e0a; // --color-orange
+			--border: transparent;
+			--bg: #c35e0a22;
 		}
 
 		&[data-callout="bug"],
@@ -285,24 +306,63 @@ li.section-li .section .desc h3 {
 		&[data-callout="fail"],
 		&[data-callout="failure"],
 		&[data-callout="missing"] {
-			--color: #e93147;
-			--border: #e9314744;
-			--bg: #e9314710;
+			--color: #c14a4a; // --color-red
+			--border: transparent;
+			--bg: #c14a4a22;
 		}
 
 		&[data-callout="example"],
 		&[data-callout="important"] {
-			--color: #7852ee;
-			--border: #7852ee44;
-			--bg: #7852ee10;
+			--color: #945e80; // --color-purple
+			--border: transparent;
+			--bg: #945e8022;
 		}
 
 		&[data-callout="cite"],
 		&[data-callout="quote"] {
-			--color: #9e9e9e;
-			--border: #9e9e9e44;
-			--bg: #9e9e9e10;
+			--color: #7c6f64; // --tx3
+			--border: transparent;
+			--bg: #7c6f6422;
 		}
+	}
+
+	// Adapted from https://github.com/saberzero1/quartz-themes/blob/master/themes/material-gruvbox/_index.scss#L1370
+	// Only works when Shiki theme is set to 'github-light'!
+	span[style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"] {
+		color: #945e80 !important; // --color-purple
+	}
+	span[style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"] {
+		color: #45707a !important; // --color-blue
+	}
+	span[style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"] {
+		color: #4c7a5d !important; // --color-cyan
+	}
+	span[style="--shiki-light:#032F62;--shiki-dark:#DBEDFF;"] {
+		color: #b47109 !important; // --color-yellow
+	}
+	span[style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"] {
+		color: #4f3829 !important; // --tx1
+	}
+	span[style="--shiki-light:#586069;--shiki-dark:#D1D5DA;"] {
+		color: #654735 !important; // --tx2
+	}
+	span[style="--shiki-light:#F6F8FA;--shiki-dark:#2F363D;"] {
+		color: #7c6f64 !important; // --tx3
+	}
+	span[style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"] {
+		color: #7c6f64 !important; // --tx3
+	}
+	span[style="--shiki-light:#22863A;--shiki-dark:#85E89D;"] {
+		color: #6c782e !important; // --color-green
+	}
+	span[style="--shiki-light:#E36209;--shiki-dark:#FFAB70;"] {
+		color: #c35e0a !important; // --color-orange
+	}
+	span[style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;"] {
+		color: #ac546e !important; // --color-pink
+	}
+	span[style="--shiki-light:#D73A49;--shiki-dark:#F97583;"] {
+		color: #c14a4a !important; // --color-red
 	}
 }
 :root[saved-theme="dark"] {
@@ -311,42 +371,42 @@ li.section-li .section .desc h3 {
 		&[data-callout="info"],
 		&[data-callout="note"],
 		&[data-callout="todo"] {
-			--color: #027aff;
-			--border: #027aff44;
-			--bg: #027aff10;
+			--color: #7daea3; // --color-blue
+			--border: transparent;
+			--bg: #7daea322;
 		}
 
 		&[data-callout="abstract"],
 		&[data-callout="hint"],
 		&[data-callout="summary"],
 		&[data-callout="tldr"] {
-			--color: #53dfdd;
-			--border: #53dfdd44;
-			--bg: #53dfdd10;
+			--color: #89b482; // --color-cyan
+			--border: transparent;
+			--bg: #89b48222;
 		}
 
 		&[data-callout="check"],
 		&[data-callout="done"],
 		&[data-callout="success"],
 		&[data-callout="tip"] {
-			--color: #44cf6e;
-			--border: #44cf6e44;
-			--bg: #44cf6e10;
+			--color: #a9b665; // --color-green
+			--border: transparent;
+			--bg: #a9b66522;
 		}
 
 		&[data-callout="warning"] {
-			--color: #e0de71;
-			--border: #e0de7144;
-			--bg: #e0de7110;
+			--color: #d8a657; // --color-yellow
+			--border: transparent;
+			--bg: #d8a65722;
 		}
 
 		&[data-callout="attention"],
 		&[data-callout="faq"],
 		&[data-callout="help"],
 		&[data-callout="question"] {
-			--color: #e9973f;
-			--border: #e9973f44;
-			--bg: #e9973f10;
+			--color: #e78a4e; // --color-orange
+			--border: transparent;
+			--bg: #e78a4e22;
 		}
 
 		&[data-callout="bug"],
@@ -356,24 +416,62 @@ li.section-li .section .desc h3 {
 		&[data-callout="fail"],
 		&[data-callout="failure"],
 		&[data-callout="missing"] {
-			--color: #fb464c;
-			--border: #fb464c44;
-			--bg: #fb464c10;
+			--color: #ea6962; // --color-red
+			--border: transparent;
+			--bg: #ea696222;
 		}
 
 		&[data-callout="example"],
 		&[data-callout="important"] {
-			--color: #a882ff;
-			--border: #a882ff44;
-			--bg: #a882ff10;
+			--color: #d3869b; // --color-purple
+			--border: transparent;
+			--bg: #d3869b22;
 		}
 
 		&[data-callout="cite"],
 		&[data-callout="quote"] {
-			--color: #9e9e9e;
-			--border: #9e9e9e44;
-			--bg: #9e9e9e10;
+			--color: #a89984; // --tx3
+			--border: transparent;
+			--bg: #a8998422;
 		}
+	}
+	// Adapted from https://github.com/saberzero1/quartz-themes/blob/master/themes/material-gruvbox/_index.scss#L1370
+	// Only works when Shiki theme is set to 'github-dark'!
+	span[style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"] {
+		color: #d3869b !important; // --color-purple
+	}
+	span[style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"] {
+		color: #7daea3 !important; // --color-blue
+	}
+	span[style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"] {
+		color: #89b482 !important; // --color-cyan
+	}
+	span[style="--shiki-light:#032F62;--shiki-dark:#DBEDFF;"] {
+		color: #d8a657 !important; // --color-yellow
+	}
+	span[style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"] {
+		color: #ddc7a1 !important; // --tx1
+	}
+	span[style="--shiki-light:#586069;--shiki-dark:#D1D5DA;"] {
+		color: #d4be98 !important; // --tx2
+	}
+	span[style="--shiki-light:#F6F8FA;--shiki-dark:#2F363D;"] {
+		color: #a89984 !important; // --tx3
+	}
+	span[style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"] {
+		color: #a89984 !important; // --tx3
+	}
+	span[style="--shiki-light:#22863A;--shiki-dark:#85E89D;"] {
+		color: #a9b665 !important; // --color-green
+	}
+	span[style="--shiki-light:#E36209;--shiki-dark:#FFAB70;"] {
+		color: #e78a4e !important; // --color-orange
+	}
+	span[style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;"] {
+		color: #e07883 !important; // --color-pink
+	}
+	span[style="--shiki-light:#D73A49;--shiki-dark:#F97583;"] {
+		color: #ea6962 !important; // --color-red
 	}
 }
 
